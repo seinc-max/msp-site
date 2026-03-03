@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "export",
   images: {
-    unoptimized: true // Required for Next.js static export
+    unoptimized: true
   }
 };
 module.exports = nextConfig;
