@@ -1,1 +1,0 @@
-OpenClaw connection test successful.
