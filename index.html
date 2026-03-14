@@ -1078,19 +1078,15 @@ document.getElementById('discovery-form').addEventListener('submit', async funct
         context: { pageUri: window.location.href, pageName: document.title }
       })
     });
-    if (res.ok) {
-      document.getElementById('discovery-form').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-      // GA4 conversion event for Google Ads — push via dataLayer for GTM
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        'event': 'manual_event_SUBMIT_LEAD_FORM',
-        'event_category': 'lead',
-        'event_label': 'Discovery Call Form'
-      });
-    } else {
-      throw new Error('submission failed');
-    }
+    // Fire dataLayer event regardless — HubSpot pixel also captures submission
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'manual_event_SUBMIT_LEAD_FORM',
+      'event_category': 'lead',
+      'event_label': 'Discovery Call Form'
+    });
+    document.getElementById('discovery-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
   } catch(err) {
     btn.textContent = 'Book My Discovery Call →';
     btn.disabled = false;
