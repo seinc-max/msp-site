@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trueline IT | Managed IT Services for Small Business</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -376,42 +377,67 @@
     line-height: 1.6;
   }
 
-  /* ── STATS ── */
+  /* ── SOCIAL PROOF ── */
   .proof {
     padding: 90px 5%;
     max-width: 1100px;
     margin: 0 auto;
   }
-  .stats-grid {
+  .testimonials {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
     margin-top: 50px;
   }
-  .stat-card {
+  .testimonial {
     background: #fff;
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 36px 28px;
-    text-align: center;
+    padding: 28px 26px;
   }
-  .stat-number {
-    font-family: 'Fraunces', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--blue);
-    line-height: 1;
-    margin-bottom: 10px;
+  .stars {
+    color: #f59e0b;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
   }
-  .stat-label {
+  .testimonial blockquote {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+  .testimonial-author {
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--navy);
-    margin-bottom: 6px;
   }
-  .stat-desc {
-    font-size: 0.88rem;
+  .testimonial-author span {
+    font-weight: 400;
     color: var(--text-muted);
   }
+  .placeholder-note {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .partners {
+    margin-top: 50px;
+    display: flex; align-items: center; gap: 36px; flex-wrap: wrap;
+    justify-content: center;
+  }
+  .partner-item {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    display: flex; align-items: center;
+  }
+  .partner-item:hover { opacity: 0.85; }
 
   /* ── FAQ ── */
   .faq {
@@ -545,21 +571,46 @@
   .hero-actions { animation-delay: 0.4s; }
   .hero-trust   { animation-delay: 0.5s; }
 
+  /* UTIL */
   .text-center { text-align: center; }
   .text-center .section-sub { margin-left: auto; margin-right: auto; }
 
-  /* ── PARTNERS ── */
-  .partners {
+  /* ── STATS ── */
+  .stats-section {
+    padding: 90px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
     margin-top: 50px;
-    display: flex; align-items: center; gap: 36px; flex-wrap: wrap;
-    justify-content: center;
   }
-  .partner-item {
-    opacity: 0.5;
-    transition: opacity 0.2s;
-    display: flex; align-items: center;
+  .stat-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 36px 28px;
+    text-align: center;
   }
-  .partner-item:hover { opacity: 0.85; }
+  .stat-number {
+    font-family: 'Fraunces', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .stat-label {
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .stat-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
 </style>
 </head>
 <body>
@@ -690,8 +741,78 @@
   </div>
 </section>
 
-<!-- STATS -->
+<!-- SOCIAL PROOF -->
 <section class="proof">
+  <div class="text-center">
+    <p class="section-label">What clients say</p>
+    <h2 class="section-title">Real businesses. Real results.</h2>
+    <p class="section-sub">Don't take our word for it.</p>
+  </div>
+  <div class="testimonials">
+    <div class="testimonial">
+      <span class="placeholder-note">Placeholder</span>
+      <div class="stars">★★★★★</div>
+      <blockquote>"Before Trueline, we had constant IT fires. Now I don't even think about it — everything just works. Best business decision I've made in years."</blockquote>
+      <p class="testimonial-author">Sarah M. <span>— Owner, Maple Ridge Dental</span></p>
+    </div>
+    <div class="testimonial">
+      <span class="placeholder-note">Placeholder</span>
+      <div class="stars">★★★★★</div>
+      <blockquote>"The flat-rate pricing was the selling point for me. I know exactly what I'm paying and I know exactly what I'm getting. No surprises ever."</blockquote>
+      <p class="testimonial-author">James T. <span>— GM, Northside Auto Group</span></p>
+    </div>
+    <div class="testimonial">
+      <span class="placeholder-note">Placeholder</span>
+      <div class="stars">★★★★★</div>
+      <blockquote>"They responded within the hour and had us back online the same day. We've been with them 2 years and I'd never go back to managing IT ourselves."</blockquote>
+      <p class="testimonial-author">Priya K. <span>— Director, Clearview Financial</span></p>
+    </div>
+  </div>
+  <div class="partners">
+    <!-- Microsoft -->
+    <div class="partner-item" title="Microsoft">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" width="40" height="40">
+        <rect x="1" y="1" width="10" height="10" fill="#f25022"/>
+        <rect x="12" y="1" width="10" height="10" fill="#7fba00"/>
+        <rect x="1" y="12" width="10" height="10" fill="#00a4ef"/>
+        <rect x="12" y="12" width="10" height="10" fill="#ffb900"/>
+      </svg>
+    </div>
+    <!-- Google Workspace -->
+    <div class="partner-item" title="Google Workspace">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="38" height="38">
+        <path d="M21.8 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.5a4.7 4.7 0 0 1-2 3.1v2.5h3.3c1.9-1.8 3-4.4 3-7.4z" fill="#4285F4"/>
+        <path d="M12 22c2.7 0 5-0.9 6.7-2.4l-3.3-2.5c-.9.6-2.1 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3v2.6A10 10 0 0 0 12 22z" fill="#34A853"/>
+        <path d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3A10 10 0 0 0 2 12c0 1.6.4 3.2 1 4.6L6.4 14z" fill="#FBBC05"/>
+        <path d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 0 0 3 7.4L6.4 10c.8-2.3 3-3.9 5.6-4.1z" fill="#EA4335"/>
+      </svg>
+    </div>
+    <!-- Datto -->
+    <div class="partner-item" title="Datto">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 28" width="72" height="26">
+        <text x="0" y="22" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="#00b388" letter-spacing="-1">datto</text>
+      </svg>
+    </div>
+    <!-- Acronis -->
+    <div class="partner-item" title="Acronis">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+        <circle cx="12" cy="12" r="12" fill="#ef3124"/>
+        <path d="M12 4 L5.5 19 h3.5 l3-7.5 3 7.5 h3.5 Z" fill="white"/>
+      </svg>
+    </div>
+    <!-- SentinelOne -->
+    <div class="partner-item" title="SentinelOne">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+        <circle cx="12" cy="12" r="12" fill="#6e2cf4"/>
+        <path d="M12 5 L7 9 v5 c0 3 2.5 5 5 6 c2.5-1 5-3 5-6 V9 Z" fill="white" opacity="0.9"/>
+        <path d="M12 8.5 L9.5 10.5 v3.5 c0 1.8 1.5 3 2.5 3.5 c1-.5 2.5-1.7 2.5-3.5 v-3.5 Z" fill="#6e2cf4"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- BY THE NUMBERS -->
+<section class="stats-section">
   <div class="text-center">
     <p class="section-label">By the numbers</p>
     <h2 class="section-title">IT support that actually performs.</h2>
@@ -717,42 +838,6 @@
       <div class="stat-number">1 week</div>
       <div class="stat-label">Average onboarding</div>
       <div class="stat-desc">Most businesses are fully set up within 5 business days</div>
-    </div>
-  </div>
-  <div class="partners">
-    <div class="partner-item" title="Microsoft">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" width="40" height="40">
-        <rect x="1" y="1" width="10" height="10" fill="#f25022"/>
-        <rect x="12" y="1" width="10" height="10" fill="#7fba00"/>
-        <rect x="1" y="12" width="10" height="10" fill="#00a4ef"/>
-        <rect x="12" y="12" width="10" height="10" fill="#ffb900"/>
-      </svg>
-    </div>
-    <div class="partner-item" title="Google Workspace">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="38" height="38">
-        <path d="M21.8 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.5a4.7 4.7 0 0 1-2 3.1v2.5h3.3c1.9-1.8 3-4.4 3-7.4z" fill="#4285F4"/>
-        <path d="M12 22c2.7 0 5-0.9 6.7-2.4l-3.3-2.5c-.9.6-2.1 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3v2.6A10 10 0 0 0 12 22z" fill="#34A853"/>
-        <path d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3A10 10 0 0 0 2 12c0 1.6.4 3.2 1 4.6L6.4 14z" fill="#FBBC05"/>
-        <path d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 0 0 3 7.4L6.4 10c.8-2.3 3-3.9 5.6-4.1z" fill="#EA4335"/>
-      </svg>
-    </div>
-    <div class="partner-item" title="Datto">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 28" width="72" height="26">
-        <text x="0" y="22" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="#00b388" letter-spacing="-1">datto</text>
-      </svg>
-    </div>
-    <div class="partner-item" title="Acronis">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
-        <circle cx="12" cy="12" r="12" fill="#ef3124"/>
-        <path d="M12 4 L5.5 19 h3.5 l3-7.5 3 7.5 h3.5 Z" fill="white"/>
-      </svg>
-    </div>
-    <div class="partner-item" title="SentinelOne">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
-        <circle cx="12" cy="12" r="12" fill="#6e2cf4"/>
-        <path d="M12 5 L7 9 v5 c0 3 2.5 5 5 6 c2.5-1 5-3 5-6 V9 Z" fill="white" opacity="0.9"/>
-        <path d="M12 8.5 L9.5 10.5 v3.5 c0 1.8 1.5 3 2.5 3.5 c1-.5 2.5-1.7 2.5-3.5 v-3.5 Z" fill="#6e2cf4"/>
-      </svg>
     </div>
   </div>
 </section>
