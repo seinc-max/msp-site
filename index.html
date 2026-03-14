@@ -549,6 +549,7 @@
   .contact-section {
     background: var(--navy);
     padding: 90px 5%;
+    text-align: center;
     position: relative;
     overflow: hidden;
   }
@@ -558,111 +559,102 @@
     background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(37,99,235,0.2) 0%, transparent 70%);
     pointer-events: none;
   }
-  .contact-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+  .contact-section .section-label {
     position: relative; z-index: 1;
   }
-  @media (max-width: 768px) { .contact-inner { grid-template-columns: 1fr; gap: 40px; } }
-  .contact-left h2 {
+  .contact-section h2 {
     font-family: 'Fraunces', serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
     font-weight: 700;
     color: #fff;
-    line-height: 1.2;
+    line-height: 1.15;
     letter-spacing: -0.02em;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+    position: relative; z-index: 1;
   }
-  .contact-left h2 em { font-style: italic; color: #93c5fd; }
-  .contact-left p {
+  .contact-section .contact-sub {
     color: rgba(255,255,255,0.55);
     font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto 44px;
     line-height: 1.65;
-    margin-bottom: 32px;
+    position: relative; z-index: 1;
   }
-  .contact-perks { display: flex; flex-direction: column; gap: 12px; }
-  .contact-perk {
-    display: flex; align-items: center; gap: 12px;
-    color: rgba(255,255,255,0.6);
-    font-size: 0.95rem;
-  }
-  .contact-perk svg { color: #34d399; flex-shrink: 0; }
   .contact-form {
     background: #fff;
-    border-radius: 16px;
-    padding: 40px 36px;
-  }
-  .contact-form h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 6px;
-  }
-  .contact-form p.form-sub {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 28px;
+    border-radius: 20px;
+    padding: 44px 48px;
+    max-width: 580px;
+    margin: 0 auto;
+    position: relative; z-index: 1;
   }
   .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    text-align: left;
   }
   .form-group label {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--navy);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .form-group input, .form-group select {
     width: 100%;
-    padding: 11px 14px;
+    padding: 13px 16px;
     border: 1.5px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
     color: var(--text);
-    background: #fff;
-    transition: border-color 0.2s;
+    background: #f7f9fc;
+    transition: border-color 0.2s, background 0.2s;
     outline: none;
   }
-  .form-group input:focus, .form-group select:focus { border-color: var(--blue); }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-group input:focus, .form-group select:focus {
+    border-color: var(--blue);
+    background: #fff;
+  }
   .btn-submit {
     width: 100%;
     background: var(--orange);
     color: #fff;
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
-    font-size: 1rem;
-    padding: 14px;
+    font-size: 1.05rem;
+    padding: 16px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.2s, transform 0.15s;
-    margin-top: 6px;
+    margin-top: 4px;
   }
   .btn-submit:hover { background: #ea6c0a; transform: translateY(-1px); }
   .form-note {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--text-muted);
-    margin-top: 12px;
+    margin-top: 14px;
   }
+  .contact-phone {
+    display: block;
+    margin-top: 28px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.9rem;
+    text-decoration: none;
+    position: relative; z-index: 1;
+  }
+  .contact-phone:hover { color: rgba(255,255,255,0.7); }
   .form-success {
     display: none;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
   }
   .form-success h4 {
     font-family: 'Fraunces', serif;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--navy);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .form-success p { color: var(--text-muted); font-size: 0.95rem; }
 
@@ -1012,77 +1004,40 @@
 
 <!-- CONTACT FORM -->
 <section class="contact-section" id="contact">
-  <div class="contact-inner">
-    <div class="contact-left">
-      <h2>Ready to stop worrying<br>about <em>IT?</em></h2>
-      <p>Book a free 30-minute Discovery Call. We'll listen, answer your questions, and tell you honestly whether we're a good fit.</p>
-      <div class="contact-perks">
-        <div class="contact-perk">
-          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          No obligation — just a conversation
-        </div>
-        <div class="contact-perk">
-          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          We'll tell you honestly if we're a fit
-        </div>
-        <div class="contact-perk">
-          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Response within 1 business day
-        </div>
-        <div class="contact-perk">
-          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Or call us directly: <a href="tel:+14168313349" style="color:rgba(255,255,255,0.8);margin-left:4px;">(416) 831-3349</a>
-        </div>
+  <p class="section-label">Get in touch</p>
+  <h2>Ready to stop worrying about IT?</h2>
+  <p class="contact-sub">Tell us a bit about your business and we'll be in touch within one business day.</p>
+  <div class="contact-form" id="contact-form-wrap">
+    <form id="discovery-form">
+      <div class="form-group">
+        <label for="firstname">First name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Jane" required />
       </div>
-    </div>
-    <div class="contact-form" id="contact-form-wrap">
-      <h3>Book a Discovery Call</h3>
-      <p class="form-sub">Takes 60 seconds. We'll reach out to schedule.</p>
-      <form id="discovery-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstname">First name</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Jane" required />
-          </div>
-          <div class="form-group">
-            <label for="lastname">Last name</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Smith" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Work email</label>
-          <input type="email" id="email" name="email" placeholder="jane@company.com" required />
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone number</label>
-          <input type="tel" id="phone" name="phone" placeholder="(416) 555-0100" />
-        </div>
-        <div class="form-group">
-          <label for="company">Company name</label>
-          <input type="text" id="company" name="company" placeholder="Acme Inc." required />
-        </div>
-        <div class="form-group">
-          <label for="company_size">Team size</label>
-          <select id="company_size" name="company_size">
-            <option value="">Select...</option>
-            <option value="1-5">1–5 employees</option>
-            <option value="6-15">6–15 employees</option>
-            <option value="16-30">16–30 employees</option>
-            <option value="31-50">31–50 employees</option>
-            <option value="50+">50+ employees</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-submit">Book My Discovery Call →</button>
-        <p class="form-note">No spam. No pressure. Unsubscribe anytime.</p>
-      </form>
-      <div class="form-success" id="form-success">
-        <h4>You're booked! 🎉</h4>
-        <p>We'll reach out within 1 business day to confirm your Discovery Call.</p>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" required />
       </div>
+      <div class="form-group">
+        <label for="company_size">Number of employees</label>
+        <select id="company_size" name="company_size">
+          <option value="">Select...</option>
+          <option value="1-5">1–5</option>
+          <option value="6-15">6–15</option>
+          <option value="16-30">16–30</option>
+          <option value="31-50">31–50</option>
+          <option value="50+">50+</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-submit">Get in touch →</button>
+      <p class="form-note">We'll respond within 1 business day. No spam, ever.</p>
+    </form>
+    <div class="form-success" id="form-success">
+      <h4>We'll be in touch! 🎉</h4>
+      <p>Expect to hear from us within 1 business day.</p>
     </div>
   </div>
+  <a href="tel:+14168313349" class="contact-phone">Or call us: (416) 831-3349</a>
 </section>
-
 <script>
 document.getElementById('discovery-form').addEventListener('submit', async function(e) {
   e.preventDefault();
