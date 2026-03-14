@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://truelineit.com/sitemap.xml
