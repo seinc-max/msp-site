@@ -396,17 +396,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .btn-offer {
     display: block;
-    background: var(--orange);
-    color: #fff;
+    background: white;
+    color: var(--navy);
+    border: 2px solid var(--navy);
     text-align: center;
-    padding: 14px;
+    padding: 12px;
     border-radius: 8px;
     font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
-    transition: background 0.2s;
+    transition: all 0.2s;
   }
-  .btn-offer:hover { background: #ea6c0a; }
+  .btn-offer:hover { 
+    background: var(--navy);
+    color: white;
+  }
 
   /* ── HOW IT WORKS ── */
   .how {
@@ -769,16 +773,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     position: relative;
   }
   .offer-card-popular {
-    border-color: var(--blue);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
-    transform: scale(1.05);
+    background: #0f172a;
+    color: white;
+    border-color: #0f172a;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    transform: scale(1.04);
+  }
+  .offer-card-popular .offer-card-label {
+    color: #e0e7ff;
+  }
+  .offer-card-popular .offer-price-note {
+    color: #cbd5e1;
+  }
+  .offer-card-popular .offer-card-list {
+    color: white;
+  }
+  .offer-card-popular .offer-card-list li {
+    color: #e0e7ff;
+  }
+  .offer-card-popular h3 {
+    color: white;
+  }
+  .offer-card-popular h3 span {
+    color: #cbd5e1;
+  }
+  .offer-card-popular .btn-offer {
+    background: #f97316;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+  }
+  .offer-card-popular .btn-offer:hover {
+    background: #ea580c;
   }
   .popular-badge {
     position: absolute;
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--blue);
+    background: #2563eb;
     color: white;
     padding: 4px 12px;
     border-radius: 4px;
