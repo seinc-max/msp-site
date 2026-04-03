@@ -406,6 +406,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 1rem;
     text-decoration: none;
     transition: all 0.2s;
+    white-space: nowrap;
   }
   .btn-offer:hover { 
     background: var(--navy);
@@ -763,8 +764,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .offer-pricing {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   .offer-card {
     padding: 2rem;
