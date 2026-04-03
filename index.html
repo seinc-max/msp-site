@@ -756,6 +756,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 0.88rem;
     color: var(--text-muted);
   }
+  .offer-pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .offer-card {
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    position: relative;
+  }
+  .offer-card-popular {
+    border-color: var(--blue);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+    transform: scale(1.05);
+  }
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blue);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .offer-card h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--navy);
+  }
+  .offer-card h3 span {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: normal;
+  }
+  .founding-members {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--sky) 0%, white 100%);
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  .founding-members h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+  }
+  .founding-members p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .offer-card-popular {
+      transform: scale(1);
+    }
+    .offer-pricing {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 </head>
 <body>
@@ -779,7 +842,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-inner">
     <div class="hero-pre">Managed IT for Small Business in Southern Ontario</div>
     <h1>IT that just works,<br>so <em>you</em> can focus on work.</h1>
-    <p class="hero-sub">Trueline IT is your dedicated IT team — without the cost of hiring one. Flat-rate support, no surprises, no tech headaches.</p>
+    <p class="hero-sub">24/7 IT support for Southern Ontario businesses — technician on it in 15 minutes, flat rate every month.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Book a Discovery Call →</a>
       <a href="tel:+16473605774" class="hero-phone-link">
@@ -798,7 +861,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="trust-item">
         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-        Same-day response
+        15-minute response
       </div>
     </div>
   </div>
@@ -847,18 +910,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
     <div>
-      <div class="offer-card">
-        <p class="offer-card-label">Simple pricing</p>
-        <h3>Flat rate per user, per month.</h3>
-        <div class="offer-price">$99 <span>/ user / mo</span></div>
-        <p class="offer-price-note">Everything included. No hidden fees.</p>
-        <ul class="offer-card-list">
-          <li>Works for teams of 5–50</li>
-          <li>Scale up or down anytime</li>
-          <li>No setup fees</li>
-          <li>Cancel with 30 days notice</li>
-        </ul>
-        <a href="#contact" class="btn-offer">Book a Discovery Call →</a>
+      <div class="offer-pricing">
+        <div class="offer-card">
+          <p class="offer-card-label">Basic</p>
+          <h3>$99<span> / user / mo</span></h3>
+          <p class="offer-price-note">Everything included. No hidden fees.</p>
+          <ul class="offer-card-list">
+            <li>Unlimited helpdesk support</li>
+            <li>Proactive monitoring</li>
+            <li>Automated backups</li>
+            <li>Cancel with 30 days notice</li>
+          </ul>
+          <a href="#contact" class="btn-offer">Book a Discovery Call →</a>
+        </div>
+        <div class="offer-card offer-card-popular">
+          <div class="popular-badge">Most Popular</div>
+          <p class="offer-card-label">Professional</p>
+          <h3>$149<span> / user / mo</span></h3>
+          <p class="offer-price-note">Everything included. No hidden fees.</p>
+          <ul class="offer-card-list">
+            <li>Unlimited helpdesk support</li>
+            <li>Proactive monitoring</li>
+            <li>Automated backups</li>
+            <li>Cancel with 30 days notice</li>
+          </ul>
+          <a href="#contact" class="btn-offer">Book a Discovery Call →</a>
+        </div>
+        <div class="offer-card">
+          <p class="offer-card-label">Complete</p>
+          <h3>$199<span> / user / mo</span></h3>
+          <p class="offer-price-note">Everything included. No hidden fees.</p>
+          <ul class="offer-card-list">
+            <li>Unlimited helpdesk support</li>
+            <li>Proactive monitoring</li>
+            <li>Automated backups</li>
+            <li>Cancel with 30 days notice</li>
+          </ul>
+          <a href="#contact" class="btn-offer">Book a Discovery Call →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -897,19 +986,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="section-title">Real businesses. Real results.</h2>
     <p class="section-sub">Don't take our word for it.</p>
   </div>
-  <div class="testimonials">
-    <div class="testimonial">      <div class="stars">★★★★★</div>
-      <blockquote>"Before Trueline, we had constant IT fires. Now I don't even think about it — everything just works. Best business decision I've made in years."</blockquote>
-      <p class="testimonial-author">Sarah M. <span>— Owner, Maple Ridge Dental</span></p>
-    </div>
-    <div class="testimonial">      <div class="stars">★★★★★</div>
-      <blockquote>"The flat-rate pricing was the selling point for me. I know exactly what I'm paying and I know exactly what I'm getting. No surprises ever."</blockquote>
-      <p class="testimonial-author">James T. <span>— GM, Northside Auto Group</span></p>
-    </div>
-    <div class="testimonial">      <div class="stars">★★★★★</div>
-      <blockquote>"They responded within the hour and had us back online the same day. We've been with them 2 years and I'd never go back to managing IT ourselves."</blockquote>
-      <p class="testimonial-author">Priya K. <span>— Director, Clearview Financial</span></p>
-    </div>
+  <div class="founding-members">
+    <h3>Be one of our first Southern Ontario clients.</h3>
+    <p>Founding members get priority onboarding and a locked-in rate for 12 months.</p>
+    <a href="#contact" class="btn-primary">Book Your Discovery Call →</a>
   </div>
   <div class="partners">
     <!-- Microsoft -->
@@ -1034,7 +1114,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="company_size">Number of employees</label>
         <select id="company_size" name="company_size" required>
           <option value="">Select...</option>
-          <option value="1-5">1–5</option>
           <option value="6-15">6–15</option>
           <option value="16-30">16–30</option>
           <option value="31-50">31–50</option>
