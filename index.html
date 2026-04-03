@@ -396,17 +396,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .btn-offer {
     display: block;
-    background: var(--orange);
-    color: #fff;
+    background: white;
+    color: var(--navy);
+    border: 2px solid var(--navy);
     text-align: center;
-    padding: 14px;
+    padding: 12px;
     border-radius: 8px;
     font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
-    transition: background 0.2s;
+    transition: all 0.2s;
   }
-  .btn-offer:hover { background: #ea6c0a; }
+  .btn-offer:hover { 
+    background: var(--navy);
+    color: white;
+  }
 
   /* ── HOW IT WORKS ── */
   .how {
@@ -741,11 +745,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .stat-number {
     font-family: 'Fraunces', serif;
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 700;
     color: var(--blue);
-    line-height: 1;
+    line-height: 1.2;
     margin-bottom: 10px;
+    word-spacing: nowrap;
   }
   .stat-label {
     font-weight: 600;
@@ -755,6 +760,111 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .stat-desc {
     font-size: 0.88rem;
     color: var(--text-muted);
+  }
+  .offer-pricing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .offer-card {
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    position: relative;
+  }
+  .offer-card .offer-card-label {
+    color: var(--navy);
+  }
+  .offer-card .offer-price-note {
+    color: var(--text-muted);
+  }
+  .offer-card .offer-card-list li {
+    color: var(--text);
+  }
+  .offer-card h3 {
+    color: var(--navy);
+  }
+  .offer-card-popular {
+    background: #0f172a;
+    color: white;
+    border-color: #0f172a;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    transform: scale(1.04);
+  }
+  .offer-card-popular .offer-card-label {
+    color: #e0e7ff;
+  }
+  .offer-card-popular .offer-price-note {
+    color: #cbd5e1;
+  }
+  .offer-card-popular .offer-card-list {
+    color: white;
+  }
+  .offer-card-popular .offer-card-list li {
+    color: #e0e7ff;
+  }
+  .offer-card.offer-card-popular h3 {
+    color: #f97316 !important;
+  }
+  .offer-card-popular h3 span {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .offer-card-popular .btn-offer {
+    background: #f97316;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+  }
+  .offer-card-popular .btn-offer:hover {
+    background: #ea580c;
+  }
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .offer-card h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--navy);
+  }
+  .offer-card h3 span {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: normal;
+  }
+  .founding-members {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--sky) 0%, white 100%);
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  .founding-members h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+  }
+  .founding-members p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .offer-card-popular {
+      transform: scale(1);
+    }
+    .offer-pricing {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 </head>
@@ -798,7 +908,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="trust-item">
         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-        Same-day response
+        15-minute response
       </div>
     </div>
   </div>
@@ -847,18 +957,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
     <div>
-      <div class="offer-card">
-        <p class="offer-card-label">Simple pricing</p>
-        <h3>Flat rate per user, per month.</h3>
-        <div class="offer-price">$99 <span>/ user / mo</span></div>
-        <p class="offer-price-note">Everything included. No hidden fees.</p>
-        <ul class="offer-card-list">
-          <li>Works for teams of 5–50</li>
-          <li>Scale up or down anytime</li>
-          <li>No setup fees</li>
-          <li>Cancel with 30 days notice</li>
-        </ul>
-        <a href="#contact" class="btn-offer">Book a Discovery Call →</a>
+      <div class="offer-pricing">
+        <div class="offer-card">
+          <p class="offer-card-label">Basic</p>
+          <h3>$99<span> / user / mo</span></h3>
+          <p class="offer-price-note">Everything included. No hidden fees.</p>
+          <ul class="offer-card-list">
+            <li>Unlimited helpdesk support</li>
+            <li>Proactive monitoring</li>
+            <li>Automated backups</li>
+            <li>Business hours support</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a href="#contact" class="btn-offer">Get Started →</a>
+        </div>
+        <div class="offer-card offer-card-popular">
+          <div class="popular-badge">Most Popular</div>
+          <p class="offer-card-label">Professional</p>
+          <h3>$149<span> / user / mo</span></h3>
+          <p class="offer-price-note">Everything in Basic, plus:</p>
+          <ul class="offer-card-list">
+            <li>After-hours coverage</li>
+            <li>Priority response</li>
+            <li>Cybersecurity essentials</li>
+            <li>Dedicated account manager</li>
+          </ul>
+          <a href="#contact" class="btn-offer">Get Started →</a>
+        </div>
+        <div class="offer-card">
+          <p class="offer-card-label">Complete</p>
+          <h3>$199<span> / user / mo</span></h3>
+          <p class="offer-price-note">Everything in Professional, plus:</p>
+          <ul class="offer-card-list">
+            <li>24/7 emergency support</li>
+            <li>Advanced threat protection</li>
+            <li>Compliance reporting</li>
+            <li>Quarterly IT reviews</li>
+          </ul>
+          <a href="#contact" class="btn-offer">Get Started →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -963,9 +1100,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="stats-grid">
     <div class="stat-card">
-      <div class="stat-number">&lt; 2hr</div>
+      <div class="stat-number">&lt; 15 min</div>
       <div class="stat-label">Average response time</div>
-      <div class="stat-desc">For all support requests during business hours</div>
+      <div class="stat-desc">For all support requests 24/7</div>
     </div>
     <div class="stat-card">
       <div class="stat-number">99.9%</div>
