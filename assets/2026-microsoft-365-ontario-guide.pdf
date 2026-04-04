@@ -1,0 +1,97 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 612 792] /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >>
+endobj
+5 0 obj
+<< /Length 1750 >>
+stream
+BT
+/F1 18 Tf
+50 750 Td
+(2026 Microsoft 365 for Ontario SMBs) Tj
+0 -20 Td
+/F1 10 Tf
+(Security, Setup & Compliance | Trueline IT) Tj
+0 -30 Td
+/F1 12 Tf
+(Key Finding - Southern Ontario Assessment (2026)) Tj
+0 -20 Td
+/F1 10 Tf
+(78% of Ontario businesses had no verified M365 security) Tj
+0 -30 Td
+/F1 12 Tf
+(What Must Be Configured) Tj
+0 -20 Td
+/F1 10 Tf
+(- Multi-factor authentication) Tj
+0 -15 Td
+(- Conditional access policies) Tj
+0 -15 Td
+(- Defender for Cloud Apps) Tj
+0 -15 Td
+(- Data Loss Prevention \(DLP\)) Tj
+0 -15 Td
+(- Backup verification and retention) Tj
+0 -15 Td
+(- Audit logging and compliance) Tj
+0 -30 Td
+/F1 12 Tf
+(Coverage Areas) Tj
+0 -20 Td
+/F1 10 Tf
+(Guelph | Hamilton | Burlington | All Southern Ontario) Tj
+0 -30 Td
+/F1 12 Tf
+(Microsoft 365 Costs) Tj
+0 -20 Td
+/F1 10 Tf
+(Base licensing: $100-$300/user/month) Tj
+0 -15 Td
+(Setup/hardening/training: $1,500-$5,000 one-time) Tj
+0 -15 Td
+(Compliance audit: $500-$1,500) Tj
+0 -30 Td
+/F1 12 Tf
+(PIPEDA Compliance) Tj
+0 -20 Td
+/F1 10 Tf
+(M365 can be configured for PIPEDA compliance) Tj
+0 -15 Td
+(Requires DLP, audit logs, retention, training) Tj
+0 -15 Td
+(Trueline IT handles full stack configuration) Tj
+0 -30 Td
+/F1 11 Tf
+(Optimize Microsoft 365 for Ontario compliance today.) Tj
+0 -15 Td
+(Book your free 15-minute IT Health Score.) Tj
+0 -15 Td
+/F1 9 Tf
+(hello@truelineit.com | \(647\) 360-5774) Tj
+0 -30 Td
+(copyright 2026 Trueline IT) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000203 00000 n 
+0000000291 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2092
+%%EOF
