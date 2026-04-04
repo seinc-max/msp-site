@@ -1,0 +1,93 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 612 792] /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >>
+endobj
+5 0 obj
+<< /Length 2000 >>
+stream
+BT
+/F1 18 Tf
+50 750 Td
+(2026 Southern Ontario Cybersecurity Report) Tj
+0 -20 Td
+/F1 10 Tf
+(Enterprise-Grade Security for SMBs | Trueline IT) Tj
+0 -30 Td
+/F1 12 Tf
+(Key Findings from 20 Southern Ontario Businesses (2026)) Tj
+0 -20 Td
+/F1 10 Tf
+(- 85% had zero encryption on sensitive files) Tj
+0 -15 Td
+(- 92% had unpatched critical vulnerabilities) Tj
+0 -15 Td
+(- 100% lacked formal disaster recovery plans) Tj
+0 -15 Td
+(- 88% could not account for all deployed hardware) Tj
+0 -15 Td
+(- Only 2 of 12 regulated businesses met PIPEDA standards) Tj
+0 -30 Td
+/F1 12 Tf
+(The Cost of Cybersecurity Gaps) Tj
+0 -20 Td
+/F1 10 Tf
+(One ransomware attack: $50,000-$200,000 CAD in recovery costs.) Tj
+0 -15 Td
+(One undetected breach: Regulatory fines + reputation damage.) Tj
+0 -30 Td
+/F1 12 Tf
+(Trueline IT Cybersecurity Includes) Tj
+0 -20 Td
+/F1 10 Tf
+(- 24/7 threat detection and monitoring) Tj
+0 -15 Td
+(- Encryption of sensitive files by default) Tj
+0 -15 Td
+(- Automated security patch management) Tj
+0 -15 Td
+(- PIPEDA compliance audits and documentation) Tj
+0 -15 Td
+(- Incident response within 15 minutes) Tj
+0 -15 Td
+(- Staff security training \(included\)) Tj
+0 -30 Td
+/F1 12 Tf
+(Pricing - CAD per user/month) Tj
+0 -20 Td
+/F1 10 Tf
+(Essentials: $99 | Professional: $149 | Complete: $199) Tj
+0 -40 Td
+/F1 11 Tf
+(Is your Southern Ontario business protected?) Tj
+0 -15 Td
+(Book your free 15-minute IT Health Score assessment.) Tj
+0 -15 Td
+/F1 9 Tf
+(hello@truelineit.com | \(647\) 360-5774) Tj
+0 -30 Td
+(copyright 2026 Trueline IT) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000203 00000 n 
+0000000291 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2342
+%%EOF
