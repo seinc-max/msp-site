@@ -1,0 +1,95 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 612 792] /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >>
+endobj
+5 0 obj
+<< /Length 2100 >>
+stream
+BT
+/F1 18 Tf
+50 750 Td
+(Trueline IT Health Score Checklist) Tj
+0 -20 Td
+/F1 10 Tf
+(15-Question IT Diagnostic Assessment) Tj
+0 -30 Td
+/F1 12 Tf
+(Score Your IT Infrastructure) Tj
+0 -20 Td
+/F1 10 Tf
+(___ 1. Do you have 24/7 IT monitoring?) Tj
+0 -15 Td
+(___ 2. Are backups verified quarterly?) Tj
+0 -15 Td
+(___ 3. Are critical systems patched monthly?) Tj
+0 -15 Td
+(___ 4. Is MFA enabled on all user accounts?) Tj
+0 -15 Td
+(___ 5. Have you completed a PIPEDA compliance audit?) Tj
+0 -15 Td
+(___ 6. Do you have a tested disaster recovery plan?) Tj
+0 -15 Td
+(___ 7. Do you maintain a hardware inventory?) Tj
+0 -15 Td
+(___ 8. Do you have enforced password policies?) Tj
+0 -15 Td
+(___ 9. Do you have after-hours technical support?) Tj
+0 -15 Td
+(___ 10. Do you have documented staff security training?) Tj
+0 -15 Td
+(___ 11. Do you have an incident response plan?) Tj
+0 -15 Td
+(___ 12. Are logs retained for 90+ days?) Tj
+0 -15 Td
+(___ 13. Do you have vendor security assessments?) Tj
+0 -15 Td
+(___ 14. Is all sensitive data encrypted?) Tj
+0 -15 Td
+(___ 15. Do you have a cyber insurance policy?) Tj
+0 -30 Td
+/F1 12 Tf
+(Scoring Guide) Tj
+0 -20 Td
+/F1 10 Tf
+(Total Score: ___ / 15) Tj
+0 -20 Td
+(0-5: CRITICAL RISK - Urgent action required) Tj
+0 -15 Td
+(6-10: MODERATE RISK - Plan remediation now) Tj
+0 -15 Td
+(11-15: WELL MANAGED - Strong IT posture) Tj
+0 -30 Td
+/F1 11 Tf
+(Ready to improve your score?) Tj
+0 -15 Td
+(Book your free 15-minute discovery call.) Tj
+0 -15 Td
+(/F1 9 Tf
+(hello@truelineit.com | (647) 360-5774) Tj
+0 -30 Td
+(copyright 2026 Trueline IT) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000203 00000 n 
+0000000291 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2442
+%%EOF
