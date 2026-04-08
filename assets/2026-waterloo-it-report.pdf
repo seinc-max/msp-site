@@ -1,77 +1,80 @@
 %PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 612 792] /Contents 5 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >>
+<<
+/BaseFont /ZapfDingbats /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Length 800 >>
+<<
+/Contents 9 0 R /MediaBox [ 0 0 612 792 ] /Parent 8 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+>>
+endobj
+7 0 obj
+<<
+/Author (anonymous) /CreationDate (D:20260407232521-04'00') /Creator (anonymous) /Keywords () /ModDate (D:20260407232521-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
+>>
+endobj
+8 0 obj
+<<
+/Count 1 /Kids [ 5 0 R ] /Type /Pages
+>>
+endobj
+9 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2239
+>>
 stream
-BT
-/F1 18 Tf
-50 750 Td
-(2026 Waterloo IT Report) Tj
-0 -20 Td
-/F1 10 Tf
-(Managed IT Services | Trueline IT) Tj
-0 -30 Td
-/F1 12 Tf
-(Key Finding - Southern Ontario Assessment (2026)) Tj
-0 -20 Td
-/F1 10 Tf
-(78% of businesses had zero IT monitoring) Tj
-0 -30 Td
-/F1 12 Tf
-(Why Proactive IT Matters) Tj
-0 -20 Td
-/F1 10 Tf
-(One server failure: $8,000-$15,000 CAD/day) Tj
-0 -15 Td
-(No backups = no recovery option) Tj
-0 -15 Td
-(No monitoring = emergency calls at 2am) Tj
-0 -30 Td
-/F1 12 Tf
-(Managed IT in Waterloo) Tj
-0 -20 Td
-/F1 10 Tf
-(24/7 monitoring and support) Tj
-0 -15 Td
-(Verified disaster recovery) Tj
-0 -15 Td
-(Compliance and security included) Tj
-0 -15 Td
-(Flat-rate pricing: $99-$199/user/month) Tj
-0 -30 Td
-/F1 11 Tf
-(Protect your Waterloo business today.) Tj
-0 -15 Td
-(Book your free 15-minute IT Health Score.) Tj
-0 -15 Td
-/F1 9 Tf
-(hello@truelineit.com | \(647\) 360-5774) Tj
-0 -30 Td
-(copyright 2026 Trueline IT) Tj
-ET
-endstream
+GauHMhf%7-&:X@\E=X"M%L=:WUjhZE9tPR;]=(7h%0QI$a\8d)Q3'WQ@%`#IN^o4p*P8SI2DGc,[eSZ+hW_Z4R6uKX:B0nh_"e\ihJhBSVH:PZP;)q8^J?59#<[u*0WmennQeQX(IN7,WGlR9#`*F3k5dCXY'ueC1lc+*(J5F<$*YP/7'-=ZED"i<rRGQn?hbr#(Egf5LqJ06SG,uo!3sK2(N;-HQF\Usr;rkr_=SNf]$p'QJqqcaY]nRDnkC;jU5_^3fM7)m!YL!>i:!br9j-*;D@.3V[ViYgYhN8TGbN/f85C_r)[@k/?"=7C;%d^W7T30aaOGu+cUp0([Wp\H$WEVBX1GC9=7EM4nWS[0]!_LPD$VDk<2P5NpJt#*#e+0X@\R<n.WL]YO@KUO(&9Xp;%a3t&JuT')QCe_9r!0VYVa4t%3iOLA-</!,SV$8bedai8)qZq)3BE4#0s;WKm\3\q.)[7,dmtE!ko9`M7Z.,3B8@_-l-Z>Z@kbP-V*`?W36Cas4dE9[np]4%F"*bBm*k09E__.K,7i1\n)Di+=2X@93`0a4Z@)gc]mKQILl\(7E!.+Mnf?^SU1R"boIB-$RJa@]8#heVSWR)(rR6s,2b#j5FRltPq5f6Vl9r2pK_N^144\#QV[NY-(GbJWO/8jE%3S]gjL3t0JS2'9[!q$kSM^8gFtAU-ql`<\&o9Ln&C('[ks".6f;r[<ULkZ.9#:j^-eDiA09=I9i3i<[t9O4]kPLs8Lu,NRatFV"`YaFip?lBmua,+;(4%mGhc'R["M'g5=s0E(j'<'#XVo:&j=Ou@h%T<\BA+O>\;NRiSIso>Q&($C"^`d'Dn,s[aU0.(c[q\";_][9:[_M"$bCKOfscHN:#XL)1p?I]ZbFAR]l"VC[1I=6tO'4LuP%L<HRHdlM;p1d(1E1n<^:ia:H8gk-R+j'p;d&`'itb`R-jY'C1=)_.As=?,?E<^+]0G>/T+]p*dl#H6Hk0o8DA/aJtcGNXCqG=q>$1,@'!>V`W]kbGsB"o7RASWEW'5,[p=->3-,jN`V"Y$;)f(G><&R-_u-=C6`]oFlMN@8Ca4ZX*gLpeNY2Y(@]CO.ej)TjWfo,`I&rIj_3p:g;/o)O71cd@m[R.8fa0$r>V`raO^+;85*;PGd!@\eSS`PRa$Y5<$qnr;Tgb6]Dng5m^i(n1p(5Y]a6W[:1Bs0`Ps&U/])VSd)h!enufKtPl@X3=6k3R!-,'bcTo-=""6:8b'Jn)^_T.)1[c!nO([l9c:=ngc^1SNh9i$8Z?ZZ&I9*tMB=%FUedaBh0t,3j)&W*N'=W7egMS6C*^i#9VMEPFB;B?!BskeQ>7!cn@@pE`)9_.XIo%n!F+j*n9bYYtAn7*^*Qa9sQ:VPjdA@Inb,,_a.W6!LAh&GXA2O/$U_#bu.:ef,<Z]QU?+VUo@e1-i!a(*_*@0c8L5/lFPK:i!%k+fq"-6\IJCRq,e.mk%4tr$+@$F/\/A>?)m?*10gDn_/Z_BOoq!h`Zg$P$taE#TMN[jM3Ic#.44:l\7^\a57AR-pJQ_&^f<8][f@(MlU62V%V6RD.r*>eRTd.^>O*")76eba*ao:+c+8&`#5<a3Q-5g5oamuJVf^%HB%ISjaa`S.k2GQQ^5CIR_lom1=A,J>p4,DYDDm.F6Z][og8ohmp!9@<(%E6STlenbo+fcWc/#2u![`W.k8]NM_dnEKa4?;)#_6K'`r@GdAM5]X35lR5';2R6"d_/uJhnZo"RHE)4`.:m#L6.64Gnu0-/TcqH4=SjWHUu%a7i;M?A?8do$?*D]o6hX.I3pSOLCP9j1)78h:/#p7LU$/kq!JGk*7ShQ?;4!]5Pnr!3-=8E!l9ugF*m_S%`Kc5,>sUpRXD"rn>ul(cSp9^-#+a'&VcS"^T/AF7eTq\n>>6FOBb@q<(?&FfMpR3c:d[cp]JUYV4B?l$o/PD/BoW3dLc/)s?jLI&1GS(Dd9,(`2?mtg40sANo',u<f4HmARSNC5(B/q]p\N0VAY!M@%/aV0LAL$C[<u'%FMH*]Rd/Ge]WQ0\AIMj%=sJ[K78YWu^",OK6YBshLWd?MgZn',[USQ6hsOhfW+O^*\\Y)&go`S<F=aU3B61A(g)?H-L)+4G0.>4S5IaMl*S#&.ZVVeRm<!.D4.u<B"4GpG.1o$#M1o1)jTI#\H%FP!;\d=ci%)TJQY$-M::*1?W]9T^hWd]loXqrOD2Qd8`P7Gh3l6Zos-3`o3r~>endstream
 endobj
 xref
-0 6
+0 10
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000203 00000 n 
-0000000291 00000 n 
+0000000061 00000 n 
+0000000112 00000 n 
+0000000219 00000 n 
+0000000331 00000 n 
+0000000414 00000 n 
+0000000607 00000 n 
+0000000675 00000 n 
+0000000936 00000 n 
+0000000995 00000 n 
 trailer
-<< /Size 6 /Root 1 0 R >>
+<<
+/ID 
+[<6a6cfed4a4c17fb64c205668b827e096><6a6cfed4a4c17fb64c205668b827e096>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 7 0 R
+/Root 6 0 R
+/Size 10
+>>
 startxref
-1142
+3325
 %%EOF

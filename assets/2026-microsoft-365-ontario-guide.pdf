@@ -1,97 +1,80 @@
 %PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 612 792] /Contents 5 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >>
+<<
+/BaseFont /ZapfDingbats /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Length 1750 >>
+<<
+/Contents 9 0 R /MediaBox [ 0 0 612 792 ] /Parent 8 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+>>
+endobj
+7 0 obj
+<<
+/Author (anonymous) /CreationDate (D:20260407232502-04'00') /Creator (anonymous) /Keywords () /ModDate (D:20260407232502-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
+>>
+endobj
+8 0 obj
+<<
+/Count 1 /Kids [ 5 0 R ] /Type /Pages
+>>
+endobj
+9 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2226
+>>
 stream
-BT
-/F1 18 Tf
-50 750 Td
-(2026 Microsoft 365 for Ontario SMBs) Tj
-0 -20 Td
-/F1 10 Tf
-(Security, Setup & Compliance | Trueline IT) Tj
-0 -30 Td
-/F1 12 Tf
-(Key Finding - Southern Ontario Assessment (2026)) Tj
-0 -20 Td
-/F1 10 Tf
-(78% of Ontario businesses had no verified M365 security) Tj
-0 -30 Td
-/F1 12 Tf
-(What Must Be Configured) Tj
-0 -20 Td
-/F1 10 Tf
-(- Multi-factor authentication) Tj
-0 -15 Td
-(- Conditional access policies) Tj
-0 -15 Td
-(- Defender for Cloud Apps) Tj
-0 -15 Td
-(- Data Loss Prevention \(DLP\)) Tj
-0 -15 Td
-(- Backup verification and retention) Tj
-0 -15 Td
-(- Audit logging and compliance) Tj
-0 -30 Td
-/F1 12 Tf
-(Coverage Areas) Tj
-0 -20 Td
-/F1 10 Tf
-(Guelph | Hamilton | Burlington | All Southern Ontario) Tj
-0 -30 Td
-/F1 12 Tf
-(Microsoft 365 Costs) Tj
-0 -20 Td
-/F1 10 Tf
-(Base licensing: $100-$300/user/month) Tj
-0 -15 Td
-(Setup/hardening/training: $1,500-$5,000 one-time) Tj
-0 -15 Td
-(Compliance audit: $500-$1,500) Tj
-0 -30 Td
-/F1 12 Tf
-(PIPEDA Compliance) Tj
-0 -20 Td
-/F1 10 Tf
-(M365 can be configured for PIPEDA compliance) Tj
-0 -15 Td
-(Requires DLP, audit logs, retention, training) Tj
-0 -15 Td
-(Trueline IT handles full stack configuration) Tj
-0 -30 Td
-/F1 11 Tf
-(Optimize Microsoft 365 for Ontario compliance today.) Tj
-0 -15 Td
-(Book your free 15-minute IT Health Score.) Tj
-0 -15 Td
-/F1 9 Tf
-(hello@truelineit.com | \(647\) 360-5774) Tj
-0 -30 Td
-(copyright 2026 Trueline IT) Tj
-ET
-endstream
+GauHM9lJcG&A@sBb[hT)J[".3Ut_b@gC97O7H.d]5VJ!h-ec^@+NZ&FoZ-E^'Id1i;o`_g"#4MJ1QUVWS)K`$KJ.*?c^"R7Vsrsl"j15a!%NeTkpa99:'chmW[JE.=Xrp3.K#*t^7(9G<$_qe%\be3>/T@]KVYjc0g7!rPU8Yi7'TjKkMt&Ucb$+&,JNY?l^n3arg=,mnT3DM'bS@c^L+joZsMu@0D,^?rWgo=(?ef6!u$oW@"XtC#K+SIW3Qen'"/Y`("NYKR"DYl<``#'BRqZ?MlMMmAXh4q"g:u:U21b($s`V)VUbh[*XDf_&n_bG1;S)Z$'cu;UFDjWPtLB?BO9N%Gu__Rn.?V_r'%ICpT&\U^,3>DOT:Q%1h(?kjb,/>#m&5+N*WL"<_>>OM=!pI[>Lo91Y6&+Q&0?LAY-?4DF?]giR>dj^<`koC_RQ.S0?AA;*W@7Q$G-j%LUt[DSmm@e)?ilXsZH,RC+.;?\p/lFr'uRk&r[/;&f45J.cb7A+g.,$cpPX2L5k"@=qugc?6g8o-1s$,>'e=[]8rm%Mh*@=1)qe6TV$oImapq#2VW\NWhfX9&g.m5\M^Wd(V2M=?cT1!@Lf*Z:L=nCtHu?P9P^bLe&&JZG6hh`Q/E&;8VkLFpmXDU1?Z/QUS1Z/p1CJItC<RRtRq<W#Zkh_JOZS-PL!MqQFDL)UmnQ@sYYc@BaTI`u=!aZ6hj,UC>Le2P)deWL5WdJ]8^0YqpZ',44gG/[?[f40W@P$l>KDVqIWDLVc:hB,JsqF-rsU:'@*%T:ggT#gq:f.4e>`r-Dh]J.'\tUdGdfWj3S)d'2FD,UIF'mUulAB+'YZ;'^+N[2GK89`q#&I>dGZ?/!>p85j;e'0)H<B&sHIh"81t@t]T;<mUIt*4o,od-s1>8N8cfbD^O).g`kfb'@m_A-EstApEV71<A9(-j">1=abM#pB7JMN#3qP1;M&5IE_3!D*VPW\@a82ZNkH8Q._G*pG/]&_P[N3ap%rJ%Hi$.FY?\1/O$H\oPra3W`rcdmAb5dnQt(<':pJfSj'&q4Jhg0QVKqHiP4ss'0`[9(V3B/#$ilahOIS$n&hV8!9,hrZ%teI\ORNcTUU$GX>lRWA@ECtK._Ll<jmd)p6qB$]E@9?Ad@.]<Q'Hl?a#A)XubU63[2>)-@<jPSgK?.+Y/O7nVdE7C"tW<N@:>[^3[i?Q4@@3GCtsSn<rfgc-ZQL0RTg&PQAuV;>8Ynj9`Vm.R+%):B$;M567@qm'>7cFJo#N+1)P4s6/f"I)<Pa>?0"=]j\OOndMb7nF`L/W:!HulpB>\@.%LcR8N6iO^G6UC`M9&"Iq^*M=`M?(OK=uGr]'pa+B78a!%ImX-SYsiP&j6jsCfGgNIC40eF2<>YC$Y=scKOM_9qk="]F;PAqObS$%Re!GV%[#pZ/0_FWSWW.I$^GAUA([AFo[!f012NY6Cf_b7(MJRm^+2^I&*)co3F=MGAR[/,V&V)N*UMN$4A9=0?552EXp(uD@Z)A?\p+1/)<Vl)nuDP)Ts/WBu'Qd'kuK*;*HGA&k,_Z,;.54cdn_RXRY]cI<7I1kC2H$!-_$.F;`IY-7V?Fh/o`3mj.h'MJe(OK]h_*O]jpZq],XqKU-+G'9FZhJSbf^*[(.u<]*);ShqBQ'!RT2fIZ<qYCZYu[^mB@XcoOp+QkVlusTcr\[RnnE!c6!mb_4+1[+?eGO0AY$Oj?^+r671&+6&o:C/@(n$t*8$uRE9g"34<<9#-fER+7%lI-ACjFSA;+_rh,462BjZ]6#@`#lgJFm)>O0Y.FA2L8AukX:Wq1R"P]KbCaMtk6%IE0G>[OUj$jgnYAQ9es2R-^JOu^COi:U5c[Rc2BZYO5Tocea!+E]4tXdU#O7rXqVq.3mjBcf,.O\1eu,NGAVN3Dc6EQ:QrHTk?Gm.a+]g$t3EabYulfju`rQFTK28(08In`+Fi3^+GeNfW%6(km2q]XsG0c',"c]VU5[TWGi@aAfb,klS5HJ#cQY?"%P4n80\7mT(Z)=.QA(Y,\[EBA>%QXV&D.1+u_2?E9:hXg=b8L5T2gdqYq/G":,)]^7p9fE>agEeL6`AD9,g>Cud!F_uOJ2TFp?e?V""%k)1jhcjpE*2RE1B&UiiYg\Rhn&Ug5++W3qH5K^/M4#IVjT$HPH%FhI6Q*oGi&e`^/rJqtXk%[N<_5l%o3Rb%Pm^C_d7p/JY5%sD\?,l10_lf9oa5d~>endstream
 endobj
 xref
-0 6
+0 10
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000203 00000 n 
-0000000291 00000 n 
+0000000061 00000 n 
+0000000112 00000 n 
+0000000219 00000 n 
+0000000331 00000 n 
+0000000414 00000 n 
+0000000607 00000 n 
+0000000675 00000 n 
+0000000936 00000 n 
+0000000995 00000 n 
 trailer
-<< /Size 6 /Root 1 0 R >>
+<<
+/ID 
+[<066e94a9eafb660c264f564e0eec459d><066e94a9eafb660c264f564e0eec459d>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 7 0 R
+/Root 6 0 R
+/Size 10
+>>
 startxref
-2092
+3312
 %%EOF

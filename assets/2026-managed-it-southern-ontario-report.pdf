@@ -1,93 +1,80 @@
 %PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 612 792] /Contents 5 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >>
+<<
+/BaseFont /ZapfDingbats /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Length 1900 >>
+<<
+/Contents 9 0 R /MediaBox [ 0 0 612 792 ] /Parent 8 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+>>
+endobj
+7 0 obj
+<<
+/Author (anonymous) /CreationDate (D:20260407232502-04'00') /Creator (anonymous) /Keywords () /ModDate (D:20260407232502-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
+>>
+endobj
+8 0 obj
+<<
+/Count 1 /Kids [ 5 0 R ] /Type /Pages
+>>
+endobj
+9 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2259
+>>
 stream
-BT
-/F1 18 Tf
-50 750 Td
-(2026 Managed IT Services Report) Tj
-0 -20 Td
-/F1 10 Tf
-(Southern Ontario SMBs | Trueline IT) Tj
-0 -30 Td
-/F1 12 Tf
-(Key Findings - Southern Ontario Assessment (2026)) Tj
-0 -20 Td
-/F1 10 Tf
-(- 78% of 20 assessed businesses operated with zero IT monitoring) Tj
-0 -15 Td
-(- No verified backups in 85% of cases) Tj
-0 -15 Td
-(- No after-hours support in place) Tj
-0 -15 Td
-(- One server failure costs $8,000-$15,000 CAD per day) Tj
-0 -15 Td
-(- 92% had unpatched critical vulnerabilities) Tj
-0 -30 Td
-/F1 12 Tf
-(The Cost of Inaction) Tj
-0 -20 Td
-/F1 10 Tf
-(Daily loss from downtime: $8,000-$15,000 CAD) Tj
-0 -15 Td
-(Annual cost of reactive IT: $45,000-$80,000 CAD) Tj
-0 -15 Td
-(One ransomware recovery: $50,000-$200,000 CAD) Tj
-0 -30 Td
-/F1 12 Tf
-(What Managed IT Delivers) Tj
-0 -20 Td
-/F1 10 Tf
-(- 24/7 monitoring and helpdesk support) Tj
-0 -15 Td
-(- Verified disaster recovery and backups) Tj
-0 -15 Td
-(- Security, compliance, and patch management) Tj
-0 -15 Td
-(- No emergency calls or surprise costs) Tj
-0 -15 Td
-(- Flat-rate pricing: $99-$199/user/month CAD) Tj
-0 -30 Td
-/F1 12 Tf
-(Pricing - CAD per user/month) Tj
-0 -20 Td
-/F1 10 Tf
-(Essentials: $99 | Professional: $149 | Complete: $199) Tj
-0 -40 Td
-/F1 11 Tf
-(Ready to move to proactive IT?) Tj
-0 -15 Td
-(Book your free 15-minute IT Health Score.) Tj
-0 -15 Td
-/F1 9 Tf
-(hello@truelineit.com | \(647\) 360-5774) Tj
-0 -30 Td
-(copyright 2026 Trueline IT) Tj
-ET
-endstream
+GauHM;/b2I&:XAW\;+olMj4l'P*5OGA8Te'9p<P&JH:0rAD5Ta984uF$d^!1,:QNrA%.KI-7N]X(;Kaj4+;Cd:^HQWRfB]S_!),bhbp*U7MDGbE#?9D2kpDI!DOgC63U"A^+tO0&_,8qM+_F(5iNt["/lr.?4KL=8KQiC>QdV,,`!b)KRZ0Xbk#9?1g7h)r6X)/^l3[g]mY:#[T%MP&]`5\E&=RrWlRj+!_34,kbTH6dr#\JL>6:#o20H%-4q`P7O3Y(-UP?E@0)R2Od>62NT#6fPH'@G[;'<R0&a*PdQ4RX<no<+"!2c-Jm>iOnkgN=genb`+_/(!*pq*<(qUU%.i>9QAPHKrn-`K.T#952+0Y,=DFD9k,WlC#rH@9FPir)Wo7;_aW5)7s67QJ$'um#3a>d^R_D":\AgF1$g5O`#h,9)*CIEQpN"I$DK904Y4UZm[SJb*!A7,f[B&Lo0<QM*"Rgit^Da]pXi./SIMoFMgleEHu:C&/R\=&!1f$,E<)6+"=bGE(*A%5Yn1&CMNMDY2=Mn2O.'t6fU^taU\>a5bDkk`6M$V9VH+1B\/of*PRdcc8FOU@!TPtqen-LBM2co+Z.1Mq4382.jnn=,0k&15WA5o<!,#:uMn`#gceE6="O!B!dk7..D"\tjZX[k8WpWJINVm&/W"g;AbL_bp/JA>;O'\gYr^oV,]/`mdJ7[V)>Q;fSipdIu>)./B<F):/q.e5GCT#>7C:nK-M[:-uCEZdXP*<N8XI/Gib1/M8)?CG1f9'Q^cJ)^,,#1=T,EJN:l6gJ47S0Q]Sp[mYgC5kYR1"QlE:8-rPOC7Jp2H;c6eUKXgag`);O.te$B5E9-]=tH\b3<Y3eM1H!k20YWEW\SLm3\RB95t:RpE.VhmXm3R0Dq01*W9fKlXH*P$4e"*^4=r>mmo6PO#VEF?O9@bIEfA-#M<q267YK[.WRF=2o*hdZZn)aC^bE2\M%MF7MtA>LE"<IGP1C?SJ_0]Q>rJ^;CR%o/W]giP>=[TpJ2dK[<8G>]QD"TP.tES4SaO`-@2or%0!,P:$,rf0@FZ[_mPCb(rZ*59IVNGu2g%aTi/GT7;cX)c&M&Tp"XKbh50E'k6)?```Po3^a$jq3"l$j24n!l5-^M"d5#CuIRF&YbWU/=7rdouPX9ENR'@5,IMj^nnnMn)GJ;e/rZ.o1pMWV'[^6PN0cJuCm-IPb%k\dZqR#kogZ=`=a>."uf=Vgbt)tF9c<h>q7FdiX80#stu2X+a]'&]IrgKa7.H+TmDU"YWD*lZj1RqH-bk-`B41IdWO_se]NFhTu*\BSd75eKg`\D=&b33O)&1Cg&A34]g+.jVXCCfR[]]lOTPdlsb`/!is`rnaHKqF9T>g.Y1<d3G,Vm"fRb\TE;ILc109;`9PQ?&@n*el*W+k+gcp3fEd4bp(unZ1;k&n(P8A,rZ9Q,Ci<akoeOn1q^nMRn%eUIR)jd*OsmJ2]amBOnkdT2#0O-m(:g**kA>g?fV(bmr2o>=r^@hHbccmJ"L5D?I_%c=d,m6@.rmUO%Mc?\%*:K-QmToppI]XeK)@t<3<BXIL9gkP(-<WWl\*M@JKi_$&Dki5#Sn[#@D4.?rr]\C)eks.9>UKSqf],.s(@.Bt?.GJ1'\nY<m/++oHV.rY3.SM>l*VXg-q?mT\$3@Cnnj?<r><-DHc"4mL.dSn_9T2e4S2/>0+]1,#-`JS_Vm2OWksYdGMTZTSTFlTm5VK?sfr&&OfYX#-H7n$gJT"!CG?FILjk;&'qeg")/D^`qLoW+lCFR.3=qLHVSgjU3YsW%ITVqGrFW`mnAJjE'u5r"T/\KA^uTX_LCFVsAO'(p3T/)gPb%-nJr9KX;`:9oXkq%'kkQ`!-E=gmu:;_/JqF0PAPF9K!Bu`d2AeF/UTh\67?n[;*ps=[&BBUYijlhiI`>oTW%JZI":T$eI_1Kf2nukX(OYIiGCE&oFSq.,G50MLfCOD#i9U(TMeYA'(i/@pq`))mH%$bkb>\VrbNt;cQ&]qnbEup(*VFlT7gpp!h_92tnC7)`g2jUeNc%UH?%o?Q?2T;KH#ATAa*\RFFj&nQ5=p>[]h[2bW&-ZtO&*bUWN[9f5]7aa-7^q[X"1)VH7D_5*(7VDX`",cg(J1Lp%,;VTt_WXPd#@u9",D_%\`NWQZ>:O).^m::"-4"u*P#Gei$*Yq?\8'ER\FG,lB]g1o".hP2ii![=o'h.fm::*1?.Oah!c;^cXF4E9Re9PIai*Z=umGYt@J,dptB`~>endstream
 endobj
 xref
-0 6
+0 10
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000203 00000 n 
-0000000291 00000 n 
+0000000061 00000 n 
+0000000112 00000 n 
+0000000219 00000 n 
+0000000331 00000 n 
+0000000414 00000 n 
+0000000607 00000 n 
+0000000675 00000 n 
+0000000936 00000 n 
+0000000995 00000 n 
 trailer
-<< /Size 6 /Root 1 0 R >>
+<<
+/ID 
+[<8556c4c8a068d2ecba417d05e318e7dc><8556c4c8a068d2ecba417d05e318e7dc>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 7 0 R
+/Root 6 0 R
+/Size 10
+>>
 startxref
-2242
+3345
 %%EOF

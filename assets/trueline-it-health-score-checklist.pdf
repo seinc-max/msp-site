@@ -1,95 +1,80 @@
 %PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 612 792] /Contents 5 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >>
+<<
+/BaseFont /ZapfDingbats /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Length 2100 >>
+<<
+/Contents 9 0 R /MediaBox [ 0 0 612 792 ] /Parent 8 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+>>
+endobj
+7 0 obj
+<<
+/Author (anonymous) /CreationDate (D:20260407232521-04'00') /Creator (anonymous) /Keywords () /ModDate (D:20260407232521-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
+>>
+endobj
+8 0 obj
+<<
+/Count 1 /Kids [ 5 0 R ] /Type /Pages
+>>
+endobj
+9 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2444
+>>
 stream
-BT
-/F1 18 Tf
-50 750 Td
-(Trueline IT Health Score Checklist) Tj
-0 -20 Td
-/F1 10 Tf
-(15-Question IT Diagnostic Assessment) Tj
-0 -30 Td
-/F1 12 Tf
-(Score Your IT Infrastructure) Tj
-0 -20 Td
-/F1 10 Tf
-(___ 1. Do you have 24/7 IT monitoring?) Tj
-0 -15 Td
-(___ 2. Are backups verified quarterly?) Tj
-0 -15 Td
-(___ 3. Are critical systems patched monthly?) Tj
-0 -15 Td
-(___ 4. Is MFA enabled on all user accounts?) Tj
-0 -15 Td
-(___ 5. Have you completed a PIPEDA compliance audit?) Tj
-0 -15 Td
-(___ 6. Do you have a tested disaster recovery plan?) Tj
-0 -15 Td
-(___ 7. Do you maintain a hardware inventory?) Tj
-0 -15 Td
-(___ 8. Do you have enforced password policies?) Tj
-0 -15 Td
-(___ 9. Do you have after-hours technical support?) Tj
-0 -15 Td
-(___ 10. Do you have documented staff security training?) Tj
-0 -15 Td
-(___ 11. Do you have an incident response plan?) Tj
-0 -15 Td
-(___ 12. Are logs retained for 90+ days?) Tj
-0 -15 Td
-(___ 13. Do you have vendor security assessments?) Tj
-0 -15 Td
-(___ 14. Is all sensitive data encrypted?) Tj
-0 -15 Td
-(___ 15. Do you have a cyber insurance policy?) Tj
-0 -30 Td
-/F1 12 Tf
-(Scoring Guide) Tj
-0 -20 Td
-/F1 10 Tf
-(Total Score: ___ / 15) Tj
-0 -20 Td
-(0-5: CRITICAL RISK - Urgent action required) Tj
-0 -15 Td
-(6-10: MODERATE RISK - Plan remediation now) Tj
-0 -15 Td
-(11-15: WELL MANAGED - Strong IT posture) Tj
-0 -30 Td
-/F1 11 Tf
-(Ready to improve your score?) Tj
-0 -15 Td
-(Book your free 15-minute discovery call.) Tj
-0 -15 Td
-(/F1 9 Tf
-(hello@truelineit.com | (647) 360-5774) Tj
-0 -30 Td
-(copyright 2026 Trueline IT) Tj
-ET
-endstream
+GauHMgN)%.&q/A5oV7UR,K,;FVcc)!caYm$EnQnLg+'i[,V3q/OXcNO=&o.fe$tO)/12>cZ'C1HOm"u>*uoA)'E\2/o7+1M\=CIK.ghNWquN`=!p1T`kP:(`J>Nn^6:7%Gr+6Q?`R$/J'b639"q_?>1k8'3_qQ&#j%.+5UBlK/!>6XiMo5Pn3&UGOG;jid%ph*l))1*C7D43KSN<\nJ6:b&'qEO<N@KiY]n,ud0Rmkg^?BcOJo]8n+P654n9lE91+sgtlnAu#G(@C$*.Cnnm$;UWebEtLQR[>5MmaT#nF)__e%@V6&?,pIH5qSE^/1!>0M8'&m-$<!6fXGdkF[WHdi#V2D6)B6V5b$.)S&aAFn<-7?LW(?!_=fhJD"S:Aj!pa#[#?gfX=CgV1d;G1#:3p2'Po7RI)]haiq-/8De8fDT"4c_Rm3Er6C67Cm6a$X<HE[_(a0A,CO34*0d>Zh=dTTO2II3QEtLKbZGF,T>WPVAIA<BEta[t6jJ;q+;-Tb^UFQ]A^Nj,K*troXXYF<V$R3>lV4-adO:M./+AnOl9Wn8>hC2j-HhQ7-V%p5"=3Nmi"!,uS04Mu1k*FR"Nb*Tnt,*cLmB+i\Z"f%.l*LDFh'SF==@)2?RHJ?VlXM:%q9&T$Rk!/B=]C4"c:*HRP"tWIkA(E)LfMhRa(\HQr#TKmg;^=hHZF]F4=QW/UqkPi/d;7I/CaW9eCk%5Js*7MBA[G\u5)rq3n6"UE!t6TSfLYP`jB]O1q8n@:Z;)FnO,&[VId([mAdCB>HS;mb`sJP??R!H*,CL$K=Ihm4U9fnUr<u\M/^P8sFh%fIc(-'.Ip/JjF"/UCnI\gr^%V?Y,Ec8Hc"q^M+TcR5)p\/M_&l1'54i:+MPefQQh,WM\;]Bkm!S!q4<YPJatr*DWsVjQZbkT2.3\gDM7B>fuDQZNg(eSE&u^>G2LK8DmN[obZ.pTi5ee&K/%YM$SJ[10(_N[=G>bXij%+$](H6+>JF3<0c&E1ptP/EXc0NA2D1M:M`];JdNkuq7.o3DQ>!\9ah;gCd:l"2lb9aPuX\h<EDVE&j":7E(ak0i5;Z_#C2kWo_Q+6nS@.*(`tSS2<.7pb^?f2a]"(@o?\s_.f;0-9DpM5,5\O.aALQiS2Y*Acb$Iqf`SKGa]Le0)VJ=4I3uCEUrGB]NjQA;FaGk;k)@lPT@jTd@T"#l7$Clc0-d5:?f,3aEK,%ZSYY*k<$tDL8Ra`J1Qolo++eE'l:]HQ&?D)HG?91LdTLDE*q8\qfZeZPj65jYeHMmDCMa"!mecbaTWN7L!bf&2>SW6E_V>FiXa2B2\3Ndon!8eP&)OK[2mUVm>+F]OX&lSg"hS'"?3.ZBp+EAJpeir<(1`.O2''55qd'<6>@`5dZ=^`:MRnD6dZU2m!1psR,kYsL7@*1!!SQ<eFbr\PlDB33Y;BC1qJ_(0%q]mncK1M+>"hERP(t-?gh/)-7M_8\WHhcDB8ar0?3.K-Ks%JXaE=J#&f4hcDPr+'Y;B%'c?3F#S&V7C#H-h<&h\_8q@(R8>1d)\hg3XT]d_>V0;`57/D[VRQ#2Ak>mm2SBo=mGl<W)-9'DF<lauSB?p?XjrM!5j^2$ZIU$GSKjttqcVs8%rb4.n#M(i'='"u>J,YZjdC?4ae<2e:cpISB:i"EJcQrFOW9MuVFm(8O]^#bqa]q3-9QDgF>$c(W_:odo?nqH?/Z]R;4PA3$pFB#L$4Vf@'Zo^`)fc99W=2VGG<7ttFLV!0His!LmUJ<R''X%JH\S_ESPs(^LE2[!u04hQ,C/@rOEJhk8h0N;4O5D*7UUp-3/(.;d*io.:3l1$YE4pD%3^;Ni(@/k#o\Y*NO/AW":#-`PVXA2%eGDeMDR+dRh.43:Z=gbjS8L*s>K:o1l^6M1A#%j@k'--u"1)4`]ChpU*f'LE7A_dNU&aJ$in2N4^kg:0I=2,I[f#uC\_Z)Er?T!M2<2BC;ah+cKl0c>.sg`iKk6BV',mZT^N80^eJ?nB]i'sN't&g*CsU5^V5gi_8iFcP"_Kc3L[/fk_$k/gC\@$;`Whg$$@g.&aAMI)Q61LZqL\`2h;,_+S6Cg,khMuAMaroGB"_kgY$-'"n9(2*%\GN2g%bHeL9+f:j.<rCn$&-ub?bqom%sIoQG#*b*IDLjm'2m$(QCl,8_Y*7X*^:AI[k,-QG)"'AZp=4O('(KhW)m2oUYigjb<<1B4jZFDk)P?@$c$7#li^F@lWIiiOG(!FQCs7$J,CPHG6]*:U333,4JeGXXl3NlN3"&J&,L53'\6NZCBpgHqJ$,PWa\H0H<A?GJ6pr"=M4$V0V:rG42->EHW5PPK;sdK1g7cKpm0=:8e44G'`ZU-nr\7cTiSD7>s_^M4#H+Itj'Qhk9`%4H*bNn:,tb_L1G%03UFmVBI8!RpT-koPDe2@bh_EW\]R[e*%K[A05E5"%fTBP5~>endstream
 endobj
 xref
-0 6
+0 10
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000203 00000 n 
-0000000291 00000 n 
+0000000061 00000 n 
+0000000112 00000 n 
+0000000219 00000 n 
+0000000331 00000 n 
+0000000414 00000 n 
+0000000607 00000 n 
+0000000675 00000 n 
+0000000936 00000 n 
+0000000995 00000 n 
 trailer
-<< /Size 6 /Root 1 0 R >>
+<<
+/ID 
+[<33d764081eb6aa85e982aaf57c97b8b7><33d764081eb6aa85e982aaf57c97b8b7>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 7 0 R
+/Root 6 0 R
+/Size 10
+>>
 startxref
-2442
+3530
 %%EOF

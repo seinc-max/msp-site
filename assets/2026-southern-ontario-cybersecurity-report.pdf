@@ -1,93 +1,80 @@
 %PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 612 792] /Contents 5 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >>
+<<
+/BaseFont /ZapfDingbats /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Length 2000 >>
+<<
+/Contents 9 0 R /MediaBox [ 0 0 612 792 ] /Parent 8 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+>>
+endobj
+7 0 obj
+<<
+/Author (anonymous) /CreationDate (D:20260407232502-04'00') /Creator (anonymous) /Keywords () /ModDate (D:20260407232502-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
+>>
+endobj
+8 0 obj
+<<
+/Count 1 /Kids [ 5 0 R ] /Type /Pages
+>>
+endobj
+9 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2287
+>>
 stream
-BT
-/F1 18 Tf
-50 750 Td
-(2026 Southern Ontario Cybersecurity Report) Tj
-0 -20 Td
-/F1 10 Tf
-(Enterprise-Grade Security for SMBs | Trueline IT) Tj
-0 -30 Td
-/F1 12 Tf
-(Key Findings from 20 Southern Ontario Businesses (2026)) Tj
-0 -20 Td
-/F1 10 Tf
-(- 85% had zero encryption on sensitive files) Tj
-0 -15 Td
-(- 92% had unpatched critical vulnerabilities) Tj
-0 -15 Td
-(- 100% lacked formal disaster recovery plans) Tj
-0 -15 Td
-(- 88% could not account for all deployed hardware) Tj
-0 -15 Td
-(- Only 2 of 12 regulated businesses met PIPEDA standards) Tj
-0 -30 Td
-/F1 12 Tf
-(The Cost of Cybersecurity Gaps) Tj
-0 -20 Td
-/F1 10 Tf
-(One ransomware attack: $50,000-$200,000 CAD in recovery costs.) Tj
-0 -15 Td
-(One undetected breach: Regulatory fines + reputation damage.) Tj
-0 -30 Td
-/F1 12 Tf
-(Trueline IT Cybersecurity Includes) Tj
-0 -20 Td
-/F1 10 Tf
-(- 24/7 threat detection and monitoring) Tj
-0 -15 Td
-(- Encryption of sensitive files by default) Tj
-0 -15 Td
-(- Automated security patch management) Tj
-0 -15 Td
-(- PIPEDA compliance audits and documentation) Tj
-0 -15 Td
-(- Incident response within 15 minutes) Tj
-0 -15 Td
-(- Staff security training \(included\)) Tj
-0 -30 Td
-/F1 12 Tf
-(Pricing - CAD per user/month) Tj
-0 -20 Td
-/F1 10 Tf
-(Essentials: $99 | Professional: $149 | Complete: $199) Tj
-0 -40 Td
-/F1 11 Tf
-(Is your Southern Ontario business protected?) Tj
-0 -15 Td
-(Book your free 15-minute IT Health Score assessment.) Tj
-0 -15 Td
-/F1 9 Tf
-(hello@truelineit.com | \(647\) 360-5774) Tj
-0 -30 Td
-(copyright 2026 Trueline IT) Tj
-ET
-endstream
+GauHMgQ(#H&:O:SbX5U1!Q'X,8P+?qmcMrj9s`Jp$P^[?,1C<bZK1;6Kn4W!LSRJ_\#esB]*?i^/Y3iCLM)?O$3@l>q4B5>/uS4:'a;`f3X<e6LZooME]P@#TS]I0W*fqPG:)i5K)0@_i_ULKO>r'E!,;]/V\>4]P"59i(I8Z9$"D"#iLc/Do6f1TN>D&<?Q/eMR'Fu5[u[01hGkU^`:<^N4IOck.e6L9%+B]7qU@KNd-_0kL>6:#2q-1DD+CN]$]u"/h\"!?#Rd#QgT#$*W\379fqrmu_:AC7WZ.4GFl':[7]i]%*SGIK9oY"VRipoL(H@*s&2>dgM5cTAgmS=KQ\hriYc(RU_F;qPVHKq)KqI;'>-<`F/MdR6doE`Z6F\]M#EnR%@!9!?,a>e^*0q6MfiE[+KS3=EVCTk#9-WDXfa^Bh9MA)MrNp;3,DMm)T@ShnSf&d*-mg+D5e7a9_`6,2qT6Mi-qqOHoqTm+hVW.TQor/BK>7LpZ/atT1:qB6c(51bpM;nramHO[kXVT6OICl)1\f<Sa@>!<,0`<gXNET;+8AjE_1blhjB8W(Z:ftk=:RmgfF[aOEm"M.32P"4)pg#L)5l=IC`#LMirO(q,B@TA(++8-Ief'B@DY,O_B;07Y^hlJs%Ko;/gjO"e9"h)\aL0C3Q!5SLtT^j781s6hrT%)4e.<c*-GUYQ7og(n4!(j5Q,!=VNrmhT&GTO`Jr<+p9Sadq3%6cck'm?]?6239gXNd4aKB&K^94c[/t\g2\'G9naM'44,FB?R)@27$0'g:B,X)^YXCctbD=sUDB4#^hLT&GPN1kZ^cXHf;$&[jfi6/l[,)AFUOa8iRRl@_OZ/32]K6@Q-]*B\$+rg`'J=C9ZGfs;OZaPO^f@LKGQdTE_"Ce#p+/132c1-2Rhk1i&eFAM9*2TYC/q@oC6@X)>dQ(4a'"5JY'WRp:"eS`<VIIp#:ti$lGkm+]ZI0oT&4[5g?)C\(7_a9O:_2f>bu;G5Y8Uo2m$7ABAmjB#=rqF]:%O%QfT5[SZ90_p*GE&/0'=[3=4`5Qih#E/kdZW*==;=$$Y8eEUfY<Sb$-fF/,n%.L0TCbaGatk8ggBa&kS..da!imO0D&8Lb4I,Jbs$?*D<Zc3X,gc;"gYPB!8"R>deg1KlcDp$EJ+"'#lglQRZ-bGs>h=<>u2!Q_3L(q[b::`U(kI'8l;+eQLV[um7M`n`d9:>n&<P79lTriGT7B=V%obT<6R<AnT5>u#@qWq%Aohoe5Fs7Y!^\aK1Vs8Cbr@0YQ$7,dOAR<O8+2U":8bC)LbY,WBmZ4-=c9_Z`=Y)9Q6[k[7^I.)]cAk,k`D7-Lt-[?^rdXcMV)SM`n(o:#a0cUZ"TOMh@2SAf8P4%VYPLjU!0gS7;CcnsS^3.'9nNeDR.,mtS.)L,,Xm)t"4P5ZaUJGtGnQd)&L9C-j_eFTZB'")K)WF'`Of6\oXRBVCHf[/GN3%G_baLS3l-]XCY,bT73a[Hm<h1('#!`ht7)ZfBU@"(uFSf6K#1mhAc13Z22%M[Bh5Ir);\_aOI0JIUs0fe#l\Gk?\m'Xfk)bF,lQd#TkVBhMgUGTE6&0jcYS`r;3@*eb<U)u^+Z"V5fBPOO$LK(8eE:>%'(jp:S^7$;dts/RP4$eZlQSJ:iV//'2#V>mc7iS\W)'t8hl+&qoB4t9omnHa=%qEg.AlNJ6.EAOYF$l6]j`b#Qu#8I=g+4:eJHk-I=^)J!ZTZ+R&_lR"/`fjc+6d+TAJI\1MR"7;#59e349eA(pVaqKB0flb:\--f#2=QJ"8(Z.-t!$cIOSS,:ku15,fG2/S%l1_?t4LGu'`5i!1;+^VeU@MbV*!OC%Y;iBVIR`1,M_]#Q>s;F+L3E(N6mZ;XS!9lh/*=n:IK]<4]pGckJX$Z?6C:j31KjQVH4aP6Ar&DCJP\u)Tq301Mf<q!u,CQ3Zp9:%WknIbO_l,^)pKoWPlggD]A/Sgak=A*W\QF/O^4_naGDm>TP#7[EhU2:=?eNHVW2pSdaAZ[ju=mO<.;<UgEmr;?,rM2%K+/ml]e?Ls!RgQc?[L`cF<*d1C+O?O<]8YRFLE9M;7t\MM>ZTBF=DN!L=t0+(feP4m<c+'kIoC(/0&SXgE,oeQ9@m]1_`RdkJk8bHSD<\2Veb$+bZg61bNB7Co3%i**_A&<Bmr%(8,^_BWoPRDHaaF65eETR/TM)n#/9-irmSeP8`GQ:+n)%r9CI@"lbP@h73(5A^d;Hro'8TK,I^ZLim#,:V%sY#K8Wa#(UiK)H+^7(I$jgBMJ``i~>endstream
 endobj
 xref
-0 6
+0 10
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000203 00000 n 
-0000000291 00000 n 
+0000000061 00000 n 
+0000000112 00000 n 
+0000000219 00000 n 
+0000000331 00000 n 
+0000000414 00000 n 
+0000000607 00000 n 
+0000000675 00000 n 
+0000000936 00000 n 
+0000000995 00000 n 
 trailer
-<< /Size 6 /Root 1 0 R >>
+<<
+/ID 
+[<6dd9e5c7fbbed4ca6951d51f6f1415aa><6dd9e5c7fbbed4ca6951d51f6f1415aa>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 7 0 R
+/Root 6 0 R
+/Size 10
+>>
 startxref
-2342
+3373
 %%EOF
