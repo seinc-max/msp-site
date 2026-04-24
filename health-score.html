@@ -870,6 +870,113 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       grid-template-columns: 1fr;
     }
   }
+
+
+  /* ── HEALTH SCORE TOOL ── */
+  .hs-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    max-width: 920px;
+    margin: 28px auto 0;
+  }
+  .hs-form { display: flex; flex-direction: column; gap: 18px; }
+  .hs-question {
+    padding: 16px 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+  }
+  .hs-q {
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+    line-height: 1.35;
+  }
+  .hs-options {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .hs-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #f7f9fc;
+    color: var(--text);
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 120px;
+    user-select: none;
+  }
+  .hs-option input { width: 18px; height: 18px; accent-color: var(--orange); }
+  .hs-actions { margin-top: 6px; }
+  .hs-btn {
+    width: 100%;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .hs-btn:hover { background: #ea6c0a; transform: translateY(-1px); }
+  .hs-result {
+    margin-top: 10px;
+    padding: 18px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--sky);
+  }
+  .hs-scoreline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .hs-score {
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .hs-badge {
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: #fff;
+    background: #dc2626;
+  }
+  .hs-interpretation {
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .hs-cta-wrap { margin-top: 14px; }
+  .hs-cta {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+  .hs-cta:hover { background: #ea6c0a; }
+
+  @media (max-width: 640px) {
+    .hs-card { padding: 20px 16px; }
+    .hs-option { flex: 1 1 46%; min-width: 0; justify-content: center; }
+  }
+
 </style>
 </head>
 <body>
@@ -1011,7 +1118,149 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="how-inner text-center">
     <p class="section-label">Getting started</p>
     <h2 class="section-title">The 15 Diagnostic Questions</h2>
-    <p class="section-sub">1. Do you have 24/7 IT monitoring? 2. Are backups verified quarterly? 3. Are critical systems patched monthly? 4. Is MFA enabled on all user accounts? 5. Have you completed a PIPEDA compliance audit? 6. Do you have a tested disaster recovery plan? 7. Do you maintain a hardware inventory? 8. Do you have enforced password policies? 9. Do you have after-hours technical support? 10. Do you have documented staff security training? 11. Do you have an incident response plan? 12. Are logs retained for 90+ days? 13. Do you have vendor security assessments? 14. Is all sensitive data encrypted? 15. Do you have a cyber insurance policy?</p>
+    <p class="section-sub">Answer each question below. Yes = 1 point. No = 0 points. Then calculate your score.</p>
+
+    <div class="hs-card" id="hs-tool">
+      <form class="hs-form" id="hs-form">
+
+        <div class="hs-question">
+          <p class="hs-q">1. Do you have 24/7 IT monitoring?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q1" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q1" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">2. Are backups verified quarterly?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q2" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q2" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">3. Are critical systems patched monthly?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q3" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q3" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">4. Is MFA enabled on all user accounts?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q4" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q4" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">5. Have you completed a PIPEDA compliance audit?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q5" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q5" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">6. Do you have a tested disaster recovery plan?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q6" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q6" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">7. Do you maintain a hardware inventory?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q7" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q7" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">8. Do you have enforced password policies?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q8" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q8" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">9. Do you have after-hours technical support?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q9" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q9" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">10. Do you have documented staff security training?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q10" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q10" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">11. Do you have an incident response plan?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q11" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q11" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">12. Are logs retained for 90+ days?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q12" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q12" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">13. Do you have vendor security assessments?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q13" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q13" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">14. Is all sensitive data encrypted?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q14" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q14" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-question">
+          <p class="hs-q">15. Do you have a cyber insurance policy?</p>
+          <div class="hs-options">
+            <label class="hs-option"><input type="radio" name="q15" value="1" required> <span>Yes</span></label>
+            <label class="hs-option"><input type="radio" name="q15" value="0" required> <span>No</span></label>
+          </div>
+        </div>
+
+        <div class="hs-actions">
+          <button type="button" class="hs-btn" id="hs-calc">Calculate My Score →</button>
+        </div>
+
+        <div class="hs-result" id="hs-result" aria-live="polite" style="display:none;">
+          <div class="hs-scoreline">
+            <span class="hs-score" id="hs-score">Score: 0 / 15</span>
+            <span class="hs-badge" id="hs-badge">Critical Risk</span>
+          </div>
+          <p class="hs-interpretation" id="hs-interpretation"></p>
+          <div class="hs-cta-wrap">
+            <a class="hs-cta" href="https://meetings-na3.hubspot.com/ben-trueline" target="_blank" rel="noopener">Want help closing the gaps? Book a 30-min IT fit call →</a>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
@@ -1241,6 +1490,65 @@ document.getElementById('discovery-form').addEventListener('submit', async funct
     <a href="mailto:hello@truelineit.com">hello@truelineit.com</a>
   </div>
 </footer>
+
+
+<script>
+(function () {
+  function getScore() {
+    var total = 0;
+    for (var i = 1; i <= 15; i++) {
+      var sel = document.querySelector('input[name="q' + i + '"]:checked');
+      if (sel) total += parseInt(sel.value, 10);
+    }
+    return total;
+  }
+
+  function render(total) {
+    var scoreEl = document.getElementById('hs-score');
+    var badgeEl = document.getElementById('hs-badge');
+    var interpEl = document.getElementById('hs-interpretation');
+    var resultEl = document.getElementById('hs-result');
+
+    if (!scoreEl || !badgeEl || !interpEl || !resultEl) return;
+
+    scoreEl.textContent = 'Score: ' + total + ' / 15';
+
+    var category = '';
+    var color = '';
+    var interpretation = '';
+
+    if (total <= 5) {
+      category = 'Critical Risk';
+      color = '#dc2626';
+      interpretation = '0–5 (Critical Risk): Your business is vulnerable. Every day without proactive IT increases risk of catastrophic failure.';
+    } else if (total <= 10) {
+      category = 'Moderate Risk';
+      color = '#f97316';
+      interpretation = '6–10 (Moderate Risk): You have some controls, but major gaps remain. Urgent action needed.';
+    } else {
+      category = 'Well Managed';
+      color = '#16a34a';
+      interpretation = "11–15 (Well Managed): Your IT infrastructure is solid. You're following best practices and complying with regulations.";
+    }
+
+    badgeEl.textContent = category;
+    badgeEl.style.background = color;
+    interpEl.textContent = interpretation;
+
+    resultEl.style.display = 'block';
+    resultEl.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+
+  var btn = document.getElementById('hs-calc');
+  if (!btn) return;
+
+  btn.addEventListener('click', function () {
+    var form = document.getElementById('hs-form');
+    if (form && !form.reportValidity()) return;
+    render(getScore());
+  });
+})();
+</script>
 
 </body>
 </html>
