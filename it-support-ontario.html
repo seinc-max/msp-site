@@ -39,6 +39,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav-logo span { color: var(--orange); }
   .nav-phone { color: rgba(255,255,255,0.9); font-size: 0.95rem; font-weight: 500; text-decoration: none; display: flex; align-items: center; gap: 7px; }
   .nav-phone:hover { color: #fff; }
+  .nav-cta {
+    background: var(--orange);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: #e06511; }
+  @media (max-width: 768px) { .nav-cta { display: none; } }
 
   /* HERO */
   .hero { background: var(--navy); padding: 60px 5% 70px; position: relative; overflow: hidden; }
