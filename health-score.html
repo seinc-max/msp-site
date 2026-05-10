@@ -1466,7 +1466,7 @@ document.getElementById('discovery-form').addEventListener('submit', async funct
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         fields: Object.entries(data).map(([name, value]) => ({ name, value })),
-        context: { pageUri: window.location.href, pageName: document.title, hutk: document.cookie.replace(/(?:(?:^|.*;\s*)hubspotutk\s*\=\s*([^;]*).*$)|^.*$/, "$1") }
+        context: { pageUri: window.location.href, pageName: document.title }
       })
     });
     document.getElementById('discovery-form').style.display = 'none';
