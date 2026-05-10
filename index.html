@@ -866,6 +866,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       grid-template-columns: 1fr;
     }
   }
+ /* Sticky mobile CTA bar */
+ .sticky-mobile-cta {
+ display: none;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ z-index: 9999;
+ background: #f97316;
+ padding: 14px 20px;
+ text-align: center;
+ box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+ }
+ .sticky-mobile-cta a {
+ color: #fff;
+ font-weight: 700;
+ font-size: 1rem;
+ text-decoration: none;
+ letter-spacing: 0.01em;
+ }
+ @media (max-width: 768px) {
+ .sticky-mobile-cta { display: block; }
+ body { padding-bottom: 56px; }
+ }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"}]}</script>
 </head>
@@ -1237,5 +1261,9 @@ document.getElementById('discovery-form').addEventListener('submit', async funct
   </div>
 </footer>
 
+ <!-- Sticky mobile CTA -->
+ <div class="sticky-mobile-cta">
+ <a href="#contact">📞 Book a Free Discovery Call — No Obligation →</a>
+ </div>
 </body>
 </html>
