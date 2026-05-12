@@ -185,6 +185,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .form-card { padding: 28px 20px; }
     .pricing-card { padding: 28px 20px; }
   }
+
+  .sticky-mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #f97316;
+    padding: 14px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  }
+  .sticky-mobile-cta a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  @media (max-width: 768px) {
+    .sticky-mobile-cta { display: block; }
+    body { padding-bottom: 56px; }
+  }
 </style>
 </head>
 <body>
