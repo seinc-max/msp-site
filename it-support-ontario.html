@@ -264,15 +264,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <label for="email">Work email</label>
           <input type="email" id="email" name="email" placeholder="ben@yourcompany.com" required>
         </div>
-        <div class="form-group">
-          <label for="company_size">How many employees?</label>
-          <select id="company_size" name="company_size" required>
-            <option value="" disabled selected>Select…</option>
-            <option value="10-24">10–24</option>
-            <option value="25-49">25–49</option>
-            <option value="50+">50+</option>
-          </select>
-        </div>
+
         <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
         <p class="form-note">No obligation. No credit card. Takes 30 seconds.</p>
       </form>
@@ -384,7 +376,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     const firstname = document.getElementById('firstname').value.trim();
     const email = document.getElementById('email').value.trim();
-    const company_size = document.getElementById('company_size').value;
 
     try {
       const res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466', {
@@ -394,7 +385,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           fields: [
             { name: 'firstname', value: firstname },
             { name: 'email', value: email },
-            { name: 'company_size', value: company_size },
             { name: 'hubspot_owner_id', value: '89556230' }
           ],
           context: { pageUri: window.location.href, pageName: 'IT Support Ontario Landing Page' }
