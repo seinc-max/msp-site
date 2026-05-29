@@ -301,6 +301,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="blog-hero">
   <h1>Is Your Ontario Business Actually PIPEDA Compliant?</h1>
   <div class="blog-meta">Published April 27, 2026 | 15-minute read</div>
+
+<section class="contact-section" id="contact" style="background:var(--navy);padding:60px 5%;text-align:center;">
+  <h2 style="font-family:'Fraunces',serif;font-size:2rem;color:#fff;margin-bottom:14px;">Ready to stop worrying about IT?</h2>
+  <p style="color:rgba(255,255,255,0.55);font-size:1.05rem;max-width:500px;margin:0 auto 44px;">Tell us a bit about your business and we'll be in touch within one business day.</p>
+  <div style="background:#fff;border-radius:20px;padding:44px 48px;max-width:580px;margin:0 auto;">
+    <form id="discovery-form">
+      <div style="margin-bottom:20px;text-align:left;">
+        <label for="firstname" style="display:block;font-size:0.9rem;font-weight:600;color:var(--navy);margin-bottom:8px;">First name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Jane" required style="width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.95rem;" />
+      </div>
+      <div style="margin-bottom:20px;text-align:left;">
+        <label for="email" style="display:block;font-size:0.9rem;font-weight:600;color:var(--navy);margin-bottom:8px;">Email address</label>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" required style="width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.95rem;" />
+      </div>
+      <button type="submit" style="width:100%;background:var(--orange);color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:16px;border:none;border-radius:10px;cursor:pointer;">Book My Free Discovery Call →</button>
+      <p style="text-align:center;font-size:0.82rem;color:var(--text-muted);margin-top:14px;">We'll respond within 1 business day. No spam, ever.</p>
+    </form>
+    <div id="form-success" style="display:none;text-align:center;padding:20px 0;">
+      <h3 style="color:var(--navy);font-family:'Fraunces',serif;font-size:1.4rem;margin-bottom:10px;">Request Received</h3>
+      <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:20px;">We'll be in touch shortly to schedule your call.</p>
+      <button onclick="window.location.reload()" style="background:none;border:2px solid var(--navy);color:var(--navy);padding:10px 24px;border-radius:6px;font-weight:600;cursor:pointer;">Book Another Call</button>
+    </div>
+  </div>
+</section>
+
+<script>
+document.getElementById('discovery-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending... ';
+  btn.disabled = true;
+  const data = Object.fromEntries(new FormData(this));
+  try {
+    const PORTAL_ID = '343087614';
+    const FORM_ID = '6aa5613b-f3f7-4476-b623-9945ce9b28b3';
+    await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fields: Object.entries(data).map(([name, value]) => ({ name, value })),
+        context: { pageUri: window.location.href, pageName: document.title }
+      })
+    });
+    document.getElementById('discovery-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  } catch(err) {
+    btn.textContent = 'Book My Free Discovery Call →';
+    btn.disabled = false;
+    alert('Something went wrong. Please call us at (647) 360-5774.');
+  }
+});
+</script>
+
 </section>
 
 <section class="blog-container">
@@ -366,6 +419,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <a href="#contact" class="btn-primary">Book My Free Discovery Call →</a>
 
+
+
+<section class="contact-section" id="contact" style="background:var(--navy);padding:60px 5%;text-align:center;">
+  <h2 style="font-family:'Fraunces',serif;font-size:2rem;color:#fff;margin-bottom:14px;">Ready to stop worrying about IT?</h2>
+  <p style="color:rgba(255,255,255,0.55);font-size:1.05rem;max-width:500px;margin:0 auto 44px;">Tell us a bit about your business and we'll be in touch within one business day.</p>
+  <div style="background:#fff;border-radius:20px;padding:44px 48px;max-width:580px;margin:0 auto;">
+    <form id="discovery-form">
+      <div style="margin-bottom:20px;text-align:left;">
+        <label for="firstname" style="display:block;font-size:0.9rem;font-weight:600;color:var(--navy);margin-bottom:8px;">First name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Jane" required style="width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.95rem;" />
+      </div>
+      <div style="margin-bottom:20px;text-align:left;">
+        <label for="email" style="display:block;font-size:0.9rem;font-weight:600;color:var(--navy);margin-bottom:8px;">Email address</label>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" required style="width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.95rem;" />
+      </div>
+      <button type="submit" style="width:100%;background:var(--orange);color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:16px;border:none;border-radius:10px;cursor:pointer;">Book My Free Discovery Call →</button>
+      <p style="text-align:center;font-size:0.82rem;color:var(--text-muted);margin-top:14px;">We'll respond within 1 business day. No spam, ever.</p>
+    </form>
+    <div id="form-success" style="display:none;text-align:center;padding:20px 0;">
+      <h3 style="color:var(--navy);font-family:'Fraunces',serif;font-size:1.4rem;margin-bottom:10px;">Request Received</h3>
+      <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:20px;">We'll be in touch shortly to schedule your call.</p>
+      <button onclick="window.location.reload()" style="background:none;border:2px solid var(--navy);color:var(--navy);padding:10px 24px;border-radius:6px;font-weight:600;cursor:pointer;">Book Another Call</button>
+    </div>
+  </div>
+</section>
+
+<script>
+document.getElementById('discovery-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending... ';
+  btn.disabled = true;
+  const data = Object.fromEntries(new FormData(this));
+  try {
+    const PORTAL_ID = '343087614';
+    const FORM_ID = '6aa5613b-f3f7-4476-b623-9945ce9b28b3';
+    await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fields: Object.entries(data).map(([name, value]) => ({ name, value })),
+        context: { pageUri: window.location.href, pageName: document.title }
+      })
+    });
+    document.getElementById('discovery-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  } catch(err) {
+    btn.textContent = 'Book My Free Discovery Call →';
+    btn.disabled = false;
+    alert('Something went wrong. Please call us at (647) 360-5774.');
+  }
+});
+</script>
 
 </section>
 
