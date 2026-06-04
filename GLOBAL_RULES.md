@@ -102,3 +102,26 @@
 51. Form API Integrity: When creating or modifying HubSpot form submissions via JS fetch, NEVER pass the hutk tracking cookie inside the context object, as it causes session-based record overwrites. Always hardcode hubspot_owner_id: '89556230' into the payload so captured contacts are correctly assigned to Ben. Active form GUID is e66cbddb-8b74-4166-ab13-6ea81df11466 — never replace this without explicit Ben approval.
 
 52. Global Component Parity: The site uses flat .html files. Any change to a navigation bar, footer wrapper, sticky mobile CTA, or their associated inline <style> tags must be programmatically matched and deployed across ALL .html pages in /data/msp-site/ simultaneously. Never modify index.html components without syncing the rest of the site.
+
+53. Google Ads Autonomous Optimization: Nancy is authorized to execute keyword pauses, negative keyword additions, positive keyword additions, and bid adjustments autonomously via workflow 0n1YhNFNkoLXDJU2. Budget changes require explicit Ben approval. All actions reported in daily 7am Telegram summary.
+
+54. No OpenClaw Cron Jobs: Never use OpenClaw cron jobs. All scheduled tasks must be run through n8n.
+
+55. Pre-flight research required — Before writing, suggesting, or executing any API query, webhook configuration, integration, or technical implementation, you must first verify the correct approach against official platform documentation. Never guess or assume syntax. For Google Ads API specifically, always verify GAQL field compatibility using the Google Ads API Field Reference before writing any query. If a technical approach fails twice, stop and research before attempting a third time.
+
+## FAILURE PROTOCOL — MANDATORY FOR ALL TASKS
+When any action fails for any reason:
+- Stop immediately — do not retry, do not attempt an alternative approach, do not create duplicates
+- Report the exact error message to Ben via Telegram
+- Wait for explicit instructions before taking any further action
+
+This applies to ALL tools and ALL tasks without exception — n8n workflows, Apify runs, API calls, file operations, everything.
+Never attempt more than ONE instance of any created resource — workflow, file, API call — without explicit confirmation from Ben between attempts.
+- Server Hygiene: Do not leave temporary scripts (.js, .py), data dumps (.json, .txt), or obsolete media files lying around the workspace root. Delete execution artifacts immediately after completion to keep the root directory strictly for core system documents (.md files) and project directories.
+
+56. Test URLs protocol: When asked to send URLs to test, or when presenting pages for review after a deployment, always provide the complete list of BOTH staging (https://staging.msp-site.pages.dev/...) and production (https://truelineit.com/...) URLs for all affected pages.
+
+57. Blog Deployment & Synchronization: All blog files must follow the identical HTML element structure established in `20-southern-ontario-it-audits-2026.html`. Whenever changes are made to the layout of a blog post, changes must be validated across the full set of published blogs (`blog-post.html`, `is-your-ontario-business-pipeda-compliant.html`, etc.) in the staging environment before pushing to main. Use automated shell/python parsing blocks instead of raw `sed` injections to insert complex multi-line div structures down the DOM to avoid destroying enclosing structural tags.
+
+58. New Blog Post Creation: When creating a new blog post, you must duplicate the exact HTML structure from the master template (`/data/msp-site/blog/blog-post.html` or `20-southern-ontario-it-audits-2026.html`). Only modify the inner content of the `<article class="blog-post">` block and the specific SEO meta tags in the `<head>`. Do not alter or deviate from the header, footer, mobile sticky CTA, or inline contact form layout blocks.
+41. Website Form and CTA uniformity: Any new landing pages, form updates, or bottom CTAs must stringently comply with the `UI & Copy Standards` explicitly defined in `SITE.md`. Specifically, all primary bottom CTAs and submit buttons must use the exact standardized language mandated there.
