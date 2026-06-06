@@ -1,92 +1,177 @@
-import os
 import re
 
-files_to_update = [
-    "managed-it-services-burlington.html",
-    "managed-it-services-hamilton.html",
-    "managed-it-services-guelph.html",
-    "managed-it-services-waterloo.html",
-    "managed-it-services-cambridge.html",
-    "managed-it-services-kitchener-waterloo.html"
-]
+def apply_fixes(file_path):
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
 
-cwd = '/data/msp-site'
+        # CHANGE 1
+        content = content.replace(
+            '<title>IT Support & AI Automation in Ontario | Trueline IT</title>',
+            '<title>AI Governance & Automation in Ontario | Trueline IT</title>'
+        )
 
-for filename in files_to_update:
-    filepath = os.path.join(cwd, filename)
-    with open(filepath, 'r') as f:
-        content = f.read()
+        # CHANGE 2
+        content = content.replace(
+            'Flat-rate AI governance and IT support for Ontario. 15-min response, secure automation, shadow AI audits, no contracts.',
+            'Flat-rate AI governance and automation for Ontario professional services businesses. Documented AI policy, shadow AI audits, Copilot compliance, no contracts.'
+        )
 
-    # FIX 22: FAQ section label
-    content = re.sub(
-        r'(<section[^>]*id="faq"[^>]*>.*?<div class="container">.*?<div class="section-label">)(.*?)(</div>)',
-        r'\1Common questions\3',
-        content, count=1, flags=re.DOTALL
-    )
+        # CHANGE 3
+        content = content.replace(
+            'Ontario IT Support — Starting at $99/user/mo',
+            'AI Governance & Automation for Ontario Professional Services'
+        )
 
-    # FIX 23: FAQ section title
-    content = re.sub(
-        r'(<section[^>]*id="faq"[^>]*>.*?<h2 class="section-title">)(.*?)(</h2>)',
-        r'\1You\'ve probably got questions.\3',
-        content, count=1, flags=re.DOTALL
-    )
+        # CHANGE 4
+        content = content.replace(
+            'Flat-rate IT support.<br><em>No surprise bills.</em><br>15-min response.',
+            'Your team is using AI with client data.<br><em>One mistake</em> can cost you everything.'
+        )
 
-    # FIX 24: FAQ questions (Replace only the <summary> question texts)
-    faq_match = re.search(r'(<div class="faq-list">)(.*?)(</div>\s*</section>)', content, re.DOTALL)
-    if faq_match:
-        faq_html = faq_match.group(2)
-        
-        # We need to map the first 7 existing questions strictly to the 7 new questions given.
-        # This regex isolates all <details> blocks
-        details_blocks = re.findall(r'(<details>.*?<summary>)(.*?)(</summary>.*?</details>)', faq_html, re.DOTALL)
-        
-        target_questions = [
-            "What size businesses do you work with?",
-            "What does \"flat rate\" actually mean?",
-            "What if we already have some AI tools in place?",
-            "How fast do you respond when something breaks?",
-            "Is there a contract?",
-            "Do you help with AI tools like ChatGPT and Microsoft Copilot?",
-            "What is an AI privacy risk assessment?"
-        ]
-        
-        # Replace up to 7 questions. If there are more than 7, we'll slice the excess later if needed,
-        # but normally there are around 5-7. If there are fewer than 7, we'll just replace what is there.
-        # Wait, the prompt says "The correct 7 questions are:" implying we should force exact layout. 
-        # But wait, we don't have the new ANSWERS for all 7 if they are totally new. 
-        # Actually, let's just replace the <summary> text sequentially. The answers might already be aligned or close enough for now.
-        for idx, (pre, old_q, post) in enumerate(details_blocks):
-            if idx < len(target_questions):
-                # Replace the exact block in faq_html
-                old_block = f"{pre}{old_q}{post}"
-                new_block = f"{pre}{target_questions[idx]}{post}"
-                faq_html = faq_html.replace(old_block, new_block, 1)
+        # CHANGE 5
+        content = content.replace(
+            'Your dedicated IT team — without the cost of hiring one. Built for Southern Ontario businesses with 10–50 employees. Unlimited helpdesk, cybersecurity, and 24/7 monitoring.',
+            'In May 2026, Canada\'s Privacy Commissioner ruled that ChatGPT violated PIPEDA. The Law Society of Ontario has warned lawyers that using public AI tools with client data risks disciplinary action. Trueline IT gives your business a documented AI policy, safe tools, and ongoing compliance management — for a flat monthly fee.'
+        )
 
-        content = content[:faq_match.start(2)] + faq_html + content[faq_match.end(2):]
+        # CHANGE 6
+        content = content.replace(
+            'Built for 10–50 employee businesses',
+            'For legal, accounting, and financial businesses'
+        )
 
-    # FIX 25: Contact section label
-    content = re.sub(
-        r'(<section[^>]*id="contact"[^>]*>.*?<div class="container">.*?<div class="section-label">)(.*?)(</div>)',
-        r'\1Start here\3',
-        content, count=1, flags=re.DOTALL
-    )
+        # CHANGE 7
+        content = content.replace(
+            '15-minute response guarantee',
+            '30-day AI governance deployment'
+        )
 
-    # FIX 26: Contact section title
-    content = re.sub(
-        r'(<section[^>]*id="contact"[^>]*>.*?<h2 class="section-title">)(.*?)(</h2>)',
-        r'\1Find out exactly where your business is exposed.\3',
-        content, count=1, flags=re.DOTALL
-    )
+        # CHANGE 8
+        content = content.replace(
+            'Burlington-based team, serving GTA West',
+            'AI Acceptable Use Policy included'
+        )
 
-    # FIX 27: Contact section sub
-    content = re.sub(
-        r'(<section[^>]*id="contact"[^>]*>.*?<div class="contact-grid">.*?<div class="contact-info">.*?<p>)(.*?)(</p>)',
-        r'\1Book a 30-minute call. We will assess your AI exposure, answer your questions, and tell you exactly what needs to be done — no sales pitch, no obligation.\3',
-        content, count=1, flags=re.DOTALL
-    )
+        # CHANGE 9
+        content = content.replace(
+            'Switch from your current provider in 48 hours',
+            'Shadow AI audit on every plan'
+        )
 
-    with open(filepath, 'w') as f:
-        f.write(content)
-        
-    print(f"[+] Applied fixes 22-27 on {filename}")
+        # CHANGE 10
+        content = content.replace(
+            'See if Trueline IT is right for your business',
+            'Find out exactly where your business is exposed'
+        )
 
+        # CHANGE 11
+        content = content.replace(
+            'No sales pitch. Just an honest look at your current IT setup and what better support would cost.',
+            'No sales pitch. Just an honest look at your AI exposure and what it takes to fix it.'
+        )
+
+        # CHANGE 12
+        content = content.replace(
+            'Up and running in 48 hours',
+            'From exposure to protected in 30 days'
+        )
+
+        # CHANGE 13
+        content = content.replace(
+            '<h3>Book a free 30-min call</h3>\n <p>We review your current setup. No software installed. No commitment required.</p>',
+            '<h3>Book a free 30-min call</h3>\n <p>We review your AI exposure. No commitment required.</p>'
+        )
+
+        # CHANGE 14
+        content = content.replace(
+            '<h3>Get your IT audit report</h3>\n <p>We document every risk, gap, and cost — in plain English. $1 admin fee, fully refundable.</p>',
+            '<h3>We run your AI Risk Audit</h3>\n <p>We document every AI tool in use and every exposure — in plain English, ready for your insurer and clients.</p>'
+        )
+
+        # CHANGE 15
+        content = content.replace(
+            '<h3>Switch in 48 hours</h3>\n <p>We handle the transition. Your team notices faster support. You notice a predictable bill.</p>',
+            '<h3>We manage it ongoing</h3>\n <p>Policy updates as regulations change. Automations built on schedule. You get peace of mind.</p>'
+        )
+
+        # CHANGE 16
+        content = content.replace(
+            'Most Ontario SMBs are one IT failure away from a bad week',
+            'The call you\'re dreading has already happened at another business'
+        )
+
+        # CHANGE 17
+        content = content.replace(
+            '<h3>IT fires every week</h3>\n <p>Staff can\'t work. You\'re troubleshooting instead of running your business. Every problem is a surprise.</p>',
+            '<h3>Staff using ChatGPT with client data</h3>\n <p>Employees paste contracts, financials, and client notes into public AI tools every day. You didn\'t authorize it. You don\'t know how much has already left the building.</p>'
+        )
+
+        # CHANGE 18
+        content = content.replace(
+            '<h3>Unpredictable IT bills</h3>\n <p>Surprise PIPEDA compliance fines and massive consultant invoices for Enterprise AI roadmaps.</p>',
+            '<h3>Your cyber insurer is asking about AI</h3>\n <p>Renewal forms now ask which AI tools your team uses and what policies are in place. Businesses that can\'t answer face higher premiums — or denied claims.</p>'
+        )
+
+        # CHANGE 19
+        content = content.replace(
+            '<h3>One ransomware attack away</h3>\n <p>No monitoring, no backups tested, no incident plan. Your cyber insurer is asking questions you can\'t answer.</p>',
+            '<h3>A client asked about your AI policy</h3>\n <p>You didn\'t have a good answer. The businesses that get ahead of this question will win the clients who ask it.</p>'
+        )
+
+        # CHANGE 20
+        content = content.replace(
+            '"We used to spend half our Monday fixing whatever broke over the weekend. Since switching to Trueline IT, we haven\'t had a single Monday fire in four months. Worth every penny."',
+            '"We were using ChatGPT for client work without realizing the privacy risk. Trueline flagged it, fixed it, and set up a proper policy in a week. We sleep better now."'
+        )
+
+        # CHANGE 21
+        content = content.replace(
+            '— Operations Manager, 18-person accounting business, Mississauga',
+            '— Managing Partner, 18-person accounting business, Mississauga'
+        )
+
+        # CHANGE 22
+        content = content.replace(
+            'One flat rate. Everything included.',
+            'One flat monthly fee. Everything included.'
+        )
+
+        # CHANGE 23
+        content = content.replace(
+            '$99<span>/user/mo</span>',
+            '$1,500<span>/mo</span>'
+        )
+
+        # CHANGE 24
+        content = content.replace(
+            'Minimum 10 users. No setup fees. No contracts. Cancel anytime.',
+            'Per business, not per user. No contracts. Cancel anytime.'
+        )
+
+        # CHANGE 25
+        content = content.replace(
+            '<li>Unlimited helpdesk — 15-min response guarantee</li>\n <li>24/7 monitoring and proactive maintenance</li>\n <li>Cybersecurity — endpoint protection included</li>\n <li>Microsoft 365 management and support</li>\n <li>Automated backups with tested recovery</li>\n <li>Monthly IT health report</li>',
+            '<li>AI Acceptable Use Policy — created and maintained</li>\n <li>Quarterly shadow AI audit</li>\n <li>Microsoft 365 and Copilot AI configuration</li>\n <li>Insurer-ready compliance documentation</li>\n <li>1 active automation maintained</li>\n <li>Monthly 30-minute review call</li>'
+        )
+
+        # CHANGE 26
+        content = content.replace(
+            '<h2>Ready to stop paying for IT surprises?</h2>\n <p>Book a free 30-minute call. We\'ll tell you exactly what your IT should cost.</p>',
+            '<h2>Ready to find out where you\'re exposed?</h2>\n <p>Book a free 30-minute call. We\'ll assess your AI exposure — no sales pitch, no obligation.</p>'
+        )
+
+        # CHANGE 27
+        content = content.replace(
+            "pageName: 'IT Support Ontario Landing Page'",
+            "pageName: 'AI Governance Ontario Landing Page'"
+        )
+
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        print(f"Applied fixes to {file_path}")
+
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+
+apply_fixes("/data/msp-site/ai-governance-ontario.html")
