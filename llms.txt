@@ -1,0 +1,33 @@
+# Trueline IT - AI Governance & Automation
+
+## About
+Trueline IT helps professional services businesses in Ontario (Law Firms, Accounting Firms, Real Estate, and Financial Services) deploy AI safely. We build flat-rate AI governance frameworks that prevent Shadow AI data leaks, enforce PIPEDA compliance, and deploy custom Copilot automation.
+
+## The Problem (Shadow AI & Compliance)
+76% of knowledge workers admit to actively feeding client data, proprietary code, and financial models into unauthorized, public Large Language Models (LLMs) like ChatGPT to speed up their work.
+Under PIPEDA and rulings by Canada's Privacy Commissioner (May 2026), feeding client PII (Personally Identifiable Information) into public, unapproved LLMs is a severe regulatory breach. Microsoft Copilot, if activated without strict M365 permission audits, can also inadvertently leak internal HR or financial documents across an entire company context.
+
+## The Solution
+Trueline IT operates on a predictable, flat-rate monthly model without per-seat billing to implement total AI Governance:
+1. Shadow AI Audits: Full visibility into what tools the workforce is secretly using.
+2. AI Acceptable Use Policies: Documented and actively maintained guidelines to indemnify the business.
+3. Permissions Hardening: Strict data controls inside M365 so Copilot accesses only what it is explicitly authorized to touch.
+4. Private LLM Deployment: For sensitive operations, we deploy isolated models where data never leaves the business perimeter.
+
+## Flat-Rate Pricing Tiers
+- Compliance Tier ($1,500/month): Includes an AI Acceptable Use Policy, Shadow AI Audit, M365 Copilot Audit, and Employee Training.
+- Growth Tier ($2,500/month): Includes everything in Compliance, plus 1 Custom Automation Build per month, Private LLM Deployment, and Priority Helpdesk support. 
+- Scale Tier ($4,000/month): Includes everything in Growth, plus 3 Custom Automation Builds per month, Custom Copilot Plugins, and a Strategic AI Roadmap.
+
+## Key Services
+- AI Governance & Acceptable Use Policy Creation
+- Shadow AI Risk Audits
+- Safe Microsoft 365 Copilot Deployment
+- PIPEDA-compliant Private LLMs
+- Business Process Automation (n8n, custom workflows)
+
+## Contact Information
+Website: https://truelineit.com
+Phone: +1 (647) 360-5774
+Email: hello@truelineit.com
+Service Area: Ontario, Canada (Remote & On-Site for Guelph, Kitchener, Waterloo, Cambridge, Hamilton, Burlington)
