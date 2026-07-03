@@ -1,88 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://truelineit.com/</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://truelineit.com/ai-governance-ontario</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://truelineit.com/shadow-ai-prevention-ontario</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://truelineit.com/ai-automation-roi-guide</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://truelineit.com/safe-copilot-deployment</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://truelineit.com/ai-exposure-score</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://truelineit.com/ai-governance-burlington</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://truelineit.com/ai-governance-hamilton</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://truelineit.com/ai-governance-guelph</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://truelineit.com/ai-governance-waterloo</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://truelineit.com/ai-governance-cambridge</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://truelineit.com/ai-governance-kitchener-waterloo</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://truelineit.com/about</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://truelineit.com/blog/20-southern-ontario-shadow-ai-audits-2026</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://truelineit.com/blog/is-your-ontario-business-pipeda-compliant</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://truelineit.com/privacy</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.3</priority>
-</url>
-<url>
-<loc>https://truelineit.com/terms</loc>
-<lastmod>2026-06-06</lastmod>
-<priority>0.3</priority>
-</url>
+  <url>
+    <loc>https://truelineit.com/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/solutions/sovereign-ai-automation-agency</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/blog/sovereign-zapier-alternatives-compliance</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/blog/ontario-clinical-voice-ai-phipa-compliance</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/blog/financial-integration-insurance-vulnerabilities</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/blog/20-southern-ontario-shadow-ai-audits-2026</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/blog/is-your-ontario-business-pipeda-compliant</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/ai-governance-ontario</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/shadow-ai-prevention-ontario</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/safe-copilot-deployment</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/ai-exposure-score</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/ai-automation-roi-guide</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/ai-governance-guelph</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/ai-governance-burlington</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/ai-governance-cambridge</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/ai-governance-waterloo</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/ai-governance-kitchener-waterloo</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/ai-governance-hamilton</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/about</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/privacy</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/terms</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://truelineit.com/audit-confirmed</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
+  </url>
 </urlset>
