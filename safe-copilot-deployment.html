@@ -346,9 +346,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   .offer-inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 60px;
     align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   @media (max-width: 768px) { .offer-inner { grid-template-columns: 1fr; } }
   .offer-badge {
@@ -430,8 +432,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .offer-card-list {
     list-style: none;
-    display: flex; flex-direction: column; gap: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
     margin-bottom: 28px;
+    flex-grow: 1;
+    text-align: left;
   }
   .offer-card-list li {
     display: flex; align-items: center; gap: 10px;
@@ -814,6 +820,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    align-items: stretch;
   }
   .offer-card {
     padding: 2rem;
@@ -821,6 +828,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border-radius: 8px;
     background: white;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
   .offer-card .offer-card-label {
     color: var(--navy);
