@@ -430,8 +430,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .offer-card-list {
     list-style: none;
-    display: flex; flex-direction: column; gap: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
     margin-bottom: 28px;
+    flex-grow: 1;
+    text-align: left;
   }
   .offer-card-list li {
     display: flex; align-items: center; gap: 10px;
@@ -814,6 +818,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    align-items: stretch;
   }
   .offer-card {
     padding: 2rem;
@@ -821,6 +826,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border-radius: 8px;
     background: white;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
   .offer-card .offer-card-label {
     color: var(--navy);
@@ -1042,104 +1049,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- OFFER -->
-<section class="pricing-section">
-  <div class="section-inner" style="max-width: 1000px;">
-    <div class="section-eyebrow">Sovereign Infrastructure</div>
-    <h2 class="section-title">The Flat-Fee Compliance Matrix</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; align-items: stretch;">
-      
-      <!-- COLUMN 1: Foundation -->
-      <div style="background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 40px 30px; text-align: left; display: flex; flex-direction: column;">
-        <h3 style="font-family: 'Fraunces', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 8px;">Foundation</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px; min-height: 40px;">Your AI-safe operational foundation</p>
-        <div style="font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 700; color: var(--navy); margin-bottom: 30px; line-height: 1;">
-          $1,500<span style="font-size: 1.1rem; font-family: 'DM Sans', sans-serif; font-weight: 500; color: var(--text-muted);">/mo</span>
+<!-- FULL OFFER / PRICING -->
+<section class="offer" id="pricing">
+  <div class="offer-inner">
+    <div class="offer-text">
+      <p class="section-label">Sovereign Infrastructure</p>
+      <h2 class="section-title">The Flat-Fee Compliance Matrix</h2>
+      <p class="section-sub">No per-seat billing. No surprise invoices. Every plan includes a documented AI Acceptable Use Policy, shadow AI audit, and ongoing data sovereignty architecture. Local automation builds introduced securely only after governance is verified.</p>
+    </div>
+    <div>
+      <div class="offer-pricing">
+        <!-- COLUMN 1: Foundation -->
+        <div class="offer-card">
+          <p class="offer-card-label">Foundation</p>
+          <p style="font-size: 0.9rem; color: var(--color-base-content-muted); margin-top: -0.5rem; margin-bottom: 1.5rem; min-height: 20px;">Your AI-safe IT foundation</p>
+          <div class="offer-price">$1,500<span> / mo</span></div>
+          <p class="offer-price-note">For businesses with 15–30 employees.</p>
+          <ul class="offer-card-list">
+            <li>AI Acceptable Use Policy — created and maintained</li>
+            <li>Quarterly shadow AI audit</li>
+            <li>Microsoft 365 and Copilot AI configuration</li>
+            <li>Insurer-ready compliance documentation</li>
+            <li>1 Active Sovereign Workflow Pipeline (Containerized locally within private Ontario cloud nodes)</li>
+            <li>Monthly 30-minute review call</li>
+          </ul>
+          <a href="#hero" class="btn-offer">Start Foundation</a>
         </div>
-        <ul style="list-style: none; margin-bottom: 32px; flex-grow: 1;">
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> AI Acceptable Use Policy — created and maintained
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Quarterly shadow AI audit
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Microsoft 365 and Copilot AI configuration
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Insurer-ready compliance documentation
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> 1 Active Sovereign Workflow Pipeline (Containerized locally within private Ontario cloud nodes)
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: none;">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Monthly 30-minute review call
-          </li>
-        </ul>
-        <a href="#hero" style="display: block; text-align: center; padding: 14px 0; background: var(--sky); color: var(--blue); text-decoration: none; border-radius: 8px; font-weight: 700; transition: background 0.2s;">Start Foundation</a>
-      </div>
 
-      <!-- COLUMN 2: Growth (Feature) -->
-      <div style="background: #fff; border: 2px solid var(--orange); border-radius: 16px; padding: 40px 30px; text-align: left; position: relative; display: flex; flex-direction: column;">
-        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--orange); color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 16px; border-radius: 20px;">Most Popular</div>
-        <h3 style="font-family: 'Fraunces', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 8px;">Growth</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px; min-height: 40px;">AI governance plus workflow automation</p>
-        <div style="font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 700; color: var(--navy); margin-bottom: 30px; line-height: 1;">
-          $2,500<span style="font-size: 1.1rem; font-family: 'DM Sans', sans-serif; font-weight: 500; color: var(--text-muted);">/mo</span>
+        <!-- COLUMN 2: Growth (Feature) -->
+        <div class="offer-card offer-card-popular">
+          <div class="popular-badge">Most Popular</div>
+          <p class="offer-card-label">Growth</p>
+          <p style="font-size: 0.9rem; color: var(--color-base-content-muted); margin-top: -0.5rem; margin-bottom: 1.5rem; min-height: 20px;">AI governance plus workflow automation</p>
+          <div class="offer-price">$2,500<span> / mo</span></div>
+          <p class="offer-price-note">For businesses with 30–75 employees.</p>
+          <ul class="offer-card-list">
+            <li>Everything in Foundation, plus:</li>
+            <li>Up to 3 active automated workflows maintained</li>
+            <li>1 New Custom Enterprise Pipeline Build per quarter (Pre-mapped data pipeline execution within strict availability scopes)</li>
+            <li>AI vendor risk assessment</li>
+            <li>Monthly AI usage report</li>
+            <li>Dedicated account manager</li>
+          </ul>
+          <a href="#contact" class="btn-offer">Book My Free Discovery Call →</a>
         </div>
-        <ul style="list-style: none; margin-bottom: 32px; flex-grow: 1;">
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <strong style="color: var(--navy);">Everything in Foundation, plus:</strong>
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Up to 3 active automated workflows maintained
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> 1 New Custom Enterprise Pipeline Build per quarter (Pre-mapped data pipeline execution within strict availability scopes)
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> AI vendor risk assessment
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Monthly AI usage report
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: none;">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Dedicated account manager
-          </li>
-        </ul>
-        <a href="#hero" class="btn-primary" style="display: block; text-align: center; padding: 14px 0;">Scale With Growth</a>
-      </div>
 
-      <!-- COLUMN 3: Transform -->
-      <div style="background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 40px 30px; text-align: left; display: flex; flex-direction: column;">
-        <h3 style="font-family: 'Fraunces', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 8px;">Transform</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px; min-height: 40px;">Full AI operations partnership</p>
-        <div style="font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 700; color: var(--navy); margin-bottom: 30px; line-height: 1;">
-          $4,500<span style="font-size: 1.1rem; font-family: 'DM Sans', sans-serif; font-weight: 500; color: var(--text-muted);">/mo</span>
+        <!-- COLUMN 3: Transform -->
+        <div class="offer-card">
+          <p class="offer-card-label">Transform</p>
+          <p style="font-size: 0.9rem; color: var(--color-base-content-muted); margin-top: -0.5rem; margin-bottom: 1.5rem; min-height: 20px;">Full AI operations partnership</p>
+          <div class="offer-price">$4,500<span> / mo</span></div>
+          <p class="offer-price-note">For businesses with 75–150 employees.</p>
+          <ul class="offer-card-list">
+            <li>Everything in Growth, plus:</li>
+            <li>Unlimited Sovereign Automation Infrastructure (Full local hosting & continuous security pathway audits)</li>
+            <li>Dedicated Private Core Environment (Closed-loop processing for voice, financial ledger, and legal registries)</li>
+            <li>Fractional Chief AI Officer (vCAIO)</li>
+            <li>Quarterly partner meeting attendance</li>
+            <li>Executive AI strategy advisory</li>
+            <li>Board-ready AI governance reporting</li>
+          </ul>
+          <a href="#contact" class="btn-offer">Book My Free Discovery Call →</a>
         </div>
-        <ul style="list-style: none; margin-bottom: 32px; flex-grow: 1;">
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <strong style="color: var(--navy);">Everything in Growth, plus:</strong>
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Unlimited Sovereign Automation Infrastructure (Full local hosting & continuous security pathway audits)
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Dedicated Private Core Environment (Closed-loop processing for voice, financial ledger, and legal registries)
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Fractional Chief AI Officer (vCAIO)
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border);">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Executive AI strategy advisory
-          </li>
-          <li style="display: flex; align-items: start; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: none;">
-            <span style="color: var(--orange); font-weight: 700;">✓</span> Board-ready AI governance reporting
-          </li>
-        </ul>
-        <a href="#hero" style="display: block; text-align: center; padding: 14px 0; background: var(--sky); color: var(--blue); text-decoration: none; border-radius: 8px; font-weight: 700; transition: background 0.2s;">Transform Operations</a>
       </div>
-
     </div>
   </div>
 </section>
