@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_C8h1iWfO8d5RMBXG20yG0Fj7tMrtWk8gWix3VwGzO63',{api_host:'https://us.i.posthog.com', person_profiles: 'identified_only'});
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W663FFHP');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Margin Leakage Calculator | Trueline IT</title>
+<link rel="canonical" href="https://truelineit.com/margin-leakage-calculator" />
+<meta name="description" content="Calculate your business's hidden margin leakage from unauthorized employee AI usage and determine your immediate risk exposure." />
+<meta name="robots" content="noindex, nofollow" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<style>
+  :root {
+    --navy: #1a2744;
+    --blue: #2563eb;
+    --sky: #bfdbfe;
+    --orange: #f97316;
+    --peach: #ffedd5;
+    --text: #334155;
+    --text-muted: #64748b;
+    --bg: #ffffff;
+    --warm-white: #fdfbf9;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
+  
+  /* NAV */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 5%; background: #ffffff; border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; color: var(--navy); text-decoration: none; }
+  .nav-logo span { color: var(--orange); }
+  
+  /* CALCULATOR SECTION */
+  .calculator-section {
+    padding: 80px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .section-eyebrow {
+    color: var(--orange); font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; font-size: 0.85rem; margin-bottom: 12px;
+    text-align: center;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif; font-size: 2.8rem; color: var(--navy);
+    line-height: 1.2; margin-bottom: 20px; text-align: center;
+  }
+  .section-sub {
+    font-size: 1.1rem; color: var(--text-muted); max-width: 600px;
+    margin: 0 auto 50px auto; text-align: center;
+  }
+  
+  .calc-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 768px) {
+    .calc-container { grid-template-columns: 1fr; }
+  }
+  
+  .calc-inputs {
+    padding: 50px 40px;
+    background: #fff;
+  }
+  .calc-outputs {
+    padding: 50px 40px;
+    background: var(--navy);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .input-group { margin-bottom: 24px; }
+  .input-group label {
+    display: block; font-weight: 700; margin-bottom: 8px; color: var(--navy);
+  }
+  .input-group input {
+    width: 100%; padding: 14px 16px; border: 1px solid var(--border);
+    border-radius: 8px; font-family: inherit; font-size: 1rem;
+    background: var(--warm-white); transition: border-color 0.2s;
+  }
+  .input-group input:focus {
+    outline: none; border-color: var(--blue);
+  }
+  .range-labels {
+    display: flex; justify-content: space-between;
+    font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;
+  }
+  
+  .output-group {
+    margin-bottom: 30px;
+  }
+  .output-label {
+    font-size: 0.9rem; color: #94a3b8; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;
+  }
+  .output-value {
+    font-family: 'Fraunces', serif; font-size: 3.5rem; font-weight: 700;
+    color: #fff; line-height: 1;
+  }
+  .output-value.highlight { color: #facc15; }
+  
+  .output-sub {
+    font-size: 0.9rem; color: #cbd5e1; margin-top: 8px;
+  }
+  
+  .calc-cta {
+    background: var(--orange); color: #fff; text-decoration: none;
+    padding: 16px 24px; border-radius: 8px; font-weight: 700;
+    text-align: center; display: inline-block; margin-top: 20px;
+    transition: background 0.2s;
+  }
+  .calc-cta:hover { background: #ea580c; }
+  
+  /* FOOTER */
+  footer {
+    background: var(--navy); color: rgba(255,255,255,0.7);
+    padding: 40px 5%; text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700;
+    color: #fff; text-decoration: none; margin-bottom: 20px; display: inline-block;
+  }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<nav>
+  <a href="/" class="nav-logo">Trueline<span>.</span>IT</a>
+  <a href="/" style="color:var(--text); text-decoration:none; font-weight:500;">Back to Home</a>
+</nav>
+
+<section class="calculator-section">
+  <div class="section-eyebrow">Calculate Your Risk</div>
+  <h2 class="section-title">The Shadow AI Margin Indicator</h2>
+  <p class="section-sub">Calculate how much unbilled operational capacity is currently leaking through unauthorized employee AI usage.</p>
+  
+  <div class="calc-container">
+    <div class="calc-inputs">
+      <div class="input-group">
+        <label for="employees">Number of Information Workers</label>
+        <input type="number" id="employees" value="25" min="5" max="250">
+      </div>
+      <div class="input-group">
+        <label for="salary">Average Annual Salary (CAD)</label>
+        <input type="number" id="salary" value="85000" min="40000" max="300000" step="5000">
+      </div>
+      <div class="input-group" style="padding-top: 15px; border-top: 1px solid var(--border);">
+        <label for="ai-adoption">Estimated Shadow AI Adoption (%)</label>
+        <input type="range" id="ai-adoption" min="10" max="90" value="45">
+        <div class="range-labels">
+          <span>10% (Strict)</span>
+          <span id="adoption-val" style="font-weight:700; color:var(--blue);">45%</span>
+          <span>90% (Unrestricted)</span>
+        </div>
+        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Industry average for professional services is 45-60%.</p>
+      </div>
+    </div>
+    
+    <div class="calc-outputs">
+      <div class="output-group">
+        <div class="output-label">Annual Margin Leakage</div>
+        <div class="output-value highlight" id="out-leakage">$0</div>
+        <div class="output-sub">Recoverable productivity value currently lost to unmeasured, unbilled shadow AI efficiency.</div>
+      </div>
+      <div class="output-group">
+        <div class="output-label">Data Exposure Risk Events</div>
+        <div class="output-value" id="out-risk-events" style="font-size: 2.5rem; color: #fca5a5;">0</div>
+        <div class="output-sub">Estimated monthly unauthorized prompt injections placing confidential client data onto public servers.</div>
+      </div>
+      <a href="/#contact" class="calc-cta">Cap the Leakage →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="/" class="footer-logo">Trueline<span>.</span>IT</a>
+  <p>&copy; 2026 Trueline IT. All rights reserved.</p>
+</footer>
+
+<script>
+  function calculateMargin() {
+    const employees = parseInt(document.getElementById('employees').value) || 0;
+    const salary = parseInt(document.getElementById('salary').value) || 0;
+    const adoptionPct = parseInt(document.getElementById('ai-adoption').value) || 0;
+    
+    document.getElementById('adoption-val').innerText = adoptionPct + '%';
+    
+    // Logic: Shadow users save ~2.5 hrs/week (6.25% of 40hr week).
+    // The value of that time is leaking if it's not billed or reallocated.
+    const activeUsers = employees * (adoptionPct / 100);
+    const timeSavedMultiplier = 0.0625; 
+    
+    const annualLeakage = activeUsers * salary * timeSavedMultiplier;
+    
+    // Risk events: Avg heavy user runs 12 sensitive prompts/mo
+    const riskEvents = Math.round(activeUsers * 12);
+    
+    document.getElementById('out-leakage').innerText = new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 }).format(annualLeakage);
+    document.getElementById('out-risk-events').innerText = new Intl.NumberFormat('en-CA').format(riskEvents);
+  }
+
+  document.getElementById('employees').addEventListener('input', calculateMargin);
+  document.getElementById('salary').addEventListener('input', calculateMargin);
+  document.getElementById('ai-adoption').addEventListener('input', calculateMargin);
+  
+  // Init
+  calculateMargin();
+</script>
+</body>
+</html>
