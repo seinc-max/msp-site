@@ -1142,51 +1142,6 @@
     });
 </script>
 
-<!-- RULE 51 HUBSPOT FETCH LOGIC -->
-<script>
-    document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const btn = document.getElementById('submit-btn');
-        const email = document.getElementById('contact-email').value;
-        const company = document.getElementById('contact-company').value;
-        
-        btn.disabled = true;
-        btn.innerText = 'Submitting...';
-        btn.style.opacity = '0.7';
-
-        // Rule 51: No hutk, hardcoded owner_id
-        const payload = {
-            fields: [
-                { name: 'email', value: email },
-                { name: 'company', value: company },
-                { name: 'hubspot_owner_id', value: '89556230' }
-            ]
-        };
-
-        try {
-            const res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-            
-            if (res.ok) {
-                document.getElementById('form-container').style.display = 'none';
-                document.getElementById('success-container').style.display = 'block';
-            } else {
-                btn.disabled = false;
-                btn.innerText = 'Book My Free Discovery Call →';
-                btn.style.opacity = '1';
-                alert('Connection issue submitting form. Please try again.');
-            }
-        } catch (err) {
-            btn.disabled = false;
-            btn.innerText = 'Book My Free Discovery Call →';
-            btn.style.opacity = '1';
-            alert('Network error. Please try again.');
-        }
-    });
-</script>
 
 </body>
 
