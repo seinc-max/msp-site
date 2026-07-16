@@ -967,9 +967,18 @@
     </div>
 </section>
 
+<!-- PAS AGITATION (Joanna Wiebe) -->
+<section style="background: var(--warm-white); padding: 40px 5% 0;">
+    <div class="max-w-[800px] mx-auto text-center" style="margin-bottom: 90px;">
+        <h2 style="font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 700; color: var(--navy); margin-bottom: 15px;">Most IT providers bill you hourly to fix printers.</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
+            They don't understand <strong>PIPEDA</strong>, they don't know how the <strong>Law Society</strong> governs client privilege, and they leave your M365 Copilot environment wide open. You don't need a traditional helpdesk. You need a dedicated AI Governance partner that operates on predictable, flat-fee retainers.
+        </p>
+    </div>
+</section>
 <!-- THE HORMOZI GUARANTEE (Risk Reversal) -->
 <section style="background: var(--sky); padding: 40px 5%; border-bottom: 1px solid var(--border);">
-    <div class="max-w-[900px] mx-auto bg-white rounded-2xl p-8 sm:p-12 shadow-sm border" style="border-color: var(--border); transform: translateY(-80px);">
+    <div class="max-w-[900px] mx-auto bg-white rounded-2xl p-8 sm:p-12 shadow-sm border" style="border-color: var(--border); transform: translateY(-40px);">
         <div class="flex flex-col sm:flex-row items-center gap-8">
             <div class="flex-shrink-0 w-20 h-20 rounded-full flex items-center justify-center" style="background: var(--navy); color: var(--orange);">
                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
@@ -1108,5 +1117,30 @@
   </div>
 </footer>
 
+
+<script>
+    const cards = document.querySelectorAll('.pricing-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            const btn = card.querySelector('.cta-btn');
+            if(btn && !card.classList.contains('popular')) {
+                btn.classList.remove('cta-outline');
+                btn.style.background = 'var(--sky)';
+                btn.style.color = 'var(--blue)';
+                btn.style.borderColor = 'var(--blue)';
+            }
+        });
+        card.addEventListener('mouseleave', () => {
+            const btn = card.querySelector('.cta-btn');
+            if(btn && !card.classList.contains('popular')) {
+                btn.classList.add('cta-outline');
+                btn.style.background = 'transparent';
+                btn.style.color = 'var(--navy)';
+                btn.style.borderColor = 'var(--border)';
+            }
+        });
+    });
+</script>
 </body>
+
 </html>
