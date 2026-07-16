@@ -1309,70 +1309,234 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
-<!-- CONTACT FORM -->
-<section class="contact-section" id="contact">
-  <p class="section-label">Start here</p>
-  <h2>Find out exactly where your business is exposed.</h2>
-  <p class="contact-sub">Book a 30-minute call. We will assess your AI exposure, answer your questions, and tell you exactly what needs to be done — no sales pitch, no obligation.</p>
-  <p style="font-weight:700;color:#fff;font-size:1.1rem;margin-bottom:20px;">Is your Southern Ontario business protected? Find out in 15 minutes. Book your free Trueline IT Health Score — no sales pitch, just data.</p>
-  <div class="contact-form" id="contact-form-wrap">
-    <form id="discovery-form">
-      <div class="form-group">
-        <label for="firstname">First name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Jane" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="jane@company.com" required />
-      </div>
-      <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
-      <p class="form-note">We'll respond within 1 business day. No spam, ever.</p>
-    </form>
-    <div class="form-success" id="form-success">
-      <h4 style="font-family: Fraunces, serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 8px;">Request received. &#10004;</h4>
-      <p style="color: var(--text-muted); font-size: 1.05rem;">Check your email &mdash; we'll send a calendar link within 5 minutes.</p>
+
+<!-- COPILOT DIAGNOSTIC FORM (Nielsen / Price UX) -->
+<section style="background: var(--sky); padding: 80px 5%;" id="contact">
+    <div class="max-w-[700px] mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-4" style="font-family: 'Fraunces', serif; color: var(--navy);">Audit Your M365 Tenant Exposure</h2>
+            <p class="text-[1.05rem]" style="color: var(--text-muted);">Answer two questions to calculate your immediate Copilot data leak liability.</p>
+        </div>
+
+        <div class="rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] bg-white relative overflow-hidden" style="border: 1px solid var(--border);">
+            <!-- Progress Line -->
+            <div class="absolute top-0 left-0 w-full h-1 overflow-hidden" style="background: var(--border);">
+                <div id="progress-bar" class="h-full w-[33%]" style="background: var(--blue); transition: width 0.4s ease-out;"></div>
+            </div>
+
+            <div id="form-container" class="p-8 sm:p-12 relative" style="min-height: 400px;">
+                <form id="risk-assessment-form" class="space-y-12">
+                    
+                    <!-- Q1 -->
+                    <div id="step-1" style="display: block;">
+                        <div class="mb-8">
+                            <span class="text-sm font-bold tracking-widest uppercase mb-2 block" style="color: var(--blue);">Question 1 of 2</span>
+                            <h2 class="text-xl font-bold leading-snug" style="color: var(--navy); font-family: 'Fraunces', serif;">
+                                Have you enabled Microsoft 365 Copilot without performing a strict Sensitivity Label audit on your tenant?
+                            </h2>
+                            <p class="text-sm mt-3" style="color: var(--text-muted);"><em>Why it matters: Copilot ignores folder security if files aren't properly labeled, allowing users to query and extract sensitive documents indiscriminately.</em></p>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <label class="flex items-start p-5 rounded-xl cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                                <input type="radio" name="q1" value="Yes - Unaudited" class="sr-only" onchange="handleSelection(1, false, this)">
+                                <div class="w-5 h-5 rounded-full border-2 mt-0.5 mr-4 flex-shrink-0 flex items-center justify-center transition-colors indicator" style="border-color: #cbd5e1;"></div>
+                                <div>
+                                    <span class="block font-semibold text-[1.05rem]" style="color: var(--navy);">Yes, we enabled it without a label audit.</span>
+                                </div>
+                            </label>
+                            
+                            <label class="flex items-start p-5 rounded-xl cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                                <input type="radio" name="q1" value="No - Audited" class="sr-only" onchange="handleSelection(1, true, this)">
+                                <div class="w-5 h-5 rounded-full border-2 mt-0.5 mr-4 flex-shrink-0 flex items-center justify-center transition-colors indicator" style="border-color: #cbd5e1;"></div>
+                                <div>
+                                    <span class="block font-semibold text-[1.05rem]" style="color: var(--navy);">No, labels and permissions are secure.</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div id="step-2" style="display: none;">
+                        <div class="mb-8">
+                            <span class="text-sm font-bold tracking-widest uppercase mb-2 block" style="color: var(--blue);">Question 2 of 2</span>
+                            <h2 class="text-xl font-bold leading-snug" style="color: var(--navy); font-family: 'Fraunces', serif;">
+                                Are you confident your junior staff cannot query executive-level SharePoint folders through Copilot prompts?
+                            </h2>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <label class="flex items-start p-5 rounded-xl cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                                <input type="radio" name="q2" value="No - Unsure" class="sr-only" onchange="handleSelection(2, false, this)">
+                                <div class="w-5 h-5 rounded-full border-2 mt-0.5 mr-4 flex-shrink-0 flex items-center justify-center transition-colors indicator" style="border-color: #cbd5e1;"></div>
+                                <div>
+                                    <span class="block font-semibold text-[1.05rem]" style="color: var(--navy);">No, I am not 100% confident.</span>
+                                </div>
+                            </label>
+                            
+                            <label class="flex items-start p-5 rounded-xl cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                                <input type="radio" name="q2" value="Yes - Confident" class="sr-only" onchange="handleSelection(2, true, this)">
+                                <div class="w-5 h-5 rounded-full border-2 mt-0.5 mr-4 flex-shrink-0 flex items-center justify-center transition-colors indicator" style="border-color: #cbd5e1;"></div>
+                                <div>
+                                    <span class="block font-semibold text-[1.05rem]" style="color: var(--navy);">Yes, we have proven department isolation.</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3 (Capture) -->
+                    <div id="step-3" style="display: none;">
+                        <div class="text-center mb-8">
+                            <h2 class="text-2xl font-bold leading-snug" style="color: var(--navy); font-family: 'Fraunces', serif;">
+                                Audit complete. Your M365 Report is ready.
+                            </h2>
+                        </div>
+                        
+                        <div class="max-w-md mx-auto space-y-5">
+                            <div>
+                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Work Email <span class="text-red-500">*</span></label>
+                                <input type="email" id="work-email" required placeholder="managingpartner@business.com" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Business Size</label>
+                                <select id="business-size" class="w-full text-base rounded-xl outline-none transition-all duration-200 appearance-none bg-no-repeat" style="background-color: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
+                                    <option value="1-14 Employees">1-14 Employees</option>
+                                    <option value="15-50 Employees">15-50 Employees</option>
+                                    <option value="51-150 Employees">51-150 Employees</option>
+                                </select>
+                            </div>
+
+                            <div class="pt-4">
+                                <button type="submit" id="submit-btn" class="w-full font-bold text-[1.05rem] py-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 relative overflow-hidden" style="background: var(--orange); color: #fff; box-shadow: 0 8px 25px rgba(249,115,22,0.25);">
+                                    <span id="btn-text">Book My Free Discovery Call &rarr;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- Webhook Success State -->
+                <div id="success-container" style="display: none; text-align: center; padding: 40px 20px;">
+                    <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6" style="background: var(--sky); color: var(--blue);">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4" style="font-family: 'Fraunces', serif; color: var(--navy);">Audit Securely Submitted</h2>
+                    <p class="text-[1.05rem] max-w-sm mx-auto" style="color: var(--text-muted);">We are evaluating your tenant mapping parameters. Check your inbox momentarily.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <a href="tel:+16473605774" class="contact-phone">Or call us: (647) 360-5774</a>
 </section>
+
+
 <script>
-document.getElementById('discovery-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('.btn-submit');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
+    const steps = [
+        document.getElementById('step-1'),
+        document.getElementById('step-2'),
+        document.getElementById('step-3')
+    ];
+    const progressBar = document.getElementById('progress-bar');
+    const form = document.getElementById('risk-assessment-form');
 
-  const data = {
-    firstname: this.firstname.value,
-    email: this.email.value,
-    hubspot_owner_id: "89556230"
-  };
+    function handleSelection(stepNumber, isSafe, labelElement) {
+        // Reset all labels in current step
+        const currentStep = steps[stepNumber - 1];
+        const allLabels = currentStep.querySelectorAll('label');
+        allLabels.forEach(l => {
+            l.style.borderColor = 'var(--border)';
+            l.style.background = '#fff';
+            l.querySelector('.indicator').innerHTML = '';
+            l.querySelector('.indicator').style.borderColor = '#cbd5e1';
+        });
 
-  try {
-    // HubSpot form submission — portal ID and form ID to be configured
-    const PORTAL_ID = '343087614';
-    const FORM_ID = 'e66cbddb-8b74-4166-ab13-6ea81df11466';
-    const res = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_ID}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        fields: Object.entries(data).map(([name, value]) => ({ name, value })),
-        context: { pageUri: window.location.href, pageName: document.title }
-      })
+        // Apply Momoko Price UI Feedback
+        const indicator = labelElement.querySelector('.indicator');
+        if (isSafe) {
+            labelElement.style.borderColor = 'var(--blue)';
+            labelElement.style.background = 'var(--sky)';
+            indicator.innerHTML = '<svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>';
+            indicator.style.borderColor = 'var(--blue)';
+        } else {
+            labelElement.style.borderColor = '#ef4444';
+            labelElement.style.backgroundColor = '#fef2f2';
+            indicator.innerHTML = '<svg class="w-3 h-3 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>';
+            indicator.style.borderColor = '#ef4444';
+        }
+
+        // Advance to next step (Nielsen Progressive Disclosure)
+        setTimeout(() => {
+            currentStep.style.display = 'none';
+            if(stepNumber < 3) {
+                steps[stepNumber].style.display = 'block';
+                steps[stepNumber].style.animation = 'slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+                progressBar.style.width = ((stepNumber + 1) * 33.3) + '%';
+            }
+        }, 350);
+    }
+
+    // HubSpot Native API Fetch (Rule 51 compliant)
+    form?.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        
+        const q1 = form.querySelector('input[name="q1"]:checked')?.value || '';
+        const q2 = form.querySelector('input[name="q2"]:checked')?.value || '';
+        const email = document.getElementById('work-email').value;
+        const businessSize = document.getElementById('business-size').value;
+        
+        btn.disabled = true;
+        btnText.innerText = 'Analyzing Tenant...';
+        btn.style.opacity = '0.8';
+
+        const payload = {
+            fields: [
+                { name: 'email', value: email },
+                { name: 'company_size', value: businessSize },
+                { name: 'copilot_label_audit', value: q1 },
+                { name: 'copilot_folder_security', value: q2 },
+                { name: 'hubspot_owner_id', value: '89556230' }
+            ]
+        };
+
+        try {
+            const res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            
+            if (res.ok) {
+                document.getElementById('form-container').style.display = 'none';
+                document.getElementById('success-container').style.display = 'block';
+                progressBar.style.width = '100%';
+                progressBar.style.background = '#10b981';
+            } else {
+                btn.disabled = false;
+                btnText.innerText = 'Book My Free Discovery Call →';
+                btn.style.opacity = '1';
+                alert('Connection issue. Please try again.');
+            }
+        } catch (err) {
+            btn.disabled = false;
+            btnText.innerText = 'Book My Free Discovery Call →';
+            btn.style.opacity = '1';
+            alert('Network error. Please try again.');
+        }
     });
-    document.getElementById('discovery-form').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-  } catch(err) {
-    btn.textContent = 'Book My Free Discovery Call →';
-    btn.disabled = false;
-    alert('Something went wrong. Please call us at (647) 360-5774.');
-  }
-});
-</script>
 
-<div class="sticky-mobile-cta">
- <a href="tel:+16473605774">📞 Call Now: (647) 360-5774 — Free Discovery Call</a>
-</div>
+    form?.addEventListener('keydown', function(event) {
+        if(event.key === 'Enter') { event.preventDefault(); }
+    });
+</script>
+<style>
+    @keyframes slideUpFade {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
 
 <!-- FOOTER -->
 <footer>
