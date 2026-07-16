@@ -827,13 +827,45 @@
  }
   .pricing-section { padding: 40px 5%; background: var(--warm-white); text-align: center; }
 </style>
+    
     <style>
-        .audit-step { display: none; }
-        .audit-step.active { display: block; animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        @keyframes slideUpFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .audit-step { 
+            display: none; 
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .audit-step.active { 
+            display: block; 
+            opacity: 1;
+            animation: fadeIn 0.4s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         .epc-card { border: 1.5px solid var(--border); transition: all 0.2s; }
         .epc-card:hover { border-color: var(--blue-light); box-shadow: 0 10px 40px -15px rgba(37,99,235,0.15); transform: translateY(-3px); }
+        
+        /* Mobile Specific Fixes */
+        .radio-label {
+            display: flex;
+            align-items: flex-start;
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            border: 1.5px solid var(--border);
+            cursor: pointer;
+            width: 100%;
+            background: #fff;
+            transition: all 0.2s ease;
+        }
+        @media (max-width: 640px) {
+            .radio-label { padding: 1rem; }
+            .radio-text-main { font-size: 0.95rem !important; }
+            /* Ensure the container doesn't force a minimum height that breaks scrolling */
+            #form-container { min-height: auto !important; padding-bottom: 2rem !important; }
+        }
     </style>
+
 </head>
 <body class="antialiased" style="font-family: 'DM Sans', sans-serif; background-color: var(--warm-white); color: var(--text);">
 
