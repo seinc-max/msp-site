@@ -990,11 +990,11 @@
 
         <div class="rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] bg-white relative overflow-hidden" style="border: 1px solid var(--border);">
             <!-- Progress Line -->
-            <div class="absolute top-0 left-0 w-full h-1 overflow-hidden" style="background: var(--border);">
+            <div class="absolute top-0 left-0 w-full h-[6px] sm:h-1 z-20 overflow-hidden" style="background: var(--border);">
                 <div id="progress-bar" class="h-full w-[33%]" style="background: var(--blue); transition: width 0.4s ease-out;"></div>
             </div>
 
-            <div id="form-container" class="p-8 sm:p-12 relative" style="min-height: 400px;">
+            <div id="form-container" class="px-5 py-8 sm:p-12 relative" style="min-height: 400px;">
                 <form id="risk-assessment-form" class="space-y-12">
                     
                     <!-- Q1 -->
@@ -1008,19 +1008,19 @@
                         </div>
                         
                         <div class="space-y-4">
-                            <label class="flex items-start p-5 rounded-xl cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                            <label class="flex items-start p-4 sm:p-5 rounded-xl w-full cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
                                 <input type="radio" name="q1" value="Yes - Unaudited" class="sr-only" onchange="handleSelection(1, false, this)">
                                 <div class="w-5 h-5 rounded-full border-2 mt-0.5 mr-4 flex-shrink-0 flex items-center justify-center transition-colors indicator" style="border-color: #cbd5e1;"></div>
                                 <div>
-                                    <span class="block font-semibold text-[1.05rem]" style="color: var(--navy);">Yes, we enabled it without a label audit.</span>
+                                    <span class="block font-semibold text-[0.95rem] sm:text-[1.05rem] leading-snug" style="color: var(--navy);">Yes, we enabled it without a label audit.</span>
                                 </div>
                             </label>
                             
-                            <label class="flex items-start p-5 rounded-xl cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                            <label class="flex items-start p-4 sm:p-5 rounded-xl w-full cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
                                 <input type="radio" name="q1" value="No - Audited" class="sr-only" onchange="handleSelection(1, true, this)">
                                 <div class="w-5 h-5 rounded-full border-2 mt-0.5 mr-4 flex-shrink-0 flex items-center justify-center transition-colors indicator" style="border-color: #cbd5e1;"></div>
                                 <div>
-                                    <span class="block font-semibold text-[1.05rem]" style="color: var(--navy);">No, labels and permissions are secure.</span>
+                                    <span class="block font-semibold text-[0.95rem] sm:text-[1.05rem] leading-snug" style="color: var(--navy);">No, labels and permissions are secure.</span>
                                 </div>
                             </label>
                         </div>
@@ -1036,19 +1036,19 @@
                         </div>
                         
                         <div class="space-y-4">
-                            <label class="flex items-start p-5 rounded-xl cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                            <label class="flex items-start p-4 sm:p-5 rounded-xl w-full cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
                                 <input type="radio" name="q2" value="No - Unsure" class="sr-only" onchange="handleSelection(2, false, this)">
                                 <div class="w-5 h-5 rounded-full border-2 mt-0.5 mr-4 flex-shrink-0 flex items-center justify-center transition-colors indicator" style="border-color: #cbd5e1;"></div>
                                 <div>
-                                    <span class="block font-semibold text-[1.05rem]" style="color: var(--navy);">No, I am not 100% confident.</span>
+                                    <span class="block font-semibold text-[0.95rem] sm:text-[1.05rem] leading-snug" style="color: var(--navy);">No, I am not 100% confident.</span>
                                 </div>
                             </label>
                             
-                            <label class="flex items-start p-5 rounded-xl cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                            <label class="flex items-start p-4 sm:p-5 rounded-xl w-full cursor-pointer bg-white" style="border: 1.5px solid var(--border); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(37,99,235,0.08)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
                                 <input type="radio" name="q2" value="Yes - Confident" class="sr-only" onchange="handleSelection(2, true, this)">
                                 <div class="w-5 h-5 rounded-full border-2 mt-0.5 mr-4 flex-shrink-0 flex items-center justify-center transition-colors indicator" style="border-color: #cbd5e1;"></div>
                                 <div>
-                                    <span class="block font-semibold text-[1.05rem]" style="color: var(--navy);">Yes, we have proven department isolation.</span>
+                                    <span class="block font-semibold text-[0.95rem] sm:text-[1.05rem] leading-snug" style="color: var(--navy);">Yes, we have proven department isolation.</span>
                                 </div>
                             </label>
                         </div>
@@ -1065,12 +1065,12 @@
                         <div class="max-w-md mx-auto space-y-5">
                             <div>
                                 <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Work Email <span class="text-red-500">*</span></label>
-                                <input type="email" id="work-email" required placeholder="managingpartner@business.com" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
+                                <input type="email" id="work-email" required placeholder="managingpartner@business.com" class="w-full text-[16px] rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
                             </div>
                             
                             <div>
                                 <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Business Size</label>
-                                <select id="business-size" class="w-full text-base rounded-xl outline-none transition-all duration-200 appearance-none bg-no-repeat" style="background-color: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
+                                <select id="business-size" class="w-full text-[16px] rounded-xl outline-none transition-all duration-200 appearance-none bg-no-repeat" style="background-color: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
                                     <option value="1-14 Employees">1-14 Employees</option>
                                     <option value="15-50 Employees">15-50 Employees</option>
                                     <option value="51-150 Employees">51-150 Employees</option>
