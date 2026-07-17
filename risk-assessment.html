@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Shadow AI Liability Audit | Trueline IT</title>
     <meta name="description" content="Calculate your business's Shadow AI liability exposure under 2026 PIPEDA and Law Society guidelines.">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -1100,7 +1100,7 @@
             nextStep.classList.add('active');
             
             // Force reflow for animation
-            void nextStep.offsetWidth;
+            const _reflow = nextStep.offsetWidth;
             nextStep.style.opacity = '1';
             
             // Update Progress Bar
