@@ -1060,8 +1060,10 @@
 <!-- Logic & Interactivity (Vanilla JS, HubSpot Rule 51) -->
 
 
+
 <script>
-    const form = document.getElementById('risk-assessment-form');
+(function() {
+const form = document.getElementById('risk-assessment-form');
     const steps = [
         document.getElementById('step-1'),
         document.getElementById('step-2'),
@@ -1243,7 +1245,9 @@
             if(event.key === 'Enter') { event.preventDefault(); }
         });
     }
+})();
 </script>
+
 
 
 </body>
