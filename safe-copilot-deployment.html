@@ -1360,6 +1360,13 @@ const form = document.getElementById('risk-assessment-form');
                 });
                 
                 if (res.ok) {
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  'event': 'form_submission_success',
+                  'conversion_type': 'discovery_audit_lead'
+                });
+
                     document.getElementById('form-container').style.display = 'none';
                     const sCont = document.getElementById('success-container');
                     if(sCont) sCont.style.display = 'block';
