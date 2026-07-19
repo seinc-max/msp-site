@@ -1166,6 +1166,13 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
     });
     
     if (res.ok) {
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              'event': 'form_submission_success',
+              'conversion_type': 'discovery_audit_lead'
+            });
+
         document.getElementById('discovery-form').style.display = 'none';
         document.getElementById('form-success').style.display = 'block';
     } else {
