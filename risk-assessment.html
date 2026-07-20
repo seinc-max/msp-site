@@ -1262,6 +1262,7 @@ const form = document.getElementById('risk-assessment-form');
 
             const payload = {
                 fields: [
+                    { name: 'firstname', value: 'Incoming Lead' },
                     { name: 'email', value: emailEl ? emailEl.value : '' },
                     { name: 'company_size', value: sizeEl ? sizeEl.value : '' },
                     { name: 'ai_policy_status', value: q1 },
