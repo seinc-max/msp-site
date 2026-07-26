@@ -964,6 +964,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  ]
 }
 </script>
+
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
+    
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->

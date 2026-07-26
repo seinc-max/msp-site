@@ -144,6 +144,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #fff; text-decoration: none; margin-bottom: 20px; display: inline-block;
   }
 </style>
+
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
+    
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

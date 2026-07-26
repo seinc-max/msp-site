@@ -937,6 +937,16 @@
  ]
 }
 </script>
+
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
+    
 </head>
 <body class="antialiased" style="font-family: 'DM Sans', sans-serif; background-color: var(--warm-white); color: var(--text);">
 
@@ -1168,11 +1178,11 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
     
     if (res.ok) {
 
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-              'event': 'form_submission_success',
-              'conversion_type': 'discovery_audit_lead'
-            });
+                            window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  'event': 'form_submission_success',
+                  'conversion_type': 'discovery_audit_lead'
+                });
 
         document.getElementById('discovery-form').style.display = 'none';
         document.getElementById('form-success').style.display = 'block';

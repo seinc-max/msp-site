@@ -260,6 +260,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  ]
 }
 </script>
+
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
+    
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -546,7 +556,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           fields: [
             { name: 'firstname', value: firstname },
             { name: 'email', value: email },
-            { name: 'capture_url', value: window.location.href },
+            
+        { name: 'capture_url', value: window.location.href },
+                        { name: 'google_click_id', value: sessionStorage.getItem('google_ads_gclid') || '' },
+        { name: 'google_click_id', value: sessionStorage.getItem('google_ads_gclid') || '' },
                     { name: 'hubspot_owner_id', value: '89556230' }
           ]
         })
@@ -554,11 +567,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       if (res.ok) {
 
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-              'event': 'form_submission_success',
-              'conversion_type': 'discovery_audit_lead'
-            });
+                            window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  'event': 'form_submission_success',
+                  'conversion_type': 'discovery_audit_lead'
+                });
 
         form.style.display = 'none';
         success.style.display = 'block';

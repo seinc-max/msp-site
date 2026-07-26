@@ -866,6 +866,16 @@
         }
     </style>
 
+
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
+    
 </head>
 <body class="antialiased" style="font-family: 'DM Sans', sans-serif; background-color: var(--warm-white); color: var(--text);">
 
@@ -1349,7 +1359,10 @@ const form = document.getElementById('risk-assessment-form');
                     { name: 'ai_policy_status', value: q1 },
                     { name: 'shadow_ai_usage', value: q2 },
                     { name: 'client_data_consent', value: q3 },
-                    { name: 'capture_url', value: window.location.href },
+                    
+        { name: 'capture_url', value: window.location.href },
+                        { name: 'google_click_id', value: sessionStorage.getItem('google_ads_gclid') || '' },
+        { name: 'google_click_id', value: sessionStorage.getItem('google_ads_gclid') || '' },
                     { name: 'hubspot_owner_id', value: '89556230' }
                 ]
             };
@@ -1363,7 +1376,7 @@ const form = document.getElementById('risk-assessment-form');
                 
                 if (res.ok) {
 
-                window.dataLayer = window.dataLayer || [];
+                                window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
                   'event': 'form_submission_success',
                   'conversion_type': 'discovery_audit_lead'
