@@ -1165,17 +1165,13 @@
                         
                         <div class="max-w-md mx-auto space-y-5">
                             <div>
-                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Work Email <span class="text-red-500">*</span></label>
-                                <input type="email" id="work-email" required placeholder="managingpartner@business.com" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
+                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="work-name" required placeholder="John Doe" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
                             </div>
                             
                             <div>
-                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Business Size</label>
-                                <select id="business-size" class="w-full text-base rounded-xl outline-none transition-all duration-200 appearance-none bg-no-repeat" style="background-color: #f8fafc; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%235a6a8a%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-size: 0.65rem auto; background-position: right 1rem center; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
-                                    <option value="1-14 Employees">1-14 Employees</option>
-                                    <option value="15-50 Employees">15-50 Employees</option>
-                                    <option value="51-150 Employees">51-150 Employees</option>
-                                </select>
+                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Work Email <span class="text-red-500">*</span></label>
+                                <input type="email" id="work-email" required placeholder="john@business.com" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
                             </div>
 
                             <div class="pt-4">
@@ -1336,35 +1332,31 @@ const form = document.getElementById('risk-assessment-form');
         // Submit logic
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
+            
             const btn = document.getElementById('submit-btn');
             const btnText = document.getElementById('btn-text');
-            
-            const q1 = form.querySelector('input[name="q1"]:checked') ? form.querySelector('input[name="q1"]:checked').value : '';
-            const q2 = form.querySelector('input[name="q2"]:checked') ? form.querySelector('input[name="q2"]:checked').value : '';
-            const q3 = form.querySelector('input[name="q3"]:checked') ? form.querySelector('input[name="q3"]:checked').value : '';
             const emailEl = document.getElementById('work-email');
-            const sizeEl = document.getElementById('business-size');
+            const nameEl = document.getElementById('work-name');
             
-            btn.disabled = true;
-            if(btnText) btnText.innerText = 'Calculating Liability...';
-            btn.style.opacity = '0.8';
+            // Get selected radio values
+            const q1 = document.querySelector('input[name="q1"]:checked')?.value || 'Not Answered';
+            const q2 = document.querySelector('input[name="q2"]:checked')?.value || 'Not Answered';
+            const q3 = document.querySelector('input[name="q3"]:checked')?.value || 'Not Answered';
 
             const payload = {
                 fields: [
-                    { name: 'firstname', value: 'Incoming Lead' },
+                    { name: 'firstname', value: nameEl ? nameEl.value : 'Incoming Lead' },
                     { name: 'email', value: emailEl ? emailEl.value : '' },
-                    { name: 'company_size', value: sizeEl ? sizeEl.value : '' },
                     { name: 'ai_policy_status', value: q1 },
                     { name: 'shadow_ai_usage', value: q2 },
                     { name: 'client_data_consent', value: q3 },
-                    
-        { name: 'capture_url', value: window.location.href },
+                    { name: 'capture_url', value: window.location.href },
                     { name: 'google_click_id', value: sessionStorage.getItem('google_ads_gclid') || '' },
                     { name: 'hubspot_owner_id', value: '89556230' }
                 ]
             };
 
-            try {
+try {
                 const res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
