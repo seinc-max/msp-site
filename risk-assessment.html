@@ -1267,7 +1267,7 @@ const form = document.getElementById('risk-assessment-form');
                 'googlemail.com', 'ymail.com', 'protonmail.com'
             ];
             const userEmail = emailEl ? emailEl.value.toLowerCase().trim() : '';
-            const domainMatch = userEmail.split('@')[1];
+            const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1] : null;
             
             if (domainMatch && freeDomains.includes(domainMatch)) {
                 const errorDiv = document.getElementById('email-error');
@@ -1282,7 +1282,11 @@ const form = document.getElementById('risk-assessment-form');
             // -----------------------------------
 
             
-            // Get selected radio values
+            
+            btn.disabled = true;
+            if(btnText) btnText.innerText = 'Calculating Liability...';
+            btn.style.opacity = '0.8';
+// Get selected radio values
             const q1 = document.querySelector('input[name="q1"]:checked')?.value || 'Not Answered';
             const q2 = document.querySelector('input[name="q2"]:checked')?.value || 'Not Answered';
             const q3 = document.querySelector('input[name="q3"]:checked')?.value || 'Not Answered';
@@ -1332,7 +1336,7 @@ try {
                 btn.disabled = false;
                 if(btnText) btnText.innerText = 'Book My Free Discovery Call →';
                 btn.style.opacity = '1';
-                alert('Network error. Please try again.');
+                alert('Network error: ' + err.message);
             }
         });
 
