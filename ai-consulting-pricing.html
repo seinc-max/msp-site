@@ -1120,7 +1120,8 @@
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+        <input type="email" id="email" oninput="document.getElementById(\'email-error\').classList.add(\'hidden\')" name="email" placeholder="jane@company.com" required />
+                                <div id="email-error" class="hidden text-red-500 text-sm font-bold mt-2">Please enter your business email address.</div>
       </div>
       <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
       <p class="form-note">We'll respond within 1 business day. No spam, ever.</p>
@@ -1155,6 +1156,28 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
   const btn = this.querySelector('.btn-submit');
   btn.textContent = 'Sending...';
   btn.disabled = true;
+
+  
+            // --- Free Email Domain Blocklist ---
+            const freeDomains = [
+                'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 
+                'icloud.com', 'live.com', 'msn.com', 'aol.com', 
+                'googlemail.com', 'ymail.com', 'protonmail.com'
+            ];
+            const emailEl = document.getElementById('email');
+            const userEmail = emailEl ? emailEl.value.toLowerCase().trim() : '';
+            const domainMatch = userEmail.split('@')[1];
+            
+            if (domainMatch && freeDomains.includes(domainMatch)) {
+                const errorDiv = document.getElementById('email-error');
+                if(errorDiv) {
+                    errorDiv.classList.remove('hidden');
+                }
+                btn.textContent = 'Book My Free Discovery Call';
+                btn.disabled = false;
+                return; // Stop execution
+            }
+            // -----------------------------------
 
   const data = {
     firstname: document.getElementById('firstname').value,
