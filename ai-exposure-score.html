@@ -1491,14 +1491,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p style="font-weight:700;color:#fff;font-size:1.1rem;margin-bottom:20px;">Is your Southern Ontario business protected? Find out in 15 minutes. Book your free Trueline AI Exposure Score — no sales pitch, just data.</p>
   <p style="margin-top:16px;font-size:0.95rem;color:var(--text-muted);">Wondering how you compare? See how <a href="/blog/20-southern-ontario-shadow-ai-audits-2026.html" style="color:var(--blue);">20 other Southern Ontario businesses scored</a> in our 2026 Shadow AI Audit Report.</p>
   <div class="contact-form" id="contact-form-wrap">
-    <form id="discovery-form">
+    <form id="discovery-form" class="hs-do-not-collect">
       <div class="form-group">
         <label for="firstname">First name</label>
         <input type="text" id="firstname" name="firstname" placeholder="Jane" required />
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+        <input type="email" id="email" oninput="document.getElementById('email-error').style.display = 'none'" name="email" placeholder="jane@company.com" required />
+<div id="email-error" style="display: none; color: #ef4444; font-size: 0.875rem; font-weight: 700; margin-top: 0.5rem;">Please enter your business email address.</div>
       </div>
       <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
       <p class="form-note">We'll respond within 1 business day. No spam, ever.</p>
@@ -1514,8 +1515,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 document.getElementById('discovery-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = this.querySelector('.btn-submit');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
+  if(btn) btn.textContent = 'Sending...';
+  if(btn) btn.disabled = true;
+
+  // --- Free Email Domain Blocklist ---
+  const freeDomains = [
+      'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 
+      'icloud.com', 'live.com', 'msn.com', 'aol.com', 
+      'googlemail.com', 'ymail.com', 'protonmail.com'
+  ];
+  const emailEl = document.getElementById('email');
+  const userEmail = emailEl ? emailEl.value.toLowerCase().trim() : '';
+  const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1].trim() : null;
+  
+  if (domainMatch && freeDomains.includes(domainMatch)) {
+      const errorDiv = document.getElementById('email-error');
+      if(errorDiv) {
+          errorDiv.style.display = 'block';
+      }
+      if(btn) btn.textContent = 'Book My Free Discovery Call →';
+      if(btn) btn.disabled = false;
+      return; // Stop execution
+  }
+  // -----------------------------------
+
 
   const data = {
     firstname: this.firstname.value,
@@ -1538,8 +1561,8 @@ document.getElementById('discovery-form').addEventListener('submit', async funct
     document.getElementById('discovery-form').style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
   } catch(err) {
-    btn.textContent = 'Book My Free Discovery Call →';
-    btn.disabled = false;
+    if(btn) btn.textContent = 'Book My Free Discovery Call →';
+    if(btn) btn.disabled = false;
     alert('Something went wrong. Please call us at (647) 360-5774.');
   }
 });

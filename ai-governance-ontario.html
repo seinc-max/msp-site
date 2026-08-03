@@ -315,14 +315,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="form-card-label">Free 30-Min Discovery Call</div>
       <h2>Find out exactly where your business is exposed</h2>
       <p class="form-card-sub">No sales pitch. Just an honest look at your AI exposure and what it takes to fix it.</p>
-      <form id="discovery-form">
+      <form id="discovery-form" class="hs-do-not-collect">
         <div class="form-group">
           <label for="firstname">First name</label>
           <input type="text" id="firstname" name="firstname" placeholder="Ben" required>
         </div>
         <div class="form-group">
           <label for="email">Work email</label>
-          <input type="email" id="email" name="email" placeholder="ben@yourcompany.com" required>
+          <input type="email" id="email" oninput="document.getElementById('email-error').style.display = 'none'" name="email" placeholder="ben@yourcompany.com" required>
+<div id="email-error" style="display: none; color: #ef4444; font-size: 0.875rem; font-weight: 700; margin-top: 0.5rem;">Please enter your business email address.</div>
         </div>
 
         <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
@@ -521,8 +522,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = form.querySelector('.btn-submit');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
+    if(btn) btn.textContent = 'Sending...';
+    if(btn) btn.disabled = true;
+
+  // --- Free Email Domain Blocklist ---
+  const freeDomains = [
+      'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 
+      'icloud.com', 'live.com', 'msn.com', 'aol.com', 
+      'googlemail.com', 'ymail.com', 'protonmail.com'
+  ];
+  const emailEl = document.getElementById('email');
+  const userEmail = emailEl ? emailEl.value.toLowerCase().trim() : '';
+  const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1].trim() : null;
+  
+  if (domainMatch && freeDomains.includes(domainMatch)) {
+      const errorDiv = document.getElementById('email-error');
+      if(errorDiv) {
+          errorDiv.style.display = 'block';
+      }
+      if(btn) btn.textContent = 'Book My Free Discovery Call →';
+      if(btn) btn.disabled = false;
+      return; // Stop execution
+  }
+  // -----------------------------------
+
 
     const firstname = document.getElementById('firstname').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -548,11 +571,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         window.dataLayer.push({ event: 'manual_event_SUBMIT_LEAD_FORM' });
       } else {
         btn.textContent = 'Book Another Call';
-        btn.disabled = false;
+        if(btn) btn.disabled = false;
       }
     } catch(err) {
       btn.textContent = 'Book Another Call';
-      btn.disabled = false;
+      if(btn) btn.disabled = false;
     }
   });
 </script>
