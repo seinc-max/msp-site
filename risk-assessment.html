@@ -1275,17 +1275,17 @@ const form = document.getElementById('risk-assessment-form');
                     errorDiv.classList.remove('hidden');
                 }
                 if(btnText) btnText.innerText = 'Book My Free Discovery Call →';
-                btn.style.opacity = '1';
-                btn.disabled = false;
+                if(btn) btn.style.opacity = '1';
+                if(btn) btn.disabled = false;
                 return; // Stop execution
             }
             // -----------------------------------
 
             
             
-            btn.disabled = true;
+            if(btn) btn.disabled = true;
             if(btnText) btnText.innerText = 'Calculating Liability...';
-            btn.style.opacity = '0.8';
+            if(btn) btn.style.opacity = '0.8';
 // Get selected radio values
             const q1 = document.querySelector('input[name="q1"]:checked')?.value || 'Not Answered';
             const q2 = document.querySelector('input[name="q2"]:checked')?.value || 'Not Answered';
@@ -1319,7 +1319,7 @@ try {
                   'conversion_type': 'discovery_audit_lead'
                 });
 
-                    document.getElementById('form-container').style.display = 'none';
+                    form.style.display = 'none';
                     const sCont = document.getElementById('success-container');
                     if(sCont) sCont.style.display = 'block';
                     if(progressBar) {
@@ -1327,15 +1327,15 @@ try {
                         progressBar.style.background = '#10b981';
                     }
                 } else {
-                    btn.disabled = false;
+                    if(btn) btn.disabled = false;
                     if(btnText) btnText.innerText = 'Book My Free Discovery Call →';
-                    btn.style.opacity = '1';
+                    if(btn) btn.style.opacity = '1';
                     alert('Connection issue. Please try again.');
                 }
             } catch (err) {
-                btn.disabled = false;
+                if(btn) btn.disabled = false;
                 if(btnText) btnText.innerText = 'Book My Free Discovery Call →';
-                btn.style.opacity = '1';
+                if(btn) btn.style.opacity = '1';
                 alert('Network error: ' + err.message);
             }
         });

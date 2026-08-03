@@ -1154,8 +1154,8 @@
 document.getElementById('discovery-form')?.addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = this.querySelector('.btn-submit');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
+  if(btn) btn.textContent = 'Sending...';
+  if(btn) btn.disabled = true;
 
   
             // --- Free Email Domain Blocklist ---
@@ -1173,15 +1173,15 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
                 if(errorDiv) {
                     errorDiv.classList.remove('hidden');
                 }
-                btn.textContent = 'Book My Free Discovery Call';
-                btn.disabled = false;
+                if(btn) btn.textContent = 'Book My Free Discovery Call';
+                if(btn) btn.disabled = false;
                 return; // Stop execution
             }
             // -----------------------------------
 
   
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
+  if(btn) btn.textContent = 'Sending...';
+  if(btn) btn.disabled = true;
   const data = {
     firstname: document.getElementById('firstname').value,
     email: document.getElementById('email').value,
@@ -1213,13 +1213,13 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
         document.getElementById('discovery-form').style.display = 'none';
         document.getElementById('form-success').style.display = 'block';
     } else {
-        btn.textContent = 'Book My Free Discovery Call →';
-        btn.disabled = false;
+        if(btn) btn.textContent = 'Book My Free Discovery Call →';
+        if(btn) btn.disabled = false;
         alert('There was a server issue. Please try again.');
     }
   } catch(err) {
-    btn.textContent = 'Book My Free Discovery Call →';
-    btn.disabled = false;
+    if(btn) btn.textContent = 'Book My Free Discovery Call →';
+    if(btn) btn.disabled = false;
     alert('Something went wrong. Please call us at (647) 360-5774.');
   }
 });

@@ -544,7 +544,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     e.preventDefault();
     const btn = form.querySelector('.btn-submit');
     btn.textContent = 'Sending…';
-    btn.disabled = true;
+    if(btn) btn.disabled = true;
 
     const firstname = document.getElementById('firstname').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -579,11 +579,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         window.dataLayer.push({ event: 'manual_event_SUBMIT_LEAD_FORM' });
       } else {
         btn.textContent = 'Book Another Call';
-        btn.disabled = false;
+        if(btn) btn.disabled = false;
       }
     } catch(err) {
       btn.textContent = 'Book Another Call';
-      btn.disabled = false;
+      if(btn) btn.disabled = false;
     }
   });
 </script>
