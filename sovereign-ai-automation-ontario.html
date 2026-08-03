@@ -323,8 +323,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <div class="form-group">
           <label for="email">Work email</label>
-          <input type="email" id="email" oninput="document.getElementById(\'email-error\').classList.add(\'hidden\')" name="email" placeholder="ben@yourcompany.com" required>
-                                <div id="email-error" class="hidden text-red-500 text-sm font-bold mt-2">Please enter your business email address.</div>
+          <input type="email" id="email" oninput="document.getElementById('email-error').classList.add('hidden')"  name="email" placeholder="ben@yourcompany.com" required>
+<div id="email-error" class="hidden text-red-500 text-sm font-bold mt-2">Please enter your business email address.</div>
         </div>
 
         <button type="submit" class="btn-submit">Book My Free Discovery Call &rarr;</button>
@@ -547,7 +547,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     if(btn) btn.disabled = true;
 
     const firstname = document.getElementById('firstname').value.trim();
-    const email = document.getElementById('email').value.trim();
+    const emailEl = document.getElementById('email');
+    const email = emailEl.value.trim();
+    
+    // --- Free Email Domain Blocklist ---
+    const freeDomains = [
+        'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 
+        'icloud.com', 'live.com', 'msn.com', 'aol.com', 
+        'googlemail.com', 'ymail.com', 'protonmail.com'
+    ];
+    const userEmail = email.toLowerCase();
+    const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1] : null;
+    
+    if (domainMatch && freeDomains.includes(domainMatch)) {
+        const errorDiv = document.getElementById('email-error');
+        if(errorDiv) {
+            errorDiv.classList.remove('hidden');
+        }
+        if(btn) btn.textContent = 'Book My Free Discovery Call';
+        if(btn) btn.disabled = false;
+        return; // Stop execution
+    }
+    // -----------------------------------
+
 
     try {
       const res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466', {
