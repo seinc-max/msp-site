@@ -557,7 +557,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'googlemail.com', 'ymail.com', 'protonmail.com'
     ];
     const userEmail = email.toLowerCase();
-    const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1] : null;
+    const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1].trim() : null;
     
     if (domainMatch && freeDomains.includes(domainMatch)) {
         const errorDiv = document.getElementById('email-error');

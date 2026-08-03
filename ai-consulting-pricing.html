@@ -1166,7 +1166,7 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
             ];
             const emailEl = document.getElementById('email');
             const userEmail = emailEl ? emailEl.value.toLowerCase().trim() : '';
-            const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1] : null;
+            const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1].trim() : null;
             
             if (domainMatch && freeDomains.includes(domainMatch)) {
                 const errorDiv = document.getElementById('email-error');

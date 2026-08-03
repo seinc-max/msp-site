@@ -1267,7 +1267,7 @@ const form = document.getElementById('risk-assessment-form');
                 'googlemail.com', 'ymail.com', 'protonmail.com'
             ];
             const userEmail = emailEl ? emailEl.value.toLowerCase().trim() : '';
-            const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1] : null;
+            const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1].trim() : null;
             
             if (domainMatch && freeDomains.includes(domainMatch)) {
                 const errorDiv = document.getElementById('email-error');
