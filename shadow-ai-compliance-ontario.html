@@ -567,6 +567,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           fields: [
             { name: 'firstname', value: firstname },
             { name: 'email', value: email },
+            { name: 'hs_google_click_id', value: sessionStorage.getItem('google_ads_gclid') || '' },
             { name: 'hubspot_owner_id', value: '89556230' }
           ],
           context: { pageUri: window.location.href, pageName: 'AI Governance Ontario Landing Page' }

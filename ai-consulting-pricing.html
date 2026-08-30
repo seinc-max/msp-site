@@ -1196,6 +1196,7 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
   if(btn) btn.textContent = 'Sending...';
   if(btn) btn.disabled = true;
   const data = {
+    hs_google_click_id: sessionStorage.getItem('google_ads_gclid') || '',
     firstname: document.getElementById('firstname').value,
     email: document.getElementById('email').value,
     capture_url: window.location.href,

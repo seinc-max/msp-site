@@ -1413,6 +1413,7 @@ document.getElementById('discovery-form').addEventListener('submit', async funct
   // -----------------------------------
 
   const data = {
+    hs_google_click_id: sessionStorage.getItem('google_ads_gclid') || '',
     firstname: this.firstname.value,
     email: this.email.value,
     hubspot_owner_id: "89556230"
