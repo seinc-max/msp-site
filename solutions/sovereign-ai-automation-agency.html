@@ -409,7 +409,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div style="margin-bottom:20px;text-align:left;">
         <label for="email" style="display:block;font-size:0.9rem;font-weight:600;color:var(--navy);margin-bottom:8px;">Email address</label>
-        <input type="email" id="email" name="email" placeholder="jane@company.com" required style="margin-bottom: 15px; width: 100%; padding: 8px; border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.95rem;">
+        <input type="email" id="email" oninput="document.getElementById('email-error').style.display = 'none'" name="email" placeholder="jane@company.com" required style="margin-bottom: 15px; width: 100%; padding: 8px; border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.95rem;">
+<div id="email-error" style="display: none; color: #ef4444; font-size: 0.875rem; font-weight: 700; margin-top: 0.5rem;">Please enter your business email address.</div>
       </div>
 
       <button type="submit" style="background-color: #f97316; color: white; padding: 14px 28px; border: none; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%;">Book My Free Discovery Call →</button>
@@ -429,6 +430,27 @@ document.getElementById('discovery-form').addEventListener('submit', async funct
   const btn = this.querySelector('button[type="submit"]');
   btn.textContent = 'Sending...';
   btn.disabled = true;
+
+  // --- Free Email Domain Blocklist ---
+  const freeDomains = [
+      'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 
+      'icloud.com', 'live.com', 'msn.com', 'aol.com', 
+      'googlemail.com', 'ymail.com', 'protonmail.com'
+  ];
+  const emailEl = document.getElementById('email');
+  const userEmail = emailEl ? emailEl.value.toLowerCase().trim() : '';
+  const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1].trim() : null;
+  
+  if (domainMatch && freeDomains.includes(domainMatch)) {
+      const errorDiv = document.getElementById('email-error');
+      if(errorDiv) {
+          errorDiv.style.display = 'block';
+      }
+      if(btn) btn.textContent = 'Book My Free Discovery Call →';
+      if(btn) btn.disabled = false;
+      return; // Stop execution
+  }
+  // -----------------------------------
 
   const data = {
     hs_google_click_id: sessionStorage.getItem('google_ads_gclid') || '',
