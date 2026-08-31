@@ -1396,7 +1396,10 @@ try {
                                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
                   'event': 'form_submission_success',
-                  'conversion_type': 'discovery_audit_lead'
+                  'conversion_type': 'discovery_audit_lead',
+                  'userData': {
+                    'email': userEmail
+                  }
                 });
 
                     form.style.display = 'none';
