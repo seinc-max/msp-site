@@ -569,7 +569,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         form.style.display = 'none';
         success.style.display = 'block';
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'manual_event_SUBMIT_LEAD_FORM' });
+        window.dataLayer.push({
+          'event': 'form_submission_success',
+          'conversion_type': 'discovery_audit_lead',
+          'userData': { 'email': userEmail }
+        });
       } else {
         btn.textContent = 'Book Another Call';
         if(btn) btn.disabled = false;
