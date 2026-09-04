@@ -1024,20 +1024,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         
                         <div class="max-w-md mx-auto space-y-5">
                             <div>
-                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Name <span class="text-red-500">*</span></label>
-                                <input type="text" id="work-name" required placeholder="John Doe" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
+                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">First name</label>
+                                <input type="text" id="work-name" required placeholder="Jane" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
                             </div>
                             
                             <div>
-                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Work Email <span class="text-red-500">*</span></label>
-                                <input type="email" id="work-email" oninput="document.getElementById(\'email-error\').classList.add(\'hidden\')" required placeholder="john@business.com" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
-                                <div id="email-error" class="hidden text-red-500 text-sm font-bold mt-2">Please enter your business email address.</div>
+                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Email address</label>
+                                <input type="email" id="work-email" oninput="document.getElementById('email-error').style.display = 'none'" required placeholder="jane@company.com" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
+                                <div id="email-error" style="display: none; color: #ef4444; font-size: 0.875rem; font-weight: 700; margin-top: 0.5rem;">Please enter your business email address.</div>
                             </div>
 
                             <div class="pt-4">
                                 <!-- RULE 5: Exact mandated CTA -->
-                                <button type="submit" id="submit-btn" class="w-full font-bold text-[1.05rem] py-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 relative overflow-hidden" style="background: var(--orange); color: #fff; box-shadow: 0 8px 25px rgba(249,115,22,0.25);">
-                                    <span id="btn-text">Book My Free Discovery Call &rarr;</span>
+                                <button type="submit" id="submit-btn" class="btn-submit">
+                                    <span id="btn-text">Book My Free Discovery Call →</span>
                                 </button>
                                 <p class="text-xs text-center font-medium mt-4 flex items-center justify-center gap-1.5" style="color: var(--text-muted);">
                                     <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
@@ -1293,7 +1293,7 @@ const form = document.getElementById('risk-assessment-form');
             if (domainMatch && freeDomains.includes(domainMatch)) {
                 const errorDiv = document.getElementById('email-error');
                 if(errorDiv) {
-                    errorDiv.classList.remove('hidden');
+                    errorDiv.style.display = 'block';
                 }
                 if(btnText) btnText.innerText = 'Book My Free Discovery Call →';
                 if(btn) btn.style.opacity = '1';

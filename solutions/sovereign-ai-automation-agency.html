@@ -206,6 +206,48 @@ footer {
     .sticky-mobile-cta { display: block; }
     footer { padding-bottom: 80px; }
   }
+  .btn-submit {
+    width: 100%;
+    background: var(--orange);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 4px;
+  }
+  .btn-submit:hover { background: #ea6c0a; transform: translateY(-1px); }
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: #f7f9fc;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+  }
+  .form-group input:focus, .form-group select:focus {
+    border-color: var(--blue);
+    background: #fff;
+  }
 </style>
 
 <script type="application/ld+json">
@@ -399,17 +441,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p style="color:rgba(255,255,255,0.55);font-size:1.05rem;max-width:500px;margin:0 auto 44px;">Tell us a bit about your business and we'll be in touch within one business day.</p>
   <div style="background:#fff;border-radius:20px;padding:44px 48px;max-width:580px;margin:0 auto;">
     <form id="discovery-form">
-      <div style="margin-bottom:20px;text-align:left;">
-        <label for="firstname" style="display:block;font-size:0.9rem;font-weight:600;color:var(--navy);margin-bottom:8px;">First name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Jane" required style="margin-bottom: 15px; width: 100%; padding: 8px; border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.95rem;">
+      <div class="form-group">
+        <label for="firstname">First name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Jane" required>
       </div>
-      <div style="margin-bottom:20px;text-align:left;">
-        <label for="email" style="display:block;font-size:0.9rem;font-weight:600;color:var(--navy);margin-bottom:8px;">Email address</label>
-        <input type="email" id="email" oninput="document.getElementById('email-error').style.display = 'none'" name="email" placeholder="jane@company.com" required style="margin-bottom: 15px; width: 100%; padding: 8px; border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.95rem;">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" oninput="document.getElementById('email-error').style.display = 'none'" name="email" placeholder="jane@company.com" required>
 <div id="email-error" style="display: none; color: #ef4444; font-size: 0.875rem; font-weight: 700; margin-top: 0.5rem;">Please enter your business email address.</div>
       </div>
 
-      <button type="submit" style="background-color: #f97316; color: white; padding: 14px 28px; border: none; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%;">Book My Free Discovery Call →</button>
+      <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
       <p style="text-align:center;font-size:0.82rem;color:var(--text-muted);margin-top:14px;">We'll respond within 1 business day. No spam, ever.</p>
     </form>
     <div id="form-success" style="display:none;text-align:center;padding:20px 0;">
