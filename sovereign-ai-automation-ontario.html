@@ -614,12 +614,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         form.style.display = 'none';
         success.style.display = 'block';
       } else {
-        btn.textContent = 'Book Another Call';
+        btn.textContent = 'Book My Free Discovery Call →';
         if(btn) btn.disabled = false;
       }
     } catch(err) {
-      btn.textContent = 'Book Another Call';
+      if(btn) btn.textContent = 'Book My Free Discovery Call →';
       if(btn) btn.disabled = false;
+      alert('Something went wrong. Please call us at (647) 360-5774.');
     }
   });
 </script>

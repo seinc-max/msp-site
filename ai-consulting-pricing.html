@@ -1130,8 +1130,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" id="email" oninput="document.getElementById(\'email-error\').classList.add(\'hidden\')" name="email" placeholder="jane@company.com" required />
-                                <div id="email-error" class="hidden text-red-500 text-sm font-bold mt-2">Please enter your business email address.</div>
+        <input type="email" id="email" oninput="document.getElementById('email-error').style.display = 'none'" name="email" placeholder="jane@company.com" required />
+                                <div id="email-error" style="display: none; color: #ef4444; font-size: 0.875rem; font-weight: 700; margin-top: 0.5rem;">Please enter your business email address.</div>
       </div>
       <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
       <p class="form-note">We'll respond within 1 business day. No spam, ever.</p>
@@ -1193,7 +1193,7 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
             if (domainMatch && freeDomains.includes(domainMatch)) {
                 const errorDiv = document.getElementById('email-error');
                 if(errorDiv) {
-                    errorDiv.classList.remove('hidden');
+                    errorDiv.style.display = 'block';
                 }
                 if(btn) btn.textContent = 'Book My Free Discovery Call';
                 if(btn) btn.disabled = false;
@@ -1241,7 +1241,7 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
     } else {
         if(btn) btn.textContent = 'Book My Free Discovery Call →';
         if(btn) btn.disabled = false;
-        alert('There was a server issue. Please try again.');
+        alert('Something went wrong. Please call us at (647) 360-5774.');
     }
   } catch(err) {
     if(btn) btn.textContent = 'Book My Free Discovery Call →';
