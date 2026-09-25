@@ -1,683 +1,392 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Appointment Confirm + Reminder SMS | Trueline IT</title>
-<meta name="description" content="Done-for-you appointment confirm and reminder texts for service businesses — managed install on your calendar, templates you approve.">
-<link rel="canonical" href="https://truelineit.com/appointment-confirm-reminder" />
-<meta name="robots" content="noindex, nofollow" />
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<style>
-  :root {
-    --navy: #1a2744;
-    --navy-light: #243354;
-    --sky: #e8f2ff;
-    --blue: #2563eb;
-    --blue-light: #3b82f6;
-    --orange: #f97316;
-    --warm-white: #fafaf8;
-    --text: #1a2744;
-    --text-muted: #5a6a8a;
-    --border: #dde6f5;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'DM Sans', sans-serif;
-    color: var(--text);
-    background: var(--warm-white);
-    line-height: 1.6;
-  }
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: var(--navy);
-    padding: 0 5%;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 68px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.18);
-  }
-  .nav-logo {
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    font-size: 1.35rem;
-    color: #fff;
-    letter-spacing: -0.01em;
-    text-decoration: none;
-  }
-  .nav-logo span { color: var(--orange); }
-  .nav-right { display: flex; align-items: center; gap: 18px; }
-  .nav-phone {
-    color: rgba(255,255,255,0.8);
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-decoration: none;
-    display: flex; align-items: center; gap: 7px;
-  }
-  .nav-phone:hover { color: #fff; }
-  .nav-phone svg { width: 15px; height: 15px; }
-  @media (max-width: 600px) { .nav-phone { display: none; } }
-  @media (max-width: 768px) { .nav-cta { display: none; } }
-  .nav-cta {
-    background: var(--orange);
-    color: #fff;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 10px 22px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-    white-space: nowrap;
-  }
-  .nav-cta:hover { background: #ea6c0a; transform: translateY(-1px); }
-  .hero {
-    background: var(--navy);
-    padding: 80px 5% 90px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 70% 50%, rgba(37,99,235,0.18) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-inner {
-    max-width: 720px;
-    position: relative; z-index: 1;
-  }
-  .hero-pre {
-    display: inline-block;
-    background: rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.75);
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 4px;
-    margin-bottom: 22px;
-  }
-  .hero h1 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2rem, 5vw, 3.1rem);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin-bottom: 22px;
-  }
-  .hero-sub {
-    color: rgba(255,255,255,0.65);
-    font-size: 1.1rem;
-    max-width: 560px;
-    margin-bottom: 38px;
-    line-height: 1.65;
-  }
-  .hero-actions {
-    display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
-  }
-  .btn-primary {
-    background: var(--orange);
-    color: #fff;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1.05rem;
-    padding: 15px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    box-shadow: 0 4px 20px rgba(249,115,22,0.35);
-  }
-  .btn-primary:hover { background: #ea6c0a; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(249,115,22,0.4); }
-  .btn-secondary {
-    background: transparent;
-    color: #fff;
-    border: 1.5px solid rgba(255,255,255,0.35);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 13px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    transition: border-color 0.2s, background 0.2s;
-  }
-  .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.06); }
-  .hero-phone-link {
-    color: rgba(255,255,255,0.65);
-    font-size: 0.95rem;
-    text-decoration: none;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .hero-phone-link:hover { color: #fff; }
-  .section-pad { padding: 80px 5%; }
-  .section-inner { max-width: 1000px; margin: 0 auto; }
-  .section-label {
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 12px;
-  }
-  .section-title {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(1.7rem, 3.5vw, 2.3rem);
-    font-weight: 700;
-    color: var(--navy);
-    line-height: 1.25;
-    margin-bottom: 14px;
-    letter-spacing: -0.02em;
-  }
-  .section-sub {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    max-width: 560px;
-    margin-bottom: 40px;
-    line-height: 1.65;
-  }
-  .text-center { text-align: center; }
-  .text-center .section-sub { margin-left: auto; margin-right: auto; }
-  .pain { background: var(--sky); }
-  .pain-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-  }
-  .pain-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px 26px;
-  }
-  .pain-card h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 8px;
-  }
-  .pain-card p {
-    color: var(--text-muted);
-    font-size: 0.93rem;
-    line-height: 1.6;
-  }
-  .get-list {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 14px;
-    max-width: 720px;
-  }
-  .get-list li {
-    display: flex; align-items: flex-start; gap: 14px;
-    font-size: 1rem;
-    color: var(--text-muted);
-    line-height: 1.55;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 18px;
-  }
-  .get-num {
-    background: var(--navy);
-    color: #fff;
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.85rem;
-    font-weight: 700;
-    flex-shrink: 0;
-    font-family: 'Fraunces', serif;
-  }
-  .how { background: var(--sky); }
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-top: 40px;
-  }
-  @media (max-width: 640px) { .steps { grid-template-columns: 1fr; } }
-  .step { text-align: center; padding: 10px; }
-  .step-num {
-    width: 52px; height: 52px;
-    border-radius: 50%;
-    background: var(--navy);
-    color: #fff;
-    font-family: 'Fraunces', serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 18px;
-  }
-  .step h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 8px;
-  }
-  .step p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
-  .demo-band {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--orange);
-    border-radius: 12px;
-    padding: 28px 32px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .demo-band p {
-    font-family: 'Fraunces', serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--navy);
-    line-height: 1.45;
-  }
-  .demo-band .demo-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--orange);
-    margin-bottom: 10px;
-  }
-  .trust-strip {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-  }
-  .trust-item {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px 20px;
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    line-height: 1.55;
-  }
-  .trust-item strong {
-    display: block;
-    font-family: 'Fraunces', serif;
-    color: var(--navy);
-    font-size: 1.05rem;
-    margin-bottom: 6px;
-  }
-  .price-card {
-    background: var(--navy);
-    border-radius: 16px;
-    padding: 40px 36px;
-    color: #fff;
-    max-width: 520px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .price-card .draft-badge {
-    display: inline-block;
-    background: rgba(249,115,22,0.2);
-    color: #fdba74;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-  }
-  .price-card .price-line {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(1.6rem, 3vw, 2.1rem);
-    font-weight: 700;
-    color: var(--orange);
-    margin: 12px 0 8px;
-    line-height: 1.25;
-  }
-  .price-card .price-note {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.5);
-    margin-bottom: 24px;
-  }
-  .faq { background: var(--sky); }
-  .faq-list {
-    margin-top: 40px;
-    display: flex; flex-direction: column; gap: 14px;
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  details {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px 24px;
-    cursor: pointer;
-  }
-  details[open] { border-color: var(--blue); }
-  summary {
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--navy);
-    list-style: none;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 12px;
-  }
-  summary::-webkit-details-marker { display: none; }
-  summary::after {
-    content: '+';
-    font-size: 1.3rem;
-    color: var(--blue);
-    flex-shrink: 0;
-  }
-  details[open] summary::after { content: '−'; }
-  .faq-answer {
-    margin-top: 14px;
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-  .cta-band {
-    background: var(--navy);
-    padding: 90px 5%;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .cta-band::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(37,99,235,0.2) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .cta-band h2 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.2;
-    margin-bottom: 14px;
-    position: relative; z-index: 1;
-  }
-  .cta-band p {
-    color: rgba(255,255,255,0.55);
-    font-size: 1.05rem;
-    max-width: 520px;
-    margin: 0 auto 32px;
-    line-height: 1.65;
-    position: relative; z-index: 1;
-  }
-  .cta-band .hero-actions {
-    justify-content: center;
-    position: relative; z-index: 1;
-  }
-  .cross-link {
-    text-align: center;
-    padding: 24px 5%;
-    background: #fff;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.92rem;
-    color: var(--text-muted);
-  }
-  .cross-link a {
-    color: var(--blue);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .cross-link a:hover { text-decoration: underline; }
-  footer {
-    background: #111827;
-    padding: 32px 5%;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 14px;
-  }
-  .footer-logo {
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-  }
-  .footer-logo span { color: var(--orange); }
-  footer p {
-    color: rgba(255,255,255,0.3);
-    font-size: 0.82rem;
-  }
-  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-  .footer-links a {
-    color: rgba(255,255,255,0.35);
-    font-size: 0.82rem;
-    text-decoration: none;
-  }
-  .footer-links a:hover { color: rgba(255,255,255,0.65); }
-  .kit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
-  }
-  .kit-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 28px 24px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
-  }
-  .kit-card:hover {
-    border-color: var(--blue);
-    box-shadow: 0 8px 28px rgba(37,99,235,0.1);
-    transform: translateY(-2px);
-  }
-  .kit-card h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--navy);
-  }
-  .kit-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.55; flex-grow: 1; }
-  .kit-price {
-    font-size: 0.88rem;
-    color: var(--navy);
-    font-weight: 600;
-  }
-  .kit-price span { color: var(--text-muted); font-weight: 400; }
-  .kit-link {
-    color: var(--orange);
-    font-weight: 700;
-    font-size: 0.88rem;
-    margin-top: 4px;
-  }
-  .incl-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-  .incl-box {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px 26px;
-  }
-  .incl-box h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.15rem;
-    color: var(--navy);
-    margin-bottom: 16px;
-  }
-  .incl-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .incl-box li {
-    font-size: 0.93rem;
-    color: var(--text-muted);
-    padding-left: 22px;
-    position: relative;
-    line-height: 1.5;
-  }
-  .incl-box.yes li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
-  .incl-box.no li::before { content: '–'; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
-  .price-table-wrap { overflow-x: auto; }
-  table.price-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  table.price-table th, table.price-table td {
-    padding: 16px 18px;
-    text-align: left;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.95rem;
-  }
-  table.price-table th {
-    background: var(--navy);
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-  table.price-table td { color: var(--text-muted); }
-  table.price-table td:first-child { color: var(--navy); font-weight: 600; }
-  table.price-table tr:last-child td { border-bottom: none; }
-  .draft-note {
-    display: inline-block;
-    background: #fef3c7;
-    color: #92400e;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-  }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Appointment Confirm + Reminder SMS | Trueline IT</title>
+  <meta name="description" content="Trueline installs a done-for-you confirm-and-reminder SMS sequence on your calendar so clients get clear texts before they show up. Book a fit call.">
+  <meta property="og:title" content="Appointment Confirm + Reminder SMS | Trueline IT">
+  <meta property="og:description" content="Managed confirm + reminder texts for service businesses. Less “are we still on?” chasing. Book a short fit call.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1a2744',
+            orange: '#f97316',
+            'warm-white': '#fafaf8',
+            blue: '#2563eb',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root { --navy: #1a2744; --orange: #f97316; --warm-white: #fafaf8; --blue: #2563eb; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; background: var(--warm-white); color: var(--navy); }
+    h1, h2, h3, .font-display { font-family: 'Fraunces', Georgia, serif; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary { list-style: none; }
+    .sticky-cta { padding-bottom: env(safe-area-inset-bottom, 0); }
+    .timeline-line { background: linear-gradient(90deg, var(--orange), var(--blue)); }
+    @media (max-width: 767px) {
+      .timeline-line-v { background: linear-gradient(180deg, var(--orange), var(--blue)); }
+    }
+  </style>
+<link rel="canonical" href="https://truelineit.com/appointment-confirm-reminder">
+  </head>
+<body class="antialiased pb-24 md:pb-0">
+  <header class="sticky top-0 z-40 bg-warm-white/95 backdrop-blur border-b border-navy/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+      <a href="#top" class="font-display font-semibold text-lg text-navy tracking-tight">Trueline IT</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-navy/80">
+        <a href="#how" class="hover:text-navy">How it works</a>
+        <a href="#timeline" class="hover:text-navy">Timeline</a>
+        <a href="#pricing" class="hover:text-navy">Pricing</a>
+        <a href="#faq" class="hover:text-navy">FAQ</a>
+        <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-4 py-2 hover:bg-orange/90 transition">Book a fit call</a>
+      </nav>
+      <a href="#book" class="md:hidden inline-flex items-center rounded-full bg-orange text-white font-semibold text-sm px-3 py-1.5">Book</a>
+    </div>
+  </header>
 
-</style>
-</head>
-<body>
-<nav>
-  <a href="/" class="nav-logo">Trueline<span>.</span>IT</a>
-  <div class="nav-right">
-    <a href="tel:+16473605774" class="nav-phone">
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
-      (647) 360-5774
-    </a>
-    <a href="#book" class="nav-cta">Book a free fit call</a>
-  </div>
-</nav>
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-pre">Calendar protection kit</div>
-    <h1>Appointment confirms and reminders — texted for you</h1>
-    <p class="hero-sub">TrueLine installs a done-for-you confirm-and-reminder sequence on your calendar so clients get clear texts before they show up — and you spend less time chasing “are we still on?”</p>
-    <div class="hero-actions">
-      <a href="#book" class="btn-primary">Book a free 15–20 min fit call</a>
-      <a href="tel:+16473605774" class="hero-phone-link">(647) 360-5774</a>
+  <main id="top">
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-navy via-navy to-[#243456]"></div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="text-white">
+          <p class="text-orange font-semibold text-sm uppercase tracking-wider mb-3">Appointment Confirm + Reminder</p>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.25rem] leading-tight font-semibold mb-5">
+            Appointment confirms and reminders — texted for you
+          </h1>
+          <p class="text-white/85 text-lg leading-relaxed mb-8 max-w-xl">
+            Trueline installs a done-for-you confirm-and-reminder sequence on your calendar so clients get clear texts before they show up — and you spend less time chasing “are we still on?”
+          </p>
+          <div class="flex flex-wrap items-center gap-4 mb-4">
+            <a href="#book" class="inline-flex items-center justify-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 shadow-lg shadow-orange/30 hover:bg-orange/90 transition">Book a fit call</a>
+            <a href="tel:+16473605774" class="text-white/90 underline-offset-4 hover:underline text-sm sm:text-base">Or call (647) 360-5774</a>
+          </div>
+          <p class="text-white/60 text-sm">Free 15–20 min fit call · Templates you approve · Managed install</p>
+        </div>
+        <!-- Field/shop calendar framing -->
+        <div class="bg-white/10 backdrop-blur rounded-2xl border border-white/15 p-5 text-white shadow-xl">
+          <p class="text-xs uppercase tracking-widest text-white/50 mb-3">Field / shop calendar</p>
+          <div class="bg-white rounded-xl text-navy p-4">
+            <div class="flex justify-between items-center mb-3">
+              <p class="font-semibold text-sm">This week</p>
+              <span class="text-[10px] bg-navy/5 rounded px-2 py-0.5 text-navy/60">Service jobs</span>
+            </div>
+            <div class="grid grid-cols-5 gap-1 text-center text-[10px] text-navy/50 mb-2">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
+            </div>
+            <div class="grid grid-cols-5 gap-1 text-[11px]">
+              <div class="bg-warm-white rounded p-2 min-h-[56px]"><span class="block font-medium">Van A</span><span class="text-navy/50">2 jobs</span></div>
+              <div class="bg-blue/10 border border-blue/30 rounded p-2 min-h-[56px]"><span class="block font-medium text-blue">Confirm ✓</span><span class="text-navy/60">10–12</span></div>
+              <div class="bg-warm-white rounded p-2 min-h-[56px]"><span class="block font-medium">Shop</span><span class="text-navy/50">install</span></div>
+              <div class="bg-orange/10 border border-orange/30 rounded p-2 min-h-[56px]"><span class="block font-medium text-orange">T-24h</span><span class="text-navy/60">reminder</span></div>
+              <div class="bg-warm-white rounded p-2 min-h-[56px] border border-dashed border-navy/20"><span class="block font-medium text-navy/50">Optional</span><span class="text-navy/40">same-day</span></div>
+            </div>
+          </div>
+          <p class="text-white/50 text-xs mt-3">No clinical / dental framing — field and shop calendars only.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain -->
+    <section class="bg-white border-y border-navy/5">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+        <p class="text-orange font-semibold text-sm uppercase tracking-wider mb-4">The expensive slot</p>
+        <ul class="grid sm:grid-cols-3 gap-4 text-navy/80">
+          <li class="flex gap-3 items-start bg-warm-white rounded-xl p-4 border border-navy/5"><span class="text-orange font-bold">·</span><span>No-shows and late cancels burn the day</span></li>
+          <li class="flex gap-3 items-start bg-warm-white rounded-xl p-4 border border-navy/5"><span class="text-orange font-bold">·</span><span>Staff forget to send confirms between jobs</span></li>
+          <li class="flex gap-3 items-start bg-warm-white rounded-xl p-4 border border-navy/5"><span class="text-orange font-bold">·</span><span>Reminder tools sit unused without setup</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16" id="timeline">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-navy mb-3">The sequence</h2>
+      <p class="text-navy/70 mb-10 max-w-xl">One booking. Clear texts. Timings you choose.</p>
+
+      <!-- Desktop horizontal -->
+      <div class="hidden md:block relative">
+        <div class="absolute top-8 left-[10%] right-[10%] h-1 timeline-line rounded-full opacity-40"></div>
+        <div class="grid grid-cols-4 gap-4 relative">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-navy text-white flex items-center justify-center font-display text-xl font-bold mb-4 shadow-lg relative z-10">1</div>
+            <p class="font-semibold text-navy mb-1">Booked</p>
+            <p class="text-navy/65 text-sm">Appointment lands on your field/shop calendar</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-blue text-white flex items-center justify-center font-display text-xl font-bold mb-4 shadow-lg relative z-10">2</div>
+            <p class="font-semibold text-navy mb-1">Confirm SMS</p>
+            <p class="text-navy/65 text-sm">Client gets a clear “you’re booked” text with time + address / service window</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-orange text-white flex items-center justify-center font-display text-xl font-bold mb-4 shadow-lg relative z-10">3</div>
+            <p class="font-semibold text-navy mb-1">T-24h reminder</p>
+            <p class="text-navy/65 text-sm">Day-before nudge so the visit stays on their radar</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-white border-2 border-dashed border-navy/30 text-navy/60 flex items-center justify-center font-display text-xl font-bold mb-4 relative z-10">4</div>
+            <p class="font-semibold text-navy mb-1 flex items-center justify-center gap-2">Same-day nudge <span class="text-[10px] uppercase tracking-wide bg-navy/5 text-navy/50 px-2 py-0.5 rounded-full">optional</span></p>
+            <p class="text-navy/65 text-sm">Light same-day text if you want it — on or off per your rules</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile vertical -->
+      <div class="md:hidden space-y-6 relative pl-2">
+        <div class="absolute left-[23px] top-4 bottom-4 w-0.5 timeline-line-v opacity-40"></div>
+        <div class="flex gap-4 relative">
+          <div class="w-12 h-12 shrink-0 rounded-full bg-navy text-white flex items-center justify-center font-display font-bold z-10">1</div>
+          <div><p class="font-semibold text-navy">Booked</p><p class="text-navy/65 text-sm">Appointment lands on your field/shop calendar</p></div>
+        </div>
+        <div class="flex gap-4 relative">
+          <div class="w-12 h-12 shrink-0 rounded-full bg-blue text-white flex items-center justify-center font-display font-bold z-10">2</div>
+          <div><p class="font-semibold text-navy">Confirm SMS</p><p class="text-navy/65 text-sm">Client gets a clear “you’re booked” text with time + address / service window</p></div>
+        </div>
+        <div class="flex gap-4 relative">
+          <div class="w-12 h-12 shrink-0 rounded-full bg-orange text-white flex items-center justify-center font-display font-bold z-10">3</div>
+          <div><p class="font-semibold text-navy">T-24h reminder</p><p class="text-navy/65 text-sm">Day-before nudge so the visit stays on their radar</p></div>
+        </div>
+        <div class="flex gap-4 relative">
+          <div class="w-12 h-12 shrink-0 rounded-full bg-white border-2 border-dashed border-navy/30 text-navy/50 flex items-center justify-center font-display font-bold z-10">4</div>
+          <div><p class="font-semibold text-navy">Same-day nudge <span class="text-[10px] uppercase bg-navy/5 text-navy/50 px-1.5 py-0.5 rounded-full ml-1">optional</span></p><p class="text-navy/65 text-sm">Light same-day text if you want it — on or off per your rules</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sample SMS cards -->
+    <section class="bg-white border-y border-navy/5 py-16">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-orange font-semibold text-sm uppercase tracking-wider mb-2">Sample texts — service business</p>
+        <p class="text-navy/60 text-sm mb-8">Exact wording approved with you before go-live.</p>
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-navy/10 bg-warm-white p-5 shadow-sm">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-blue/10 text-blue px-2 py-0.5 rounded-full">Confirm</span>
+              <span class="text-[10px] text-navy/40">Card A</span>
+            </div>
+            <p class="text-navy/85 text-sm leading-relaxed">Hi Sam — you’re booked with Northshore Plumbing tomorrow, Thu 10:00–12:00 at 12 River Rd. Reply YES to confirm or call us to reschedule.</p>
+          </div>
+          <div class="rounded-2xl border border-navy/10 bg-warm-white p-5 shadow-sm">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-orange/10 text-orange px-2 py-0.5 rounded-full">T-24h reminder</span>
+              <span class="text-[10px] text-navy/40">Card B</span>
+            </div>
+            <p class="text-navy/85 text-sm leading-relaxed">Reminder: Northshore Plumbing is scheduled tomorrow 10:00–12:00 at 12 River Rd. Reply YES if we’re still good, or text us to move it.</p>
+          </div>
+          <div class="rounded-2xl border border-dashed border-navy/20 bg-white p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-navy/5 text-navy/60 px-2 py-0.5 rounded-full">Same-day nudge · optional</span>
+              <span class="text-[10px] text-navy/40">Card C</span>
+            </div>
+            <p class="text-navy/85 text-sm leading-relaxed">We’re headed your way today for the 10:00–12:00 window at 12 River Rd. Need to adjust? Just text back.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What you get -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16" id="what">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-navy mb-8">What’s in the Confirm + Reminder Kit</h2>
+      <ol class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <li class="bg-white rounded-2xl p-5 border border-navy/10 shadow-sm"><span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-orange text-white font-bold text-sm mb-3">1</span><p class="font-semibold text-navy mb-1">Booking confirm text</p><p class="text-navy/70 text-sm">when the appointment is set</p></li>
+        <li class="bg-white rounded-2xl p-5 border border-navy/10 shadow-sm"><span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-orange text-white font-bold text-sm mb-3">2</span><p class="font-semibold text-navy mb-1">Reminder sequence</p><p class="text-navy/70 text-sm">e.g. day-before + optional same-day (timings you choose)</p></li>
+        <li class="bg-white rounded-2xl p-5 border border-navy/10 shadow-sm"><span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-orange text-white font-bold text-sm mb-3">3</span><p class="font-semibold text-navy mb-1">Easy reschedule / cancel path</p><p class="text-navy/70 text-sm">in the SMS (your rules)</p></li>
+        <li class="bg-white rounded-2xl p-5 border border-navy/10 shadow-sm"><span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-orange text-white font-bold text-sm mb-3">4</span><p class="font-semibold text-navy mb-1">Calendar connect + brand voice</p><p class="text-navy/70 text-sm">light config for your trade</p></li>
+        <li class="bg-white rounded-2xl p-5 border border-navy/10 shadow-sm sm:col-span-2 lg:col-span-1"><span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-orange text-white font-bold text-sm mb-3">5</span><p class="font-semibold text-navy mb-1">Owner digest</p><p class="text-navy/70 text-sm">of confirms / declines (optional)</p></li>
+      </ol>
+    </section>
+
+    <!-- How it works -->
+    <section class="bg-navy text-white py-16" id="how">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-10">How it works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="text-orange font-display text-5xl font-bold mb-3 opacity-80">1</div>
+            <p class="font-semibold text-lg mb-2">Connect calendar</p>
+            <p class="text-white/70">+ approve SMS templates</p>
+          </div>
+          <div>
+            <div class="text-orange font-display text-5xl font-bold mb-3 opacity-80">2</div>
+            <p class="font-semibold text-lg mb-2">New bookings</p>
+            <p class="text-white/70">get confirm + reminders automatically</p>
+          </div>
+          <div>
+            <div class="text-orange font-display text-5xl font-bold mb-3 opacity-80">3</div>
+            <p class="font-semibold text-lg mb-2">You see who confirmed</p>
+            <p class="text-white/70">— follow up only the exceptions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16" id="demo">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="font-display text-3xl sm:text-4xl font-semibold text-navy mb-4">See it on the fit call</h2>
+          <p class="text-navy/80 text-lg mb-3">We’ll run a demo appointment on the fit call — you’ll get the confirm and reminder texts live.</p>
+          <p class="text-navy/70 mb-6">Bring your calendar tool (or tell us what you use). We’ll walk the path without touching real customers.</p>
+          <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3 hover:bg-orange/90 transition">Book a fit call</a>
+        </div>
+        <div class="bg-white rounded-2xl border border-navy/10 p-6 shadow-lg">
+          <p class="text-xs uppercase tracking-widest text-navy/40 mb-3">Demo appointment</p>
+          <div class="rounded-xl bg-warm-white border border-navy/10 p-4 mb-3">
+            <p class="font-semibold text-navy">Northshore Plumbing — demo slot</p>
+            <p class="text-navy/60 text-sm mt-1">Thu 10:00–12:00 · 12 River Rd</p>
+            <p class="text-blue text-sm mt-2 font-medium">→ Confirm SMS queued</p>
+            <p class="text-orange text-sm font-medium">→ T-24h reminder scheduled</p>
+          </div>
+                  </div>
+      </div>
+    </section>
+
+    <!-- Proof -->
+    <section class="bg-white border-y border-navy/5 py-14">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="font-display text-3xl font-semibold text-navy mb-6">Managed install — not another app to ignore</h2>
+        <ul class="grid sm:grid-cols-2 gap-4">
+          <li class="flex gap-3 bg-warm-white rounded-xl p-4 border border-navy/10"><span class="text-orange font-bold">✓</span><span class="text-navy/80">Managed setup vs buying another reminder tool</span></li>
+          <li class="flex gap-3 bg-warm-white rounded-xl p-4 border border-navy/10"><span class="text-orange font-bold">✓</span><span class="text-navy/80">Templates you approve — nothing clever without review</span></li>
+          <li class="flex gap-3 bg-warm-white rounded-xl p-4 border border-navy/10"><span class="text-orange font-bold">✓</span><span class="text-navy/80">Built for service businesses and field calendars — not clinical EHR</span></li>
+          <li class="flex gap-3 bg-warm-white rounded-xl p-4 border border-navy/10"><span class="text-orange font-bold">✓</span><span class="text-navy/80">You stay on the jobs; we keep the sequence running</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16" id="pricing">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-sm font-semibold uppercase tracking-wider text-orange mb-2">CAD</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold text-navy mb-8">Pricing</h2>
+        <div class="bg-white rounded-3xl border-2 border-navy/10 p-8 sm:p-10 shadow-sm">
+          <div class="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 mb-6">
+            <div>
+              <p class="text-navy/60 text-sm mb-1">Setup</p>
+              <p class="font-display text-4xl font-semibold text-navy">$397 <span class="text-lg font-sans font-medium text-navy/60">CAD</span></p>
+            </div>
+            <div class="hidden sm:block w-px bg-navy/10"></div>
+            <div>
+              <p class="text-navy/60 text-sm mb-1">Monthly</p>
+              <p class="font-display text-4xl font-semibold text-navy">$149<span class="text-lg font-sans font-medium text-navy/60">/mo CAD</span></p>
+              <p class="text-navy/50 text-sm mt-1">managed</p>
+            </div>
+          </div>
+          <p class="text-navy/70 text-sm mb-8 max-w-md mx-auto">Prices are for the kit as described. Media spend is separate. Fit call confirms fit; add-ons (extra lines, locations, overage) quoted only if needed.</p>
+          <div class="flex flex-wrap justify-center items-center gap-4">
+            <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 hover:bg-orange/90 transition">Book a fit call</a>
+            <a href="tel:+16473605774" class="text-navy/70 text-sm hover:text-navy underline-offset-2 hover:underline">Call (647) 360-5774</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 py-16" id="faq">
+      <h2 class="font-display text-3xl font-semibold text-navy mb-8">FAQ</h2>
+      <div class="space-y-3">
+        <details class="group bg-white rounded-xl border border-navy/10">
+          <summary class="cursor-pointer px-5 py-4 font-semibold text-navy flex justify-between items-center gap-4">Will this eliminate no-shows?<span class="text-orange group-open:rotate-45 transition text-xl leading-none">+</span></summary>
+          <div class="px-5 pb-4 text-navy/75 text-sm leading-relaxed">No. Confirms and reminders can help reduce no-shows; they don’t remove them. Results vary by trade, deposit policy, and how you handle exceptions.</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-navy/10">
+          <summary class="cursor-pointer px-5 py-4 font-semibold text-navy flex justify-between items-center gap-4">Is this for healthcare / clinical offices?<span class="text-orange group-open:rotate-45 transition text-xl leading-none">+</span></summary>
+          <div class="px-5 pb-4 text-navy/75 text-sm leading-relaxed">We stay off clinical EHR workflows. This kit is for field and shop calendars in service businesses. Ask on the call if you’re unsure.</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-navy/10">
+          <summary class="cursor-pointer px-5 py-4 font-semibold text-navy flex justify-between items-center gap-4">Is this software I have to configure myself?<span class="text-orange group-open:rotate-45 transition text-xl leading-none">+</span></summary>
+          <div class="px-5 pb-4 text-navy/75 text-sm leading-relaxed">No. We install and manage the sequence. You’re not left configuring alone.</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-navy/10">
+          <summary class="cursor-pointer px-5 py-4 font-semibold text-navy flex justify-between items-center gap-4">Can clients reschedule from the text?<span class="text-orange group-open:rotate-45 transition text-xl leading-none">+</span></summary>
+          <div class="px-5 pb-4 text-navy/75 text-sm leading-relaxed">Yes — within rules you set (reply keywords, link, or “call us”). We design that with you.</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-navy/10">
+          <summary class="cursor-pointer px-5 py-4 font-semibold text-navy flex justify-between items-center gap-4">Is this the price I’ll pay?<span class="text-orange group-open:rotate-45 transition text-xl leading-none">+</span></summary>
+          <div class="px-5 pb-4 text-navy/75 text-sm leading-relaxed">Yes for the kit as described — <strong>$397 setup + $149/mo CAD</strong>. Media spend is separate. The fit call confirms fit; add-ons (extra lines, locations, overage) are quoted only if needed.</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-navy/10">
+          <summary class="cursor-pointer px-5 py-4 font-semibold text-navy flex justify-between items-center gap-4">Does this include Meta ads?<span class="text-orange group-open:rotate-45 transition text-xl leading-none">+</span></summary>
+          <div class="px-5 pb-4 text-navy/75 text-sm leading-relaxed">No. Meta spend is closed on our side right now. This page is confirm + reminder SMS only.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- What's not -->
+    <section class="bg-warm-white border-y border-navy/5 py-14">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <h2 class="font-display text-2xl font-semibold text-navy mb-5">What’s not included</h2>
+        <ul class="space-y-2 text-navy/75 text-sm">
+          <li class="flex gap-2"><span class="text-navy/30">—</span> Guarantees that no-shows go to zero</li>
+          <li class="flex gap-2"><span class="text-navy/30">—</span> Clinical EHR, patient portals, or dental/medical compliance workflows</li>
+          <li class="flex gap-2"><span class="text-navy/30">—</span> AI receptionist or voice agent as the product</li>
+          <li class="flex gap-2"><span class="text-navy/30">—</span> Custom one-off agent builds</li>
+          <li class="flex gap-2"><span class="text-navy/30">—</span> Meta ads management</li>
+          <li class="flex gap-2"><span class="text-navy/30">—</span> A self-serve reminder SaaS seat as the product</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-navy mb-4">Spend less time chasing “are we still on?”</h2>
+      <p class="text-navy/75 text-lg mb-8 max-w-2xl mx-auto">Book a short fit call. We’ll run a demo appointment through confirm + reminder so you see the texts before you buy.</p>
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 hover:bg-orange/90 transition">Book a fit call</a>
+        <a href="tel:+16473605774" class="text-navy/70 hover:text-navy underline-offset-2 hover:underline">(647) 360-5774</a>
+      </div>
+    </section>
+
+    <!-- #book -->
+    <section class="bg-navy text-white py-16" id="book">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="font-display text-3xl font-semibold mb-3">Book a free 15–20 min fit call</h2>
+        <p class="text-white/70 mb-8">Pick a time and we’ll show the kit live — then confirm it fits.</p>
+        <div class="bg-white/10 border-2 border-dashed border-white/30 rounded-2xl p-10 mb-6 min-h-[200px] flex flex-col items-center justify-center gap-3">
+          <p class="font-semibold text-lg">Pick a time that works</p>
+          <p class="text-white/60 text-sm max-w-sm">Your Trueline discovery calendar opens in a new tab.</p>
+        </div>
+        <div class="flex flex-wrap justify-center items-center gap-4">
+          <a href="https://meetings-na3.hubspot.com/ben-trueline" target="_blank" rel="noopener"Book my fit call</a>
+          <a href="tel:+16473605774" class="text-white/80 hover:text-white underline-offset-2 hover:underline text-sm">Or call (647) 360-5774</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#111827] text-white/80 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="font-display text-white text-lg mb-3">Trueline IT</p>
+      <p class="text-sm leading-relaxed max-w-2xl mb-6">Trueline IT installs done-for-you lead-and-cash kits for service businesses — cookie-cutter setup, light config, you stay on high-trust closes.</p>
+      <div class="flex flex-wrap gap-4 text-sm mb-8">
+        <a href="kits-price-book.html" class="hover:text-white underline-offset-2 hover:underline">Kits hub</a>
+        <a href="missed-call-text-back.html" class="hover:text-white underline-offset-2 hover:underline">Missed-call text-back</a>
+        <a href="google-reputation-pack.html" class="hover:text-white underline-offset-2 hover:underline">Google Reputation Pack</a>
+        <a href="/privacy.html" class="hover:text-white underline-offset-2 hover:underline">Privacy</a>
+      </div>
+      
     </div>
+  </footer>
+
+  <div class="sticky-cta fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-navy/10 px-4 py-3 flex items-center gap-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+    <a href="#book" class="flex-1 text-center rounded-full bg-orange text-white font-semibold py-3 text-sm">Book a fit call</a>
+    <a href="tel:+16473605774" class="text-navy/70 text-xs whitespace-nowrap px-2">(647) 360-5774</a>
   </div>
-</section>
-<div class="cross-link">
-  Looking for other kits? <a href="kits-price-book.html">See all kits &amp; draft pricing</a>
-</div>
-<section class="section-pad pain">
-  <div class="section-inner">
-    <div class="section-label">The problem</div>
-    <h2 class="section-title">Empty slots cost money</h2>
-    <p class="section-sub">No-shows and late cancels burn the day — and reminder tools often sit unused without setup.</p>
-    <div class="pain-grid">
-      <div class="pain-card"><h3>No-shows burn the slot</h3><p>Late cancels and no-shows leave revenue on the table.</p></div>
-      <div class="pain-card"><h3>Staff forget confirms</h3><p>Manual check-ins fall through when the day gets busy.</p></div>
-      <div class="pain-card"><h3>Tools sit unused</h3><p>Reminder software without managed setup rarely sticks.</p></div>
-    </div>
-  </div>
-</section>
-<section class="section-pad" style="background:#fff;">
-  <div class="section-inner">
-    <div class="section-label">What you get</div>
-    <h2 class="section-title">Confirm + reminder — managed for you</h2>
-    <p class="section-sub">Non-clinical. Built for service businesses.</p>
-    <ol class="get-list">
-      <li><span class="get-num">1</span><span>Booking confirm text when the appointment is set</span></li>
-      <li><span class="get-num">2</span><span>Reminder sequence (e.g. day-before + same-day — timings you choose)</span></li>
-      <li><span class="get-num">3</span><span>Easy reschedule / cancel path in the SMS (your rules)</span></li>
-      <li><span class="get-num">4</span><span>Calendar connect + brand voice</span></li>
-      <li><span class="get-num">5</span><span>Owner digest of confirms / declines (optional)</span></li>
-    </ol>
-  </div>
-</section>
-<section class="section-pad how">
-  <div class="section-inner text-center">
-    <div class="section-label">How it works</div>
-    <h2 class="section-title">Three steps to live</h2>
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><h3>Connect &amp; approve</h3><p>Connect calendar + approve SMS templates.</p></div>
-      <div class="step"><div class="step-num">2</div><h3>Auto confirms</h3><p>New bookings get confirm + reminders automatically.</p></div>
-      <div class="step"><div class="step-num">3</div><h3>Follow exceptions</h3><p>You see who confirmed; follow up only the exceptions.</p></div>
-    </div>
-  </div>
-</section>
-<section class="section-pad" style="background:#fff;">
-  <div class="demo-band">
-    <div class="demo-label">On the fit call</div>
-    <p>“We’ll book a fake appointment on the call — you’ll get the confirm and reminder texts live.”</p>
-  </div>
-</section>
-<section class="section-pad" style="background:var(--warm-white);">
-  <div class="section-inner">
-    <div class="section-label">Why TrueLine</div>
-    <h2 class="section-title">Proof &amp; trust</h2>
-    <div class="trust-strip">
-      <div class="trust-item"><strong>Managed setup</strong>Vs buying another reminder app to configure yourself.</div>
-      <div class="trust-item"><strong>Templates you approve</strong>Nothing “clever” goes out without review.</div>
-      <div class="trust-item"><strong>Service businesses</strong>Built for field and shop calendars — not clinical EHR.</div>
-    </div>
-  </div>
-</section>
-<section class="section-pad" style="background:#fff;">
-  <div class="section-inner text-center">
-    <div class="section-label">Draft pricing</div>
-    <h2 class="section-title">Setup + managed monthly</h2>
-    <div class="price-card">
-      <div class="draft-badge">Draft pricing — final quote on fit call</div>
-      <div class="price-line">Setup $250–600<br>+ $149–299/mo</div>
-      <p class="price-note">Aligned with other SMS kits. Draft only — confirm on fit call.</p>
-      <a href="#book" class="btn-primary">Book a fit call — walk through on your calendar</a>
-    </div>
-  </div>
-</section>
-<section class="section-pad faq">
-  <div class="section-inner text-center">
-    <div class="section-label">FAQ</div>
-    <h2 class="section-title">Common questions</h2>
-    <div class="faq-list">
-      <details><summary>Will this eliminate no-shows?</summary><div class="faq-answer">No. Reminders can help reduce no-shows; they don’t remove them.</div></details>
-      <details><summary>Healthcare / clinical?</summary><div class="faq-answer">We stay off clinical EHR workflows. Ask on the call if you’re unsure.</div></details>
-      <details><summary>Software vs service?</summary><div class="faq-answer">We install and manage the sequence; you’re not left configuring alone.</div></details>
-    </div>
-  </div>
-</section>
-<section class="cta-band" id="book">
-  <h2>Walk through confirm + reminder on your calendar</h2>
-  <p>Book a free 15–20 min fit call. We’ll show the sequence live with a test appointment.</p>
-  <div class="hero-actions">
-    <a href="tel:+16473605774" class="btn-primary">Book a free 15–20 min fit call</a>
-    <a href="tel:+16473605774" class="btn-secondary">Or call (647) 360-5774</a>
-  </div>
-</section>
-<footer>
-  <a href="/" class="footer-logo">Trueline<span>.</span>IT</a>
-  <p>© 2026 Trueline IT. All rights reserved. | 1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
-  <div class="footer-links">
-    <a href="/about.html">About</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
-  </div>
-</footer>
 </body>
 </html>
