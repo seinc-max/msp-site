@@ -43,8 +43,7 @@
       .timeline-line-v { background: linear-gradient(180deg, var(--orange), var(--blue)); }
     }
   </style>
-<link rel="canonical" href="https://truelineit.com/appointment-confirm-reminder">
-  </head>
+</head>
 <body class="antialiased pb-24 md:pb-0">
   <header class="sticky top-0 z-40 bg-warm-white/95 backdrop-blur border-b border-navy/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
@@ -54,7 +53,7 @@
         <a href="#timeline" class="hover:text-navy">Timeline</a>
         <a href="#pricing" class="hover:text-navy">Pricing</a>
         <a href="#faq" class="hover:text-navy">FAQ</a>
-        <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-4 py-2 hover:bg-orange/90 transition">Book a fit call</a>
+        <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-4 py-2 hover:bg-orange/90 transition">Book My Free Discovery Call →</a>
       </nav>
       <a href="#book" class="md:hidden inline-flex items-center rounded-full bg-orange text-white font-semibold text-sm px-3 py-1.5">Book</a>
     </div>
@@ -74,7 +73,7 @@
             Trueline installs a done-for-you confirm-and-reminder sequence on your calendar so clients get clear texts before they show up — and you spend less time chasing “are we still on?”
           </p>
           <div class="flex flex-wrap items-center gap-4 mb-4">
-            <a href="#book" class="inline-flex items-center justify-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 shadow-lg shadow-orange/30 hover:bg-orange/90 transition">Book a fit call</a>
+            <a href="#book" class="inline-flex items-center justify-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 shadow-lg shadow-orange/30 hover:bg-orange/90 transition">Book My Free Discovery Call →</a>
             <a href="tel:+16473605774" class="text-white/90 underline-offset-4 hover:underline text-sm sm:text-base">Or call (647) 360-5774</a>
           </div>
           <p class="text-white/60 text-sm">Free 15–20 min fit call · Templates you approve · Managed install</p>
@@ -243,7 +242,7 @@
           <h2 class="font-display text-3xl sm:text-4xl font-semibold text-navy mb-4">See it on the fit call</h2>
           <p class="text-navy/80 text-lg mb-3">We’ll run a demo appointment on the fit call — you’ll get the confirm and reminder texts live.</p>
           <p class="text-navy/70 mb-6">Bring your calendar tool (or tell us what you use). We’ll walk the path without touching real customers.</p>
-          <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3 hover:bg-orange/90 transition">Book a fit call</a>
+          <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3 hover:bg-orange/90 transition">Book My Free Discovery Call →</a>
         </div>
         <div class="bg-white rounded-2xl border border-navy/10 p-6 shadow-lg">
           <p class="text-xs uppercase tracking-widest text-navy/40 mb-3">Demo appointment</p>
@@ -290,7 +289,7 @@
           </div>
           <p class="text-navy/70 text-sm mb-8 max-w-md mx-auto">Prices are for the kit as described. Media spend is separate. Fit call confirms fit; add-ons (extra lines, locations, overage) quoted only if needed.</p>
           <div class="flex flex-wrap justify-center items-center gap-4">
-            <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 hover:bg-orange/90 transition">Book a fit call</a>
+            <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 hover:bg-orange/90 transition">Book My Free Discovery Call →</a>
             <a href="tel:+16473605774" class="text-navy/70 text-sm hover:text-navy underline-offset-2 hover:underline">Call (647) 360-5774</a>
           </div>
         </div>
@@ -348,26 +347,103 @@
       <h2 class="font-display text-3xl sm:text-4xl font-semibold text-navy mb-4">Spend less time chasing “are we still on?”</h2>
       <p class="text-navy/75 text-lg mb-8 max-w-2xl mx-auto">Book a short fit call. We’ll run a demo appointment through confirm + reminder so you see the texts before you buy.</p>
       <div class="flex flex-wrap justify-center items-center gap-4">
-        <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 hover:bg-orange/90 transition">Book a fit call</a>
+        <a href="#book" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 hover:bg-orange/90 transition">Book My Free Discovery Call →</a>
         <a href="tel:+16473605774" class="text-navy/70 hover:text-navy underline-offset-2 hover:underline">(647) 360-5774</a>
       </div>
     </section>
 
-    <!-- #book -->
+    <!-- #book — form-only capture (Ben lock 2026-09-26; homepage hub form via api.hsforms.com) -->
     <section class="bg-navy text-white py-16" id="book">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="font-display text-3xl font-semibold mb-3">Book a free 15–20 min fit call</h2>
-        <p class="text-white/70 mb-8">Pick a time and we’ll show the kit live — then confirm it fits.</p>
-        <div class="bg-white/10 border-2 border-dashed border-white/30 rounded-2xl p-10 mb-6 min-h-[200px] flex flex-col items-center justify-center gap-3">
-          <p class="font-semibold text-lg">Pick a time that works</p>
-          <p class="text-white/60 text-sm max-w-sm">Your Trueline discovery calendar opens in a new tab.</p>
+      <div class="max-w-xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-8">
+          <p class="text-orange text-sm font-semibold uppercase tracking-wider mb-2">Start here</p>
+          <h2 class="font-display text-3xl font-semibold mb-3">Book My Free Discovery Call</h2>
+          <p class="text-white/70">Tell us a bit about your business — we'll send a calendar link within 5 minutes.</p>
         </div>
-        <div class="flex flex-wrap justify-center items-center gap-4">
-          <a href="https://meetings-na3.hubspot.com/ben-trueline" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-orange text-white font-semibold px-6 py-3 hover:bg-orange/90 transition">Book my fit call</a>
-          <a href="tel:+16473605774" class="text-white/80 hover:text-white underline-offset-2 hover:underline text-sm">Or call (647) 360-5774</a>
+        <div id="contact-form-wrap" class="bg-white rounded-2xl p-6 sm:p-8 text-left shadow-xl">
+          <form id="discovery-form" class="hs-do-not-collect space-y-5">
+            <div>
+              <label for="firstname" class="block text-sm font-semibold text-navy mb-1.5">First name</label>
+              <input type="text" id="firstname" name="firstname" placeholder="Jane" required
+                class="w-full rounded-xl border border-navy/15 bg-warm-white px-4 py-3 text-navy placeholder:text-navy/40 focus:outline-none focus:ring-2 focus:ring-orange/50" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold text-navy mb-1.5">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required
+                oninput="document.getElementById('email-error').style.display = 'none'"
+                class="w-full rounded-xl border border-navy/15 bg-warm-white px-4 py-3 text-navy placeholder:text-navy/40 focus:outline-none focus:ring-2 focus:ring-orange/50" />
+              <div id="email-error" style="display: none; color: #ef4444; font-size: 0.875rem; font-weight: 700; margin-top: 0.5rem;">Please enter your business email address.</div>
+            </div>
+            <button type="submit" class="btn-submit w-full inline-flex items-center justify-center rounded-full bg-orange text-white font-semibold px-6 py-3.5 hover:bg-orange/90 transition shadow-lg shadow-orange/30">Book My Free Discovery Call →</button>
+            <p class="text-navy/60 text-sm text-center">We'll respond within 1 business day. No spam, ever.</p>
+          </form>
+          <div class="form-success text-center py-6" id="form-success" style="display:none;">
+            <h4 class="font-display text-2xl text-navy mb-2">Request received. &#10004;</h4>
+            <p class="text-navy/70 text-base">Check your email &mdash; we'll send a calendar link within 5 minutes.</p>
+          </div>
         </div>
+        <p class="text-center mt-6">
+          <a href="tel:+16473605774" class="text-white/80 hover:text-white underline-offset-2 hover:underline text-sm">Or call us: (647) 360-5774</a>
+        </p>
       </div>
     </section>
+    <script>
+document.getElementById('discovery-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.btn-submit');
+  const BTN_LABEL = 'Book My Free Discovery Call →';
+  if(btn) btn.textContent = 'Sending...';
+  if(btn) btn.disabled = true;
+
+  // --- Free Email Domain Blocklist ---
+  const freeDomains = [
+      'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com',
+      'icloud.com', 'live.com', 'msn.com', 'aol.com',
+      'googlemail.com', 'ymail.com', 'protonmail.com'
+  ];
+  const emailEl = document.getElementById('email');
+  const userEmail = emailEl ? emailEl.value.toLowerCase().trim() : '';
+  const domainMatch = userEmail.includes('@') ? userEmail.split('@')[1].trim() : null;
+
+  if (domainMatch && freeDomains.includes(domainMatch)) {
+      const errorDiv = document.getElementById('email-error');
+      if(errorDiv) {
+          errorDiv.style.display = 'block';
+      }
+      if(btn) btn.textContent = BTN_LABEL;
+      if(btn) btn.disabled = false;
+      return; // Stop execution
+  }
+  // -----------------------------------
+
+  const data = {
+    hs_google_click_id: sessionStorage.getItem('google_ads_gclid') || '',
+    firstname: this.firstname.value,
+    email: this.email.value,
+    hubspot_owner_id: "89556230"
+  };
+
+  try {
+    const PORTAL_ID = '343087614';
+    const FORM_ID = 'e66cbddb-8b74-4166-ab13-6ea81df11466';
+    const res = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fields: Object.entries(data).map(([name, value]) => ({ name, value })),
+        context: { pageUri: window.location.href, pageName: document.title }
+      })
+    });
+    document.getElementById('discovery-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  } catch(err) {
+    if(btn) btn.textContent = BTN_LABEL;
+    if(btn) btn.disabled = false;
+    alert('Something went wrong. Please call us at (647) 360-5774.');
+  }
+});
+    </script>
+
   </main>
 
   <footer class="bg-[#111827] text-white/80 py-12">
@@ -378,14 +454,14 @@
         <a href="kits-price-book.html" class="hover:text-white underline-offset-2 hover:underline">Kits hub</a>
         <a href="missed-call-text-back.html" class="hover:text-white underline-offset-2 hover:underline">Missed-call text-back</a>
         <a href="google-reputation-pack.html" class="hover:text-white underline-offset-2 hover:underline">Google Reputation Pack</a>
-        <a href="/privacy.html" class="hover:text-white underline-offset-2 hover:underline">Privacy</a>
+        <a href="/privacy" class="hover:text-white underline-offset-2 hover:underline">Privacy</a>
       </div>
-      
+      <p class="text-xs text-white/40">English-market service businesses · Done-for-you · Text-first · You approve public replies and customer-facing copy</p>
     </div>
   </footer>
 
   <div class="sticky-cta fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-navy/10 px-4 py-3 flex items-center gap-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
-    <a href="#book" class="flex-1 text-center rounded-full bg-orange text-white font-semibold py-3 text-sm">Book a fit call</a>
+    <a href="#book" class="flex-1 text-center rounded-full bg-orange text-white font-semibold py-3 text-sm">Book My Free Discovery Call →</a>
     <a href="tel:+16473605774" class="text-navy/70 text-xs whitespace-nowrap px-2">(647) 360-5774</a>
   </div>
 </body>
