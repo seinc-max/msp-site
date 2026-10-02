@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #fff;
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-decoration: none;
     padding: 10px 22px;
     border-radius: 6px;
@@ -214,6 +214,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .bottom-cta { background: var(--navy); padding: 70px 5%; text-align: center; }
   .bottom-cta h2 { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px; }
   .bottom-cta p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 32px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; }
 
   /* FOOTER */
   footer {
@@ -675,9 +676,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="bottom-cta">
   <h2>Give callers an answer when your team is busy.</h2>
   <p>Call for a free 15-minute look, or book your audit below.</p>
-  <a href="tel:+16473605774" class="btn-primary">📞 Call (647) 360-5774</a>
-  &nbsp;&nbsp;
-  <a href="#contact" class="btn-primary" style="background:#2563eb;">Book My Free Audit →</a>
+  <div class="cta-row">
+    <a href="tel:+16473605774" class="btn-primary">📞 Call (647) 360-5774</a>
+    <a href="#contact" class="btn-primary">Book My Free Audit →</a>
+  </div>
 </section>
 
 <script>
@@ -728,7 +730,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 
 <div class="sticky-mobile-cta">
- <a href="tel:+16473605774">📞 Call Now: (647) 360-5774 — Free Look at What You're Missing</a>
+ <a href="tel:+16473605774">📞 Call Now: (647) 360-5774 — Free Audit</a>
 </div>
 
 <!-- FOOTER -->
