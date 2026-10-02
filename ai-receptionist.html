@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>AI Receptionist for HVAC &amp; Plumbing | Trueline IT</title>
-<meta name="description" content="A managed 24/7 AI receptionist for HVAC and plumbing businesses that answers calls, screens requests, books jobs, and escalates urgent calls." />
+<meta name="description" content="A managed 24/7 AI receptionist for HVAC and plumbing — we build it, train it on your services, book jobs, and escalate urgents. Flat monthly. Book a free coverage look." />
 <meta name="robots" content="index, follow" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -142,6 +142,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .step h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
   .step p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
+  /* AUDIENCE (who for / not for) */
+  .audience-section { padding: 70px 5%; background: var(--warm-white); }
+  .audience-grid { max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
+  .audience-card { background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 28px 26px; }
+  .audience-card.good { border-top: 4px solid var(--blue); }
+  .audience-card.bad { border-top: 4px solid var(--orange); }
+  .audience-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
+  .audience-card ul { list-style: none; }
+  .audience-card li { font-size: 0.9rem; color: var(--text-muted); padding: 6px 0; display: flex; gap: 9px; align-items: flex-start; line-height: 1.5; }
+  .audience-card li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+  .audience-card.bad li::before { content: '✕'; color: var(--orange); }
+
+  /* INCLUDED / NOT INCLUDED */
+  .included-section { padding: 70px 5%; background: var(--sky); }
+  .included-grid { max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
+  .included-card { background: #fff; border-radius: 12px; padding: 28px 26px; }
+  .included-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
+  .included-card ul { list-style: none; }
+  .included-card li { font-size: 0.9rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border); display: flex; gap: 9px; align-items: flex-start; }
+  .included-card li:last-child { border-bottom: none; }
+  .included-card.yes li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+  .included-card.no li::before { content: '—'; color: var(--text-muted); font-weight: 700; flex-shrink: 0; }
+
+  /* COMPARE */
+  .compare-section { padding: 70px 5%; background: var(--warm-white); }
+  .compare-wrap { max-width: 900px; margin: 40px auto 0; overflow-x: auto; }
+  .compare-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+  .compare-table th, .compare-table td { padding: 16px 18px; text-align: left; font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+  .compare-table th { background: var(--navy); color: #fff; font-weight: 600; }
+  .compare-table th.hl { background: var(--orange); }
+  .compare-table td { color: var(--text-muted); line-height: 1.5; }
+  .compare-table td.hl { color: var(--navy); font-weight: 600; background: #fff7f0; }
+  .compare-table tr:last-child td { border-bottom: none; }
+
   /* PRICING */
   .pricing-section { padding: 70px 5%; background: var(--warm-white); }
   .pricing-card { max-width: 560px; margin: 40px auto 0; background: #fff; border: 2px solid var(--orange); border-radius: 16px; padding: 40px; text-align: center; }
@@ -157,6 +191,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .pricing-upsell a { color: var(--blue); font-weight: 600; text-decoration: none; }
   .btn-primary { display: inline-block; padding: 14px 32px; background: var(--orange); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: background 0.2s, transform 0.15s; }
   .btn-primary:hover { background: #ea6c0a; transform: translateY(-2px); }
+
+  /* PROOF */
+  .proof-section { padding: 70px 5%; background: var(--warm-white); }
+  .proof-grid { max-width: 700px; margin: 32px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; text-align: left; }
+  .proof-item { display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+  .proof-item svg { color: var(--orange); flex-shrink: 0; margin-top: 3px; }
+
+  /* FAQ */
+  .faq-section { padding: 70px 5%; background: var(--sky); }
+  .faq-list { max-width: 700px; margin: 32px auto 0; text-align: left; }
+  .faq-list details { background: #fff; border: 1.5px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .faq-list summary { cursor: pointer; padding: 18px 22px; font-weight: 600; font-size: 0.95rem; color: var(--navy); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-list summary::after { content: '+'; font-size: 1.3rem; color: var(--orange); font-weight: 700; }
+  .faq-list details[open] summary::after { content: '−'; }
+  .faq-list details p { padding: 0 22px 18px; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 
   /* BOTTOM CTA */
   .bottom-cta { background: var(--navy); padding: 70px 5%; text-align: center; }
@@ -193,7 +242,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 860px) {
     .hero-grid { grid-template-columns: 1fr; gap: 40px; }
     .hero-sub { max-width: 100%; }
-    .pain-grid, .steps-grid { grid-template-columns: 1fr; }
+    .pain-grid, .steps-grid, .audience-grid, .included-grid, .proof-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 480px) {
     .hero { padding: 40px 5% 48px; }
@@ -232,7 +281,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {
  "@context": "https://schema.org",
  "@type": "Service",
- "name": "AI Receptionist for Home Service Businesses",
+ "name": "AI Receptionist for HVAC & Plumbing",
  "provider": {
  "@type": "Organization",
  "name": "Trueline IT",
@@ -249,26 +298,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  "mainEntity": [
  {
  "@type": "Question",
- "name": "Will callers know it's an AI?",
+ "name": "Is this the same as Missed-Call Text-Back?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "Callers hear a natural, friendly voice trained on your business. It can answer common questions, capture the request, and offer an available booking time."
+ "text": "No. Text-Back is SMS after a missed call ($149/mo). The AI receptionist answers live calls 24/7, books, and escalates ($399/mo)."
  }
  },
  {
  "@type": "Question",
- "name": "Do I keep my existing number?",
+ "name": "Is this DIY software?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "Yes. The AI receptionist answers your existing number, and urgent calls are escalated straight to you."
+ "text": "No. We build it, train it, and run it. If you want to configure prompts and minute packs yourself, we're not the right fit."
  }
  },
  {
  "@type": "Question",
- "name": "What does it cost?",
+ "name": "Do you have human backup like a traditional answering service?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "A flat $999 per month with a one-time setup fee. No contracts, cancel anytime."
+ "text": "This is AI voice with urgent escalation to you. It is not a live human receptionist desk."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Why a setup fee when some apps say $0 setup?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The $499 is onboarding and install — training on your services, hours, pricing questions, and calendar rules — so you're not left wiring it alone."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Will you replace Jobber or Housecall Pro?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No. We work alongside the tools you already use. We don't sell replace-your-whole-stack."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What's the price?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "$399 per month plus a $499 one-time setup fee."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I hear it before I buy?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "On the free call we'll walk how it answers and books."
  }
  }
  ]
@@ -303,9 +384,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="hero">
   <div class="hero-grid">
     <div class="hero-copy">
-      <div class="hero-eyebrow">AI Receptionist for Local Service Businesses</div>
+      <div class="hero-eyebrow">AI Receptionist for HVAC &amp; Plumbing</div>
       <h1>24/7 call answering, screening, and booking.</h1>
-      <p class="hero-sub">A managed 24/7 AI receptionist that answers calls, books jobs into your calendar, and escalates urgent calls to you — helping reduce the leads lost to voicemail.</p>
+      <p class="hero-sub">A managed AI receptionist that answers calls, books jobs into your calendar, and escalates urgent calls to you — so fewer leads die in voicemail. We build it, train it on your business, and run it. Not software you configure yourself.</p>
       <div class="hero-trust">
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -313,7 +394,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Books jobs into your calendar or CRM
+          Books jobs into your calendar (Google Calendar and common trade schedulers — confirmed on the call)
         </div>
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -402,6 +483,103 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
+<!-- COMPARE -->
+<section class="compare-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">How we're different</div>
+    <h2 class="section-title">Managed coverage — without another dashboard to run</h2>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Human answering</th>
+            <th>DIY AI apps</th>
+            <th class="hl">Trueline managed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Who runs it</td>
+            <td>Call center staff</td>
+            <td>You configure prompts / minutes</td>
+            <td class="hl">We build, train, and run</td>
+          </tr>
+          <tr>
+            <td>Bill shape</td>
+            <td>Often per-minute / per-call</td>
+            <td>Low sticker + overages common</td>
+            <td class="hl">Flat $399/mo + $499 setup</td>
+          </tr>
+          <tr>
+            <td>Best for</td>
+            <td>Owners who need humans</td>
+            <td>Owners who like tooling</td>
+            <td class="hl">Owners who want coverage without another dashboard</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR / NOT FOR -->
+<section class="audience-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Who it's for</div>
+    <h2 class="section-title">Built for owners who can't answer on a job site</h2>
+    <div class="audience-grid">
+      <div class="audience-card good">
+        <h3>Who this is for</h3>
+        <ul>
+          <li>HVAC and plumbing owners who can't answer on a job site</li>
+          <li>Owners losing after-hours emergencies to voicemail</li>
+          <li>Owners who want managed coverage — not a DIY minute plan</li>
+          <li>Other local trades and professional firms with the same front-door problem</li>
+        </ul>
+      </div>
+      <div class="audience-card bad">
+        <h3>Who this is not for</h3>
+        <ul>
+          <li>Agencies / white-label resellers</li>
+          <li>DIY all-in-one / Go High Level buyers</li>
+          <li>Anyone shopping to replace their whole stack with a platform</li>
+          <li>Buyers who only want the cheapest self-serve AI app</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED / NOT INCLUDED -->
+<section class="included-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">What you get</div>
+    <h2 class="section-title">Managed 24/7 coverage, built for your business</h2>
+    <div class="included-grid">
+      <div class="included-card yes">
+        <h3>What's included</h3>
+        <ul>
+          <li>24/7 AI answering on your number</li>
+          <li>Booking into your calendar (Google Calendar and common trade schedulers — confirmed on the call)</li>
+          <li>Urgent-call escalation to you</li>
+          <li>Monthly review call</li>
+          <li>Done-for-you build, train, and run</li>
+        </ul>
+      </div>
+      <div class="included-card no">
+        <h3>What's not included</h3>
+        <ul>
+          <li>A live human receptionist desk</li>
+          <li>Guaranteed booking or revenue percentages</li>
+          <li>Self-serve "launch in 15 minutes" DIY</li>
+          <li>Meta ads management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="pricing-section">
   <div class="section-inner">
@@ -409,18 +587,83 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <h2 class="section-title">One price for managed 24/7 call coverage.</h2>
     <div class="pricing-card">
       <div class="pricing-badge">AI Receptionist</div>
-      <div class="pricing-amount">$999<span>/mo</span></div>
-      <p class="pricing-desc">One-time $500 setup. No contracts, cancel anytime.</p>
+      <div class="pricing-amount">$399<span>/mo</span></div>
+      <p class="pricing-desc">$499 setup — onboarding / install: scripts, hours, services, calendar rules, go-live.</p>
       <p style="font-size:0.95rem;color:var(--navy);font-weight:600;margin:-14px 0 24px;">Done for you — we build it, train it on your business, and run it. Not software you configure yourself.</p>
       <ul class="pricing-features">
         <li>24/7 AI answering on your number</li>
-        <li>Books jobs into your calendar or CRM</li>
-        <li>Missed-call text-back included</li>
+        <li>Booking into your calendar</li>
         <li>Urgent-call escalation to you</li>
         <li>Monthly review call</li>
+        <li>Done-for-you build, train, and run</li>
       </ul>
       <a href="tel:+16473605774" class="btn-primary">Call (647) 360-5774 to Get Started</a>
-      <p class="pricing-upsell">Just want missed calls recovered? <a href="/missed-call-text-back">See Missed-Call Recovery →</a></p>
+      <p class="pricing-upsell">Flat monthly — month to month. Media / Google Ads spend is separate if you run ads.</p>
+      <p class="pricing-upsell">Just want missed calls recovered? <a href="/missed-call-text-back">See Missed-Call Text-Back →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">What you can expect</div>
+    <h2 class="section-title">Process you can see — no fake case ROI</h2>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Managed install + monthly review — process proof, not fake case ROI
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        You approve how the receptionist talks before go-live
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Clear flat fee — no surprise per-minute plans
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Phone: (647) 360-5774
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Questions</div>
+    <h2 class="section-title">Common questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Is this the same as Missed-Call Text-Back?</summary>
+        <p>No. Text-Back is SMS after a missed call ($149/mo). The AI receptionist answers live calls 24/7, books, and escalates ($399/mo).</p>
+      </details>
+      <details>
+        <summary>Is this DIY software?</summary>
+        <p>No. We build it, train it, and run it. If you want to configure prompts and minute packs yourself, we're not the right fit.</p>
+      </details>
+      <details>
+        <summary>Do you have human backup like a traditional answering service?</summary>
+        <p>This is AI voice with urgent escalation to you. It is not a live human receptionist desk.</p>
+      </details>
+      <details>
+        <summary>Why a setup fee when some apps say $0 setup?</summary>
+        <p>The $499 is onboarding / install — training on your services, hours, pricing questions, and calendar rules — so you're not left wiring it alone.</p>
+      </details>
+      <details>
+        <summary>Will you replace Jobber / Housecall Pro?</summary>
+        <p>No. We work alongside the tools you already use. We don't sell "replace your whole stack."</p>
+      </details>
+      <details>
+        <summary>What's the price?</summary>
+        <p>$399/mo + $499 setup.</p>
+      </details>
+      <details>
+        <summary>Can I hear it before I buy?</summary>
+        <p>On the free call we'll walk how it answers and books.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -428,7 +671,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- BOTTOM CTA -->
 <section class="bottom-cta">
   <h2>Give callers an answer when your team is busy.</h2>
-  <p>Call for a free 15-minute look at what you're missing, or book your audit below.</p>
+  <p>Call for a free 15-minute look, or book your audit below.</p>
   <a href="tel:+16473605774" class="btn-primary">📞 Call (647) 360-5774</a>
   &nbsp;&nbsp;
   <a href="#contact" class="btn-primary" style="background:#2563eb;">Book My Free Audit →</a>
@@ -490,7 +733,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <a href="/" class="footer-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
   <p>© 2026 Trueline IT. All rights reserved. | 1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
   <div class="footer-links">
-    <a href="/missed-call-text-back">Missed-Call Recovery</a>
+    <a href="/missed-call-text-back">Missed-Call Text-Back</a>
     <a href="/about.html">About</a>
     <a href="/privacy.html">Privacy</a>
     <a href="/terms.html">Terms</a>
