@@ -381,7 +381,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
     (647) 360-5774
   </a>
-  <a href="#contact" class="nav-cta">Book My Free Audit →</a>
+  <a href="#contact" class="nav-cta">Book My Free Discovery Call →</a>
 </nav>
 
 <!-- HERO -->
@@ -417,15 +417,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <input type="text" id="firstname" name="firstname" placeholder="Jane" required>
         </div>
         <div class="form-group">
-          <label for="phone">Phone number</label>
-          <input type="tel" id="phone" name="phone" placeholder="(555) 555-0123" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Best email for your audit summary</label>
+          <label for="email">Email address</label>
           <input type="email" id="email" name="email" placeholder="jane@company.com" required>
         </div>
 
-        <button type="submit" class="btn-submit">Book My Free Audit →</button>
+        <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
         <p class="form-note">No obligation. No credit card. Takes 30 seconds.</p>
       </form>
       <div class="form-success" id="form-success">
@@ -678,7 +674,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <p>Call for a free 15-minute look, or book your audit below.</p>
   <div class="cta-row">
     <a href="tel:+16473605774" class="btn-primary">📞 Call (647) 360-5774</a>
-    <a href="#contact" class="btn-primary">Book My Free Audit →</a>
+    <a href="#contact" class="btn-primary">Book My Free Discovery Call →</a>
   </div>
 </section>
 
@@ -694,7 +690,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   const emailEl = document.getElementById('email');
   const userEmail = emailEl ? emailEl.value.toLowerCase().trim() : '';
-  const phone = document.getElementById('phone').value.trim();
   const firstname = document.getElementById('firstname').value.trim();
   const email = userEmail;
 
@@ -706,7 +701,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           fields: [
             { name: 'firstname', value: firstname },
             { name: 'email', value: email },
-            { name: 'phone', value: phone },
             { name: 'hs_google_click_id', value: sessionStorage.getItem('google_ads_gclid') || '' },
             { name: 'hubspot_owner_id', value: '89556230' }
           ],
@@ -718,11 +712,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         form.style.display = 'none';
         success.style.display = 'block';
       } else {
-        btn.textContent = 'Book My Free Audit →';
+        btn.textContent = 'Book My Free Discovery Call →';
         if(btn) btn.disabled = false;
       }
     } catch(err) {
-      if(btn) btn.textContent = 'Book My Free Audit →';
+      if(btn) btn.textContent = 'Book My Free Discovery Call →';
       if(btn) btn.disabled = false;
       alert('Something went wrong. Please call us at (647) 360-5774.');
     }
@@ -738,7 +732,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <a href="/" class="footer-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
   <p>© 2026 Trueline IT. All rights reserved. | 1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
   <div class="footer-links">
-    <a href="/missed-call-text-back">Missed-Call Text-Back</a>
     <a href="/about.html">About</a>
     <a href="/privacy.html">Privacy</a>
     <a href="/terms.html">Terms</a>
