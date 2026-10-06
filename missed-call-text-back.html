@@ -444,13 +444,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <label for="phone">Phone number</label>
           <input type="tel" id="phone" name="phone" placeholder="(555) 555-0123" required>
         </div>
+        <div class="form-group">
+          <label for="qualifier_need">What do you need help with?</label>
+          <select id="qualifier_need" name="qualifier_need" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Missed-call text-back">Missed-call text-back</option>
+            <option value="AI receptionist">AI receptionist</option>
+            <option value="Not sure / both">Not sure / both</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="qualifier_weekly_calls">About how many customer calls do you get per week?</label>
+          <select id="qualifier_weekly_calls" name="qualifier_weekly_calls" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Under 20">Under 20</option>
+            <option value="20–50">20–50</option>
+            <option value="50–150">50–150</option>
+            <option value="150+">150+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="qualifier_who_answers">Who answers the phone today when you're busy?</label>
+          <select id="qualifier_who_answers" name="qualifier_who_answers" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="I do / owner">I do / owner</option>
+            <option value="Front desk / staff">Front desk / staff</option>
+            <option value="Voicemail / missed">Voicemail / missed</option>
+            <option value="Answering service / other">Answering service / other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="qualifier_callback_window">Best window for us to call you back?</label>
+          <select id="qualifier_callback_window" name="qualifier_callback_window" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Morning (9–12)">Morning (9–12)</option>
+            <option value="Afternoon (12–5)">Afternoon (12–5)</option>
+            <option value="Evening (5–8)">Evening (5–8)</option>
+            <option value="Anytime business hours">Anytime business hours</option>
+          </select>
+        </div>
 
         <button type="submit" class="btn-submit">Request My Free Discovery Call →</button>
         <p class="form-note">No obligation. No credit card. We'll call you within 1 business day.</p>
       </form>
       <div class="form-success" id="form-success">
-      <h4 style="font-family: Fraunces, serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 8px;">Request received. &#10004;</h4>
-      <p style="color: var(--text-muted); font-size: 1.05rem;">We'll call you within 1 business day.</p>
+      <h4 style="font-family: Fraunces, serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 8px;">Thanks &#10004;</h4>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">We'll call you within 1 business day in your preferred window.</p>
     </div>
     </div>
 
@@ -708,6 +747,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   const firstname = document.getElementById('firstname').value.trim();
   const phone = document.getElementById('phone').value.trim();
+  const qualifier_need = document.getElementById('qualifier_need').value;
+  const qualifier_weekly_calls = document.getElementById('qualifier_weekly_calls').value;
+  const qualifier_who_answers = document.getElementById('qualifier_who_answers').value;
+  const qualifier_callback_window = document.getElementById('qualifier_callback_window').value;
 
     try {
       const res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466', {
@@ -717,6 +760,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           fields: [
             { name: 'firstname', value: firstname },
             { name: 'phone', value: phone },
+            { name: 'qualifier_need', value: qualifier_need },
+            { name: 'qualifier_weekly_calls', value: qualifier_weekly_calls },
+            { name: 'qualifier_who_answers', value: qualifier_who_answers },
+            { name: 'qualifier_callback_window', value: qualifier_callback_window },
             { name: 'hs_google_click_id', value: sessionStorage.getItem('google_ads_gclid') || '' },
             { name: 'hubspot_owner_id', value: '89556230' }
           ],
