@@ -78,7 +78,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     transition: background 0.2s;
   }
   .nav-cta:hover { background: #ea6c0a; }
-  @media (max-width: 768px) { .nav-cta { display: none; } }
+  .nav-cta .cta-short { display: none; }
+  @media (max-width: 768px) {
+    .nav-cta .cta-full { display: none; }
+    .nav-cta .cta-short { display: inline; }
+    .nav-cta { display: inline-block; padding: 8px 16px; font-size: 0.85rem; }
+  }
 
   /* HERO */
   .hero { background: var(--navy); padding: 60px 5% 70px; position: relative; overflow: hidden; }
@@ -180,7 +185,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .compare-table td.hl { color: var(--navy); font-weight: 600; background: #fff7f0; }
   .compare-table tr:last-child td { border-bottom: none; }
   @media (max-width: 640px) {
-    .compare-table th, .compare-table td { padding: 12px 10px; font-size: 0.78rem; }
+    .compare-table, .compare-table tbody, .compare-table tr, .compare-table td { display: block; width: 100%; }
+    .compare-table thead { display: none; }
+    .compare-table { border: none; box-shadow: none; background: transparent; }
+    .compare-table tr { background: #fff; border: 1.5px solid var(--border); border-radius: 12px; margin-bottom: 14px; overflow: hidden; }
+    .compare-table td { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 11px 14px; font-size: 0.85rem; text-align: left; border-bottom: 1px solid var(--border); }
+    .compare-table td:last-child { border-bottom: none; }
+    .compare-table td::before { content: attr(data-label); font-weight: 600; color: var(--navy); flex-shrink: 0; }
+    .compare-table td:first-child { font-weight: 700; color: var(--navy); background: var(--sky); justify-content: flex-start; }
+    .compare-table td:first-child::before { content: none; }
+    .compare-table td.hl::before { color: var(--orange); }
+    .compare-table td.hl { background: #fff7f0; }
   }
 
   /* PRICING */
@@ -333,12 +348,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  "name": "Why a setup fee when some apps say $0 setup?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "The $499 is onboarding and install — training on your services, hours, pricing questions, and calendar rules — so you're not left wiring it alone."
+ "text": "The $499 is onboarding and install — training on your services, hours, and pricing questions — so you're not left wiring it alone."
  }
  },
  {
  "@type": "Question",
- "name": "Will you replace Jobber or Housecall Pro?",
+ "name": "Will you replace Jobber / Housecall Pro?",
  "acceptedAnswer": {
  "@type": "Answer",
  "text": "No. We work alongside the tools you already use. We don't sell replace-your-whole-stack."
@@ -381,7 +396,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  "name": "Does it connect to my other tools?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "It connects to HubSpot and works alongside the tools you already use."
+ "text": "It connects to your CRM (like HubSpot) and works alongside the tools you already use."
  }
  }
  ]
@@ -409,7 +424,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
     (647) 360-5774
   </a>
-  <a href="#contact" class="nav-cta">Book My Free Discovery Call</a>
+  <a href="#contact" class="nav-cta"><span class="cta-full">Request My Free Discovery Call</span><span class="cta-short">Book My Free Call</span></a>
 </nav>
 
 <!-- HERO -->
@@ -418,7 +433,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="hero-copy">
       <div class="hero-eyebrow">AI Receptionist for HVAC &amp; Plumbing</div>
       <h1>Every call covered. Every job captured. Even at 2 AM.</h1>
-      <p class="hero-sub">Trueline answers your phones for $399/mo flat — nights, weekends, whenever you're on a job.</p>
+      <p class="hero-sub">Trueline answers your phones for $399/mo plus a one-time $499 setup — nights, weekends, whenever you're on a job.</p>
       <div class="hero-trust">
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -426,7 +441,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Never invents prices, times, or services — every call becomes a clean dispatch record
+          Never invents prices, times, or services — every call becomes a clear note for your team
         </div>
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -449,12 +464,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <input type="tel" id="phone" name="phone" placeholder="(555) 555-0123" required>
         </div>
 
-        <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
-        <p class="form-note">No obligation. No credit card. Takes 30 seconds.</p>
+        <button type="submit" class="btn-submit">Request My Free Discovery Call →</button>
+        <p class="form-note">No obligation. No credit card. We'll call you within 1 business day.</p>
       </form>
       <div class="form-success" id="form-success">
       <h4 style="font-family: Fraunces, serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 8px;">Request received. &#10004;</h4>
-      <p style="color: var(--text-muted); font-size: 1.05rem;">We'll text you a calendar link within 5 minutes.</p>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">We'll call you within 1 business day.</p>
     </div>
     </div>
 
@@ -464,10 +479,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- AUDIO DEMO (hear it answer) -->
 <section style="padding:56px 5%;background:#fff;">
   <div class="section-inner" style="max-width:1100px;margin:0 auto;text-align:center;">
-    <div class="section-eyebrow">Hear it answer</div>
-    <h2 class="section-title">Listen to how it handles a real call</h2>
+    <div class="section-eyebrow">Hear a sample</div>
+    <h2 class="section-title">A preview of the voice and how it answers calls</h2>
     <!-- AUDIO DEMO PLACEHOLDER: real recording pending — see fulfillment lead-time list -->
-    <p style="color:var(--text-muted);font-size:0.95rem;margin-top:12px;">Audio demo recording is in progress and will be added here before launch.</p>
+    <p style="color:var(--text-muted);font-size:0.95rem;margin-top:12px;">A sample recording is in progress and will be added here before launch.</p>
   </div>
 </section>
 
@@ -539,21 +554,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <tbody>
           <tr>
             <td>Who runs it</td>
-            <td>Call center staff</td>
-            <td>You configure prompts / minutes</td>
-            <td class="hl">We build, train, and run</td>
+            <td data-label="Human answering">Call center staff</td>
+            <td data-label="DIY AI apps">You set it up and pay per use</td>
+            <td class="hl" data-label="Trueline managed">We build, train, and run</td>
           </tr>
           <tr>
-            <td>Bill shape</td>
-            <td>Often per-minute / per-call</td>
-            <td>Low sticker + overages common</td>
-            <td class="hl">Flat $399/mo + $499 setup</td>
+            <td>How you're billed</td>
+            <td data-label="Human answering">Often per-minute or per-call</td>
+            <td data-label="DIY AI apps">Low start price, add-on charges common</td>
+            <td class="hl" data-label="Trueline managed">Flat $399/mo + $499 setup</td>
           </tr>
           <tr>
             <td>Best for</td>
-            <td>Owners who need humans</td>
-            <td>Owners who like tooling</td>
-            <td class="hl">Owners who want coverage without another dashboard</td>
+            <td data-label="Human answering">Owners who need humans</td>
+            <td data-label="DIY AI apps">Owners who want to build it themselves</td>
+            <td class="hl" data-label="Trueline managed">Owners who want coverage without another dashboard</td>
           </tr>
         </tbody>
       </table>
@@ -601,7 +616,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li>24/7 AI answering on your number</li>
           <li>Capturing job requests for your team to follow up</li>
           <li>Urgent-call escalation to you</li>
-          <li>Connects to HubSpot</li>
+          <li>Connects to your CRM (like HubSpot)</li>
           <li>Monthly review call</li>
           <li>Done-for-you build, train, and run</li>
         </ul>
@@ -627,7 +642,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="pricing-card">
       <div class="pricing-badge">AI Receptionist</div>
       <div class="pricing-amount">$399<span>/mo</span></div>
-      <p class="pricing-desc">$499 setup — onboarding / install: scripts, hours, services, calendar rules, go-live.</p>
+      <p class="pricing-desc">$499 setup — onboarding / install: scripts, hours, services, and go-live.</p>
       <p style="font-size:0.95rem;color:var(--navy);font-weight:600;margin:-14px 0 24px;">Done for you — we build it, train it on your business, and run it. Not software you configure yourself.</p>
       <div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:-8px 0 20px;">
         <p style="margin:0 0 6px;"><strong>$399/mo flat</strong> — no per-minute charges, no overage bills. We never bill for spam calls or ring time.</p>
@@ -694,7 +709,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </details>
       <details>
         <summary>Why a setup fee when some apps say $0 setup?</summary>
-        <p>The $499 is onboarding / install — training on your services, hours, pricing questions, and calendar rules — so you're not left wiring it alone.</p>
+        <p>The $499 is onboarding / install — training on your services, hours, and pricing questions — so you're not left wiring it alone.</p>
       </details>
       <details>
         <summary>Will you replace Jobber / Housecall Pro?</summary>
@@ -718,7 +733,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </details>
       <details>
         <summary>Does it connect to my other tools?</summary>
-        <p>It connects to HubSpot and works alongside the tools you already use — we don't replace your whole stack.</p>
+        <p>It connects to your CRM (like HubSpot) and works alongside the tools you already use.</p>
       </details>
     </div>
   </div>
@@ -730,7 +745,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <p>Call or book your free discovery call below.</p>
   <div class="cta-row">
     <a href="tel:+16473605774" class="btn-primary">📞 Call (647) 360-5774</a>
-    <a href="#contact" class="btn-primary">Book My Free Discovery Call →</a>
+    <a href="#contact" class="btn-primary">Request My Free Discovery Call →</a>
   </div>
 </section>
 
@@ -766,11 +781,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         form.style.display = 'none';
         success.style.display = 'block';
       } else {
-        btn.textContent = 'Book My Free Discovery Call →';
+        btn.textContent = 'Request My Free Discovery Call →';
         if(btn) btn.disabled = false;
       }
     } catch(err) {
-      if(btn) btn.textContent = 'Book My Free Discovery Call →';
+      if(btn) btn.textContent = 'Request My Free Discovery Call →';
       if(btn) btn.disabled = false;
       alert('Something went wrong. Please call us at (647) 360-5774.');
     }

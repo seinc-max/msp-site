@@ -78,7 +78,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     transition: background 0.2s;
   }
   .nav-cta:hover { background: #ea6c0a; }
-  @media (max-width: 768px) { .nav-cta { display: none; } }
+  .nav-cta .cta-short { display: none; }
+  @media (max-width: 768px) {
+    .nav-cta .cta-full { display: none; }
+    .nav-cta .cta-short { display: inline; }
+    .nav-cta { display: inline-block; padding: 8px 16px; font-size: 0.85rem; }
+  }
 
   /* HERO */
   .hero { background: var(--navy); padding: 60px 5% 70px; position: relative; overflow: hidden; }
@@ -315,7 +320,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  "name": "Do I have to set this up myself?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "No. We install it and run it. You're not buying a self-serve seat as the product."
+ "text": "No. We install it and run it. You're not buying software to configure yourself."
  }
  },
  {
@@ -331,7 +336,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  "name": "Can I keep my existing number?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "Usually yes. We confirm forwarding and carrier details on the call."
+ "text": "Yes. You keep your existing number — we set up forwarding, nothing to port. We confirm the forwarding details on the call."
  }
  },
  {
@@ -340,6 +345,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  "acceptedAnswer": {
  "@type": "Answer",
  "text": "The $199 is onboarding and install — number connection, script approval, and go-live — not a random surcharge."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Is this for agencies or Go High Level shops?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No. We work directly with operating businesses. We don't white-label or replace your whole stack."
  }
  },
  {
@@ -391,7 +404,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
     (647) 360-5774
   </a>
-  <a href="#contact" class="nav-cta">Book My Free Discovery Call</a>
+  <a href="#contact" class="nav-cta"><span class="cta-full">Request My Free Discovery Call</span><span class="cta-short">Book My Free Call</span></a>
 </nav>
 
 <!-- HERO -->
@@ -401,6 +414,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="hero-eyebrow">Missed-Call Text-Back for HVAC &amp; Plumbing</div>
       <h1>You're paying for calls that go to voicemail.</h1>
       <p class="hero-sub">Most HVAC and plumbing businesses pay for leads that ring once and disappear. Every missed call is a job that may go to a competitor. We install a done-for-you text-back on your existing number so callers hear from you while they're still looking.</p>
+      <p class="hero-sub" style="color:#fff;font-weight:700;margin-bottom:20px;">$149/mo plus a one-time $199 setup</p>
       <div class="hero-trust">
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -431,12 +445,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <input type="tel" id="phone" name="phone" placeholder="(555) 555-0123" required>
         </div>
 
-        <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
-        <p class="form-note">No obligation. No credit card. Takes 30 seconds.</p>
+        <button type="submit" class="btn-submit">Request My Free Discovery Call →</button>
+        <p class="form-note">No obligation. No credit card. We'll call you within 1 business day.</p>
       </form>
       <div class="form-success" id="form-success">
       <h4 style="font-family: Fraunces, serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 8px;">Request received. &#10004;</h4>
-      <p style="color: var(--text-muted); font-size: 1.05rem;">We'll text you a calendar link within 5 minutes.</p>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">We'll call you within 1 business day.</p>
     </div>
     </div>
 
@@ -457,8 +471,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       <div class="bubble bubble-them">Hi — I called about a leaking water heater. Can you help today?</div>
-      <div class="bubble bubble-us">Thanks for calling! What's the address and what time works for you?</div>
-      <div class="bubble bubble-them">64 Maple Ave. Anytime this afternoon.</div>
+      <div class="bubble bubble-us">Thanks for calling! What's the address and what do you need?</div>
+      <div class="bubble bubble-them">64 Maple Ave. The water heater's leaking badly.</div>
       <div class="bubble bubble-us">Got it — we've alerted the owner and they'll reach out shortly.</div>
     </div>
     <p class="mock-caption">The thread captures what they need and alerts you — while the caller is still looking.</p>
@@ -534,7 +548,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h3>Who this is not for</h3>
         <ul>
           <li>Marketing agencies or resellers</li>
-          <li>Buyers who want a DIY all-in-one / Go High Level build</li>
+          <li>Buyers who want to build it themselves on an all-in-one platform like Go High Level</li>
           <li>White-label or "replace your whole stack" shoppers</li>
           <li>Teams that only want a self-serve SMS tool to configure themselves</li>
         </ul>
@@ -582,6 +596,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="pricing-amount">$149<span>/mo</span></div>
       <p class="pricing-desc">$199 setup — onboarding / install: connect your number, approve scripts, go-live.</p>
       <div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:0 0 20px;">
+        <p style="margin:0 0 6px;"><strong>$149/mo flat</strong> — no per-minute charges, no overage bills.</p>
         <p style="margin:0 0 6px;"><strong>Cancel anytime.</strong> No contracts, no cancellation fees.</p>
         <p style="margin:0;"><strong>14-day money-back guarantee</strong> from your first invoice — no questions asked.</p>
       </div>
@@ -637,7 +652,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </details>
       <details>
         <summary>Do I have to set this up myself?</summary>
-        <p>No. We install it and run it. You're not buying a self-serve seat as the product.</p>
+        <p>No. We install it and run it. You're not buying software to configure yourself.</p>
       </details>
       <details>
         <summary>Will every missed call become a booked job?</summary>
@@ -645,7 +660,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </details>
       <details>
         <summary>Can I keep my existing number?</summary>
-        <p>Usually yes — we confirm forwarding and carrier details on the call.</p>
+        <p>Yes. You keep your existing number — we set up forwarding, nothing to port. We confirm the forwarding details on the call.</p>
       </details>
       <details>
         <summary>Why is there a setup fee?</summary>
@@ -677,7 +692,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <p>Call or book your free discovery call below — we'll estimate the leak from your own numbers.</p>
   <div class="cta-row">
     <a href="tel:+16473605774" class="btn-primary">📞 Call (647) 360-5774</a>
-    <a href="#contact" class="btn-primary">Book My Free Discovery Call →</a>
+    <a href="#contact" class="btn-primary">Request My Free Discovery Call →</a>
   </div>
 </section>
 
@@ -713,11 +728,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         form.style.display = 'none';
         success.style.display = 'block';
       } else {
-        btn.textContent = 'Book My Free Discovery Call →';
+        btn.textContent = 'Request My Free Discovery Call →';
         if(btn) btn.disabled = false;
       }
     } catch(err) {
-      if(btn) btn.textContent = 'Book My Free Discovery Call →';
+      if(btn) btn.textContent = 'Request My Free Discovery Call →';
       if(btn) btn.disabled = false;
       alert('Something went wrong. Please call us at (647) 360-5774.');
     }
