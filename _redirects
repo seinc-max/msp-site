@@ -14,4 +14,6 @@
 /copilot-audit /safe-copilot-deployment 301
 /blog/blog-post / 301
 
-/kits /kits-price-book 301
+/kits /missed-call-text-back 301
+/kits-price-book /missed-call-text-back 301
+/kits-price-book.html /missed-call-text-back 301
