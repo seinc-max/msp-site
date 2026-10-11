@@ -1108,6 +1108,10 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
         <input type="email" id="email" oninput="document.getElementById('email-error').style.display = 'none'" name="email" placeholder="jane@company.com" required />
                                 <div id="email-error" style="display: none; color: #ef4444; font-size: 0.875rem; font-weight: 700; margin-top: 0.5rem;">Please enter your business email address.</div>
       </div>
+      <div class="form-group">
+        <label for="phone">Phone (for text-back)</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(647) 555-0123" />
+      </div>
       <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
 <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:12px;">By submitting, you agree Trueline IT may contact you by phone, text or email about your request. See our <a href="/privacy">Privacy Policy</a>. You can opt out anytime.</p>
       <p class="form-note">We'll respond within 1 business day. No spam, ever.</p>
@@ -1187,6 +1191,7 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
     hs_google_click_id: sessionStorage.getItem('google_ads_gclid') || '',
     firstname: document.getElementById('firstname').value,
     email: document.getElementById('email').value,
+    phone: (document.getElementById('phone')?.value || '').trim(),
     capture_url: window.location.href,
     hubspot_owner_id: '89556230'
   };
