@@ -1186,6 +1186,10 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
                                 <input type="email" id="work-email" oninput="document.getElementById('email-error').style.display = 'none'" required placeholder="jane@company.com" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
                                 <div id="email-error" style="display: none; color: #ef4444; font-size: 0.875rem; font-weight: 700; margin-top: 0.5rem;">Please enter your business email address.</div>
                             </div>
+                            <div>
+                                <label class="block text-[0.8rem] font-bold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Phone (for text-back)</label>
+                                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(647) 555-0123" class="w-full text-base rounded-xl outline-none transition-all duration-200" style="background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 16px; color: var(--navy);" onfocus="this.style.borderColor='var(--blue)'; this.style.background='#fff'" onblur="this.style.borderColor='var(--border)'; this.style.background='#f8fafc'">
+                            </div>
 
                             <div class="pt-4">
                                 
@@ -1387,6 +1391,7 @@ const form = document.getElementById('risk-assessment-form');
                 fields: [
                     { name: 'firstname', value: nameEl ? nameEl.value : 'Incoming Lead' },
                     { name: 'email', value: emailEl ? emailEl.value : '' },
+                    { name: 'phone', value: (document.getElementById('phone')?.value || '').trim() },
                     { name: 'ai_policy_status', value: q1 },
                     { name: 'shadow_ai_usage', value: q2 },
                     { name: 'client_data_consent', value: q3 },
