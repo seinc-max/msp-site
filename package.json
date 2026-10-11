@@ -4,6 +4,10 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p out && cp index.html out/index.html",
+    "build:css": "tailwindcss -c tailwind.config.js -i ./src/tailwind-input.css -o ./assets/tailwind.css --minify",
     "dev": "npx serve . -l 8000"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
   }
 }
