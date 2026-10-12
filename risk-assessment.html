@@ -825,6 +825,55 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
             
 
             <div class="p-8 sm:p-12 relative" style="min-height: 420px;">
+<!-- GOVERNANCE FORM (restored 2026-10-12; fields per Muse gate: name, email, company) -->
+<div class="gov-form-wrap" style="max-width:480px;margin:0 auto 20px;text-align:left;">
+  <form id="discovery-form" class="hs-do-not-collect" novalidate>
+    <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
+    <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter your business email address.</div></div>
+    <div style="margin-bottom:16px;"><label for="company" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Company</label><input type="text" id="company" name="company" autocomplete="organization" placeholder="Smith &amp; Co. LLP" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
+    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Request My Free Governance Review</button>
+    <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We reply within one business day.</p>
+    <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name, email and company to reply to your inquiry. See our <a href="/privacy">Privacy Policy</a>.</p>
+  </form>
+  <div id="form-success" style="display:none;text-align:center;padding:16px 0;"><h4 style="font-size:1.4rem;margin-bottom:8px;">Request received. &#10004;</h4><p style="font-size:1.05rem;">Thanks. We reply within one business day.</p></div>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('discovery-form'); if(!form) return;
+  var LABEL='Request My Free Governance Review';
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var btn=form.querySelector('.btn-submit');
+    var firstname=document.getElementById('firstname').value.trim();
+    var email=document.getElementById('email').value.trim();
+    var company=document.getElementById('company').value.trim();
+    if(!firstname||!email||!company||!form.checkValidity()){ form.reportValidity(); return; }
+    // --- Free Email Domain Blocklist ---
+    var freeDomains=['gmail.com','yahoo.com','hotmail.com','outlook.com','icloud.com','live.com','msn.com','aol.com','googlemail.com','ymail.com','protonmail.com'];
+    var userEmail=email.toLowerCase();
+    var domainMatch=userEmail.indexOf('@')>-1?userEmail.split('@')[1].trim():null;
+    if(domainMatch&&freeDomains.indexOf(domainMatch)>-1){ document.getElementById('email-error').style.display='block'; return; }
+    if(btn){btn.textContent='Sending...';btn.disabled=true;}
+    try{
+      var res=await fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({fields:[
+          {name:'firstname',value:firstname},
+          {name:'email',value:email},
+          {name:'company',value:company},
+          {name:'hs_google_click_id',value:sessionStorage.getItem('google_ads_gclid')||''},
+          {name:'hubspot_owner_id',value:'89556230'}
+        ],context:{pageUri:window.location.href,pageName:document.title}})
+      });
+      if(res.ok){
+        form.style.display='none'; document.getElementById('form-success').style.display='block';
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
+      } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please call us at (647) 360-5774.'); }
+    }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please call us at (647) 360-5774.'); }
+  });
+})();
+</script>
                 <div class="call-cta" style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" style="font-size:1.15rem;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. We answer during business hours; leave a message and we call back within one business day.</p></div>
             </div>
         </div>
