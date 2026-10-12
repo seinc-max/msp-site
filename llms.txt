@@ -1,33 +1,30 @@
-# Trueline IT - AI Governance & Automation
+# Trueline IT
 
-## About
-Trueline IT helps professional services businesses in Ontario (Law Firms, Accounting Firms, Real Estate, and Financial Services) deploy AI safely. We build flat-rate AI governance frameworks that prevent Shadow AI data leaks, enforce PIPEDA compliance, and deploy custom Copilot automation.
+> Done-for-you phone and follow-up automation for home-service businesses (plumbers, HVAC, electricians and other trades). We set it up and run it on your existing number. Call-only: (647) 360-5774.
 
-## The Problem (Shadow AI & Compliance)
-76% of knowledge workers admit to actively feeding client data, proprietary code, and financial models into unauthorized, public Large Language Models (LLMs) like ChatGPT to speed up their work.
-Under PIPEDA and rulings by Canada's Privacy Commissioner (May 2026), feeding client PII (Personally Identifiable Information) into public, unapproved LLMs is a severe regulatory breach. Microsoft Copilot, if activated without strict M365 permission audits, can also inadvertently leak internal HR or financial documents across an entire company context.
+## Core offers
+- Missed-Call Text-Back: $149/mo per location plus a one-time $199 setup. When you miss a call, the caller gets a text right away, the thread captures what they need, and you're alerted. Works on your existing number. https://truelineit.com/missed-call-text-back
+- AI Receptionist: $399/mo plus a one-time $499 setup. Answers calls nights, weekends and after hours, captures job requests and flags urgent calls to you. https://truelineit.com/ai-receptionist
 
-## The Solution
-Trueline IT operates on a predictable, flat-rate monthly model without per-seat billing to implement total AI Governance:
-1. Shadow AI Audits: Full visibility into what tools the workforce is secretly using.
-2. AI Acceptable Use Policies: Documented and actively maintained guidelines to indemnify the business.
-3. Permissions Hardening: Strict data controls inside M365 so Copilot accesses only what it is explicitly authorized to touch.
-4. Private LLM Deployment: For sensitive operations, we deploy isolated models where data never leaves the business perimeter.
+Month-to-month, cancel anytime. 14-day money-back guarantee: if it's not right within 14 days of your first invoice, we refund the setup fee and first month.
 
-## Flat-Rate Pricing Tiers
-- Compliance Tier ($1,500/month): Includes an AI Acceptable Use Policy, Shadow AI Audit, M365 Copilot Audit, and Employee Training.
-- Growth Tier ($2,500/month): Includes everything in Compliance, plus 1 Custom Automation Build per month, Private LLM Deployment, and Priority Helpdesk support. 
-- Scale Tier ($4,000/month): Includes everything in Growth, plus 3 Custom Automation Builds per month, Custom Copilot Plugins, and a Strategic AI Roadmap.
+## Add-on services (available on their own or as an add-on)
+- Google Review Requests: $79/mo plus $99 setup. https://truelineit.com/google-review-requests
+- Google Review Replies: $49/mo plus $49 setup. https://truelineit.com/google-review-replies
+- HVAC Tune-Up Reminders: $99/mo plus $149 setup. https://truelineit.com/hvac-tune-up-reminders
+- Website Chat-to-Text: $79/mo plus $99 setup. https://truelineit.com/website-chat-to-text
+- Text-to-Pay Invoices: $49/mo plus $99 setup. https://truelineit.com/text-to-pay
+- Quote Follow-Up & Win-Back: $149/mo plus $199 setup. https://truelineit.com/quote-follow-up-win-back
 
-## Key Services
-- AI Governance & Acceptable Use Policy Creation
-- Shadow AI Risk Audits
-- Safe Microsoft 365 Copilot Deployment
-- PIPEDA-compliant Private LLMs
-- Business Process Automation (n8n, custom workflows)
+## Also: AI governance for professional firms (secondary)
+For law, accounting and clinic teams that want to use AI safely, done for you: written AI use policies, checks for unapproved AI tools, Microsoft 365 Copilot setup, and staff training. PIPEDA-ready; PHIPA-ready for Ontario health practices. This is guidance and setup, not legal advice.
+- Foundation: $1,500/mo
+- Growth: $2,500/mo
+- Transform: $4,500/mo
+https://truelineit.com/ai-governance-ontario | Pricing: https://truelineit.com/ai-consulting-pricing
 
-## Contact Information
+## Contact
 Website: https://truelineit.com
-Phone: +1 (647) 360-5774
+Phone: +1 (647) 360-5774 (call-only; no online booking or forms)
 Email: hello@truelineit.com
-Service Area: Ontario, Canada (Remote & On-Site for Guelph, Kitchener, Waterloo, Cambridge, Hamilton, Burlington)
+Service area: Ontario, Canada
