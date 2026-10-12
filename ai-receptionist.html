@@ -428,11 +428,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- NAV -->
 <nav>
   <a href="/" class="nav-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
-  <a href="tel:+16473605774" class="nav-phone">
+  <a href="tel:+16473605774" class="nav-phone" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">
     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
     (647) 360-5774
   </a>
-  <a href="#contact" class="nav-cta"><span class="cta-full">Book My Free Discovery Call</span><span class="cta-short">Free Discovery Call</span></a>
+  <a href="tel:+16473605774" class="nav-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
 </nav>
 
 <!-- HERO -->
@@ -456,69 +456,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           Captures job requests for your team to follow up
         </div>
       </div>
-      <a href="tel:+16473605774" class="hero-call">📞 Call (647) 360-5774</a>
+      <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a>
     </div>
     <div class="form-card" id="contact">
       <div class="form-card-label">Free Discovery Call</div>
       <h2>See how an AI receptionist can cover your calls</h2>
       <p class="form-card-sub">Using your own numbers, we'll estimate the monthly leak and what better call coverage could recover.</p>
-      <form id="discovery-form" class="hs-do-not-collect">
-        <div class="form-group">
-          <label for="firstname">First name</label>
-          <input type="text" id="firstname" name="firstname" placeholder="Jane" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone number</label>
-          <input type="tel" id="phone" name="phone" placeholder="(555) 555-0123" required>
-        </div>
-        <div class="form-group">
-          <label for="qualifier_need">What do you need help with?</label>
-          <select id="qualifier_need" name="qualifier_need" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="Missed-call text-back">Missed-call text-back</option>
-            <option value="AI receptionist">AI receptionist</option>
-            <option value="Not sure / both">Not sure / both</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="qualifier_weekly_calls">About how many customer calls do you get per week?</label>
-          <select id="qualifier_weekly_calls" name="qualifier_weekly_calls" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="Under 20">Under 20</option>
-            <option value="20–50">20–50</option>
-            <option value="50–150">50–150</option>
-            <option value="150+">150+</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="qualifier_who_answers">Who answers the phone today when you're busy?</label>
-          <select id="qualifier_who_answers" name="qualifier_who_answers" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="I do / owner">I do / owner</option>
-            <option value="Front desk / staff">Front desk / staff</option>
-            <option value="Voicemail / missed">Voicemail / missed</option>
-            <option value="Answering service / other">Answering service / other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="qualifier_callback_window">Best window for us to call you back?</label>
-          <select id="qualifier_callback_window" name="qualifier_callback_window" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="Morning (9–12)">Morning (9–12)</option>
-            <option value="Afternoon (12–5)">Afternoon (12–5)</option>
-            <option value="Evening (5–8)">Evening (5–8)</option>
-            <option value="Anytime business hours">Anytime business hours</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn-submit">Book My Free Discovery Call →</button>
-<p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:12px;">By submitting, you agree Trueline IT may contact you by phone, text or email about your request. See our <a href="/privacy">Privacy Policy</a>. You can opt out anytime.</p>
-        <p class="form-note">No obligation. No credit card. We'll call you within 1 business day.</p>
-      </form>
-      <div class="form-success" id="form-success">
-      <h4 style="font-family: Fraunces, serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 8px;">Thanks &#10004;</h4>
-      <p style="color: var(--text-muted); font-size: 1.05rem;">We'll call you within 1 business day in your preferred window.</p>
-    </div>
+      <div class="call-cta" style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" style="font-size:1.15rem;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. We answer during business hours; leave a message and we call back within one business day.</p></div>
     </div>
 
   </div>
@@ -695,7 +639,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>Monthly review call</li>
         <li>Done-for-you build, train, and run</li>
       </ul>
-      <a href="tel:+16473605774" class="btn-primary">📞 Call (647) 360-5774</a>
+      <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a>
       <p class="pricing-upsell">Flat monthly. Media / Google Ads spend is separate if you run ads.</p>
       <p class="pricing-upsell">Just want missed calls recovered? <a href="/missed-call-text-back">See Missed-Call Text-Back →</a></p>
     </div>
@@ -787,70 +731,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <h2>Give callers an answer when your team is busy.</h2>
   <p>Call or book your free discovery call below.</p>
   <div class="cta-row">
-    <a href="tel:+16473605774" class="btn-primary">📞 Call (647) 360-5774</a>
-    <a href="#contact" class="btn-primary">Book My Free Discovery Call →</a>
+    <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a>
+    <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
   </div>
 </section>
 
-<script>
-  const form = document.getElementById('discovery-form');
-  const success = document.getElementById('form-success');
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = form.querySelector('.btn-submit');
-    if(btn) btn.textContent = 'Sending...';
-    if(btn) btn.disabled = true;
-
-  const firstname = document.getElementById('firstname').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const qualifier_need = document.getElementById('qualifier_need').value;
-  const qualifier_weekly_calls = document.getElementById('qualifier_weekly_calls').value;
-  const qualifier_who_answers = document.getElementById('qualifier_who_answers').value;
-  const qualifier_callback_window = document.getElementById('qualifier_callback_window').value;
-
-    try {
-      const res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          fields: [
-            { name: 'firstname', value: firstname },
-            { name: 'phone', value: phone },
-            { name: 'qualifier_need', value: qualifier_need },
-            { name: 'qualifier_weekly_calls', value: qualifier_weekly_calls },
-            { name: 'qualifier_who_answers', value: qualifier_who_answers },
-            { name: 'qualifier_callback_window', value: qualifier_callback_window },
-            { name: 'hs_google_click_id', value: sessionStorage.getItem('google_ads_gclid') || '' },
-            { name: 'hubspot_owner_id', value: '89556230' }
-          ],
-          context: { pageUri: window.location.href, pageName: 'AI Receptionist Landing Page' }
-        })
-      });
-
-      if (res.ok) {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'form_submission_success',
-          conversion_type: 'discovery_audit_lead',
-          userData: { phone_number: phone }
-        });
-        form.style.display = 'none';
-        success.style.display = 'block';
-      } else {
-        btn.textContent = 'Book My Free Discovery Call →';
-        if(btn) btn.disabled = false;
-      }
-    } catch(err) {
-      if(btn) btn.textContent = 'Book My Free Discovery Call →';
-      if(btn) btn.disabled = false;
-      alert('Something went wrong. Please call us at (647) 360-5774.');
-    }
-  });
-</script>
-
 <div class="sticky-mobile-cta">
- <a href="tel:+16473605774">📞 Call Now: (647) 360-5774 — Free Discovery Call</a>
+ <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call Now: (647) 360-5774 — Free Discovery Call</a>
 </div>
 
 <!-- FOOTER -->
