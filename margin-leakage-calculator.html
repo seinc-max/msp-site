@@ -165,6 +165,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 .footer-links a{color:#5a6a8a;text-decoration:none;font-size:.82rem;}
 @media (max-width:980px){.nav-links{width:100%;}}
 </style>
+<style id="sticky-call-bar">.sticky-mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#f97316;padding:14px 20px;text-align:center;box-shadow:0 -4px 20px rgba(0,0,0,.2);}.sticky-mobile-cta a{color:#fff;font-weight:700;font-size:1rem;text-decoration:none;display:block;min-height:24px;}@media (max-width:768px){.sticky-mobile-cta{display:block;}body{padding-bottom:64px;}}</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -174,14 +175,15 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
     <div class="nav-links">
     <a href="/missed-call-text-back">Text-Back</a>
     <a href="/ai-receptionist">AI Receptionist</a>
-    <a href="/ai-consulting-pricing" class="nav-gov">Governance</a>
+    <span class="nav-gov" style="opacity:.6;font-size:.78rem;">For professional firms:</span>
+    <a href="/ai-governance-ontario" class="nav-gov">AI Governance</a>
   </div>
 <a href="/" style="color:var(--text); text-decoration:none; font-weight:500;">Back to Home</a>
 </nav>
 
 <section class="calculator-section">
   <div class="section-eyebrow">Calculate Your Risk</div>
-  <h2 class="section-title">The Shadow AI Margin Indicator</h2>
+  <h1 class="section-title">The Shadow AI Margin Indicator</h1>
   <p class="section-sub">Calculate how much unbilled operational capacity is currently leaking through unauthorized employee AI usage.</p>
   
   <div class="calc-container">
@@ -265,5 +267,8 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
   // Init
   calculateMargin();
 </script>
+<div class="sticky-mobile-cta">
+  <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a>
+</div>
 </body>
 </html>
