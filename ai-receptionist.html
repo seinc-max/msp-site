@@ -829,6 +829,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       });
 
       if (res.ok) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'form_submission_success',
+          conversion_type: 'discovery_audit_lead',
+          userData: { phone_number: phone }
+        });
         form.style.display = 'none';
         success.style.display = 'block';
       } else {
