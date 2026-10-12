@@ -994,16 +994,20 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
     if(domainMatch&&freeDomains.indexOf(domainMatch)>-1){ document.getElementById('email-error').style.display='block'; return; }
     if(btn){btn.textContent='Sending...';btn.disabled=true;}
     try{
-      var res=await fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{
-        method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({fields:[
-          {name:'firstname',value:firstname},
-          {name:'email',value:email},
-          {name:'company',value:company},
-          {name:'hs_google_click_id',value:sessionStorage.getItem('google_ads_gclid')||''},
-          {name:'hubspot_owner_id',value:'89556230'}
-        ],context:{pageUri:window.location.href,pageName:document.title}})
-      });
+      var F=[
+          {objectTypeId:'0-1',name:'firstname',value:firstname},
+          {objectTypeId:'0-1',name:'email',value:email},
+          {objectTypeId:'0-1',name:'company',value:company},
+          {objectTypeId:'0-1',name:'hs_google_click_id',value:sessionStorage.getItem('google_ads_gclid')||''},
+          {objectTypeId:'0-1',name:'hubspot_owner_id',value:'89556230'}
+        ];
+      var CTX={pageUri:window.location.href,pageName:document.title};
+      var post=function(fl){return fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:fl,context:CTX})});};
+      var res=await post(F);
+      if(res.status===400){ /* drop only fields HubSpot says are not on the form, then resend once so the lead is kept */
+        var bad=[]; try{var e=await res.json(); (e.errors||[]).forEach(function(x){if(x.errorType==='FIELD_NOT_IN_FORM_DEFINITION'){var m=(x.message||'').match(/fields\.(?:[0-9-]+\/)?([a-z_0-9]+)/i); if(m)bad.push(m[1]);}});}catch(_){ }
+        if(bad.length){ res=await post(F.filter(function(x){return bad.indexOf(x.name)<0;})); }
+      }
       if(res.ok){
         form.style.display='none'; document.getElementById('form-success').style.display='block';
         window.dataLayer=window.dataLayer||[];
