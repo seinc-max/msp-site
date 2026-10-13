@@ -38,44 +38,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- SEO: Local Business Schema -->
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "Organization",
- "@id": "https://truelineit.com/#organization",
- "name": "Trueline IT",
- "url": "https://truelineit.com",
- "telephone": "+16473605774",
- "email": "hello@truelineit.com",
- "address": {
-  "@type": "PostalAddress",
-  "streetAddress": "1250 Brant Street, Suite 400",
-  "addressLocality": "Burlington",
-  "addressRegion": "ON",
-  "postalCode": "L7P 1X8",
-  "addressCountry": "CA"
- },
- "areaServed": {
-  "@type": "State",
-  "name": "Ontario"
- }
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://truelineit.com/#organization",
+  "name": "Trueline IT",
+  "url": "https://truelineit.com",
+  "telephone": "+16473605774",
+  "email": "hello@truelineit.com",
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Canada"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "Organization",
   "name": "Trueline IT",
   "url": "https://truelineit.com",
   "telephone": "+16473605774",
   "email": "hello@truelineit.com",
   "description": "Done-for-you AI automation for plumbing, HVAC and home-service trades. Missed-call text-back and an AI receptionist. We set them up and run them.",
   "paymentAccepted": "Credit Card, Bank Transfer",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Canada"
-  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Canada"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    }
+  ],
   "serviceType": "AI Automation for Service Businesses",
   "category": "Business Automation",
-  "knowsAbout": ["Missed-Call Text-Back", "AI Receptionist", "Home-service phone automation", "Google review requests", "Quote follow-up", "Text-to-pay"],
+  "knowsAbout": [
+    "Missed-Call Text-Back",
+    "AI Receptionist",
+    "Home-service phone automation",
+    "Google review requests",
+    "Quote follow-up",
+    "Text-to-pay"
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Automation offers",
@@ -1248,7 +1259,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FOOTER -->
 <footer>
   <a href="/" class="footer-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
-  <p>© 2026 Trueline IT. All rights reserved. | 1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
+  <p>© 2026 Trueline IT. All rights reserved.</p>
   <div class="footer-links">
     <a href="/missed-call-text-back">Text-Back</a>
     <a href="/ai-receptionist">AI Receptionist</a>
