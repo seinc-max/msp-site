@@ -232,7 +232,8 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
         <div class="output-value" id="out-risk-events" style="font-size: 2.5rem; color: #fca5a5;">0</div>
         <div class="output-sub">Estimated monthly unauthorized prompt injections placing confidential client data onto public servers.</div>
       </div>
-      <a href="tel:+16473605774" class="calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;">Losing about <span id="out-cta-amt">$0</span> a year? Call (647) 360-5774 and we'll show you how to stop it in a free 30-minute review.</p>
+      <a href="tel:+16473605774" class="calc-cta" style="display:block;width:100%;min-height:52px;box-sizing:border-box;text-align:center;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call',page_city:'Ontario',source:'margin_calculator'});">Call (647) 360-5774</a>
     </div>
   </div>
 </section>
@@ -270,6 +271,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
     const riskEvents = Math.round(activeUsers * 12);
     
     document.getElementById('out-leakage').innerText = new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 }).format(annualLeakage);
+    document.getElementById('out-cta-amt').innerText = document.getElementById('out-leakage').innerText;
     document.getElementById('out-risk-events').innerText = new Intl.NumberFormat('en-CA').format(riskEvents);
   }
 
@@ -281,7 +283,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
   calculateMargin();
 </script>
 <div class="sticky-mobile-cta">
-  <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a>
+  <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call',page_city:'Ontario',source:'margin_calculator'});">📞 Call (647) 360-5774</a>
 </div>
 </body>
 </html>
