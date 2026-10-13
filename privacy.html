@@ -39,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "Organization",
   "name": "Trueline IT",
   "url": "https://truelineit.com",
   "telephone": "+16473605774",
@@ -47,13 +47,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "description": "Flat-rate AI governance and automation for professional services in Ontario. Shadow AI audits, Copilot compliance, and secure workflow automation support.",
   "priceRange": "$$",
   "paymentAccepted": "Credit Card, Bank Transfer",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Canada"
-  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Canada"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    }
+  ],
   "serviceType": "AI Governance and Automation",
   "category": "AI Automation Agency",
-  "knowsAbout": ["AI Governance", "Shadow AI Prevention", "PIPEDA Compliance", "Microsoft 365 Copilot", "AI Acceptable Use Policy"],
+  "knowsAbout": [
+    "AI Governance",
+    "Shadow AI Prevention",
+    "PIPEDA Compliance",
+    "Microsoft 365 Copilot",
+    "AI Acceptable Use Policy"
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "AI Governance and Automation",
@@ -858,8 +870,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 style="font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; color: var(--navy); margin: 40px 0 16px;">Contact</h2>
     <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
       Trueline IT<br>
-      1250 Brant Street, Suite 400<br>
-      Burlington, ON L7P 1X8<br>
       <a href="mailto:hello@truelineit.com" style="color: var(--blue); text-decoration: none;">hello@truelineit.com</a><br>
       <a href="tel:+16473605774" style="color: var(--blue); text-decoration: none;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">(647) 360-5774</a>
     </p>
@@ -873,7 +883,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FOOTER -->
 <footer>
   <a href="/" class="footer-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
-  <p>© 2026 Trueline IT. All rights reserved. | 1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
+  <p>© 2026 Trueline IT. All rights reserved.</p>
   <div class="footer-links">
     <a href="/missed-call-text-back">Text-Back</a>
     <a href="/ai-receptionist">AI Receptionist</a>
