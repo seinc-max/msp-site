@@ -300,11 +300,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="nav-gov" style="opacity:.6;font-size:.78rem;">For professional firms:</span>
     <a href="/ai-governance-ontario" class="nav-gov">AI Governance</a>
   </div>
-<a href="tel:+16473605774" class="nav-phone" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
-    (647) 360-5774
-  </a>
-  <a href="tel:+16473605774" class="nav-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+
+  <a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free Assessment</a>
 </nav>
 
 <section class="blog-hero">
@@ -359,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>Trueline IT's AI governance retainers start at <strong>$1,500/month per business</strong> — including your AI Acceptable Use Policy, shadow AI audit, M365 configuration, and insurer-ready compliance documentation. No per-seat billing.</p>
 
-<p><strong>Ready to assess your compliance posture?</strong> Call (647) 360-5774 for your free Trueline AI Exposure Score. We'll review your current practices, identify gaps specific to your business, and outline a roadmap to full compliance.</p>
+<p><strong>Ready to assess your compliance posture?</strong> Request your free Trueline AI Exposure Score. We'll review your current practices, identify gaps specific to your business, and outline a roadmap to full compliance.</p>
 
 <p><a href="/assets/2026-pipeda-compliance-guide-ontario.pdf" target="_blank" style="display: inline-block; margin: 20px 0; background: var(--orange); color: #fff; font-weight: 700; padding: 14px 28px; border-radius: 8px; text-decoration: none;">📥 Download: PIPEDA Compliance Guide PDF</a></p>
 
@@ -376,15 +373,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="contact-section" id="contact" style="background:var(--navy);padding:60px 5%;text-align:center;">
   <h2 style="font-family:'Fraunces',serif;font-size:2rem;color:#fff;margin-bottom:14px;">Ready to stop worrying about IT?</h2>
-  <p style="color:rgba(255,255,255,0.55);font-size:1.05rem;max-width:500px;margin:0 auto 44px;">Call us and tell us about your business. We call back within one business day.</p>
+  <p style="color:rgba(255,255,255,0.55);font-size:1.05rem;max-width:500px;margin:0 auto 44px;">Send us your name and business email. We reply within one business day.</p>
   <div style="background:#fff;border-radius:20px;padding:44px 48px;max-width:580px;margin:0 auto;">
-    <div class="call-cta" style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" style="font-size:1.15rem;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. We answer during business hours; leave a message and we call back within one business day.</p></div>
+    <section id="get-assessment" style="max-width:640px;margin:0 auto;padding:48px 5%;"><h2 style="text-align:center;font-size:1.6rem;margin-bottom:8px;">Get Your Free AI Governance Assessment</h2><p style="text-align:center;margin-bottom:20px;">Send us your name and business email. We reply within one business day.</p>
+<!-- GOVERNANCE FORM (restored 2026-10-12; fields: name, email) -->
+<div class="gov-form-wrap" style="max-width:480px;margin:0 auto 20px;text-align:left;">
+  <form id="discovery-form" class="hs-do-not-collect" novalidate>
+    <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
+    <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter your business email address.</div></div>
+    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Get My Free Assessment</button>
+    <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We reply within one business day.</p>
+    <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See our <a href="/privacy">Privacy Policy</a>.</p>
+  </form>
+  <div id="form-success" style="display:none;text-align:center;padding:16px 0;"><h4 style="font-size:1.4rem;margin-bottom:8px;">Request received. &#10004;</h4><p style="font-size:1.05rem;">Thanks. We reply within one business day.</p></div>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('discovery-form'); if(!form) return;
+  var LABEL='Get My Free Assessment';
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var btn=form.querySelector('.btn-submit');
+    var firstname=document.getElementById('firstname').value.trim();
+    var email=document.getElementById('email').value.trim();
+    if(!firstname||!email||!form.checkValidity()){ form.reportValidity(); return; }
+    // --- Free Email Domain Blocklist ---
+    var freeDomains=['gmail.com','yahoo.com','hotmail.com','outlook.com','icloud.com','live.com','msn.com','aol.com','googlemail.com','ymail.com','protonmail.com'];
+    var userEmail=email.toLowerCase();
+    var domainMatch=userEmail.indexOf('@')>-1?userEmail.split('@')[1].trim():null;
+    if(domainMatch&&freeDomains.indexOf(domainMatch)>-1){ document.getElementById('email-error').style.display='block'; return; }
+    if(btn){btn.textContent='Sending...';btn.disabled=true;}
+    try{
+      var F=[
+          {objectTypeId:'0-1',name:'firstname',value:firstname},
+          {objectTypeId:'0-1',name:'email',value:email},
+          {objectTypeId:'0-1',name:'hs_google_click_id',value:sessionStorage.getItem('google_ads_gclid')||''},
+          {objectTypeId:'0-1',name:'hubspot_owner_id',value:'89556230'}
+        ];
+      var CTX={pageUri:window.location.href,pageName:document.title};
+      var post=function(fl){return fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:fl,context:CTX})});};
+      var res=await post(F);
+      if(res.status===400){ /* drop only fields HubSpot says are not on the form, then resend once so the lead is kept */
+        var bad=[]; try{var e=await res.json(); (e.errors||[]).forEach(function(x){if(x.errorType==='FIELD_NOT_IN_FORM_DEFINITION'){var m=(x.message||'').match(/fields\.(?:[0-9-]+\/)?([a-z_0-9]+)/i); if(m)bad.push(m[1]);}});}catch(_){ }
+        if(bad.length){ res=await post(F.filter(function(x){return bad.indexOf(x.name)<0;})); }
+      }
+      if(res.ok){
+        form.style.display='none'; document.getElementById('form-success').style.display='block';
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
+      } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
+    }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
+  });
+})();
+</script>
+</section>
+
   </div>
 </section>
 
-<div class="sticky-mobile-cta">
- <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a>
-</div>
 
 <footer>
   <a href="/" class="footer-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
