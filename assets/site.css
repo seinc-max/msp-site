@@ -1,0 +1,117 @@
+/* Additive safeguards only. Existing page styles own component appearance. */
+:root {
+  --tl-color-navy: #1a2744;
+  --tl-color-navy-light: #243354;
+  --tl-color-orange: #f97316;
+  --tl-color-blue: #2563eb;
+  --tl-color-blue-light: #3b82f6;
+  --tl-color-sky: #e8f2ff;
+  --tl-color-border: #dde6f5;
+  --tl-color-page: #fafaf8;
+  --tl-color-white: #ffffff;
+  --tl-color-black: #0f1420;
+  --tl-surface-page: var(--tl-color-page);
+  --tl-surface-card: var(--tl-color-white);
+  --tl-surface-tint: var(--tl-color-sky);
+  --tl-surface-dark: var(--tl-color-navy);
+  --tl-text-primary: var(--tl-color-navy);
+  --tl-text-secondary: #42506e;
+  --tl-text-muted: #5a6a8a;
+  --tl-text-on-dark: var(--tl-color-white);
+  --tl-text-on-action: var(--tl-color-white);
+  --tl-action-primary: var(--tl-color-orange);
+  --tl-action-primary-hover: #ea6a0a;
+  --tl-action-primary-active: #d95f06;
+  --tl-action-secondary: var(--tl-color-blue);
+  --tl-link: var(--tl-color-blue);
+  --tl-success: #15803d;
+  --tl-warning: #b45309;
+  --tl-error: #dc2626;
+  --tl-border-subtle: var(--tl-color-border);
+  --tl-btn-primary-bg: var(--tl-action-primary);
+  --tl-btn-primary-text: var(--tl-text-on-action);
+  --tl-btn-primary-radius: 10px;
+  --tl-btn-primary-padding-y: 16px;
+  --tl-btn-primary-padding-x: 32px;
+  --tl-btn-primary-font-size: 18px;
+  --tl-btn-primary-font-weight: 700;
+  --tl-btn-primary-min-height: 56px;
+  --tl-input-bg: var(--tl-color-white);
+  --tl-input-border: var(--tl-color-border);
+  --tl-input-border-focus: var(--tl-color-blue);
+  --tl-input-radius: 10px;
+  --tl-input-padding-y: 14px;
+  --tl-input-padding-x: 16px;
+  --tl-input-font-size: 16px;
+  --tl-input-error: var(--tl-error);
+  --tl-card-bg: var(--tl-surface-card);
+  --tl-card-border: var(--tl-color-border);
+  --tl-card-radius: 12px;
+  --tl-card-shadow: 0 1px 3px rgba(26,39,68,.08), 0 4px 12px rgba(26,39,68,.06);
+  --tl-card-padding: 32px;
+  --tl-space-1: 4px;
+  --tl-space-2: 8px;
+  --tl-space-3: 12px;
+  --tl-space-4: 16px;
+  --tl-space-6: 24px;
+  --tl-space-8: 32px;
+  --tl-space-12: 48px;
+  --tl-space-16: 64px;
+  --tl-space-24: 96px;
+  --tl-text-xs: 12px;
+  --tl-text-sm: 14px;
+  --tl-text-base: 16px;
+  --tl-text-lg: 18px;
+  --tl-text-xl: 20px;
+  --tl-text-2xl: 24px;
+  --tl-text-3xl: 30px;
+  --tl-text-4xl: 36px;
+  --tl-text-5xl: 48px;
+  --tl-text-hero: clamp(2.5rem, 5vw, 4rem);
+  --tl-font-display: 'Fraunces', serif;
+  --tl-font-body: 'DM Sans', sans-serif;
+  --tl-content-max: 1200px;
+  --tl-radius-sm: 4px;
+  --tl-radius-md: 8px;
+  --tl-radius-lg: 12px;
+  --tl-radius-xl: 16px;
+  --tl-radius-full: 9999px;
+  --tl-shadow-1: 0 1px 2px rgba(26,39,68,.10);
+  --tl-shadow-2: 0 1px 3px rgba(26,39,68,.08), 0 4px 12px rgba(26,39,68,.06);
+  --tl-shadow-3: 0 8px 30px rgba(26,39,68,.14);
+  --tl-motion-fast: 200ms ease-out;
+  --tl-motion-base: 300ms ease-out;
+  --tl-bp-sm: 640px;
+  --tl-bp-md: 768px;
+  --tl-bp-lg: 1024px;
+  --tl-bp-xl: 1280px;
+  /* Accessibility dimensions are deliberate exceptions to the spacing scale. */
+  --tl-focus-width: 3px;
+  --tl-focus-offset: 3px;
+  --tl-anchor-offset: var(--tl-space-24);
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: var(--tl-focus-width) solid var(--tl-action-secondary);
+  outline-offset: var(--tl-focus-offset);
+}
+
+:where([id]) { scroll-margin-top: var(--tl-anchor-offset); }
+
+::selection {
+  background-color: var(--tl-surface-tint);
+  color: var(--tl-text-primary);
+}
+
+/* Keep animation completion: existing heroes start at opacity: 0. */
+@media (prefers-reduced-motion: reduce) {
+  :where(html) { scroll-behavior: auto !important; }
+  :where(*, *::before, *::after) {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

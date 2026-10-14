@@ -356,6 +356,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 <!-- Google tag (gtag.js) for Google Ads AW-18016129581 -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(window.__tlProd){(function(d){var a=d.createElement('script');a.async=true;a.src='https://www.googletagmanager.com/gtag/js?id=AW-18016129581';d.head.appendChild(a);var c=d.createElement('script');c.defer=true;c.src='/js/call-tracking.js';d.head.appendChild(c);})(document);gtag('js',new Date());gtag('config','AW-18016129581');}</script>
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -507,7 +508,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           {objectTypeId:'0-1',name:'hubspot_owner_id',value:'89556230'}
         ];
       var CTX={pageUri:window.location.href,pageName:document.title}; var hm=document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/); if(hm) CTX.hutk=hm[1];
-      var post=function(fl){return fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:fl,context:CTX})});};
+      var post=function(fl){return (/^(www\.)?truelineit\.com$/.test(location.hostname)?fetch:function(){console.info('HubSpot submit skipped on non-production host');return Promise.resolve(new Response('{}',{status:200}));})('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:fl,context:CTX})});};
       var res=await post(F);
       if(res.status===400){ /* drop only fields HubSpot says are not on the form, then resend once so the lead is kept */
         var bad=[]; try{var e=await res.json(); (e.errors||[]).forEach(function(x){if(x.errorType==='FIELD_NOT_IN_FORM_DEFINITION'){var m=(x.message||'').match(/fields\.(?:[0-9-]+\/)?([a-z_0-9]+)/i); if(m)bad.push(m[1]);}});}catch(_){ }
