@@ -115,3 +115,20 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Two-tone focus ring on dark surfaces (navy nav, heroes, dark bands): white inner ring + blue outer ring.
+   Light surfaces keep the single #2563eb ring above. */
+:is(nav, header, footer, .hero, .bottom-cta, .proof-section, .step-number, [class*="dark"], [class*="navy"]) :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: var(--tl-focus-width) solid var(--tl-color-white);
+  outline-offset: 0;
+  box-shadow: 0 0 0 6px var(--tl-color-blue);
+}
+
+/* Real-specificity input focus so page-level outline:none cannot hide it. */
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: var(--tl-focus-width) solid var(--tl-action-secondary);
+  outline-offset: 2px;
+}
+
+/* Minimum 44px tap target on logo links. */
+.nav-logo, .footer-logo { display: inline-flex; align-items: center; min-height: 44px; }
