@@ -318,7 +318,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
     <a href="/ai-governance-ontario" class="nav-gov">AI Governance</a>
   </div>
 
-  <a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free Assessment</a>
+  <a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free AI Risk Assessment</a>
 </nav>
 
 <!-- HERO -->
@@ -329,7 +329,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
       <p class="hero-pre-sub" style="font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 15px;">Built exclusively for businesses with 15 to 150 employees.</p>
       <h1>Turn AI into a defensible asset, <br>not a <em>legal liability.</em></h1>
       <p class="hero-sub">Your employees are uploading client data to ChatGPT against LSO rules. Your IT provider is charging you hourly to ignore it. Public AI tools are leaking your business's confidential data while failing to solve real bottlenecks. Trueline builds private, localized AI workflows that automate your professional services operations securely — backed by bulletproof governance policies and shadow AI audits. Scale productivity without exposing your clients.</p>
-      <p style="margin:22px 0 0;text-align:left;"><a href="#discovery-form" class="btn-primary gov-form-cta" style="display:inline-block;padding:14px 28px;font-size:1.05rem;font-weight:700;border-radius:8px;text-decoration:none;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free Assessment</a></p>
+      <p style="margin:22px 0 0;text-align:left;"><a href="#discovery-form" class="btn-primary gov-form-cta" style="display:inline-block;padding:14px 28px;font-size:1.05rem;font-weight:700;border-radius:8px;text-decoration:none;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free AI Risk Assessment</a></p>
                       <div class="hero-trust">
         <div class="trust-item">
           <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
@@ -358,7 +358,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
   <form id="discovery-form" class="hs-do-not-collect" novalidate>
     <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
     <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter your business email address.</div></div>
-    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Get My Free Assessment</button>
+    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Get My Free AI Risk Assessment</button>
     <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We reply within one business day.</p>
     <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See our <a href="/privacy">Privacy Policy</a>.</p>
   </form>
@@ -367,13 +367,14 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 <script>
 (function(){
   var form=document.getElementById('discovery-form'); if(!form) return;
-  var LABEL='Get My Free Assessment';
+  var LABEL='Get My Free AI Risk Assessment';
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     var btn=form.querySelector('.btn-submit');
     var firstname=document.getElementById('firstname').value.trim();
     var email=document.getElementById('email').value.trim();
     if(!firstname||!email||!form.checkValidity()){ form.reportValidity(); return; }
+    var em=email.toLowerCase(); var lp=em.split('@')[0]||''; if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(em)||lp.length>64||em.length>254||em.indexOf('..')>-1){ var ee=document.getElementById('email-error'); if(ee){ee.textContent='Please enter a valid business email address.';ee.style.display='block';} return; }
     // --- Free Email Domain Blocklist ---
     var freeDomains=['gmail.com','yahoo.com','hotmail.com','outlook.com','icloud.com','live.com','msn.com','aol.com','googlemail.com','ymail.com','protonmail.com'];
     var userEmail=email.toLowerCase();
@@ -387,7 +388,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
           {objectTypeId:'0-1',name:'hs_google_click_id',value:sessionStorage.getItem('google_ads_gclid')||''},
           {objectTypeId:'0-1',name:'hubspot_owner_id',value:'89556230'}
         ];
-      var CTX={pageUri:window.location.href,pageName:document.title};
+      var CTX={pageUri:window.location.href,pageName:document.title}; var hm=document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/); if(hm) CTX.hutk=hm[1];
       var post=function(fl){return fetch('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:fl,context:CTX})});};
       var res=await post(F);
       if(res.status===400){ /* drop only fields HubSpot says are not on the form, then resend once so the lead is kept */
@@ -532,7 +533,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
             <span style="color: var(--orange); font-weight: 700;">✓</span> Dedicated account manager
           </li>
         </ul>
-        <a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free Assessment</a>
+        <a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free AI Risk Assessment</a>
       </div>
 
       <!-- COLUMN 3: Transform -->
@@ -581,7 +582,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 <section class="bottom-cta">
   <h2>Ready to secure your operations?</h2>
   <p>Send us your name and email for a free 30-minute review. We'll assess your AI exposure and outline your implementation timeline.</p>
-  <a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free Assessment</a>
+  <a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free AI Risk Assessment</a>
 </section>
 
 
