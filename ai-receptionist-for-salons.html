@@ -195,19 +195,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .biz-chips {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-2);
+    gap: var(--space-2) var(--space-4);
     list-style: none;
     margin-top: var(--space-6);
-    max-width: 520px;
+    max-width: 40rem;
   }
   .biz-chips li {
-    border: 1px solid rgba(255,255,255,0.28);
-    color: var(--text-on-dark);
-    border-radius: var(--radius-full);
-    padding: var(--space-2) var(--space-4);
+    color: rgba(255,255,255,0.85);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
     font-size: var(--text-sm);
-    font-weight: 600;
-    line-height: 1.3;
+    font-weight: 500;
+    line-height: 1.4;
+    cursor: default;
   }
 
   .lede-follow { margin-top: var(--space-8); margin-bottom: 0; }
@@ -614,9 +616,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .footer-logo span { color: var(--color-orange); }
   footer p { color: rgba(255,255,255,0.45); font-size: var(--text-sm); margin: 0; }
-  .footer-links { display: flex; gap: var(--space-6); flex-wrap: wrap; }
+  .footer-links { display: flex; gap: var(--space-4) var(--space-6); flex-wrap: wrap; align-items: center; }
   .footer-links a { color: rgba(255,255,255,0.6); font-size: var(--text-sm); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
   .footer-links a:hover { color: var(--text-on-dark); }
+  footer a[href^="tel:"],
+  footer a[href^="mailto:"] {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+  }
   @media (max-width: 768px) {
     footer { flex-direction: column; text-align: center; justify-content: center; }
     .footer-links { justify-content: center; }
@@ -646,8 +657,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-decoration: none;
   }
   @media (max-width: 768px) {
-    .sticky-mobile-cta { display: block; }
-    body { padding-bottom: 56px; }
+    .sticky-mobile-cta.is-visible { display: block; }
+    body.has-sticky-cta { padding-bottom: 56px; }
   }
 
   a:focus-visible, summary:focus-visible, .btn-primary:focus-visible {
@@ -675,7 +686,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "name": "Ontario"
   },
   "serviceType": "AI receptionist for appointment businesses",
-  "description": "An AI receptionist for Ontario salons, barbershops, med spas, studios, and dental or physio front desks. It answers 24/7, captures booking requests, and texts the owner. $399/mo + $499 setup."
+  "description": "An AI receptionist for Ontario salons, barbershops, med spas, and studios. It answers 24/7, captures booking requests, and texts the owner. $399/mo + $499 setup."
 }
 </script>
 <script type="application/ld+json">
@@ -777,11 +788,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </p>
       <ul class="biz-chips" aria-label="Shops this is for">
         <li>Salons</li>
-        <li>Barbers</li>
-        <li>Spas</li>
+        <li>Barbershops</li>
+        <li>Med spas</li>
         <li>Studios</li>
-        <li>Dental front desk</li>
-        <li>Physio front desk</li>
       </ul>
     </div>
   </div>
@@ -946,9 +955,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <article class="info-card audience-card good">
         <h3>Who this is for</h3>
         <ul>
-          <li>Salon, barber, spa, and studio owners losing bookings to voicemail</li>
+          <li>Salon, barbershop, med spa, and studio owners losing bookings to voicemail</li>
           <li>Owners who can't pick up mid-appointment</li>
-          <li>Dental and physio front desks that need booking calls answered. This is not clinical advice.</li>
           <li>Owners who want us to build, train, and run it</li>
         </ul>
       </article>
@@ -1090,11 +1098,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <a href="/" class="footer-logo">Trueline<span>.</span>IT</a>
   <p>© 2026 Trueline IT. All rights reserved.</p>
   <div class="footer-links">
-    <a href="/about.html">About</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
+    <a href="/about">About</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a>
     <a href="mailto:hello@truelineit.com">hello@truelineit.com</a>
   </div>
 </footer>
+<script>
+(function () {
+  var bar = document.querySelector('.sticky-mobile-cta');
+  var heroCta = document.querySelector('.hero-call');
+  if (!bar || !heroCta || !('IntersectionObserver' in window)) return;
+  var mq = window.matchMedia('(max-width: 768px)');
+  var heroVisible = true;
+  function apply() {
+    var show = mq.matches && !heroVisible;
+    bar.classList.toggle('is-visible', show);
+    document.body.classList.toggle('has-sticky-cta', show);
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    heroVisible = entries[0].isIntersecting;
+    apply();
+  }, { threshold: 0 });
+  observer.observe(heroCta);
+  if (mq.addEventListener) mq.addEventListener('change', apply);
+  else if (mq.addListener) mq.addListener(apply);
+})();
+</script>
 </body>
 </html>
