@@ -77,6 +77,11 @@
 /ai-receptionist-hvac-toronto/ /ai-receptionist 301
 /ai-receptionist-hvac-toronto.html /ai-receptionist 301
 
+# Deleted governance city page that had no redirect (was 404)
+/ai-governance-southern-ontario /ai-governance-ontario 301
+/ai-governance-southern-ontario/ /ai-governance-ontario 301
+/ai-governance-southern-ontario.html /ai-governance-ontario 301
+
 # AI governance city pages consolidated to the Ontario page
 /ai-governance-burlington /ai-governance-ontario 301
 /ai-governance-burlington/ /ai-governance-ontario 301

@@ -48,16 +48,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "description": "Flat-rate AI governance and automation for professional services in Ontario. Shadow AI audits, Copilot compliance, and secure workflow automation support.",
   "priceRange": "$$",
   "paymentAccepted": "Credit Card, Bank Transfer",
-  "areaServed": [
-    {
-      "@type": "Country",
-      "name": "Canada"
-    },
-    {
-      "@type": "Country",
-      "name": "United States"
-    }
-  ],
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Ontario"
+  },
   "serviceType": "AI Governance, Automation Controls, and Privacy Compliance Consultation",
   "category": "AI Automation Agency",
   "knowsAbout": [
@@ -76,7 +70,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "itemOffered": {
           "@type": "Service",
           "name": "AI Governance",
-          "description": "AI governance, shadow AI audits, Copilot compliance, and secure automation — flat monthly fee per business."
+          "description": "AI governance, shadow AI audits, Copilot compliance, and secure automation — flat monthly fee per business.",
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Ontario"
+          }
         },
         "unitText": "per entry sprint"
       }
@@ -86,7 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"Health Score","item":"https://truelineit.com/ai-exposure-score.html"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"AI Exposure Score","item":"https://truelineit.com/ai-exposure-score.html"}]}
 </script>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -977,7 +975,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 <!-- Google tag (gtag.js) for Google Ads AW-18016129581 -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(window.__tlProd){(function(d){var a=d.createElement('script');a.async=true;a.src='https://www.googletagmanager.com/gtag/js?id=AW-18016129581';d.head.appendChild(a);var c=d.createElement('script');c.defer=true;c.src='/js/call-tracking.js';d.head.appendChild(c);})(document);gtag('js',new Date());gtag('config','AW-18016129581');}</script>
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261014-4">
+<link rel="stylesheet" href="/assets/site.css?v=20261015-1">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -986,16 +984,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- NAV -->
-<nav>
+<nav class="tl-nav">
   <a href="/" class="nav-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
-    <div class="nav-links">
-    <a href="/missed-call-text-back">Text-Back</a>
-    <a href="/ai-receptionist">AI Receptionist</a>
-    <span class="nav-gov" style="opacity:.6;font-size:.78rem;">For professional firms:</span>
-    <a href="/ai-governance-ontario" class="nav-gov">AI Governance</a>
+  <div class="nav-links">
+    <a href="/ai-governance-ontario">AI Governance</a>
+    <a href="/ai-consulting-pricing">Pricing</a>
   </div>
-
-  <a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free AI Risk Assessment</a>
+  <a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free Exposure Score</a>
 </nav>
 
 <!-- HERO -->
@@ -1005,7 +1000,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>The Trueline 15-Minute<br>AI Exposure Score</h1>
     <p class="hero-sub">Find out exactly where your Southern Ontario business stands — no sales pitch, just data. Answer 15 quick questions about monitoring, backups, security, compliance, and support. Get your score instantly. Understand your risk profile.</p>
     <div class="hero-actions">
-      <a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free AI Risk Assessment</a>
+      <a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free Exposure Score</a>
       
     </div>
                         <div class="hero-trust">
@@ -1129,7 +1124,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span style="color: var(--orange); font-weight: 700;">✓</span> Dedicated account manager
           </li>
         </ul>
-        <a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free AI Risk Assessment</a>
+        <a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free Exposure Score</a>
       </div>
 
       <!-- COLUMN 3: Transform -->
@@ -1307,7 +1302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <p class="hs-interpretation" id="hs-interpretation"></p>
           <div class="hs-cta-wrap">
-            <a href="#discovery-form" class="hs-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free AI Risk Assessment</a>
+            <a href="#discovery-form" class="hs-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free Exposure Score</a>
           </div>
         </div>
 
@@ -1317,7 +1312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Get My Free AI Risk Assessment</h3>
+        <h3>Get My Free Exposure Score</h3>
         <p>A 30-minute chat to understand your business, your current setup, and where we can help most.</p>
       </div>
       <div class="step">
@@ -1381,8 +1376,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="gov-form-wrap" style="max-width:480px;margin:0 auto 20px;text-align:left;">
   <form id="discovery-form" class="hs-do-not-collect" novalidate>
     <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
-    <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter your business email address.</div></div>
-    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Get My Free AI Risk Assessment</button>
+    <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter a valid email address.</div></div>
+    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Get My Free Exposure Score</button>
     <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We reply within one business day.</p>
     <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See our <a href="/privacy">Privacy Policy</a>.</p>
   </form>
@@ -1391,19 +1386,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 (function(){
   var form=document.getElementById('discovery-form'); if(!form) return;
-  var LABEL='Get My Free AI Risk Assessment';
+  var LABEL='Get My Free Exposure Score';
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     var btn=form.querySelector('.btn-submit');
     var firstname=document.getElementById('firstname').value.trim();
     var email=document.getElementById('email').value.trim();
     if(!firstname||!email||!form.checkValidity()){ form.reportValidity(); return; }
-    var em=email.toLowerCase(); var lp=em.split('@')[0]||''; if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(em)||lp.length>64||em.length>254||em.indexOf('..')>-1){ var ee=document.getElementById('email-error'); if(ee){ee.textContent='Please enter a valid business email address.';ee.style.display='block';} return; }
-    // --- Free Email Domain Blocklist ---
-    var freeDomains=['gmail.com','yahoo.com','hotmail.com','outlook.com','icloud.com','live.com','msn.com','aol.com','googlemail.com','ymail.com','protonmail.com'];
-    var userEmail=email.toLowerCase();
-    var domainMatch=userEmail.indexOf('@')>-1?userEmail.split('@')[1].trim():null;
-    if(domainMatch&&freeDomains.indexOf(domainMatch)>-1){ document.getElementById('email-error').style.display='block'; return; }
+    var em=email.toLowerCase(); var lp=em.split('@')[0]||''; if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(em)||lp.length>64||em.length>254||em.indexOf('..')>-1){ var ee=document.getElementById('email-error'); if(ee){ee.textContent='Please enter a valid email address.';ee.style.display='block';} return; }
+    var userEmail=em;
     if(btn){btn.textContent='Sending...';btn.disabled=true;}
     try{
       var F=[

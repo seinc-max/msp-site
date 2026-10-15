@@ -33,7 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- SEO: Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Trueline IT | Done-For-You AI Automation for Home-Service Trades" />
-<meta name="twitter:description" content="Done-for-you AI automation for service businesses. Missed-Call Text-Back is $149/mo per location plus $199 setup. AI Receptionist is $399/mo plus $499 setup, with unlimited normal business use." />
+<meta name="twitter:description" content="Done-for-you AI automation for service businesses. Missed-Call Text-Back is $149/mo per location plus $199 setup. AI Receptionist is $399/mo plus $499 setup, with unlimited calls (normal business use)." />
 <meta name="twitter:image" content="https://truelineit.com/og-image.jpg" />
 
 <!-- SEO: Local Business Schema -->
@@ -46,16 +46,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "url": "https://truelineit.com",
   "telephone": "+16473605774",
   "email": "hello@truelineit.com",
-  "areaServed": [
-    {
-      "@type": "Country",
-      "name": "Canada"
-    },
-    {
-      "@type": "Country",
-      "name": "United States"
-    }
-  ]
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Ontario"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -68,16 +62,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "email": "hello@truelineit.com",
   "description": "Done-for-you AI automation for plumbing, HVAC and home-service trades. Missed-call text-back and an AI receptionist. We set them up and run them.",
   "paymentAccepted": "Credit Card, Bank Transfer",
-  "areaServed": [
-    {
-      "@type": "Country",
-      "name": "Canada"
-    },
-    {
-      "@type": "Country",
-      "name": "United States"
-    }
-  ],
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Ontario"
+  },
   "serviceType": "AI Automation for Service Businesses",
   "category": "Business Automation",
   "knowsAbout": [
@@ -97,7 +85,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "itemOffered": {
           "@type": "Service",
           "name": "Missed-Call Text-Back",
-          "description": "Done-for-you missed-call text-back on your existing number. $149/mo per location plus a one-time $199 setup."
+          "description": "Done-for-you missed-call text-back on your existing number. $149/mo per location plus a one-time $199 setup.",
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Ontario"
+          }
         }
       },
       {
@@ -105,7 +97,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "itemOffered": {
           "@type": "Service",
           "name": "AI Receptionist",
-          "description": "Done-for-you AI receptionist. $399/mo plus a one-time $499 setup, with unlimited normal business use."
+          "description": "Done-for-you AI receptionist. $399/mo plus a one-time $499 setup, with unlimited calls (normal business use).",
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Ontario"
+          }
         }
       }
     ]
@@ -1094,7 +1090,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 <!-- Google tag (gtag.js) for Google Ads AW-18016129581 -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(window.__tlProd){(function(d){var a=d.createElement('script');a.async=true;a.src='https://www.googletagmanager.com/gtag/js?id=AW-18016129581';d.head.appendChild(a);var c=d.createElement('script');c.defer=true;c.src='/js/call-tracking.js';d.head.appendChild(c);})(document);gtag('js',new Date());gtag('config','AW-18016129581');}</script>
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261014-4">
+<link rel="stylesheet" href="/assets/site.css?v=20261015-1">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1103,21 +1099,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- NAV -->
-<nav>
+<nav class="tl-nav">
   <a href="/" class="nav-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
-    <div class="nav-links">
-    <a href="/missed-call-text-back">Text-Back</a>
-    <a href="/ai-receptionist">AI Receptionist</a>
-    <a href="#more-automation">More automation</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <details class="nav-services">
+      <summary>Services</summary>
+      <div class="nav-services-menu">
+        <a href="/ai-receptionist">AI Receptionist</a>
+        <a href="/missed-call-text-back">Missed-Call Text-Back</a>
+        <a href="/google-review-requests">Google Reviews</a>
+        <a href="/quote-follow-up-win-back">Quote Follow-Up</a>
+        <a href="/hvac-tune-up-reminders">HVAC Reminders</a>
+        <a href="/website-chat-to-text">Chat-to-Text</a>
+        <a href="/text-to-pay">Text-to-Pay</a>
+      </div>
+    </details>
   </div>
-<a href="tel:+16473605774" class="nav-phone" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
-    (647) 360-5774
-  </a>
-  <div class="nav-cta-wrap">
-    <a href="tel:+16473605774" class="nav-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
-    <span class="nav-cancel">Month-to-month. Cancel anytime.</span>
-  </div>
+  <a href="tel:+16473605774" class="nav-phone" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">(647) 360-5774</a>
+  <a href="tel:+16473605774" class="nav-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
 </nav>
 
 <!-- HERO -->
@@ -1176,7 +1176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3><a href="/ai-receptionist" style="color:inherit;text-decoration:none;">AI Receptionist</a></h3>
         <p>Answers your phone when your team can't, including nights and weekends. Callers are told it's an AI assistant. It takes the details and sends your team a clear note.</p>
         <div class="ladder-price">$399<span>/mo</span> + $499 <span>setup</span></div>
-        <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:8px;">Unlimited normal business use.</p>
+        <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:8px;">Unlimited calls (<a href="/terms" style="color:var(--blue);">normal business use</a>).</p>
         <p class="payback">Busy month or slow month, the price stays the same.</p>
         <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
         <p class="cta-cancel">Month-to-month. Cancel anytime.</p>
