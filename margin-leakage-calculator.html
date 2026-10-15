@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
 <script>window.__tlProd=/^(www\.)?truelineit\.com$/.test(location.hostname);</script>
+<script>
+if(window.__tlProd){
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_C8h1iWfO8d5RMBXG20yG0Fj7tMrtWk8gWix3VwGzO63',{api_host:'https://us.i.posthog.com', person_profiles:'identified_only', advanced_disable_flags:true});
+}
+</script>
 <script>if(window.__tlProd)(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -175,7 +181,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 <script>window.__tlProd=/^(www\.)?truelineit\.com$/.test(location.hostname);</script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(window.__tlProd){(function(d){var a=d.createElement('script');a.async=true;a.src='https://www.googletagmanager.com/gtag/js?id=AW-18016129581';d.head.appendChild(a);var c=d.createElement('script');c.defer=true;c.src='/js/call-tracking.js';d.head.appendChild(c);})(document);gtag('js',new Date());gtag('config','AW-18016129581');}</script>
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261015-5">
+<link rel="stylesheet" href="/assets/site.css?v=20261015-6">
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -191,9 +197,9 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
         <a href="/ai-receptionist">AI Receptionist</a>
         <a href="/google-review-requests">Google Review Requests</a>
         <a class="nav-services-hub" href="/for-home-services">Home services</a>
+        <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
         <a class="nav-services-sub" href="/text-to-pay">Text-to-Pay</a>
         <a class="nav-services-sub" href="/website-chat-to-text">Chat-to-Text</a>
-        <a class="nav-services-sub" href="/hvac-tune-up-reminders">Tune-Up Reminders</a>
         <a class="nav-services-sub" href="/google-review-replies">Review Replies</a>
         <a class="nav-services-sub" href="/quote-follow-up-win-back">Quote Follow-Up</a>
         <a class="nav-services-hub" href="/for-appointment-businesses">Appointment businesses</a>
@@ -208,8 +214,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
       </div>
     </details>
   </div>
-  <a href="tel:+16473605774" class="nav-phone" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">(647) 360-5774</a>
-  <a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+  <a href="/ai-governance#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});"><span class="cta-full">Get My Free AI Risk Assessment</span><span class="cta-short">Assessment</span></a>
 </nav>
 
 <section class="calculator-section">
@@ -324,9 +329,9 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
       <a href="/ai-receptionist">AI Receptionist</a>
       <a href="/google-review-requests">Google Review Requests</a>
       <a href="/for-home-services">Home services</a>
+      <a href="/contractor-websites">Contractor Websites</a>
       <a href="/text-to-pay">Text-to-Pay</a>
       <a href="/website-chat-to-text">Chat-to-Text</a>
-      <a href="/hvac-tune-up-reminders">Tune-Up Reminders</a>
       <a href="/google-review-replies">Review Replies</a>
       <a href="/quote-follow-up-win-back">Quote Follow-Up</a>
       <a href="/for-appointment-businesses">Appointment businesses</a>

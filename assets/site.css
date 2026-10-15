@@ -263,6 +263,7 @@ nav.tl-nav.tl-nav-light .nav-phone { color: #1a2744; }
    otherwise drop Home/Services, the phone line, and the call button onto separate rows. */
 @media (max-width: 980px) {
   nav.tl-nav {
+    display: flex !important;
     flex-wrap: nowrap !important;
     align-items: center !important;
     height: 56px !important;
@@ -495,6 +496,18 @@ input, select, textarea { font-size: 1rem !important; }
   line-gap-override: 0%;
   font-display: swap;
 }
+/* Form-only header CTA. Full label on wide screens; short label once the bar is tight. */
+nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: none; }
+@media (max-width: 860px) {
+  nav.tl-nav a.nav-cta.gov-form-cta .cta-full { display: none; }
+  nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: inline; }
+  nav.tl-nav a.nav-cta.gov-form-cta {
+    padding: 8px 12px;
+    min-height: 44px;
+    font-size: 0.85rem;
+  }
+}
+
 body {
   font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
