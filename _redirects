@@ -1,10 +1,10 @@
-/solutions/sovereign-ai-automation-agency /sovereign-ai-automation 301
-/solutions/sovereign-ai-automation-agency.html /sovereign-ai-automation 301
-/solutions/sovereign-ai-automation-agency/ /sovereign-ai-automation 301
+/solutions/sovereign-ai-automation-agency /ai-governance 301
+/solutions/sovereign-ai-automation-agency.html /ai-governance 301
+/solutions/sovereign-ai-automation-agency/ /ai-governance 301
 /it-support-ontario /ai-governance 301
-/cybersecurity-southern-ontario /shadow-ai-prevention 301
+/cybersecurity-southern-ontario /ai-governance 301
 /it-cost-guide-ontario /ai-automation-roi-guide 301
-/microsoft-365-ontario-smbs /safe-copilot-deployment 301
+/microsoft-365-ontario-smbs /ai-governance 301
 /health-score /ai-exposure-score 301
 /blog/20-southern-ontario-it-audits-2026 /blog/20-shadow-ai-audits-2026 301
 /managed-it-services-hamilton /ai-governance 301
@@ -16,7 +16,7 @@
 /managed-it-services-cambridge /ai-governance 301
 /managed-it-services-burlington /ai-governance 301
 /managed-it-services-southern-ontario /ai-governance 301
-/copilot-audit /safe-copilot-deployment 301
+/copilot-audit /ai-governance 301
 /blog/blog-post / 301
 
 /kits /missed-call-text-back 301
@@ -28,8 +28,8 @@
 /google-reputation-pack.html /missed-call-text-back 301
 /audit-confirmed / 301
 /audit-confirmed.html / 301
-/shadow-ai-compliance-ontario /shadow-ai-prevention 301
-/shadow-ai-compliance-ontario.html /shadow-ai-prevention 301
+/shadow-ai-compliance-ontario /ai-governance 301
+/shadow-ai-compliance-ontario.html /ai-governance 301
 /ai-governance-waterloo /ai-governance 301
 /ai-governance-waterloo/ /ai-governance 301
 /ai-governance-waterloo.html /ai-governance 301
@@ -41,9 +41,9 @@
 /ai-receptionist-for-salons.html /ai-receptionist-for-appointments 301
 /ai-receptionist-for-appointments/ /ai-receptionist-for-appointments 301
 /ai-receptionist-for-appointments.html /ai-receptionist-for-appointments 301
-/ai-risk-assessment /risk-assessment 301
-/ai-risk-assessment/ /risk-assessment 301
-/ai-risk-assessment.html /risk-assessment 301
+/ai-risk-assessment /fractional-ai-officer 301
+/ai-risk-assessment/ /fractional-ai-officer 301
+/ai-risk-assessment.html /fractional-ai-officer 301
 /margin-calculator /margin-leakage-calculator 301
 /margin-calculator/ /margin-leakage-calculator 301
 /margin-calculator.html /margin-leakage-calculator 301
@@ -105,20 +105,20 @@
 /for-home-services.html /for-home-services 301
 /for-appointment-businesses/ /for-appointment-businesses 301
 /for-appointment-businesses.html /for-appointment-businesses 301
-/for-professional-services/ /for-professional-services 301
-/for-professional-services.html /for-professional-services 301
+/for-professional-services/ /for-law-firms-accountants-and-advisors 301
+/for-professional-services.html /for-law-firms-accountants-and-advisors 301
 
 # Renamed location-specific slugs (2026-10-15). Direct 301s, no chains.
 # Plain, trailing-slash, and .html variants.
 /ai-governance-ontario /ai-governance 301
 /ai-governance-ontario/ /ai-governance 301
 /ai-governance-ontario.html /ai-governance 301
-/shadow-ai-prevention-ontario /shadow-ai-prevention 301
-/shadow-ai-prevention-ontario/ /shadow-ai-prevention 301
-/shadow-ai-prevention-ontario.html /shadow-ai-prevention 301
-/sovereign-ai-automation-ontario /sovereign-ai-automation 301
-/sovereign-ai-automation-ontario/ /sovereign-ai-automation 301
-/sovereign-ai-automation-ontario.html /sovereign-ai-automation 301
+/shadow-ai-prevention-ontario /ai-governance 301
+/shadow-ai-prevention-ontario/ /ai-governance 301
+/shadow-ai-prevention-ontario.html /ai-governance 301
+/sovereign-ai-automation-ontario /ai-governance 301
+/sovereign-ai-automation-ontario/ /ai-governance 301
+/sovereign-ai-automation-ontario.html /ai-governance 301
 /blog/ontario-clinical-voice-ai-phipa-compliance /blog/clinical-voice-ai-phipa-compliance 301
 /blog/ontario-clinical-voice-ai-phipa-compliance/ /blog/clinical-voice-ai-phipa-compliance 301
 /blog/ontario-clinical-voice-ai-phipa-compliance.html /blog/clinical-voice-ai-phipa-compliance 301
@@ -138,14 +138,40 @@
 # Missing slash or .html variants of older place-name URLs, pointed at the final page.
 /it-support-ontario/ /ai-governance 301
 /it-support-ontario.html /ai-governance 301
-/cybersecurity-southern-ontario/ /shadow-ai-prevention 301
-/cybersecurity-southern-ontario.html /shadow-ai-prevention 301
+/cybersecurity-southern-ontario/ /ai-governance 301
+/cybersecurity-southern-ontario.html /ai-governance 301
 /it-cost-guide-ontario/ /ai-automation-roi-guide 301
 /it-cost-guide-ontario.html /ai-automation-roi-guide 301
-/microsoft-365-ontario-smbs/ /safe-copilot-deployment 301
-/microsoft-365-ontario-smbs.html /safe-copilot-deployment 301
+/microsoft-365-ontario-smbs/ /ai-governance 301
+/microsoft-365-ontario-smbs.html /ai-governance 301
 /blog/20-southern-ontario-it-audits-2026/ /blog/20-shadow-ai-audits-2026 301
 /blog/20-southern-ontario-it-audits-2026.html /blog/20-shadow-ai-audits-2026 301
 /managed-it-services-southern-ontario/ /ai-governance 301
 /managed-it-services-southern-ontario.html /ai-governance 301
-/shadow-ai-compliance-ontario/ /shadow-ai-prevention 301
+/shadow-ai-compliance-ontario/ /ai-governance 301
+
+# Retired pages (2026-10-15). Direct 301s, no chains.
+# Plain, trailing-slash, and .html variants.
+/google-review-replies /google-review-requests 301
+/google-review-replies/ /google-review-requests 301
+/google-review-replies.html /google-review-requests 301
+/sovereign-ai-automation /ai-governance 301
+/sovereign-ai-automation/ /ai-governance 301
+/sovereign-ai-automation.html /ai-governance 301
+/shadow-ai-prevention /ai-governance 301
+/shadow-ai-prevention/ /ai-governance 301
+/shadow-ai-prevention.html /ai-governance 301
+/safe-copilot-deployment /ai-governance 301
+/safe-copilot-deployment/ /ai-governance 301
+/safe-copilot-deployment.html /ai-governance 301
+/ai-consulting-pricing /ai-governance 301
+/ai-consulting-pricing/ /ai-governance 301
+/ai-consulting-pricing.html /ai-governance 301
+/risk-assessment /fractional-ai-officer 301
+/risk-assessment/ /fractional-ai-officer 301
+/risk-assessment.html /fractional-ai-officer 301
+/for-professional-services /for-law-firms-accountants-and-advisors 301
+/ai-support-agent/ /ai-support-agent 301
+/ai-support-agent.html /ai-support-agent 301
+/for-law-firms-accountants-and-advisors/ /for-law-firms-accountants-and-advisors 301
+/for-law-firms-accountants-and-advisors.html /for-law-firms-accountants-and-advisors 301
