@@ -210,7 +210,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
       </div>
     </details>
   </div>
-  <a href="/ai-governance#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});"><span class="cta-full">Send My Name and Email</span><span class="cta-short">Email</span></a>
+  <a href="/ai-governance#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});"><span class="cta-full">Book a Discovery Call</span><span class="cta-short">Book a Call</span></a>
 </nav>
 
 <section class="calculator-section">
@@ -253,7 +253,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
         <div class="output-sub">An estimate, from the share you set, of prompts that could put confidential client work on a public tool.</div>
       </div>
       <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;">The estimate is about <span id="out-cta-amt">$0</span> a year, from the numbers you entered. Send your name and email below for a look at your AI exposure. Nothing is installed.</p>
-      <a href="#discovery-form" class="calc-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Send My Name and Email</a>
+      <a href="#discovery-form" class="calc-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book a Discovery Call</a>
     </div>
   </div>
 </section>
@@ -273,7 +273,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
   <form id="discovery-form" class="hs-do-not-collect" novalidate>
     <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
     <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter a valid email address.</div></div>
-    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Send My Name and Email</button>
+    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Book a Discovery Call</button>
     <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">You hear back within one business day.</p>
     <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See the <a href="/privacy">Privacy Policy</a>.</p>
   </form>
@@ -282,7 +282,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 <script>
 (function(){
   var form=document.getElementById('discovery-form'); if(!form) return;
-  var LABEL='Send My Name and Email';
+  var LABEL='Book a Discovery Call';
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     var btn=form.querySelector('.btn-submit');
