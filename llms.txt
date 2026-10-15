@@ -16,6 +16,7 @@ Month-to-month, cancel anytime. 30-day money-back guarantee: if it's not right w
 
 ## Also: AI governance for professional firms (secondary)
 For law firms, accountants and advisors that want to use AI safely, done for you: written AI use policies, checks for unapproved AI tools, Microsoft 365 Copilot setup, and staff training. PIPEDA-ready. This is guidance and setup, not legal advice.
+- AI Liability Assessment: $1,000, credited in full toward a retainer if you continue within 90 days. This is the first step of the ladder. https://truelineit.com/fractional-ai-officer#assessment
 - Foundation: $1,500/mo
 - Growth: $2,500/mo
 - Transform: $4,500/mo
