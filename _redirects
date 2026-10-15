@@ -1,21 +1,21 @@
-/solutions/sovereign-ai-automation-agency /sovereign-ai-automation-ontario 301
-/solutions/sovereign-ai-automation-agency.html /sovereign-ai-automation-ontario 301
-/solutions/sovereign-ai-automation-agency/ /sovereign-ai-automation-ontario 301
-/it-support-ontario /ai-governance-ontario 301
-/cybersecurity-southern-ontario /shadow-ai-prevention-ontario 301
+/solutions/sovereign-ai-automation-agency /sovereign-ai-automation 301
+/solutions/sovereign-ai-automation-agency.html /sovereign-ai-automation 301
+/solutions/sovereign-ai-automation-agency/ /sovereign-ai-automation 301
+/it-support-ontario /ai-governance 301
+/cybersecurity-southern-ontario /shadow-ai-prevention 301
 /it-cost-guide-ontario /ai-automation-roi-guide 301
 /microsoft-365-ontario-smbs /safe-copilot-deployment 301
 /health-score /ai-exposure-score 301
-/blog/20-southern-ontario-it-audits-2026 /blog/20-southern-ontario-shadow-ai-audits-2026 301
-/managed-it-services-hamilton /ai-governance-ontario 301
-/managed-it-services-guelph /ai-governance-ontario 301
-/managed-it-services-kitchener-waterloo /ai-governance-ontario 301
-/managed-it-services-waterloo /ai-governance-ontario 301
-/managed-it-services-waterloo/ /ai-governance-ontario 301
-/managed-it-services-waterloo.html /ai-governance-ontario 301
-/managed-it-services-cambridge /ai-governance-ontario 301
-/managed-it-services-burlington /ai-governance-ontario 301
-/managed-it-services-southern-ontario /ai-governance-ontario 301
+/blog/20-southern-ontario-it-audits-2026 /blog/20-shadow-ai-audits-2026 301
+/managed-it-services-hamilton /ai-governance 301
+/managed-it-services-guelph /ai-governance 301
+/managed-it-services-kitchener-waterloo /ai-governance 301
+/managed-it-services-waterloo /ai-governance 301
+/managed-it-services-waterloo/ /ai-governance 301
+/managed-it-services-waterloo.html /ai-governance 301
+/managed-it-services-cambridge /ai-governance 301
+/managed-it-services-burlington /ai-governance 301
+/managed-it-services-southern-ontario /ai-governance 301
 /copilot-audit /safe-copilot-deployment 301
 /blog/blog-post / 301
 
@@ -28,14 +28,14 @@
 /google-reputation-pack.html /missed-call-text-back 301
 /audit-confirmed / 301
 /audit-confirmed.html / 301
-/shadow-ai-compliance-ontario /shadow-ai-prevention-ontario 301
-/shadow-ai-compliance-ontario.html /shadow-ai-prevention-ontario 301
-/ai-governance-waterloo /ai-governance-ontario 301
-/ai-governance-waterloo/ /ai-governance-ontario 301
-/ai-governance-waterloo.html /ai-governance-ontario 301
-/ai-governance-kitchener-waterloo /ai-governance-ontario 301
-/ai-governance-kitchener-waterloo/ /ai-governance-ontario 301
-/ai-governance-kitchener-waterloo.html /ai-governance-ontario 301
+/shadow-ai-compliance-ontario /shadow-ai-prevention 301
+/shadow-ai-compliance-ontario.html /shadow-ai-prevention 301
+/ai-governance-waterloo /ai-governance 301
+/ai-governance-waterloo/ /ai-governance 301
+/ai-governance-waterloo.html /ai-governance 301
+/ai-governance-kitchener-waterloo /ai-governance 301
+/ai-governance-kitchener-waterloo/ /ai-governance 301
+/ai-governance-kitchener-waterloo.html /ai-governance 301
 /ai-receptionist-for-salons /ai-receptionist-for-appointments 301
 /ai-receptionist-for-salons/ /ai-receptionist-for-appointments 301
 /ai-receptionist-for-salons.html /ai-receptionist-for-appointments 301
@@ -78,23 +78,23 @@
 /ai-receptionist-hvac-toronto.html /ai-receptionist 301
 
 # Deleted governance city page that had no redirect (was 404)
-/ai-governance-southern-ontario /ai-governance-ontario 301
-/ai-governance-southern-ontario/ /ai-governance-ontario 301
-/ai-governance-southern-ontario.html /ai-governance-ontario 301
+/ai-governance-southern-ontario /ai-governance 301
+/ai-governance-southern-ontario/ /ai-governance 301
+/ai-governance-southern-ontario.html /ai-governance 301
 
-# AI governance city pages consolidated to the Ontario page
-/ai-governance-burlington /ai-governance-ontario 301
-/ai-governance-burlington/ /ai-governance-ontario 301
-/ai-governance-burlington.html /ai-governance-ontario 301
-/ai-governance-hamilton /ai-governance-ontario 301
-/ai-governance-hamilton/ /ai-governance-ontario 301
-/ai-governance-hamilton.html /ai-governance-ontario 301
-/ai-governance-guelph /ai-governance-ontario 301
-/ai-governance-guelph/ /ai-governance-ontario 301
-/ai-governance-guelph.html /ai-governance-ontario 301
-/ai-governance-cambridge /ai-governance-ontario 301
-/ai-governance-cambridge/ /ai-governance-ontario 301
-/ai-governance-cambridge.html /ai-governance-ontario 301
+# AI governance city pages consolidated to the main governance page
+/ai-governance-burlington /ai-governance 301
+/ai-governance-burlington/ /ai-governance 301
+/ai-governance-burlington.html /ai-governance 301
+/ai-governance-hamilton /ai-governance 301
+/ai-governance-hamilton/ /ai-governance 301
+/ai-governance-hamilton.html /ai-governance 301
+/ai-governance-guelph /ai-governance 301
+/ai-governance-guelph/ /ai-governance 301
+/ai-governance-guelph.html /ai-governance 301
+/ai-governance-cambridge /ai-governance 301
+/ai-governance-cambridge/ /ai-governance 301
+/ai-governance-cambridge.html /ai-governance 301
 
 # Business-type hubs
 /for-home-services/ /for-home-services 301
@@ -103,3 +103,45 @@
 /for-appointment-businesses.html /for-appointment-businesses 301
 /for-professional-services/ /for-professional-services 301
 /for-professional-services.html /for-professional-services 301
+
+# Renamed location-specific slugs (2026-10-15). Direct 301s, no chains.
+# Plain, trailing-slash, and .html variants.
+/ai-governance-ontario /ai-governance 301
+/ai-governance-ontario/ /ai-governance 301
+/ai-governance-ontario.html /ai-governance 301
+/shadow-ai-prevention-ontario /shadow-ai-prevention 301
+/shadow-ai-prevention-ontario/ /shadow-ai-prevention 301
+/shadow-ai-prevention-ontario.html /shadow-ai-prevention 301
+/sovereign-ai-automation-ontario /sovereign-ai-automation 301
+/sovereign-ai-automation-ontario/ /sovereign-ai-automation 301
+/sovereign-ai-automation-ontario.html /sovereign-ai-automation 301
+/blog/ontario-clinical-voice-ai-phipa-compliance /blog/clinical-voice-ai-phipa-compliance 301
+/blog/ontario-clinical-voice-ai-phipa-compliance/ /blog/clinical-voice-ai-phipa-compliance 301
+/blog/ontario-clinical-voice-ai-phipa-compliance.html /blog/clinical-voice-ai-phipa-compliance 301
+/blog/20-southern-ontario-shadow-ai-audits-2026 /blog/20-shadow-ai-audits-2026 301
+/blog/20-southern-ontario-shadow-ai-audits-2026/ /blog/20-shadow-ai-audits-2026 301
+/blog/20-southern-ontario-shadow-ai-audits-2026.html /blog/20-shadow-ai-audits-2026 301
+/blog/is-your-ontario-business-pipeda-compliant /blog/is-your-business-pipeda-compliant 301
+/blog/is-your-ontario-business-pipeda-compliant/ /blog/is-your-business-pipeda-compliant 301
+/blog/is-your-ontario-business-pipeda-compliant.html /blog/is-your-business-pipeda-compliant 301
+/assets/2026-southern-ontario-cybersecurity-report.pdf /assets/2026-cybersecurity-report.pdf 301
+/assets/2026-southern-ontario-cybersecurity-report.pdf/ /assets/2026-cybersecurity-report.pdf 301
+/assets/2026-southern-ontario-cybersecurity-report.pdf.html /assets/2026-cybersecurity-report.pdf 301
+/assets/2026-pipeda-compliance-guide-ontario.pdf /assets/2026-pipeda-compliance-guide.pdf 301
+/assets/2026-pipeda-compliance-guide-ontario.pdf/ /assets/2026-pipeda-compliance-guide.pdf 301
+/assets/2026-pipeda-compliance-guide-ontario.pdf.html /assets/2026-pipeda-compliance-guide.pdf 301
+
+# Missing slash or .html variants of older place-name URLs, pointed at the final page.
+/it-support-ontario/ /ai-governance 301
+/it-support-ontario.html /ai-governance 301
+/cybersecurity-southern-ontario/ /shadow-ai-prevention 301
+/cybersecurity-southern-ontario.html /shadow-ai-prevention 301
+/it-cost-guide-ontario/ /ai-automation-roi-guide 301
+/it-cost-guide-ontario.html /ai-automation-roi-guide 301
+/microsoft-365-ontario-smbs/ /safe-copilot-deployment 301
+/microsoft-365-ontario-smbs.html /safe-copilot-deployment 301
+/blog/20-southern-ontario-it-audits-2026/ /blog/20-shadow-ai-audits-2026 301
+/blog/20-southern-ontario-it-audits-2026.html /blog/20-shadow-ai-audits-2026 301
+/managed-it-services-southern-ontario/ /ai-governance 301
+/managed-it-services-southern-ontario.html /ai-governance 301
+/shadow-ai-compliance-ontario/ /shadow-ai-prevention 301
