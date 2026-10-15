@@ -135,8 +135,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 /* Minimum 44px tap target on logo links. */
 .nav-logo, .footer-logo { display: inline-flex; align-items: center; min-height: 44px; }
 
-/* Mobile: header can wrap to ~123px; keep anchor targets clear of it. */
-@media (max-width: 480px) { :root { --tl-anchor-offset: 136px; } }
+/* Single-row header is 56px on small screens. */
+@media (max-width: 980px) { :root { --tl-anchor-offset: 72px; } }
 
 /* Tight business-type nav (home services, professional, appointments). */
 nav.tl-nav {
@@ -150,7 +150,15 @@ nav.tl-nav {
   row-gap: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
+  background: #1a2744;
+  color: #fff;
 }
+nav.tl-nav .nav-logo,
+nav.tl-nav .nav-logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+nav.tl-nav .nav-logo span { color: #f97316; }
 nav.tl-nav .nav-links {
   display: flex;
   align-items: center;
@@ -173,9 +181,24 @@ nav.tl-nav.tl-nav-light .nav-links > a,
 nav.tl-nav.tl-nav-light .nav-services > summary,
 nav.tl-nav.tl-nav-light .nav-links > a:hover,
 nav.tl-nav.tl-nav-light .nav-services > summary:hover { color: #1a2744; }
-nav.tl-nav .nav-services { position: relative; }
+nav.tl-nav .nav-services {
+  position: relative;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0;
+}
 nav.tl-nav .nav-services > summary::-webkit-details-marker { display: none; }
-nav.tl-nav .nav-services > summary { display: inline-flex; align-items: center; min-height: 44px; }
+nav.tl-nav .nav-links > a,
+nav.tl-nav .nav-phone,
+nav.tl-nav .nav-services > summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
+}
 nav.tl-nav .nav-services > summary::after { content: ""; margin-left: 6px; border: 4px solid transparent; border-top-color: currentColor; transform: translateY(2px); }
 nav.tl-nav .nav-services:not([open]) > .nav-services-menu { display: none; }
 nav.tl-nav .nav-services-menu {
@@ -183,7 +206,9 @@ nav.tl-nav .nav-services-menu {
   top: calc(100% + 6px);
   left: 0;
   z-index: 300;
-  min-width: 240px;
+  min-width: 280px;
+  max-height: min(70vh, 520px);
+  overflow-y: auto;
   background: #fff;
   border-radius: 10px;
   padding: 8px;
@@ -199,8 +224,24 @@ nav.tl-nav .nav-services-menu a {
   padding: 8px 10px;
   border-radius: 6px;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
 }
 nav.tl-nav .nav-services-menu a:hover { background: #e8f2ff; color: #1a2744; }
+nav.tl-nav .nav-services-menu a.nav-services-hub {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5a6a8a;
+}
+nav.tl-nav .nav-services-menu a.nav-services-sub {
+  padding-left: 22px;
+  font-weight: 500;
+}
 nav.tl-nav .nav-cta {
   background: #f97316;
   color: #fff;
@@ -208,17 +249,45 @@ nav.tl-nav .nav-cta {
   font-weight: 700;
   border-radius: 8px;
   padding: 10px 16px;
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
   min-height: 48px;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 nav.tl-nav .nav-cta:hover { background: #ea6c0a; color: #fff; }
 nav.tl-nav .nav-phone { color: #fff; text-decoration: none; font-weight: 700; white-space: nowrap; }
 nav.tl-nav.tl-nav-light .nav-phone { color: #1a2744; }
-@media (max-width: 800px) {
-  nav.tl-nav .nav-services-menu { position: static; min-width: 0; width: 100%; }
+/* Through tablet, keep the bar one row. Page rules that set .nav-links{width:100%}
+   otherwise drop Home/Services, the phone line, and the call button onto separate rows. */
+@media (max-width: 980px) {
+  nav.tl-nav {
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    max-height: 56px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+    row-gap: 0 !important;
+  }
+  nav.tl-nav .nav-logo { flex: 0 1 auto; min-width: 0; }
+  nav.tl-nav .nav-links {
+    width: auto !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+  }
+  nav.tl-nav .nav-links > a,
+  nav.tl-nav .nav-services > summary { white-space: nowrap !important; }
+  nav.tl-nav .nav-services-menu {
+    position: absolute !important;
+    left: 0;
+    width: min(280px, calc(100vw - 24px));
+    max-height: min(70vh, 480px);
+  }
 }
 
 /* Business-type hub cross-links. Light text for navy heroes. */
@@ -234,4 +303,201 @@ nav.tl-nav.tl-nav-light .nav-phone { color: #1a2744; }
   align-items: center;
   min-height: 44px;
   margin-right: 16px;
+}
+
+/* Under 640px the header stays one row: logo, short nav, compact call icon. */
+@media (max-width: 640px) {
+  nav.tl-nav {
+    flex-wrap: nowrap !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    max-height: 56px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+    row-gap: 0 !important;
+  }
+  nav.tl-nav .nav-logo { font-size: 1.05rem; flex: 0 1 auto; min-width: 0; }
+  nav.tl-nav .nav-links {
+    width: auto !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+  }
+  nav.tl-nav .nav-links > a,
+  nav.tl-nav .nav-services > summary {
+    font-size: 0.8rem;
+    white-space: nowrap !important;
+  }
+  nav.tl-nav .nav-phone { display: none !important; }
+  nav.tl-nav a.nav-cta[href^="tel:"] {
+    display: inline-flex !important;
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    gap: 0;
+  }
+  nav.tl-nav a.nav-cta[href^="tel:"]::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E");
+  }
+  nav.tl-nav .nav-services-menu {
+    position: absolute !important;
+    left: 0;
+    width: min(280px, calc(100vw - 24px));
+    max-height: min(70vh, 480px);
+  }
+}
+
+/* Shared footer groups. */
+footer.site-footer {
+  display: block;
+  background: #111827 !important;
+  color: rgba(255,255,255,.72);
+  padding: 40px 5% 28px;
+}
+footer.site-footer .footer-logo,
+footer.site-footer .footer-logo:hover {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+footer.site-footer .footer-logo span { color: #f97316; }
+footer.site-footer .footer-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 22px 28px;
+  margin-top: 22px;
+}
+footer.site-footer .footer-heading {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+footer.site-footer .footer-col { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+footer.site-footer .footer-col a {
+  color: rgba(255,255,255,.78);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.35;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+footer.site-footer .footer-col a:hover { color: #fff; }
+footer.site-footer .footer-address {
+  margin: 22px 0 0;
+  color: rgba(255,255,255,.55);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Keep footer text clear of the sticky call bar. */
+@media (max-width: 768px) {
+  body:has(.sticky-mobile-cta) {
+    padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
+
+/* Comparison tables scroll inside the article instead of widening the page. */
+.table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Reading text is at least 16px. Headings, hero leads, and prices keep their own sizes. */
+html { font-size: 16px; }
+body :is(p, li, td, th, dd, dt, label, figcaption, caption):not(
+  [style*="font-size:1"],
+  [style*="font-size: 1"],
+  [style*="font-size:2"],
+  [style*="font-size: 2"],
+  [style*="font-size:3"],
+  [style*="font-size: 3"],
+  .hero-sub,
+  .section-sub,
+  .lede,
+  .subhead,
+  .hub-support,
+  .hero-rotation
+) {
+  font-size: 1rem !important;
+}
+body :is(span, div)[style*="font-size:0."],
+body :is(span, div)[style*="font-size: 0."] {
+  font-size: 1rem !important;
+}
+.range-labels,
+.range-labels span,
+.output-label,
+.output-sub,
+.section-eyebrow,
+.hero-eyebrow,
+.section-label,
+.blog-meta,
+.trust-item,
+.form-card-label,
+.hero-pre,
+.offer-price-note,
+.sticky-mobile-cta span,
+.handle-list span,
+.calls-yours .fine,
+.hero-price .amt span {
+  font-size: 1rem !important;
+}
+/* Keep lead paragraphs that were already above 16px. */
+.contact-sub { font-size: 1.05rem !important; }
+.calls-yours p { font-size: 1.05rem !important; }
+.guarantee { font-size: 1.02rem !important; }
+.flat p { font-size: 1.15rem !important; }
+input, select, textarea { font-size: 1rem !important; }
+
+/* Quiz choices and any leftover option chips. */
+.hs-option {
+  min-height: 44px !important;
+  box-sizing: border-box;
+}
+
+/* Metric-matched fallbacks so a webfont swap does not reflow the page.
+   size-adjust is the width ratio of the webfont to the local face at 100px. */
+@font-face {
+  font-family: "DM Sans Fallback";
+  src: local("Arial"), local("Liberation Sans"), local("Nimbus Sans");
+  size-adjust: 103.7%;
+  ascent-override: 70%;
+  descent-override: 23%;
+  line-gap-override: 0%;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces Fallback";
+  src: local("Georgia"), local("Liberation Serif"), local("Times New Roman");
+  size-adjust: 96.9%;
+  ascent-override: 71%;
+  descent-override: 26%;
+  line-gap-override: 0%;
+  font-display: swap;
+}
+body {
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
+}
+body :is(h1, h2, h3, h4, h5, h6, .nav-logo, .footer-logo) {
+  font-family: Fraunces, "Fraunces Fallback", Georgia, serif !important;
 }
