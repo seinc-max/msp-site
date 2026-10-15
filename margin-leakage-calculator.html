@@ -329,7 +329,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
     // Risk events: Avg heavy user runs 12 sensitive prompts/mo
     const riskEvents = Math.round(activeUsers * 12);
     
-    document.getElementById('out-leakage').innerText = new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 }).format(annualLeakage);
+    document.getElementById('out-leakage').innerText = '$' + Math.round(annualLeakage).toLocaleString('en-CA');
     document.getElementById('out-cta-amt').innerText = document.getElementById('out-leakage').innerText;
     document.getElementById('out-risk-events').innerText = new Intl.NumberFormat('en-CA').format(riskEvents);
   }
