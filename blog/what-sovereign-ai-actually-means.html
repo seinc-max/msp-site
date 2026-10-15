@@ -209,56 +209,6 @@ footer {
   }
 </style>
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is sovereign AI?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sovereign AI is an architecture and governance approach that keeps your organization in control of its data, AI models, infrastructure, access, and processing rather than handing that control entirely to an external AI provider. It is not one specific product."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is data residency the same as data sovereignty?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Putting data on a server in a particular region does not automatically make it sovereign. True sovereignty concerns who can access the data, where processing occurs, who controls the infrastructure and software, what laws apply, and whether the organization can operate without being dependent on a foreign provider."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does sovereign AI mean I can never use OpenAI, Anthropic, or Google?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Sovereign AI means you decide when and what leaves your environment. A hybrid model is common: sensitive data stays in a private environment, while non-sensitive queries may use approved external models through a controlled gateway with appropriate contractual and privacy controls."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the layers of a sovereign AI implementation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A mature sovereign AI implementation has roughly eight layers: data sovereignty and classification, data residency, private AI infrastructure, containerization, tenant/data segregation, a gateway controlling external LLM access, redaction and anonymization, and auditability."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who is sovereign AI relevant for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sovereign AI is especially important for regulated organizations that handle customer records, financial information, legal documents, HR data, and other sensitive material — including law firms, accounting firms, healthcare, financial services, government, and insurance-regulated organizations."
-      }
-    }
-  ]
-}
-</script>
-
 <meta property="og:image" content="https://truelineit.com/assets/og-image.png" />
 <meta name="twitter:image" content="https://truelineit.com/assets/og-image.png" />
 <meta name="robots" content="index, follow" />
@@ -284,7 +234,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 <!-- Google tag (gtag.js) for Google Ads AW-18016129581 -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(window.__tlProd){(function(d){var a=d.createElement('script');a.async=true;a.src='https://www.googletagmanager.com/gtag/js?id=AW-18016129581';d.head.appendChild(a);var c=d.createElement('script');c.defer=true;c.src='/js/call-tracking.js';d.head.appendChild(c);})(document);gtag('js',new Date());gtag('config','AW-18016129581');}</script>
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261014-4">
+<link rel="stylesheet" href="/assets/site.css?v=20261015-1">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -292,15 +242,12 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav>
+<nav class="tl-nav">
   <a href="/" class="nav-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
-    <div class="nav-links">
-    <a href="/missed-call-text-back">Text-Back</a>
-    <a href="/ai-receptionist">AI Receptionist</a>
-    <span class="nav-gov" style="opacity:.6;font-size:.78rem;">For professional firms:</span>
-    <a href="/ai-governance-ontario" class="nav-gov">AI Governance</a>
+  <div class="nav-links">
+    <a href="/ai-governance-ontario">AI Governance</a>
+    <a href="/ai-consulting-pricing">Pricing</a>
   </div>
-
   <a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Get My Free AI Risk Assessment</a>
 </nav>
 
@@ -405,7 +352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- SOFT CTA -->
   <div style="margin:40px 0; text-align:center;">
-    <a href="/ai-exposure-score.html" class="btn-primary" style="background:var(--orange); color:#fff; border:none;">Calculate My Compliance Risk Score →</a>
+    <a href="/ai-exposure-score.html" class="btn-primary" style="background:var(--orange); color:#fff; border:none;">Get My Free Exposure Score →</a>
   </div>
 
 </section>
@@ -419,7 +366,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="gov-form-wrap" style="max-width:480px;margin:0 auto 20px;text-align:left;">
   <form id="discovery-form" class="hs-do-not-collect" novalidate>
     <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
-    <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter your business email address.</div></div>
+    <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter a valid email address.</div></div>
     <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Get My Free AI Risk Assessment</button>
     <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We reply within one business day.</p>
     <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See our <a href="/privacy">Privacy Policy</a>.</p>
@@ -436,12 +383,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var firstname=document.getElementById('firstname').value.trim();
     var email=document.getElementById('email').value.trim();
     if(!firstname||!email||!form.checkValidity()){ form.reportValidity(); return; }
-    var em=email.toLowerCase(); var lp=em.split('@')[0]||''; if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(em)||lp.length>64||em.length>254||em.indexOf('..')>-1){ var ee=document.getElementById('email-error'); if(ee){ee.textContent='Please enter a valid business email address.';ee.style.display='block';} return; }
-    // --- Free Email Domain Blocklist ---
-    var freeDomains=['gmail.com','yahoo.com','hotmail.com','outlook.com','icloud.com','live.com','msn.com','aol.com','googlemail.com','ymail.com','protonmail.com'];
-    var userEmail=email.toLowerCase();
-    var domainMatch=userEmail.indexOf('@')>-1?userEmail.split('@')[1].trim():null;
-    if(domainMatch&&freeDomains.indexOf(domainMatch)>-1){ document.getElementById('email-error').style.display='block'; return; }
+    var em=email.toLowerCase(); var lp=em.split('@')[0]||''; if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(em)||lp.length>64||em.length>254||em.indexOf('..')>-1){ var ee=document.getElementById('email-error'); if(ee){ee.textContent='Please enter a valid email address.';ee.style.display='block';} return; }
+    var userEmail=em;
     if(btn){btn.textContent='Sending...';btn.disabled=true;}
     try{
       var F=[
