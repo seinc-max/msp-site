@@ -149,3 +149,8 @@
 /managed-it-services-southern-ontario/ /ai-governance 301
 /managed-it-services-southern-ontario.html /ai-governance 301
 /shadow-ai-compliance-ontario/ /shadow-ai-prevention 301
+
+# HVAC Tune-Up Reminders removed (Ben 2026-10-15). Plain, trailing-slash, and .html variants.
+/hvac-tune-up-reminders /for-home-services 301
+/hvac-tune-up-reminders/ /for-home-services 301
+/hvac-tune-up-reminders.html /for-home-services 301
