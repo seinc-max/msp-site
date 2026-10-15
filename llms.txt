@@ -9,7 +9,7 @@
 Month-to-month, cancel anytime. 30-day money-back guarantee: if it's not right within 30 days of your first invoice and first payment, we refund your entire first invoice — the setup fee plus your first month — no questions asked.
 
 ## Add-on services (6 home-service services in total with the 2 core offers; available on their own or as an add-on)
-- Google Reviews (one service, two plans, per location): Requests $79/mo plus $99 setup; Requests + Replies $99/mo plus $99 setup. Replies is a +$20/mo upgrade, not sold on its own. https://truelineit.com/google-review-requests (replies: https://truelineit.com/google-review-replies)
+- Google Reviews (one service, two plans, per location): Requests $79/mo plus $99 setup; Requests + Replies $99/mo plus $99 setup. Replies is a +$20/mo upgrade, not sold on its own. https://truelineit.com/google-review-requests (requests and replies are one page)
 - Website Chat-to-Text: $79/mo plus $99 setup. https://truelineit.com/website-chat-to-text
 - Text-to-Pay Invoices: $49/mo plus $99 setup. https://truelineit.com/text-to-pay
 - Quote Follow-Up & Win-Back: $149/mo plus $199 setup. https://truelineit.com/quote-follow-up-win-back
@@ -19,7 +19,10 @@ For law, accounting and clinic teams that want to use AI safely, done for you: w
 - Foundation: $1,500/mo
 - Growth: $2,500/mo
 - Transform: $4,500/mo
-https://truelineit.com/ai-governance | Pricing: https://truelineit.com/ai-consulting-pricing
+https://truelineit.com/ai-governance#governance-pricing
+- Fractional AI Officer: $10,000–25,000/mo. This retainer is separate from Foundation and Growth. https://truelineit.com/fractional-ai-officer
+- AI Support Agent: https://truelineit.com/ai-support-agent (no published price on the site)
+- For Law Firms, Accountants and Advisors: https://truelineit.com/for-law-firms-accountants-and-advisors
 
 ## Contact
 Website: https://truelineit.com
