@@ -36,14 +36,6 @@
 /ai-governance-kitchener-waterloo /ai-governance-ontario 301
 /ai-governance-kitchener-waterloo/ /ai-governance-ontario 301
 /ai-governance-kitchener-waterloo.html /ai-governance-ontario 301
-/ai-receptionist-plumbers-toronto/ /ai-receptionist-plumbers-toronto 301
-/ai-receptionist-plumbers-toronto.html /ai-receptionist-plumbers-toronto 301
-/ai-receptionist-hvac-toronto/ /ai-receptionist-hvac-toronto 301
-/ai-receptionist-hvac-toronto.html /ai-receptionist-hvac-toronto 301
-/missed-call-text-back-plumbers-toronto/ /missed-call-text-back-plumbers-toronto 301
-/missed-call-text-back-plumbers-toronto.html /missed-call-text-back-plumbers-toronto 301
-/ai-receptionist-plumbers-hamilton/ /ai-receptionist-plumbers-hamilton 301
-/ai-receptionist-plumbers-hamilton.html /ai-receptionist-plumbers-hamilton 301
 /ai-receptionist-for-salons /ai-receptionist-for-appointments 301
 /ai-receptionist-for-salons/ /ai-receptionist-for-appointments 301
 /ai-receptionist-for-salons.html /ai-receptionist-for-appointments 301
@@ -55,3 +47,32 @@
 /margin-calculator /margin-leakage-calculator 301
 /margin-calculator/ /margin-leakage-calculator 301
 /margin-calculator.html /margin-leakage-calculator 301
+
+# City pages consolidated to main product pages (2026-10-14)
+/missed-call-text-back-toronto /missed-call-text-back 301
+/missed-call-text-back-toronto/ /missed-call-text-back 301
+/missed-call-text-back-toronto.html /missed-call-text-back 301
+/missed-call-text-back-mississauga /missed-call-text-back 301
+/missed-call-text-back-mississauga/ /missed-call-text-back 301
+/missed-call-text-back-mississauga.html /missed-call-text-back 301
+/missed-call-text-back-hamilton /missed-call-text-back 301
+/missed-call-text-back-hamilton/ /missed-call-text-back 301
+/missed-call-text-back-hamilton.html /missed-call-text-back 301
+/missed-call-text-back-oakville /missed-call-text-back 301
+/missed-call-text-back-oakville/ /missed-call-text-back 301
+/missed-call-text-back-oakville.html /missed-call-text-back 301
+/missed-call-text-back-burlington /missed-call-text-back 301
+/missed-call-text-back-burlington/ /missed-call-text-back 301
+/missed-call-text-back-burlington.html /missed-call-text-back 301
+/missed-call-text-back-plumbers-toronto /missed-call-text-back 301
+/missed-call-text-back-plumbers-toronto/ /missed-call-text-back 301
+/missed-call-text-back-plumbers-toronto.html /missed-call-text-back 301
+/ai-receptionist-plumbers-toronto /ai-receptionist 301
+/ai-receptionist-plumbers-toronto/ /ai-receptionist 301
+/ai-receptionist-plumbers-toronto.html /ai-receptionist 301
+/ai-receptionist-plumbers-hamilton /ai-receptionist 301
+/ai-receptionist-plumbers-hamilton/ /ai-receptionist 301
+/ai-receptionist-plumbers-hamilton.html /ai-receptionist 301
+/ai-receptionist-hvac-toronto /ai-receptionist 301
+/ai-receptionist-hvac-toronto/ /ai-receptionist 301
+/ai-receptionist-hvac-toronto.html /ai-receptionist 301
