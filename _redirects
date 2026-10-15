@@ -7,14 +7,14 @@
 /microsoft-365-ontario-smbs /safe-copilot-deployment 301
 /health-score /ai-exposure-score 301
 /blog/20-southern-ontario-it-audits-2026 /blog/20-southern-ontario-shadow-ai-audits-2026 301
-/managed-it-services-hamilton /ai-governance-hamilton 301
-/managed-it-services-guelph /ai-governance-guelph 301
+/managed-it-services-hamilton /ai-governance-ontario 301
+/managed-it-services-guelph /ai-governance-ontario 301
 /managed-it-services-kitchener-waterloo /ai-governance-ontario 301
 /managed-it-services-waterloo /ai-governance-ontario 301
 /managed-it-services-waterloo/ /ai-governance-ontario 301
 /managed-it-services-waterloo.html /ai-governance-ontario 301
-/managed-it-services-cambridge /ai-governance-cambridge 301
-/managed-it-services-burlington /ai-governance-burlington 301
+/managed-it-services-cambridge /ai-governance-ontario 301
+/managed-it-services-burlington /ai-governance-ontario 301
 /managed-it-services-southern-ontario /ai-governance-ontario 301
 /copilot-audit /safe-copilot-deployment 301
 /blog/blog-post / 301
@@ -76,3 +76,17 @@
 /ai-receptionist-hvac-toronto /ai-receptionist 301
 /ai-receptionist-hvac-toronto/ /ai-receptionist 301
 /ai-receptionist-hvac-toronto.html /ai-receptionist 301
+
+# AI governance city pages consolidated to the Ontario page
+/ai-governance-burlington /ai-governance-ontario 301
+/ai-governance-burlington/ /ai-governance-ontario 301
+/ai-governance-burlington.html /ai-governance-ontario 301
+/ai-governance-hamilton /ai-governance-ontario 301
+/ai-governance-hamilton/ /ai-governance-ontario 301
+/ai-governance-hamilton.html /ai-governance-ontario 301
+/ai-governance-guelph /ai-governance-ontario 301
+/ai-governance-guelph/ /ai-governance-ontario 301
+/ai-governance-guelph.html /ai-governance-ontario 301
+/ai-governance-cambridge /ai-governance-ontario 301
+/ai-governance-cambridge/ /ai-governance-ontario 301
+/ai-governance-cambridge.html /ai-governance-ontario 301
