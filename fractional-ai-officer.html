@@ -124,7 +124,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 .nav-links a:hover{color:#fff;}
 </style>
 <style id="tap-targets">.nav-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;box-sizing:border-box;}</style>
-<link rel="stylesheet" href="/assets/site.css?v=20261015-1">
+<link rel="stylesheet" href="/assets/site.css?v=20261015-6">
 <script>
   const urlParamsAuth = new URLSearchParams(window.location.search);
   const gclid = urlParamsAuth.get('gclid');
@@ -140,10 +140,31 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
 <nav class="tl-nav">
   <a href="/" class="nav-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
   <div class="nav-links">
-    <a href="/ai-governance">AI Governance</a>
-    <a href="/ai-consulting-pricing">Pricing</a>
+    <a href="/">Home</a>
+    <details class="nav-services">
+      <summary>Services</summary>
+      <div class="nav-services-menu">
+        <a href="/missed-call-text-back">Missed-Call Text-Back</a>
+        <a href="/ai-receptionist">AI Receptionist</a>
+        <a href="/google-review-requests">Google Review Requests</a>
+        <a class="nav-services-hub" href="/for-home-services">Home services</a>
+        <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
+        <a class="nav-services-sub" href="/text-to-pay">Text-to-Pay</a>
+        <a class="nav-services-sub" href="/website-chat-to-text">Chat-to-Text</a>
+        <a class="nav-services-sub" href="/google-review-replies">Review Replies</a>
+        <a class="nav-services-sub" href="/quote-follow-up-win-back">Quote Follow-Up</a>
+        <a class="nav-services-hub" href="/for-appointment-businesses">Appointment businesses</a>
+        <a class="nav-services-hub" href="/for-professional-services">Professional services</a>
+        <a class="nav-services-sub" href="/ai-governance">AI Governance</a>
+        <a class="nav-services-sub" href="/shadow-ai-prevention">Shadow AI Prevention</a>
+        <a class="nav-services-sub" href="/sovereign-ai-automation">Sovereign AI Automation</a>
+        <a class="nav-services-sub" href="/safe-copilot-deployment">Safe Copilot Deployment</a>
+        <a class="nav-services-sub" href="/fractional-ai-officer">Fractional AI Officer</a>
+        <a class="nav-services-sub" href="/risk-assessment">AI Risk Assessment</a>
+      </div>
+    </details>
   </div>
-  <a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Start My $1,000 Assessment</a>
+  <a href="/ai-governance#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});"><span class="cta-full">Get My Free AI Risk Assessment</span><span class="cta-short">Assessment</span></a>
 </nav>
 
 <section class="hero">
@@ -237,7 +258,7 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
   <div class="menu-grid">
     <a class="menu-card" href="#discovery-form" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">
       <h3>Your real estate brokerage's commission report is wrong the morning of close.</h3>
-      <p>The CRM and the report do not match, and the deal is supposed to close today. A data-cleanup project gets your records accurate before any AI touches them. Scoped after your AI Liability Assessment, delivered inside your retainer — not a separate service, and not a separate bill.</p>
+      <p>The CRM and the report do not match, and the deal is supposed to close today. Your records get accurate before any AI touches them. Scoped after your AI Liability Assessment, delivered inside your retainer — not a separate service, and not a separate bill.</p>
       <ul>
         <li>Your duplicate client records come out</li>
         <li>You get one source of truth for client data</li>
@@ -263,25 +284,64 @@ nav{height:auto !important;min-height:68px;flex-wrap:wrap;row-gap:8px;padding-to
     <h2>You see the work before the next invoice lands.</h2>
     <ul class="proof-list">
       <li>30-day money-back guarantee. If you are not happy, tell us within 30 days of your first invoice and first payment and we refund your entire first invoice. The 30 days are calendar days; the clock ends at the end of day (Eastern Time) on day 30.</li>
-      <li>Your IT provider's data-cleanup project or agent evaluation is scoped after the assessment, inside the retainer.</li>
+      <li>Your IT provider's work is scoped after the assessment, inside the retainer.</li>
       <li>Cancel anytime. No notice period.</li>
       <li>Every engagement on this page is scoped to your firm. Final scope and price are set in your engagement agreement.</li>
     </ul>
   </div>
 </section>
 
-<footer>
-  <a href="/" class="footer-logo">Trueline<span>.</span>IT</a>
-  <p>© 2026 Trueline IT. All rights reserved. | Mailing address: 1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
-  <div class="footer-links">
-    <a href="/missed-call-text-back">Text-Back</a>
-    <a href="/ai-receptionist">AI Receptionist</a>
-    <a href="/ai-consulting-pricing">Governance</a>
-    <a href="/about">About</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->
+<footer class="site-footer">
+  <a href="/" class="footer-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
+  <div class="footer-groups">
+    <div class="footer-col">
+      <p class="footer-heading">Services</p>
+      <a href="/missed-call-text-back">Missed-Call Text-Back</a>
+      <a href="/ai-receptionist">AI Receptionist</a>
+      <a href="/google-review-requests">Google Review Requests</a>
+      <a href="/for-home-services">Home services</a>
+      <a href="/contractor-websites">Contractor Websites</a>
+      <a href="/text-to-pay">Text-to-Pay</a>
+      <a href="/website-chat-to-text">Chat-to-Text</a>
+      <a href="/google-review-replies">Review Replies</a>
+      <a href="/quote-follow-up-win-back">Quote Follow-Up</a>
+      <a href="/for-appointment-businesses">Appointment businesses</a>
+      <a href="/for-professional-services">Professional services</a>
+      <a href="/ai-governance">AI Governance</a>
+      <a href="/shadow-ai-prevention">Shadow AI Prevention</a>
+      <a href="/sovereign-ai-automation">Sovereign AI Automation</a>
+      <a href="/safe-copilot-deployment">Safe Copilot Deployment</a>
+      <a href="/fractional-ai-officer">Fractional AI Officer</a>
+      <a href="/risk-assessment">AI Risk Assessment</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Company</p>
+      <a href="/about">About</a>
+      <a href="/ai-consulting-pricing">Pricing</a>
+      <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Tools</p>
+      <a href="/ai-automation-roi-guide">ROI guide</a>
+      <a href="/ai-exposure-score">Exposure score</a>
+      <a href="/margin-leakage-calculator">Margin calculator</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Blog</p>
+      <a href="/blog/is-your-business-pipeda-compliant">ChatGPT and PIPEDA</a>
+      <a href="/blog/what-sovereign-ai-actually-means">What sovereign AI means</a>
+      <a href="/blog/sovereign-zapier-alternatives-compliance">Zapier alternatives</a>
+      <a href="/blog/financial-integration-insurance-vulnerabilities">Cyber insurance and integrations</a>
+      <a href="/blog/20-shadow-ai-audits-2026">Shadow AI risk</a>
+      <a href="/blog/clinical-voice-ai-phipa-compliance">Secure voice AI for clinics</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Legal</p>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </div>
   </div>
+  <p class="footer-address">© 2026 Trueline IT. All rights reserved. | Mailing address: 1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
 </footer>
 </body>
 </html>
