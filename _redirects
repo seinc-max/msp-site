@@ -36,11 +36,12 @@
 /ai-governance-kitchener-waterloo /ai-governance 301
 /ai-governance-kitchener-waterloo/ /ai-governance 301
 /ai-governance-kitchener-waterloo.html /ai-governance 301
-/ai-receptionist-for-salons /ai-receptionist-for-appointments 301
-/ai-receptionist-for-salons/ /ai-receptionist-for-appointments 301
-/ai-receptionist-for-salons.html /ai-receptionist-for-appointments 301
-/ai-receptionist-for-appointments/ /ai-receptionist-for-appointments 301
-/ai-receptionist-for-appointments.html /ai-receptionist-for-appointments 301
+/ai-receptionist-for-salons /ai-receptionist 301
+/ai-receptionist-for-salons/ /ai-receptionist 301
+/ai-receptionist-for-salons.html /ai-receptionist 301
+/ai-receptionist-for-appointments /ai-receptionist 301
+/ai-receptionist-for-appointments/ /ai-receptionist 301
+/ai-receptionist-for-appointments.html /ai-receptionist 301
 /ai-risk-assessment /risk-assessment 301
 /ai-risk-assessment/ /risk-assessment 301
 /ai-risk-assessment.html /risk-assessment 301
@@ -149,3 +150,8 @@
 /managed-it-services-southern-ontario/ /ai-governance 301
 /managed-it-services-southern-ontario.html /ai-governance 301
 /shadow-ai-compliance-ontario/ /shadow-ai-prevention 301
+
+# HVAC Tune-Up Reminders removed (Ben 2026-10-15). Plain, trailing-slash, and .html variants.
+/hvac-tune-up-reminders /for-home-services 301
+/hvac-tune-up-reminders/ /for-home-services 301
+/hvac-tune-up-reminders.html /for-home-services 301
