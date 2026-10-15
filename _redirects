@@ -36,11 +36,12 @@
 /ai-governance-kitchener-waterloo /ai-governance 301
 /ai-governance-kitchener-waterloo/ /ai-governance 301
 /ai-governance-kitchener-waterloo.html /ai-governance 301
-/ai-receptionist-for-salons /ai-receptionist-for-appointments 301
-/ai-receptionist-for-salons/ /ai-receptionist-for-appointments 301
-/ai-receptionist-for-salons.html /ai-receptionist-for-appointments 301
-/ai-receptionist-for-appointments/ /ai-receptionist-for-appointments 301
-/ai-receptionist-for-appointments.html /ai-receptionist-for-appointments 301
+/ai-receptionist-for-salons /ai-receptionist 301
+/ai-receptionist-for-salons/ /ai-receptionist 301
+/ai-receptionist-for-salons.html /ai-receptionist 301
+/ai-receptionist-for-appointments /ai-receptionist 301
+/ai-receptionist-for-appointments/ /ai-receptionist 301
+/ai-receptionist-for-appointments.html /ai-receptionist 301
 /ai-risk-assessment /fractional-ai-officer 301
 /ai-risk-assessment/ /fractional-ai-officer 301
 /ai-risk-assessment.html /fractional-ai-officer 301
@@ -175,3 +176,7 @@
 /ai-support-agent.html /ai-support-agent 301
 /for-law-firms-accountants-and-advisors/ /for-law-firms-accountants-and-advisors 301
 /for-law-firms-accountants-and-advisors.html /for-law-firms-accountants-and-advisors 301
+# HVAC Tune-Up Reminders removed (Ben 2026-10-15). Plain, trailing-slash, and .html variants.
+/hvac-tune-up-reminders /for-home-services 301
+/hvac-tune-up-reminders/ /for-home-services 301
+/hvac-tune-up-reminders.html /for-home-services 301

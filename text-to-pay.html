@@ -11,12 +11,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Text-to-Pay Invoices for Plumbers & HVAC | Trueline IT</title>
-<meta name="description" content="Done-for-you text-to-pay invoice links for plumbers and HVAC. Customers pay from their phone. $49/mo. Call (647) 360-5774." />
+<title>Text-to-Pay for Home Services | Trueline IT</title>
+<meta name="description" content="Done-for-you text-to-pay for plumbers, HVAC, electricians, roofers, cleaners and landscapers. $49/mo per location plus a one-time $99 setup. Card processing fees are separate. Call (647) 360-5774." />
+<meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://truelineit.com/text-to-pay" />
+<meta property="og:title" content="Text-to-Pay for Home Services | Trueline IT" />
+<meta property="og:description" content="Done-for-you text-to-pay for plumbers, HVAC, electricians, roofers, cleaners and landscapers. $49/mo per location plus a one-time $99 setup. Card processing fees are separate. Call (647) 360-5774." />
 <meta property="og:url" content="https://truelineit.com/text-to-pay" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://truelineit.com/og-image.png" />
+<meta property="og:site_name" content="Trueline IT" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Text-to-Pay for Home Services | Trueline IT" />
+<meta name="twitter:description" content="Done-for-you text-to-pay for plumbers, HVAC, electricians, roofers, cleaners and landscapers. $49/mo per location plus a one-time $99 setup. Card processing fees are separate. Call (647) 360-5774." />
+<meta name="twitter:image" content="https://truelineit.com/og-image.png" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -32,272 +43,211 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
-
-  /* NAV */
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: var(--navy);
-    padding: 0 5%;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 68px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.18);
-  }
-  .nav-logo {
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    font-size: 1.35rem;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: -0.01em;
-  }
+  body { font-family: 'DM Sans', sans-serif; font-size: 16px; color: var(--text); background: var(--warm-white); line-height: 1.6; }
+  p, li, summary, a, label { font-size: 1rem; }
+  nav { position: sticky; top: 0; z-index: 100; background: var(--navy); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 68px; box-shadow: 0 2px 20px rgba(0,0,0,0.18); }
+  .nav-logo { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.35rem; color: #fff; text-decoration: none; }
   .nav-logo span { color: var(--orange); }
-  .nav-phone {
-    color: rgba(255,255,255,0.8);
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-decoration: none;
-    display: flex; align-items: center; gap: 7px;
-  }
+  .nav-phone { color: rgba(255,255,255,0.8); font-size: 1rem; font-weight: 500; text-decoration: none; display: flex; align-items: center; min-height: 44px; }
   .nav-phone:hover { color: #fff; }
-  .nav-phone svg { width: 15px; height: 15px; }
-
-  @media (max-width: 600px) { .nav-phone { display: none; } }
-  .nav-cta {
-    background: var(--orange);
-    color: #fff;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-decoration: none;
-    padding: 10px 22px;
-    border-radius: 6px;
-    transition: background 0.2s;
-  }
+  .nav-cta { background: var(--orange); color: #fff; font-weight: 600; font-size: 1rem; text-decoration: none; padding: 10px 22px; border-radius: 6px; white-space: nowrap; }
   .nav-cta:hover { background: #ea6c0a; }
   .nav-cta .cta-short { display: none; }
-  @media (max-width: 768px) {
-    .nav-cta .cta-full { display: none; }
-    .nav-cta .cta-short { display: inline; }
-    .nav-cta { display: inline-block; padding: 8px 16px; font-size: 0.85rem; }
-  }
-
-  /* HERO */
   .hero { background: var(--navy); padding: 60px 5% 70px; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; top: -40%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%); pointer-events: none; }
-  .hero-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
-  .hero-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+  .hero-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr minmax(0, 420px); gap: 60px; align-items: center; position: relative; }
+  .hero-eyebrow { font-size: 1rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
   .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 20px; }
   .hero h1 em { font-style: italic; color: var(--orange); }
-  .hero-sub { color: rgba(255,255,255,0.75); font-size: 1.1rem; margin-bottom: 28px; max-width: 480px; line-height: 1.65; }
+  .hero-sub { color: rgba(255,255,255,0.75); font-size: 1.1rem; margin-bottom: 28px; max-width: 520px; line-height: 1.65; }
   .hero-trust { display: flex; flex-direction: column; gap: 10px; }
-  .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
+  .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 1rem; font-weight: 500; }
   .trust-item svg { color: var(--orange); flex-shrink: 0; }
-  .hero-call {
-    display: inline-block; margin-top: 24px;
-    background: var(--orange); color: #fff; font-weight: 700; font-size: 1.05rem;
-    padding: 16px 28px; border-radius: 10px; text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .hero-call:hover { background: #ea6c0a; transform: translateY(-2px); }
-
-  /* FORM CARD */
-  .form-card { background: #fff; border-radius: 16px; padding: 36px 32px; box-shadow: 0 24px 64px rgba(0,0,0,0.22); }
-  .form-card-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
-  .form-card h2 { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
-  .form-card-sub { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px; }
-  .form-group { margin-bottom: 20px; }
-  .form-group label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-  .form-group input, .form-group select { width: 100%; padding: 13px 16px; border: 1.5px solid var(--border); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 16px; color: var(--text); background: #f7f9fc; transition: border-color 0.2s; -webkit-appearance: none; }
-  .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--blue); }
-  .btn-submit {
-    width: 100%;
-    background: var(--orange);
-    color: #fff;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1.05rem;
-    padding: 16px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-    margin-top: 4px;
-  }
-  .btn-submit:hover { background: #ea6c0a; transform: translateY(-1px); }
-  .form-note { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 10px; }
-  .form-success { display: none; text-align: center; padding: 20px 0; }
-  .form-success h4 { font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 8px; }
-  .form-success p { color: var(--text-muted); font-size: 0.95rem; }
-
-  /* SMS MOCK */
-  .mock-section { padding: 60px 5%; background: var(--warm-white); }
-  .mock-phone { max-width: 340px; margin: 24px auto 0; background: #fff; border: 1.5px solid var(--border); border-radius: 24px; padding: 24px 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.08); text-align: left; }
+  .hero-call { display: inline-flex; align-items: center; justify-content: center; margin-top: 24px; background: var(--orange); color: #fff; font-weight: 700; font-size: 1.05rem; min-height: 48px; padding: 16px 28px; border-radius: 10px; text-decoration: none; }
+  .hero-call:hover { background: #ea6c0a; }
+  .offer-card { background: #fff; border-radius: 16px; padding: 36px 32px; box-shadow: 0 24px 64px rgba(0,0,0,0.22); }
+  .offer-card-label { font-size: 1rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+  .offer-card h2 { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.25; }
+  .offer-card p { font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
+  .offer-price { font-family: 'Fraunces', serif; font-size: clamp(2.4rem, 8vw, 3.2rem); font-weight: 700; color: var(--navy); line-height: 1; margin: 16px 0 8px; }
+  .offer-price span { font-size: 1.15rem; font-weight: 500; color: var(--text-muted); }
+  .section { padding: 70px 5%; }
+  .section-inner { max-width: 1000px; margin: 0 auto; }
+  .section-inner.center, .center { text-align: center; }
+  .section-eyebrow { font-size: 1rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+  .section-title { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.2; }
+  .section-lead { font-size: 1.05rem; color: var(--text-muted); line-height: 1.65; max-width: 42rem; }
+  .center .section-lead { margin-left: auto; margin-right: auto; }
+  .sky { background: var(--sky); }
+  .warm { background: var(--warm-white); }
+  .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; text-align: left; }
+  .card-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .info-card { background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 24px 22px; min-width: 0; }
+  .info-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+  .info-card p, .info-card li { font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
+  .info-card ul { list-style: none; margin-top: 8px; }
+  .info-card li { padding: 7px 0; border-bottom: 1px solid var(--border); }
+  .info-card.yes li::before { content: '✓ '; color: var(--orange); font-weight: 700; }
+  .info-card.no li::before { content: '— '; color: var(--text-muted); font-weight: 700; }
+  .trade-name { color: var(--orange); font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+  .steps-grid { margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; text-align: center; }
+  .step-number { width: 48px; height: 48px; background: var(--navy); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.1rem; margin: 0 auto 16px; }
+  .step h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; }
+  .step p { font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
+  .section-action { margin-top: 32px; }
+  .mock-phone { max-width: 420px; margin: 28px auto 0; background: #fff; border: 1.5px solid var(--border); border-radius: 24px; padding: 24px 20px; text-align: left; }
   .mock-header { display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 16px; }
   .mock-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; }
-  .mock-name { font-size: 0.85rem; font-weight: 600; color: var(--navy); }
-  .mock-sub { font-size: 0.75rem; color: var(--text-muted); }
-  .bubble { max-width: 82%; padding: 10px 14px; border-radius: 14px; font-size: 0.88rem; margin-bottom: 10px; line-height: 1.45; }
-  .bubble-them { background: var(--sky); color: var(--navy); border-bottom-left-radius: 4px; }
-  .bubble-us { background: var(--orange); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
-  .mock-caption { text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 14px; }
-
-  /* PAIN */
-  .pain-section { padding: 70px 5%; background: var(--warm-white); }
-  .section-inner { max-width: 900px; margin: 0 auto; text-align: center; }
-  .section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
-  .section-title { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 48px; line-height: 1.2; }
-  .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
-  .pain-card { background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 28px 24px; }
-  .pain-icon { font-size: 1.6rem; margin-bottom: 14px; }
-  .pain-card h3 { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-  .pain-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
-
-  /* HOW */
-  .how-section { padding: 70px 5%; background: var(--sky); }
-  .steps-grid { max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; }
-  .step-number { width: 48px; height: 48px; background: var(--navy); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.1rem; margin: 0 auto 16px; }
-  .step h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
-  .step p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
-
-  /* AUDIENCE (who for / not for) */
-  .audience-section { padding: 70px 5%; background: var(--warm-white); }
-  .audience-grid { max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
-  .audience-card { background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 28px 26px; }
-  .audience-card.good { border-top: 4px solid var(--blue); }
-  .audience-card.bad { border-top: 4px solid var(--orange); }
-  .audience-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
-  .audience-card ul { list-style: none; }
-  .audience-card li { font-size: 0.9rem; color: var(--text-muted); padding: 6px 0; display: flex; gap: 9px; align-items: flex-start; line-height: 1.5; }
-  .audience-card li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
-  .audience-card.bad li::before { content: '✕'; color: var(--orange); }
-
-  /* INCLUDED / NOT INCLUDED */
-  .included-section { padding: 70px 5%; background: var(--sky); }
-  .included-grid { max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
-  .included-card { background: #fff; border-radius: 12px; padding: 28px 26px; }
-  .included-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
-  .included-card ul { list-style: none; }
-  .included-card li { font-size: 0.9rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border); display: flex; gap: 9px; align-items: flex-start; }
-  .included-card li:last-child { border-bottom: none; }
-  .included-card.yes li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
-  .included-card.no li::before { content: '—'; color: var(--text-muted); font-weight: 700; flex-shrink: 0; }
-
-  /* PRICING */
-  .pricing-section { padding: 70px 5%; background: var(--warm-white); }
-  .pricing-card { max-width: 560px; margin: 40px auto 0; background: #fff; border: 2px solid var(--orange); border-radius: 16px; padding: 40px; text-align: center; }
-  .pricing-badge { display: inline-block; background: var(--orange); color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
-  .pricing-amount { font-family: 'Fraunces', serif; font-size: 3.5rem; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+  .mock-name { font-weight: 600; color: var(--navy); }
+  .mock-sub { color: var(--text-muted); font-size: 1rem; }
+  .bubble { max-width: 86%; padding: 10px 14px; border-radius: 14px; margin-bottom: 10px; line-height: 1.45; }
+  .bubble-them { background: var(--sky); color: var(--navy); }
+  .bubble-us { background: var(--orange); color: #fff; margin-left: auto; }
+  .mock-caption { text-align: center; color: var(--text-muted); margin-top: 14px; }
+  .pricing-card { max-width: 560px; margin: 36px auto 0; background: #fff; border: 2px solid var(--orange); border-radius: 16px; padding: 40px 32px; text-align: center; }
+  .pricing-badge { display: inline-flex; align-items: center; min-height: 32px; background: var(--orange); color: #fff; font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px; }
+  .pricing-amount { font-family: 'Fraunces', serif; font-size: clamp(2.6rem, 10vw, 3.5rem); font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 8px; }
   .pricing-amount span { font-size: 1.2rem; font-weight: 500; color: var(--text-muted); }
-  .pricing-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 28px; }
-  .pricing-features { list-style: none; text-align: left; margin-bottom: 32px; }
-  .pricing-features li { display: flex; align-items: center; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border); }
+  .pricing-desc { font-size: 1rem; color: var(--text-muted); margin-bottom: 24px; }
+  .pricing-features { list-style: none; text-align: left; margin-bottom: 28px; }
+  .pricing-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 1rem; color: var(--text); padding: 10px 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
   .pricing-features li:last-child { border-bottom: none; }
   .pricing-features li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
-  .pricing-upsell { margin-top: 18px; font-size: 0.88rem; color: var(--text-muted); }
-  .pricing-upsell a { color: var(--blue); font-weight: 600; text-decoration: none; }
-  .btn-primary { display: inline-block; padding: 15px 32px; background: var(--orange); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1.05rem; transition: background 0.2s, transform 0.15s; box-shadow: 0 4px 20px rgba(249,115,22,0.35); }
-  .btn-primary:hover { background: #ea6c0a; transform: translateY(-2px); }
-
-  /* PROOF */
-  .proof-section { padding: 70px 5%; background: var(--warm-white); }
-  .proof-grid { max-width: 700px; margin: 32px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; text-align: left; }
-  .proof-item { display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
-  .proof-item svg { color: var(--orange); flex-shrink: 0; margin-top: 3px; }
-
-  /* FAQ */
-  .faq-section { padding: 70px 5%; background: var(--sky); }
-  .faq-list { max-width: 700px; margin: 32px auto 0; text-align: left; }
+  .guarantee { font-size: 1rem; color: var(--navy); background: var(--sky); border-radius: 10px; padding: 14px 16px; margin: 0 0 20px; text-align: left; }
+  .guarantee p { margin: 0 0 6px; }
+  .guarantee p:last-child { margin: 0; }
+  .pair { margin-top: 18px; font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
+  .pair a { color: var(--blue); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+  .btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 15px 32px; background: var(--orange); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1.05rem; }
+  .btn-primary:hover { background: #ea6c0a; }
+  .faq-list { max-width: 740px; margin: 28px auto 0; text-align: left; }
   .faq-list details { background: #fff; border: 1.5px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
-  .faq-list summary { cursor: pointer; padding: 18px 22px; font-weight: 600; font-size: 0.95rem; color: var(--navy); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-list summary { cursor: pointer; padding: 14px 22px; font-weight: 600; color: var(--navy); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 48px; }
+  .faq-list summary::-webkit-details-marker { display: none; }
   .faq-list summary::after { content: '+'; font-size: 1.3rem; color: var(--orange); font-weight: 700; }
   .faq-list details[open] summary::after { content: '−'; }
-  .faq-list details p { padding: 0 22px 18px; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
-
-  /* BOTTOM CTA */
+  .faq-list details p { padding: 0 22px 18px; color: var(--text-muted); line-height: 1.6; }
   .bottom-cta { background: var(--navy); padding: 70px 5%; text-align: center; }
   .bottom-cta h2 { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px; }
-  .bottom-cta p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 32px; }
-  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; }
-
-  /* FOOTER */
-  footer {
-    background: #111827;
-    padding: 32px 5%;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 14px;
-  }
-  .footer-logo {
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.6);
-    letter-spacing: -0.01em;
-  }
+  .bottom-cta p { color: rgba(255,255,255,0.7); font-size: 1.05rem; margin: 0 auto 28px; max-width: 38rem; }
+  footer { background: #111827; padding: 32px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+  .footer-logo { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.1rem; color: rgba(255,255,255,0.6); text-decoration: none; }
   .footer-logo span { color: var(--orange); }
-  footer p { color: rgba(255,255,255,0.4); font-size: 0.85rem; margin:0; }
-  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-  .footer-links a {
-    color: rgba(255,255,255,0.5);
-    font-size: 0.85rem; text-decoration: none;
-  }
+  footer p { color: rgba(255,255,255,0.4); font-size: 1rem; margin: 0; max-width: 36rem; }
+  .footer-links { display: flex; gap: 8px 20px; flex-wrap: wrap; }
+  .footer-links a { color: rgba(255,255,255,0.5); font-size: 1rem; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
   .footer-links a:hover { color: #fff; }
+  .sticky-mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; background: var(--orange); }
+  .sticky-mobile-cta a { color: #fff; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; width: 100%; }
+  @media (max-width: 860px) {
+    .hero-grid, .card-grid, .card-grid.two, .steps-grid { grid-template-columns: 1fr; }
+    .hero-sub { max-width: 100%; }
+  }
   @media (max-width: 768px) {
     footer { flex-direction: column; text-align: center; justify-content: center; }
-  }
-
-  /* MOBILE */
-  @media (max-width: 860px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero-sub { max-width: 100%; }
-    .pain-grid, .steps-grid, .audience-grid, .included-grid, .proof-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 480px) {
-    .hero { padding: 40px 5% 48px; }
-    .form-card { padding: 28px 20px; }
-    .pricing-card { padding: 28px 20px; }
-  }
-
-  .sticky-mobile-cta {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    background: var(--orange);
-    padding: 14px 20px;
-    text-align: center;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-  }
-  .sticky-mobile-cta a {
-    color: #fff;
-    font-weight: 700;
-    font-size: 1rem;
-    text-decoration: none;
-    letter-spacing: 0.01em;
-  }
-  @media (max-width: 768px) {
     .sticky-mobile-cta { display: block; }
     body { padding-bottom: 56px; }
+    .hero { padding: 40px 5% 48px; }
+    .offer-card, .pricing-card { padding: 28px 20px; }
   }
 </style>
-<meta property="og:title" content="Text-to-Pay Invoices for Plumbers & HVAC | Trueline IT" />
-<meta property="og:description" content="Done-for-you text-to-pay invoice links for plumbers and HVAC. Customers pay from their phone. $49/mo. Call (647) 360-5774." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://truelineit.com/text-to-pay" />
-<meta property="og:image" content="https://truelineit.com/og-image.png" />
-<meta name="twitter:image" content="https://truelineit.com/og-image.png" />
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Text-to-Pay Invoices", "serviceType": "Text-to-Pay Invoices", "description": "Done-for-you text-to-pay invoice links for plumbers and HVAC. Customers pay from their phone. $49/mo. Call (647) 360-5774.", "url": "https://truelineit.com/text-to-pay", "provider": {"@type": "Organization", "name": "Trueline IT", "url": "https://truelineit.com", "telephone": "+16473605774", "email": "hello@truelineit.com"}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Text-to-Pay",
+  "serviceType": "Text-to-pay invoices for home-service businesses",
+  "url": "https://truelineit.com/text-to-pay",
+  "description": "Done-for-you text-to-pay for plumbers, HVAC, electricians, roofers, cleaners and landscapers. You text the invoice. The customer pays by card on their phone. $49/mo per location plus a one-time $99 setup. Card processing fees are separate.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Trueline IT",
+    "url": "https://truelineit.com",
+    "telephone": "+16473605774"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "49",
+    "description": "$49/mo per location plus a one-time $99 setup. Card processing fees are separate."
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I have to set this up myself?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. We set it up and run it. You approve the wording." }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I pay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "$49/mo per location plus a one-time $99 setup. Card processing fees are separate. No contracts, cancel anytime." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the card fees?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard processing fees from the payment provider. We confirm them on the call." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which trades is this for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Plumbers, HVAC, electricians, roofers, cleaners and landscapers. House cleaners, painters and the rest of the home-service trades use the same setup." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with my scheduling software?",
+      "acceptedAnswer": { "@type": "Answer", "text": "If you already take card payments in that software, you may not need this. We tell you on the call." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the texts include an opt-out?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Texts include STOP to opt out." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this replace Text-Back?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Text-to-pay stands on its own. It also pairs with missed-call text-back when you want the missed call handled too." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cancel, and is there a guarantee?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cancel anytime. No contracts, no cancellation fees. 30-day money-back guarantee. If it's not right within 30 days of your first invoice, we refund your setup fee and first month in full. No questions asked." }
+    }
+  ]
+}
+</script>
+<script>
+  const urlParamsAuth = new URLSearchParams(window.location.search);
+  const gclid = urlParamsAuth.get('gclid');
+  if (gclid) sessionStorage.setItem('google_ads_gclid', gclid);
+</script>
 <style id="tap-targets">.sticky-mobile-cta{padding:0!important;}.sticky-mobile-cta a{display:flex!important;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;box-sizing:border-box;width:100%;}.nav-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;box-sizing:border-box;}</style>
-<!-- Google tag (gtag.js) for Google Ads AW-18016129581 -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(window.__tlProd){(function(d){var a=d.createElement('script');a.async=true;a.src='https://www.googletagmanager.com/gtag/js?id=AW-18016129581';d.head.appendChild(a);var c=d.createElement('script');c.defer=true;c.src='/js/call-tracking.js';d.head.appendChild(c);})(document);gtag('js',new Date());gtag('config','AW-18016129581');}</script>
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261015-6">
+<link rel="stylesheet" href="/assets/site.css?v=20261015-2">
+<style id="logo-row">
+  nav.tl-nav .nav-links > a, nav.tl-nav .nav-services > summary, nav.tl-nav .nav-services-menu a { font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center; }
+  nav.tl-nav .nav-links > a { min-width: 44px; padding: 0 8px; }
+  nav.tl-nav .nav-services-menu a { display: flex; padding: 10px 12px; }
+  @media (max-width: 768px) {
+    nav.tl-nav { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "logo cta" "links links"; align-items: center; column-gap: 12px; row-gap: 4px; height: auto; min-height: 68px; }
+    nav.tl-nav .nav-logo { grid-area: logo; }
+    nav.tl-nav .nav-cta { grid-area: cta; justify-self: end; }
+    nav.tl-nav .nav-links { grid-area: links; width: 100%; }
+    nav.tl-nav .nav-phone { display: none; }
+  }
+  @media (max-width: 400px) {
+    nav.tl-nav .nav-cta .cta-full { display: none; }
+    nav.tl-nav .nav-cta .cta-short { display: inline; }
+  }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- NAV -->
 <nav class="tl-nav">
   <a href="/" class="nav-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
   <div class="nav-links">
@@ -314,7 +264,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a class="nav-services-sub" href="/website-chat-to-text">Chat-to-Text</a>
         <a class="nav-services-sub" href="/quote-follow-up-win-back">Quote Follow-Up</a>
         <a class="nav-services-hub" href="/for-appointment-businesses">For Salons, Clinics & Studios</a>
-        <a class="nav-services-sub" href="/ai-receptionist-for-appointments">AI Receptionist for Appointments</a>
         <a class="nav-services-hub" href="/for-law-firms-accountants-and-advisors">For Law Firms, Accountants and Advisors</a>
         <a class="nav-services-sub" href="/ai-governance">AI Governance</a>
         <a class="nav-services-sub" href="/ai-support-agent">AI Support Agent</a>
@@ -325,38 +274,170 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
 </nav>
 
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">Text-to-Pay</div>
+      <h1>Get paid by text <em>before you leave the driveway.</em></h1>
+      <p class="hero-sub">You finished the job. The customer is still standing there. You text the invoice from your business number. They pay by card on their phone.</p>
+      <p class="hero-sub" style="color:#fff;font-weight:700;">For plumbers, HVAC, electricians, roofers, cleaners and landscapers. $49/mo per location plus a one-time $99 setup. Card processing fees are separate.</p>
+      <div class="hero-trust">
+        <div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Payment link texted after the job</div>
+        <div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Customer pays by card on their phone</div>
+        <div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> One reminder for unpaid invoices</div>
+      </div>
+      <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    <div class="offer-card">
+      <div class="offer-card-label">Your price</div>
+      <h2>One flat month. The card fee is separate.</h2>
+      <div class="offer-price">$49<span>/mo per location</span></div>
+      <p>Plus a one-time $99 setup. Card processing fees are separate. No contracts, cancel anytime. We set it up and run it. You approve the wording.</p>
+    </div>
+  </div>
+</section>
 
-<section class="hero"><div class="hero-grid"><div class="hero-copy">
-<div class="hero-eyebrow">Text-to-Pay for plumbers</div>
-<p class="hero-sub">For plumbers, HVAC, roofers, electricians, house cleaners, pest control, landscapers, movers, junk removal, painters, snow removal, window cleaners, general contractors, pool service and septic service.</p>
-<h1>Get paid by text <em>before you leave the driveway.</em></h1>
-<p class="hero-sub">We set up payment links your techs text to the customer when the job is done. They tap, pay by card, and you stop chasing invoices.</p>
-<p class="hero-sub" style="color:#fff;font-weight:700;margin-bottom:20px;">$49/mo plus a one-time $99 setup. Card processing fees are separate. No contracts, cancel anytime.</p>
-<div class="hero-trust"><div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Payment link texted after the job</div><div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Customer pays by card on their phone</div><div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Reminder for unpaid invoices</div></div>
-<a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a>
+<section class="section warm">
+  <div class="section-inner center">
+    <div class="section-eyebrow">How it looks</div>
+    <h2 class="section-title">The job is done. The invoice is paid.</h2>
+    <p class="section-lead">You approve every message before it goes live. The text comes from your business number, with STOP so the customer can opt out.</p>
+    <div class="mock-phone">
+      <div class="mock-header"><div class="mock-avatar">T</div><div><div class="mock-name">Northside Heating</div><div class="mock-sub">Your business number</div></div></div>
+      <div class="bubble bubble-us">Hi Mark, thanks for choosing Northside Heating. Your invoice for today's furnace repair is ready: [pay link]. Reply STOP to opt out.</div>
+      <div class="bubble bubble-them">Paid, thanks!</div>
+      <div class="bubble bubble-us">Got it, thank you. Your receipt is on the way.</div>
+    </div>
+    <p class="mock-caption">Example wording. You approve it before it goes live.</p>
+    <div class="section-action">
+      <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+  </div>
+</section>
+
+<section class="section sky">
+  <div class="section-inner center">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">You call. We set up the links. You get paid.</h2>
+    <div class="steps-grid">
+      <div class="step"><div class="step-number">1</div><h3>You call</h3><p>You tell us how you invoice today, whether that is a plumber's ticket, an HVAC repair, or a cleaning visit.</p></div>
+      <div class="step"><div class="step-number">2</div><h3>We set up the links</h3><p>We connect a card payment account and the text wording you approve.</p></div>
+      <div class="step"><div class="step-number">3</div><h3>You get paid</h3><p>You send the link after the job. One reminder goes to unpaid invoices.</p></div>
+    </div>
+    <div class="section-action">
+      <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+  </div>
+</section>
+
+<section class="section warm">
+  <div class="section-inner">
+    <div class="center">
+      <div class="section-eyebrow">Your trade</div>
+      <h2 class="section-title">The invoice goes out while you are still on site.</h2>
+      <p class="section-lead">Home services. You name the job. The customer pays from the text.</p>
+    </div>
+    <div class="card-grid">
+      <article class="info-card"><p class="trade-name">Plumbers</p><h3>The drain call</h3><p>You clear the drain. Before you pull out of the driveway, the homeowner pays the invoice on their phone.</p></article>
+      <article class="info-card"><p class="trade-name">HVAC</p><h3>The furnace repair</h3><p>The heat is back on. You text the invoice for the repair. They tap, pay by card, and you are done chasing it.</p></article>
+      <article class="info-card"><p class="trade-name">Electricians</p><h3>The panel job</h3><p>You finish the panel. The customer is still in the kitchen. The pay link is the next text they open.</p></article>
+      <article class="info-card"><p class="trade-name">Roofers</p><h3>The leak repair</h3><p>You come down the ladder. The invoice for the leak repair is already in their messages.</p></article>
+      <article class="info-card"><p class="trade-name">Cleaners</p><h3>The weekly clean</h3><p>You lock the door on the way out. The house cleaner invoice is a text, not a cheque you wait on.</p></article>
+      <article class="info-card"><p class="trade-name">Landscapers</p><h3>The spring cleanup</h3><p>The yard is done. You text the invoice from the truck. They pay by card before you reach the next house.</p></article>
+    </div>
+    <div class="section-action center">
+      <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+  </div>
+</section>
+
+<section class="section sky">
+  <div class="section-inner center">
+    <div class="section-eyebrow">What you get</div>
+    <h2 class="section-title">What's included, and what isn't.</h2>
+    <div class="card-grid two">
+      <article class="info-card yes">
+        <h3>What's included</h3>
+        <ul>
+          <li>Text payment links from your business number</li>
+          <li>One reminder on unpaid invoices</li>
+          <li>Wording you approve</li>
+          <li>Setup of your card payment account</li>
+          <li>Monthly review call</li>
+        </ul>
+      </article>
+      <article class="info-card no">
+        <h3>What's not included</h3>
+        <ul>
+          <li>Card processing fees</li>
+          <li>Financing or loans</li>
+          <li>Replacing invoicing in your current scheduling or field-service software</li>
+          <li>Collections on overdue accounts</li>
+        </ul>
+      </article>
+    </div>
+    <div class="section-action">
+      <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+  </div>
+</section>
+
+<section class="section warm">
+  <div class="section-inner center">
+    <div class="section-eyebrow">Price</div>
+    <h2 class="section-title">$49 a month per location. $99 setup.</h2>
+    <div class="pricing-card">
+      <div class="pricing-badge">Text-to-Pay</div>
+      <div class="pricing-amount">$49<span>/mo per location</span></div>
+      <p class="pricing-desc">Plus a one-time $99 setup. Card processing fees are separate. No contracts, cancel anytime.</p>
+      <div class="guarantee">
+        <p><strong>Flat per location, plus card processing fees.</strong></p>
+        <p><strong>Cancel anytime.</strong> No contracts, no cancellation fees.</p>
+        <p>30-day money-back guarantee. If it's not right within 30 days of your first invoice, we refund your setup fee and first month in full. No questions asked.</p>
+      </div>
+      <ul class="pricing-features">
+        <li>Text payment links from your business number</li>
+        <li>One reminder on unpaid invoices</li>
+        <li>Wording you approve</li>
+        <li>Setup of your card payment account</li>
+        <li>Monthly review call</li>
+      </ul>
+      <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="pair">Text-to-pay stands on its own. It also <a href="/missed-call-text-back">pairs with missed-call text-back</a> when you want the missed call handled too.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section sky">
+  <div class="section-inner center">
+    <div class="section-eyebrow">Questions</div>
+    <h2 class="section-title">Common questions</h2>
+    <div class="faq-list">
+      <details><summary>Do I have to set this up myself?</summary><p>No. We set it up and run it. You approve the wording.</p></details>
+      <details><summary>What do I pay?</summary><p>$49/mo per location plus a one-time $99 setup. Card processing fees are separate. No contracts, cancel anytime.</p></details>
+      <details><summary>What are the card fees?</summary><p>Standard processing fees from the payment provider. We confirm them on the call.</p></details>
+      <details><summary>Which trades is this for?</summary><p>Plumbers, HVAC, electricians, roofers, cleaners and landscapers. House cleaners, painters and the rest of the home-service trades use the same setup.</p></details>
+      <details><summary>Does it work with my scheduling software?</summary><p>If you already take card payments in that software, you may not need this. We tell you on the call.</p></details>
+      <details><summary>Do the texts include an opt-out?</summary><p>Yes. Texts include STOP to opt out.</p></details>
+      <details><summary>Does this replace Text-Back?</summary><p>No. Text-to-pay stands on its own. It also pairs with missed-call text-back when you want the missed call handled too.</p></details>
+      <details><summary>How do I cancel, and is there a guarantee?</summary><p>Cancel anytime. No contracts, no cancellation fees. 30-day money-back guarantee. If it's not right within 30 days of your first invoice, we refund your setup fee and first month in full. No questions asked.</p></details>
+    </div>
+    <div class="section-action">
+      <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+  </div>
+</section>
+
+<section class="bottom-cta">
+  <h2>Stop chasing invoices.</h2>
+  <p>Call (647) 360-5774. Tell us your trade. $49/mo per location plus a one-time $99 setup. Card processing fees are separate.</p>
+  <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+</section>
+
+<div class="sticky-mobile-cta">
+  <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
 </div>
-<div class="form-card"><div class="form-card-label">Available on its own or as an add-on.</div><h2>How many invoices are you chasing right now?</h2><p class="form-card-sub">Call and we'll look at how you invoice today.</p><div style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. We answer during business hours; leave a message and we call back within one business day.</p></div></div>
-</div></section>
-<section class="mock-section"><div class="section-inner"><div class="section-eyebrow">How it looks</div><h2 class="section-title">The job is done. The invoice is paid.</h2>
-<div class="mock-phone"><div class="mock-header"><div class="mock-avatar">T</div><div><div class="mock-name">Northside Heating & Cooling</div><div class="mock-sub">Your business number</div></div></div><div class="bubble bubble-us">Hi Mark, thanks for choosing Northside Heating. Your invoice for today's furnace repair is ready: [pay link]. Reply STOP to opt out.</div><div class="bubble bubble-them">Paid, thanks!</div><div class="bubble bubble-us">Got it, thank you. Your receipt is on the way.</div></div>
-<p class="mock-caption">Example wording. You approve every message before it goes live.</p></div></section>
-<section class="pain-section"><div class="section-inner"><div class="section-eyebrow">Sound familiar?</div><h2 class="section-title">Finished work, unpaid invoices</h2><div class="pain-grid"><div class="pain-card"><div class="pain-icon">🧾</div><h3>Chasing payments</h3><p>Invoices sit unpaid for weeks while you make calls.</p></div><div class="pain-card"><div class="pain-icon">💳</div><h3>Cheques and e-transfers</h3><p>Customers want to pay by card on the spot.</p></div><div class="pain-card"><div class="pain-icon">⏱️</div><h3>Admin after hours</h3><p>Evenings go to billing instead of family.</p></div></div></div></section>
-<section class="how-section"><div class="section-inner"><div class="section-eyebrow">How it works</div><h2 class="section-title">We set it up and run it in three steps</h2><div class="steps-grid"><div class="step"><div class="step-number">1</div><h3>Call us</h3><p>We look at how you invoice and get paid today.</p></div><div class="step"><div class="step-number">2</div><h3>We set up the links</h3><p>We connect a card payment account and the text wording you approve.</p></div><div class="step"><div class="step-number">3</div><h3>You get paid</h3><p>Techs send the link after the job. One reminder goes to unpaid invoices.</p></div></div><div style="margin-top:36px;"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a></div></div></section>
-<section class="included-section"><div class="section-inner"><div class="section-eyebrow">What you get</div><h2 class="section-title">What's included, and what isn't</h2><div class="included-grid">
-<div class="included-card yes"><h3>What's included</h3><ul><li>Text payment links from your business number</li><li>One reminder on unpaid invoices</li><li>Wording you approve</li><li>Setup of your card payment account</li><li>Monthly review call</li></ul></div>
-<div class="included-card no"><h3>What's not included</h3><ul><li>Card processing fees</li><li>Financing or loans</li><li>Replacing invoicing in your current scheduling or field-service software</li><li>Collections on overdue accounts</li></ul></div></div></div></section>
-<section class="pricing-section"><div class="section-inner"><div class="section-eyebrow">Flat monthly fee</div><h2 class="section-title">One price. Done for you.</h2>
-<div class="pricing-card"><div class="pricing-badge">Text-to-Pay</div><div class="pricing-amount">$49<span>/mo per location</span></div>
-<p class="pricing-desc">Plus a one-time $99 setup. Available on its own or as an add-on. No contracts, cancel anytime.</p>
-<div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:0 0 20px;"><p style="margin:0 0 6px;"><strong>Flat per location, plus card processing fees.</strong></p><p style="margin:0 0 6px;"><strong>Cancel anytime.</strong> No contracts, no cancellation fees.</p><p style="margin:0;">30-day money-back guarantee. If it's not right within 30 days of your first invoice, we refund your setup fee and first month in full. No questions asked.</p></div>
-<ul class="pricing-features"><li>Text payment links from your business number</li><li>One reminder on unpaid invoices</li><li>Wording you approve</li><li>Setup of your card payment account</li><li>Monthly review call</li></ul><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a>
-<p class="pricing-upsell">Pairs with Missed-Call Text-Back or AI Receptionist.</p></div></div></section>
-<section class="faq-section"><div class="section-inner"><div class="section-eyebrow">Questions</div><h2 class="section-title">Common questions</h2><div class="faq-list"><details><summary>Do I have to set this up myself?</summary><p>No. We set it up and run it.</p></details><details><summary>What are the card fees?</summary><p>Standard processing fees from the payment provider. We confirm them on the call.</p></details><details><summary>Does it work with your current scheduling or field-service software?</summary><p>If you already use their payments, you may not need this. We'll tell you honestly.</p></details><details><summary>Do the texts include an opt-out?</summary><p>Yes. Texts include STOP to opt out.</p></details>
-<details><summary>How do I cancel?</summary><p>Cancel anytime. No contracts, no cancellation fees.</p></details>
-<details><summary>Is there a money-back guarantee?</summary><p>30-day money-back guarantee. If it's not right within 30 days of your first invoice, we refund your setup fee and first month in full. No questions asked.</p></details></div></div></section>
-<section class="bottom-cta"><h2>Stop chasing invoices.</h2><p>Call and we'll walk through your numbers with you.</p><div class="cta-row"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a></div></section>
-<div class="sticky-mobile-cta"><a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">📞 Call (647) 360-5774</a></div>
-<!-- FOOTER -->
+
 <footer class="site-footer">
   <a href="/" class="footer-logo" style="text-decoration:none;">Trueline<span>.</span>IT</a>
   <div class="footer-groups">
@@ -371,7 +452,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="/website-chat-to-text">Chat-to-Text</a>
       <a href="/quote-follow-up-win-back">Quote Follow-Up</a>
       <a href="/for-appointment-businesses">For Salons, Clinics & Studios</a>
-      <a href="/ai-receptionist-for-appointments">AI Receptionist for Appointments</a>
       <a href="/for-law-firms-accountants-and-advisors">For Law Firms, Accountants and Advisors</a>
       <a href="/ai-governance">AI Governance</a>
       <a href="/ai-support-agent">AI Support Agent</a>
