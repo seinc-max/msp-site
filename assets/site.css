@@ -298,6 +298,10 @@ nav.tl-nav .nav-services-group + .nav-services-group {
   padding-top: 4px;
   border-top: 1px solid #dde6f5;
 }
+nav.tl-nav .nav-services-minor a.nav-services-sub {
+  font-size: .9rem;
+  opacity: .85;
+}
 nav.tl-nav .nav-services-menu a {
   color: #1a2744;
   text-decoration: none;
