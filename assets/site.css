@@ -705,9 +705,13 @@ nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: none; }
   nav.tl-nav a.nav-cta.gov-form-cta .cta-full { display: none; }
   nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: inline; }
   nav.tl-nav a.nav-cta.gov-form-cta {
-    padding: 8px 12px;
+    padding: 6px 8px;
     min-height: 44px;
-    font-size: 0.85rem;
+    max-width: 9.6rem;
+    font-size: 0.72rem;
+    line-height: 1.15;
+    white-space: normal;
+    text-align: center;
   }
 }
 
