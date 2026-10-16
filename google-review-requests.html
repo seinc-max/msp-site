@@ -289,5 +289,13 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   <p class="footer-address">1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
   <p class="footer-copy">© 2026 Trueline IT. All rights reserved.</p>
 </footer>
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
 </body>
 </html>

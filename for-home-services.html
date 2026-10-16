@@ -250,5 +250,13 @@ a.hub-card:hover{border-color:#f97316;}
   }, 5000);
 })();
 </script>
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
 </body>
 </html>
