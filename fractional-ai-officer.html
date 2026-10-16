@@ -160,7 +160,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       <div class="form-card-label">For your firm</div>
       <h2>Start My $1,000 Assessment</h2>
       <p class="form-card-sub">Send your name and email. We reply within one business day.</p>
-      <div class="gov-form-wrap" style="max-width:480px;margin:0 auto 20px;text-align:left;">
+      <div class="gov-form-wrap" id="assessment" style="max-width:480px;margin:0 auto 20px;text-align:left;scroll-margin-top:96px;">
         <form id="discovery-form" class="hs-do-not-collect" novalidate>
           <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
           <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter a valid email address.</div></div>
@@ -210,7 +210,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   </div>
 </section>
 
-<section class="pricing-section" id="assessment">
+<section class="pricing-section">
   <div class="section-inner">
     <div class="section-eyebrow">First step</div>
     <h2 class="section-title">Accounting practices are closing the books when the trial balance hits a public chatbot.</h2>
