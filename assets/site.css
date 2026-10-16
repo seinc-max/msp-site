@@ -807,3 +807,6 @@ main:focus{outline:none}
 /* Minor audience strip (law/accounting de-emphasis). */
 .minor-audience { max-width: 1100px; margin: 0 auto; padding: 20px 6%; text-align: center; color: #42506e; font-size: .95rem; }
 .minor-audience a { color: #1a2744; font-weight: 600; text-decoration: underline; }
+
+/* Salon section anchors on shared service pages. */
+#salons, #salon-examples { scroll-margin-top: 88px; }
