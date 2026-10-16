@@ -765,7 +765,7 @@ nav.tl-nav .nav-cta:active {
   border-radius: 6px;
 }
 /* Orange badges/labels with white text (Ben, 2026-10-16 3:30 PM ET): #c2410c on #fff = 5.18:1. Background only. */
-.pricing-badge, .bubble-us, .compare-table th.hl {
+.pricing-badge, .bubble-us:not(.mock-phone .bubble-us), .compare-table th.hl {
   background: var(--tl-action-primary) !important;
 }
 /* Orange text on light backgrounds (Ben, 2026-10-16 3:31 PM ET): #c2410c on #fff = 5.18:1, hover #9a3412 = 7.31:1.
@@ -788,7 +788,9 @@ a[style*="color: var(--orange)"]:not([style*="background"]):hover, a[style*="col
 a[style*="color: #f97316"]:not([style*="background"]):hover, a[style*="color:#f97316"]:not([style*="background"]):hover,
 .hub-eyebrow a:hover, .hub-kicker a:hover { color: #9a3412 !important; }
 /* Dark/navy contexts keep brand orange (passes on navy). */
-:is(.hero, .hub-hero, .bottom-cta, nav, footer, [class*="dark"], [class*="navy"]) :is(.section-eyebrow, .form-card-label, .card-label, .trade-name, .hub-eyebrow, .hub-eyebrow a, .hub-kicker a, .hero-price .amt, .offer-price, [style*="color: var(--orange)"], [style*="color:var(--orange)"], [style*="color: #f97316"], [style*="color:#f97316"]),
+:is(.hero, .hub-hero, .bottom-cta, nav, footer, [class*="dark"], [class*="navy"]) :is(.section-eyebrow, .trust-item svg, .proof-item svg, .card-label, .trade-name, .hub-eyebrow, .hub-eyebrow a, .hub-kicker a, .hero-price .amt, .offer-price, [style*="color: var(--orange)"], [style*="color:var(--orange)"], [style*="color: #f97316"], [style*="color:#f97316"]),
 :is(.hero, .hub-hero, .bottom-cta, nav, footer, [class*="dark"], [class*="navy"]) :is(.hub-eyebrow a, .hub-kicker a):hover {
   color: #f97316 !important;
 }
+/* Blog comparison cells: orange text on #fff7ed (#c2410c = 4.88:1). Sentinel 0de4fb0 fix. */
+td[style*="color: #f97316"][style*="background-color: #fff7ed"] { color: #c2410c !important; }
