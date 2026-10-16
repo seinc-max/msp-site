@@ -715,6 +715,12 @@ nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: none; }
   }
 }
 
+/* Unstyled in-content anchors use the shared link colour, not the browser default.
+   Nav, footer, buttons, and any class that sets its own colour still win. */
+a {
+  color: var(--tl-link);
+}
+
 body {
   margin: 0;
   font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
