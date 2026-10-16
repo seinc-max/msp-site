@@ -716,7 +716,7 @@ nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: none; }
 }
 
 /* In-content text links: prose, footer, and legal. Buttons keep their own colour. */
-:is(p, li, td, dd, figcaption, footer.site-footer .footer-col, footer.site-footer .footer-contact):not(.not-you, .hub-kicker, .hub-eyebrow, .after-hours, .hero-sub, .hub-support) a:not(.btn-primary, .hub-cta, .nav-cta, .calc-cta, .hero-call, .hs-cta, .footer-logo, .menu-card) {
+:is(p, li, td, dd, figcaption):not(.not-you, .footer-contact, .hub-kicker, .hub-eyebrow, .after-hours, .hero-sub, .hub-support) a:not(.btn-primary, .hub-cta, .nav-cta, .calc-cta, .hero-call, .hs-cta, .footer-logo, .menu-card) {
   color: var(--tl-link);
 }
 
