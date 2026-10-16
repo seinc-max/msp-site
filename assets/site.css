@@ -751,3 +751,16 @@ nav.tl-nav .nav-cta:hover, nav.tl-nav .nav-cta:focus-visible {
 nav.tl-nav .nav-cta:active {
   background: var(--tl-action-primary-active) !important;
 }
+/* Sticky call/consult bar: hover, pressed and visible focus ring (Sentinel heads-up, 2026-10-16). */
+.sticky-mobile-cta:hover, .sticky-mobile-cta:focus-within {
+  background: var(--tl-action-primary-hover) !important;
+}
+.sticky-mobile-cta:active, .sticky-mobile-cta:has(a:active, button:active) {
+  background: var(--tl-action-primary-active) !important;
+}
+.sticky-mobile-cta :is(a, button):focus-visible {
+  outline: 3px solid #fff !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 5px #1a2744 !important;
+  border-radius: 6px;
+}
