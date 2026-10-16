@@ -53,9 +53,9 @@
   --tl-text-muted: #5a6a8a;
   --tl-text-on-dark: var(--tl-color-white);
   --tl-text-on-action: var(--tl-color-white);
-  --tl-action-primary: var(--tl-color-orange);
-  --tl-action-primary-hover: #ea6a0a;
-  --tl-action-primary-active: #d95f06;
+  --tl-action-primary: #c2410c;
+  --tl-action-primary-hover: #9a3412;
+  --tl-action-primary-active: #7c2d12;
   --tl-action-secondary: var(--tl-color-blue);
   --tl-link: var(--tl-color-blue);
   --tl-success: #15803d;
@@ -726,4 +726,28 @@ body {
 }
 body :is(h1, h2, h3, h4, h5, h6, .nav-logo, .footer-logo) {
   font-family: Fraunces, "Fraunces Fallback", Georgia, serif !important;
+}
+
+/* Orange button contrast fix (Ben, 2026-10-16): darker orange keeps white text at WCAG AA.
+   #c2410c on #fff = 5.18:1; hover #9a3412 = 7.31:1. Color only; layout, wording, links unchanged. */
+.btn-primary, .btn-submit, .hero-call, .hub-cta, .hero .btn, .hs-btn, .hs-cta, .calc-cta,
+.offer-card-popular .btn-offer, nav.tl-nav .nav-cta, .sticky-mobile-cta {
+  background: var(--tl-action-primary) !important;
+  border-color: var(--tl-action-primary) !important;
+  color: #fff !important;
+}
+.btn-primary:hover, .btn-primary:focus-visible, .btn-submit:hover, .btn-submit:focus-visible,
+.hero-call:hover, .hero-call:focus-visible, .hub-cta:hover, .hub-cta:focus-visible,
+.hero .btn:hover, .hero .btn:focus-visible, .hs-btn:hover, .hs-btn:focus-visible,
+.hs-cta:hover, .hs-cta:focus-visible, .calc-cta:hover, .calc-cta:focus-visible,
+.offer-card-popular .btn-offer:hover, .offer-card-popular .btn-offer:focus-visible,
+nav.tl-nav .nav-cta:hover, nav.tl-nav .nav-cta:focus-visible {
+  background: var(--tl-action-primary-hover) !important;
+  border-color: var(--tl-action-primary-hover) !important;
+  color: #fff !important;
+}
+.btn-primary:active, .btn-submit:active, .hero-call:active, .hub-cta:active, .hero .btn:active,
+.hs-btn:active, .hs-cta:active, .calc-cta:active, .offer-card-popular .btn-offer:active,
+nav.tl-nav .nav-cta:active {
+  background: var(--tl-action-primary-active) !important;
 }
