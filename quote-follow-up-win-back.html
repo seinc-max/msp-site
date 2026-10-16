@@ -162,6 +162,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://truelineit.com/quote-follow-up-win-back" />
 <meta property="og:image" content="https://truelineit.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://truelineit.com/og-image.png" />
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Quote Follow-Up & Win-Back", "serviceType": "Quote Follow-Up & Win-Back", "description": "Quote follow-up and past-customer win-back texts for plumbers, HVAC, roofers and the rest of the trades. It is set up and run for you. Call (647) 360-5774.", "url": "https://truelineit.com/quote-follow-up-win-back", "provider": {"@type": "Organization", "name": "Trueline IT", "url": "https://truelineit.com", "telephone": "+16473605774", "email": "hello@truelineit.com"}}</script>
 
@@ -274,5 +275,13 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   <p class="footer-address">1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
   <p class="footer-copy">© 2026 Trueline IT. All rights reserved.</p>
 </footer>
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
 </body>
 </html>
