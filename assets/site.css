@@ -765,7 +765,7 @@ nav.tl-nav .nav-cta:active {
   border-radius: 6px;
 }
 /* Orange badges/labels with white text (Ben, 2026-10-16 3:30 PM ET): #c2410c on #fff = 5.18:1. Background only. */
-.pricing-badge, .bubble-us:not(.mock-phone .bubble-us), .compare-table th.hl {
+.pricing-badge, .bubble-us:not(.mock-phone[style*="max-width:520px"] .bubble-us), .compare-table th.hl {
   background: var(--tl-action-primary) !important;
 }
 /* Orange text on light backgrounds (Ben, 2026-10-16 3:31 PM ET): #c2410c on #fff = 5.18:1, hover #9a3412 = 7.31:1.
