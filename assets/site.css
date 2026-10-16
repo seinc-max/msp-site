@@ -794,3 +794,8 @@ a[style*="color: #f97316"]:not([style*="background"]):hover, a[style*="color:#f9
 }
 /* Blog comparison cells: orange text on #fff7ed (#c2410c = 4.88:1). Sentinel 0de4fb0 fix. */
 td[style*="color: #f97316"][style*="background-color: #fff7ed"] { color: #c2410c !important; }
+
+/* Batch B: skip link */
+.skip-link{position:absolute;left:8px;top:-100px;z-index:10000;padding:12px 16px;background:#1a2744;color:#fff;font-weight:600;border-radius:6px;text-decoration:none}
+.skip-link:focus{top:8px;outline:3px solid #f97316;outline-offset:2px}
+main:focus{outline:none}
