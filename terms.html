@@ -669,6 +669,9 @@ details[open] summary::after{ content: '−'; }
 .offer-pricing{
       grid-template-columns: 1fr;
     }}
+/* a11y: inline contact links need a non-colour cue (axe link-in-text-block) */
+p > a[href="mailto:hello@truelineit.com"][style*="text-decoration: none"],
+p > a[href="tel:+16473605774"][style*="text-decoration: none"] { text-decoration: underline !important; text-underline-offset: 2px; }
 </style>
 
     <script>
