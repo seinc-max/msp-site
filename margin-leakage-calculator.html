@@ -321,10 +321,21 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </footer>
 
 <script>
-  function calculateMargin() {
-    const employees = parseInt(document.getElementById('employees').value) || 0;
-    const salary = parseInt(document.getElementById('salary').value) || 0;
-    const adoptionPct = parseInt(document.getElementById('ai-adoption').value) || 0;
+  function calculateMargin(e) {
+    const writeBack = !!(e && e.type === 'change');
+    // Clamp each input to its own min/max attributes; blank stays 0 (no output).
+    // writeBack is true only on 'change' (blur/Enter), so typing "120000" isn't snapped at "1".
+    function readClamped(id) {
+      const el = document.getElementById(id);
+      const n = parseInt(el.value);
+      if (isNaN(n) || n <= 0) return 0;
+      const clamped = Math.min(Math.max(n, parseInt(el.min)), parseInt(el.max));
+      if (writeBack && clamped !== n) el.value = clamped;
+      return clamped;
+    }
+    const employees = readClamped('employees');
+    const salary = readClamped('salary');
+    const adoptionPct = readClamped('ai-adoption');
     
     document.getElementById('adoption-val').innerText = adoptionPct + '%';
     
@@ -333,10 +344,10 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     const activeUsers = employees * (adoptionPct / 100);
     const timeSavedMultiplier = 0.0625; 
     
-    const annualLeakage = activeUsers * salary * timeSavedMultiplier;
+    const annualLeakage = Math.max(0, activeUsers * salary * timeSavedMultiplier);
     
     // Risk events: Avg heavy user runs 12 sensitive prompts/mo
-    const riskEvents = Math.round(activeUsers * 12);
+    const riskEvents = Math.max(0, Math.round(activeUsers * 12));
     
     document.getElementById('out-leakage').innerText = '$' + Math.round(annualLeakage).toLocaleString('en-CA');
     document.getElementById('out-cta-amt').innerText = document.getElementById('out-leakage').innerText;
@@ -346,6 +357,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   document.getElementById('employees').addEventListener('input', calculateMargin);
   document.getElementById('salary').addEventListener('input', calculateMargin);
   document.getElementById('ai-adoption').addEventListener('input', calculateMargin);
+  document.getElementById('employees').addEventListener('change', calculateMargin);
+  document.getElementById('salary').addEventListener('change', calculateMargin);
   
   // Init
   calculateMargin();
