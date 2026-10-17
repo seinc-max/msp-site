@@ -322,9 +322,16 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script>
   function calculateMargin() {
-    const employees = parseInt(document.getElementById('employees').value) || 0;
-    const salary = parseInt(document.getElementById('salary').value) || 0;
-    const adoptionPct = parseInt(document.getElementById('ai-adoption').value) || 0;
+    // Clamp each input to its own min/max attributes; blank stays 0 (no output).
+    function readClamped(id) {
+      const el = document.getElementById(id);
+      const n = parseInt(el.value);
+      if (isNaN(n) || n <= 0) return 0;
+      return Math.min(Math.max(n, parseInt(el.min)), parseInt(el.max));
+    }
+    const employees = readClamped('employees');
+    const salary = readClamped('salary');
+    const adoptionPct = readClamped('ai-adoption');
     
     document.getElementById('adoption-val').innerText = adoptionPct + '%';
     
@@ -333,10 +340,10 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     const activeUsers = employees * (adoptionPct / 100);
     const timeSavedMultiplier = 0.0625; 
     
-    const annualLeakage = activeUsers * salary * timeSavedMultiplier;
+    const annualLeakage = Math.max(0, activeUsers * salary * timeSavedMultiplier);
     
     // Risk events: Avg heavy user runs 12 sensitive prompts/mo
-    const riskEvents = Math.round(activeUsers * 12);
+    const riskEvents = Math.max(0, Math.round(activeUsers * 12));
     
     document.getElementById('out-leakage').innerText = '$' + Math.round(annualLeakage).toLocaleString('en-CA');
     document.getElementById('out-cta-amt').innerText = document.getElementById('out-leakage').innerText;
