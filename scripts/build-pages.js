@@ -6,7 +6,7 @@
  * The {{cta}} slot is call or consultation, taken from that page's original nav button.
  * Edit the footer in templates/partials/footer.html.
  * Edit a call bar in templates/partials/sticky-call.html or sticky-assessment.html.
- * Edit the phone conversation look in templates/partials/convo.css (markup is renderConvo below).
+ * Edit the phone conversation and About / Terms / Privacy look in assets/site.css.
  * Edit About, Terms or Privacy copy in templates/pages/<file>.html, then rebuild.
  * Page <head> blocks are copied through unchanged.
  *
@@ -272,21 +272,37 @@ function inner(html, tag) {
   return html.slice(openEnd, end - ('</' + tag + '>').length);
 }
 
-function infoMain(model) {
-  return `<main id="main" tabindex="-1">
-<header class="info-hero">
+function sharedInfoHero() {
+  const about = read(path.join(PAGE_ROOT, 'about.html'));
+  const main = inner(about.slice(about.indexOf('<main')), 'main');
+  const promise = must(main, /<p class="hero-promise">([\s\S]*?)<\/p>/, 'about promise');
+  const trusts = [...main.matchAll(/<div class="trust-item">\s*(<svg[\s\S]*?<\/svg>)\s*([^<]+?)\s*<\/div>/g)].map((m) => ({
+    icon: m[1],
+    text: m[2].trim(),
+  }));
+  if (trusts.length !== 4) throw new Error('Expected 4 trust chips, got ' + trusts.length);
+  return { promise, trusts };
+}
+
+function infoHero(model) {
+  const shared = sharedInfoHero();
+  const chips = shared.trusts.map((item) => `<div class="trust-item">${item.icon}${item.text}</div>`).join('\n');
+  return `<header class="info-hero">
   <div class="info-wrap">
     <p class="info-kicker">${model.kicker}</p>
     <h1>${model.title}</h1>
     <p class="info-lede">${model.lede}</p>
+    <div class="hero-actions">${CALL}</div>
+    <p class="hero-promise">${shared.promise}</p>
+    <div class="hero-trust">
+${chips}
+    </div>
   </div>
-</header>
-<article class="info-body">
-  <div class="info-wrap">
-${model.body}
-  </div>
-</article>
-<section class="info-cta" id="contact">
+</header>`;
+}
+
+function infoCta(model) {
+  return `<section class="info-cta" id="contact-cta">
   <div class="info-wrap">
     <p class="info-label">${model.ctaLabel}</p>
     <h2>${model.ctaHeading}</h2>
@@ -294,8 +310,41 @@ ${model.body}
     <p>${CALL}</p>
     <p class="info-cta-note">${model.ctaNote}</p>
   </div>
-</section>
+</section>`;
+}
+
+function infoMain(model) {
+  return `<main id="main" tabindex="-1">
+${infoHero(model)}
+${model.body}
+${model.closingHtml !== undefined ? model.closingHtml : infoCta(model)}
 </main>`;
+}
+
+function aboutBand(id, label, h2, rest) {
+  const idAttr = id ? ` id="${id}"` : '';
+  const labelHtml = label ? `<p class="info-label">${label}</p>\n` : '';
+  if (/<details\b/.test(rest)) {
+    return `<section class="info-faq"${idAttr}>
+  <div class="info-wrap">
+    ${labelHtml}<h2>${h2}</h2>
+    <div class="faq-list">
+${rest.trim()}
+    </div>
+  </div>
+</section>`;
+  }
+  let body = rest.trim();
+  if (body.includes('class="contact-form"')) {
+    const note = (body.match(/<p style="margin-top:12px;font-size:0\.95rem;">([\s\S]*?)<\/p>/) || [])[1] || '';
+    const prose = body.replace(/<div class="contact-form"[\s\S]*<\/div>\s*$/, '').trim();
+    const noteHtml = note ? `\n    <p class="info-card-note">${note}</p>` : '';
+    body = `${prose}\n  <div class="info-card">\n    <p>${CALL}</p>${noteHtml}\n  </div>`;
+  }
+  return `<section class="info-band"${idAttr}>
+  ${labelHtml}<h2>${h2}</h2>
+  ${body}
+</section>`;
 }
 
 function must(html, re, label) {
@@ -309,40 +358,55 @@ function aboutModel(html) {
   const kicker = must(main, /<div class="hero-pre">([\s\S]*?)<\/div>/, 'about kicker');
   const title = must(main, /<h1>([\s\S]*?)<\/h1>/, 'about title');
   const lede = must(main, /<p class="hero-sub">([\s\S]*?)<\/p>/, 'about lede');
-  const promise = must(main, /<p class="hero-promise">([\s\S]*?)<\/p>/, 'about promise');
-  const trusts = [...main.matchAll(/<div class="trust-item">[\s\S]*?<\/svg>\s*([^<]+)/g)].map((m) => m[1].trim());
-  if (trusts.length !== 4) throw new Error('Expected 4 trust lines, got ' + trusts.length);
-  const blocks = [...main.matchAll(/<section class="(?:contact-section|hub-section)"([^>]*)>([\s\S]*?)<\/section>/g)];
-  const bodyBlocks = [];
+  const shared = sharedInfoHero();
+  if (lede.includes(shared.promise)) throw new Error('About lede should not repeat the promise line');
+  const blocks = [...main.matchAll(/<section class="(contact-section|hub-section)"([^>]*)>([\s\S]*?)<\/section>/g)];
+  const parts = [];
   for (const block of blocks) {
-    const attrs = block[1];
-    const chunk = block[2];
-    if (/\sid="contact"/.test(attrs)) continue;
+    const kind = block[1];
+    const attrs = block[2];
+    const chunk = block[3];
     const label = (chunk.match(/<p class="section-label">([\s\S]*?)<\/p>/) || [])[1] || '';
     const h2 = (chunk.match(/<h2>([\s\S]*?)<\/h2>/) || [])[1] || '';
-    let rest = chunk.slice(chunk.indexOf('</h2>') + 5).trim();
-    rest = rest.replace(/<div class="contact-form">[\s\S]*?<\/div>\s*<\/div>/, '<p>' + CALL + '</p>');
-    const id = (attrs.match(/\sid="([^"]+)"/) || [])[1];
-    bodyBlocks.push(
-      `<section class="info-block"${id ? ` id="${id}"` : ''}>\n${label ? `<p class="info-label">${label}</p>\n` : ''}<h2>${h2}</h2>\n${rest}\n</section>`
-    );
+    const rest = chunk.slice(chunk.indexOf('</h2>') + 5);
+    const id = (attrs.match(/\sid="([^"]+)"/) || [])[1] || '';
+    if (kind === 'hub-section') {
+      parts.push({
+        kind: 'light',
+        html: `<section class="info-block"${id ? ` id="${id}"` : ''}>\n${label ? `<p class="info-label">${label}</p>\n` : ''}<h2>${h2}</h2>\n${rest.trim()}\n</section>`,
+      });
+    } else {
+      parts.push({ kind: 'band', html: aboutBand(id, label, h2, rest) });
+    }
   }
   const aside = must(main, /<p class="minor-audience" id="firms">([\s\S]*?)<\/p>/, 'firms aside');
-  const firms = `<p id="firms">${aside}</p>`;
-  const insertAt = bodyBlocks.findIndex((b) => b.includes('id="salons"'));
-  bodyBlocks.splice(insertAt + 1, 0, firms);
-  const ctaChunk = blocks.find((b) => /\sid="contact"/.test(b[1]));
-  if (!ctaChunk) throw new Error('Missing about contact');
-  const cta = ctaChunk[2];
+  const salonsAt = parts.findIndex((part) => part.html.includes('id="salons"'));
+  if (salonsAt < 0) throw new Error('Missing salons section');
+  parts.splice(salonsAt + 1, 0, { kind: 'aside', html: `<p class="minor-audience" id="firms">${aside}</p>` });
+  let body = '';
+  let light = [];
+  const flush = () => {
+    if (!light.length) return;
+    body += `<article class="info-body">\n  <div class="info-wrap">\n${light.join('\n')}\n  </div>\n</article>\n`;
+    light = [];
+  };
+  for (const part of parts) {
+    if (part.kind === 'light') light.push(part.html);
+    else {
+      flush();
+      body += part.html + '\n';
+    }
+  }
+  flush();
+  if ((body.match(/id="contact"/g) || []).length !== 1) throw new Error('About should keep a single id="contact"');
+  if (body.includes('<p>' + shared.promise + '</p>')) throw new Error('Promise line duplicated in the About body');
+  if (body.includes('<li>' + shared.trusts[0].text)) throw new Error('Trust list duplicated in the About body');
   return {
     kicker,
     title,
     lede,
-    body: `<ul>\n${trusts.map((t) => `<li>${t}</li>`).join('\n')}\n</ul>\n<p>${promise}</p>\n` + bodyBlocks.join('\n'),
-    ctaLabel: must(cta, /<p class="section-label">([\s\S]*?)<\/p>/, 'cta label'),
-    ctaHeading: must(cta, /<h2>([\s\S]*?)<\/h2>/, 'cta h2'),
-    ctaSub: must(cta, /<p class="contact-sub">([\s\S]*?)<\/p>/, 'cta sub'),
-    ctaNote: must(cta, /<p style="margin-top:12px;font-size:0.95rem;">([\s\S]*?)<\/p>/, 'cta note'),
+    body: body.trim(),
+    closingHtml: '',
   };
 }
 
@@ -431,17 +495,12 @@ function buildOne(rel) {
   const parts = splitPage(source);
   let beforeSticky = parts.beforeSticky;
   let bodyOpen = parts.bodyOpen;
-  let style = '';
   if (template === 'info') {
     const model = rel === 'about.html' ? aboutModel(source) : legalModel(source, rel.replace('.html', ''));
     beforeSticky = replaceElement(beforeSticky, 'main', infoMain(model));
     bodyOpen = bodyOpen.replace('<body', '<body class="info-page"');
-    style = '<style>\n' + partial('info.css') + '\n</style>\n';
   }
   beforeSticky = applyConversations(beforeSticky);
-  if (beforeSticky.includes('class="tl-convo')) {
-    style += '<style>\n' + partial('convo.css') + '\n</style>\n';
-  }
   const variant = headerVariant(source, rel);
   const header = headerPartial(variant);
   const footer = partial('footer.html');
@@ -449,7 +508,7 @@ function buildOne(rel) {
   const slots = {
     head: parts.head,
     bodyOpen,
-    style,
+    style: '',
     preamble: parts.preamble,
     header,
     beforeSticky,
