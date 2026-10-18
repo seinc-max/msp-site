@@ -162,6 +162,12 @@ body{
     margin-bottom: 38px;
     line-height: 1.65;
   }
+.hero-promise{
+    color: #fff;
+    font-size: 0.95rem;
+    margin: 14px 0 0;
+    line-height: 1.5;
+  }
 .hero-actions{
     display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
   }
@@ -550,6 +556,30 @@ details[open] summary::after{ content: '−'; }
     line-height: 1.65;
     position: relative; z-index: 1;
   }
+.hub-section{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 5% 8px;
+    color: #1a2744;
+    text-align: left;
+  }
+.hub-section h2{
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.45rem, 3.5vw, 2rem);
+    font-weight: 700;
+    color: #1a2744;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    letter-spacing: -0.02em;
+  }
+.hub-section ul{
+    margin: 0 0 16px 1.2rem;
+  }
+.hub-section li,
+.hub-section p{
+    color: #1a2744;
+    margin-bottom: 8px;
+  }
 .contact-form{
     background: #fff;
     border-radius: 20px;
@@ -737,6 +767,38 @@ details[open] summary::after{ content: '−'; }
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=20261016-10">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who will I talk to?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The person who sets up your service. Call (647) 360-5774."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I sign a contract?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It's month-to-month, and you can cancel anytime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a money-back guarantee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -783,15 +845,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-pre">About Trueline IT</div>
-    <h1>You're on the job.<br>The phone still books the next one.</h1>
-    <p class="hero-sub">You run a trade, a salon or clinic, or a law firm, accounting practice or advisory firm? Same number.</p>
+    <h1>We set up the tools that catch the calls you can't pick up.</h1>
+    <p class="hero-sub">Trueline IT sets up and runs missed-call text-back, AI receptionists, review requests, quote follow-up, text-to-pay and contractor websites for trades and contractors, and for salons, clinics and studios. On the number you already use.</p>
     <div class="hero-actions">
       <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
     </div>
+    <p class="hero-promise">Leave a message and you'll get a text back within minutes, then a call back within one business day.</p>
                     <div class="hero-trust">
         <div class="trust-item">
           <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
-          For trades and contractors, then salons, clinics and studios, then law firms, accountants and advisors
+          For trades and contractors, then salons, clinics and studios
         </div>
       <div class="trust-item">
         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -799,7 +862,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="trust-item">
         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-        30-day AI governance deployment
+        30-day money-back guarantee
       </div>
       <div class="trust-item">
         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -814,7 +877,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Trades and contractors. You're on the job. Call.</h2>
   <p class="contact-sub">This is for plumbers, HVAC, roofers, electricians, house cleaners, pest control, landscapers, movers, junk removal, painters, snow removal, window cleaners, general contractors, pool service and septic service. The phone is the ask. The full list is on <a href="/for-home-services">For Trades & Contractors</a>.</p>
   <div class="contact-form">
-    <div class="call-cta" style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" style="font-size:1.15rem;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. Leave a message and you'll get a text back within minutes, then a call back within one business day.</p></div>
+    <div class="call-cta" style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" style="font-size:1.15rem;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
   </div>
 </section>
 <section class="contact-section" id="salons">
@@ -822,10 +885,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Salons, clinics and studios. Book more, miss less.</h2>
   <p class="contact-sub">You run a hair or nail salon, a barbershop, a spa, a dental or physio clinic, a chiro or massage clinic, a med spa, a yoga or fitness studio, a tattoo studio or a pet groomer. Missed calls get answered or texted back, and bookings happen during business hours.</p>
   <div class="contact-form">
-    <div class="call-cta" style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" style="font-size:1.15rem;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. Leave a message and you'll get a text back within minutes, then a call back within one business day.</p></div>
+    <div class="call-cta" style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" style="font-size:1.15rem;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
   </div>
 </section>
 <p class="minor-audience" id="firms">Run a law, accounting or advisory firm? <a href="/for-law-firms-accountants-and-advisors">See AI governance for firms</a>.</p>
+<section class="hub-section">
+  <p class="section-label">How we work</p>
+  <h2>How we work</h2>
+  <ul>
+    <li>You call and tell us what you do.</li>
+    <li>We set it up on your number or your site.</li>
+    <li>You approve every word before it goes live.</li>
+    <li>We run it, with a monthly review call.</li>
+  </ul>
+</section>
+<section class="hub-section">
+  <p class="section-label">What we won't do</p>
+  <h2>What we won't do</h2>
+  <ul>
+    <li>No contracts. Cancel anytime.</li>
+    <li>We never write, buy or filter reviews.</li>
+    <li>We never bill for spam calls or ring time.</li>
+    <li>We don't sell your data or use it to train public AI models.</li>
+  </ul>
+</section>
+<section class="hub-section">
+  <p class="section-label">What it costs</p>
+  <h2>What it costs</h2>
+  <ul>
+    <li><a href="/missed-call-text-back">Missed-Call Text-Back</a> — $149/mo per location plus a one-time $199 setup.</li>
+    <li><a href="/ai-receptionist">AI Receptionist</a> — $399/mo plus a one-time $499 setup.</li>
+    <li><a href="/quote-follow-up-win-back">Quote Follow-Up &amp; Win-Back</a> — $149/mo plus a one-time $199 setup.</li>
+    <li><a href="/google-review-requests">Google Review Requests</a> — Requests $79/mo, or Requests + Replies $99/mo. Both $99 one-time setup per location.</li>
+    <li><a href="/website-chat-to-text">Website Chat-to-Text</a> — $79/mo plus a one-time $99 setup.</li>
+    <li><a href="/text-to-pay">Text-to-Pay</a> — $49/mo per location plus a one-time $99 setup. Card processing fees are separate.</li>
+    <li><a href="/contractor-websites">Contractor Websites</a> — $499/mo. No setup fee.</li>
+  </ul>
+  <p><strong>✓ 30-day money-back guarantee</strong></p>
+  <p><a href="/terms">Full terms</a></p>
+</section>
+<section class="hub-section">
+  <p class="section-label">Where we are</p>
+  <h2>Where we are</h2>
+  <p>Trueline IT, 1250 Brant Street, Suite 400, Burlington, ON L7P 1X8.</p>
+</section>
+<section class="contact-section">
+  <p class="section-label">Questions</p>
+  <h2>Common questions</h2>
+<details><summary>Who will I talk to?</summary><p>The person who sets up your service. Call (647) 360-5774.</p></details>
+<details><summary>Do I sign a contract?</summary><p>No. It's month-to-month, and you can cancel anytime.</p></details>
+<details><summary>Is there a money-back guarantee?</summary><p>30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p></details>
+</section>
+
 <section class="contact-section" id="contact">
   <p class="section-label">Get started</p>
   <h2>Call. Tell us about your business.</h2>
@@ -846,25 +957,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="site-footer">
   <div class="footer-brand">
     <a href="/" class="footer-logo" aria-label="Trueline IT home">Trueline<span>.</span>IT</a>
-    <p class="footer-tagline">Phone and AI help for trades, salons and clinics.</p>
-  </div>
-  <div class="footer-groups">
-    <div class="footer-col">
-      <p class="footer-heading">Trades & Contractors</p>
-      <a href="/for-home-services">Trades & Contractors</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-heading">Salons, Clinics & Studios</p>
-      <a href="/for-appointment-businesses">Salons, Clinics & Studios</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-heading">Company</p>
-      <a href="/about">About</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-    </div>
+    <p class="footer-tagline">Phone and AI help for trades and contractors. Salons and clinics too.</p>
   </div>
   <p class="footer-contact"><a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">(647) 360-5774</a> · <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off--></p>
+  <p class="footer-contact footer-links"><a href="/for-home-services">Trades & Contractors</a> · <a href="/for-appointment-businesses">Salons, Clinics & Studios</a> · <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
   <p class="footer-address">1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
   <p class="footer-copy">© 2026 Trueline IT. All rights reserved.</p>
 </footer>
