@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p out && cp index.html out/index.html",
+    "build:html": "node scripts/build-pages.js",
+    "check:html": "node scripts/check-pages.js",
     "build:css": "tailwindcss -c tailwind.config.js -i ./src/tailwind-input.css -o ./assets/tailwind.css --minify",
     "dev": "npx serve . -l 8000"
   },

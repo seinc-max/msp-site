@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager (production hostnames only) -->
+<script>window.__tlProd=/^(www\.)?truelineit\.com$/.test(location.hostname);</script>
+<script>if(window.__tlProd)(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W663FFHP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missed-Call Text-Back for Trades & Contractors | Trueline IT</title>
+<meta name="description" content="Missed-call text-back for plumbers, electricians, HVAC and other trades: Trueline texts callers, captures what they need, and alerts you. Fully managed." />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Missed-Call Text-Back for Trades & Contractors | Trueline IT" />
+<meta property="og:description" content="Missed-call text-back for trades and contractors: Trueline texts callers, captures what they need, and alerts you — installed and managed for you." />
+<meta property="og:url" content="https://truelineit.com/missed-call-text-back" />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+    --navy: #1a2744;
+    --navy-light: #243354;
+    --orange: #f97316;
+    --blue: #2563eb;
+    --warm-white: #fafaf8;
+    --sky: #e8f2ff;
+    --text: #1a2744;
+    --text-muted: #5a6a8a;
+    --border: #dde6f5;
+  }
+*, *::before, *::after{ box-sizing: border-box; margin: 0; padding: 0; }
+html{ scroll-behavior: smooth; }
+body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
+.hero{ background: var(--navy); padding: 60px 5% 70px; position: relative; overflow: hidden; }
+.hero::before{ content: ''; position: absolute; top: -40%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%); pointer-events: none; }
+.hero-grid{ max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
+.hero-eyebrow{ font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+.hero h1{ font-family: 'Fraunces', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+.hero h1 em{ font-style: italic; color: var(--orange); }
+.hero-sub{ color: rgba(255,255,255,0.75); font-size: 1.1rem; margin-bottom: 28px; max-width: 480px; line-height: 1.65; }
+.hero-trust{ display: flex; flex-direction: column; gap: 10px; }
+.trust-item{ display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
+.trust-item svg{ color: var(--orange); flex-shrink: 0; }
+.hero-call{
+    display: inline-block; margin-top: 24px;
+    background: var(--orange); color: #fff; font-weight: 700; font-size: 1.05rem;
+    padding: 16px 28px; border-radius: 10px; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+.hero-call:hover{ background: #ea6c0a; transform: translateY(-2px); }
+.form-card{ background: #fff; border-radius: 16px; padding: 36px 32px; box-shadow: 0 24px 64px rgba(0,0,0,0.22); }
+.form-card-label{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+.form-card h2{ font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
+.form-card-sub{ font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px; }
+.form-group{ margin-bottom: 20px; }
+.form-group label{ display: block; font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.form-group input, .form-group select{ width: 100%; padding: 13px 16px; border: 1.5px solid var(--border); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 16px; color: var(--text); background: #f7f9fc; transition: border-color 0.2s; -webkit-appearance: none; }
+.form-group input:focus, .form-group select:focus{ outline: none; border-color: var(--blue); }
+.btn-submit{
+    width: 100%;
+    background: var(--orange);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 4px;
+  }
+.btn-submit:hover{ background: #ea6c0a; transform: translateY(-1px); }
+.form-note{ font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 10px; }
+.form-success{ display: none; text-align: center; padding: 20px 0; }
+.form-success h4{ font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 8px; }
+.form-success p{ color: var(--text-muted); font-size: 0.95rem; }
+.mock-section{ padding: 60px 5%; background: var(--warm-white); }
+.mock-phone{ max-width: 340px; margin: 24px auto 0; background: #fff; border: 1.5px solid var(--border); border-radius: 24px; padding: 24px 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.08); text-align: left; }
+.mock-header{ display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 16px; }
+.mock-avatar{ width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; }
+.mock-name{ font-size: 0.85rem; font-weight: 600; color: var(--navy); }
+.mock-sub{ font-size: 0.75rem; color: var(--text-muted); }
+.bubble{ max-width: 82%; padding: 10px 14px; border-radius: 14px; font-size: 0.88rem; margin-bottom: 10px; line-height: 1.45; }
+.bubble-them{ background: var(--sky); color: var(--navy); border-bottom-left-radius: 4px; }
+.bubble-us{ background: var(--orange); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+.mock-caption{ text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 14px; }
+.pain-section{ padding: 70px 5%; background: var(--warm-white); }
+.section-inner{ max-width: 900px; margin: 0 auto; text-align: center; }
+.section-eyebrow{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+.section-title{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 48px; line-height: 1.2; }
+.pain-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
+.pain-card{ background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 28px 24px; }
+.pain-icon{ font-size: 1.6rem; margin-bottom: 14px; }
+.pain-card h3{ font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.pain-card p{ font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.how-section{ padding: 70px 5%; background: var(--sky); }
+.steps-grid{ max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; }
+.step-number{ width: 48px; height: 48px; background: var(--navy); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.1rem; margin: 0 auto 16px; }
+.step h3{ font-family: 'Fraunces', serif; font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
+.step p{ font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+.audience-section{ padding: 70px 5%; background: var(--warm-white); }
+.audience-grid{ max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
+.audience-card{ background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 28px 26px; }
+.audience-card.good{ border-top: 4px solid var(--blue); }
+.audience-card.bad{ border-top: 4px solid var(--orange); }
+.audience-card h3{ font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
+.audience-card ul{ list-style: none; }
+.audience-card li{ font-size: 0.9rem; color: var(--text-muted); padding: 6px 0; display: flex; gap: 9px; align-items: flex-start; line-height: 1.5; }
+.audience-card li::before{ content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+.audience-card.bad li::before{ content: '✕'; color: var(--orange); }
+.included-section{ padding: 70px 5%; background: var(--sky); }
+.included-grid{ max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
+.included-card{ background: #fff; border-radius: 12px; padding: 28px 26px; }
+.included-card h3{ font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
+.included-card ul{ list-style: none; }
+.included-card li{ font-size: 0.9rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border); display: flex; gap: 9px; align-items: flex-start; }
+.included-card li:last-child{ border-bottom: none; }
+.included-card.yes li::before{ content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+.included-card.no li::before{ content: '—'; color: var(--text-muted); font-weight: 700; flex-shrink: 0; }
+.pricing-section{ padding: 70px 5%; background: var(--warm-white); }
+.pricing-card{ max-width: 560px; margin: 40px auto 0; background: #fff; border: 2px solid var(--orange); border-radius: 16px; padding: 40px; text-align: center; }
+.pricing-badge{ display: inline-block; background: var(--orange); color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+.pricing-amount{ font-family: 'Fraunces', serif; font-size: 3.5rem; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+.pricing-amount span{ font-size: 1.2rem; font-weight: 500; color: var(--text-muted); }
+.pricing-desc{ font-size: 0.9rem; color: var(--text-muted); margin-bottom: 28px; }
+.pricing-features{ list-style: none; text-align: left; margin-bottom: 32px; }
+.pricing-features li{ display: flex; align-items: center; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border); }
+.pricing-features li:last-child{ border-bottom: none; }
+.pricing-features li::before{ content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+.pricing-upsell{ margin-top: 18px; font-size: 0.88rem; color: var(--text-muted); }
+.pricing-upsell a{ color: var(--blue); font-weight: 600; text-decoration: none; }
+.btn-primary{ display: inline-block; padding: 15px 32px; background: var(--orange); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1.05rem; transition: background 0.2s, transform 0.15s; box-shadow: 0 4px 20px rgba(249,115,22,0.35); }
+.btn-primary:hover{ background: #ea6c0a; transform: translateY(-2px); }
+.proof-section{ padding: 70px 5%; background: var(--warm-white); }
+.proof-grid{ max-width: 700px; margin: 32px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; text-align: left; }
+.proof-item{ display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+.proof-item svg{ color: var(--orange); flex-shrink: 0; margin-top: 3px; }
+.faq-section{ padding: 70px 5%; background: var(--sky); }
+.faq-list{ max-width: 700px; margin: 32px auto 0; text-align: left; }
+.faq-list details{ background: #fff; border: 1.5px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+.faq-list summary{ cursor: pointer; padding: 18px 22px; font-weight: 600; font-size: 0.95rem; color: var(--navy); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-list summary::after{ content: '+'; font-size: 1.3rem; color: var(--orange); font-weight: 700; }
+.faq-list details[open] summary::after{ content: '−'; }
+.faq-list details p{ padding: 0 22px 18px; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.bottom-cta{ background: var(--navy); padding: 70px 5%; text-align: center; }
+.bottom-cta h2{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px; }
+.bottom-cta p{ color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 32px; }
+.cta-row{ display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; }
+@media (max-width: 860px){.hero-grid{ grid-template-columns: 1fr; gap: 40px; }
+.hero-sub{ max-width: 100%; }
+.pain-grid, .steps-grid, .audience-grid, .included-grid, .proof-grid{ grid-template-columns: 1fr; }}
+@media (max-width: 480px){.hero{ padding: 40px 5% 48px; }
+.form-card{ padding: 28px 20px; }
+.pricing-card{ padding: 28px 20px; }}
+.try-it { margin-top: 12px; }
+/* Mobile fold clearance: hero CTA above sticky call bar (360/390/412). Copy unchanged. */
+@media (max-width: 430px) {
+  .hero { padding: 4px 5% 24px; }
+  .hero-grid { gap: 20px; }
+  .hero-eyebrow { margin-bottom: 4px; }
+  .hero h1 { font-size: 1.55rem; margin-bottom: 6px; }
+  .hero-sub { margin-bottom: 4px !important; font-size: 0.98rem; line-height: 1.4; }
+  .hero-guarantee { margin-bottom: 6px !important; padding: 4px 12px !important; font-size: 0.88rem !important; }
+  .hero-trust { gap: 4px; margin-bottom: 0; }
+  .trust-item { font-size: 0.88rem; }
+  .hero-call { margin-top: 12px; padding: 12px 18px; }
+}
+</style>
+<link rel="canonical" href="https://truelineit.com/missed-call-text-back" />
+<meta property="og:image" content="https://truelineit.com/og-image-trades.jpg" />
+<meta property="og:image:width" content="2400" />
+<meta property="og:image:height" content="1260" />
+<meta property="og:site_name" content="Trueline IT" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Missed-Call Text-Back for Trades & Contractors | Trueline IT" />
+<meta name="twitter:description" content="Missed-call text-back for trades and contractors: Trueline texts callers, captures what they need, and alerts you — installed and managed for you." />
+<meta name="twitter:image" content="https://truelineit.com/og-image-trades.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Missed-Call Text-Back for Trades & Contractors",
+  "provider": {
+    "@type": "Organization",
+    "name": "Trueline IT",
+    "url": "https://truelineit.com"
+  },
+  "serviceType": "Missed-Call Text-Back Automation",
+  "description": "Texts your caller back automatically after a missed call. Installed and managed by Trueline IT for plumbers, electricians, HVAC and other trades."
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Is this an AI receptionist?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No. This is SMS text-back after a missed call. You stay on the close. If you want a receptionist that answers nights, weekends, and after hours and captures job requests, see the AI receptionist."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Do I have to set this up myself?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No. We install it and run it. You're not buying software to configure yourself."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What happens after a missed call?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Your caller gets a text from your business number within minutes. They reply with what they need, and you get an alert."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What does the text say?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Whatever you approve. A common start: \"Thanks for calling Lakeside Heating. What's the address and what do you need? Reply STOP to opt out.\" Every first text includes STOP to opt out."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Isn't voicemail enough?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Many callers hang up instead of leaving a voicemail and call the next name on Google. A text reaches them while their phone is still in their hand, so the conversation starts before they call someone else."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I keep my existing number?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. You keep your existing number — we set up call forwarding, no porting. We confirm the forwarding details on the call."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Why is there a setup fee?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The $199 is onboarding / install — number connection, script approval, and go-live — not a random surcharge."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Is this for agencies or all-in-one platform shops?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No. We work directly with operating businesses. We don't white-label or replace your whole stack."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What's the price?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Done-for-you missed-call text-back on your existing number. We set it up and run it. $149/mo flat plus a one-time $199 setup. No overage bills. No contracts, cancel anytime."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I cancel?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Cancel anytime. No contracts, no cancellation fees."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Do the texts include an opt-out?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "First texts include STOP to opt out."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Is there a money-back guarantee?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked."
+ }
+ }
+ ]
+}
+</script>
+
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
+
+
+<script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261018-2">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- NAV -->
+<nav class="tl-nav" aria-label="Primary">
+  <a href="/" class="nav-logo" aria-label="Trueline IT home">Trueline<span>.</span>IT</a>
+  <div class="nav-links">
+    <details class="nav-services">
+      <summary>Services</summary>
+      <div class="nav-services-menu">
+        <div class="nav-services-group" role="group" aria-labelledby="nav-group-trades">
+          <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
+          <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
+          <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
+          <a class="nav-services-sub" href="/ai-receptionist">AI Receptionist</a>
+          <a class="nav-services-sub" href="/quote-follow-up-win-back">Quote Follow-Up & Win-Back</a>
+          <a class="nav-services-sub" href="/website-chat-to-text">Website Chat-to-Text</a>
+          <a class="nav-services-sub" href="/text-to-pay">Text-to-Pay</a>
+          <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
+          <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
+        </div>
+        <div class="nav-services-group" role="group" aria-labelledby="nav-group-salons">
+          <p class="nav-services-label" id="nav-group-salons">Salons, Clinics & Studios</p>
+          <a class="nav-services-hub" href="/for-appointment-businesses">For Salons, Clinics & Studios</a>
+          <a class="nav-services-sub" href="/ai-receptionist">AI Receptionist</a>
+          <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
+        </div>
+        <div class="nav-services-group nav-services-minor">
+          <a class="nav-services-sub" href="/for-law-firms-accountants-and-advisors">Law, accounting &amp; advisory firms</a>
+        </div>
+      </div>
+    </details>
+  </div>
+  <a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+</nav>
+<main id="main" tabindex="-1">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">Missed-Call Text-Back for trades & contractors</div>
+      <h1>Missed a call? Your caller gets a text within minutes.</h1>
+      <p class="hero-sub">No-heat call at 2 AM. Roof leak at 11 PM. Burst pipe while you're on another job. Your caller gets a text within minutes, tells you what they need, and waits for you, not the next name on Google.</p>
+      <p class="hero-sub" style="color:#fff;font-weight:700;margin-bottom:20px;">Done-for-you missed-call text-back on your existing number. We set it up and run it. $149/mo flat plus a one-time $199 setup. No overage bills. No contracts, cancel anytime.</p>
+      <p class="hero-sub">One saved job a month pays for it.</p>
+      <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Texts your caller back automatically after a missed call.
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Works with your existing number — no porting
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          We set it up and run it — not another app to configure
+        </div>
+      </div>
+      <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="hero-sub try-it">Try it now: call (647) 360-5774 and hang up. You'll get our text within minutes.</p>
+      <p class="hero-sub">One call. We set it up on your number. You approve every word before it goes live.</p>
+      <!-- seasonal: remove by 2027-04-01 -->
+<p class="hero-sub">Missed calls spike with the first cold snap and after a storm (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank" style="color:#fff;text-decoration:underline;">Invoca, 2026</a>). Get set up before yours.</p>
+    </div>
+    <div class="form-card" id="contact">
+      <div class="form-card-label">Missed-Call Text-Back</div>
+      <h2>How many jobs did missed calls cost you last month?</h2>
+      <p class="form-card-sub">Using your own numbers, we'll estimate how much missed calls may be costing your business.</p>
+      <div class="call-cta" style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" style="font-size:1.15rem;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SAME CALL, TWO OUTCOMES -->
+<section class="audience-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Same call, two outcomes</div>
+    <h2 class="section-title">Without text-back, the job is gone. With it, the caller waits for you.</h2>
+    <p>Asked which channel they ignore most, 42% of people said phone calls. Only 8% said texts (<a href="https://www.textmagic.com/wp-content/uploads/2025/04/State-of-business-texting-2025_FullReport.pdf" rel="noopener" target="_blank">Textmagic, 2025</a>).</p>
+    <div class="audience-grid">
+      <div class="audience-card bad">
+        <h3>Without text-back</h3>
+        <ul>
+          <li>Your phone rings while you're under a sink.</li>
+          <li>The caller gets voicemail and hangs up.</li>
+          <li>They call the next name on Google.</li>
+          <li>By the time you call back, they've booked someone else.</li>
+        </ul>
+      </div>
+      <div class="audience-card good">
+        <h3>With Trueline text-back</h3>
+        <ul>
+          <li>Your caller gets a text within minutes, from your business number.</li>
+          <li>They reply with what they need and where.</li>
+          <li>You get an alert and read it when you're free.</li>
+          <li>You call back first, with the job details in hand.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Sound familiar?</div>
+    <h2 class="section-title">Missed calls can send money out the door</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">📵</div>
+        <h3>Calls go to voicemail</h3>
+        <p>Nearly half of calls to home-service businesses never reach a person (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>). You're paying for leads that ring once and die in voicemail. The homeowner who called from a flooded basement, the homeowner with a dead furnace, the homeowner with no hot water — they've already called the next business by the time you look at your phone.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🔨</div>
+        <h3>No time to call everyone back</h3>
+        <p>You're under a sink, on a roof, or driving between jobs. The painter quoting a living room, the landscaper mid-install, the electrician in a panel with the power off — none of them can stop and dial back. By the time you're free, the customer has moved on.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">💸</div>
+        <h3>Missed calls waste ad spend</h3>
+        <p>Every paid lead that reaches voicemail wastes the ad spend that generated it — and that caller may choose another company instead. A garage-door repair, a pest-control emergency, a junk-removal cleanout: when they call, they need someone now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SMS THREAD MOCK -->
+<section class="mock-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">How it looks</div>
+    <h2 class="section-title">A missed call becomes a conversation</h2>
+    <div class="mock-phone">
+      <div class="mock-header">
+        <div class="mock-avatar">T</div>
+        <div>
+          <div class="mock-name">Trueline text-back</div>
+          <div class="mock-sub">Your business number</div>
+        </div>
+      </div>
+      <div class="bubble bubble-them">Hi — I called about my furnace. It's not heating. Can you help today?</div>
+      <div class="bubble bubble-us">Thanks for calling Lakeside Heating. What's the address and what do you need? Reply STOP to opt out.</div>
+      <div class="bubble bubble-them">64 Maple Ave. The furnace isn't heating.</div>
+      <div class="bubble bubble-us">Got it — we've alerted the owner and they'll reach out shortly.</div>
+    </div>
+    <p class="mock-caption">Example with a sample business name. This is the exact text format we set up. Your business name and your wording go in, and you approve it before it goes live.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Getting started</div>
+    <h2 class="section-title">From missed calls to faster follow-up in three steps</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>You call</h3>
+        <p>Using your estimates for call volume, missed calls, and average job value, we walk the likely monthly leak with you.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>We install the text-back</h3>
+        <p>Every missed call gets a text on your existing number. You approve the wording before go-live. The thread captures what they need and alerts you.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>You follow up while intent is fresh</h3>
+        <p>Reply when you're free, with the caller's need already captured in the text thread.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR / NOT FOR -->
+<section class="audience-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Who it's for</div>
+    <h2 class="section-title">Built for owners who can't answer every call</h2>
+    <div class="audience-grid">
+      <div class="audience-card good">
+        <h3>Who this is for</h3>
+        <ul>
+          <li>Trade and contractor owners who lose jobs when they're on site, driving, or after hours: plumbers catching a midnight burst pipe, HVAC techs on a no-heat call in January, roofers taking the leak call the night after a storm, electricians on a panel job in the dark, painters quoting an interior refresh, landscapers on a spring install, house cleaners between bookings, pest-control techs answering an infestation call, garage-door repairs, appliance repair, movers, junk removal, snow removal, and window cleaners.</li>
+          <li>Owners who want someone to install and manage the follow-up — not another login</li>
+        </ul>
+      </div>
+      <div class="audience-card bad">
+        <h3>Who this is not for</h3>
+        <ul>
+          <li>Marketing agencies or resellers</li>
+          <li>Buyers who want to build it themselves on an all-in-one platform</li>
+          <li>White-label or "replace your whole stack" shoppers</li>
+          <li>Teams that only want a self-serve SMS tool to configure themselves</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED / NOT INCLUDED -->
+<section class="included-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">What you get</div>
+    <h2 class="section-title">This is SMS text-back — not a voice AI receptionist</h2>
+    <div class="included-grid">
+      <div class="included-card yes">
+        <h3>What's included</h3>
+        <ul>
+          <li>Missed-call text-back on your business line</li>
+          <li>Intake questions you approve (need, timing, callback window)</li>
+          <li>Owner alert so you know who to answer first</li>
+          <li>Works with your existing number</li>
+          <li>Monthly review call</li>
+        </ul>
+      </div>
+      <div class="included-card no">
+        <h3>What's not included</h3>
+        <ul>
+          <li>A voice AI receptionist (see AI receptionist — $399/mo + $499 setup)</li>
+                    <li>Replacing your current scheduling or field-service software</li>
+          <li>Meta ads management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="proof-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Run your own numbers</div>
+    <h2 class="section-title">Run your own numbers</h2>
+    <p>Invoca found 38% of answered home-service calls are leads, and 45% of those leads book on the call (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>). Run the same rates on the calls you miss, at $300 a job:</p>
+    <ul>
+        <li>2 missed calls a week → about 1½ jobs a month → about $445</li>
+        <li>5 missed calls a week → about 3½ jobs a month → about $1,110</li>
+        <li>10 missed calls a week → about 7 jobs a month → about $2,220</li>
+        <li>Text-back is $149/mo per location.</li>
+    </ul>
+    <p>Your numbers will differ. Bring them to the call and we'll work it out with you.</p>
+  </div>
+</section>
+
+<section class="pricing-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Flat monthly fee</div>
+    <h2 class="section-title">One price for faster missed-call follow-up.</h2>
+    <div class="pricing-card">
+      <div class="pricing-badge">Missed-Call Text-Back</div>
+      <div class="pricing-amount">$149<span>/mo per location</span></div>
+      <div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:0 0 20px;">
+        <p style="margin:0 0 6px;"><strong>$149/mo per location</strong> — no per-minute charges, no overage bills.</p>
+        <p>Run your own numbers: if one job is worth $300 to you, one saved job covers two months of text-back.</p>
+        <p style="margin:0 0 6px;"><strong>Cancel anytime.</strong> No contracts, no cancellation fees.</p>
+        <p style="margin:0;">30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p>
+      </div>
+      <ul class="pricing-features">
+        <li>Missed-call text-back on your business line</li>
+        <li>Intake questions you approve</li>
+        <li>Owner alert on every missed call</li>
+        <li>Works with your existing number</li>
+        <li>Monthly review call</li>
+      </ul>
+      <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="pricing-upsell">Flat monthly. Media / Google Ads spend is separate if you run ads.</p>
+      <p class="pricing-upsell">Want a receptionist that answers nights, weekends, and after hours and captures job requests? <a href="/ai-receptionist">See our AI Receptionist →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">What you can expect</div>
+    <h2 class="section-title">What happens after you call</h2>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Done-for-you install and ongoing ops — you approve copy before go-live
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        On the call we work out your numbers with you: calls, missed calls, and what a job is worth to you.
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Monthly review call to adjust scripts and routing
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Phone support at (647) 360-5774
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Questions</div>
+    <h2 class="section-title">Common questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Is this an AI receptionist?</summary>
+        <p>No. This is SMS text-back after a missed call. You stay on the close. If you want a receptionist that answers nights, weekends, and after hours and captures job requests, see the AI receptionist.</p>
+      </details>
+      <details>
+        <summary>Do I have to set this up myself?</summary>
+        <p>No. We install it and run it. You're not buying software to configure yourself.</p>
+      </details>
+      <details>
+        <summary>What happens after a missed call?</summary>
+        <p>Your caller gets a text from your business number within minutes. They reply with what they need, and you get an alert.</p>
+      </details>
+      <details>
+        <summary>What does the text say?</summary>
+        <p>Whatever you approve. A common start: "Thanks for calling Lakeside Heating. What's the address and what do you need? Reply STOP to opt out." Every first text includes STOP to opt out.</p>
+      </details>
+      <details>
+        <summary>Isn't voicemail enough?</summary>
+        <p>Many callers hang up instead of leaving a voicemail and call the next name on Google. A text reaches them while their phone is still in their hand, so the conversation starts before they call someone else.</p>
+      </details>
+      <details>
+        <summary>Can I keep my existing number?</summary>
+        <p>Yes. You keep your existing number — we set up call forwarding, no porting. We confirm the forwarding details on the call.</p>
+      </details>
+      <details>
+        <summary>Why is there a setup fee?</summary>
+        <p>The $199 is onboarding / install — number connection, script approval, and go-live — not a random surcharge.</p>
+      </details>
+      <details>
+        <summary>Is this for agencies or all-in-one platform shops?</summary>
+        <p>No. We work directly with operating businesses. We don't white-label or replace your whole stack.</p>
+      </details>
+      <details>
+        <summary>What's the price?</summary>
+        <p>Done-for-you missed-call text-back on your existing number. We set it up and run it. $149/mo flat plus a one-time $199 setup. No overage bills. No contracts, cancel anytime.</p>
+      </details>
+      <details>
+        <summary>How do I cancel?</summary>
+        <p>Cancel anytime. No contracts, no cancellation fees.</p>
+      </details>
+      <details>
+        <summary>Do the texts include an opt-out?</summary>
+        <p>First texts include STOP to opt out.</p>
+      </details>
+      <details>
+        <summary>Is there a money-back guarantee?</summary>
+        <p>30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <h2>Stop losing jobs to voicemail.</h2>
+  <p>You do the job. We set it up and run it. Your next missed call becomes your next conversation — the caller's need lands in a text thread, you read it when you're free, and you answer first. Call us and we'll estimate what missed calls are costing you, from your own numbers. Every day it isn't set up, the next missed call goes to the next name on Google.</p>
+  <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
+  <div class="cta-row">
+    <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<!-- SPOKE LINKS HUB -->
+
+</main>
+
+<!-- FOOTER -->
+<div class="sticky-mobile-cta">
+  <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+  <span>Month-to-month. Cancel anytime.</span>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <a href="/" class="footer-logo" aria-label="Trueline IT home">Trueline<span>.</span>IT</a>
+    <p class="footer-tagline">Phone and AI help for trades and contractors. Salons and clinics too.</p>
+  </div>
+  <p class="footer-contact"><a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">(647) 360-5774</a> · <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off--></p>
+  <p class="footer-contact footer-links"><a href="/for-home-services">Trades & Contractors</a> · <a href="/for-appointment-businesses">Salons, Clinics & Studios</a> · <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
+  <p class="footer-address">1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
+  <p class="footer-copy">© 2026 Trueline IT. All rights reserved.</p>
+</footer>
+
+
+
+</body>
+</html>

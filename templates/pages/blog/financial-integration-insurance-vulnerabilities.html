@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager (production hostnames only) -->
+<script>window.__tlProd=/^(www\.)?truelineit\.com$/.test(location.hostname);</script>
+<script>if(window.__tlProd)(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W663FFHP');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cyber Insurance Trap in App Integrations | Trueline IT</title>
+<meta name="description" content="Linking financial tools like DocuSign to monday.com or Xero to Slack using default plugins leaves sensitive records exposed.">
+<meta name="keywords" content="docusign monday integration, xero slack integration">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Cyber Insurance Trap in App Integrations | Trueline IT">
+<meta property="og:description" content="Linking financial tools like DocuSign to monday.com or Xero to Slack using default plugins leaves sensitive records exposed.">
+<meta property="og:url" content="https://truelineit.com/blog/financial-integration-insurance-vulnerabilities">
+<link rel="canonical" href="https://truelineit.com/blog/financial-integration-insurance-vulnerabilities">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+:root{
+  --navy: #1a2744;
+  --sky: #e8f2ff;
+  --blue: #2563eb;
+  --orange: #f97316;
+  --warm-white: #fafaf8;
+  --text: #1a2744;
+  --text-muted: #5a6a8a;
+  --border: #dde6f5;
+}
+*, *::before, *::after{ box-sizing: border-box; margin: 0; padding: 0; }
+html{ scroll-behavior: smooth; }
+body{
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--warm-white);
+  line-height: 1.6;
+}
+.blog-hero{
+  background: var(--navy);
+  padding: 60px 5%;
+  text-align: center;
+}
+.blog-hero h1{
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.blog-meta{
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.blog-container{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 5%;
+}
+.blog-post h2{
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 40px 0 18px;
+  line-height: 1.25;
+}
+.blog-post h3{
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 28px 0 12px;
+}
+.blog-post p{
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.75;
+}
+.blog-post ul, .blog-post ol{
+  margin: 18px 0 24px 24px;
+  color: var(--text-muted);
+}
+.blog-post li{
+  margin-bottom: 10px;
+  line-height: 1.65;
+}
+.blog-post strong{
+  color: var(--navy);
+  font-weight: 600;
+}
+.cta-section{
+  background: var(--sky);
+  border-left: 4px solid var(--blue);
+  padding: 24px;
+  border-radius: 8px;
+  margin: 40px 0;
+}
+.btn-primary{
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s;
+}
+.btn-primary:hover{ background: #ea6c0a; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The cyber insurance trap built into standard app integrations",
+  "description": "Linking financial tools like DocuSign to monday.com or Xero to Slack using default plugins leaves sensitive records exposed.",
+  "url": "https://truelineit.com/blog/financial-integration-insurance-vulnerabilities",
+  "author": {
+    "@type": "Organization",
+    "name": "Trueline IT"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Trueline IT",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://truelineit.com/favicon.svg"
+    }
+  },
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-07-02"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://truelineit.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://truelineit.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Financial Integration Vulnerabilities",
+      "item": "https://truelineit.com/blog/financial-integration-insurance-vulnerabilities"
+    }
+  ]
+}
+</script>
+
+<meta property="og:image" content="https://truelineit.com/og-image-professional.jpg" />
+<meta property="og:image:width" content="2400" />
+<meta property="og:image:height" content="1260" />
+<meta property="og:site_name" content="Trueline IT" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Cyber Insurance Trap in App Integrations | Trueline IT" />
+<meta name="twitter:description" content="Linking financial tools like DocuSign to monday.com or Xero to Slack using default plugins leaves sensitive records exposed." />
+<meta name="twitter:image" content="https://truelineit.com/og-image-professional.jpg" />
+<meta name="robots" content="index, follow" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How exactly does an unhardened app connection void my cyber liability insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Insurance providers look for any evidence of negligence to deny a corporate claim. If a breach occurs and an audit reveals that private customer data or corporate billing details were passed unencrypted across public cloud channels via generic app add-ons, it constitutes a clear policy breach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we lose functionality by moving away from standard marketplace app links?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. You actually gain substantial operational control. Our private networks perform the exact same tasks—triggering updates, alerts, and moving files—but they encrypt the active payload data locally and handle it within secure provincial boundaries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your monthly flat fees inclusive of custom workflow re-engineering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The ladder starts with the $1,000 AI Liability Assessment, then the Fractional AI Officer retainer at $10,000–25,000/mo, then an AI Support Agent, scoped to your work. That work covers full architecture design, secure app configuration, local cloud hosting management, and continuous security pathway audits with zero surprise line-item fees."
+      }
+    }
+  ]
+}
+</script>
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
+
+
+<script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261018-2">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="tl-nav" aria-label="Primary">
+  <a href="/" class="nav-logo" aria-label="Trueline IT home">Trueline<span>.</span>IT</a>
+  <div class="nav-links">
+    <details class="nav-services">
+      <summary>Services</summary>
+      <div class="nav-services-menu">
+        <div class="nav-services-group" role="group" aria-labelledby="nav-group-trades">
+          <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
+          <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
+          <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
+          <a class="nav-services-sub" href="/ai-receptionist">AI Receptionist</a>
+          <a class="nav-services-sub" href="/quote-follow-up-win-back">Quote Follow-Up & Win-Back</a>
+          <a class="nav-services-sub" href="/website-chat-to-text">Website Chat-to-Text</a>
+          <a class="nav-services-sub" href="/text-to-pay">Text-to-Pay</a>
+          <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
+          <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
+        </div>
+        <div class="nav-services-group" role="group" aria-labelledby="nav-group-salons">
+          <p class="nav-services-label" id="nav-group-salons">Salons, Clinics & Studios</p>
+          <a class="nav-services-hub" href="/for-appointment-businesses">For Salons, Clinics & Studios</a>
+          <a class="nav-services-sub" href="/ai-receptionist">AI Receptionist</a>
+          <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
+        </div>
+        <div class="nav-services-group nav-services-minor">
+          <a class="nav-services-sub" href="/for-law-firms-accountants-and-advisors">Law, accounting &amp; advisory firms</a>
+        </div>
+      </div>
+    </details>
+  </div>
+  <a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book My AI Consultation</span></a>
+</nav>
+<main id="main" tabindex="-1">
+
+<section class="blog-hero">
+  <h1>The cyber insurance trap built into standard app integrations</h1>
+  <div class="blog-meta">By Trueline IT | Updated October 18, 2026</div>
+</section>
+
+<section class="blog-container">
+  <article class="blog-post">
+
+
+<div style="border-left: 4px solid #f97316; padding-left: 15px; margin: 25px 0;">
+ <p><strong>BLUF:</strong> Linking financial tools like Xero or DocuSign to team spaces like Slack and monday.com using default marketplace plugins is incredibly simple—but it leaves sensitive corporate records exposed. You get secure pipelines that automate the financials for your law firm, your accounting practice, or your advisory firm.</p>
+<p><strong>The short version:</strong> Default app plugins can push client records into open team chats. Private automation keeps them inside systems you control. Start with the $1,000 AI Liability Assessment, credited in full toward a retainer if you continue within 90 days.</p>
+
+</div>
+
+<h2>Why default app connections put your financial ledger at risk</h2>
+
+<p>When you are looking to streamline operations, setting up a <a href="/blog/sovereign-zapier-alternatives-compliance" style="color: #f97316; text-decoration: underline;">docusign monday integration</a> or connecting a <a href="/blog/sovereign-zapier-alternatives-compliance" style="color: #f97316; text-decoration: underline;">xero slack integration</a> seems like an obvious win. Automatically sending tracking notifications or shifting signed agreements directly into your team project boards saves hours of manual administrative copying. But using basic, unmonitored marketplace apps creates a massive structural threat:</p>
+
+<ul>
+ <li><strong>The Insurance Invalidation Trap:</strong> Most corporate cyber insurance policies mandate that sensitive financial records and personally identifiable information (PII) stay encrypted at all times during transit. Default cloud integrations often pass entire, unencrypted contract PDFs or customer ledger data directly into open team chat channels, breaking your policy parameters.</li>
+ <li><strong>The Open Data Window:</strong> Once a sensitive document is pushed into a standard team board or chat room by a generic plugin, it becomes accessible to anyone with basic team access. This opens up an unmonitored insider risk window that fails basic financial security audits.</li>
+</ul>
+
+<p>True operational efficiency means removing human bottlenecks without turning your corporate records into open books. Trueline IT eliminates this exposure completely through <a href="/ai-governance" style="color: #f97316; text-decoration: underline;">private automation in systems you control</a>.</p>
+
+<h3>The integration choice: shared cloud plugins vs. Trueline secure pipelines</h3>
+
+<div class="table-scroll">
+<table style="width:100%; border-collapse: collapse; margin: 20px 0; font-family: sans-serif; font-size: 16px; text-align: left;">
+ <thead>
+ <tr style="border-bottom: 2px solid #f97316; background-color: #f8fafc;">
+ <th style="padding: 12px; font-weight: 700;">Integration Method</th>
+ <th style="padding: 12px; font-weight: 700;">Standard Marketplace Cloud Plugins</th>
+ <th style="padding: 12px; font-weight: 700; color: #f97316;">Private automation in systems you control</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style="border-bottom: 1px solid #e2e8f0;">
+ <td style="padding: 12px; font-weight: bold; width: 25%;">Data Handling</td>
+ <td style="padding: 12px; color: #475569;">Pushes full, unencrypted document payloads and financial data into open team spaces.</td>
+ <td style="padding: 12px; color: #f97316; font-weight: bold; background-color: #fff7ed;">Strips all sensitive customer metadata at the gateway layer, transferring only safe operational status codes.</td>
+ </tr>
+ <tr style="border-bottom: 1px solid #e2e8f0;">
+ <td style="padding: 12px; font-weight: bold;">Insurance Alignment</td>
+ <td style="padding: 12px; color: #475569;">Violates core data protection rules, leaving leadership exposed to denied insurance claims after a breach.</td>
+ <td style="padding: 12px; color: #f97316; font-weight: bold; background-color: #fff7ed;">We help you document and reduce privacy risk. We don't provide legal advice.</td>
+ </tr>
+ <tr style="border-bottom: 2px solid #f97316;">
+ <td style="padding: 12px; font-weight: bold;">Pricing Matrix</td>
+ <td style="padding: 12px; color: #475569;">Opaque, scaling usage structures that charge you extra fees every single time data moves.</td>
+ <td style="padding: 12px; color: #f97316; font-weight: bold; background-color: #fff7ed;">Scoped after the $1,000 AI Liability Assessment, inside the Fractional AI Officer retainer ($10,000–25,000/mo).</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<div style="margin: 35px 0; text-align: center;">
+ <p style="font-size: 18px; font-weight: bold; margin-bottom: 15px;">Want to link your financial software safely without losing insurance coverage?</p>
+ <p><a href="/ai-governance">See how private automation in systems you control protects your workflows →</a></p>
+</div>
+
+<p>Instead of relying on unstable, public third-party connectors that skim your data, we isolate your workflows within private data environments. This keeps your bookkeeping fast and entirely hands-free, drops your platform usage expenses, and protects your executive team from catastrophic audit failures.</p>
+
+<h2>Frequently asked questions on secure financial integrations</h2>
+
+<details>
+<summary>Q: How exactly does an unhardened app connection void my cyber liability insurance?</summary>
+<p style="color: #475569; margin-left: 10px;"><strong>A:</strong> Insurance providers look for any evidence of negligence to deny a corporate claim. If a breach occurs and an audit reveals that private customer data or corporate billing details were passed unencrypted across public cloud channels via generic app add-ons, it constitutes a clear policy breach.</p>
+</details>
+
+<details>
+<summary>Q: Do we lose functionality by moving away from standard marketplace app links?</summary>
+<p style="color: #475569; margin-left: 10px;"><strong>A:</strong> No. You actually gain substantial operational control. Our private networks perform the exact same tasks—triggering updates, alerts, and moving files—but they encrypt the active payload data locally and handle it within secure provincial boundaries.</p>
+</details>
+
+<details>
+<summary>Q: Are your monthly flat fees inclusive of custom workflow re-engineering?</summary>
+<p style="color: #475569; margin-left: 10px;"><strong>A:</strong> Yes. The ladder starts with the $1,000 AI Liability Assessment, then the Fractional AI Officer retainer at $10,000–25,000/mo, then an AI Support Agent, scoped to your work. That work covers full architecture design, secure app configuration, local cloud hosting management, and continuous security pathway audits with zero surprise line-item fees.</p>
+</details>
+
+  <div class="related-links" style="margin-top:2rem;padding:1.5rem;background:#f0f4ff;border-radius:8px;"><p style="font-weight:600;color:#1a2744;margin-bottom:0.75rem;">Related resources from Trueline IT:</p><ul style="color:#2563eb;line-height:2;margin-left:1.2rem;">
+    <li><a href="/ai-governance#governance-pricing">AI Governance Pricing</a></li>
+    <li><a href="/fractional-ai-officer#assessment">AI Liability Assessment</a></li>
+    <li><a href="/blog/is-your-business-pipeda-compliant">AI Governance & PIPEDA</a></li>
+  <li><a href="/blog/20-shadow-ai-audits-2026">2026 shadow AI audits</a></li><li><a href="/ai-governance">AI Governance</a></li><li><a href="/blog/what-sovereign-ai-actually-means">What sovereign AI actually means</a></li></ul></div>
+</article>
+
+  <!-- SOFT CTA -->
+  <div style="margin:40px 0; text-align:center;">
+  </div>
+
+  
+</section>
+
+<section class="contact-section" id="contact" style="background:var(--navy);padding:60px 5%;text-align:center;">
+  <h2 style="font-family:'Fraunces',serif;font-size:2rem;color:#fff;margin-bottom:14px;">Book My AI Consultation</h2>
+  <p style="color:rgba(255,255,255,0.55);font-size:1.05rem;max-width:500px;margin:0 auto 44px;">Send us your name and business email. We reply fast.</p>
+  <div style="background:#fff;border-radius:20px;padding:44px 48px;max-width:580px;margin:0 auto;">
+    <section id="get-assessment" style="max-width:640px;margin:0 auto;padding:48px 5%;"><p>Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first invoice and first payment and we refund your entire first invoice. No questions asked. Full terms on <a href="/terms">/terms</a>.</p><h2 style="text-align:center;font-size:1.6rem;margin-bottom:8px;">Book My AI Consultation</h2><p style="text-align:center;margin-bottom:20px;">Send us your name and business email. We reply fast.</p>
+<!-- GOVERNANCE FORM (restored 2026-10-12; fields: name, email) -->
+<div class="gov-form-wrap" style="max-width:480px;margin:0 auto 20px;text-align:left;">
+  <form id="discovery-form" class="hs-do-not-collect" novalidate>
+    <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
+    <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter a valid email address.</div></div>
+    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Book My AI Consultation</button>
+    <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We reply fast.</p>
+    <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See our <a href="/privacy">Privacy Policy</a>.</p>
+  </form>
+  <div id="form-success" style="display:none;text-align:center;padding:16px 0;"><h4 style="font-size:1.4rem;margin-bottom:8px;">Request received. &#10004;</h4><p style="font-size:1.05rem;">Thanks. We reply fast.</p></div>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('discovery-form'); if(!form) return;
+  var LABEL='Book My AI Consultation';
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var btn=form.querySelector('.btn-submit');
+    var firstname=document.getElementById('firstname').value.trim();
+    var email=document.getElementById('email').value.trim();
+    if(!firstname||!email||!form.checkValidity()){ form.reportValidity(); return; }
+    var em=email.toLowerCase(); var lp=em.split('@')[0]||''; if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(em)||lp.length>64||em.length>254||em.indexOf('..')>-1){ var ee=document.getElementById('email-error'); if(ee){ee.textContent='Please enter a valid email address.';ee.style.display='block';} return; }
+    var userEmail=em;
+    if(btn){btn.textContent='Sending...';btn.disabled=true;}
+    try{
+      var F=[
+          {objectTypeId:'0-1',name:'firstname',value:firstname},
+          {objectTypeId:'0-1',name:'email',value:email},
+          {objectTypeId:'0-1',name:'hs_google_click_id',value:sessionStorage.getItem('google_ads_gclid')||''},
+          {objectTypeId:'0-1',name:'hubspot_owner_id',value:'89556230'}
+        ];
+      var CTX={pageUri:window.location.href,pageName:document.title}; var hm=document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/); if(hm) CTX.hutk=hm[1];
+      var post=function(fl){return (/^(www\.)?truelineit\.com$/.test(location.hostname)?fetch:function(){console.info('HubSpot submit skipped on non-production host');return Promise.resolve(new Response('{}',{status:200}));})('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:fl,context:CTX})});};
+      var res=await post(F);
+      if(res.status===400){ /* drop only fields HubSpot says are not on the form, then resend once so the lead is kept */
+        var bad=[]; try{var e=await res.json(); (e.errors||[]).forEach(function(x){if(x.errorType==='FIELD_NOT_IN_FORM_DEFINITION'){var m=(x.message||'').match(/fields\.(?:[0-9-]+\/)?([a-z_0-9]+)/i); if(m)bad.push(m[1]);}});}catch(_){ }
+        if(bad.length){ res=await post(F.filter(function(x){return bad.indexOf(x.name)<0;})); }
+      }
+      if(res.ok){
+        form.style.display='none'; document.getElementById('form-success').style.display='block';
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
+      } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
+    }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
+  });
+})();
+</script>
+</section>
+
+  </div>
+</section>
+
+
+  
+
+</main>
+
+<div class="sticky-mobile-cta sticky-assessment">
+  <a href="/fractional-ai-officer#assessment">Book My AI Consultation</a>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <a href="/" class="footer-logo" aria-label="Trueline IT home">Trueline<span>.</span>IT</a>
+    <p class="footer-tagline">Phone and AI help for trades and contractors. Salons and clinics too.</p>
+  </div>
+  <p class="footer-contact"><a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">(647) 360-5774</a> · <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off--></p>
+  <p class="footer-contact footer-links"><a href="/for-home-services">Trades & Contractors</a> · <a href="/for-appointment-businesses">Salons, Clinics & Studios</a> · <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
+  <p class="footer-address">1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
+  <p class="footer-copy">© 2026 Trueline IT. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
