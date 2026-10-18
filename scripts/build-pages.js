@@ -3,6 +3,7 @@
  * Build flat HTML from templates/pages + partials.
  *
  * Edit the header in templates/partials/header.html.
+ * The {{cta}} slot is call or consultation, taken from that page's original nav button.
  * Edit the footer in templates/partials/footer.html.
  * Edit a call bar in templates/partials/sticky-call.html or sticky-assessment.html.
  * Edit the phone conversation look in templates/partials/convo.css (markup is renderConvo below).
@@ -49,6 +50,35 @@ const PAGE = new Set([
 ]);
 
 const CALL = '<a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>';
+
+const HEADER_CTAS = {
+  call: '<a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>',
+  consultation: '<a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book My AI Consultation</span></a>',
+};
+
+function headerVariant(source, rel) {
+  const navAt = source.indexOf('<nav');
+  const navEnd = source.indexOf('</nav>', navAt);
+  if (navAt < 0 || navEnd < 0) throw new Error(rel + ' is missing a nav');
+  const nav = source.slice(navAt, navEnd);
+  const found = Object.keys(HEADER_CTAS).filter((name) => nav.includes(HEADER_CTAS[name]));
+  if (found.length !== 1) {
+    throw new Error(rel + ' header CTA must be exactly one of call or consultation');
+  }
+  const other = found[0] === 'call' ? 'consultation' : 'call';
+  if (nav.includes(HEADER_CTAS[other])) {
+    throw new Error(rel + ' header has both a call button and a form CTA');
+  }
+  return found[0];
+}
+
+function headerPartial(variant) {
+  const raw = partial('header.html');
+  if ((raw.match(/\{\{cta\}\}/g) || []).length !== 1) {
+    throw new Error('templates/partials/header.html must contain one {{cta}} slot');
+  }
+  return raw.replace('{{cta}}', () => HEADER_CTAS[variant]);
+}
 
 function read(file) {
   return fs.readFileSync(file, 'utf8');
@@ -412,7 +442,8 @@ function buildOne(rel) {
   if (beforeSticky.includes('class="tl-convo')) {
     style += '<style>\n' + partial('convo.css') + '\n</style>\n';
   }
-  const header = partial('header.html');
+  const variant = headerVariant(source, rel);
+  const header = headerPartial(variant);
   const footer = partial('footer.html');
   const sticky = partial(parts.stickyKind === 'assessment' ? 'sticky-assessment.html' : 'sticky-call.html');
   const slots = {
@@ -431,7 +462,7 @@ function buildOne(rel) {
     if (!Object.prototype.hasOwnProperty.call(slots, key)) throw new Error('Unknown slot ' + key);
     return slots[key];
   });
-  return { rel, template, html: rendered, sourceHead: headOf(source) };
+  return { rel, template, html: rendered, sourceHead: headOf(source), headerVariant: variant };
 }
 
 function headOf(html) {
@@ -479,4 +510,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { buildAll, headOf, templateFor };
+module.exports = { buildAll, headOf, templateFor, HEADER_CTAS };
