@@ -226,6 +226,22 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
  },
  {
  "@type": "Question",
+ "name": "What does the text say?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Whatever you approve. A common start: \"Hi, it's Lakeside Heating. Sorry we missed your call. What do you need help with?\" Every first text includes STOP to opt out."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Isn't voicemail enough?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Many callers hang up instead of leaving a voicemail and call the next name on Google. A text reaches them while their phone is still in their hand, so the conversation starts before they call someone else."
+ }
+ },
+ {
+ "@type": "Question",
  "name": "Can I keep my existing number?",
  "acceptedAnswer": {
  "@type": "Answer",
@@ -342,9 +358,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <div class="hero-copy">
       <div class="hero-eyebrow">Missed-Call Text-Back for trades & contractors</div>
       <h1>Missed a call? Your caller gets a text within minutes.</h1>
-      <p class="hero-sub">Miss a no-heat call at 2 AM? Your caller gets a text within minutes, and you read what they need when you're free. A roof leak at 11 PM? Same thing. A burst pipe at 6 AM while you're still on yesterday's job? Same thing. Every missed call becomes a conversation you can work when you're ready — not a voicemail you never get back to.</p>
+      <p class="hero-sub">No-heat call at 2 AM. Roof leak at 11 PM. Burst pipe while you're on another job. Your caller gets a text within minutes, tells you what they need, and waits for you, not the next name on Google.</p>
       <p class="hero-sub" style="color:#fff;font-weight:700;margin-bottom:20px;">Done-for-you missed-call text-back on your existing number. We set it up and run it. $149/mo flat plus a one-time $199 setup. No overage bills. No contracts, cancel anytime.</p>
-      <p class="hero-sub">For plumbers, HVAC, roofers, electricians, house cleaners, pest control, landscapers, movers, junk removal, painters, snow removal, window cleaners, general contractors, pool service and septic service. One saved job a month pays for it.</p>
+      <p class="hero-sub">One saved job a month pays for it.</p>
       <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
       <div class="hero-trust">
         <div class="trust-item">
@@ -360,6 +376,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
           We set it up and run it — not another app to configure
         </div>
       </div>
+      <p class="hero-sub">One call. We set it up on your number. You approve every word before it goes live.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
     </div>
     <div class="form-card" id="contact">
@@ -372,6 +389,34 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   </div>
 </section>
 
+<!-- SAME CALL, TWO OUTCOMES -->
+<section class="audience-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Same call, two outcomes</div>
+    <h2 class="section-title">Without text-back, the job is gone. With it, the caller waits for you.</h2>
+    <div class="audience-grid">
+      <div class="audience-card bad">
+        <h3>Without text-back</h3>
+        <ul>
+          <li>Your phone rings while you're under a sink.</li>
+          <li>The caller gets voicemail and hangs up.</li>
+          <li>They call the next name on Google.</li>
+          <li>By the time you call back, they've booked someone else.</li>
+        </ul>
+      </div>
+      <div class="audience-card good">
+        <h3>With Trueline text-back</h3>
+        <ul>
+          <li>Your caller gets a text within minutes, from your business number.</li>
+          <li>They reply with what they need and where.</li>
+          <li>You get an alert and read it when you're free.</li>
+          <li>You call back first, with the job details in hand.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PAIN -->
 <section class="pain-section">
   <div class="section-inner">
@@ -381,7 +426,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       <div class="pain-card">
         <div class="pain-icon">📵</div>
         <h3>Calls go to voicemail</h3>
-        <p>You're paying for leads that ring once and die in voicemail. The homeowner who called from a flooded basement, the homeowner with a dead furnace, the homeowner with no hot water — they've already called the next business by the time you look at your phone.</p>
+        <p>Nearly half of calls to home-service businesses never reach a person (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>). You're paying for leads that ring once and die in voicemail. The homeowner who called from a flooded basement, the homeowner with a dead furnace, the homeowner with no hot water — they've already called the next business by the time you look at your phone.</p>
       </div>
       <div class="pain-card">
         <div class="pain-icon">🔨</div>
@@ -415,7 +460,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       <div class="bubble bubble-them">64 Maple Ave. The furnace isn't heating.</div>
       <div class="bubble bubble-us">Got it — we've alerted the owner and they'll reach out shortly.</div>
     </div>
-    <p class="mock-caption">The thread captures what they need and alerts you.</p>
+    <p class="mock-caption">This is the exact text format we set up. Your business name and your wording go in, and you approve it before it goes live.</p>
   </div>
 </section>
 
@@ -509,6 +554,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       <div class="pricing-amount">$149<span>/mo per location</span></div>
       <div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:0 0 20px;">
         <p style="margin:0 0 6px;"><strong>$149/mo per location</strong> — no per-minute charges, no overage bills.</p>
+        <p>Run your own numbers: if one job is worth $300 to you, one saved job covers two months of text-back.</p>
         <p style="margin:0 0 6px;"><strong>Cancel anytime.</strong> No contracts, no cancellation fees.</p>
         <p style="margin:0;">30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p>
       </div>
@@ -571,6 +617,14 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         <p>Texts your caller back automatically after a missed call. Results vary by market, offer, and how you follow up.</p>
       </details>
       <details>
+        <summary>What does the text say?</summary>
+        <p>Whatever you approve. A common start: "Hi, it's Lakeside Heating. Sorry we missed your call. What do you need help with?" Every first text includes STOP to opt out.</p>
+      </details>
+      <details>
+        <summary>Isn't voicemail enough?</summary>
+        <p>Many callers hang up instead of leaving a voicemail and call the next name on Google. A text reaches them while their phone is still in their hand, so the conversation starts before they call someone else.</p>
+      </details>
+      <details>
         <summary>Can I keep my existing number?</summary>
         <p>Yes. You keep your existing number — we set up call forwarding, no porting. We confirm the forwarding details on the call.</p>
       </details>
@@ -605,7 +659,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <!-- BOTTOM CTA -->
 <section class="bottom-cta">
   <h2>Stop losing jobs to voicemail.</h2>
-  <p>You do the job. We set it up and run it. Your next missed call becomes your next conversation — the caller's need lands in a text thread, you read it when you're free, and you answer first. Call us and we'll estimate what missed calls are costing you, from your own numbers.</p>
+  <p>You do the job. We set it up and run it. Your next missed call becomes your next conversation — the caller's need lands in a text thread, you read it when you're free, and you answer first. Call us and we'll estimate what missed calls are costing you, from your own numbers. Every day it isn't set up, the next missed call goes to the next name on Google.</p>
+  <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
   <div class="cta-row">
     <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
   </div>
