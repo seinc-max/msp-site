@@ -184,3 +184,26 @@
 /hvac-tune-up-reminders /for-home-services 301
 /hvac-tune-up-reminders/ /for-home-services 301
 /hvac-tune-up-reminders.html /for-home-services 301
+
+# Hide template sources and build scripts. Pages _redirects cannot return 404
+# (only 200, 301, 302, 303, 307, 308), so non-page paths redirect home.
+# Static rules stay above dynamic ones. First match wins.
+/templates/pages/index / 301
+/templates/pages/index/ / 301
+/templates/pages/index.html / 301
+/templates/pages/blog / 301
+/templates/pages/blog/ / 301
+/templates / 301
+/templates/ / 301
+/scripts / 301
+/scripts/ / 301
+/templates/pages/blog/:slug.html /blog/:slug 301
+/templates/pages/blog/:slug.html/ /blog/:slug 301
+/templates/pages/blog/:slug /blog/:slug 301
+/templates/pages/blog/:slug/ /blog/:slug 301
+/templates/pages/:slug.html /:slug 301
+/templates/pages/:slug.html/ /:slug 301
+/templates/pages/:slug /:slug 301
+/templates/pages/:slug/ /:slug 301
+/templates/* / 301
+/scripts/* / 301
