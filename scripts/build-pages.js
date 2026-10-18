@@ -287,17 +287,21 @@ function sharedInfoHero() {
 function infoHero(model) {
   const shared = sharedInfoHero();
   const chips = shared.trusts.map((item) => `<div class="trust-item">${item.icon}${item.text}</div>`).join('\n');
+  // Terms/Privacy: Call only (Sentinel STOP-S1 option b). About keeps promise + trust chips.
+  const trustBlock = model.includeTrustChips === false
+    ? ''
+    : `    <p class="hero-promise">${shared.promise}</p>
+    <div class="hero-trust">
+${chips}
+    </div>
+`;
   return `<header class="info-hero">
   <div class="info-wrap">
     <p class="info-kicker">${model.kicker}</p>
     <h1>${model.title}</h1>
     <p class="info-lede">${model.lede}</p>
     <div class="hero-actions">${CALL}</div>
-    <p class="hero-promise">${shared.promise}</p>
-    <div class="hero-trust">
-${chips}
-    </div>
-  </div>
+${trustBlock}  </div>
 </header>`;
 }
 
@@ -490,6 +494,7 @@ function legalModel(html, which) {
     ctaHeading: 'Call (647) 360-5774.',
     ctaSub: '',
     ctaNote: '',
+    includeTrustChips: false,
   };
 }
 
