@@ -120,9 +120,13 @@
 /sovereign-ai-automation-ontario /ai-governance 301
 /sovereign-ai-automation-ontario/ /ai-governance 301
 /sovereign-ai-automation-ontario.html /ai-governance 301
-/blog/ontario-clinical-voice-ai-phipa-compliance /blog/clinical-voice-ai-phipa-compliance 301
-/blog/ontario-clinical-voice-ai-phipa-compliance/ /blog/clinical-voice-ai-phipa-compliance 301
-/blog/ontario-clinical-voice-ai-phipa-compliance.html /blog/clinical-voice-ai-phipa-compliance 301
+/blog/ontario-clinical-voice-ai-phipa-compliance /blog/voice-ai-law-accounting-confidentiality 301
+/blog/ontario-clinical-voice-ai-phipa-compliance/ /blog/voice-ai-law-accounting-confidentiality 301
+/blog/ontario-clinical-voice-ai-phipa-compliance.html /blog/voice-ai-law-accounting-confidentiality 301
+# Clinics retarget to law/accounting (Ben 2026-10-18). Direct 301s, no chains.
+/blog/clinical-voice-ai-phipa-compliance /blog/voice-ai-law-accounting-confidentiality 301
+/blog/clinical-voice-ai-phipa-compliance/ /blog/voice-ai-law-accounting-confidentiality 301
+/blog/clinical-voice-ai-phipa-compliance.html /blog/voice-ai-law-accounting-confidentiality 301
 /blog/20-southern-ontario-shadow-ai-audits-2026 /blog/20-shadow-ai-audits-2026 301
 /blog/20-southern-ontario-shadow-ai-audits-2026/ /blog/20-shadow-ai-audits-2026 301
 /blog/20-southern-ontario-shadow-ai-audits-2026.html /blog/20-shadow-ai-audits-2026 301
