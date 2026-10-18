@@ -301,12 +301,16 @@ ${chips}
 </header>`;
 }
 
+function infoArticle(inner) {
+  return `<article class="info-body">\n  <div class="info-wrap">\n${inner.trim()}\n  </div>\n</article>`;
+}
+
 function infoCta(model) {
+  const sub = model.ctaSub ? `\n    <p>${model.ctaSub}</p>` : '';
   return `<section class="info-cta" id="contact-cta">
   <div class="info-wrap">
     <p class="info-label">${model.ctaLabel}</p>
-    <h2>${model.ctaHeading}</h2>
-    <p>${model.ctaSub}</p>
+    <h2>${model.ctaHeading}</h2>${sub}
     <p>${CALL}</p>
     <p class="info-cta-note">${model.ctaNote}</p>
   </div>
@@ -387,7 +391,7 @@ function aboutModel(html) {
   let light = [];
   const flush = () => {
     if (!light.length) return;
-    body += `<article class="info-body">\n  <div class="info-wrap">\n${light.join('\n')}\n  </div>\n</article>\n`;
+    body += infoArticle(light.join('\n')) + '\n';
     light = [];
   };
   for (const part of parts) {
@@ -481,10 +485,10 @@ function legalModel(html, which) {
     kicker,
     title,
     lede,
-    body: main.trim(),
+    body: infoArticle(main.trim()),
     ctaLabel: 'Questions?',
     ctaHeading: 'Call (647) 360-5774.',
-    ctaSub: 'Leave a message and you\'ll get our text within minutes, and a call back fast.',
+    ctaSub: '',
     ctaNote: '',
   };
 }
