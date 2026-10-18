@@ -1,0 +1,40 @@
+.info-page{background:#fff}
+.info-hero{background:#1a2744;padding:72px 5% 56px}
+.info-wrap{max-width:760px;margin:0 auto}
+.info-kicker,.info-label{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 12px}
+.info-hero .info-kicker{color:rgba(255,255,255,.75)}
+.info-kicker:empty,.info-lede:empty{display:none}
+.info-hero h1{font-family:Fraunces,serif;font-size:clamp(2rem,4.4vw,2.75rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0 0 16px}
+.info-lede{color:rgba(255,255,255,.78);font-size:1.05rem;line-height:1.65;margin:0;max-width:640px}
+.info-body{background:#fff;padding:40px 5% 16px}
+.info-body .info-block{margin:0 0 8px}
+.info-body .info-block + .info-block{margin-top:36px;padding-top:8px}
+.info-label{color:#c2410c;margin-top:0}
+.info-body h2{font-family:Fraunces,serif;font-size:1.6rem;font-weight:700;color:#1a2744;line-height:1.25;margin:40px 0 16px}
+.info-body h2:first-of-type{margin-top:0}
+.info-body .info-block > h2:first-child,.info-body .info-block > .info-label + h2{margin-top:0}
+.info-body h3{font-family:Fraunces,serif;font-size:1.2rem;font-weight:600;color:#1a2744;line-height:1.3;margin:28px 0 12px}
+.info-body p,.info-body li{color:#5a6a8a;font-size:.95rem;line-height:1.7}
+.info-body p{margin:0 0 16px}
+.info-body ul,.info-body ol{margin:0 0 16px 1.25rem;padding:0}
+.info-body li{margin:0 0 8px}
+.info-body a{color:#2563eb}
+.info-body strong{color:#1a2744}
+.info-body table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:.93rem}
+.info-body th,.info-body td{padding:10px 12px;border-bottom:1px solid #dde6f5;text-align:left;color:#5a6a8a;vertical-align:top}
+.info-body th{color:#1a2744;border-bottom:2px solid #dde6f5;font-weight:600}
+.info-body details{border-bottom:1px solid #dde6f5;padding:0 0 12px;margin:0 0 12px}
+.info-body summary{cursor:pointer;font-weight:600;color:#1a2744;font-size:1rem}
+.info-body details p{margin:8px 0 0}
+.info-cta{background:#fafaf8;padding:48px 5% 80px;text-align:center}
+.info-cta .info-label{text-align:center}
+.info-cta h2{font-family:Fraunces,serif;font-size:clamp(1.6rem,3vw,2.05rem);font-weight:700;color:#1a2744;line-height:1.25;margin:0 0 12px}
+.info-cta p{color:#5a6a8a;font-size:.98rem;line-height:1.6;max-width:520px;margin:0 auto 16px}
+.info-cta .btn-primary{display:inline-block}
+.info-cta-note{margin-top:4px}
+.info-cta-note:empty{display:none}
+@media (max-width:430px){
+  .info-hero{padding:56px 5% 40px}
+  .info-body{padding:32px 5% 8px}
+  .info-cta{padding:36px 5% 72px}
+}

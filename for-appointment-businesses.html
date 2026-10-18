@@ -119,7 +119,27 @@ a.hub-card:hover{border-color:#f97316;}
 }
 </script>
 </head>
-<body>
+<body><style>
+/* Shared phone conversation. Brand orange bubble with navy text: #1a2744 on #f97316 = 5.28:1. Sky bubble: #1a2744 on #e8f2ff = 13.1:1. */
+.tl-convo{max-width:340px;margin:24px auto 0;background:#1a2744;border-radius:36px;padding:12px 10px 16px;box-shadow:0 24px 48px rgba(26,39,68,.28);text-align:left}
+.tl-convo-wide{max-width:520px}
+.tl-convo-ear{width:58px;height:5px;border-radius:99px;background:#31456f;margin:2px auto 10px}
+.tl-convo-screen{background:#f4f7fb;border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.tl-convo-header{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#fff;border-bottom:1px solid #dde6f5}
+.tl-convo-avatar{width:36px;height:36px;border-radius:50%;background:#1a2744;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Fraunces,serif;font-weight:700;flex:0 0 auto}
+.tl-convo-name{font-size:.88rem;font-weight:600;color:#1a2744;line-height:1.2}
+.tl-convo-sub{font-size:.75rem;color:#5a6a8a;line-height:1.3}
+.tl-convo-thread{display:flex;flex-direction:column;gap:8px;padding:14px 12px 16px}
+.tl-convo-bubble{max-width:86%;padding:10px 14px;border-radius:18px;font-size:.9rem;line-height:1.45;word-wrap:break-word}
+.tl-convo-them{align-self:flex-start;background:#e8f2ff;color:#1a2744;border-bottom-left-radius:5px}
+.tl-convo-us{align-self:flex-end;background:#f97316;color:#1a2744;border-bottom-right-radius:5px;font-weight:600}
+.tl-convo-bubble strong{font-weight:700}
+@media (max-width:430px){
+  .tl-convo,.tl-convo-wide{max-width:100%}
+  .tl-convo-bubble{font-size:.95rem}
+}
+</style>
+
 <a class="skip-link" href="#main">Skip to content</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="tl-nav" aria-label="Primary">
@@ -219,13 +239,7 @@ a.hub-card:hover{border-color:#f97316;}
       <li><span><strong>Physio clinic between patients.</strong> You're with someone on the table and the front desk line is ringing. A new client looking for a first visit gets an answer instead of calling the next clinic on the list.</span></li>
     </ol>
 <h3>Example call: how a booking request sounds</h3>
-<ul>
-<li>Receptionist: Thanks for calling North Nail Studio. I'm the AI assistant. How can I help?</li>
-<li>Caller: I'd like a gel set on Saturday. How much is it?</li>
-<li>Receptionist: I can send the owner a booking request. Can I get your name, the service, who you'd like to see, the best time, and the best phone number?</li>
-<li>Caller: Maya. Saturday afternoon. This number is fine.</li>
-<li>Receptionist: Thanks, Maya. A deposit holds a Saturday appointment. I'll note the deposit rule the owner set, and I'll text them this request. They confirm the time and the price.</li>
-</ul>
+<div class="tl-convo tl-convo-wide"><div class="tl-convo-ear" aria-hidden="true"></div><div class="tl-convo-screen"><div class="tl-convo-header"><div class="tl-convo-avatar" aria-hidden="true">T</div><div><div class="tl-convo-name">North Nail Studio</div></div></div><div class="tl-convo-thread"><div class="tl-convo-bubble tl-convo-us">Receptionist: Thanks for calling North Nail Studio. I'm the AI assistant. How can I help?</div><div class="tl-convo-bubble tl-convo-them">Caller: I'd like a gel set on Saturday. How much is it?</div><div class="tl-convo-bubble tl-convo-us">Receptionist: I can send the owner a booking request. Can I get your name, the service, who you'd like to see, the best time, and the best phone number?</div><div class="tl-convo-bubble tl-convo-them">Caller: Maya. Saturday afternoon. This number is fine.</div><div class="tl-convo-bubble tl-convo-us">Receptionist: Thanks, Maya. A deposit holds a Saturday appointment. I'll note the deposit rule the owner set, and I'll text them this request. They confirm the time and the price.</div></div></div></div>
 <p>Example call with a sample business. This is the exact call flow we set up: your business name, services and wording go in, and you approve it before it goes live. You get the booking request by text.</p>
   </section>
   <section class="hub-section hub-faq">

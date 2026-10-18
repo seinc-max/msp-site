@@ -185,7 +185,27 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=20261016-10">
 </head>
-<body>
+<body><style>
+/* Shared phone conversation. Brand orange bubble with navy text: #1a2744 on #f97316 = 5.28:1. Sky bubble: #1a2744 on #e8f2ff = 13.1:1. */
+.tl-convo{max-width:340px;margin:24px auto 0;background:#1a2744;border-radius:36px;padding:12px 10px 16px;box-shadow:0 24px 48px rgba(26,39,68,.28);text-align:left}
+.tl-convo-wide{max-width:520px}
+.tl-convo-ear{width:58px;height:5px;border-radius:99px;background:#31456f;margin:2px auto 10px}
+.tl-convo-screen{background:#f4f7fb;border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.tl-convo-header{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#fff;border-bottom:1px solid #dde6f5}
+.tl-convo-avatar{width:36px;height:36px;border-radius:50%;background:#1a2744;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Fraunces,serif;font-weight:700;flex:0 0 auto}
+.tl-convo-name{font-size:.88rem;font-weight:600;color:#1a2744;line-height:1.2}
+.tl-convo-sub{font-size:.75rem;color:#5a6a8a;line-height:1.3}
+.tl-convo-thread{display:flex;flex-direction:column;gap:8px;padding:14px 12px 16px}
+.tl-convo-bubble{max-width:86%;padding:10px 14px;border-radius:18px;font-size:.9rem;line-height:1.45;word-wrap:break-word}
+.tl-convo-them{align-self:flex-start;background:#e8f2ff;color:#1a2744;border-bottom-left-radius:5px}
+.tl-convo-us{align-self:flex-end;background:#f97316;color:#1a2744;border-bottom-right-radius:5px;font-weight:600}
+.tl-convo-bubble strong{font-weight:700}
+@media (max-width:430px){
+  .tl-convo,.tl-convo-wide{max-width:100%}
+  .tl-convo-bubble{font-size:.95rem}
+}
+</style>
+
 <a class="skip-link" href="#main">Skip to content</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAV -->
@@ -240,7 +260,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section"><div class="section-inner"><div class="section-eyebrow">Sound familiar?</div><h2 class="section-title">Visitors who never call</h2><div class="pain-grid"><div class="pain-card"><div class="pain-icon">🌐</div><h3>They browse and leave</h3><p>Asked which channel they ignore most, 42% of people said phone calls. Only 8% said texts (<a href="https://www.textmagic.com/wp-content/uploads/2025/04/State-of-business-texting-2025_FullReport.pdf" rel="noopener" target="_blank">Textmagic, 2025</a>). Plenty of visitors would text a question but won't call.</p></div><div class="pain-card"><div class="pain-icon">🌙</div><h3>After-hours questions</h3><p>Evening visitors have nobody to ask, so they try the next company.</p></div><div class="pain-card"><div class="pain-icon">📱</div><h3>Forms go cold</h3><p>You took forms off for a reason. Chat-to-text keeps it a real conversation.</p></div></div></div></section>
 
 <section class="mock-section"><div class="section-inner"><div class="section-eyebrow">How it looks</div><h2 class="section-title">A visitor asks a question at 9 PM</h2>
-<div class="mock-phone"><div class="mock-header"><div class="mock-avatar">T</div><div><div class="mock-name">Lakeside Plumbing</div><div class="mock-sub">Your business number</div></div></div><div class="bubble bubble-them">Do you fix leaking water heaters? Mine is dripping.</div><div class="bubble bubble-us">Hi, Lakeside Plumbing here. Yes we do. Is it leaking from the top or the bottom tank? Reply STOP to opt out.</div><div class="bubble bubble-them">Bottom. Can someone come tomorrow?</div><div class="bubble bubble-us">We can. The owner will call you first thing to book a time.</div></div>
+<div class="tl-convo"><div class="tl-convo-ear" aria-hidden="true"></div><div class="tl-convo-screen"><div class="tl-convo-header"><div class="tl-convo-avatar" aria-hidden="true">T</div><div><div class="tl-convo-name">Lakeside Plumbing</div><div class="tl-convo-sub">Your business number</div></div></div><div class="tl-convo-thread"><div class="tl-convo-bubble tl-convo-them">Do you fix leaking water heaters? Mine is dripping.</div><div class="tl-convo-bubble tl-convo-us">Hi, Lakeside Plumbing here. Yes we do. Is it leaking from the top or the bottom tank? Reply STOP to opt out.</div><div class="tl-convo-bubble tl-convo-them">Bottom. Can someone come tomorrow?</div><div class="tl-convo-bubble tl-convo-us">We can. The owner will call you first thing to book a time.</div></div></div></div>
 <p class="mock-caption">This is the exact text format we set up. Your business name and your wording go in, and you approve it before it goes live.</p></div></section>
 
 <section class="how-section"><div class="section-inner"><div class="section-eyebrow">How it works</div><h2 class="section-title">We set it up and run it in three steps</h2><div class="steps-grid"><div class="step"><div class="step-number">1</div><h3>Call us</h3><p>We look at your website and where the button should go.</p></div><div class="step"><div class="step-number">2</div><h3>We install the chat</h3><p>You approve the greeting. Chats arrive as texts on your business number.</p></div><div class="step"><div class="step-number">3</div><h3>You reply and book</h3><p>Answer from your phone and call them back to book.</p></div></div><div style="margin-top:36px;"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div></div></section>
