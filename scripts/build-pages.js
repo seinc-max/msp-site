@@ -238,12 +238,33 @@ function replaceMockPhones(html) {
   return out;
 }
 
+function listMessage(htmlInner) {
+  // "Mike, Lakeside Heating:" marks the outgoing side. The name stays in a
+  // screen-reader span so the visible SMS is the text itself.
+  const owner = htmlInner.match(/^([^:\n]{1,40}, [^:\n]{1,80}):\s*([\s\S]*)$/);
+  if (owner) return { side: 'us', html: owner[2].trim(), kind: 'owner', label: owner[1].trim() };
+  if (htmlInner.startsWith('Your business:') || htmlInner.startsWith('Receptionist:')) {
+    return { side: 'us', html: htmlInner, kind: 'label' };
+  }
+  if (htmlInner.startsWith('Caller:')) {
+    return { side: 'them', html: htmlInner.replace(/^Caller:\s*/, ''), kind: 'caller', full: htmlInner };
+  }
+  return { side: 'them', html: htmlInner, kind: 'them' };
+}
+
 function replaceConversationLists(html) {
-  return html.replace(/<ul>(?:\s*<li>(?:Caller|Your business|Receptionist):[\s\S]*?<\/li>)+\s*<\/ul>/g, (block) => {
-    const messages = [...block.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => {
-      const htmlInner = m[1].trim();
-      const side = htmlInner.startsWith('Your business:') || htmlInner.startsWith('Receptionist:') ? 'us' : 'them';
-      return { side, html: htmlInner };
+  return html.replace(/<ul>(?:\s*<li>(?:Caller|Your business|Receptionist|[^<:\n]{1,40}, [^<:\n]{1,80}):[\s\S]*?<\/li>)+\s*<\/ul>/g, (block) => {
+    const parsed = [...block.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => listMessage(m[1].trim()));
+    const ownerThread = parsed.some((item) => item.kind === 'owner');
+    const messages = parsed.map((item) => {
+      if (ownerThread && item.label) {
+        return { side: item.side, html: `<span class="sr-only">${item.label}:</span> ${item.html}` };
+      }
+      if (ownerThread && item.kind === 'caller') {
+        return { side: item.side, html: `<span class="sr-only">Caller:</span> ${item.html}` };
+      }
+      if (item.kind === 'caller') return { side: item.side, html: item.full };
+      return { side: item.side, html: item.html };
     });
     const joined = messages.map((m) => m.html).join(' ');
     const call = messages.some((m) => m.html.startsWith('Receptionist:'));
