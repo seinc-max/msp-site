@@ -197,6 +197,8 @@
 /templates/ / 301
 /scripts / 301
 /scripts/ / 301
+/docs / 301
+/docs/ / 301
 /templates/pages/blog/:slug.html /blog/:slug 301
 /templates/pages/blog/:slug.html/ /blog/:slug 301
 /templates/pages/blog/:slug /blog/:slug 301
@@ -207,3 +209,4 @@
 /templates/pages/:slug/ /:slug 301
 /templates/* / 301
 /scripts/* / 301
+/docs/* / 301
