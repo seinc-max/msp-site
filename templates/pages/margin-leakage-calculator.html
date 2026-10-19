@@ -247,15 +247,15 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <div class="calc-outputs">
       <div class="output-group">
         <div class="output-label">Estimated unbilled time from the numbers you entered</div>
-        <div class="output-value highlight" id="out-leakage">$0</div>
+        <div class="output-value highlight" id="out-leakage">—</div>
         <div class="output-sub">This uses your headcount, salary, and the share you set. Treat it as an estimate from those inputs.</div>
       </div>
       <div class="output-group">
         <div class="output-label">Estimated prompts a month, from the share you set</div>
-        <div class="output-value" id="out-risk-events" style="font-size: 2.5rem; color: #fca5a5;">0</div>
+        <div class="output-value" id="out-risk-events" style="font-size: 2.5rem; color: #fca5a5;">—</div>
         <div class="output-sub">An estimate, from the share you set, of prompts that could put confidential client work on a public tool.</div>
       </div>
-      <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;">The estimate is about <span id="out-cta-amt">$0</span> a year, from the numbers you entered. Send your name and email below for a look at your AI exposure. Nothing is installed.</p>
+      <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;"><span id="out-cta-lead">Change the numbers to match your firm to see what you are losing.</span> Send your name and email below for a look at your AI exposure. Nothing is installed.</p>
       <a href="/fractional-ai-officer#assessment" class="calc-cta">Book My AI Consultation</a>
     </div>
   </div>
@@ -376,14 +376,26 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     document.getElementById('out-risk-events').innerText = new Intl.NumberFormat('en-CA').format(riskEvents);
   }
 
+  // Show the estimate only after the visitor enters numbers (display only; the math above is unchanged).
+  function startEstimate() {
+    const lead = document.getElementById('out-cta-lead');
+    if (lead.dataset.started) return;
+    lead.dataset.started = '1';
+    lead.innerHTML = 'The estimate is about <span id="out-cta-amt"></span> a year, from the numbers you entered.';
+    calculateMargin();
+  }
+  ['employees', 'salary', 'ai-adoption'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', startEstimate);
+    document.getElementById(id).addEventListener('change', startEstimate);
+  });
+
   document.getElementById('employees').addEventListener('input', calculateMargin);
   document.getElementById('salary').addEventListener('input', calculateMargin);
   document.getElementById('ai-adoption').addEventListener('input', calculateMargin);
   document.getElementById('employees').addEventListener('change', calculateMargin);
   document.getElementById('salary').addEventListener('change', calculateMargin);
   
-  // Init
-  calculateMargin();
+  // No calculation on load: the outputs stay neutral until the visitor enters numbers.
 </script>
 </body>
 </html>
