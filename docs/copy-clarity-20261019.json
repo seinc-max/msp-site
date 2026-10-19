@@ -1,0 +1,602 @@
+[
+ {
+  "id": "S1-1",
+  "page": "/missed-call-text-back (FAQ \"Is this an AI receptionist?\")",
+  "current": "\"No. This is SMS text-back after a missed call. You stay on the close.\"",
+  "new": "\"No. This texts your caller after a missed call. You still call them back and land the job.\""
+ },
+ {
+  "id": "S1-2",
+  "page": "/google-review-requests",
+  "current": "\"An unanswered 1-star review looks worse than the review itself.\"",
+  "new": "\"A 1-star review with no reply looks worse than one you've answered.\""
+ },
+ {
+  "id": "S1-3",
+  "page": "/google-review-requests (H1)",
+  "current": "\"More Google reviews, without ever asking.\"",
+  "new": "\"More Google reviews, without you having to ask.\""
+ },
+ {
+  "id": "S1-4",
+  "page": "/website-chat-to-text (\"Forms go cold\")",
+  "current": "\"You took forms off for a reason. Chat-to-text keeps it a real conversation.\"",
+  "new": "\"A contact form waits in your inbox until you check it. Chat-to-text sends the question to your phone as a text, and you answer it like any other text.\""
+ },
+ {
+  "id": "S1-5",
+  "page": "/contractor-websites (Roofers)",
+  "current": "\"Your roofer site is built for local search for “roof leak repair” and push calls.\"",
+  "new": "\"Your roofer site is built to show up when someone nearby searches “roof leak repair,” and to get them calling you.\""
+ },
+ {
+  "id": "S1-6",
+  "page": "/contractor-websites (Electricians)",
+  "current": "\"A homeowner standing in a dark kitchen calls you from the driveway.\"",
+  "new": "\"A homeowner standing in a dark kitchen taps the button and calls you.\""
+ },
+ {
+  "id": "S1-7",
+  "page": "/contractor-websites (Handymen)",
+  "current": "\"The afternoon slot gets a tap-to-call, not a contact form they abandon.\"",
+  "new": "\"A homeowner with a free afternoon taps to call you, instead of filling in a form and waiting.\""
+ },
+ {
+  "id": "S1-8",
+  "page": "/ai-receptionist",
+  "current": "\"Invoca calls AI agents that pick up when a person can't \"the single biggest lever for improving answer rates and speed-to-lead\" ( Invoca, 2026 ).\"",
+  "new": "\"Invoca says AI agents that pick up when a person can't are “the single biggest lever for improving answer rates and speed-to-lead” (Invoca, 2026).\" (quote unchanged)"
+ },
+ {
+  "id": "S1-9",
+  "page": "/about (×2: trades block + final CTA)",
+  "current": "\"The phone is the ask.\"",
+  "new": "Trades block: \"The next step is one phone call.\" Final CTA: \"When you call, tell us whether you run a trade, a salon or a clinic.\""
+ },
+ {
+  "id": "S1-10",
+  "page": "/missed-call-text-back (step 1)",
+  "current": "\"Using your estimates for call volume, missed calls, and average job value, we walk the likely monthly leak with you.\"",
+  "new": "\"On the call, we use your numbers to work out what missed calls likely cost you each month.\""
+ },
+ {
+  "id": "S1-12",
+  "page": "/ai-support-agent",
+  "current": "\"The agent sits with the written AI policy on AI governance .\"",
+  "new": "\"The agent works alongside the written AI policy you get with AI Governance.\""
+ },
+ {
+  "id": "S1-13",
+  "page": "/ai-exposure-score",
+  "current": "\"The score is the 15 questions above.\"",
+  "new": "\"Your score comes from your answers to the 15 questions above.\""
+ },
+ {
+  "id": "S1-14",
+  "page": "/ai-exposure-score (hero)",
+  "current": "\"Answer 15 questions about monitoring, backups, security, compliance and support.\"",
+  "new": "\"Answer 15 yes-or-no questions about how your firm uses AI: tools, policy, Copilot settings, training, vendors and cyber insurance.\""
+ },
+ {
+  "id": "S1-15",
+  "page": "/ai-automation-roi-guide (FAQ)",
+  "current": "Q \"My team is already using ChatGPT or Copilot secretly. What should we do?\" A \"Even better.\"",
+  "new": "\"That's where we start.\" (rest of answer unchanged: \"We audit what you already have…\")"
+ },
+ {
+  "id": "S1-17",
+  "page": "/fractional-ai-officer (H2)",
+  "current": "\"Accounting practices are closing the books when the trial balance hits a public chatbot.\"",
+  "new": "\"It's month-end. A staff accountant just pasted the trial balance into a public chatbot.\""
+ },
+ {
+  "id": "S1-18",
+  "page": "/fractional-ai-officer (H2)",
+  "current": "\"Mortgage brokers pick the first project that stops the bleed.\"",
+  "new": "\"After the assessment, you pick the first fix: the one that stops the biggest leak.\""
+ },
+ {
+  "id": "S1-19",
+  "page": "/for-law-firms-accountants-and-advisors (IT provider scene)",
+  "current": "\"The client's environment just left your engagement.\"",
+  "new": "\"The client's name is now in a public chat log.\" (fact already in the scene: the error had the client name in the path)"
+ },
+ {
+  "id": "S1-20",
+  "page": "/blog/sovereign-zapier-alternatives-compliance, /blog/voice-ai-law-accounting-confidentiality, /blog/financial-integration-insurance-vulnerabilities (comparison tables)",
+  "current": "The Trueline-column cells for \"Data Privacy\" / \"Data Residency\" / \"Insurance Alignment\" read only: \"We help you document and reduce privacy risk. We don't provide legal advice.\"",
+  "new": "Use each page's own existing line, then the disclaimer: Zapier: \"Data stays in systems you control. We help you document and reduce privacy risk; we don't provide legal advice.\" Voice: \"Client audio stays inside an environment you control. (same disclaimer)\". Financial: \"Records stay inside systems you control. (same disclaimer)\". These are already stated in each post's short version."
+ },
+ {
+  "id": "S2-1",
+  "page": "Home, /missed-call-text-back, /for-home-services, /ai-receptionist, /404",
+  "current": "\"Missed calls spike with the first cold snap and after a storm ( Invoca, 2026 ). Get set up before yours.\"",
+  "new": "\"…(Invoca, 2026). Get set up before the next one hits.\""
+ },
+ {
+  "id": "S2-2",
+  "page": "Home (Salons & Clinics card)",
+  "current": "\"The AI receptionist and review requests , set up for appointments.\"",
+  "new": "\"For salons and clinics: an AI receptionist that takes the booking, plus review requests.\""
+ },
+ {
+  "id": "S2-3",
+  "page": "Home (final CTA)",
+  "current": "\"Say whether you run a trade, a salon or a clinic.\"",
+  "new": "\"When you call, tell us whether you run a trade, a salon or a clinic.\""
+ },
+ {
+  "id": "S2-4",
+  "page": "/website-chat-to-text",
+  "current": "\"Missed calls spike … ( Invoca, 2026 ). Give visitors who won't call a way to text you before then.\"",
+  "new": "\"…(Invoca, 2026). Give visitors who won't call a way to text you before the next one hits.\""
+ },
+ {
+  "id": "S2-5",
+  "page": "/for-home-services (hero)",
+  "current": "\"For plumbers, HVAC, roofers, electricians, house cleaners, pest control, landscapers, movers, junk removal and the rest of your crew.\"",
+  "new": "\"…movers, junk removal and other trades.\""
+ },
+ {
+  "id": "S2-6",
+  "page": "/for-home-services",
+  "current": "\"Your plumbers and roofers get the details from after-hours calls so you can follow up first.\"",
+  "new": "\"You get the details from after-hours calls, so you can call back first.\""
+ },
+ {
+  "id": "S2-7",
+  "page": "/ai-receptionist (hero)",
+  "current": "\"You're up a ladder or with a client when the phone rings. It picks up, takes the job details…\"",
+  "new": "\"…when the phone rings. Your AI receptionist picks up, takes the job details or the booking request, and texts them to you.\""
+ },
+ {
+  "id": "S2-8",
+  "page": "/ai-receptionist (step 3)",
+  "current": "\"Answers nights, weekends, and after hours, capturing job requests, and urgent calls sent straight to you.\"",
+  "new": "\"It answers nights, weekends and after hours, takes job requests, and sends urgent calls straight to you.\""
+ },
+ {
+  "id": "S2-9",
+  "page": "/ai-receptionist (Run your numbers)",
+  "current": "\"2 → about 1½ jobs → about $740\" (and 5, 10)",
+  "new": "\"2 missed calls a week → about 1½ jobs a month → about $740\" (same for 5 and 10)"
+ },
+ {
+  "id": "S2-10",
+  "page": "/ai-receptionist (eyebrow over the nail call)",
+  "current": "\"After a nail appointment\"",
+  "new": "\"A booking call at a nail salon\""
+ },
+ {
+  "id": "S2-11",
+  "page": "/ai-receptionist (FAQ)",
+  "current": "Q \"Can I hear it before I buy?\" A \"On the call we'll walk you through how it answers and captures job requests.\"",
+  "new": "\"Yes. Play the sample call on this page. When you call us, we'll walk you through how it answers your calls.\""
+ },
+ {
+  "id": "S2-12",
+  "page": "/google-review-requests (eyebrow)",
+  "current": "\"Both audiences\"",
+  "new": "\"Trades, salons and clinics\""
+ },
+ {
+  "id": "S2-13",
+  "page": "/google-review-requests",
+  "current": "\"You are HVAC. The heat is back on.\"",
+  "new": "\"You're the HVAC tech. The heat is back on.\""
+ },
+ {
+  "id": "S2-14",
+  "page": "/google-review-requests (×2: calculator block + final CTA)",
+  "current": "\"Call and we'll look at your Google profile and when your customers should get the review text.\"",
+  "new": "\"Call and we'll check your Google profile and work out the best time to send your review text.\""
+ },
+ {
+  "id": "S2-15",
+  "page": "/google-review-requests (FAQ)",
+  "current": "\"Does this pair with review requests?\"",
+  "new": "\"How do Requests and Replies fit together?\""
+ },
+ {
+  "id": "S2-16",
+  "page": "/google-review-requests",
+  "current": "\"80% of consumers are likely to use a business that responds to all of its reviews. Every reply is drafted for you (BrightLocal, 2026).\"",
+  "new": "\"80% of consumers are likely to use a business that responds to all of its reviews (BrightLocal, 2026). We draft every reply for you.\""
+ },
+ {
+  "id": "S2-17",
+  "page": "/website-chat-to-text (mockup, Dave)",
+  "current": "\"Is it leaking from the top or the bottom tank?\"",
+  "new": "\"Is it leaking from the top or the bottom of the tank?\""
+ },
+ {
+  "id": "S2-18",
+  "page": "/website-chat-to-text (FAQ)",
+  "current": "Q \"Does it work on any website?\" A \"Usually one small snippet. We confirm on the call.\"",
+  "new": "\"It usually takes one small piece of code on your site, and we add it for you. We confirm it works on the call.\""
+ },
+ {
+  "id": "S2-19",
+  "page": "/text-to-pay",
+  "current": "\"Home services. You name the job. The customer pays from the text.\"",
+  "new": "\"Whatever the job, your customer pays from the text.\""
+ },
+ {
+  "id": "S2-20",
+  "page": "/text-to-pay (step 2)",
+  "current": "\"We connect a card payment account and the text wording you approve.\"",
+  "new": "\"We set up your card payment account and write the text. You approve the wording.\""
+ },
+ {
+  "id": "S2-21",
+  "page": "/contractor-websites",
+  "current": "\"No setup fee. Design, copy, hosting, click-to-call, your Google Business tie-in, and edits are in the month.\"",
+  "new": "\"No setup fee. Design, copy, hosting, click-to-call, your Google Business tie-in and edits are all included in the $499 a month.\""
+ },
+ {
+  "id": "S2-22",
+  "page": "/contractor-websites (\"What's not included\")",
+  "current": "\"You do not pick a template / You do not write the pages / You do not open a website-builder account or watch a dashboard / There is no setup fee\"",
+  "new": "Retitle the list \"What you don't have to do\", and move \"There is no setup fee\" to the price block, where it already appears."
+ },
+ {
+  "id": "S2-23",
+  "page": "/for-appointment-businesses",
+  "current": "\"Your physio clinic or massage practice shouldn't lose a new client just because everyone's with someone, so requests come to you to confirm.\"",
+  "new": "\"Your physio clinic or massage practice shouldn't lose a new client because everyone's with a patient. Requests come to you to confirm.\""
+ },
+ {
+  "id": "S2-24",
+  "page": "/for-appointment-businesses, /for-home-services, /about",
+  "current": "\"Both are a one-time $99 setup per location.\" / \"Both $99 one-time setup per location.\"",
+  "new": "\"Both have a one-time $99 setup per location.\""
+ },
+ {
+  "id": "S2-25",
+  "page": "/about (hero)",
+  "current": "\"…Salons and clinics get an AI receptionist and review requests. On the number you already use.\"",
+  "new": "\"…Salons and clinics get an AI receptionist and review requests, all on the number you already use.\""
+ },
+ {
+  "id": "S2-26",
+  "page": "/ai-support-agent (H1)",
+  "current": "\"Your clients get answers at 7 p.m. From material you already approved.\"",
+  "new": "\"Your clients get answers at 7 p.m., from material you already approved.\""
+ },
+ {
+  "id": "S2-27",
+  "page": "/ai-support-agent, /for-law-firms-accountants-and-advisors",
+  "current": "\"Book My AI Consultation if you would rather send a note first.\"",
+  "new": "\"Not ready to book? Send your name and email, and we'll reply.\""
+ },
+ {
+  "id": "S2-28",
+  "page": "/ai-support-agent (tax and HR scenes)",
+  "current": "\"It does not rewrite the notice.\" / \"It does not rewrite the letter.\"",
+  "new": "Tax: \"It does not reply to the tax notice.\" HR: \"It does not edit the draft policy.\""
+ },
+ {
+  "id": "S2-29",
+  "page": "/ai-support-agent",
+  "current": "\"We scope the support agent after the assessment.\" (×3)",
+  "new": "\"We scope the support agent after the $1,000 AI Liability Assessment.\" (once; remove the repeats)"
+ },
+ {
+  "id": "S2-31",
+  "page": "/for-law-firms-accountants-and-advisors",
+  "current": "\"Each named firm below gets its own scene. Law firms, accountants, … real estate brokerages.\"",
+  "new": "\"Find your firm below.\""
+ },
+ {
+  "id": "S2-32",
+  "page": "/for-law-firms-accountants-and-advisors",
+  "current": "\"You win the tone. You lose the right to say the work stayed inside the firm.\"",
+  "new": "\"The deck reads better. But you can't say the work stayed inside the firm anymore.\""
+ },
+ {
+  "id": "S2-33",
+  "page": "/for-law-firms-accountants-and-advisors",
+  "current": "\"Fractional AI Officer is $10,000–25,000/mo when your HR consultancy or a larger firm wants that seat filled.\"",
+  "new": "\"Fractional AI Officer is $10,000–25,000/mo, for firms that want a named AI officer on the team.\""
+ },
+ {
+  "id": "S2-34",
+  "page": "/for-law-firms…, /ai-governance",
+  "current": "\"Then AI governance when you need the written policy and the flat month.\" / \"…get the same flat month.\"",
+  "new": "\"…the written policy at a flat monthly fee.\" / \"…get the same flat monthly fee.\""
+ },
+ {
+  "id": "S2-36",
+  "page": "/ai-governance (step 1)",
+  "current": "\"$1,000, credited in full toward a retainer if you continue within 90 days. Or send your name and email . We review your current setup…\"",
+  "new": "Add heading \"Start with the $1,000 AI Liability Assessment\". Body: \"It's credited in full toward a retainer if you continue within 90 days. Prefer to talk first? Send your name and email. We review your current setup…\""
+ },
+ {
+  "id": "S2-38",
+  "page": "/ai-exposure-score (link card)",
+  "current": "\"The AI Liability Assessment is $1,000, credited within 90 days.\"",
+  "new": "\"…$1,000, credited in full toward a retainer if you continue within 90 days.\""
+ },
+ {
+  "id": "S2-39",
+  "page": "/ai-exposure-score (FAQ)",
+  "current": "\"How fast do you respond when something breaks?\"",
+  "new": "\"How fast do you reply?\" (answer unchanged)"
+ },
+ {
+  "id": "S2-40",
+  "page": "/ai-automation-roi-guide (hero and FAQ)",
+  "current": "\"You run a law firm, and your firm has no written AI policy. Use your own headcount and salary.\" / \"reconciling emails from CRM systems\" / FAQ \"What is the financial leakage…? Manual administration quietly costs a 20-person business staff hours every week.\"",
+  "new": "\"Run a law firm with no written AI policy? Start here, with your own headcount and salary.\" / \"copying details between email and your CRM\" / \"It depends on your headcount and workflows. The $1,000 AI Liability Assessment finds that number first…\""
+ },
+ {
+  "id": "S3-1",
+  "page": "Sitewide (all pages with citations)",
+  "current": "\"( Invoca, 2026 )\", \"For Trades & Contractors .\", \"/terms .\", \"Call (647) 360-5774 .\"",
+  "new": "\"(Invoca, 2026)\", \"…Contractors.\", \"/terms.\""
+ },
+ {
+  "id": "S3-3",
+  "page": "Home (\"It stays running\")",
+  "current": "\"It keeps working after it goes live. You answer the leads.\"",
+  "new": "\"It keeps running after it goes live. You just call the leads back.\""
+ },
+ {
+  "id": "S3-4",
+  "page": "/missed-call-text-back",
+  "current": "\"The thread captures what they need and alerts you.\"",
+  "new": "\"Their reply shows you what they need, and you get an alert.\""
+ },
+ {
+  "id": "S3-5",
+  "page": "/missed-call-text-back",
+  "current": "\"You follow up while intent is fresh\"",
+  "new": "\"You call back while they still want the job done\""
+ },
+ {
+  "id": "S3-6",
+  "page": "/missed-call-text-back",
+  "current": "\"Done-for-you install and ongoing ops — you approve copy before go-live\"",
+  "new": "\"We install it and keep it running. You approve the wording before it goes live.\""
+ },
+ {
+  "id": "S3-7",
+  "page": "/missed-call-text-back",
+  "current": "\"Monthly review call to adjust scripts and routing\"",
+  "new": "\"Monthly review call to adjust the wording and who gets the alerts\""
+ },
+ {
+  "id": "S3-8",
+  "page": "/missed-call-text-back (FAQ)",
+  "current": "\"The $199 is onboarding / install — number connection, script approval, and go-live — not a random surcharge.\"",
+  "new": "\"The $199 covers the install: connecting your number, approving the wording and going live. It's not a random surcharge.\""
+ },
+ {
+  "id": "S3-9",
+  "page": "/missed-call-text-back, /ai-receptionist",
+  "current": "\"Flat monthly. Media / Google Ads spend is separate if you run ads.\"",
+  "new": "\"Flat monthly. If you run Google Ads, that ad spend is separate.\""
+ },
+ {
+  "id": "S3-10",
+  "page": "/missed-call-text-back (FAQ)",
+  "current": "\"We work directly with operating businesses. We don't white-label or replace your whole stack.\"",
+  "new": "\"No. We work directly with business owners like you. We don't resell under other brands, and we don't replace all your software.\""
+ },
+ {
+  "id": "S3-11",
+  "page": "/missed-call-text-back, /ai-receptionist (not-for lists)",
+  "current": "\"White-label or \"replace your whole stack\" shoppers\" / \"Agencies / white-label resellers\" / \"Anyone shopping to replace their whole stack with a platform\" / \"Owners who want managed coverage — not a DIY minute plan\"",
+  "new": "\"Agencies or resellers\" / \"Anyone who wants one platform to replace all their software\" / \"Owners who want it run for them, not a pay-per-minute app\""
+ },
+ {
+  "id": "S3-12",
+  "page": "/missed-call-text-back (who-for)",
+  "current": "\"Trade and contractor owners who lose jobs … plumbers catching a midnight burst pipe, … garage-door repairs, appliance repair, movers, junk removal, snow removal, and window cleaners.\"",
+  "new": "\"Trade and contractor owners who lose jobs on site, on the road or after hours.\" then a separate line: \"Plumbers on a midnight burst pipe, HVAC techs on a January no-heat call, roofers after a storm, electricians, painters, landscapers, house cleaners, pest control, garage-door and appliance repair, movers, junk removal, snow removal and window cleaners.\""
+ },
+ {
+  "id": "S3-13",
+  "page": "/missed-call-text-back, /website-chat-to-text",
+  "current": "\"Asked which channel they ignore most, 42% of people said phone calls.\"",
+  "new": "\"When asked which channel they ignore most, 42% of people said phone calls.\""
+ },
+ {
+  "id": "S3-14",
+  "page": "/missed-call-text-back",
+  "current": "\"The homeowner who called from a flooded basement, the homeowner with a dead furnace, the homeowner with no hot water —\"",
+  "new": "\"The homeowner with a flooded basement, a dead furnace or no hot water has already called the next business by the time you look at your phone.\""
+ },
+ {
+  "id": "S3-15",
+  "page": "/for-home-services (burst pipe)",
+  "current": "\"It gets answered, the address and the problem get written down, and the urgent details come to you.\"",
+  "new": "\"The AI receptionist answers, takes down the address and the problem, and sends you the urgent details.\""
+ },
+ {
+  "id": "S3-16",
+  "page": "/for-home-services",
+  "current": "\"Also for pest control, junk removal, septic service, pool service and window cleaners. Same number, same setup, and we do the work.\"",
+  "new": "\"It also works for pest control, junk removal, septic, pool service and window cleaners: same number, same setup, and we do the work.\""
+ },
+ {
+  "id": "S3-17",
+  "page": "/for-home-services (\"Get paid from the driveway\")",
+  "current": "\"Text-to-pay for your trade. $49/mo … Card processing fees are separate. The customer pays from the text.\"",
+  "new": "\"Text the invoice and your customer pays from the text. $49/mo per location plus a one-time $99 setup. Card processing fees are separate.\""
+ },
+ {
+  "id": "S3-18",
+  "page": "/for-home-services",
+  "current": "\"A website that sends the call\"",
+  "new": "\"A website that gets you calls\""
+ },
+ {
+  "id": "S3-19",
+  "page": "/for-home-services",
+  "current": "\"Your house cleaning, moving or landscaping crew is out working all day too, so your phone should keep booking instead of filling up your voicemail.\"",
+  "new": "\"…is out working all day too. Your phone keeps booking instead of filling up your voicemail.\""
+ },
+ {
+  "id": "S3-20",
+  "page": "/ai-receptionist (×8 on page)",
+  "current": "\"nights, weekends, and after hours\"",
+  "new": "Keep it once in the hero. Elsewhere use \"after hours and on weekends\"."
+ },
+ {
+  "id": "S3-21",
+  "page": "/ai-receptionist",
+  "current": "\"It is set up and run for you.\" (also /quote-follow-up-win-back FAQ)",
+  "new": "\"We set it up and run it for you.\""
+ },
+ {
+  "id": "S3-22",
+  "page": "/ai-receptionist",
+  "current": "\"Your phone is the busiest member of your team — and the most ignored\"",
+  "new": "\"Your phone is the busiest member of your team — and the hardest to answer\""
+ },
+ {
+  "id": "S3-23",
+  "page": "/ai-receptionist (FAQ)",
+  "current": "\"…answers nights, weekends, and after hours, captures job requests, and escalates ($399/mo).\"",
+  "new": "\"…captures job requests, and sends urgent calls to you ($399/mo).\""
+ },
+ {
+  "id": "S3-24",
+  "page": "/ai-receptionist",
+  "current": "\"$499 setup — onboarding / install: scripts, hours, services, go-live.\"",
+  "new": "\"$499 setup covers the install: your script, hours, services and going live.\""
+ },
+ {
+  "id": "S3-26",
+  "page": "/ai-receptionist (sample call card)",
+  "current": "Avatar letter \"T\" on both the Lakeside Heating and North Nail Salon mockups",
+  "new": "\"L\" and \"N\""
+ },
+ {
+  "id": "S3-27",
+  "page": "/quote-follow-up-win-back (step 1)",
+  "current": "\"You call / You go through your open quotes and past-customer list.\"",
+  "new": "\"We go through your open quotes and past-customer list with you.\""
+ },
+ {
+  "id": "S3-28",
+  "page": "/quote-follow-up-win-back (FAQ)",
+  "current": "\"Cold lists stay off the texts.\"",
+  "new": "\"We never text cold lists.\""
+ },
+ {
+  "id": "S3-29",
+  "page": "/google-review-requests",
+  "current": "\"We connect it to your job list or a simple daily send.\"",
+  "new": "\"We connect it to your job list, or you send us a simple list each day.\""
+ },
+ {
+  "id": "S3-30",
+  "page": "/google-review-requests",
+  "current": "\"A negative review is flagged to you within minutes, the same day it comes in.\"",
+  "new": "\"A negative review is flagged to you within minutes of coming in.\""
+ },
+ {
+  "id": "S3-31",
+  "page": "/google-review-requests",
+  "current": "\"After the chair, the clinic, or the class\"",
+  "new": "\"After a haircut, a clinic visit or a class\""
+ },
+ {
+  "id": "S3-32",
+  "page": "/google-review-requests",
+  "current": "\"Run your own numbers: finish 20 jobs a month and 20 review requests go out, plus one reminder each. Every month, without you remembering.\"",
+  "new": "\"…plus one reminder each, every month, without you having to remember.\""
+ },
+ {
+  "id": "S3-33",
+  "page": "/text-to-pay (mockup)",
+  "current": "\"Your invoice for today's furnace repair is ready: Pay invoice › . Reply STOP to opt out.\"",
+  "new": "\"…is ready: Pay invoice ›. Reply STOP to opt out.\""
+ },
+ {
+  "id": "S3-34",
+  "page": "/text-to-pay",
+  "current": "\"The house cleaner invoice is a text, not a cheque you wait on.\"",
+  "new": "\"Your invoice is a text, not a cheque you wait on.\""
+ },
+ {
+  "id": "S3-35",
+  "page": "/text-to-pay (FAQ)",
+  "current": "\"Plumbers, HVAC, electricians, roofers, cleaners and landscapers. House cleaners, painters and the rest of the home-service trades use the same setup.\"",
+  "new": "\"…cleaners and landscapers. Painters and other home-service trades use the same setup.\""
+ },
+ {
+  "id": "S3-36",
+  "page": "/contractor-websites (H1 and copy)",
+  "current": "\"Homeowners search the job.\" / \"The homeowner searches the job…\" / \"Your phone rings from the job they searched.\"",
+  "new": "H1: \"Homeowners search for the job. Your site puts your number in their hand.\" / \"Their search ends with a call to you.\""
+ },
+ {
+  "id": "S3-37",
+  "page": "/contractor-websites",
+  "current": "\"The site is already pushing the call.\" / \"Your page doesn't push the call\"",
+  "new": "\"The site is already getting them to call.\" / \"Your page doesn't get them to call\""
+ },
+ {
+  "id": "S3-38",
+  "page": "/contractor-websites",
+  "current": "\"Your HVAC page states the no-heat call and the AC call in plain language…\"",
+  "new": "\"Your HVAC page talks about no-heat and AC calls in plain language…\""
+ },
+ {
+  "id": "S3-39",
+  "page": "/contractor-websites",
+  "current": "\"Click-to-call. The number you answer is the button on every page, so the visit turns into a call to your business.\"",
+  "new": "\"Click-to-call. Every page has a call button with the number you answer, so a visit turns into a call.\""
+ },
+ {
+  "id": "S3-40",
+  "page": "/contractor-websites (guarantee)",
+  "current": "\"we refund your first month, which is your first invoice, in full.\"",
+  "new": "\"we refund your first invoice (your first month) in full.\""
+ },
+ {
+  "id": "S3-41",
+  "page": "/contractor-websites",
+  "current": "\"so one extra booked job doesn't buy you a week of the site. It buys you months.\"",
+  "new": "\"so one extra booked job pays for months of the site.\""
+ },
+ {
+  "id": "S3-42",
+  "page": "/for-appointment-businesses",
+  "current": "\"…the next booking calls anyway…\" / \"Fill the chair before it goes cold\"",
+  "new": "\"…the next customer calls anyway…\" / \"Fill the empty chair\""
+ },
+ {
+  "id": "S3-43",
+  "page": "/for-appointment-businesses (figcaption)",
+  "current": "\"Example call: how a booking request sounds. Example call with a sample business.\"",
+  "new": "\"Example call with a sample business: how a booking request sounds.\""
+ },
+ {
+  "id": "S3-44",
+  "page": "/about, /privacy, /terms (trust strip) and /about H2",
+  "current": "\"For trades and contractors, then salons and clinics\" / \"Trades and contractors. You're on the job. Call.\" / \"Flat monthly fee — no per-seat billing\" (trades audience)",
+  "new": "\"For trades and contractors, plus salons and clinics\" / \"Trades and contractors: you're on the job, so call.\" / \"Flat monthly fee\""
+ },
+ {
+  "id": "S3-45",
+  "page": "/fractional-ai-officer",
+  "current": "\"the fee is credited in full toward retainer\" / \"Property managers can put a named officer on the next tenant file this month.\" / \"The same scenes sit with wealth managers…\" / \"Your architecture and engineering firm's work, and your HR consultancy's, is scoped after the assessment, inside the retainer.\"",
+  "new": "\"…toward a retainer\" / \"Property managers can have a named AI officer reviewing tenant files this month.\" / \"The same risks apply to wealth managers…\" / \"For architecture, engineering and HR firms, we scope the work after the assessment, inside the retainer.\""
+ },
+ {
+  "id": "S3-46",
+  "page": "/for-law-firms…, /margin-leakage-calculator, /ai-exposure-score",
+  "current": "Headings \"The memo has a written rule\" / \"The renewal form has a document\". Calculator: \"It's night. A partner pastes a client file into ChatGPT.\" (stray line), plus the disclaimer repeated 4× (\"It is not a count from your firm… That figure is from the IBM study…\"). Quiz: \"Insurers are now asking which AI tools… Insurers are starting to ask about AI use at renewal.\"",
+  "new": "\"Your memos follow a written rule\" / \"You have the document when the renewal form asks\". Calculator: drop the stray line and keep the disclaimer once. Quiz: keep the first sentence and delete the second."
+ },
+ {
+  "id": "S3-47",
+  "page": "Blogs (Zapier, financial, shadow AI, voice) + PDF + /terms",
+  "current": "Zapier: \"built directly inside local borders\", \"hyper-efficient\", \"True intelligent automation consulting shouldn't force you to choose…\". Financial: \"setting up a docusign monday integration or connecting a xero slack integration\", FAQ \"Are your monthly flat fees inclusive of custom workflow re-engineering?\" answered with the price ladder. Shadow AI: \"So they ban ChatGPT.\" (non sequitur after the IT-hire cost), the disclaimer 3× in one list, \"It's not a cost center—it's a profit center when done right.\" PDF: \"Annual privacy training so staff can…\" (fragment), \"Unencrypted data. Customer databases, shared passwords…\" (the heading doesn't match the list). Terms: \"This guarantee covers Contractor Websites.\" (reads as \"only\"), \"We send in good faith for you.\"",
+  "new": "Zapier: \"hosted in Canada, in systems you control\"; cut \"hyper-efficient\". Financial: \"connecting DocuSign to monday.com, or Xero to Slack\"; FAQ: \"Yes. Workflow rebuilds are scoped inside the retainer after the $1,000 assessment.\" Shadow AI: \"So instead of hiring, the owner bans ChatGPT.\"; keep the disclaimer once. PDF: \"Run annual privacy training…\" / \"Weak data security.\" Terms: \"This guarantee also covers Contractor Websites.\" / delete \"We send in good faith for you.\""
+ }
+]
