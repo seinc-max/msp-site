@@ -956,6 +956,10 @@ main:focus{outline:none}
   .hero-with-frame > .tl-frame{margin-top:18px}
   .tl-bubble:nth-of-type(n+4){display:none}
   .tl-call .tl-line:nth-of-type(n+3){display:none}
+  .tl-call .tl-phone{padding:6px}
+  .tl-call .tl-thread{gap:4px;padding:6px}
+  .tl-call .tl-line{padding:5px 8px}
+  .tl-call .tl-sms{padding:7px 10px}
   .tl-site-screen{height:100%;min-height:0}
   .tl-site-hero{padding:12px 12px 10px}
   .tl-site-kicker{font-size:1.15rem}
@@ -966,9 +970,9 @@ main:focus{outline:none}
   .hero-grid.hero-with-frame > .hero-copy{grid-column:1;grid-row:1 / span 2}
   .hero-grid.hero-with-frame > .tl-frame{grid-column:2;grid-row:1;justify-self:end}
   .hero-grid.hero-with-frame > .form-card{grid-column:2;grid-row:2;padding:20px 16px}
-  .hero-inner.hero-with-frame,.hub-hero-inner.hero-with-frame{max-width:1100px;display:grid;grid-template-columns:minmax(0,1fr) 340px;column-gap:40px;align-items:center}
-  .hero-inner.hero-with-frame > :not(.tl-frame),.hub-hero-inner.hero-with-frame > :not(.tl-frame){grid-column:1}
-  .hero-inner.hero-with-frame > .tl-frame,.hub-hero-inner.hero-with-frame > .tl-frame{grid-column:2;grid-row:1 / -1;justify-self:end;align-self:center}
+  .hero-inner.hero-with-frame,.hub-hero-inner.hero-with-frame{position:relative;max-width:1100px;padding-right:380px;box-sizing:border-box}
+  .hero-inner.hero-with-frame > .tl-frame,.hub-hero-inner.hero-with-frame > .tl-frame{position:absolute;top:0;right:0;width:340px;margin:0}
+  .hub-hero:has(.tl-call) .hub-hero-inner.hero-with-frame{min-height:900px}
 }
 
 /* Hub pages use the product-page FAQ, price cards, and without/with comparison. */
