@@ -1,0 +1,38 @@
+<figure class="tl-frame tl-demo">
+  <div class="tl-phone">
+    <div class="tl-ear" aria-hidden="true"></div>
+    <div class="tl-screen">
+      <div class="tl-phone-head">
+        <div class="tl-avatar" aria-hidden="true">N</div>
+        <div class="tl-phone-name">North Nail Salon</div>
+      </div>
+      <div class="tl-demo-bar">
+        <button type="button" class="tl-demo-play" aria-pressed="false" aria-controls="sample-call-salon-lines" aria-label="Play sample call">
+          <svg class="tl-demo-icon-play" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+          <svg class="tl-demo-icon-pause" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <label class="tl-demo-scrub">
+          <span class="sr-only">Sample call progress</span>
+          <input type="range" min="0" max="26" step="0.1" value="0">
+        </label>
+        <span class="tl-demo-time">0:00 / 0:26</span>
+      </div>
+      <audio preload="none" src="https://assets.truelineit.com/elevenlabs/ai-receptionist-demo/salon-booking-v2.mp3"></audio>
+      <ol class="tl-demo-lines" id="sample-call-salon-lines">
+        <li class="tl-bubble tl-out" data-start="1.42" data-end="5.58"><span class="sr-only">Receptionist:</span> Thanks for calling North Nail Salon. I'm Jess's AI assistant. How can I help?</li>
+        <li class="tl-bubble tl-in" data-start="6" data-end="9.14"><span class="sr-only">Caller:</span> Hi! Can I get a gel set this Saturday? How much is that?</li>
+        <li class="tl-bubble tl-out" data-start="9.64" data-end="12.96"><span class="sr-only">Receptionist:</span> Jess confirms the price when she confirms your time. What time works?</li>
+        <li class="tl-bubble tl-in" data-start="13.38" data-end="14.98"><span class="sr-only">Caller:</span> Afternoon, maybe around two?</li>
+        <li class="tl-bubble tl-out" data-start="15.8" data-end="16.46"><span class="sr-only">Receptionist:</span> And your name?</li>
+        <li class="tl-bubble tl-in" data-start="16.82" data-end="18.46"><span class="sr-only">Caller:</span> Maya. This number's fine.</li>
+        <li class="tl-bubble tl-out" data-start="18.96" data-end="24.1"><span class="sr-only">Receptionist:</span> Thanks, Maya. A deposit holds a Saturday spot. I'm texting Jess your request now. She'll confirm.</li>
+        <li class="tl-bubble tl-in" data-start="24.24" data-end="25.48"><span class="sr-only">Caller:</span> Perfect, thank you!</li>
+      </ol>
+      <div class="tl-sms tl-demo-card" data-payoff="18.96">
+        <p><span class="tl-sms-kicker">What Jess gets</span> New request: Maya, gel set, Sat ~2 PM</p>
+      </div>
+    </div>
+  </div>
+  <figcaption>Sample call. AI voice, sample business name. Your business name and wording go in, and you approve it before it goes live. AI voices by ElevenLabs.</figcaption>
+</figure>
+<script src="/js/sample-call.js" defer></script>
