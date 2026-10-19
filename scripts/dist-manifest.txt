@@ -30,7 +30,6 @@ assets/img/home-salons-booking-request.svg
 assets/img/home-trades-missed-call.svg
 assets/img/law-professional-firms.svg
 assets/img/mctb-missed-call-text-back.svg
-assets/img/mlc-margin-leakage.svg
 assets/img/qfu-quote-follow-up.svg
 assets/img/roi-automation-roi.svg
 assets/img/ttp-text-to-pay.svg
