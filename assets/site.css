@@ -966,10 +966,25 @@ main:focus{outline:none}
 }
 .hero-grid.hero-with-frame{grid-template-columns:1fr}
 @media (min-width:900px){
-  .hero-grid.hero-with-frame{grid-template-columns:minmax(0,1fr) minmax(280px,360px);align-items:start}
+  .hero-grid.hero-with-frame{grid-template-columns:minmax(0,1fr) minmax(280px,360px);align-items:start;column-gap:60px;row-gap:8px}
   .hero-grid.hero-with-frame > .hero-copy{grid-column:1;grid-row:1 / span 2}
   .hero-grid.hero-with-frame > .tl-frame{grid-column:2;grid-row:1;justify-self:end}
-  .hero-grid.hero-with-frame > .form-card{grid-column:2;grid-row:2;padding:20px 16px}
+  .hero-grid.hero-with-frame > .tl-frame .tl-phone{min-height:0;padding:6px 8px 8px}
+  .hero-grid.hero-with-frame > .tl-frame .tl-ear{height:4px;margin:1px auto 6px}
+  .hero-grid.hero-with-frame > .tl-frame .tl-screen{min-height:0}
+  .hero-grid.hero-with-frame > .tl-frame .tl-phone-head,
+  .hero-grid.hero-with-frame > .tl-frame .tl-site-top{padding:8px 10px}
+  .hero-grid.hero-with-frame > .tl-frame .tl-avatar{width:28px;height:28px;font-size:.75rem}
+  .hero-grid.hero-with-frame > .tl-frame .tl-thread{gap:4px;padding:8px}
+  .hero-grid.hero-with-frame > .tl-frame .tl-bubble{padding:5px 9px;line-height:1.3;font-size:.78rem}
+  .hero-grid.hero-with-frame > .tl-frame .tl-chip{padding:3px 8px}
+  .hero-grid.hero-with-frame > .tl-frame .tl-site-screen{min-height:260px}
+  .hero-grid.hero-with-frame > .tl-frame .tl-site-hero{padding:14px 12px 12px}
+  .hero-grid.hero-with-frame > .tl-frame figcaption{margin-top:4px;font-size:.72rem;line-height:1.3}
+  .hero-grid.hero-with-frame > .form-card{grid-column:2;grid-row:2;padding:10px 16px 10px}
+  .hero-grid.hero-with-frame > .form-card .form-card-label{margin-bottom:4px}
+  .hero-grid.hero-with-frame > .form-card h2{margin-bottom:4px}
+  .hero-grid.hero-with-frame > .form-card .form-card-sub{margin-bottom:8px}
   .hero-inner.hero-with-frame,.hub-hero-inner.hero-with-frame{position:relative;max-width:1100px;padding-right:380px;box-sizing:border-box}
   .hero-inner.hero-with-frame > .tl-frame,.hub-hero-inner.hero-with-frame > .tl-frame{position:absolute;top:0;right:0;width:340px;margin:0}
   .hub-hero:has(.tl-call) .hub-hero-inner.hero-with-frame{min-height:900px}
