@@ -238,13 +238,25 @@ function replaceMockPhones(html) {
   return out;
 }
 
+function listMessage(htmlInner) {
+  // "Mike, Lakeside Heating:" marks the outgoing side. The text already names
+  // him, so that label is not repeated in the bubble.
+  const owner = htmlInner.match(/^([^:\n]{1,40}, [^:\n]{1,80}):\s*([\s\S]*)$/);
+  if (owner) return { side: 'us', html: owner[2].trim(), kind: 'owner' };
+  if (htmlInner.startsWith('Your business:') || htmlInner.startsWith('Receptionist:')) {
+    return { side: 'us', html: htmlInner, kind: 'label' };
+  }
+  return { side: 'them', html: htmlInner, kind: 'them' };
+}
+
 function replaceConversationLists(html) {
-  return html.replace(/<ul>(?:\s*<li>(?:Caller|Your business|Receptionist):[\s\S]*?<\/li>)+\s*<\/ul>/g, (block) => {
-    const messages = [...block.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => {
-      const htmlInner = m[1].trim();
-      const side = htmlInner.startsWith('Your business:') || htmlInner.startsWith('Receptionist:') ? 'us' : 'them';
-      return { side, html: htmlInner };
-    });
+  return html.replace(/<ul>(?:\s*<li>(?:Caller|Your business|Receptionist|[^<:\n]{1,40}, [^<:\n]{1,80}):[\s\S]*?<\/li>)+\s*<\/ul>/g, (block) => {
+    const parsed = [...block.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => listMessage(m[1].trim()));
+    const ownerThread = parsed.some((item) => item.kind === 'owner');
+    const messages = parsed.map((item) => ({
+      side: item.side,
+      html: ownerThread && item.kind === 'them' ? item.html.replace(/^Caller:\s*/, '') : item.html,
+    }));
     const joined = messages.map((m) => m.html).join(' ');
     const call = messages.some((m) => m.html.startsWith('Receptionist:'));
     return renderConvo({
