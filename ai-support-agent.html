@@ -138,13 +138,13 @@ body{margin:0;font-family:'DM Sans',sans-serif;color:#1a2744;background:#fafaf8;
       <h1>Your clients get answers at 7 p.m., from material you already approved.</h1>
       <p class="subhead">Your client asks a routine question at 7 p.m. You want the answer taken from material you already approved. A person at your firm still reviews anything legal or about money.</p>
       <p class="hub-support">The agent works alongside the written AI policy you get with <a href="/ai-governance" style="color:#fff;">AI Governance</a>. It does not replace your lawyer, your accountant, or your advisor.</p>
-      <a class="hub-cta" href="/fractional-ai-officer#assessment">Book My AI Consultation</a>
-      <p class="after-hours">We scope the support agent after the $1,000 AI Liability Assessment.</p>
-      <p class="after-hours"><a href="/fractional-ai-officer#assessment" style="color:#fff;font-weight:700;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></p>
+      <a class="hub-cta" href="#discovery-form">Book My AI Consultation</a>
+      <p class="after-hours">We scope the AI Support Agent after the $1,000 AI Liability Assessment.</p>
+      <p class="after-hours"><a href="#discovery-form" style="color:#fff;font-weight:700;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></p>
     </div>
   </section>
   <section class="hub-section">
-    <h2>The same question, a different firm.</h2>
+    <h2>The routine questions your clients already ask.</h2>
     <p>78% of people who use AI at work bring their own AI tools, and 80% at small and medium-sized companies (<a href="https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part" rel="noopener" target="_blank">Microsoft Work Trend Index, 2024</a>).</p>
     <p class="hub-close">Each scene is a question you already answer. The agent reads the note, the checklist, or the status you approved. It does not invent the file.</p>
     <ol class="scenarios">
@@ -186,9 +186,62 @@ body{margin:0;font-family:'DM Sans',sans-serif;color:#1a2744;background:#fafaf8;
       </article>
     </div>
     <p class="hub-close" style="margin-top:20px;">The agent does not give legal advice, does not move money, and does not post to a client file outside the rule you set.</p>
-    <a class="hub-cta" href="/fractional-ai-officer#assessment">Book My AI Consultation</a>
-    <p class="hub-close"><a href="/fractional-ai-officer#assessment" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a>. Not ready to book? Send your name and email, and we'll reply.</p>
+    <a class="hub-cta" href="#discovery-form">Book My AI Consultation</a>
+    <p class="hub-close"><a href="#discovery-form" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a>. Send your name and email in the form below.</p>
   </section>
+<section class="hub-section" id="contact">
+  <h2>Book My AI Consultation</h2>
+  <p class="hub-close">Send your name and email.</p>
+  <div class="hub-card" style="max-width:560px;">
+<!-- GOVERNANCE FORM (restored 2026-10-12; fields: name, email) -->
+<div class="gov-form-wrap" style="max-width:480px;margin:0 auto 20px;text-align:left;">
+  <form id="discovery-form" class="hs-do-not-collect" novalidate>
+    <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
+    <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter a valid email address.</div></div>
+    <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Book My AI Consultation</button>
+    <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We'll get back to you fast.</p>
+    <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See our <a href="/privacy">Privacy Policy</a>.</p>
+  </form>
+  <div id="form-success" style="display:none;text-align:center;padding:16px 0;"><h4 style="font-size:1.4rem;margin-bottom:8px;">Request received. &#10004;</h4><p style="font-size:1.05rem;">Thanks. We'll get back to you fast.</p></div>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('discovery-form'); if(!form) return;
+  var LABEL='Book My AI Consultation';
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var btn=form.querySelector('.btn-submit');
+    var firstname=document.getElementById('firstname').value.trim();
+    var email=document.getElementById('email').value.trim();
+    if(!firstname||!email||!form.checkValidity()){ form.reportValidity(); return; }
+    var em=email.toLowerCase(); var lp=em.split('@')[0]||''; if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(em)||lp.length>64||em.length>254||em.indexOf('..')>-1){ var ee=document.getElementById('email-error'); if(ee){ee.textContent='Please enter a valid email address.';ee.style.display='block';} return; }
+    var userEmail=em;
+    if(btn){btn.textContent='Sending...';btn.disabled=true;}
+    try{
+      var F=[
+          {objectTypeId:'0-1',name:'firstname',value:firstname},
+          {objectTypeId:'0-1',name:'email',value:email},
+          {objectTypeId:'0-1',name:'hs_google_click_id',value:sessionStorage.getItem('google_ads_gclid')||''},
+          {objectTypeId:'0-1',name:'hubspot_owner_id',value:'89556230'}
+        ];
+      var CTX={pageUri:window.location.href,pageName:document.title}; var hm=document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/); if(hm) CTX.hutk=hm[1];
+      var post=function(fl){return (/^(www\.)?truelineit\.com$/.test(location.hostname)?fetch:function(){console.info('HubSpot submit skipped on non-production host');return Promise.resolve(new Response('{}',{status:200}));})('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:fl,context:CTX})});};
+      var res=await post(F);
+      if(res.status===400){ /* drop only fields HubSpot says are not on the form, then resend once so the lead is kept */
+        var bad=[]; try{var e=await res.json(); (e.errors||[]).forEach(function(x){if(x.errorType==='FIELD_NOT_IN_FORM_DEFINITION'){var m=(x.message||'').match(/fields\.(?:[0-9-]+\/)?([a-z_0-9]+)/i); if(m)bad.push(m[1]);}});}catch(_){ }
+        if(bad.length){ res=await post(F.filter(function(x){return bad.indexOf(x.name)<0;})); }
+      }
+      if(res.ok){
+        form.style.display='none'; document.getElementById('form-success').style.display='block';
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
+      } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
+    }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
+  });
+})();
+</script>
+  </div>
+</section>
 <section class="hub-section">
 <h2>Common questions</h2>
 <details><summary>Does it give legal or financial advice?</summary><p>No. Anything legal, anything about money, and anything you have not approved stays with someone at your firm.</p></details>

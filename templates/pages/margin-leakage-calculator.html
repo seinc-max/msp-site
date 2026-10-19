@@ -153,14 +153,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Is this number a measurement of my firm?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. It is an estimate from the headcount, salary and share you enter."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "What happens after I send my name and email?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -219,8 +211,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="calculator-section">
   <div class="section-eyebrow">For law firms</div>
   <h1 class="section-title">Estimate unbilled time leaving your law firm, accounting practice or advisory firm.</h1>
-  <p class="section-sub">Put in your headcount and salary. The dollar figure below is an estimate from those inputs and the share you set. It is not a count from your firm. For law firms, accountants, financial advisors, insurance agencies, bookkeepers, tax practices, wealth managers, consulting firms, architecture firms, engineering firms, marketing agencies, property managers, IT providers and HR consultants.</p>
-  <p class="section-sub">79% of Canadian office workers use AI at work, but only 1 in 4 rely on enterprise-grade AI tools (<a href="https://canada.newsroom.ibm.com/2025-09-03-IBM-R-Study-Shadow-AI-Use-Surges-as-Canadian-Workers-Outpace-Employers-in-AI-Adoption" rel="noopener" target="_blank">IBM, 2025</a>). That figure is from the IBM study. The dollar amount on this page comes from the headcount, salary, and share you enter. The ladder starts with the $1,000 AI Liability Assessment, then the Fractional AI Officer retainer at $10,000–25,000/mo. Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first invoice and first payment and we refund your entire first invoice. No questions asked. Full terms on <a href="/terms">/terms</a>.</p>
+  <p class="section-sub">Put in your headcount and salary. The figure below is an estimate from the numbers you enter. For law firms, accountants, financial advisors, insurance agencies, bookkeepers, tax practices, wealth managers, consulting firms, architecture firms, engineering firms, marketing agencies, property managers, IT providers and HR consultants.</p>
+  <p class="section-sub">79% of Canadian office workers use AI at work, but only 1 in 4 rely on enterprise-grade AI tools (<a href="https://canada.newsroom.ibm.com/2025-09-03-IBM-R-Study-Shadow-AI-Use-Surges-as-Canadian-Workers-Outpace-Employers-in-AI-Adoption" rel="noopener" target="_blank">IBM, 2025</a>). The ladder starts with the $1,000 AI Liability Assessment, then the Fractional AI Officer retainer at $10,000–25,000/mo. Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first invoice and first payment and we refund your entire first invoice. No questions asked. Full terms on <a href="/terms">/terms</a>.</p>
   
   <div class="calc-container">
     <div class="calc-inputs">
@@ -240,25 +232,25 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
           <span id="adoption-val" style="font-weight:700; color:var(--blue);">45%</span>
           <span>90% (Unrestricted)</span>
         </div>
-        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Set the share you think applies to your firm. This page does not have a measured rate for your practice.</p>
+        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Set the share you think applies to your firm.</p>
       </div>
     </div>
     
     <div class="calc-outputs">
       <div class="output-group">
-        <div class="output-label">Estimated unbilled time from the numbers you entered</div>
-        <div class="output-value highlight" id="out-leakage">$0</div>
-        <div class="output-sub">This uses your headcount, salary, and the share you set. Treat it as an estimate from those inputs.</div>
+        <div class="output-label">Unbilled time a year</div>
+        <div class="output-value highlight" id="out-leakage">—</div>
       </div>
       <div class="output-group">
-        <div class="output-label">Estimated prompts a month, from the share you set</div>
-        <div class="output-value" id="out-risk-events" style="font-size: 2.5rem; color: #fca5a5;">0</div>
-        <div class="output-sub">An estimate, from the share you set, of prompts that could put confidential client work on a public tool.</div>
+        <div class="output-label">Prompts a month</div>
+        <div class="output-value" id="out-risk-events" style="font-size: 2.5rem; color: #fca5a5;">—</div>
+        <div class="output-sub">Prompts that could put confidential client work on a public tool.</div>
       </div>
-      <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;">The estimate is about <span id="out-cta-amt">$0</span> a year, from the numbers you entered. Send your name and email below for a look at your AI exposure. Nothing is installed.</p>
+      <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;"><span id="out-cta-lead">Change the numbers to match your firm to see what you are losing.</span> Send your name and email below for a look at your AI exposure. Nothing is installed.</p>
       <a href="/fractional-ai-officer#assessment" class="calc-cta">Book My AI Consultation</a>
     </div>
   </div>
+  <p class="calc-method" style="max-width:1000px;margin:16px auto 0;font-size:0.9rem;color:var(--text-muted);text-align:center;">How it works: people who handle client work × the share using unapproved AI × average salary × 6.25% (about 2.5 hours of a 40-hour week). Prompts a month: those same people × 12.</p>
 </section>
 
     <section style="max-width:1000px;margin:0 auto;padding:48px 5%;">
@@ -277,10 +269,10 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
     <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter a valid email address.</div></div>
     <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Book My AI Consultation</button>
-    <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">You'll hear back fast.</p>
+    <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We'll get back to you fast.</p>
     <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See the <a href="/privacy">Privacy Policy</a>.</p>
   </form>
-  <div id="form-success" style="display:none;text-align:center;padding:16px 0;"><h4 style="font-size:1.4rem;margin-bottom:8px;">Request received. &#10004;</h4><p style="font-size:1.05rem;">Thanks. You'll hear back fast.</p></div>
+  <div id="form-success" style="display:none;text-align:center;padding:16px 0;"><h4 style="font-size:1.4rem;margin-bottom:8px;">Request received. &#10004;</h4><p style="font-size:1.05rem;">Thanks. We'll get back to you fast.</p></div>
 </div>
 <script>
 (function(){
@@ -321,7 +313,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </section>
 <section class="calculator-section">
 <h2>Common questions</h2>
-<details><summary>Is this number a measurement of my firm?</summary><p>No. It is an estimate from the headcount, salary and share you enter.</p></details>
 <details><summary>What happens after I send my name and email?</summary><p>You'll hear back fast.</p></details>
 <details><summary>Is there a money-back guarantee?</summary><p>Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first invoice and first payment and we refund your entire first invoice. No questions asked. Full terms on <a href="/terms">/terms</a>.</p></details>
 </section>
@@ -376,14 +367,26 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     document.getElementById('out-risk-events').innerText = new Intl.NumberFormat('en-CA').format(riskEvents);
   }
 
+  // Show the estimate only after the visitor enters numbers (display only; the math above is unchanged).
+  function startEstimate() {
+    const lead = document.getElementById('out-cta-lead');
+    if (lead.dataset.started) return;
+    lead.dataset.started = '1';
+    lead.innerHTML = 'That\'s about <span id="out-cta-amt"></span> a year in unbilled time.';
+    calculateMargin();
+  }
+  ['employees', 'salary', 'ai-adoption'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', startEstimate);
+    document.getElementById(id).addEventListener('change', startEstimate);
+  });
+
   document.getElementById('employees').addEventListener('input', calculateMargin);
   document.getElementById('salary').addEventListener('input', calculateMargin);
   document.getElementById('ai-adoption').addEventListener('input', calculateMargin);
   document.getElementById('employees').addEventListener('change', calculateMargin);
   document.getElementById('salary').addEventListener('change', calculateMargin);
   
-  // Init
-  calculateMargin();
+  // No calculation on load: the outputs stay neutral until the visitor enters numbers.
 </script>
 </body>
 </html>
