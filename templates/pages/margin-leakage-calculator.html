@@ -255,7 +255,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         <div class="output-value" id="out-risk-events" style="font-size: 2.5rem; color: #fca5a5;">—</div>
         <div class="output-sub">An estimate, from the share you set, of prompts that could put confidential client work on a public tool.</div>
       </div>
-      <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;"><span id="out-cta-lead">Enter your numbers to see what you are losing.</span> Send your name and email below for a look at your AI exposure. Nothing is installed.</p>
+      <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;"><span id="out-cta-lead">Change the numbers to match your firm to see what you are losing.</span> Send your name and email below for a look at your AI exposure. Nothing is installed.</p>
       <a href="/fractional-ai-officer#assessment" class="calc-cta">Book My AI Consultation</a>
     </div>
   </div>
@@ -382,6 +382,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     if (lead.dataset.started) return;
     lead.dataset.started = '1';
     lead.innerHTML = 'The estimate is about <span id="out-cta-amt"></span> a year, from the numbers you entered.';
+    calculateMargin();
   }
   ['employees', 'salary', 'ai-adoption'].forEach(function (id) {
     document.getElementById(id).addEventListener('input', startEstimate);
