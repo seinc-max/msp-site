@@ -54,13 +54,15 @@
         lines[lines.length - 1].setAttribute('aria-current', 'true');
       }
       if (card) card.classList.toggle('is-revealed', now >= payoff);
-      var playing = !audio.paused && !audio.ended;
-      button.setAttribute('aria-pressed', playing ? 'true' : 'false');
+      var playing = !audio.paused && !audio.ended && !audio.error;
+      button.classList.toggle('is-playing', playing);
       button.setAttribute('aria-label', playing ? 'Pause sample call' : 'Play sample call');
+      range.setAttribute('aria-valuetext', clock(now) + ' of ' + clock(length));
     }
 
     button.addEventListener('click', function () {
-      if (!audio.paused && !audio.ended) {
+      var playing = !audio.paused && !audio.ended && !audio.error;
+      if (playing) {
         audio.pause();
         return;
       }
@@ -84,6 +86,7 @@
     audio.addEventListener('pause', paint);
     audio.addEventListener('timeupdate', paint);
     audio.addEventListener('ended', paint);
+    audio.addEventListener('error', paint);
     audio.addEventListener('loadedmetadata', paint);
     audio.addEventListener('durationchange', paint);
     paint();
