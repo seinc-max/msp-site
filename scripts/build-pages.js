@@ -194,7 +194,7 @@ function businessName(text) {
     'Northside Heating',
     'Lakeside Plumbing',
     'Lakeside Heating',
-    'North Nail Studio',
+    'North Nail Salon',
     'Trueline text-back',
   ];
   return names.find((name) => text.includes(name)) || '';
@@ -280,6 +280,14 @@ function replaceConversationLists(html) {
 
 function applyConversations(html) {
   return replaceConversationLists(replaceMockPhones(html));
+}
+
+function expandIncludes(html) {
+  return html.replace(/<!--\s*include:([a-z0-9-]+)\s*-->/g, (match, name) => {
+    const file = path.join(PARTIALS, name + '.html');
+    if (!fs.existsSync(file)) throw new Error('Missing partial ' + name);
+    return read(file).trim();
+  });
 }
 
 function stripStyle(html) {
@@ -525,6 +533,7 @@ function buildOne(rel) {
     beforeSticky = replaceElement(beforeSticky, 'main', infoMain(model));
     bodyOpen = bodyOpen.replace('<body', '<body class="info-page"');
   }
+  beforeSticky = expandIncludes(beforeSticky);
   beforeSticky = applyConversations(beforeSticky);
   const variant = headerVariant(source, rel);
   const header = headerPartial(variant);

@@ -1047,3 +1047,39 @@ main:focus{outline:none}
 @media (max-width:700px){
   .hub-section .audience-grid{grid-template-columns:1fr}
 }
+
+/* Sample-call player. Outgoing #1a2744 on #f97316. Incoming #1a2744 on #e8f2ff. */
+.tl-demo-band{padding:8px 5% 40px;background:#fafaf8}
+.tl-demo-band .section-inner{max-width:1100px;margin:0 auto}
+.tl-demo{width:min(100%,520px);max-width:100%;margin:16px auto 0;text-align:left}
+.tl-demo .tl-phone{height:auto;min-height:0;max-height:none;overflow:visible}
+.tl-demo .tl-screen{height:auto;min-height:0;overflow:hidden}
+.tl-demo .tl-phone-head{align-items:center}
+.tl-demo .tl-phone-name{min-width:0}
+.tl-demo audio{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.tl-demo-bar{display:flex;align-items:center;gap:12px;padding:10px 12px;background:#fff;border-bottom:1px solid #dde6f5}
+.tl-demo-play{flex:0 0 auto;width:64px;height:64px;border:0;border-radius:50%;background:#f97316;color:#1a2744;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.tl-demo-play:hover{background:#ea6c0a}
+.tl-demo-icon-pause{display:none}
+.tl-demo-play[aria-pressed="true"] .tl-demo-icon-play{display:none}
+.tl-demo-play[aria-pressed="true"] .tl-demo-icon-pause{display:block}
+.tl-demo-scrub{flex:1 1 auto;min-width:0;display:flex;align-items:center}
+.tl-demo-scrub input[type="range"]{width:100%;height:44px;margin:0;accent-color:#f97316;background:transparent}
+.tl-demo-time{flex:0 0 auto;min-width:11ch;white-space:nowrap;font-variant-numeric:tabular-nums;font-size:.8rem;font-weight:700;color:#1a2744}
+.tl-demo-lines{list-style:none;margin:0;padding:12px;display:flex;flex-direction:column;gap:8px}
+.tl-demo .tl-bubble{display:block}
+.tl-demo .tl-bubble.is-current{box-shadow:inset 0 0 0 3px #1a2744}
+.tl-demo .tl-sms{margin:0 12px 12px;background:#e7edf6;border:1px solid #c5d0e4;color:#1a2744}
+.tl-demo .tl-sms-kicker{display:block;margin:0 0 4px}
+.tl-demo .tl-sms.is-revealed{background:#f97316;border-color:#f97316}
+.hub-section .tl-demo{margin-top:8px}
+@media (max-width:899px){
+  .tl-demo{width:100%;max-width:100%}
+  .tl-demo .tl-phone{height:auto;min-height:0;max-height:none;overflow:visible}
+  .tl-demo .tl-screen{height:auto;min-height:0}
+  .tl-demo .tl-bubble:nth-of-type(n+4){display:block}
+  .tl-demo .tl-ear{display:block}
+}
+@media (prefers-reduced-motion: reduce){
+  .tl-demo .tl-bubble{animation:none}
+}

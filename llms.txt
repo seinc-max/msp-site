@@ -1,10 +1,10 @@
 # Trueline IT
 
-> Done-for-you AI receptionist and Google review requests for trades and contractors, and for salons, clinics and studios. Trades and contractors also get missed-call text-back, quote follow-up, chat-to-text, text-to-pay and contractor websites. Plus AI governance for professional firms. We set it up and run it. Call (647) 360-5774 for trades, contractor, salon and studio services.
+> Done-for-you AI receptionist and Google review requests for trades and contractors, and for salons and clinics. Trades and contractors also get missed-call text-back, quote follow-up, chat-to-text, text-to-pay and contractor websites. Plus AI governance for professional firms. We set it up and run it. Call (647) 360-5774 for trades, contractor and salon services.
 
 ## Audience hubs
 - For Trades & Contractors: https://truelineit.com/for-home-services
-- For Salons, Clinics & Studios: https://truelineit.com/for-appointment-businesses
+- For Salons & Clinics: https://truelineit.com/for-appointment-businesses
 - For Law Firms, Accountants and Advisors: https://truelineit.com/for-law-firms-accountants-and-advisors
 
 ## Trades and contractor services (call-only)
@@ -17,7 +17,7 @@ Call (647) 360-5774. No forms on these services.
 - Contractor Websites: $499/mo, no setup fee. Done-for-you site, live within a week. https://truelineit.com/contractor-websites
 - Google Reviews (one service, two plans, per location): Requests $79/mo plus $99 setup; Requests + Replies $99/mo plus $99 setup. Replies is a +$20/mo upgrade, not sold on its own. https://truelineit.com/google-review-requests
 
-## Salons, clinics and studios (call-only)
+## Salons and clinics (call-only)
 Call (647) 360-5774. No forms on these services.
 - AI Receptionist: $399/mo plus a one-time $499 setup. Answers calls nights, weekends and after hours, captures job requests and flags urgent calls to you. https://truelineit.com/ai-receptionist
 - Google Reviews (one service, two plans, per location): Requests $79/mo plus $99 setup; Requests + Replies $99/mo plus $99 setup. Replies is a +$20/mo upgrade, not sold on its own. https://truelineit.com/google-review-requests
@@ -34,6 +34,6 @@ For law firms, accountants and advisors that want to use AI safely, done for you
 
 ## Contact
 Website: https://truelineit.com
-Phone: (647) 360-5774 — trades, contractor, salon and studio services are call-only. Governance and Fractional AI Officer use forms (start at the $1,000 AI Liability Assessment).
+Phone: (647) 360-5774 — trades, contractor and salon services are call-only. Governance and Fractional AI Officer use forms (start at the $1,000 AI Liability Assessment).
 Email: hello@truelineit.com
 We work with your business wherever you operate.
