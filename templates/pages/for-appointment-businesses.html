@@ -26,10 +26,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:description" content="Your hands are busy. Your calendar still fills. For salons, clinics, and studios. Call (647) 360-5774.">
 <meta name="twitter:image" content="https://truelineit.com/og-image-trades.jpg">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261018-2">
+<link rel="stylesheet" href="/assets/site.css?v=20261019-4">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"For Salons, Clinics & Studios","url":"https://truelineit.com/for-appointment-businesses","description":"Your hands are busy. Your calendar still fills.","isPartOf":{"@type":"WebSite","name":"Trueline IT","url":"https://truelineit.com"},"about":{"@type":"Service","name":"For Salons, Clinics & Studios","provider":{"@type":"Organization","name":"Trueline IT","url":"https://truelineit.com","telephone":"+16473605774","email":"hello@truelineit.com"}}}
 </script>
@@ -155,7 +155,7 @@ a.hub-card:hover{border-color:#f97316;}
 </nav>
 <main id="main" tabindex="-1">
   <section class="hub-hero">
-    <div class="hub-hero-inner">
+    <div class="hub-hero-inner hero-with-frame">
       <p class="hub-eyebrow">For Salons, Clinics & Studios</p>
       <p class="hero-rotation" id="hero-rotation" data-set="A" aria-live="polite">salons · barbers · pet groomers · dental offices · nail studios · auto detailers</p>
       <h1>Your hands are busy. Your calendar still fills.</h1>
@@ -173,6 +173,30 @@ a.hub-card:hover{border-color:#f97316;}
         <li>nail studios</li>
         <li>auto detailers</li>
       </ul>
+      <figure class="tl-frame tl-call">
+        <div class="tl-phone">
+          <div class="tl-ear" aria-hidden="true"></div>
+          <div class="tl-screen">
+            <div class="tl-phone-head">
+              <div class="tl-avatar" aria-hidden="true">N</div>
+              <div>
+                <div class="tl-phone-name">North Nail Studio · AI receptionist</div>
+                <div class="tl-phone-sub">Your business number</div>
+              </div>
+            </div>
+            <div class="tl-thread">
+              <p class="tl-chip">Incoming call · 2:14 PM · answered by AI assistant</p>
+              <div class="tl-line"><span class="tl-who">AI assistant</span><p>Thanks for calling North Nail Studio. I'm the AI assistant. How can I help?</p></div>
+              <div class="tl-line"><span class="tl-who">Caller</span><p>I'd like a gel set on Saturday. How much is it?</p></div>
+              <div class="tl-line"><span class="tl-who">AI assistant</span><p>I can send Jess a booking request. Can I get your name, the service, who you'd like to see, the best time, and the best phone number?</p></div>
+              <div class="tl-line"><span class="tl-who">Caller</span><p>Maya. Saturday afternoon. This number is fine.</p></div>
+              <div class="tl-line"><span class="tl-who">AI assistant</span><p>Thanks, Maya. A deposit holds a Saturday appointment. I'll note the deposit rule Jess set, and I'll text her this request. She confirms the time and the price.</p></div>
+              <div class="tl-sms"><p><span class="tl-sms-kicker">Text to Jess · 2:16 PM:</span> New booking request: Maya, gel set, Saturday afternoon. Deposit rule noted.</p></div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Example call: how a booking request sounds. Example call with a sample business. This is the exact call flow we set up: your business name, services and wording go in, and you approve it before it goes live. You get the booking request by text.</figcaption>
+      </figure>
     </div>
   </section>
   <section class="hub-section">
@@ -194,20 +218,26 @@ a.hub-card:hover{border-color:#f97316;}
     <p class="hub-close">You do the work in the chair, on the table or in the bay. We make sure the phone keeps booking.</p>
   </section>
 <section class="hub-section">
-<p>Same call, two outcomes</p>
+<p class="section-eyebrow">Same call, two outcomes</p>
 <h2>Same call, two outcomes</h2>
+<div class="audience-grid">
+<div class="audience-card bad">
 <h3>Without it</h3>
 <ul>
 <li>Your 2 PM cancels while you're mid-colour.</li>
 <li>A new caller gets voicemail and books the salon down the street.</li>
 <li>The chair sits empty.</li>
 </ul>
+</div>
+<div class="audience-card good">
 <h3>With your AI receptionist</h3>
 <ul>
 <li>It answers in your business name.</li>
 <li>It takes the name, the service and the time they want.</li>
 <li>You get the booking request by text and confirm when your hands are free.</li>
 </ul>
+</div>
+</div>
 </section>
   <section class="hub-section">
     <h2>Every missed call is an empty slot. Here's where you'd lose them.</h2>
@@ -218,15 +248,6 @@ a.hub-card:hover{border-color:#f97316;}
       <li><span><strong>Auto detailer mid-polish.</strong> You're halfway through a paint correction when someone calls about an interior detail this week. You get the request with their car and the day they want, and you confirm when your hands are free.</span></li>
       <li><span><strong>Physio clinic between patients.</strong> You're with someone on the table and the front desk line is ringing. A new client looking for a first visit gets an answer instead of calling the next clinic on the list.</span></li>
     </ol>
-<h3>Example call: how a booking request sounds</h3>
-<ul>
-<li>Receptionist: Thanks for calling North Nail Studio. I'm the AI assistant. How can I help?</li>
-<li>Caller: I'd like a gel set on Saturday. How much is it?</li>
-<li>Receptionist: I can send Jess a booking request. Can I get your name, the service, who you'd like to see, the best time, and the best phone number?</li>
-<li>Caller: Maya. Saturday afternoon. This number is fine.</li>
-<li>Receptionist: Thanks, Maya. A deposit holds a Saturday appointment. I'll note the deposit rule Jess set, and I'll text her this request. She confirms the time and the price.</li>
-</ul>
-<p>Example call with a sample business. This is the exact call flow we set up: your business name, services and wording go in, and you approve it before it goes live. You get the booking request by text.</p>
   </section>
   <section class="hub-section hub-faq">
     <h2>Is this just for hair salons?</h2>
@@ -256,21 +277,23 @@ a.hub-card:hover{border-color:#f97316;}
   </section>
 <section class="hub-section">
 <h2>What it costs</h2>
-<ul>
-<li><a href="/ai-receptionist">AI Receptionist</a> — $399/mo plus a one-time $499 setup.</li>
-<li><a href="/google-review-requests">Google Review Requests</a> — Requests $79/mo, or requests plus replies $99/mo. Both are a one-time $99 setup per location.</li>
-<li>Run your own numbers: if one booking is worth $80 to you, five saved bookings a month cover the AI receptionist.</li>
-</ul>
+<div class="hub-price-grid">
+<article class="pricing-card"><p><a href="/ai-receptionist">AI Receptionist</a> — $399/mo plus a one-time $499 setup.</p></article>
+<article class="pricing-card"><p><a href="/google-review-requests">Google Review Requests</a> — Requests $79/mo, or requests plus replies $99/mo. Both are a one-time $99 setup per location.</p></article>
+</div>
+<p>Run your own numbers: if one booking is worth $80 to you, five saved bookings a month cover the AI receptionist.</p>
 <p><strong>✓ 30-day money-back guarantee</strong></p>
 <p><a href="/terms">Full terms</a></p>
 
 </section>
 <section class="hub-section">
 <h2>Common questions</h2>
+<div class="faq-list">
 <details><summary>Is this just for hair salons?</summary><p>No. If you're a barber, nail studio, day spa, pet groomer, auto detailer, dental office, physio clinic, massage therapy clinic, tattoo studio or fitness studio and you book by phone, call (647) 360-5774 and tell us how your day runs.</p></details>
 <details><summary>Will callers know it's AI?</summary><p>Yes. The AI receptionist tells callers they're speaking with an AI assistant.</p></details>
 <details><summary>Does it give clinical advice?</summary><p>For dental, physio, chiropractic, optometry, and vet clinics, it does front-desk work only: it answers the phone and takes appointment requests. It does not give clinical advice.</p></details>
 <details><summary>Is there a money-back guarantee?</summary><p>30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p></details>
+</div>
 </section>
 </main>
 <div class="sticky-mobile-cta">

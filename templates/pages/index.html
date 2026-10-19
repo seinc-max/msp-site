@@ -99,10 +99,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
     --navy: #1a2744;
@@ -583,9 +582,11 @@ details[open] summary::after{ content: '−'; }
     to   { opacity: 1; transform: translateY(0); }
   }
 .hero-inner > *{
-    opacity: 0;
-    animation: fadeUp 0.6s ease forwards;
+    animation: fadeUp 0.6s ease both;
   }
+@media (prefers-reduced-motion: reduce){
+  .hero-inner > *{ animation:none; opacity:1; transform:none; }
+}
 .hero-pre{ animation-delay: 0.1s; }
 .hero h1{ animation-delay: 0.2s; }
 .hero-sub{ animation-delay: 0.3s; }
@@ -933,7 +934,7 @@ details[open] summary::after{ content: '−'; }
 
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261018-2">
+<link rel="stylesheet" href="/assets/site.css?v=20261019-4">
 <style id="hub-crosslinks">
 .hub-kicker{margin:0 0 12px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:none;}
 .hub-kicker a{color:#f97316;text-decoration:none;}
@@ -1040,7 +1041,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
+  <div class="hero-inner hero-with-frame">
     <h1>Missed a call? Your caller gets a text within minutes.</h1>
     <p class="hero-sub">For trades and contractors on the job. Miss a call under a sink or up a ladder, and your caller gets a text within minutes, so you get first shot at the job, not the next name on Google. Salons, clinics and studios: the AI receptionist books the appointment for you.</p>
     <p class="hero-sub">Nearly half of calls to home-service businesses never reach a person (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank" style="color:#fff;text-decoration:underline;">Invoca, 2026</a>).</p>
@@ -1051,6 +1052,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
     </div>
     <p class="hero-sub">Try it now: call (647) 360-5774 and hang up. You'll get our text within minutes.</p>
+    <figure class="tl-frame">
+      <div class="tl-phone">
+        <div class="tl-ear" aria-hidden="true"></div>
+        <div class="tl-screen">
+          <div class="tl-phone-head">
+            <div class="tl-avatar" aria-hidden="true">L</div>
+            <div>
+              <div class="tl-phone-name">Lakeside Heating</div>
+              <div class="tl-phone-sub">Your business number</div>
+            </div>
+          </div>
+          <div class="tl-thread">
+            <p class="tl-chip">Missed call · 2:14 PM</p>
+            <div class="tl-bubble tl-out"><span class="sr-only">Mike, Lakeside Heating:</span> Hi, this is Mike from Lakeside Heating. Sorry I missed your call. Reply here or call this number and I'll call you back the minute I'm free. Reply STOP to opt out.<time class="tl-time">2:15 PM</time></div>
+            <div class="tl-bubble tl-in"><span class="sr-only">Caller:</span> 64 Maple Ave. My furnace isn't heating.<time class="tl-time">2:16 PM</time></div>
+            <div class="tl-bubble tl-out"><span class="sr-only">Mike, Lakeside Heating:</span> Thanks. I'm finishing a job nearby. I'll call you in 10 minutes. Mike<time class="tl-time">2:19 PM</time></div>
+          </div>
+        </div>
+      </div>
+      <figcaption>Example with a sample business name. This is the exact text format we set up. Your business name and your wording go in, and you approve it before it goes live.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -1074,19 +1096,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p><a href="/ai-receptionist">AI Receptionist</a> — $399/mo plus a one-time $499 setup.</p>
       <a class="audience-hub" href="/for-appointment-businesses">For Salons, Clinics & Studios</a>
     </article>
-  </div>
-</section>
-
-<section class="how">
-  <div class="how-inner">
-    <p class="section-label">How it looks</p>
-    <h2 class="section-title">The text your caller gets</h2>
-    <ul>
-<li>Mike, Lakeside Heating: Hi, this is Mike from Lakeside Heating. Sorry I missed your call. Reply here or call this number and I'll call you back the minute I'm free. Reply STOP to opt out.</li>
-<li>Caller: 64 Maple Ave. My furnace isn't heating.</li>
-<li>Mike, Lakeside Heating: Thanks. I'm finishing a job nearby. I'll call you in 10 minutes. Mike</li>
-</ul>
-<p>Example with a sample business name. This is the exact text format we set up. Your business name and your wording go in, and you approve it before it goes live.</p>
   </div>
 </section>
 
