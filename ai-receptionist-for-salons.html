@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager (production hostnames only) -->
+<script>window.__tlProd=/^(www\.)?truelineit\.com$/.test(location.hostname);</script>
+<script>if(window.__tlProd)(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W663FFHP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Every booking call answered, even mid-appointment. | Trueline IT</title>
+<meta name="description" content="AI receptionist for salons and clinics. It answers your calls, takes the booking request and texts it to you to confirm. $299/mo + $299 setup. Call (647) 360-5774." />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Every booking call answered, even mid-appointment. | Trueline IT" />
+<meta property="og:description" content="AI receptionist for salons and clinics. It answers your calls, takes the booking request and texts it to you to confirm. $299/mo + $299 setup. Call (647) 360-5774." />
+<meta property="og:url" content="https://truelineit.com/ai-receptionist-for-salons" />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root{
+    --navy: #1a2744;
+    --navy-light: #243354;
+    --orange: #f97316;
+    --blue: #2563eb;
+    --warm-white: #fafaf8;
+    --sky: #e8f2ff;
+    --text: #1a2744;
+    --text-muted: #5a6a8a;
+    --border: #dde6f5;
+  }
+*, *::before, *::after{ box-sizing: border-box; margin: 0; padding: 0; }
+html{ scroll-behavior: smooth; }
+body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
+.hero{ background: var(--navy); padding: 60px 5% 70px; position: relative; overflow: hidden; }
+.hero::before{ content: ''; position: absolute; top: -40%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%); pointer-events: none; }
+.hero-grid{ max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
+.hero-eyebrow{ font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+.hero h1{ font-family: 'Fraunces', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+.hero h1 em{ font-style: italic; color: var(--orange); }
+.hero-sub{ color: rgba(255,255,255,0.75); font-size: 1.1rem; margin-bottom: 28px; max-width: 480px; line-height: 1.65; }
+.hero-trust{ display: flex; flex-direction: column; gap: 10px; }
+.trust-item{ display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
+.trust-item svg{ color: var(--orange); flex-shrink: 0; }
+.hero-call{
+    display: inline-block; margin-top: 24px;
+    background: var(--orange); color: #fff; font-weight: 700; font-size: 1.05rem;
+    padding: 16px 28px; border-radius: 10px; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+.hero-call:hover{ background: #ea6c0a; transform: translateY(-2px); }
+.form-card{ background: #fff; border-radius: 16px; padding: 36px 32px; box-shadow: 0 24px 64px rgba(0,0,0,0.22); }
+.form-card-label{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+.form-card h2{ font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
+.form-card-sub{ font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px; }
+.form-group{ margin-bottom: 20px; }
+.form-group label{ display: block; font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.form-group input, .form-group select{ width: 100%; padding: 13px 16px; border: 1.5px solid var(--border); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 16px; color: var(--text); background: #f7f9fc; transition: border-color 0.2s; -webkit-appearance: none; }
+.form-group input:focus, .form-group select:focus{ outline: none; border-color: var(--blue); }
+.btn-submit{
+    width: 100%;
+    background: var(--orange);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 4px;
+  }
+.btn-submit:hover{ background: #ea6c0a; transform: translateY(-1px); }
+.form-note{ font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 10px; }
+.form-success{ display: none; text-align: center; padding: 20px 0; }
+.form-success h4{ font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 8px; }
+.form-success p{ color: var(--text-muted); font-size: 0.95rem; }
+.pain-section{ padding: 70px 5%; background: var(--warm-white); }
+.section-inner{ max-width: 900px; margin: 0 auto; text-align: center; }
+.section-eyebrow{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+.section-title{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 48px; line-height: 1.2; }
+.pain-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
+.pain-card{ background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 28px 24px; }
+.pain-icon{ font-size: 1.6rem; margin-bottom: 14px; }
+.pain-card h3{ font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.pain-card p{ font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.how-section{ padding: 70px 5%; background: var(--sky); }
+.steps-grid{ max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; }
+.step-number{ width: 48px; height: 48px; background: var(--navy); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.1rem; margin: 0 auto 16px; }
+.step h3{ font-family: 'Fraunces', serif; font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
+.step p{ font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+.audience-section{ padding: 70px 5%; background: var(--warm-white); }
+.audience-grid{ max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
+.audience-card{ background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 28px 26px; }
+.audience-card.good{ border-top: 4px solid var(--blue); }
+.audience-card.bad{ border-top: 4px solid var(--orange); }
+.audience-card h3{ font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
+.audience-card ul{ list-style: none; }
+.audience-card li{ font-size: 0.9rem; color: var(--text-muted); padding: 6px 0; display: flex; gap: 9px; align-items: flex-start; line-height: 1.5; }
+.audience-card li::before{ content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+.audience-card.bad li::before{ content: '✕'; color: var(--orange); }
+.included-section{ padding: 70px 5%; background: var(--sky); }
+.included-grid{ max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
+.included-card{ background: #fff; border-radius: 12px; padding: 28px 26px; }
+.included-card h3{ font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
+.included-card ul{ list-style: none; }
+.included-card li{ font-size: 0.9rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border); display: flex; gap: 9px; align-items: flex-start; }
+.included-card li:last-child{ border-bottom: none; }
+.included-card.yes li::before{ content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+.included-card.no li::before{ content: '—'; color: var(--text-muted); font-weight: 700; flex-shrink: 0; }
+.compare-section{ padding: 70px 5%; background: var(--warm-white); }
+.compare-wrap{ max-width: 900px; margin: 40px auto 0; overflow-x: auto; }
+.compare-table{ width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+.compare-table th, .compare-table td{ padding: 16px 18px; text-align: left; font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+.compare-table th{ background: var(--navy); color: #fff; font-weight: 600; }
+.compare-table th.hl{ background: var(--orange); }
+.compare-table td{ color: var(--text-muted); line-height: 1.5; }
+.compare-table td.hl{ color: var(--navy); font-weight: 600; background: #fff7f0; }
+.compare-table tr:last-child td{ border-bottom: none; }
+@media (max-width: 640px){.compare-table, .compare-table tbody, .compare-table tr, .compare-table td{ display: block; width: 100%; }
+.compare-table thead{ display: none; }
+.compare-table{ border: none; box-shadow: none; background: transparent; }
+.compare-table tr{ background: #fff; border: 1.5px solid var(--border); border-radius: 12px; margin-bottom: 14px; overflow: hidden; }
+.compare-table td{ display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 11px 14px; font-size: 0.85rem; text-align: left; border-bottom: 1px solid var(--border); }
+.compare-table td:last-child{ border-bottom: none; }
+.compare-table td::before{ content: attr(data-label); font-weight: 600; color: var(--navy); flex-shrink: 0; }
+.compare-table td:first-child{ font-weight: 700; color: var(--navy); background: var(--sky); justify-content: flex-start; }
+.compare-table td:first-child::before{ content: none; }
+.compare-table td.hl::before{ color: var(--orange); }
+.compare-table td.hl{ background: #fff7f0; }}
+.pricing-section{ padding: 70px 5%; background: var(--warm-white); }
+.pricing-card{ max-width: 560px; margin: 40px auto 0; background: #fff; border: 2px solid var(--orange); border-radius: 16px; padding: 40px; text-align: center; }
+.pricing-badge{ display: inline-block; background: var(--orange); color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+.pricing-amount{ font-family: 'Fraunces', serif; font-size: 3.5rem; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+.pricing-amount span{ font-size: 1.2rem; font-weight: 500; color: var(--text-muted); }
+.pricing-desc{ font-size: 0.9rem; color: var(--text-muted); margin-bottom: 28px; }
+.pricing-features{ list-style: none; text-align: left; margin-bottom: 32px; }
+.pricing-features li{ display: flex; align-items: center; gap: 10px; font-size: 0.93rem; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border); }
+.pricing-features li:last-child{ border-bottom: none; }
+.pricing-features li::before{ content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+.pricing-upsell{ margin-top: 18px; font-size: 0.88rem; color: var(--text-muted); }
+.pricing-upsell a{ color: var(--blue); font-weight: 600; text-decoration: none; }
+.btn-primary{ display: inline-block; padding: 15px 32px; background: var(--orange); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1.05rem; transition: background 0.2s, transform 0.15s; box-shadow: 0 4px 20px rgba(249,115,22,0.35); }
+.btn-primary:hover{ background: #ea6c0a; transform: translateY(-2px); }
+.proof-section{ padding: 70px 5%; background: var(--warm-white); }
+.proof-grid{ max-width: 700px; margin: 32px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; text-align: left; }
+.proof-item{ display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+.proof-item svg{ color: var(--orange); flex-shrink: 0; margin-top: 3px; }
+.faq-section{ padding: 70px 5%; background: var(--sky); }
+.faq-list{ max-width: 700px; margin: 32px auto 0; text-align: left; }
+.faq-list details{ background: #fff; border: 1.5px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+.faq-list summary{ cursor: pointer; padding: 18px 22px; font-weight: 600; font-size: 0.95rem; color: var(--navy); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-list summary::after{ content: '+'; font-size: 1.3rem; color: var(--orange); font-weight: 700; }
+.faq-list details[open] summary::after{ content: '−'; }
+.faq-list details p{ padding: 0 22px 18px; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.bottom-cta{ background: var(--navy); padding: 70px 5%; text-align: center; }
+.bottom-cta h2{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px; }
+.bottom-cta p{ color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 32px; }
+.cta-row{ display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; }
+@media (max-width: 860px){.hero-grid{ grid-template-columns: 1fr; gap: 40px; }
+.hero-sub{ max-width: 100%; }
+.pain-grid, .steps-grid, .audience-grid, .included-grid, .proof-grid{ grid-template-columns: 1fr; }}
+@media (max-width: 480px){.hero{ padding: 40px 5% 48px; }
+.hero-call{ display:block; width:100%; text-align:center; box-sizing:border-box; min-height:52px; }
+.form-card{ padding: 28px 20px; }
+.pricing-card{ padding: 28px 20px; }}
+</style>
+<link rel="canonical" href="https://truelineit.com/ai-receptionist-for-salons" />
+<meta property="og:image" content="https://truelineit.com/og-image-trades.jpg" />
+<meta property="og:image:width" content="2400" />
+<meta property="og:image:height" content="1260" />
+<meta property="og:site_name" content="Trueline IT" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Every booking call answered, even mid-appointment. | Trueline IT" />
+<meta name="twitter:description" content="AI receptionist for salons and clinics. It answers your calls, takes the booking request and texts it to you to confirm. $299/mo + $299 setup. Call (647) 360-5774." />
+<meta name="twitter:image" content="https://truelineit.com/og-image-trades.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI Receptionist for salons and clinics",
+  "url": "https://truelineit.com/ai-receptionist-for-salons",
+  "provider": {
+    "@type": "Organization",
+    "name": "Trueline IT",
+    "url": "https://truelineit.com",
+    "telephone": "+16473605774",
+    "email": "hello@truelineit.com"
+  },
+  "serviceType": "AI Receptionist",
+  "description": "An AI receptionist for salons and clinics. $299 per month plus a one-time $299 setup. It answers your calls, takes the booking request and texts it to you to confirm.",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "AI Receptionist for salons and clinics",
+      "price": "299",
+      "description": "$299 per month plus a one-time $299 setup. No per-call bills."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does it book the appointment itself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It takes the booking request and texts it to you. You confirm the time and the price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this DIY software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We build it, train it, and run it. If you want to configure prompts and call flows yourself, we're not the right fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have human backup like a traditional answering service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is AI voice with urgent calls sent to you. It is not a live human receptionist desk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do callers know they are speaking with AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Callers are told they're speaking with an AI assistant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why a setup fee when some apps say $0 setup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The $299 setup fee is onboarding / install — training on your services, hours, booking rules and pricing questions — so you're not left wiring it alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I hear it before I buy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Play the sample call on this page. When you call us, we'll walk you through how it answers your calls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it give clinical advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For dental, physio, chiropractic, optometry, and vet clinics, it does front-desk work only: it answers the phone and takes appointment requests. It does not give clinical advice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cancel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cancel anytime. No contracts. No cancellation fee. Cancel by phone or email."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a money-back guarantee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked."
+      }
+    }
+  ]
+}
+</script>
+
+    <script>
+      // Capture GCLID from the URL parameters for Server-Side Offline Conversions
+      const urlParamsAuth = new URLSearchParams(window.location.search);
+      const gclid = urlParamsAuth.get('gclid');
+      if (gclid) {
+          sessionStorage.setItem('google_ads_gclid', gclid);
+      }
+    </script>
+
+
+<script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261019-7">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- NAV -->
+<nav class="tl-nav" aria-label="Primary">
+  <a href="/" class="nav-logo" aria-label="Trueline IT home">Trueline<span>.</span>IT</a>
+  <div class="nav-links">
+    <details class="nav-services">
+      <summary>Services</summary>
+      <div class="nav-services-menu">
+        <div class="nav-services-group" role="group" aria-labelledby="nav-group-trades">
+          <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
+          <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
+          <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
+          <a class="nav-services-sub" href="/ai-receptionist">AI Receptionist</a>
+          <a class="nav-services-sub" href="/quote-follow-up-win-back">Quote Follow-Up & Win-Back</a>
+          <a class="nav-services-sub" href="/website-chat-to-text">Website Chat-to-Text</a>
+          <a class="nav-services-sub" href="/text-to-pay">Text-to-Pay</a>
+          <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
+          <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
+        </div>
+        <div class="nav-services-group" role="group" aria-labelledby="nav-group-salons">
+          <p class="nav-services-label" id="nav-group-salons">Salons & Clinics</p>
+          <a class="nav-services-hub" href="/for-appointment-businesses">For Salons & Clinics</a>
+          <a class="nav-services-sub" href="/ai-receptionist-for-salons">AI Receptionist</a>
+          <a class="nav-services-sub" href="/google-review-requests-for-salons">Google Review Requests</a>
+        </div>
+        <div class="nav-services-group nav-services-minor">
+          <a class="nav-services-sub" href="/for-law-firms-accountants-and-advisors">Law, accounting &amp; advisory firms</a>
+        </div>
+      </div>
+    </details>
+  </div>
+  <a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+</nav>
+<main id="main" tabindex="-1">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">AI Receptionist for salons and clinics</div>
+      <h1>Every booking call answered, even mid-appointment.</h1>
+      <p class="hero-sub">You're mid-colour or with a patient when the phone rings. Your AI receptionist picks up, takes the booking request, and texts it to you to confirm. $299/mo plus a one-time $299 setup.</p>
+      <p class="hero-sub">One call. We set it up on your number. You approve every word before it goes live.</p>
+      <a href="tel:+16473605774" class="hero-call" style="margin:0 0 24px;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="hero-sub">We set it up and run it for you. It answers nights, weekends, and while you're with a client. A Saturday gel set and a first physio visit both get an answer, and you confirm the time.</p>
+      <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
+<div class="hero-trust">
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Works alongside your front desk, never replaces it
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Scripted to stick to what you approve. Anything it can't answer goes to you.
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Booking requests sent to you by text to confirm
+        </div>
+      </div>
+    </div>
+    <div class="form-card" id="contact">
+      <div class="form-card-label">AI Receptionist</div>
+      <h2>How many booking calls ring out while you're with a client?</h2>
+      <p class="form-card-sub">Call and tell us how your day runs. We'll set it up around your services, hours and booking rules.</p>
+      <div style="margin-top:20px;text-align:center;"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
+      <p style="margin-top:12px;font-size:0.95rem;text-align:center;">Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="tl-demo-band">
+  <div class="section-inner">
+    <figure class="tl-frame tl-demo">
+  <div class="tl-phone">
+    <div class="tl-ear" aria-hidden="true"></div>
+    <div class="tl-screen">
+      <div class="tl-phone-head">
+        <div class="tl-avatar" aria-hidden="true">N</div>
+        <div class="tl-phone-name">North Nail Salon</div>
+      </div>
+      <div class="tl-demo-bar">
+        <button type="button" class="tl-demo-play" aria-controls="sample-call-salon-lines" aria-label="Play sample call">
+          <svg class="tl-demo-icon-play" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+          <svg class="tl-demo-icon-pause" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <label class="tl-demo-scrub">
+          <span class="sr-only">Sample call progress</span>
+          <input type="range" min="0" max="26" step="0.1" value="0" aria-valuetext="0:00 of 0:26">
+        </label>
+        <span class="tl-demo-time">0:00 / 0:26</span>
+      </div>
+      <audio preload="none" src="https://assets.truelineit.com/elevenlabs/ai-receptionist-demo/salon-booking-v2.mp3"></audio>
+      <ol class="tl-demo-lines" id="sample-call-salon-lines">
+        <li class="tl-bubble tl-out" data-start="1.42" data-end="5.58"><span class="sr-only">Receptionist:</span> Thanks for calling North Nail Salon. I'm Jess's AI assistant. How can I help?</li>
+        <li class="tl-bubble tl-in" data-start="6" data-end="9.14"><span class="sr-only">Caller:</span> Hi! Can I get a gel set this Saturday? How much is that?</li>
+        <li class="tl-bubble tl-out" data-start="9.64" data-end="12.96"><span class="sr-only">Receptionist:</span> Jess confirms the price when she confirms your time. What time works?</li>
+        <li class="tl-bubble tl-in" data-start="13.38" data-end="14.98"><span class="sr-only">Caller:</span> Afternoon, maybe around two?</li>
+        <li class="tl-bubble tl-out" data-start="15.8" data-end="16.46"><span class="sr-only">Receptionist:</span> And your name?</li>
+        <li class="tl-bubble tl-in" data-start="16.82" data-end="18.46"><span class="sr-only">Caller:</span> Maya. This number's fine.</li>
+        <li class="tl-bubble tl-out" data-start="18.96" data-end="24.1"><span class="sr-only">Receptionist:</span> Thanks, Maya. A deposit holds a Saturday spot. I'm texting Jess your request now. She'll confirm.</li>
+        <li class="tl-bubble tl-in" data-start="24.24" data-end="25.48"><span class="sr-only">Caller:</span> Perfect, thank you!</li>
+      </ol>
+      <div class="tl-sms tl-demo-card" data-payoff="21.7">
+        <p><span class="tl-sms-kicker">What Jess gets</span> New request: Maya, gel set, Sat ~2 PM</p>
+      </div>
+    </div>
+  </div>
+  <figcaption>Sample call. AI voice, sample business name. Your business name and wording go in, and you approve it before it goes live. AI voices by ElevenLabs.</figcaption>
+</figure>
+<script src="/js/sample-call.js" defer></script>
+  </div>
+</section>
+
+<!-- SAME CALL, TWO OUTCOMES -->
+<section class="audience-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Same call, two outcomes</div>
+    <h2 class="section-title">Voicemail loses the booking. Your receptionist takes it.</h2>
+<img src="/assets/img/home-salons-booking-request.svg" alt="A booking request on a phone, next to scissors and nail polish" width="640" height="360" loading="lazy" decoding="async" style="display:block;width:100%;max-width:440px;height:auto;aspect-ratio:16/9;border-radius:14px;margin:8px auto 24px;">
+    <div class="audience-grid">
+      <div class="audience-card bad">
+        <h3>With voicemail</h3>
+        <ul>
+          <li>The phone rings out while you're mid-appointment.</li>
+          <li>The caller doesn't leave a message.</li>
+          <li>They book the salon down the street.</li>
+        </ul>
+      </div>
+      <div class="audience-card good">
+        <h3>With your AI receptionist</h3>
+        <ul>
+          <li>It answers in your business name.</li>
+          <li>It takes the name, the service and the time they want.</li>
+          <li>It texts you the booking request, and you confirm between clients.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Sound familiar?</div>
+    <h2 class="section-title">Your hands are on a client when the phone rings</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <h3>You can't answer mid-appointment</h3>
+        <p>You're mid-colour, mid-fade or with a patient when the phone rings. The caller won't wait — they call the next name on Google.</p>
+      </div>
+      <div class="pain-card">
+        <h3>A no-show leaves an empty chair</h3>
+        <p>Your 2 PM doesn't show. A new caller who wants a slot today gets voicemail, and the chair sits empty.</p>
+      </div>
+      <div class="pain-card">
+        <h3>Booking calls after hours</h3>
+        <p>Clients call at night and on weekends to book. The booking request is captured, and you confirm in the morning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NO-SHOWS -->
+<section class="how-section" id="no-shows">
+  <div class="section-inner">
+    <div class="section-eyebrow">Bookings and no-shows</div>
+    <h2 class="section-title">Fill the gap a no-show leaves</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Your 2 PM doesn't show</h3>
+        <p>You're mid-colour on your 1:30 and can't pick up the phone.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>A new caller wants today</h3>
+        <p>The receptionist answers, takes their name, the service and the time they want, and reads out your deposit rule.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>You confirm the time</h3>
+        <p>The request reaches you by text while there's still time to fill the chair.</p>
+      </div>
+    </div>
+    <p style="margin-top:28px;">Deposit and cancellation rules are read out the way you script them, so callers hear your policy before they book.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Getting started</div>
+    <h2 class="section-title">From missed booking calls to a full receptionist in three steps</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>You call</h3>
+        <p>Tell us your services, your hours, your booking rules and the questions clients ask most.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>We build your receptionist</h3>
+        <p>Trained on your business — your services, hours, prices, and deposit and cancellation rules.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>We launch your receptionist</h3>
+        <p>It answers after hours, on weekends and mid-appointment, and texts you each booking request to confirm.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR / NOT FOR -->
+<section class="audience-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Who it's for</div>
+    <h2 class="section-title">Built for salons and clinics mid-appointment</h2>
+    <div class="audience-grid">
+      <div class="audience-card good">
+        <h3>Who this is for</h3>
+        <ul>
+          <li>Nail salons, hair salons, spas, med-spas, barbers, yoga studios and pilates classes</li>
+          <li>Dental, physio and chiro front desks. It takes the appointment request. It does not give clinical advice.</li>
+          <li>Owners who want it run for them, not a pay-per-minute app</li>
+        </ul>
+      </div>
+      <div class="audience-card bad">
+        <h3>Who this is not for</h3>
+        <ul>
+          <li>Agencies or resellers</li>
+          <li>DIY all-in-one platform buyers</li>
+          <li>Anyone who wants one platform to replace all their software</li>
+          <li>Buyers who only want a self-serve AI app</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED / NOT INCLUDED -->
+<section class="included-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">What you get</div>
+    <h2 class="section-title">Answers after hours and mid-appointment, built for your business</h2>
+    <div class="included-grid">
+      <div class="included-card yes">
+        <h3>What's included</h3>
+        <ul>
+          <li>Answers after hours, on weekends and mid-appointment on your number</li>
+          <li>Callers are told they're speaking with an AI assistant.</li>
+          <li>Booking requests sent to you by text</li>
+          <li>Deposit and cancellation rules, as you script them</li>
+          <li>Urgent calls sent to you by text</li>
+          <li>Monthly review call</li>
+          <li>Done-for-you build, train, and run</li>
+        </ul>
+      </div>
+      <div class="included-card no">
+        <h3>What's not included</h3>
+        <ul>
+          <li>A live human receptionist desk</li>
+          <li>Clinical advice</li>
+          <li>Self-serve "launch in 15 minutes" DIY</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">How we're different</div>
+    <h2 class="section-title">Managed coverage — without another dashboard to run</h2>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Human answering</th>
+            <th>DIY AI apps</th>
+            <th class="hl">Trueline managed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Who runs it</td>
+            <td data-label="Human answering">Call center staff</td>
+            <td data-label="DIY AI apps">You set it up and pay per use</td>
+            <td class="hl" data-label="Trueline managed">We build, train, and run</td>
+          </tr>
+          <tr>
+            <td>How you're billed</td>
+            <td data-label="Human answering">Often per-minute or per-call</td>
+            <td data-label="DIY AI apps">Low start price, add-on charges common</td>
+            <td class="hl" data-label="Trueline managed">One flat monthly price + one-time setup</td>
+          </tr>
+          <tr>
+            <td>Best for</td>
+            <td data-label="Human answering">Owners who need humans</td>
+            <td data-label="DIY AI apps">Owners who want to build it themselves</td>
+            <td class="hl" data-label="Trueline managed">Owners who want coverage without another dashboard</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="proof-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Run your own numbers</div>
+    <h2 class="section-title">Run your own numbers</h2>
+    <p>Run your own numbers: if one booking is worth $80 to you, four saved $80 bookings a month ($320) more than cover the $299 AI receptionist plan.</p>
+    <p>Your numbers will differ. Bring them to the call and we'll work it out with you.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="section-inner">
+    <div class="section-eyebrow">Flat monthly fee</div>
+    <h2 class="section-title">No per-call bills, and your booking rules stay yours.</h2>
+    <div class="pricing-card">
+      <div class="pricing-badge">Salons and clinics</div>
+      <div class="pricing-amount">$299<span>/mo</span></div>
+      <p class="pricing-desc">$299 setup covers the install: your script, hours, services, booking rules and going live.</p>
+      <p style="font-size:0.95rem;color:var(--navy);font-weight:600;margin:-14px 0 24px;">Done for you — we build it, train it on your business, and run it. Not software you configure yourself.</p>
+      <div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:-8px 0 20px;">
+        <p style="margin:0 0 6px;"><strong>Flat $299/mo.</strong> No per-call bills.</p>
+        <p style="margin:0 0 6px;"><strong>Cancel anytime.</strong> No contracts. No cancellation fee. Cancel by phone or email.</p>
+        <p style="margin:0;">30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p>
+      </div>
+      <ul class="pricing-features">
+        <li>Answers after hours and on weekends on your current number</li>
+        <li>Booking requests sent to you by text</li>
+        <li>Deposit and cancellation rules, as you script them</li>
+        <li>Urgent calls sent to you by text</li>
+        <li>We build it, train it, and run it</li>
+      </ul>
+      <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="pricing-upsell">Want more Google reviews after each appointment? <a href="/google-review-requests-for-salons">See Google Review Requests for salons and clinics →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">What you can expect</div>
+    <h2 class="section-title">What happens after you call</h2>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Managed install and a monthly review call
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        You approve how the receptionist talks before go-live
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Clear monthly price shown before you start
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Phone: (647) 360-5774
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Questions</div>
+    <h2 class="section-title">Common questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Does it book the appointment itself?</summary>
+        <p>No. It takes the booking request and texts it to you. You confirm the time and the price.</p>
+      </details>
+      <details>
+        <summary>Is this DIY software?</summary>
+        <p>No. We build it, train it, and run it. If you want to configure prompts and call flows yourself, we're not the right fit.</p>
+      </details>
+      <details>
+        <summary>Do you have human backup like a traditional answering service?</summary>
+        <p>This is AI voice with urgent calls sent to you. It is not a live human receptionist desk.</p>
+      </details>
+      <details>
+        <summary>Do callers know they are speaking with AI?</summary>
+        <p>Callers are told they're speaking with an AI assistant.</p>
+      </details>
+      <details>
+        <summary>Why a setup fee when some apps say $0 setup?</summary>
+        <p>The $299 setup fee is onboarding / install — training on your services, hours, booking rules and pricing questions — so you're not left wiring it alone.</p>
+      </details>
+      <details>
+        <summary>Can I hear it before I buy?</summary>
+        <p>Yes. Play the sample call on this page. When you call us, we'll walk you through how it answers your calls.</p>
+      </details>
+      <details>
+        <summary>Does it give clinical advice?</summary>
+        <p>For dental, physio, chiropractic, optometry, and vet clinics, it does front-desk work only: it answers the phone and takes appointment requests. It does not give clinical advice.</p>
+      </details>
+      <details>
+        <summary>How do I cancel?</summary>
+        <p>Cancel anytime. No contracts. No cancellation fee. Cancel by phone or email.</p>
+      </details>
+      <details>
+        <summary>Is there a money-back guarantee?</summary>
+        <p>30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <h2>Give callers an answer while you're with a client.</h2>
+  <p>You do the work. We set it up and run it. Call (647) 360-5774 and we'll walk you through how it answers your calls. Every day it isn't set up, the next booking call goes to the next name on Google.</p>
+  <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
+  <div class="cta-row">
+    <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<div class="sticky-mobile-cta">
+  <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+  <span>Month-to-month. Cancel anytime.</span>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <a href="/" class="footer-logo" aria-label="Trueline IT home">Trueline<span>.</span>IT</a>
+    <p class="footer-tagline">Phone and AI help for trades and contractors. Salons and clinics too.</p>
+  </div>
+  <p class="footer-contact"><a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">(647) 360-5774</a> · <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off--></p>
+  <p class="footer-contact footer-links"><a href="/for-home-services">Trades & Contractors</a> · <a href="/for-appointment-businesses">Salons & Clinics</a> · <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
+  <p class="footer-address">1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
+  <p class="footer-copy">© 2026 Trueline IT. All rights reserved.</p>
+</footer>
+
+
+
+</body>
+</html>

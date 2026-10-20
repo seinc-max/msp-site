@@ -19,11 +19,11 @@ const MANIFEST = path.join(__dirname, "dist-manifest.txt");
 // Public top-level entries. Adding a page means adding it here and to the manifest.
 const ALLOW = new Set([
   "404.html", "_headers", "_redirects", "about.html", "ai-automation-roi-guide.html",
-  "ai-exposure-score.html", "ai-governance.html", "ai-receptionist.html",
+  "ai-exposure-score.html", "ai-governance.html", "ai-receptionist.html", "ai-receptionist-for-salons.html",
   "ai-support-agent.html", "assets", "blog", "contractor-websites.html",
   "favicon.ico", "favicon.png", "favicon.svg", "for-appointment-businesses.html",
   "for-home-services.html", "for-law-firms-accountants-and-advisors.html",
-  "fractional-ai-officer.html", "google-review-requests.html", "index.html", "js",
+  "fractional-ai-officer.html", "google-review-requests.html", "google-review-requests-for-salons.html", "index.html", "js",
   "llms.txt", "margin-leakage-calculator.html", "missed-call-text-back.html",
   "og-image-professional.jpg", "og-image-trades.jpg", "og-image.jpg", "og-image.png",
   "privacy.html", "quote-follow-up-win-back.html", "robots.txt", "sitemap.xml",
