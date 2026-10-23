@@ -5,6 +5,7 @@ about.html
 ai-automation-roi-guide.html
 ai-exposure-score.html
 ai-governance.html
+ai-receptionist-for-salons.html
 ai-receptionist.html
 ai-support-agent.html
 assets/2026-cybersecurity-report.pdf
@@ -51,6 +52,7 @@ for-appointment-businesses.html
 for-home-services.html
 for-law-firms-accountants-and-advisors.html
 fractional-ai-officer.html
+google-review-requests-for-salons.html
 google-review-requests.html
 index.html
 js/call-tracking.js
