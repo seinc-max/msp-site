@@ -33,6 +33,17 @@ For law firms, accountants and advisors that want to use AI safely, done for you
 - Hub: https://truelineit.com/for-law-firms-accountants-and-advisors
 - Governance overview: https://truelineit.com/ai-governance
 
+## Guides and tools (for law firms, accountants and advisors)
+- AI Exposure Score: https://truelineit.com/ai-exposure-score
+- Margin Leakage Calculator: https://truelineit.com/margin-leakage-calculator
+- Shadow AI and Manual Admin Cost (ROI guide): https://truelineit.com/ai-automation-roi-guide
+- Staff Use ChatGPT With Client Files: https://truelineit.com/blog/20-shadow-ai-audits-2026
+- ChatGPT and PIPEDA: what your business needs to know now: https://truelineit.com/blog/is-your-business-pipeda-compliant
+- Secure Voice AI for Law and Accounting Firms: https://truelineit.com/blog/voice-ai-law-accounting-confidentiality
+- The Cyber Insurance Trap in App Integrations: https://truelineit.com/blog/financial-integration-insurance-vulnerabilities
+- Zapier Alternatives Under Your Control: https://truelineit.com/blog/sovereign-zapier-alternatives-compliance
+- What Sovereign AI Means for Your Business: https://truelineit.com/blog/what-sovereign-ai-actually-means
+
 ## Contact
 Website: https://truelineit.com
 Phone: (647) 360-5774 — trades, contractor and salon services are call-only. Governance and Fractional AI Officer use forms (start at the $1,000 AI Liability Assessment).

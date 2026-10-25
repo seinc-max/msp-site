@@ -324,10 +324,10 @@ function infoHero(model) {
     <h1>${model.title}</h1>
     <p class="info-lede">${model.lede}</p>
     <div class="hero-actions">${CALL}</div>
-    <p class="hero-promise">${shared.promise}</p>
+    <p class="hero-promise">${shared.promise}</p>${model.hideTrust ? '' : `
     <div class="hero-trust">
 ${chips}
-    </div>
+    </div>`}
   </div>
 </header>`;
 }
@@ -521,6 +521,8 @@ function legalModel(html, which) {
     ctaHeading: 'Call (647) 360-5774.',
     ctaSub: '',
     ctaNote: '',
+    // Audit 2026-10-25 D18.12: no sales chips on the Privacy page.
+    hideTrust: which === 'privacy',
   };
 }
 
