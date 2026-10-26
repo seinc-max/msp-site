@@ -280,7 +280,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
  "name": "What's the price?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "Done-for-you missed-call text-back on your existing number. We set it up and run it. $149/mo per location, flat, plus a one-time $199 setup. No overage bills. No contracts, cancel anytime."
+ "text": "$149/mo per location plus a one-time $199 setup. Month-to-month."
  }
  },
  {
@@ -304,7 +304,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
  "name": "Is there a money-back guarantee?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked."
+ "text": "Yes. 30-day money-back guarantee. See the price section above."
  }
  }
  ]
@@ -329,6 +329,12 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 @media (min-width:768px){.hero .hero-sub{font-size:1.1rem!important}}
 .hero a.hero-call{display:block;width:100%;max-width:720px;box-sizing:border-box;text-align:center;min-height:52px}
 .hero a.hero-call + .hero-guarantee{display:table!important;margin-top:14px}
+/* Sentinel #307: the hero column was sized to the 340px phone frame and clipped at 320px; let it shrink. */
+@media (max-width:899px){.hero-grid.hero-with-frame{grid-template-columns:minmax(0,1fr)}}
+/* No-copy consistency fixes (Ben-approved release path, 2026-10-26): one desktop H1 size, one mobile top space, one hero call button size */
+@media (min-width:1024px){.hero h1{font-size:48px!important}}
+@media (max-width:430px){.hero{padding-top:20px!important}}
+.hero .hero-actions .btn-primary,.hero a.hero-call{display:flex!important;align-items:center;justify-content:center;width:100%;max-width:640px!important;height:57px!important;min-height:57px!important;padding-top:0!important;padding-bottom:0!important;box-sizing:border-box}
 </style>
 </head>
 <body>
@@ -375,7 +381,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   <div class="hero-grid hero-with-frame">
     <div class="hero-copy">
       <h1>Missed a call? Your caller gets a text within minutes.</h1>
-      <p class="hero-sub">$149/mo per location plus a one-time $199 setup. On the tools or under a sink, your caller still hears back.</p>
+      <p class="hero-sub">On the tools or under a sink, your caller still hears back. $149/mo per location plus a one-time $199 setup.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
       <p class="hero-sub try-it">Try it: call, hang up, and see the text your callers get.</p>
@@ -404,7 +410,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </figure>
     <div class="form-card" id="contact">
       <div class="form-card-label">Missed-Call Text-Back</div>
-      <h2>How many jobs did missed calls cost you last month?</h2>
+      <h2>How many calls ring out while you're on a job?</h2>
       <p class="form-card-sub">Using your own numbers, we'll estimate how much missed calls may be costing your business.</p>
       <div class="call-cta" style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" style="font-size:1.15rem;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p></div>
     </div>
@@ -571,7 +577,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pricing-section">
   <div class="section-inner">
     <div class="section-eyebrow">Flat monthly fee</div>
-    <h2 class="section-title">One price for faster missed-call follow-up.</h2>
+    <h2 class="section-title">One price for faster missed-call follow-up</h2>
     <div class="pricing-card">
       <div class="pricing-badge">Missed-Call Text-Back</div>
       <div class="pricing-amount">$149<span>/mo per location</span></div>
@@ -659,7 +665,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </details>
       <details>
         <summary>What's the price?</summary>
-        <p>Done-for-you missed-call text-back on your existing number. We set it up and run it. $149/mo per location, flat, plus a one-time $199 setup. No overage bills. No contracts, cancel anytime.</p>
+        <p>$149/mo per location plus a one-time $199 setup. Month-to-month.</p>
       </details>
       <details>
         <summary>How do I cancel?</summary>
@@ -671,7 +677,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </details>
       <details>
         <summary>Is there a money-back guarantee?</summary>
-        <p>30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p>
+        <p>Yes. 30-day money-back guarantee. See the price section above.</p>
       </details>
     </div>
   </div>
@@ -679,7 +685,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <!-- BOTTOM CTA -->
 <section class="bottom-cta">
-  <h2>Stop losing jobs to voicemail.</h2>
+  <h2>Stop losing jobs to voicemail</h2>
   <p>You do the job. We set it up and run it. Your next missed call becomes your next conversation — the caller's need lands in a text thread, you read it when you're free, and you answer first. Call us and we'll estimate what missed calls are costing you, from your own numbers. Every day it isn't set up, the next missed call goes to the next name on Google.</p>
   <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
   <div class="cta-row">
