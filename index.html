@@ -992,6 +992,10 @@ details[open] summary::after{ content: '−'; }
 @media (min-width:768px){.hero .hero-sub{font-size:1.1rem!important}}
 .hero a.hero-call{display:block;width:100%;max-width:720px;box-sizing:border-box;text-align:center;min-height:52px}
 .hero a.hero-call + .hero-guarantee{display:table!important;margin-top:14px}
+/* No-copy consistency fixes (Ben-approved release path, 2026-10-26): one desktop H1 size, one mobile top space, one hero call button size */
+@media (min-width:1024px){.hero h1{font-size:48px!important}}
+@media (max-width:430px){.hero{padding-top:20px!important}}
+.hero .hero-actions .btn-primary,.hero a.hero-call{display:flex!important;align-items:center;justify-content:center;width:100%;max-width:640px!important;height:57px!important;min-height:57px!important;padding-top:0!important;padding-bottom:0!important;box-sizing:border-box}
 </style>
 </head>
 <body>
