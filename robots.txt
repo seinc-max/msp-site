@@ -1,4 +1,20 @@
+# Search engines and AI search/answer crawlers are welcome.
 User-agent: *
 Allow: /
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+Allow: /
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /docs/
 
 Sitemap: https://truelineit.com/sitemap.xml
