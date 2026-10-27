@@ -26,7 +26,7 @@ const ALLOW = new Set([
   "fractional-ai-officer.html", "google-review-requests.html", "google-review-requests-for-salons.html", "index.html", "js",
   "llms.txt", "margin-leakage-calculator.html", "missed-call-text-back.html",
   "og-image-professional.jpg", "og-image-trades.jpg", "og-image.jpg", "og-image.png",
-  "privacy.html", "quote-follow-up-win-back.html", "robots.txt", "sitemap.xml",
+  "privacy.html", "quote-follow-up-win-back.html", "robots.txt", "sitemap.xml", "688213215a3247df8b5797e268fbd61b.txt",
   "terms.html", "text-to-pay.html", "website-chat-to-text.html",
 ]);
 
