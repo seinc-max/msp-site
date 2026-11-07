@@ -8,7 +8,7 @@ Reference fidelity and a rich set of Ben-authorized photos are required before t
 
 ## Guestio section map
 
-Reference captured 2026-11-07 from https://go.guestio.com/ (desktop 1440×5200 and mobile 390×5200). Visual system: white page, purple accents, black headlines, red buttons, founder photo beside the open, repeated offer blocks, purple guarantee panel, checklist of what you get, final black close.
+Reference captured 2026-11-07 from https://go.guestio.com/ (desktop 1440×5200 and mobile 390×5200). Visual system matched on purpose: light gray page, black header, purple-outlined banner, huge centered headline with the product name in purple, photo beside a purple-bordered offer card, purple check marks, repeated purple buttons, a checklist with photos, and a guarantee block. Guestio’s red was not on the live page; the buttons are purple.
 
 | Guestio section | Nicky section |
 | --- | --- |
