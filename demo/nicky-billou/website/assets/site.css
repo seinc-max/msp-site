@@ -309,6 +309,7 @@ footer p { margin: 0 0 6px; }
 .amplify-list li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); }
 .ep-list article { display: flex; gap: 16px; align-items: flex-start; }
 .ep-thumb { width: 120px; flex-shrink: 0; border-radius: 10px; }
+.cta-look[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
 @media (max-width: 800px) {
   .hero-grid, .photo-row, .gallery, .mastery-grid { grid-template-columns: 1fr; }
   .ep-thumb { width: 96px; }
