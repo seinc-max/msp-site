@@ -1,35 +1,53 @@
-# Nicky Billou demo notes — REDO (Muse, 2026-11-07)
+# Nicky Billou demo notes — REDO v2 (Muse, 2026-11-07)
 
-Staging path: `/demo/nicky-billou/website/` only. Whole site now: home (sales page) +
-about + books + podcast + contact. This file is the only place for source limits.
-Every page is `noindex`. One DEMO bar per page. The closing control is a static
-picture of a button, with the line "Demo. This button is not active." There is no
-script, form, or submission. Other controls are in-page or outbound links.
+Staging path: `/demo/nicky-billou/website/` only. Whole site: home (sales page) +
+about + books + podcast + contact. Every page is `noindex`. One DEMO bar per
+page. The closing control is a static picture of a button, with the line "Demo.
+This button is not active." There is no script, form, or submission. Other
+controls are in-page or outbound links.
 
-## What changed vs the first mockup (Atlas/GrokBot, commit b42e42e)
+## v2 — true Guestio mirror (Ben, 2026-11-07: "Do the same as Guestio")
 
-- One thin page → five pages. The first version had no about page, no proof, no
-  offer stack, and no comparison. This redo is a different page, not a tweak.
-- Design: navy/gold serif → light paper, crimson accent, system sans.
-- Proof added (all verified, see below): 600+ shows, 830+ episodes, 4 books,
-  corporate speaking, Raymond Aaron / Transformational Leadership Council.
-- The first version said "New York Times bestselling author of 11 books". That
-  line is NOT verified and is removed. What is verified: "#1 International Best
-  Selling Author" (his bio) and four best-selling books.
-- "Founder of eCircle" corrected to "co-founder of eCircle Academy" everywhere.
+v1 adapted Guestio's structure but held back its strongest elements. Ben
+corrected that: the job is to CLONE the page — same shape, same elements, with
+Nicky's content swapped in. v2 mirrors Guestio's page section by section:
+4-step header → hero with the product name as the H1 → founder letter →
+guarantee → founder proof → offer stack → "here's what you'll get" (3 parts)
+→ guarantee in full → urgency → 3 benefits → outcomes → 6 mastery items +
+guarantee restated → 3 amplify bullets → final CTA repeating price + stack →
+footer.
+
+- Product name: "Get Booked & Get Paid" is now the hero H1, the way Guestio's
+  "Magnetize & Monetize Power Pack" is the hero of their page. (v1 buried it
+  in small text.)
+- Guarantee: "Follow the steps, get your first podcast booking in 30 days —
+  or your money back." Repeated 3x, like Guestio. **PLACEHOLDER — Nicky has
+  never offered this. Ben ordered the Guestio shape; Nicky must confirm the
+  guarantee before anything goes live.** Same for the FAQ answer "What if it
+  doesn't work for me?"
+- Offer stack: the 4 parts (story, shows, booked, interview), total $88.
+  **No per-part dollar values and no struck-through total** — those numbers
+  only Nicky can supply. Guestio's stack lists $47 + $497 + $297 = $841 vs
+  $37. The equivalent for Nicky needs his component values; ask him.
+- Urgency: honest, no fake deadline. "Your buyers are listening now — every
+  week you wait, someone else is the guest they hear." No countdown, no
+  fake scarcity.
+- Photos: 13 images from Nicky's own sites (see below). v1 used only 2.
+  One downloaded photo was NOT used: nicky-32 (Nicky shirtless with a medal
+  beside two young men — a personal moment, wrong for a sales page).
 
 ## Reference
 
-- Primary, design + copy: https://go.guestio.com/ — section order (hook, problem,
-  what you get, proof, book, who it is for, comparison, objections, questions,
-  one next step). Guestio's name, prices, guarantee, people, and testimonials
-  are NOT used.
-- Wording only: https://www.howtoguestpodcast.com/ (4-step frame: story → shows
-  → booked → interview; "borrow their credibility"; DIY-vs-system comparison;
-  "one lead pays for it many times over") and https://marciepaige.com/booked/
-  ("hosts want valuable content, not follower counts"; "never been on a podcast";
-  "no fluff, no frills"). Angles only — none of their claims, prices, or
-  guarantees transfer.
+- Primary, design + copy: https://go.guestio.com/ — section order and
+  elements (above). Guestio's name, prices, people, and testimonials are NOT
+  used. Their guarantee SHAPE is used (30-day first booking), as a
+  placeholder per Ben.
+- Wording only: https://www.howtoguestpodcast.com/ (4-step frame: story →
+  shows → booked → interview; "borrow their credibility"; DIY-vs-system
+  comparison; "one lead pays for it many times over") and
+  https://marciepaige.com/booked/ ("hosts want valuable content, not follower
+  counts"; "never been on a podcast"; "no fluff, no frills"). Angles only —
+  none of their claims, prices, or guarantees transfer.
 - Product: "Get Booked & Get Paid", $88. Ben approved $88 on 2026-11-07. The
   name comes from Nicky's book title. No currency code, billing period, tax,
   comparison price, deadline, or checkout was added.
@@ -60,14 +78,23 @@ script, form, or submission. Other controls are in-page or outbound links.
   as his aim for the buyer.
 - Podcast episodes EP826–EP831 with titles and dates, from the live show site,
   November 2026.
-- Portrait: assets/images/nicky-portrait.jpg from Photo_Nicky_01.jpg on
-  nickybillou.com. Book cover: assets/images/book-get-booked.png from
-  Book_GetBookedGetPaid.png on nickybillou.com/about.
+- Photos (all from Nicky's own sites, November 2026):
+  nicky-portrait.jpg from Photo_Nicky_01.jpg (stage shot, nickybillou.com);
+  nicky-letter.jpg from Photo_HomeMain_14.jpg (seated portrait, TTLR site);
+  nicky-stage-blue.jpg from Photo_Nicky_34.jpg; nicky-stage-cream.jpg from
+  Photo_Nicky_36.jpg; nicky-portrait-blue.jpg from Photo_Nicky_27.jpg;
+  nicky-closeup.jpg from Photo_Nicky_28.jpg; nicky-casual.jpg from
+  Photo_Nicky_29.jpg; nicky-pointing.jpg from Photo_Nicky_33.jpg;
+  audience.jpg from BG_Testimonials3.jpg; media-logos.png from
+  MediaLogos_COL3.png (outlet logos from his site); book-get-booked.png from
+  Book_GetBookedGetPaid.png; ep826/828/829/831.jpg from the TTLR episode
+  thumbnails. All converted from served WebP to JPEG/PNG.
 
 ## Held out of the sales pages
 
-- Guarantee. Nicky states none on his pages. None is invented. This is the one
-  real gap in the offer — see recommendation below.
+- Guarantee wording: the 30-day first-booking guarantee is a PLACEHOLDER
+  (see above). Nicky must confirm it.
+- Offer-stack component values and struck-through total: need Nicky.
 - Workshop dates and hours from the Get Booked page: May 14–15, 2026, 11 a.m.
   to 5 p.m. Eastern, Zoom. Past as of November 2026; not replaced with a new
   date. The $4,000 / $8,000 workshop prices are not used: the $88 product is
@@ -78,29 +105,26 @@ script, form, or submission. Other controls are in-page or outbound links.
 - No lesson counts, durations, or delivery format (live vs recorded) for the
   $88 program — none is published. The program is described as the four steps.
 
-## Expert lenses applied
+## Review status
 
-- Oli Gardner (layout): one goal per section, one CTA, hero → proof → offer →
-  questions → one next step; CTA rhythm (hero + final); no form friction
-  (no form); mobile-first (single column, full-width buttons under 800px).
-- Joanna Wiebe (copy): second person throughout; plain grade-10 English;
-  customer words ("get booked", "turn listeners into clients").
-- Nielsen Norman Group (usability): consistent nav on all five pages; skip
-  link; visible focus; 44px+ targets; FAQ as native details.
-- Alex Hormozi (offer): price + what you get + outcomes are explicit. Risk
-  reversal is the gap — no guarantee exists to state.
-- Russell Brunson (funnel, temporary for this job): low-ticket front-end
-  ($88) with the book as the companion step and coaching/speaking as the
-  ladder above; no upsell invented.
-- John Moran (ads): headline matches the "get booked on podcasts" intent.
-- Atul Gawande (checklists): every claim, price, and link verified before
-  ship — see "What the pages use" above.
-- Simon Willison (AI engineering/safety): not applicable — no AI features on
-  this page.
+- v1 was NOT reviewed by the 4 LLMs. Muse applied the expert lenses as a
+  self-check only. Ben caught this 2026-11-07. A 4-LLM review (8 lenses:
+  Oli Gardner, Nielsen Norman Group, Joanna Wiebe, Alex Hormozi, John Moran,
+  Atul Gawande, Simon Willison, Russell Brunson) was started 2026-11-07
+  against v1; its findings are to be checked against v2 and folded into the
+  next pass. No page ships to Nicky without that review landing.
+- Expert lenses applied in v2 (self-check): Oli Gardner (one goal per
+  section, hero = product name, CTA rhythm, mobile-first); Joanna Wiebe
+  (second person, grade-10); Nielsen Norman Group (consistent nav, skip link,
+  focus visible, 44px+ targets, native FAQ details); Alex Hormozi (offer
+  stack + guarantee — the guarantee is the placeholder above); Russell
+  Brunson (low-ticket front-end $88, book as companion step, coaching/
+  speaking as the ladder above); John Moran (headline matches "get booked on
+  podcasts" intent); Atul Gawande (every claim, price, and link verified —
+  see "What the pages use"); Simon Willison (N/A — no AI features on page).
 
 ## Recommendation for Ben (not on the page)
 
-Ask Nicky for a guarantee. Guestio's strongest element is its 30-day
-first-booking guarantee, repeated three times. Marcie offers 7 days. Nicky
-states none. A guarantee from Nicky — even a simple 7-day money-back — would
-be the single biggest lift to this offer, and it can only come from him.
+Ask Nicky for two things: (1) confirm or rewrite the 30-day first-booking
+guarantee; (2) the offer-stack component values (what each of the 4 parts is
+worth) so the page can show a struck-through total like Guestio's $841 → $37.
