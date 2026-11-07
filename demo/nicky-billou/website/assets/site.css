@@ -1,11 +1,35 @@
-/* Close visual match to go.guestio.com: gray page, black type, purple name, purple buttons, two-column offer. */
+/* Colors and type read from https://go.guestio.com/ on 2026-11-07.
+   Product name and magenta buttons: rgb(181, 3, 208) / #b503d0.
+   Headlines: Poppins 900, uppercase. Button label: Poppins 28px / 700.
+   Button subhead: 20px / 400. Pill: Poppins 22px / 500, 3px #b503d0, 10px radius.
+   Poppins latin woff2 is self-hosted under assets/fonts (SIL OFL). */
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/poppins-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/poppins-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("fonts/poppins-900.woff2") format("woff2");
+}
 :root {
-  --ink: #111;
-  --muted: #222;
+  --ink: #000;
+  --muted: #000;
   --bg: #f3f3f5;
-  --purple: #6d28d9;
-  --purple-2: #7c3aed;
-  --card: #5b21b6;
+  --purple: #b503d0;
+  --card: #b503d0;
   --line: #e4e4ea;
   --focus: #0b57d0;
 }
@@ -15,8 +39,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 16px;
   line-height: 1.45;
 }
 img { max-width: 100%; height: auto; display: block; }
@@ -45,16 +69,18 @@ a { color: var(--purple); }
 .page { width: min(1120px, calc(100% - 28px)); margin: 0 auto; padding: 22px 0 10px; }
 .pill {
   border: 3px solid var(--purple);
-  border-radius: 14px;
+  border-radius: 10px;
   background: #fff;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 22px;
   padding: 12px 16px;
   margin: 0 0 22px;
 }
 h1 {
   text-align: center;
-  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 900;
+  font-size: clamp(34px, 5vw, 58px);
   line-height: 0.98;
   letter-spacing: -0.03em;
   margin: 0 0 22px;
@@ -75,7 +101,8 @@ h1 .name { color: var(--purple); }
   object-position: center 20%;
 }
 h2 {
-  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 900;
+  font-size: clamp(28px, 4vw, 46px);
   line-height: 1.02;
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -109,31 +136,158 @@ p { margin: 0 0 14px; }
   padding: 16px 14px 8px;
   text-align: center;
 }
-.side-hero strong { display: block; font-size: 26px; line-height: 1.05; letter-spacing: -0.03em; }
-.mosaic { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 8px; padding: 12px; }
-.mosaic img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; }
+.side-hero strong { display: block; font-size: 26px; line-height: 1.05; letter-spacing: -0.03em; font-weight: 900; }
+.pack {
+  display: grid;
+  grid-template-columns: 0.92fr 1.05fr 0.92fr;
+  gap: 8px;
+  align-items: center;
+  background:
+    radial-gradient(90px 60px at 18% 28%, rgba(181, 3, 208, 0.16), transparent 70%),
+    radial-gradient(110px 70px at 82% 72%, rgba(181, 3, 208, 0.12), transparent 72%),
+    #fff;
+  padding: 14px 10px 4px;
+  overflow: hidden;
+}
+.pack-wide {
+  max-width: 640px;
+  margin: 8px auto 16px;
+  border: 3px solid var(--purple);
+  border-radius: 16px;
+  padding: 16px 14px 8px;
+}
+.pack-piece { min-width: 0; }
+.pack-piece img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.28));
+}
+.pack-label {
+  margin: 8px 0 6px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+.ticket {
+  background: #111;
+  color: #fff;
+  border: 2px solid var(--purple);
+  border-radius: 12px;
+  box-shadow: 0 12px 18px rgba(181, 3, 208, 0.2);
+  text-align: center;
+  padding: 12px 8px 14px;
+  transform: rotate(-3.5deg);
+}
+.ticket span {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f3c6f8;
+}
+.ticket strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.ticket em {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+.kit { position: relative; height: 148px; }
+.pack-wide .ticket {
+  min-height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pack-wide .kit { height: 176px; }
+.paper {
+  position: absolute;
+  width: 78%;
+  background: #fff;
+  border: 1px solid #ececf2;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.14);
+  padding: 7px 8px 8px;
+}
+.paper b {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.paper i {
+  display: block;
+  height: 4px;
+  border-radius: 99px;
+  background: #ececf2;
+  margin: 3px 0 0;
+}
+.paper.intro { left: 0; top: 10px; width: 64%; transform: rotate(-7deg); z-index: 1; }
+.paper.intro i { width: 100%; }
+.paper.intro i:nth-of-type(2) { width: 82%; }
+.paper.intro i:nth-of-type(3) { width: 64%; }
+.paper.list { right: 0; top: 0; width: 64%; transform: rotate(6deg); z-index: 2; }
+.paper.list i { width: 100%; background: rgba(181, 3, 208, 0.28); }
+.paper.list i:nth-of-type(3) { width: 70%; }
+.paper.cardp {
+  left: 16%;
+  bottom: 4px;
+  width: 66%;
+  z-index: 3;
+  background: var(--purple);
+  color: #fff;
+  border-color: transparent;
+  transform: rotate(-1deg);
+}
+.paper.cardp i {
+  font-style: normal;
+  height: auto;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
 .side-body { padding: 4px 16px 16px; text-align: center; }
 .price { font-size: 42px; font-weight: 900; margin: 8px 0; letter-spacing: -0.04em; }
 .btn, .cta-look {
   display: flex;
   width: 100%;
-  min-height: 64px;
+  min-height: 76px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: var(--purple);
   color: #fff;
-  font-weight: 800;
-  font-size: 22px;
-  line-height: 1.1;
-  border-radius: 10px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.05;
+  border-radius: 5px;
   text-decoration: none;
   padding: 10px 12px;
   margin: 8px 0;
 }
 a.btn { color: #fff; }
 .cta-look { cursor: default; }
-.subbtn { display: block; font-size: 16px; font-weight: 700; }
+.subbtn { display: block; font-size: 20px; font-weight: 400; }
 .note { color: var(--purple); font-weight: 800; font-size: 14px; margin: 0; }
 .tiny { font-size: 13px; color: #444; }
 .included { margin-top: 16px; text-align: left; }
@@ -144,7 +298,41 @@ a.btn { color: #fff; }
   align-items: center;
   margin: 0 0 14px;
 }
-.inc img { width: 92px; height: 92px; object-fit: cover; border-radius: 8px; }
+.inc img, .mini { width: 92px; height: 92px; object-fit: cover; border-radius: 8px; }
+.mini { position: relative; overflow: hidden; }
+.mini.ticket { transform: none; padding: 8px 6px; box-shadow: none; }
+.mini.ticket strong { font-size: 14px; }
+.mini.ticket em { margin-top: 4px; font-size: 10px; }
+.mini.sheet {
+  background: #fff;
+  border: 1px solid #ececf2;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 8px;
+}
+.mini.sheet b {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+.mini.sheet i {
+  display: block;
+  height: 5px;
+  margin-top: 6px;
+  border-radius: 99px;
+  background: #ececf2;
+}
+.mini.sheet i:nth-of-type(2) { width: 78%; }
+.mini.brand { background: #111; border-color: #111; }
+.mini.brand b { color: #fff; }
+.mini.brand i { background: var(--purple); }
+.mini.kit { background: transparent; overflow: hidden; }
+.mini.kit .paper { padding: 4px 5px; width: 62%; }
+.mini.kit .paper b { font-size: 8px; margin: 0; }
+.mini.kit .intro { top: 14px; left: 2px; }
+.mini.kit .list { top: 2px; right: 2px; }
+.mini.kit .cardp { bottom: 6px; left: 18%; }
 .inc h3 { margin: 0 0 4px; font-size: 16px; text-transform: uppercase; }
 .inc p { margin: 0; font-size: 15px; }
 .wide { margin-top: 28px; }
@@ -191,6 +379,12 @@ footer { text-align: center; color: #444; padding: 10px 16px 28px; }
   .side { position: static; }
   .shots { grid-template-columns: 1fr; }
   .shots img, .hero-photo { height: 220px; }
-  .book img, .inc img { width: min(220px, 100%); height: auto; }
+  .book img { width: min(220px, 100%); height: auto; }
+  .pack { gap: 6px; padding: 10px 6px 2px; }
+  .pack-wide { max-width: none; }
+  .ticket strong { font-size: 12px; }
+  .kit, .pack-wide .kit { height: 112px; }
+  .btn, .cta-look { font-size: 22px; }
+  .subbtn { font-size: 16px; }
   h1 { font-size: 34px; }
 }

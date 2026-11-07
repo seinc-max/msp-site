@@ -8,19 +8,28 @@ Reference fidelity and a rich set of Ben-authorized photos are required before t
 
 ## Guestio section map
 
-Reference captured 2026-11-07 from https://go.guestio.com/ (desktop 1440×5200 and mobile 390×5200). Visual system matched on purpose: light gray page, black header, purple-outlined banner, huge centered headline with the product name in purple, photo beside a purple-bordered offer card, purple check marks, repeated purple buttons, a checklist with photos, and a guarantee block. Guestio’s red was not on the live page; the buttons are purple.
+Reference captured 2026-11-07 from https://go.guestio.com/. Computed styles, not a guessed palette:
+
+- Product name and the magenta buttons: `rgb(181, 3, 208)` / `#b503d0`. Poppins, weight 900, uppercase. The product-name word measured 58px.
+- Magenta button label: Poppins 28px, weight 700. Subhead: 20px, weight 400. Corner radius 5px.
+- Top banner: white, 3px solid `#b503d0`, 10px radius, Poppins 22px, weight 500.
+- Body type on the reference is Poppins. This page self-hosts the latin Poppins files (400, 700, 900) under `assets/fonts/`.
+- A green order button, `rgb(55, 202, 55)`, is also on the reference. It was not applied. The correction asked for the magenta product treatment. The earlier blue-violet `#6d28d9` is gone.
+- Desktop document height on that capture pass was 9952 CSS pixels. Earlier reference PNGs stopped at 5200 and cut the close. The comparison packet uses a later full-document capture.
+
+Visual system: light gray page, black header, magenta-outlined banner, centered headline with the product name in `#b503d0`, a real photo beside a magenta-bordered offer card, magenta checks, repeated magenta buttons, and a guarantee block.
 
 | Guestio section | Nicky section |
 | --- | --- |
-| Product name + price hero | GET BOOKED & GET PAID and $88, stage photo nicky-34 |
-| Founder story | Bio and “buyers are already in the room,” portrait nicky-28 |
+| Product name + price hero | GET BOOKED & GET PAID and $88. Stage photo nicky-34 is the teacher, not the product. |
+| Founder story | Bio. Proof photos: nicky-stage, nicky-36, podcast-home. |
 | Benefit bullets | Three guesting outcomes tied to his published topics |
-| Photo / product column | Stage, white-suit, and podcast portraits |
-| Here’s what you’ll get | Two-day live online format, podcast guesting, brand |
+| Offer card | Original package graphic: workshop ticket, the existing book cover, and guest-kit sheets (intro, show list, interview card), labeled Workshop, Book, and Guest kit. Not a portrait mosaic. |
+| Here’s what you’ll get | The same package graphic, then the two-day format, podcast guesting, and brand |
 | We wrote the book | Book cover and full title. On this mockup the book is shown as included with the $88 workshop. That bundle is invented; see fictional terms below. |
-| Money-back guarantee | Sample 30-day booking-or-$88-back panel, labeled illustrative demo terms |
+| Money-back guarantee | Sample 30-day booking-or-$88-back panel. One page notice only. |
 | Who it’s for | Coaches, consultants, authors, speakers, trainers |
-| Final price CTA | Inert purple $88 control. The only visitor notice is the top bar. |
+| Final price CTA | The package graphic again, then an inert magenta $88 control. |
 
 ## Photos
 
@@ -29,6 +38,8 @@ All from Nicky’s public Squarespace pages. Not Guestio people.
 - nicky-34.jpg, nicky-stage.jpg, nicky-36.jpg, nicky-27.jpg, nicky-28.jpg, nicky-29.jpg, nicky-33.jpg from nickybillou.com
 - podcast-home.jpg from thethoughtleaderrevolution.com
 - book-get-booked.png from nickybillou.com/about
+
+On the page, Nicky’s photos are the hero and the story row (teacher and credential proof). The offer card, the “what you’ll get” block, and the close use the package graphic. The book cover inside that graphic is the real cover file. The workshop ticket and the guest-kit sheets are original graphics made for this mockup. nicky-27, nicky-28, nicky-29, and nicky-33 stay in the folder and are not the product image.
 
 A bodybuilding group photo was downloaded and removed. It showed other people and was not used.
 
@@ -58,8 +69,8 @@ Sourced and unchanged: two-day live online workshop, podcast-guesting topic, bra
 
 - [x] One page, no about URL
 - [x] Product name prominent, $88 visible
-- [x] Guestio section order and red/purple/black treatment
-- [x] Several real Nicky photos plus the book
+- [x] Guestio section order. Accent is the sampled magenta `#b503d0`, set in Poppins.
+- [x] Real Nicky photos stay as proof. The product image is the workshop, book cover, and guest kit.
 - [x] noindex, no script, no form
 - [x] Inert closing control. One page-level notice only.
 - [x] Sample guest kit, book-with-workshop bundle, and 30-day guarantee are on the mockup. The sales page does not call them out as footnotes. This note is the map.
