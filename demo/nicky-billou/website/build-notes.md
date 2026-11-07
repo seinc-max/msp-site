@@ -1,43 +1,37 @@
 # Nicky Billou demo notes
 
-Staging path: `/demo/nicky-billou/website/`. This is a demo. It is not a checkout.
+Staging path: `/demo/nicky-billou/website/` only. One buyer-facing page. This file is the only place for source limits. There is no about page.
+
+## Correction
+
+The first draft put verification talk on the sales pages: headings about what a page “states,” warnings about unconfirmed claims, catalog data, and a past workshop date shown as if it were the offer. That failed the job. An accepted demo is buyer-facing sales copy. Source caveats stay in this note. Past dates are not presented as upcoming. Do not invent proof or a guarantee to fill a gap. The only price on the page is $88, which Ben approved for this demo on November 7, 2026. No currency code, billing period, tax, comparison price, deadline, or checkout was added.
 
 ## Reference
 
-Structure follows https://go.guestio.com/ only: one long offer page, a single next step, stacked sections, a dark hero, a light detail area, and questions near the close. Guestio’s name, prices, guarantee, people, and testimonials are not used. This job does not use the older six-page trade outline.
+Section order follows https://go.guestio.com/: hook, story, problem, what you get, the book, who it is for, questions, one next step. Guestio’s name, prices, guarantee, people, and testimonials are not used.
 
-## Sources
+## What the pages use
 
-| Source | Used |
-| --- | --- |
-| https://www.nickybillou.com/ and /about | Bio lines, stage photo, book cover. Treated as his published bio, not a second-source check. |
-| http://www.ecircleacademy.com/getbooked | Workshop name, May 14–15, 2026, 11 a.m.–5 p.m. Eastern, Zoom. Income lines on that page were not copied. |
-| https://www.ecircleacademy.com/ | Audience list (coaches, consultants, authors, speakers, trainers). Published client quotes were not copied. |
-| https://www.thethoughtleaderrevolution.com/ | Recent episode number EP831 was visible on the home page on November 7, 2026. |
-| https://a.co/d/9h1Hgt6 | Kindle title, authors, Thought Leader Books, August 29, 2024, 90 pages, ASIN B0DFQL291X. |
-| https://finishlinethinking.com/ | Opened. No extra biography was clear enough to use. |
+Faithful summary of his public biography: born in Iran, left with his family, founder of eCircle, host of The Thought Leader Revolution and The Sovereign Man Podcast, New York Times bestselling author of 11 books including 7 on leadership and influence, co-author of the book below. Those lines are his published bio, not a separate check.
 
-Images:
+Program, without dates: Get Booked & Get Paid is described on his workshop page as a two-day live online workshop with him. Topics used on the sales page: how podcast guesting reaches the people you want, and how to shape a brand that brings clients to you. Audience list from eCircle: coaches, consultants, authors, speakers, trainers.
 
-- `assets/images/nicky-portrait.jpg` from `Photo_Nicky_01.jpg` on nickybillou.com. Saved as JPEG.
-- `assets/images/book-get-booked.png` from `Book_GetBookedGetPaid.png` on nickybillou.com/about.
+Book title kept in full. It is not written as a promise of income.
 
-## Omitted on purpose
+## Held out of the sales pages
 
-Price, money-back guarantee, income totals, client counts, and testimonials. The demo button does not submit, store, or show a fake success. No analytics.
+- Workshop dates and hours from the Get Booked page: May 14–15, 2026, 11 a.m. to 5 p.m. Eastern, Zoom. Those dates are past as of November 2026. They are not replaced with a new date.
+- Income figures, client counts, and testimonials published on his marketing pages.
+- Guarantee. None is stated. The displayed price is only the approved $88.
+- Amazon ASIN, page count, and publisher details.
+- Portrait: `assets/images/nicky-portrait.jpg` from Photo_Nicky_01.jpg on nickybillou.com.
+- Book cover: `assets/images/book-get-booked.png` from Book_GetBookedGetPaid.png on nickybillou.com/about.
+- finishlinethinking.com was opened earlier and did not add biography beyond the site name. It is only a “read more” link.
 
-## Criteria pass
+## Demo behavior
 
-- One goal: show the public podcast-guesting offer and one next step.
-- Mobile nav wraps, targets are at least 44px, the demo button states that nothing was sent.
-- Copy speaks to “you” and names podcast guesting, not a vague success plan.
-- No commercial terms were added beyond the dates and format his page states.
-- No ad tracking. The workshop link matches the page the dates came from.
-- Checklist: noindex on both pages, relative CSS and images, no Trueline stylesheet, sources named, demo disclosure in the header.
-- Page text is static. The button does not call a network.
-- Hook, short bio, offer, then one next step. No upsell pages.
-- Ads and AI features: not applicable.
+Both pages are `noindex`. One DEMO bar. The closing control is a static picture of a button, with the line “Demo. This button is not active.” There is no script, form, or submission. Other buttons are ordinary links to sections on these two pages.
 
-## Checks
+## Criteria
 
-`node scripts/check-textback-copy.js`, `node scripts/build-pages.js --check`, and `node scripts/check-pages.js` were run for the rest of the site. This folder is outside those marketing checks.
+One goal, readable on a phone, second-person copy, offer limited to sourced topics, no ad pixels, checklist is this note, button does not call the network. Hook, story, offer, one next step. Ads and extra AI features are not part of this page.
