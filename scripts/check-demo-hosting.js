@@ -56,6 +56,13 @@ if (read('demo/index.html').includes('nicky-billou')) fail('demo index lists a c
 const website = read('demo/nicky-billou/website/index.html');
 if (!website.includes('href="site.css"') || !website.includes('href="../"')) fail('website page relative links missing');
 if (website.includes('../demo.css') || website.includes('/assets/')) fail('website page uses an asset outside its folder');
+if (!website.includes('DEMO') || !website.includes('Sample Workshop')) fail('website page is not marked as a sample demo');
+if (/nicky|billou/i.test(website)) fail('website page uses the client id as the business');
+if (!client.includes('not the business name')) fail('client page presents the folder id as the business');
+const doc = read('docs/demo-hosting.md');
+if (!doc.includes('already-live') || !doc.includes('Do not clone a Trueline page')) fail('doc misses the live-industry clone rule');
+if (!doc.includes('CF_PAGES_BRANCH')) fail('doc misses the release guard');
+if (doc.includes('499') || website.includes('499') || client.includes('499')) fail('demo docs or pages carry a price');
 pass('demo HTML is noindex and has no marketing chrome');
 
 const sitemap = read('sitemap.xml');
@@ -76,7 +83,11 @@ try {
   fs.mkdirSync(path.join(fixture, 'assets'), { recursive: true });
   fs.writeFileSync(path.join(fixture, 'index.html'), '<!DOCTYPE html><html><head><meta name="robots" content="noindex, nofollow"></head><body><img src="assets/mark.txt" alt=""></body></html>');
   fs.writeFileSync(path.join(fixture, 'assets', 'mark.txt'), 'fixture-mark');
-  const built = spawnSync(process.execPath, [path.join(ROOT, 'scripts', 'build-dist.js')], { cwd: ROOT, encoding: 'utf8' });
+  const built = spawnSync(process.execPath, [path.join(ROOT, 'scripts', 'build-dist.js')], {
+    cwd: ROOT,
+    encoding: 'utf8',
+    env: Object.assign({}, process.env, { CF_PAGES_BRANCH: 'staging' }),
+  });
   if (built.status !== 0) fail('build-dist failed with nested fixture\n' + (built.stderr || built.stdout));
   else if (fs.readFileSync(distAsset, 'utf8') !== 'fixture-mark') fail('project-type asset missing from dist');
   else if (!fs.existsSync(path.join(ROOT, 'dist', 'demo', 'nicky-billou', 'website', 'index.html'))) fail('dist missing website index');
@@ -88,6 +99,17 @@ try {
 }
 
 if (fs.existsSync(path.join(ROOT, 'demo', '_fixture'))) fail('temporary fixture was left in demo/');
+
+const mainBuild = spawnSync(process.execPath, [path.join(ROOT, 'scripts', 'build-dist.js')], {
+  cwd: ROOT,
+  encoding: 'utf8',
+  env: Object.assign({}, process.env, { CF_PAGES_BRANCH: 'main' }),
+});
+if (mainBuild.status === 0) fail('CF_PAGES_BRANCH=main published demo/');
+else if (!/staging-only/.test(mainBuild.stderr || '')) fail('main build failed without the demo guard: ' + (mainBuild.stderr || mainBuild.stdout));
+else if (fs.existsSync(path.join(ROOT, 'dist', 'demo'))) fail('main build left demo artifacts in dist/');
+else pass('CF_PAGES_BRANCH=main refuses demo/ and leaves no demo artifacts');
+fs.rmSync(path.join(ROOT, 'dist'), { recursive: true, force: true });
 if (errors.length) {
   console.error(errors.length + ' demo hosting checks failed.');
   process.exit(1);

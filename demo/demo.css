@@ -13,6 +13,7 @@ main {
   padding: 2rem 1.25rem 3rem;
   border-top: 8px solid #1a2744;
 }
+.demo-kicker { font-weight: 700; letter-spacing: 0.04em; margin: 0 0 0.5rem; }
 h1 {
   font-size: 1.75rem;
   line-height: 1.2;
