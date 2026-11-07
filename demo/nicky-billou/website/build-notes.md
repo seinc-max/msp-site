@@ -1,37 +1,57 @@
-# Nicky Billou demo notes
+# Nicky Billou demo — one Guestio-shaped page
 
-Staging path: `/demo/nicky-billou/website/` only. One buyer-facing page. This file is the only place for source limits. There is no about page.
+Path: `/demo/nicky-billou/website/` only. Static mockup. No script.
 
-## Correction
+## Process rule
 
-The first draft put verification talk on the sales pages: headings about what a page “states,” warnings about unconfirmed claims, catalog data, and a past workshop date shown as if it were the offer. That failed the job. An accepted demo is buyer-facing sales copy. Source caveats stay in this note. Past dates are not presented as upcoming. Do not invent proof or a guarantee to fill a gap. The only price on the page is $88, which Ben approved for this demo on November 7, 2026. No currency code, billing period, tax, comparison price, deadline, or checkout was added.
+Reference fidelity and a rich set of Ben-authorized photos are required before this page is called ready. “Get it done” means build the page, not only acknowledge the request. Source limits stay in this file, not in sales headings.
 
-## Reference
+## Guestio section map
 
-Section order follows https://go.guestio.com/: hook, story, problem, what you get, the book, who it is for, questions, one next step. Guestio’s name, prices, guarantee, people, and testimonials are not used.
+Reference captured 2026-11-07 from https://go.guestio.com/ (desktop 1440×5200 and mobile 390×5200). Visual system: white page, purple accents, black headlines, red buttons, founder photo beside the open, repeated offer blocks, purple guarantee panel, checklist of what you get, final black close.
 
-## What the pages use
+| Guestio section | Nicky section |
+| --- | --- |
+| Product name + price hero | GET BOOKED & GET PAID and $88, stage photo nicky-34 |
+| Founder story | Bio and “buyers are already in the room,” portrait nicky-28 |
+| Benefit bullets | Three guesting outcomes tied to his published topics |
+| Photo / product column | Stage, white-suit, and podcast portraits |
+| Here’s what you’ll get | Two-day live online format, podcast guesting, brand |
+| We wrote the book | Book cover, title kept, not bundled into $88 |
+| Money-back guarantee | Draft panel, labeled approval pending |
+| Who it’s for | Coaches, consultants, authors, speakers, trainers |
+| Final price CTA | Inert $88 control plus one inactive note |
 
-Faithful summary of his public biography: born in Iran, left with his family, founder of eCircle, host of The Thought Leader Revolution and The Sovereign Man Podcast, New York Times bestselling author of 11 books including 7 on leadership and influence, co-author of the book below. Those lines are his published bio, not a separate check.
+## Photos
 
-Program, without dates: Get Booked & Get Paid is described on his workshop page as a two-day live online workshop with him. Topics used on the sales page: how podcast guesting reaches the people you want, and how to shape a brand that brings clients to you. Audience list from eCircle: coaches, consultants, authors, speakers, trainers.
+All from Nicky’s public Squarespace pages. Not Guestio people.
 
-Book title kept in full. It is not written as a promise of income.
+- nicky-34.jpg, nicky-stage.jpg, nicky-36.jpg, nicky-27.jpg, nicky-28.jpg, nicky-29.jpg, nicky-33.jpg from nickybillou.com
+- podcast-home.jpg from thethoughtleaderrevolution.com
+- book-get-booked.png from nickybillou.com/about
 
-## Held out of the sales pages
+A bodybuilding group photo was downloaded and removed. It showed other people and was not used.
 
-- Workshop dates and hours from the Get Booked page: May 14–15, 2026, 11 a.m. to 5 p.m. Eastern, Zoom. Those dates are past as of November 2026. They are not replaced with a new date.
-- Income figures, client counts, and testimonials published on his marketing pages.
-- Guarantee. None is stated. The displayed price is only the approved $88.
-- Amazon ASIN, page count, and publisher details.
-- Portrait: `assets/images/nicky-portrait.jpg` from Photo_Nicky_01.jpg on nickybillou.com.
-- Book cover: `assets/images/book-get-booked.png` from Book_GetBookedGetPaid.png on nickybillou.com/about.
-- finishlinethinking.com was opened earlier and did not add biography beyond the site name. It is only a “read more” link.
+## Copy limits
 
-## Demo behavior
+Sourced topics only: podcast guesting that connects you to an audience, and a brand that attracts clients. Two-day live online format. No May 2026 dates. No income figures, client quotes, pitch kits, bonuses, or access terms from other sales pages. Book title is not an earnings promise and is not claimed as part of the $88.
 
-The one page is `noindex`. One DEMO bar. The closing control is a static picture of a button, with the line “Demo. This button is not active.” There is no script, form, or submission. Other controls are in-page links.
+Approved display price: $88 only. No currency code, billing period, tax, or checkout.
 
-## Criteria
+## Guarantee decision for Ben
 
-One goal, readable on a phone, second-person copy, offer limited to sourced topics, no ad pixels, checklist is this note, button does not call the network. Hook, story, offer, one next step. Ads and extra AI features are not part of this page.
+No money-back sentence for this $88 workshop was found on nickybillou.com, ecircleacademy.com, the Get Booked page, the podcast site, Finish Line Thinking, or the Amazon book listing. eCircle’s “promise” list is coaching-service language, not a refund of this price.
+
+Proposed line, not approved: “Take part in both days. If the workshop is not what you expected, ask within 7 days of the second day and your $88 comes back.”
+
+The page labels that block “Proposed guarantee — approval pending.”
+
+## Checklist
+
+- [x] One page, no about URL
+- [x] Product name prominent, $88 visible
+- [x] Guestio section order and red/purple/black treatment
+- [x] Several real Nicky photos plus the book
+- [x] noindex, no script, no form
+- [x] Inert closing control with one inactive note
+- [ ] Ben’s yes or no on the proposed guarantee before it is treated as a real promise
