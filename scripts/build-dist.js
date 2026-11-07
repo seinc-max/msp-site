@@ -27,7 +27,7 @@ const ALLOW = new Set([
   "llms.txt", "margin-leakage-calculator.html", "missed-call-text-back.html",
   "og-image-professional.jpg", "og-image-trades.jpg", "og-image.jpg", "og-image.png",
   "privacy.html", "quote-follow-up-win-back.html", "robots.txt", "sitemap.xml", "688213215a3247df8b5797e268fbd61b.txt",
-  "terms.html", "text-to-pay.html", "website-chat-to-text.html",
+  "terms.html", "text-to-pay.html", "website-chat-to-text.html", "demo",
 ]);
 
 // Known non-public entries. Never copied. Pages reads functions/ from the repo root.
@@ -80,7 +80,9 @@ const expected = fs.readFileSync(MANIFEST, "utf8").split("\n").map((s) => s.trim
 const want = new Set(expected);
 const got = new Set(copied);
 const missing = expected.filter((f) => !got.has(f));
-const extra = copied.filter((f) => !want.has(f));
+// demo/ is copied in full and is not listed in the manifest, so a new
+// client or demonstration directory deploys without a manifest edit.
+const extra = copied.filter((f) => !want.has(f) && !f.startsWith("demo/"));
 if (missing.length || extra.length) {
   fs.rmSync(OUT, { recursive: true, force: true });
   fail("dist/ does not match scripts/dist-manifest.txt. Missing: [" + missing.join(", ") + "] Extra: [" + extra.join(", ") + "]");
