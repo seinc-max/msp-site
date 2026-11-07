@@ -17,10 +17,10 @@ Reference captured 2026-11-07 from https://go.guestio.com/ (desktop 1440×5200 a
 | Benefit bullets | Three guesting outcomes tied to his published topics |
 | Photo / product column | Stage, white-suit, and podcast portraits |
 | Here’s what you’ll get | Two-day live online format, podcast guesting, brand |
-| We wrote the book | Book cover, title kept, not bundled into $88 |
+| We wrote the book | Book cover and full title. On this mockup the book is shown as included with the $88 workshop. That bundle is invented; see fictional terms below. |
 | Money-back guarantee | Sample 30-day booking-or-$88-back panel, labeled illustrative demo terms |
 | Who it’s for | Coaches, consultants, authors, speakers, trainers |
-| Final price CTA | Inert $88 control plus one inactive note |
+| Final price CTA | Inert purple $88 control. The only visitor notice is the top bar. |
 
 ## Photos
 
@@ -34,7 +34,7 @@ A bodybuilding group photo was downloaded and removed. It showed other people an
 
 ## Copy limits
 
-Sourced topics only: podcast guesting that connects you to an audience, and a brand that attracts clients. Two-day live online format. No May 2026 dates. No income figures, client quotes, pitch kits, bonuses, or access terms from other sales pages. Book title is not an earnings promise and is not claimed as part of the $88.
+Sourced topics: podcast guesting that connects you to an audience, and a brand that attracts clients. Two-day live online format. No May 2026 dates. No income figures or client quotes. The book title is not an earnings promise. The guest kit, the book-in-the-$88 bundle, and the 30-day booking guarantee are invented demo terms, listed below, not extra sourced claims.
 
 Approved display price: $88 only. No currency code, billing period, tax, or checkout.
 
@@ -61,5 +61,5 @@ Sourced and unchanged: two-day live online workshop, podcast-guesting topic, bra
 - [x] Guestio section order and red/purple/black treatment
 - [x] Several real Nicky photos plus the book
 - [x] noindex, no script, no form
-- [x] Inert closing control with one inactive note
-- [x] Sample guarantee and sample bonus are on the mockup and labeled illustrative, not as Nicky’s live terms
+- [x] Inert closing control. One page-level notice only.
+- [x] Sample guest kit, book-with-workshop bundle, and 30-day guarantee are on the mockup. The sales page does not call them out as footnotes. This note is the map.
