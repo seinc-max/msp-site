@@ -6,6 +6,10 @@
  * The {{cta}} slot is call or consultation, taken from that page's original nav button.
  * Edit the footer in templates/partials/footer.html.
  * Edit a call bar in templates/partials/sticky-call.html or sticky-assessment.html.
+ * Landing look (button, H1, column, cards) lives in assets/landing.css.
+ * A new landing sets body class landing-call or landing-form, plus
+ * landing-home, landing-hub, or landing-offer, and links landing.css
+ * after site.css. Do not paste those rules into the page style block.
  * Edit the phone conversation and About / Terms / Privacy look in assets/site.css.
  * Edit About, Terms or Privacy copy in templates/pages/<file>.html, then rebuild.
  * Page <head> blocks are copied through unchanged.
@@ -80,6 +84,22 @@ function headerPartial(variant) {
     throw new Error('templates/partials/header.html must contain one {{cta}} slot');
   }
   return raw.replace('{{cta}}', () => HEADER_CTAS[variant]);
+}
+
+function audienceOf(html) {
+  const cls = (html.match(/<body[^>]*\bclass="([^"]*)"/) || [])[1] || '';
+  if (cls.includes('audience-trades')) return 'trades';
+  if (cls.includes('audience-salons')) return 'salons';
+  if (cls.includes('audience-professional')) return 'professional';
+  return '';
+}
+
+function filterNav(header, audience) {
+  const next = header.replace(/<div class="nav-services-group\b[^>]*\bdata-audience="(trades|salons|professional)"[^>]*>[\s\S]*?<\/div>/g, (block, name) => {
+    if (!audience || name === audience) return block;
+    return '';
+  });
+  return next.replace(/\n[ \t]*\n(?=[ \t]*\n)/g, '\n');
 }
 
 function read(file) {
@@ -540,7 +560,7 @@ function buildOne(rel) {
   beforeSticky = expandIncludes(beforeSticky);
   beforeSticky = applyConversations(beforeSticky);
   const variant = headerVariant(source, rel);
-  const header = headerPartial(variant);
+  const header = filterNav(headerPartial(variant), audienceOf(source));
   const footer = partial('footer.html');
   const sticky = partial(parts.stickyKind === 'assessment' ? 'sticky-assessment.html' : 'sticky-call.html');
   const slots = {

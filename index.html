@@ -569,11 +569,12 @@ details[open] summary::after{ content: '−'; }
   }
 .contact-phone:hover{ color: rgba(255,255,255,0.7); }
 @keyframes fadeUp{
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from { opacity: 1; transform: none; }
+    to   { opacity: 1; transform: none; }
   }
 .hero-inner > *{
-    animation: fadeUp 0.6s ease both;
+    opacity: 1;
+    animation: none;
   }
 @media (prefers-reduced-motion: reduce){
   .hero-inner > *{ animation:none; opacity:1; transform:none; }
@@ -926,6 +927,7 @@ details[open] summary::after{ content: '−'; }
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=20261025-1">
+<link rel="stylesheet" href="/assets/landing.css">
 <style id="hub-crosslinks">
 .hub-kicker{margin:0 0 12px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:none;}
 .hub-kicker a{color:#f97316;text-decoration:none;}
@@ -989,18 +991,14 @@ details[open] summary::after{ content: '−'; }
 }
 </script>
 <style id="hero-consistency">
-@media (max-width:767px){.hero h1{font-size:1.75rem!important;line-height:1.15}}
 .hero .hero-sub{font-size:1rem!important;max-width:640px}
 @media (min-width:768px){.hero .hero-sub{font-size:1.1rem!important}}
-.hero a.hero-call{display:block;width:100%;max-width:720px;box-sizing:border-box;text-align:center;min-height:52px}
-.hero a.hero-call + .hero-guarantee{display:table!important;margin-top:14px}
 /* No-copy consistency fixes (Ben-approved release path, 2026-10-26): one desktop H1 size, one mobile top space, one hero call button size */
-@media (min-width:1024px){.hero h1{font-size:48px!important}}
 @media (max-width:430px){.hero{padding-top:20px!important}}
-.hero .hero-actions .btn-primary,.hero a.hero-call{display:flex!important;align-items:center;justify-content:center;width:100%;max-width:640px!important;height:57px!important;min-height:57px!important;padding-top:0!important;padding-bottom:0!important;box-sizing:border-box}
+.hero .hero-actions .btn-primary,.hero a
 </style>
 </head>
-<body>
+<body class="landing-call landing-home">
 <a class="skip-link" href="#main">Skip to content</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP"
@@ -1014,7 +1012,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <details class="nav-services">
       <summary>Services</summary>
       <div class="nav-services-menu">
-        <div class="nav-services-group" role="group" aria-labelledby="nav-group-trades">
+        <div class="nav-services-group" data-audience="trades" role="group" aria-labelledby="nav-group-trades">
           <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
           <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
           <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
@@ -1025,13 +1023,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
           <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
         </div>
-        <div class="nav-services-group" role="group" aria-labelledby="nav-group-salons">
+        <div class="nav-services-group" data-audience="salons" role="group" aria-labelledby="nav-group-salons">
           <p class="nav-services-label" id="nav-group-salons">Salons & Clinics</p>
           <a class="nav-services-hub" href="/for-appointment-businesses">For Salons & Clinics</a>
           <a class="nav-services-sub" href="/ai-receptionist-for-salons">AI Receptionist</a>
           <a class="nav-services-sub" href="/google-review-requests-for-salons">Google Review Requests</a>
         </div>
-        <div class="nav-services-group nav-services-minor">
+        <div class="nav-services-group nav-services-minor" data-audience="professional">
           <a class="nav-services-sub" href="/for-law-firms-accountants-and-advisors">Law, accounting &amp; advisory firms</a>
         </div>
       </div>

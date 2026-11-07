@@ -46,13 +46,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .hero-trust{ display: flex; flex-direction: column; gap: 10px; }
 .trust-item{ display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
 .trust-item svg{ color: var(--orange); flex-shrink: 0; }
-.hero-call{
-    display: inline-block; margin-top: 24px;
-    background: var(--orange); color: #fff; font-weight: 700; font-size: 1.05rem;
-    padding: 16px 28px; border-radius: 10px; text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-.hero-call:hover{ background: #ea6c0a; transform: translateY(-2px); }
 .form-card{ background: #fff; border-radius: 16px; padding: 36px 32px; box-shadow: 0 24px 64px rgba(0,0,0,0.22); }
 .form-card-label{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
 .form-card h2{ font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
@@ -167,8 +160,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   .hero-guarantee { margin-bottom: 8px !important; padding: 4px 12px !important; }
   .hero-trust { gap: 4px; }
   .trust-item { line-height: 1.3; align-items: flex-start; }
-  .hero-call { margin-top: 10px; padding: 12px 18px; }
 }
+
 </style>
 <meta property="og:title" content="Google Reviews for Trades and Contractors | Trueline IT" />
 <meta property="og:description" content="Done-for-you Google Reviews for plumbers, HVAC, electricians, roofers and cleaners. Requests + Replies: $99/mo + $99 setup per location. We run it for you." />
@@ -239,8 +232,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=20261025-1">
+<link rel="stylesheet" href="/assets/landing.css">
 </head>
-<body>
+<body class="audience-trades landing-call landing-offer">
 <a class="skip-link" href="#main">Skip to content</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAV -->
@@ -250,7 +244,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <details class="nav-services">
       <summary>Services</summary>
       <div class="nav-services-menu">
-        <div class="nav-services-group" role="group" aria-labelledby="nav-group-trades">
+        <div class="nav-services-group" data-audience="trades" role="group" aria-labelledby="nav-group-trades">
           <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
           <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
           <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
@@ -261,15 +255,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
           <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
           <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
         </div>
-        <div class="nav-services-group" role="group" aria-labelledby="nav-group-salons">
-          <p class="nav-services-label" id="nav-group-salons">Salons & Clinics</p>
-          <a class="nav-services-hub" href="/for-appointment-businesses">For Salons & Clinics</a>
-          <a class="nav-services-sub" href="/ai-receptionist-for-salons">AI Receptionist</a>
-          <a class="nav-services-sub" href="/google-review-requests-for-salons">Google Review Requests</a>
-        </div>
-        <div class="nav-services-group nav-services-minor">
-          <a class="nav-services-sub" href="/for-law-firms-accountants-and-advisors">Law, accounting &amp; advisory firms</a>
-        </div>
+        
       </div>
     </details>
   </div>
@@ -281,11 +267,14 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="hero"><div class="hero-grid hero-with-frame"><div class="hero-copy">
 <div class="hero-eyebrow">Google Review Requests for trades and contractors</div>
 <h1>More Google reviews, <em>without you having to ask.</em></h1>
-<p class="hero-sub">You do great work, then forget to ask. We text your customer a one-tap Google review link after each job, so your reviews keep growing while you work.</p><p class="hero-sub">97% of consumers read reviews for local businesses (<a href="https://www.brightlocal.com/research/local-consumer-review-survey/" rel="noopener" target="_blank" style="color:#fff;text-decoration:underline;">BrightLocal, 2026</a>).</p>
+
 <p class="hero-sub" style="color:#fff;font-weight:700;margin-bottom:20px;">One plan, done for you: Requests + Replies, $99/mo per location plus a one-time $99 setup. No contracts, cancel anytime.</p>
+<a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+<p class="hero-sub">You do great work, then forget to ask. We text your customer a one-tap Google review link after each job, so your reviews keep growing while you work.</p>
+<p class="hero-sub">97% of consumers read reviews for local businesses (<a href="https://www.brightlocal.com/research/local-consumer-review-survey/" rel="noopener" target="_blank" style="color:#fff;text-decoration:underline;">BrightLocal, 2026</a>).</p>
 <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
 <div class="hero-trust"><div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> A text with your Google review link after each job</div><div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> One polite reminder if they don't respond</div><div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Works alongside the AI receptionist</div></div>
-<a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+
 <p class="hero-sub">One call. We set it up on your number. You approve every word before it goes live.</p>
 </div>
 <div class="hero-side">
@@ -310,7 +299,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
       <figcaption>Example with a sample business name. This is the exact text format we set up. Your business name and your wording go in, and you approve it before it goes live.</figcaption>
     </figure>
-<div class="form-card"><div class="form-card-label">Google Review Requests</div><h2>Want more Google reviews without chasing customers?</h2><p class="form-card-sub">Call and we'll check your Google profile and work out the best time to send your review text.</p><div style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p></div></div>
+<div class="form-card"><div class="form-card-label">Google Review Requests</div><h2>Want more Google reviews without chasing customers?</h2><p class="form-card-sub">Call and we'll check your Google profile and work out the best time to send your review text.</p><div style="text-align:center;padding:12px 0;"><p style="margin-top:12px;font-size:0.95rem;">Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p></div></div>
 </div>
 </div></section>
 <section class="pain-section"><div class="section-inner"><div class="section-eyebrow">Sound familiar?</div><h2 class="section-title">Good work that nobody hears about</h2><div class="pain-grid"><div class="pain-card"><h3>You forget to ask</h3><p>After a long day on calls, asking for a review is the last thing on your mind.</p></div><div class="pain-card"><h3>Competitors have more reviews</h3><p>47% of consumers won't use a business with fewer than 20 reviews, and 74% only care about reviews from the last three months (<a href="https://www.brightlocal.com/research/local-consumer-review-survey/" rel="noopener" target="_blank">BrightLocal, 2026</a>). Your competitors' counts keep growing while you forget to ask.</p></div><div class="pain-card"><h3>Asking later rarely works</h3><p>The best time to ask is right after the job, while the customer is happy.</p></div></div></div></section>

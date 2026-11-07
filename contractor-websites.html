@@ -56,13 +56,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .hero-trust{ display: flex; flex-direction: column; gap: 10px; }
 .trust-item{ display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
 .trust-item svg{ color: var(--orange); flex-shrink: 0; }
-.hero-call{
-    display: inline-block; margin-top: 24px;
-    background: var(--orange); color: #fff; font-weight: 700; font-size: 1.05rem;
-    padding: 16px 28px; border-radius: 10px; text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-.hero-call:hover{ background: #ea6c0a; transform: translateY(-2px); }
 .form-card{ background: #fff; border-radius: 16px; padding: 36px 32px; box-shadow: 0 24px 64px rgba(0,0,0,0.22); }
 .form-card-label{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
 .form-card h2{ font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
@@ -192,13 +185,13 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   .hero { padding: 8px 5% 24px; }
   .hero-grid { gap: 20px; }
   .hero-eyebrow { margin-bottom: 8px; }
-  .hero h1 { font-size: 1.55rem; margin-bottom: 8px; }
+  .hero h1 { font-size: 1.75rem; margin-bottom: 8px; }
   .hero-sub { margin-bottom: 10px; font-size: 0.98rem; line-height: 1.4; }
   .hero-trust { gap: 4px; }
   .trust-item { font-size: 0.88rem; }
-  .hero-call { margin-top: 0; padding: 12px 18px; }
 }
 @media (max-width: 860px){ .payback-math{ grid-template-columns: 1fr; } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -306,9 +299,10 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=20261025-1">
+<link rel="stylesheet" href="/assets/landing.css">
 
 </head>
-<body>
+<body class="audience-trades landing-call landing-offer">
 <a class="skip-link" href="#main">Skip to content</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -319,7 +313,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <details class="nav-services">
       <summary>Services</summary>
       <div class="nav-services-menu">
-        <div class="nav-services-group" role="group" aria-labelledby="nav-group-trades">
+        <div class="nav-services-group" data-audience="trades" role="group" aria-labelledby="nav-group-trades">
           <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
           <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
           <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
@@ -330,15 +324,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
           <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
           <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
         </div>
-        <div class="nav-services-group" role="group" aria-labelledby="nav-group-salons">
-          <p class="nav-services-label" id="nav-group-salons">Salons & Clinics</p>
-          <a class="nav-services-hub" href="/for-appointment-businesses">For Salons & Clinics</a>
-          <a class="nav-services-sub" href="/ai-receptionist-for-salons">AI Receptionist</a>
-          <a class="nav-services-sub" href="/google-review-requests-for-salons">Google Review Requests</a>
-        </div>
-        <div class="nav-services-group nav-services-minor">
-          <a class="nav-services-sub" href="/for-law-firms-accountants-and-advisors">Law, accounting &amp; advisory firms</a>
-        </div>
+        
       </div>
     </details>
   </div>
@@ -349,15 +335,17 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="hero"><div class="hero-grid hero-with-frame"><div class="hero-copy">
 <div class="hero-eyebrow">Contractor Websites for trades & contractors</div>
 <h1>Homeowners search for the job. <em>Your site puts your number in their hand.</em></h1>
-<p class="hero-sub">You are on a job. The homeowner who searched your trade is on their phone. Your site shows the work you do and puts a call button in their hand.</p>
+
 <p class="hero-sub" style="color:#fff;font-weight:700;">Done-for-you website for your business. $499/mo. No setup fee. Live within a week.</p>
+<a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+<p class="hero-sub">You are on a job. The homeowner who searched your trade is on their phone. Your site shows the work you do and puts a call button in their hand.</p>
 <div class="hero-trust">
 <div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> We design it and write it</div>
 <div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Click-to-call on every page</div>
 <div class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Your Google Business Profile tied in</div>
 </div>
 <p class="hero-sub">One call. We build it, write it and host it. Live within a week.</p>
-<a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+
 <p class="hero-sub" style="margin-top:16px;">30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your first month in full. No questions asked. Cancel anytime. No contracts, no cancellation fees.</p>
 </div>
 <div class="hero-side">
@@ -386,7 +374,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="form-card-label">Contractor Websites</div>
 <h2>How do homeowners find you today?</h2>
 <p class="form-card-sub">No setup fee. Design, copy, hosting, click-to-call, your Google Business tie-in and edits are all included in the $499 a month. You do not pick a template. You do not write the pages.</p>
-<div style="text-align:center;padding:12px 0;"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a><p style="margin-top:12px;font-size:0.95rem;">Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p></div>
+<div style="text-align:center;padding:12px 0;"><p style="margin-top:12px;font-size:0.95rem;">Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p></div>
 </div>
 </div>
 </div></section>

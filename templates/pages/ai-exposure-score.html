@@ -568,11 +568,12 @@ details[open] summary::after{ content: '−'; }
   }
 .contact-phone:hover{ color: rgba(255,255,255,0.7); }
 @keyframes fadeUp{
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from { opacity: 1; transform: none; }
+    to   { opacity: 1; transform: none; }
   }
 .hero-inner > *{
-    animation: fadeUp 0.6s ease both;
+    opacity: 1;
+    animation: none;
   }
 @media (prefers-reduced-motion: reduce){
   .hero-inner > *{ animation:none; opacity:1; transform:none; }
@@ -770,6 +771,8 @@ details[open] summary::after{ content: '−'; }
     font-weight: 600;
     cursor: pointer;
     min-width: 120px;
+    min-height: 44px;
+    box-sizing: border-box;
     user-select: none;
   }
 .hs-option input{ width: 18px; height: 18px; accent-color: var(--orange); }
@@ -849,7 +852,7 @@ details[open] summary::after{ content: '−'; }
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=20261025-1">
 </head>
-<body>
+<body class="audience-professional">
 <a class="skip-link" href="#main">Skip to content</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP"

@@ -171,7 +171,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 }
 </script>
 </head>
-<body>
+<body class="audience-professional">
 <a class="skip-link" href="#main">Skip to content</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
@@ -364,7 +364,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     const riskEvents = Math.max(0, Math.round(activeUsers * 12));
     
     document.getElementById('out-leakage').innerText = '$' + Math.round(annualLeakage).toLocaleString('en-CA');
-    document.getElementById('out-cta-amt').innerText = document.getElementById('out-leakage').innerText;
+    var amt = document.getElementById('out-cta-amt');
+    if (amt) amt.innerText = document.getElementById('out-leakage').innerText;
     document.getElementById('out-risk-events').innerText = new Intl.NumberFormat('en-CA').format(riskEvents);
   }
 
@@ -387,7 +388,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   document.getElementById('employees').addEventListener('change', calculateMargin);
   document.getElementById('salary').addEventListener('change', calculateMargin);
   
-  // No calculation on load: the outputs stay neutral until the visitor enters numbers.
+  calculateMargin();
 </script>
 </body>
 </html>

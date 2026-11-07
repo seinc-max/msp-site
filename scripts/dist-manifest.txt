@@ -35,6 +35,7 @@ assets/img/mctb-missed-call-text-back.svg
 assets/img/qfu-quote-follow-up.svg
 assets/img/roi-automation-roi.svg
 assets/img/ttp-text-to-pay.svg
+assets/landing.css
 assets/n8n-logo.svg
 assets/openai-logo.svg
 assets/site.css

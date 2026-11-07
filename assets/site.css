@@ -162,7 +162,7 @@
   color: var(--tl-text-primary);
 }
 
-/* Keep animation completion: existing heroes start at opacity: 0. */
+/* Reduced motion collapses transitions. Hero text is opaque without waiting on a delay. */
 @media (prefers-reduced-motion: reduce) {
   :where(html) { scroll-behavior: auto !important; }
   :where(*, *::before, *::after) {
@@ -354,6 +354,14 @@ nav.tl-nav .nav-services-menu a.nav-services-hub {
 nav.tl-nav .nav-services-menu a.nav-services-sub {
   padding-left: 22px;
   font-weight: 500;
+}
+/* Offer map: a page with an audience class shows only that menu group.
+   Home, about, and legal pages have no audience class and keep all three hubs.
+   Professional pages keep the existing law-hub link only. */
+body.audience-trades nav.tl-nav .nav-services-group:not([data-audience="trades"]),
+body.audience-salons nav.tl-nav .nav-services-group:not([data-audience="salons"]),
+body.audience-professional nav.tl-nav .nav-services-group:not([data-audience="professional"]) {
+  display: none;
 }
 nav.tl-nav .nav-cta {
   background: #f97316;
@@ -653,6 +661,20 @@ body:has(.sticky-mobile-cta) {
   overflow-x: auto;
   max-width: 100%;
   -webkit-overflow-scrolling: touch;
+}
+.table-scroll:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+@media (max-width: 414px) {
+  .table-scroll::before {
+    content: "Scroll sideways to read every column.";
+    display: block;
+    margin: 0 0 8px;
+    color: #42506e;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
 }
 
 /* Reading text is at least 16px. Headings, hero leads, and prices keep their own sizes. */
@@ -957,7 +979,8 @@ main:focus{outline:none}
 .tl-site-hero p{margin:0 0 14px;color:rgba(255,255,255,.86);font-size:.9rem;line-height:1.4}
 .tl-site-call{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 22px;border-radius:10px;background:#c2410c;color:#fff;font-weight:700}
 .tl-site-gbp{margin:0;padding:14px 16px;color:#1a2744;font-size:.85rem;font-weight:700;background:#fff}
-@keyframes tlRise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes tlRise{from{opacity:1;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:1;transform:none}to{opacity:1;transform:none}}
 .tl-thread > *{animation:tlRise .45s ease both}
 .tl-thread > *:nth-child(1){animation-delay:.08s}
 .tl-thread > *:nth-child(2){animation-delay:.28s}
