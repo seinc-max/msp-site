@@ -568,8 +568,8 @@ details[open] summary::after{ content: '−'; }
   }
 .contact-phone:hover{ color: rgba(255,255,255,0.7); }
 @keyframes fadeUp{
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from { opacity: 1; transform: none; }
+    to   { opacity: 1; transform: none; }
   }
 .hero-inner > *{
     animation: fadeUp 0.6s ease both;
@@ -770,6 +770,8 @@ details[open] summary::after{ content: '−'; }
     font-weight: 600;
     cursor: pointer;
     min-width: 120px;
+    min-height: 44px;
+    box-sizing: border-box;
     user-select: none;
   }
 .hs-option input{ width: 18px; height: 18px; accent-color: var(--orange); }
