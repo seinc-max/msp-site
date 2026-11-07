@@ -18,7 +18,7 @@ Reference captured 2026-11-07 from https://go.guestio.com/ (desktop 1440×5200 a
 | Photo / product column | Stage, white-suit, and podcast portraits |
 | Here’s what you’ll get | Two-day live online format, podcast guesting, brand |
 | We wrote the book | Book cover, title kept, not bundled into $88 |
-| Money-back guarantee | Draft panel, labeled approval pending |
+| Money-back guarantee | Sample 30-day booking-or-$88-back panel, labeled illustrative demo terms |
 | Who it’s for | Coaches, consultants, authors, speakers, trainers |
 | Final price CTA | Inert $88 control plus one inactive note |
 
@@ -38,13 +38,21 @@ Sourced topics only: podcast guesting that connects you to an audience, and a br
 
 Approved display price: $88 only. No currency code, billing period, tax, or checkout.
 
-## Guarantee decision for Ben
+## Fictional demo terms (not Nicky’s commercial offer)
 
-No money-back sentence for this $88 workshop was found on nickybillou.com, ecircleacademy.com, the Get Booked page, the podcast site, Finish Line Thinking, or the Amazon book listing. eCircle’s “promise” list is coaching-service language, not a refund of this price.
+Ben authorized invented sample terms for this mockup only on November 7, 2026. They are not his published prices, bonuses, or guarantee. A later real offer must replace them.
 
-Proposed line, not approved: “Take part in both days. If the workshop is not what you expected, ask within 7 days of the second day and your $88 comes back.”
+The sales page carries one notice only: “Visual demo. Sample offer and guarantee—not a live offer.” No starred notes, approval labels, or section caveats.
 
-The page labels that block “Proposed guarantee — approval pending.”
+Invented for this mockup, not found on Nicky’s sites:
+
+- Guest kit: one-page intro, show shortlist, and first-interview card, shown as included.
+- The book shown as included with the $88 workshop.
+- Guarantee: first podcast booking in 30 days or the $88 comes back.
+
+Sourced and not invented: two-day live online workshop, podcast-guesting topic, brand topic, biography, book title and co-authors, and the $88 price Ben approved for the mockup.
+
+Sourced and unchanged: two-day live online workshop, podcast-guesting topic, brand topic, biography, book title and co-authors, $88 display price only.
 
 ## Checklist
 
@@ -54,4 +62,4 @@ The page labels that block “Proposed guarantee — approval pending.”
 - [x] Several real Nicky photos plus the book
 - [x] noindex, no script, no form
 - [x] Inert closing control with one inactive note
-- [ ] Ben’s yes or no on the proposed guarantee before it is treated as a real promise
+- [x] Sample guarantee and sample bonus are on the mockup and labeled illustrative, not as Nicky’s live terms

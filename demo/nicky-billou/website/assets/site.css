@@ -25,13 +25,13 @@ a { color: var(--purple); }
 .skip { position: absolute; left: 8px; top: -40px; background: #fff; padding: 8px; }
 .skip:focus { top: 8px; }
 .demo-bar {
-  background: #000;
+  background: #111;
   color: #fff;
   text-align: center;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  padding: 7px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 10px 16px;
 }
 .mast {
   background: #000;
