@@ -86,6 +86,24 @@ function headerPartial(variant) {
   return raw.replace('{{cta}}', () => HEADER_CTAS[variant]);
 }
 
+function audienceOf(html) {
+  const cls = (html.match(/<body[^>]*\bclass="([^"]*)"/) || [])[1] || '';
+  if (cls.includes('audience-trades')) return 'trades';
+  if (cls.includes('audience-salons')) return 'salons';
+  if (cls.includes('audience-professional')) return 'professional';
+  return '';
+}
+
+function filterNav(header, audience) {
+  return header.replace(/<div class="nav-services-group\b[^>]*\bdata-audience="(trades|salons|professional)"[^>]*>[\s\S]*?<\/div>/g, (block, name) => {
+    if (!audience) {
+      if (name !== 'professional') return block;
+      return block.replace(/<a class="nav-services-sub nav-pro-offer"[\s\S]*?<\/a>\s*/g, '');
+    }
+    return name === audience ? block : '';
+  });
+}
+
 function read(file) {
   return fs.readFileSync(file, 'utf8');
 }
@@ -544,7 +562,7 @@ function buildOne(rel) {
   beforeSticky = expandIncludes(beforeSticky);
   beforeSticky = applyConversations(beforeSticky);
   const variant = headerVariant(source, rel);
-  const header = headerPartial(variant);
+  const header = filterNav(headerPartial(variant), audienceOf(source));
   const footer = partial('footer.html');
   const sticky = partial(parts.stickyKind === 'assessment' ? 'sticky-assessment.html' : 'sticky-call.html');
   const slots = {

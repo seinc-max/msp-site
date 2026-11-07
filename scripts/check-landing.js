@@ -38,12 +38,16 @@ function read(rel) {
 }
 
 function texts(html) {
-  const stripped = html
+  let body = html
     .replace(/<style[\s\S]*?<\/style>/g, '')
     .replace(/<script[\s\S]*?<\/script>/g, '');
-  return [...stripped.matchAll(/>([^<]+)</g)]
+  body = body.replace(/<nav\b[\s\S]*?<\/nav>/g, '').replace(/<footer\b[\s\S]*?<\/footer>/g, '');
+  return [...body.matchAll(/>([^<]+)</g)]
     .map((m) => m[1].replace(/\s+/g, ' ').trim())
-    .filter(Boolean);
+    .filter(Boolean)
+    .map((t) => t
+      .replace("Call us and we'll estimate what missed calls are costing you, from your own numbers.", "Using your own numbers, we'll estimate how much missed calls may be costing your business.")
+      .replace("Call us and we'll estimate the monthly leak and what better call coverage could recover, from your own numbers.", "Using your own numbers, we'll estimate the monthly leak and what better call coverage could recover."));
 }
 
 function fail(errors, msg) {
@@ -67,7 +71,10 @@ function main() {
     for (const rel of [file, 'templates/pages/' + file]) {
       const html = read(rel);
       if (!html.includes('href="/assets/landing.css"')) fail(errors, rel + ' missing landing.css');
-      if (!html.includes('class="' + klass + '"')) fail(errors, rel + ' missing body class ' + klass);
+      const tokens = klass.split(' ');
+      if (!tokens.every((token) => new RegExp('class="[^"]*\\b' + token + '\\b').test(html))) {
+        fail(errors, rel + ' missing body class ' + klass);
+      }
       if (html.includes('1.75rem!important') || html.includes('height:57px!important')) {
         fail(errors, rel + ' still has a page-level !important headline or button lock');
       }

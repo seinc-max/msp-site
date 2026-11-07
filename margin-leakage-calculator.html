@@ -181,7 +181,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <details class="nav-services">
       <summary>Services</summary>
       <div class="nav-services-menu">
-        <div class="nav-services-group" role="group" aria-labelledby="nav-group-trades">
+        <div class="nav-services-group" data-audience="trades" role="group" aria-labelledby="nav-group-trades">
           <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
           <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
           <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
@@ -192,15 +192,15 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
           <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
           <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
         </div>
-        <div class="nav-services-group" role="group" aria-labelledby="nav-group-salons">
+        <div class="nav-services-group" data-audience="salons" role="group" aria-labelledby="nav-group-salons">
           <p class="nav-services-label" id="nav-group-salons">Salons & Clinics</p>
           <a class="nav-services-hub" href="/for-appointment-businesses">For Salons & Clinics</a>
           <a class="nav-services-sub" href="/ai-receptionist-for-salons">AI Receptionist</a>
           <a class="nav-services-sub" href="/google-review-requests-for-salons">Google Review Requests</a>
         </div>
-        <div class="nav-services-group nav-services-minor">
+        <div class="nav-services-group nav-services-minor" data-audience="professional">
           <a class="nav-services-sub" href="/for-law-firms-accountants-and-advisors">Law, accounting &amp; advisory firms</a>
-        </div>
+          </div>
       </div>
     </details>
   </div>
@@ -364,7 +364,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     const riskEvents = Math.max(0, Math.round(activeUsers * 12));
     
     document.getElementById('out-leakage').innerText = '$' + Math.round(annualLeakage).toLocaleString('en-CA');
-    document.getElementById('out-cta-amt').innerText = document.getElementById('out-leakage').innerText;
+    var amt = document.getElementById('out-cta-amt');
+    if (amt) amt.innerText = document.getElementById('out-leakage').innerText;
     document.getElementById('out-risk-events').innerText = new Intl.NumberFormat('en-CA').format(riskEvents);
   }
 
@@ -387,7 +388,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   document.getElementById('employees').addEventListener('change', calculateMargin);
   document.getElementById('salary').addEventListener('change', calculateMargin);
   
-  // No calculation on load: the outputs stay neutral until the visitor enters numbers.
+  calculateMargin();
 </script>
 </body>
 </html>
