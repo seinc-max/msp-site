@@ -4,15 +4,113 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>DEMO — Sample Workshop</title>
-<link rel="stylesheet" href="site.css">
+<title>DEMO: Get booked on podcasts | Nicky Billou</title>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<main>
-<p class="demo-kicker">DEMO</p>
-<h1>Sample Workshop</h1>
-<p>You are looking at a demo website. It is not a real business. No pages are filled in yet.</p>
-<p><a href="../">Client folder</a></p>
+<a class="skip" href="#main">Skip to content</a>
+<p class="demo-bar">DEMO. This page does not send, save, or take payment.</p>
+<header class="wrap">
+<nav class="nav" aria-label="Demo">
+  <a class="brand" href="./">Nicky Billou <span class="kicker">DEMO</span></a>
+  <div class="nav-links">
+    <a href="#offer">The offer</a>
+    <a href="#book">The book</a>
+    <a href="#faq">Questions</a>
+    <a href="#next">Next step</a>
+    <a href="about/">About</a>
+  </div>
+</nav>
+</header>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">PODCAST GUESTING</p>
+      <h1>Get in front of people who already care about your topic.</h1>
+      <p class="lede">You want a room that is already listening. Nicky Billou’s public work teaches leaders to be guests on other people’s podcasts. This demo shows that offer. It is not his checkout.</p>
+      <a class="btn" href="#next">See the next step</a>
+    </div>
+    <img class="portrait" src="assets/images/nicky-portrait.jpg" alt="Nicky Billou speaking on a stage, from his public site" width="1920" height="1055">
+  </div>
+</section>
+<main id="main">
+<section class="section" id="offer">
+  <div class="wrap">
+    <h2>The offer, as his page states it</h2>
+    <p>His workshop page calls it Get Booked and Get Paid. It lists a live online workshop on Zoom for May 14 and 15, 2026, from 11 a.m. to 5 p.m. Eastern, with Nicky Billou.</p>
+    <div class="cards">
+      <article class="card">
+        <h3>What the page says you will cover</h3>
+        <ul>
+          <li>How podcast guesting connects you with the people you want to reach.</li>
+          <li>How to shape a brand that makes it easier for clients to find you.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>What this demo leaves out</h3>
+        <p>That page also states income goals and client counts. Those lines are his marketing. This demo does not repeat them as facts, and it does not show a price or a guarantee.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section" id="book">
+  <div class="wrap book">
+    <img src="assets/images/book-get-booked.png" alt="Cover of Get Booked and Get Paid, from Nicky Billou’s site" width="400" height="400">
+    <div>
+      <h2>A book you can look up</h2>
+      <p><strong>Get Booked &amp; Get Paid: How To Generate 6 Figures+ A Year, Through Podcast Guesting.</strong> Nicky Billou wrote it with Marc Von Musser and Theresa Dugwell. Amazon lists a Kindle edition from Thought Leader Books, published August 29, 2024, 90 pages, ASIN B0DFQL291X.</p>
+      <p>The title names an income aim. This page does not turn that title into a promise to you.</p>
+      <p><a href="https://a.co/d/9h1Hgt6">See the Amazon listing</a></p>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <h2>A short path, not a pile of extras</h2>
+    <ol class="steps">
+      <li>Read the workshop facts above.</li>
+      <li>Read <a href="about/">who Nicky says he is</a>, with the sources named.</li>
+      <li>Use the button at the bottom if you want to see the limit of this demo.</li>
+    </ol>
+    <p>His eCircle page says this kind of work is for people who sell expertise: coaches, consultants, authors, speakers, and trainers.</p>
+  </div>
+</section>
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <details>
+      <summary>Does the button charge me or email anyone?</summary>
+      <p>No. It stays on this page and tells you that nothing was sent. Do not type a private note you need kept. This demo does not store one.</p>
+    </details>
+    <details>
+      <summary>Is the May 2026 workshop on his site?</summary>
+      <p>Yes. The Get Booked page publishes those dates, the hours, and Zoom. This demo does not sell seats.</p>
+    </details>
+    <details>
+      <summary>Where do these facts come from?</summary>
+      <p>His sites and the Amazon book page. The About page lists each link. Marketing lines that only his pages claim are not copied here as proof.</p>
+    </details>
+  </div>
+</section>
+<section class="section" id="next">
+  <div class="wrap next">
+    <h2>Your next step</h2>
+    <p>On his site, the next step is the workshop page. This demo will not take a payment or send a message for you.</p>
+    <p><a href="http://www.ecircleacademy.com/getbooked">Open his published workshop page</a></p>
+    <button class="btn" type="button" id="demo-check">Check what this demo does</button>
+    <p class="note" id="demo-result" hidden>Nothing was sent. Nothing was saved.</p>
+  </div>
+</section>
 </main>
+<footer class="wrap">
+  <p>DEMO of a public podcast-guesting offer. Not a Trueline page. <a href="about/">About and sources</a></p>
+</footer>
+<script>
+document.getElementById('demo-check').addEventListener('click', function () {
+  var note = document.getElementById('demo-result');
+  note.hidden = false;
+  note.textContent = 'Nothing was sent. Nothing was saved.';
+});
+</script>
 </body>
 </html>
