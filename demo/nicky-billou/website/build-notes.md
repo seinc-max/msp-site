@@ -1,4 +1,4 @@
-# Nicky Billou demo notes — REDO v5 (Muse, 2026-11-07)
+# Nicky Billou demo notes — REDO v6 (Muse, 2026-11-07)
 
 Staging path: `/demo/nicky-billou/website/` only. ONE page now: the home
 sales page. Every page is `noindex`. One DEMO bar. The closing control is a
@@ -6,9 +6,61 @@ static picture of a button, with the line "Demo. Checkout is not connected
 yet — this button does nothing." There is no script, form, or submission.
 Other controls are in-page or outbound links.
 
-## v5 — almost an exact Guestio duplicate (Ben, 2026-11-07: "Make it look
-and sound like almost an exact duplicate" + "Minimize number of pages
-created")
+## v6 — Nicky's own look and voice (Ben, 2026-11-07 ~16:21 EST: "Make sure
+you don't use the exact same language as guestio, make it better, same with
+colors and fonts, match it to Nicky's style based on his other websites,
+when you're done ppl shouldn't say they are the same site, also too many
+unnecessary pictures")
+
+v5's "almost an exact duplicate of Guestio" direction is REVERSED. v6 is
+built from Nicky's own sites, not Guestio's:
+
+- **Look:** nickybillou.com (Squarespace theme CSS, read live 2026-11-07):
+  Raleway headings + Work Sans body, charcoal #272727, light grey #f6f6f6,
+  red-orange accent #f0523d. thethoughtleaderrevolution.com adds black +
+  white + gold (#cbae56) — the dark section uses charcoal, not purple.
+  Sentence-case headings (not all-caps). Solid red-orange CTAs (no
+  gradient). Single column, max-width 760px — no two-column layout, no
+  sticky order card, no purple anywhere. Nobody should call this Guestio.
+- **Voice:** Nicky's own words, from his sites and book — "Become the
+  Steve Jobs of your industry, through personal branding and podcast
+  guesting", "Greatness Isn't Given. It's Claimed.", "Make the Difference
+  You Were Born to Make", "Attract 3–5 new high-paying clients every month
+  without spending a dime on advertising!", "Learn how to add $100,000 to
+  $250,000 to your business, this year!" No Guestio phrases remain
+  ("gamechanger", "practically giving this away", "no trial or catch",
+  "unleash your true potential", "dominate your niche", "don't let this
+  opportunity pass you by", "unlock your full potential" — all cut). The
+  "borrow the host's credibility" line is also cut — that was Mike Moll's
+  (howtoguestpodcast.com), not Nicky's.
+- **Photos: 2 only.** Hero stage portrait (nicky-portrait.jpg) + book
+  cover (book-get-booked.png). The 6 stack-row photos, the portrait-blue
+  image, the audience band, and the 4 episode thumbnails are all CUT and
+  deleted from the branch. Students get CSS initial avatars (no photos).
+  Episodes are a text list. The "what you'll master" section is Nicky's
+  own three keynotes (Podcast Guesting For Leaders / Thought Leadership
+  Mastery / Legendary Presence) as three cards.
+- **Copy fixes carried over from the v5 reviews (Claude 7/10, Gemini
+  7.5/10):** one CTA string everywhere — "Yes — I want to get booked &
+  get paid for $88" (grammatical: "I want to get booked"); one guarantee
+  wording everywhere — "Follow the system and pitch 10 shows in 30 days.
+  No booking? Email us within 14 days after that and we'll refund your
+  $88 in full." (the refund window now extends past the 30-day booking
+  window; "follow the system" replaces the confusing 4-steps-vs-6-lessons);
+  the book's Amazon price and star rating are OUT of the body (footer link
+  only); disclaimers ("individual results vary", "'6 Figures+' is the
+  book's title") moved to the footer; "3–5 clients a month" moved into the
+  hero promise; a bold proof strip under the H1 (600+ shows · 830+ episodes
+  · 4 books); H1 now says "podcasts"; FAQ gains "What if I have no book or
+  no audience?" and "Is the book included?" (No — the book is the method in
+  print, a separate purchase).
+- **NOT applied from those reviews:** Claude's "add the Guestio step bar"
+  (refuted — Guestio's page has no visible step bar; the "Step #" text is
+  GHL funnel metadata, not a page element); Gemini's "yellow CTAs"
+  (refuted — Guestio's CTAs are purple, screenshotted live); putting the
+  book in the stack (changes what the program is — Nicky's call).
+
+## v5 — almost an exact Guestio duplicate (SUPERSEDED by v6, Ben 2026-11-07)
 
 v4 had Guestio's voice; v5 copies the LOOK, from a live read of
 go.guestio.com (screenshotted 2026-11-07): black top bar with the brand
@@ -121,18 +173,14 @@ OPPORTUNITY PASS YOU BY!", "HERE'S WHAT HAPPENS WHEN YOU GET BOOKED!",
   as his aim for the buyer. "Individual results vary" is stated next to it.
 - Podcast episodes EP826–EP831 with titles and dates, from the live show site,
   November 2026.
-- Photos (all from Nicky's own sites, November 2026):
-  nicky-portrait.jpg from Photo_Nicky_01.jpg (stage shot, nickybillou.com);
-  nicky-letter.jpg from Photo_HomeMain_14.jpg (seated portrait, TTLR site);
-  nicky-stage-blue.jpg from Photo_Nicky_34.jpg; nicky-stage-cream.jpg from
-  Photo_Nicky_36.jpg; nicky-portrait-blue.jpg from Photo_Nicky_27.jpg;
-  nicky-closeup.jpg from Photo_Nicky_28.jpg; nicky-casual.jpg from
-  Photo_Nicky_29.jpg; nicky-pointing.jpg from Photo_Nicky_33.jpg;
-  audience.jpg from BG_Testimonials3.jpg; media-logos.png from
-  MediaLogos_COL3.png (outlet logos from his site); book-get-booked.png from
-  Book_GetBookedGetPaid.png; ep826/828/829/831.jpg from the TTLR episode
-  thumbnails. All converted from served WebP to JPEG/PNG. One downloaded
-  photo was NOT used: nicky-32 (personal/fitness moment, wrong for a sales page).
+- Photos (all from Nicky's own sites, November 2026). **v6 uses TWO:**
+  nicky-portrait.jpg from Photo_Nicky_01.jpg (stage shot, nickybillou.com)
+  in the hero; book-get-booked.png from Book_GetBookedGetPaid.png in the
+  book section. The rest were CUT in v6 and deleted from the branch:
+  nicky-letter.jpg, nicky-stage-blue.jpg, nicky-stage-cream.jpg,
+  nicky-portrait-blue.jpg, nicky-closeup.jpg, nicky-casual.jpg,
+  nicky-pointing.jpg, audience.jpg, ep826/828/829/831.jpg, media-logos.png.
+  Local copies remain in the workspace photos/ folder and the local clone.
 
 ## Held out of the sales pages
 
@@ -152,10 +200,13 @@ OPPORTUNITY PASS YOU BY!", "HERE'S WHAT HAPPENS WHEN YOU GET BOOKED!",
   self-check only. Ben caught this 2026-11-07. A 4-LLM review (8 lenses:
   Oli Gardner, Nielsen Norman Group, Joanna Wiebe, Alex Hormozi, John Moran,
   Atul Gawande, Simon Willison, Russell Brunson) was started 2026-11-07.
-- **2 of 4 reviews landed** (each covering all 8 lenses); their layout/copy
-  findings were applied in v2.1 + v2.2. The other 2 tasks show complete but
-  their reports had not reached Muse as of 2026-11-07 ~16:00 EST — fold them
-  in when they land. Full triage: review-triage-20261107.md.
+- **v5 review round: 2 of 4 landed** (Gemini 7.5/10, Claude 7/10) and were
+  triaged (v5-review-gemini-20261107.md, v5-review-claude-20261107.md).
+  Grok + ChatGPT v5 reviews were still running when Ben reversed the
+  duplicate direction (16:21 EST) — the round's "near-duplicate" scoring
+  is now moot, but the copy/CTA/guarantee findings were carried into v6
+  (see v6 notes above). Full triage of the original v1 round:
+  review-triage-20261107.md.
 - Expert lenses applied in v4 (self-check): Oli Gardner (one goal per
   section, hero = product name, CTA rhythm, mobile-first); Joanna Wiebe
   (second person, grade-10 — now in Guestio's direct-response voice per Ben);
