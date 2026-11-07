@@ -95,13 +95,11 @@ function audienceOf(html) {
 }
 
 function filterNav(header, audience) {
-  return header.replace(/<div class="nav-services-group\b[^>]*\bdata-audience="(trades|salons|professional)"[^>]*>[\s\S]*?<\/div>/g, (block, name) => {
-    if (!audience) {
-      if (name !== 'professional') return block;
-      return block.replace(/<a class="nav-services-sub nav-pro-offer"[\s\S]*?<\/a>\s*/g, '');
-    }
-    return name === audience ? block : '';
+  const next = header.replace(/<div class="nav-services-group\b[^>]*\bdata-audience="(trades|salons|professional)"[^>]*>[\s\S]*?<\/div>/g, (block, name) => {
+    if (!audience || name === audience) return block;
+    return '';
   });
+  return next.replace(/\n[ \t]*\n(?=[ \t]*\n)/g, '\n');
 }
 
 function read(file) {

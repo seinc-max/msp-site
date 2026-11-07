@@ -162,7 +162,7 @@
   color: var(--tl-text-primary);
 }
 
-/* Keep animation completion: existing heroes start at opacity: 0. */
+/* Reduced motion collapses transitions. Hero text is opaque without waiting on a delay. */
 @media (prefers-reduced-motion: reduce) {
   :where(html) { scroll-behavior: auto !important; }
   :where(*, *::before, *::after) {
@@ -355,11 +355,9 @@ nav.tl-nav .nav-services-menu a.nav-services-sub {
   padding-left: 22px;
   font-weight: 500;
 }
-/* Offer map: audience landings show only that audience's menu group.
-   Home, about, blog, and resources keep the full menu. Extra professional
-   offer links stay hidden except on professional pages. */
-nav.tl-nav .nav-services-menu a.nav-pro-offer { display: none; }
-body.audience-professional nav.tl-nav .nav-services-menu a.nav-pro-offer { display: flex; }
+/* Offer map: a page with an audience class shows only that menu group.
+   Home, about, and legal pages have no audience class and keep all three hubs.
+   Professional pages keep the existing law-hub link only. */
 body.audience-trades nav.tl-nav .nav-services-group:not([data-audience="trades"]),
 body.audience-salons nav.tl-nav .nav-services-group:not([data-audience="salons"]),
 body.audience-professional nav.tl-nav .nav-services-group:not([data-audience="professional"]) {
