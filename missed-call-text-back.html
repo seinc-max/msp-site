@@ -46,13 +46,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .hero-trust{ display: flex; flex-direction: column; gap: 10px; }
 .trust-item{ display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
 .trust-item svg{ color: var(--orange); flex-shrink: 0; }
-.hero-call{
-    display: inline-block; margin-top: 24px;
-    background: var(--orange); color: #fff; font-weight: 700; font-size: 1.05rem;
-    padding: 16px 28px; border-radius: 10px; text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-.hero-call:hover{ background: #ea6c0a; transform: translateY(-2px); }
 .form-card{ background: #fff; border-radius: 16px; padding: 36px 32px; box-shadow: 0 24px 64px rgba(0,0,0,0.22); }
 .form-card-label{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
 .form-card h2{ font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
@@ -164,12 +157,11 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   .hero { padding: 4px 5% 24px; }
   .hero-grid { gap: 20px; }
   .hero-eyebrow { margin-bottom: 4px; }
-  .hero h1 { font-size: 1.55rem; margin-bottom: 6px; }
+  .hero h1 { font-size: 1.75rem; margin-bottom: 6px; }
   .hero-sub { margin-bottom: 4px !important; font-size: 0.98rem; line-height: 1.4; }
   .hero-guarantee { margin-bottom: 6px !important; padding: 4px 12px !important; font-size: 0.88rem !important; }
   .hero-trust { gap: 4px; margin-bottom: 0; }
   .trust-item { font-size: 0.88rem; }
-  .hero-call { margin-top: 12px; padding: 12px 18px; }
 }
 </style>
 <link rel="canonical" href="https://truelineit.com/missed-call-text-back" />
@@ -318,21 +310,18 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=20261025-1">
+<link rel="stylesheet" href="/assets/landing.css">
 <style id="hero-consistency">
-@media (max-width:767px){.hero h1{font-size:1.75rem!important;line-height:1.15}}
 .hero .hero-sub{font-size:1rem!important;max-width:640px}
 @media (min-width:768px){.hero .hero-sub{font-size:1.1rem!important}}
-.hero a.hero-call{display:block;width:100%;max-width:720px;box-sizing:border-box;text-align:center;min-height:52px}
-.hero a.hero-call + .hero-guarantee{display:table!important;margin-top:14px}
 /* Sentinel #307: the hero column was sized to the 340px phone frame and clipped at 320px; let it shrink. */
 @media (max-width:899px){.hero-grid.hero-with-frame{grid-template-columns:minmax(0,1fr)}}
 /* No-copy consistency fixes (Ben-approved release path, 2026-10-26): one desktop H1 size, one mobile top space, one hero call button size */
-@media (min-width:1024px){.hero h1{font-size:48px!important}}
 @media (max-width:430px){.hero{padding-top:20px!important}}
-.hero .hero-actions .btn-primary,.hero a.hero-call{display:flex!important;align-items:center;justify-content:center;width:100%;max-width:640px!important;height:57px!important;min-height:57px!important;padding-top:0!important;padding-bottom:0!important;box-sizing:border-box}
+.hero .hero-actions .btn-primary,.hero a
 </style>
 </head>
-<body>
+<body class="landing-call landing-offer">
 <a class="skip-link" href="#main">Skip to content</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

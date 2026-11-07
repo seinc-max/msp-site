@@ -1,0 +1,171 @@
+/*
+  Shared landing presentation. Phone-first (call) and form-first families.
+  Variants: landing-home, landing-hub, landing-offer.
+
+  New landing page:
+  1. Add class "landing-call" or "landing-form" on <body>, plus one of
+     landing-home, landing-hub, landing-offer.
+  2. Link this file immediately after /assets/site.css.
+  3. Use one hero action: a.hero-call or .hero-actions a.btn-primary (call),
+     or the existing consultation form / a.hub-cta to that form (form).
+  4. Do not copy button, H1, column, or card rules into the page <style>.
+  5. Put approved copy in templates/pages/<slug>.html and run
+     node scripts/build-pages.js. Cloudflare serves the generated file.
+
+  Header, footer, and the sticky bar stay in templates/partials.
+  This file is not linked from blog, legal, or resource pages.
+*/
+
+body.landing-call,
+body.landing-form {
+  --landing-column: 1100px;
+  --landing-action: #c2410c;
+  --landing-border: #dde6f5;
+  --landing-radius: 12px;
+  --landing-radius-price: 16px;
+}
+
+/* One content column. Home aligns to the same left edge. */
+body.landing-call .hero-grid,
+body.landing-form .hero-grid,
+body.landing-call .hub-hero-inner,
+body.landing-form .hub-hero-inner,
+body.landing-call .section-inner,
+body.landing-form .section-inner,
+body.landing-call .hub-section,
+body.landing-form .hub-section {
+  max-width: var(--landing-column);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 900px) {
+  body.landing-home .hero {
+    padding-left: max(24px, calc((100% - var(--landing-column)) / 2));
+    padding-right: max(24px, calc((100% - var(--landing-column)) / 2));
+  }
+}
+
+/* Heading scale. Desktop 48px. Phone 28px (1.75rem). */
+body.landing-call .hero h1,
+body.landing-form .hero h1,
+body.landing-call .hub-hero h1,
+body.landing-form .hub-hero h1 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+@media (min-width: 1024px) {
+  body.landing-call .hero h1,
+  body.landing-form .hero h1,
+  body.landing-call .hub-hero h1,
+  body.landing-form .hub-hero h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  body.landing-call .hero h1,
+  body.landing-form .hero h1,
+  body.landing-call .hub-hero h1,
+  body.landing-form .hub-hero h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Call action. Color stays with site.css. Radius is the existing 10px token. */
+body.landing-call .hero a.hero-call,
+body.landing-call .hero .hero-actions .btn-primary,
+body.landing-call .hub-hero a.hub-cta[href^="tel:"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  min-height: 57px;
+  height: auto;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+}
+
+body.landing-call .hero a.hero-call,
+body.landing-call .hero .hero-actions .btn-primary {
+  height: 57px;
+}
+
+body.landing-call .hero a.hero-call + .hero-guarantee {
+  display: table;
+  margin-top: 4px;
+}
+
+/* Form action. Same size, not a call button. */
+body.landing-form .form-card .btn-submit,
+body.landing-form .hub-hero a.hub-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  min-height: 57px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Form sits at the top of the hero, beside the headline on wide screens
+   and ahead of the long copy on narrow screens. Fields are not restyled. */
+body.landing-form .hero-grid {
+  align-items: start;
+}
+
+@media (max-width: 899px) {
+  body.landing-form .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  body.landing-form .hero-grid > .form-card {
+    order: -1;
+    width: 100%;
+  }
+}
+
+/* Cards and price blocks. Border color is the rendered action orange. */
+body.landing-call .included-card,
+body.landing-form .included-card,
+body.landing-call .audience-card,
+body.landing-form .audience-card,
+body.landing-call .hub-card,
+body.landing-form .hub-card,
+body.landing-call .group,
+body.landing-form .group {
+  background: #fff;
+  border: 1px solid var(--landing-border);
+  border-radius: var(--landing-radius);
+}
+
+body.landing-call .pricing-card,
+body.landing-form .pricing-card {
+  background: #fff;
+  border: 2px solid var(--landing-action);
+  border-radius: var(--landing-radius-price);
+}
+
+/* Sticky bar already pads the page. Keep the hero action clear of it. */
+@media (max-width: 980px) {
+  body.landing-call .hero,
+  body.landing-form .hero,
+  body.landing-call .hub-hero,
+  body.landing-form .hub-hero {
+    scroll-margin-bottom: 96px;
+  }
+}

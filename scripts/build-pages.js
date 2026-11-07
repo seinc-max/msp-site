@@ -6,6 +6,10 @@
  * The {{cta}} slot is call or consultation, taken from that page's original nav button.
  * Edit the footer in templates/partials/footer.html.
  * Edit a call bar in templates/partials/sticky-call.html or sticky-assessment.html.
+ * Landing look (button, H1, column, cards) lives in assets/landing.css.
+ * A new landing sets body class landing-call or landing-form, plus
+ * landing-home, landing-hub, or landing-offer, and links landing.css
+ * after site.css. Do not paste those rules into the page style block.
  * Edit the phone conversation and About / Terms / Privacy look in assets/site.css.
  * Edit About, Terms or Privacy copy in templates/pages/<file>.html, then rebuild.
  * Page <head> blocks are copied through unchanged.
