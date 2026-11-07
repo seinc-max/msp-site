@@ -30,7 +30,7 @@ Book title kept in full. It is not written as a promise of income.
 
 ## Demo behavior
 
-Both pages are `noindex`. One DEMO bar. The closing control is a static picture of a button, with the line “Demo. This button is not active.” There is no script, form, or submission. Other buttons are ordinary links to sections on these two pages.
+The one page is `noindex`. One DEMO bar. The closing control is a static picture of a button, with the line “Demo. This button is not active.” There is no script, form, or submission. Other controls are in-page links.
 
 ## Criteria
 
