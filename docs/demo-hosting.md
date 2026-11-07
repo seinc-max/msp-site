@@ -1,6 +1,6 @@
 # Demo hosting
 
-Public client demonstrations live under `/demo/` on the static site. This namespace is not a marketing page, a client directory, or an access control system.
+Public client projects live under `/demo/` on the static site. This namespace is not a marketing page, a client directory, or an access control system. `noindex` only asks crawlers not to list the pages. It is not authentication or a privacy guarantee.
 
 ## Addresses
 
@@ -8,34 +8,42 @@ Public client demonstrations live under `/demo/` on the static site. This namesp
 | --- | --- |
 | `/demo/` | `demo/index.html` |
 | `/demo/<client-slug>/` | `demo/<client-slug>/index.html` |
-| `/demo/<client-slug>/<demo-slug>/` | `demo/<client-slug>/<demo-slug>/index.html` |
+| `/demo/<client-slug>/<project-type>/` | `demo/<client-slug>/<project-type>/index.html` |
 
-Reserved now: `/demo/` and `/demo/nicky-billou/`. Both are empty states. No demonstration slug has been supplied, so nothing is published under `demo/nicky-billou/` except that empty state.
+There is no extra demonstration-name folder. The project type is the last public segment.
 
-`/demo/` does not list clients. `/demo/nicky-billou/` does not list demonstrations. Someone who knows a demonstration address can open it. `noindex` is discovery hygiene, not a lock.
+Reserved now:
 
-## Where a future demonstration goes
+- `/demo/` is an empty state and does not list clients.
+- `/demo/nicky-billou/` is an empty state and does not list project types.
+- `/demo/nicky-billou/website/` is an empty state. No website files were supplied, so that folder has only its own index and stylesheet.
 
-Create `demo/<client-slug>/<demo-slug>/index.html`. Put that demonstration's files beside it, or in a folder inside it, and link them with relative URLs (`assets/board.png`, not a root `/assets/` marketing path).
+Someone who knows a project address can open it.
 
-`node scripts/build-dist.js` copies the whole `demo/` tree into `dist/`. Do not add those files to `scripts/dist-manifest.txt`. Marketing pages stay on the manifest. A new demonstration directory is included because it is under `demo/`.
+## Where a future project goes
 
-Do not add the demonstration to `sitemap.xml`, the site nav, or `templates/`. Do not give it a marketing header, offer, price, guarantee, form, or call button.
+Create `demo/<client-slug>/<project-type>/index.html`. Put every artifact for that project inside that same directory: other HTML, assets, and subfolders. Link them with relative URLs (`assets/board.png`, not a root `/assets/` marketing path, and not a file outside the project directory).
+
+`node scripts/build-dist.js` already copies the whole `demo/` tree into `dist/`. Do not add those files to `scripts/dist-manifest.txt`. Marketing pages stay on the manifest.
+
+Do not add the project to `sitemap.xml`, the site nav, or `templates/`. Do not give it a marketing header, offer, price, guarantee, form, or call button.
 
 ## Slug rules
 
-A client slug and a demonstration slug are the same shape: lowercase letters, digits, and single hyphens. The pattern is `^[a-z0-9]+(?:-[a-z0-9]+)*$`.
+A client slug and a project-type slug are the same shape: lowercase letters, digits, and single hyphens. The pattern is `^[a-z0-9]+(?:-[a-z0-9]+)*$`.
 
-- `nicky-billou` is a valid client slug.
+- `nicky-billou` is a valid client slug. `website` is a valid project type.
 - `Sample_Demo`, `Nicky`, `client name`, and `demo--one` are not.
-- One client, one folder. One demonstration, one folder under that client.
+- One client, one folder. One project type, one folder under that client.
 - The folder name is the public slug. Do not put a person's contact details, credentials, or private files in the folder name or in the page.
 
 ## Page requirements
 
-Every HTML file under `demo/` includes `<meta name="robots" content="noindex, nofollow">` and a viewport tag. It does not load the marketing tag manager, Clarity, `assets/site.css`, or `assets/landing.css`. Shared hosting styles, if needed, are `demo/demo.css`, linked relatively.
+Every HTML file under `demo/` includes `<meta name="robots" content="noindex, nofollow">` and a viewport tag. It does not load the marketing tag manager, Clarity, `assets/site.css`, or `assets/landing.css`.
 
-Parent routes load their `index.html`. A folder without `index.html` is not a working route. Use the trailing-slash address (`/demo/nicky-billou/`) so relative links and assets resolve inside that folder.
+`demo/demo.css` is only for the hosting parent pages. A project page uses styles and assets that live in its own project-type directory.
+
+Parent routes load their `index.html`. A folder without `index.html` is not a working route. Use the trailing-slash address (`/demo/nicky-billou/website/`) so relative links and assets resolve inside that folder.
 
 ## Audience
 
