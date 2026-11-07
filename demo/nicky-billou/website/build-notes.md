@@ -6,6 +6,20 @@ static picture of a button, with the line "Demo. Checkout is not connected
 yet — this button does nothing." There is no script, form, or submission.
 Other controls are in-page or outbound links.
 
+## v6.1 — two factual fixes (ChatGPT v5 review, verified live 2026-11-07)
+
+- **Episode list corrected.** v5/v6 listed EP829 Nov 4, EP828 Nov 3, EP826
+  Nov 2 — WRONG dates, and EP830/EP827 omitted. The live show site
+  (datetime attributes, checked 2026-11-07) gives: EP831 Nov 6, EP830
+  Nov 3, EP829 Oct 30, EP828 Oct 27, EP827 Oct 23, EP826 Oct 20. The page
+  now lists the actual latest four (EP831/830/829/828) with those dates.
+  ChatGPT caught this; the research file agreed; the live HTML confirms it.
+- **Finish Line Thinking link REMOVED from the footer.** The site loads
+  but carries unrelated spam posts ("cheap nfl jersey" etc., verified live
+  2026-11-07). Do not link it from a sales page until it is cleaned up.
+  The book is still named in the "other books" paragraph (title only, no
+  link).
+
 ## v6 — Nicky's own look and voice (Ben, 2026-11-07 ~16:21 EST: "Make sure
 you don't use the exact same language as guestio, make it better, same with
 colors and fonts, match it to Nicky's style based on his other websites,
