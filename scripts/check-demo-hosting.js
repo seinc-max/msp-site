@@ -28,17 +28,17 @@ function walkHtml(dir, acc) {
   return acc;
 }
 
-const reserved = ['demo/index.html', 'demo/nicky-billou/index.html', 'demo/demo.css'];
+const reserved = ['demo/index.html', 'demo/nicky-billou/index.html', 'demo/demo.css', 'demo/nicky-billou/website/index.html', 'demo/nicky-billou/website/site.css'];
 for (const rel of reserved) {
   if (!fs.existsSync(path.join(ROOT, rel))) fail('missing ' + rel);
 }
-if (!SLUG.test('nicky-billou')) fail('nicky-billou is not a valid slug');
+if (!SLUG.test('nicky-billou') || !SLUG.test('website')) fail('reserved slug rejected');
 for (const bad of ['Nicky', 'nicky_billou', 'nicky--billou', '-nicky', 'nicky-']) {
   if (SLUG.test(bad)) fail('slug accepted ' + bad);
 }
 pass('reserved routes and slug rule');
 
-const banned = ['GTM-', 'clarity', 'tel:', '<form', 'dataLayer', 'landing.css', 'site.css', 'audience-', 'nav-cta', 'click_to_call', 'form_cta_click', 'guarantee', '$'];
+const banned = ['GTM-', 'clarity', 'tel:', '<form', 'dataLayer', 'assets/landing.css', 'assets/site.css', 'audience-', 'nav-cta', 'click_to_call', 'form_cta_click', 'guarantee', '$'];
 for (const abs of walkHtml(path.join(ROOT, 'demo'), [])) {
   const html = fs.readFileSync(abs, 'utf8');
   const rel = path.relative(ROOT, abs);
@@ -50,8 +50,12 @@ for (const abs of walkHtml(path.join(ROOT, 'demo'), [])) {
 }
 const client = read('demo/nicky-billou/index.html');
 if (!client.includes('href="../demo.css"') || !client.includes('href="../"')) fail('client page relative links missing');
+if (client.includes('website')) fail('client page lists a project type');
 if (!read('demo/index.html').includes('href="demo.css"')) fail('demo index relative stylesheet missing');
 if (read('demo/index.html').includes('nicky-billou')) fail('demo index lists a client');
+const website = read('demo/nicky-billou/website/index.html');
+if (!website.includes('href="site.css"') || !website.includes('href="../"')) fail('website page relative links missing');
+if (website.includes('../demo.css') || website.includes('/assets/')) fail('website page uses an asset outside its folder');
 pass('demo HTML is noindex and has no marketing chrome');
 
 const sitemap = read('sitemap.xml');
@@ -66,18 +70,18 @@ if (fs.existsSync(header) && read('templates/partials/header.html').includes('/d
 if (read('index.html').includes('href="/demo')) fail('home links to /demo');
 pass('marketing nav does not link to /demo');
 
-const fixture = path.join(ROOT, 'demo', '_fixture', 'nested-asset-check');
-const distAsset = path.join(ROOT, 'dist', 'demo', '_fixture', 'nested-asset-check', 'assets', 'mark.txt');
+const fixture = path.join(ROOT, 'demo', '_fixture', 'website');
+const distAsset = path.join(ROOT, 'dist', 'demo', '_fixture', 'website', 'assets', 'mark.txt');
 try {
   fs.mkdirSync(path.join(fixture, 'assets'), { recursive: true });
   fs.writeFileSync(path.join(fixture, 'index.html'), '<!DOCTYPE html><html><head><meta name="robots" content="noindex, nofollow"></head><body><img src="assets/mark.txt" alt=""></body></html>');
   fs.writeFileSync(path.join(fixture, 'assets', 'mark.txt'), 'fixture-mark');
   const built = spawnSync(process.execPath, [path.join(ROOT, 'scripts', 'build-dist.js')], { cwd: ROOT, encoding: 'utf8' });
   if (built.status !== 0) fail('build-dist failed with nested fixture\n' + (built.stderr || built.stdout));
-  else if (fs.readFileSync(distAsset, 'utf8') !== 'fixture-mark') fail('nested fixture asset missing from dist');
-  else if (!fs.existsSync(path.join(ROOT, 'dist', 'demo', 'index.html'))) fail('dist missing demo/index.html');
-  else if (!fs.existsSync(path.join(ROOT, 'dist', 'demo', 'nicky-billou', 'index.html'))) fail('dist missing client index');
-  else pass('build-dist retained nested demo index and asset');
+  else if (fs.readFileSync(distAsset, 'utf8') !== 'fixture-mark') fail('project-type asset missing from dist');
+  else if (!fs.existsSync(path.join(ROOT, 'dist', 'demo', 'nicky-billou', 'website', 'index.html'))) fail('dist missing website index');
+  else if (!fs.existsSync(path.join(ROOT, 'dist', 'demo', 'nicky-billou', 'website', 'site.css'))) fail('dist missing website stylesheet');
+  else pass('build-dist retained project-type index, stylesheet, and nested asset');
 } finally {
   fs.rmSync(path.join(ROOT, 'demo', '_fixture'), { recursive: true, force: true });
   fs.rmSync(path.join(ROOT, 'dist'), { recursive: true, force: true });
