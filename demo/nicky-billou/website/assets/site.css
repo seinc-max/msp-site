@@ -1,251 +1,176 @@
-/* Get Booked & Get Paid — Guestio visual system (v5)
-   Light grey page, Poppins, black + purple (#b503d0), big ALL-CAPS headlines,
-   purple gradient CTAs, sticky order card. Visual-only demo. */
+/* Get Booked & Get Paid — Nicky Billou's own visual system (v6)
+   Built from his sites, not Guestio: nickybillou.com (Raleway + Work Sans,
+   charcoal #272727, light grey #f6f6f6, red-orange #f0523d) and
+   thethoughtleaderrevolution.com (black + white + gold).
+   Single column, sentence-case headings, solid red-orange CTAs,
+   two photos only. Visual-only demo. */
 * { box-sizing: border-box; }
 :root {
-  --purple: #b503d0;
-  --purple-dark: #7a18d1;
-  --purple-deep: #6304d1;
-  --ink: #111111;
+  --accent: #f0523d;
+  --accent-dark: #d63d28;
+  --ink: #272727;
   --muted: #555555;
-  --bg: #f5f5f5;
+  --bg: #f6f6f6;
   --white: #ffffff;
-  --line: #e5e5e5;
-  --green: #37ca37;
+  --line: #e7e7e7;
+  --dark: #272727;
 }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 img { max-width: 100%; height: auto; display: block; }
-a { color: var(--purple); }
-.wrap { width: min(1140px, calc(100% - 32px)); margin: 0 auto; }
+a { color: var(--accent); }
+.wrap { width: min(760px, calc(100% - 32px)); margin: 0 auto; }
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 12px; top: 12px; background: #fff; padding: 10px 14px; z-index: 10; }
 
-/* Demo bar + black brand bar (Guestio top bar) */
+/* Demo bar */
 .demo-bar {
   margin: 0; padding: 8px 12px; text-align: center;
-  background: #000; color: #fff;
+  background: var(--dark); color: #fff;
   font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
 }
 .demo-bar span { font-weight: 400; letter-spacing: 0.04em; text-transform: none; }
-.brand-bar {
-  background: #000; color: #fff; text-align: center;
-  padding: 18px 12px; margin: 0;
-  font-size: 2rem; font-weight: 800; letter-spacing: 0.02em;
-}
-.brand-bar .dot { color: var(--purple); }
 
-/* Eyebrow box */
-.eyebrow {
-  border: 2px solid var(--purple); border-radius: 10px; background: var(--white);
-  text-align: center; padding: 18px 22px; margin: 28px auto 0;
-  font-size: 1.15rem; font-weight: 500; width: min(1140px, calc(100% - 32px));
+/* Site header — clean, white, Nicky's name */
+.site-head { background: var(--white); text-align: center; padding: 28px 16px 24px; border-bottom: 1px solid var(--line); }
+.brand {
+  font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+  font-size: 2.1rem; font-weight: 800; letter-spacing: 0.02em; margin: 0;
 }
+.brand .accent { color: var(--accent); }
+.brand-sub { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; letter-spacing: 0.06em; }
 
-/* H1 */
+/* Headings — Raleway, sentence case (not all-caps) */
+h1, h2, h3 { font-family: "Raleway", "Helvetica Neue", Arial, sans-serif; }
 h1 {
-  font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 900; line-height: 1.12;
-  text-align: center; text-transform: uppercase; letter-spacing: -0.01em;
-  margin: 32px auto 0; max-width: 1000px;
+  font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 800; line-height: 1.15;
+  letter-spacing: -0.01em; margin: 18px 0 20px;
 }
-h1 .accent { color: var(--purple); }
-h2 {
-  font-size: clamp(1.7rem, 3.6vw, 2.5rem); font-weight: 800; line-height: 1.15;
-  text-transform: uppercase; margin: 0 0 20px;
-}
-h2 .accent { color: var(--purple); }
-h3 { font-size: 1.25rem; font-weight: 700; margin: 0 0 8px; }
+h1 .accent { color: var(--accent); }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; line-height: 1.2; margin: 0 0 18px; }
+h2 .accent { color: var(--accent); }
+h3 { font-size: 1.2rem; font-weight: 700; margin: 0 0 6px; }
 p { margin: 0 0 18px; }
 .muted { color: var(--muted); font-size: 0.95rem; }
 strong { font-weight: 700; }
-.purple { color: var(--purple); }
-.center { text-align: center; }
+.accent { color: var(--accent); }
 
-/* Two-column layout: main + sticky order card */
-.layout {
-  display: grid; grid-template-columns: 1fr 360px; gap: 40px;
-  width: min(1140px, calc(100% - 32px)); margin: 36px auto 0; align-items: start;
+/* Hero */
+.hero { background: var(--white); padding: 48px 0 56px; text-align: center; border-bottom: 1px solid var(--line); }
+.kicker {
+  color: var(--accent); font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; font-size: 0.85rem; margin: 0 0 14px;
 }
-.sidebar { position: sticky; top: 24px; }
-
-/* Order card (Guestio sidebar) */
-.order-card {
-  background: var(--white); border: 2px solid var(--purple); border-radius: 12px;
-  overflow: hidden;
-}
-.order-mock {
-  background: linear-gradient(135deg, var(--purple), var(--purple-deep));
-  padding: 22px 18px 18px; text-align: center;
-}
-.order-mock img { border-radius: 8px; margin: 0 auto 14px; max-width: 260px; }
-.order-mock h2 {
-  color: #fff; font-size: 1.45rem; margin: 0; text-transform: uppercase;
-}
-.order-body { padding: 20px 20px 24px; text-align: center; }
-.order-body .list-price { font-size: 1.15rem; font-weight: 700; margin: 0 0 6px; }
-.order-body .list-price s { color: var(--muted); }
-.order-body .list-price .save { color: var(--purple); }
-.order-body .instant { color: var(--purple); font-style: italic; margin: 0 0 14px; }
-.order-body .fine { font-size: 0.9rem; color: var(--muted); margin: 12px 0 0; }
-.order-included { text-align: left; margin: 20px 0 0; padding-top: 18px; border-top: 2px solid var(--line); }
-.order-included h3 { text-align: center; font-size: 1.05rem; text-transform: uppercase; margin-bottom: 14px; }
-.order-included ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.order-included li { display: flex; justify-content: space-between; gap: 12px; font-size: 0.98rem; }
-.order-included li b { font-weight: 700; }
-.order-included li span { color: var(--muted); white-space: nowrap; }
-
-/* Buttons (Guestio purple gradient) */
-.btn {
-  display: block; width: 100%; text-align: center; text-decoration: none;
-  background: linear-gradient(180deg, #c800e8, var(--purple-dark));
-  color: #fff; border: none; border-radius: 8px; cursor: pointer;
-  padding: 18px 20px 14px; font-family: inherit;
-  font-size: 1.35rem; font-weight: 800; line-height: 1.2;
-}
-.btn small { display: block; font-size: 1rem; font-weight: 500; margin-top: 2px; }
-.btn svg { vertical-align: -4px; margin-right: 8px; }
-.btn:hover { filter: brightness(1.08); }
-.btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
-.btn-row { max-width: 720px; margin: 24px auto 0; }
-
-/* Guarantee badge (seal + text) */
-.guarantee-badge {
-  display: flex; align-items: center; justify-content: center; gap: 12px;
-  margin: 18px auto 0; max-width: 560px;
-}
-.guarantee-badge .seal {
-  flex-shrink: 0; width: 74px; height: 74px; border-radius: 50%;
-  border: 3px solid var(--purple); color: var(--purple);
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  font-size: 0.52rem; font-weight: 800; line-height: 1.4; text-transform: uppercase;
-}
-.guarantee-badge p { margin: 0; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; text-align: left; }
-.guarantee-badge p span { color: var(--purple); }
-
-/* Purple bullets */
-.bullets { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 14px; }
-.bullets li { padding-left: 30px; position: relative; }
-.bullets li::before {
-  content: ""; position: absolute; left: 0; top: 6px;
-  width: 14px; height: 14px; border-radius: 50%; background: var(--purple);
-}
-.bullets li b { font-weight: 700; }
-
-/* Video/photo block with caption */
-.media-block { margin: 0 0 24px; }
-.media-block img { border-radius: 12px; width: 100%; }
-.media-block figcaption {
-  background: #000; color: #fff; border-radius: 0 0 12px 12px;
-  padding: 10px 16px; font-size: 0.95rem; font-weight: 600; margin-top: -6px;
+.lede { font-size: 1.15rem; color: var(--ink); max-width: 640px; margin: 0 auto 18px; }
+.proof-strip { font-size: 1rem; color: var(--muted); margin: 0 0 24px; }
+.proof-strip strong { color: var(--ink); }
+.hero-photo { margin: 36px 0 0; }
+.hero-photo img { border-radius: 12px; width: 100%; }
+.hero-photo figcaption {
+  background: var(--dark); color: #fff; border-radius: 0 0 12px 12px;
+  padding: 10px 16px; font-size: 0.95rem; font-weight: 600; margin-top: -6px; text-align: left;
 }
 
 /* Sections */
 .section { padding: 56px 0; }
-.section .wrap > h2 { text-align: left; }
-.purple-band {
-  background: linear-gradient(135deg, var(--purple-dark), var(--purple));
-  color: #fff; text-align: center; padding: 64px 0;
+.section.dark { background: var(--dark); color: #fff; }
+.section.dark h2 { color: #fff; }
+.section.dark .muted { color: #ccc; }
+.story { background: var(--white); border-bottom: 1px solid var(--line); }
+
+/* Buttons — solid red-orange, no gradient */
+.btn {
+  display: inline-block; width: 100%; max-width: 640px; text-align: center; text-decoration: none;
+  background: var(--accent); color: #fff; border: none; border-radius: 8px; cursor: pointer;
+  padding: 18px 24px; font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.25rem; font-weight: 800; line-height: 1.25;
 }
-.purple-band h2 { color: #fff; margin-bottom: 16px; }
-.purple-band p { font-size: 1.25rem; margin: 0 0 14px; }
-.purple-band p:last-child { margin: 0; }
-.white-box {
-  background: var(--white); border-radius: 16px; padding: 36px 32px;
-  text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+.btn:hover { background: var(--accent-dark); }
+.btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+.btn-row { margin: 24px auto 0; text-align: center; }
+
+/* Guarantee badge (seal + text) */
+.guarantee-badge {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  margin: 22px auto 0; max-width: 560px;
 }
-.white-box h2 { text-align: center; }
-.icon-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 28px 0; }
-.icon-row .icon { font-size: 2.4rem; }
-.icon-row p { margin: 6px 0 0; font-weight: 600; }
+.guarantee-badge .seal {
+  flex-shrink: 0; width: 74px; height: 74px; border-radius: 50%;
+  border: 3px solid var(--accent); color: var(--accent);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  font-size: 0.52rem; font-weight: 800; line-height: 1.4; text-transform: uppercase;
+}
+.guarantee-badge p { margin: 0; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; text-align: left; }
+.guarantee-badge p span { color: var(--accent); }
 
-/* Dark image band */
-.dark-band { background: #111; padding: 0; }
-.dark-band img { width: 100%; border-radius: 0; }
+/* Stack — clean numbered list, no photos */
+.stack-intro { font-size: 1.1rem; }
+.stack { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 0; }
+.stack li {
+  background: var(--white); border: 1px solid var(--line); border-radius: 12px;
+  padding: 22px 24px; margin-bottom: 14px;
+}
+.stack h3 { font-size: 1.15rem; }
+.stack h3 .value { color: var(--accent); }
+.stack p { margin: 0; }
 
-/* Guarantee headline block */
-.guarantee-head { text-align: center; margin: 32px 0; }
-.guarantee-head h2 { margin-bottom: 8px; }
-.guarantee-head .sub { font-style: italic; font-size: 1.4rem; font-weight: 600; }
+/* Price box */
+.price-box {
+  background: var(--white); border: 2px solid var(--accent); border-radius: 14px;
+  padding: 32px 28px; text-align: center; margin-top: 28px;
+}
+.price-box .was { font-size: 1.2rem; font-weight: 700; margin: 0 0 4px; }
+.price-box .was s { color: var(--muted); }
+.price-box .save { color: var(--accent); }
+.price-box .price { font-family: "Raleway", sans-serif; font-size: 3rem; font-weight: 900; margin: 0 0 12px; }
+.price-box .fine { font-size: 0.9rem; color: var(--muted); margin: 14px 0 0; }
 
-/* Stack (full-width "HERE'S WHAT YOU'LL GET") */
-.stack-list { display: grid; gap: 18px; margin-top: 28px; }
-.stack-row { display: flex; gap: 18px; align-items: flex-start; }
-.stack-row img { width: 140px; flex-shrink: 0; border-radius: 10px; }
-.stack-row h3 { font-size: 1.2rem; text-transform: uppercase; }
-.stack-row h3 .value { color: var(--purple); }
-.stack-row p { margin: 0; }
-.stack-total { text-align: center; margin-top: 32px; }
-.stack-total .was { font-size: 1.3rem; font-weight: 700; margin: 0 0 4px; }
-.stack-total .was s { color: var(--muted); }
-.stack-total .save { color: var(--purple); font-weight: 800; font-size: 1.4rem; margin: 0 0 8px; }
-.stack-total .price { font-size: 3rem; font-weight: 900; margin: 0 0 16px; }
+/* Keynotes — three cards */
+.keynotes { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 24px 0; }
+.keynotes article { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+.keynotes h3 { font-size: 1.1rem; }
+.keynotes p { margin: 0; }
 
-/* Students */
-.student-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 28px; }
+/* Students — initial avatars, no photos */
+.student-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; }
 .student { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
-.student .quote { font-size: 1.15rem; font-weight: 600; }
+.student .avatar {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: 50%; background: var(--accent); color: #fff;
+  font-family: "Raleway", sans-serif; font-weight: 800; font-size: 1rem; margin-bottom: 14px;
+}
+.student .quote { font-size: 1.1rem; font-weight: 600; }
 .student p:last-child { margin: 0; }
+
+/* Episode list — text only, no thumbnails */
+.ep-list { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 10px; }
+.ep-list li { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; }
 
 /* Book */
 .book-split { display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: start; }
-.book-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 28px; }
-.book-cards article { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
-.book-cards h3 { font-size: 1.1rem; }
-.book-cards p { margin: 0 0 8px; }
-.book-cards p:last-child { margin: 0; }
-
-/* Mastery (purple band, two columns with checks) */
-.mastery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; text-align: left; margin-top: 28px; }
-.mastery-grid h3 { color: #fff; font-size: 1.4rem; }
-.mastery-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-.mastery-grid li { padding-left: 30px; position: relative; }
-.mastery-grid li::before { content: "✓"; position: absolute; left: 0; color: #fff; font-weight: 800; }
-.mastery-grid li b { display: block; }
-
-/* Roles / comparison / objections */
-.roles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 24px; }
-.roles article { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
-.roles h3 { font-size: 1.05rem; margin: 0 0 6px; }
-.roles p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
-.compare article { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
-.compare .good { background: #fdeeee; border: 2px solid var(--purple); }
-.compare h3 { text-transform: uppercase; }
-.compare ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
-.objections { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; }
-.objections article { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
-.objections h3 { text-transform: uppercase; font-size: 1.1rem; }
-.objections p { margin: 0; }
+.book-split img { border-radius: 12px; }
 
 /* FAQ */
 .faq details {
   background: var(--white); border: 1px solid var(--line); border-radius: 12px;
   padding: 18px 20px; margin-bottom: 12px;
 }
-.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-weight: 700; font-size: 1.1rem; }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-weight: 700; font-size: 1.05rem; }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; font-size: 1.4rem; font-weight: 800; color: var(--purple); flex-shrink: 0; }
+.faq summary::after { content: "+"; font-size: 1.4rem; font-weight: 800; color: var(--accent); flex-shrink: 0; }
 .faq details[open] summary::after { content: "−"; }
 .faq details p { margin: 12px 0 0; }
 
-/* Podcast strip */
-.ep-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
-.ep-strip article { background: var(--white); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-.ep-strip img { width: 100%; }
-.ep-strip div { padding: 12px 14px; }
-.ep-strip p { margin: 0; font-size: 0.9rem; }
-.ep-strip strong { font-size: 0.95rem; }
-
 /* Final CTA */
-.final { text-align: center; max-width: 760px; margin: 0 auto; }
-.final .price { font-size: 3rem; font-weight: 900; margin: 0 0 16px; }
+.final { text-align: center; }
+.final .price { font-family: "Raleway", sans-serif; font-size: 3rem; font-weight: 900; margin: 0 0 16px; }
 
 /* Footer */
 footer { padding: 40px 0 56px; text-align: center; color: var(--muted); font-size: 0.95rem; }
@@ -253,18 +178,9 @@ footer p { margin: 0 0 10px; }
 footer p:last-child { margin: 0; }
 
 @media (max-width: 900px) {
-  .layout { grid-template-columns: 1fr; }
-  .sidebar { position: static; order: -1; }
-  .icon-row, .student-grid, .book-cards, .objections, .mastery-grid { grid-template-columns: 1fr; }
-  .roles { grid-template-columns: 1fr 1fr; }
-  .compare, .book-split { grid-template-columns: 1fr; }
-  .ep-strip { grid-template-columns: 1fr 1fr; }
+  .keynotes, .student-grid { grid-template-columns: 1fr; }
+  .book-split { grid-template-columns: 1fr; }
+  .book-split img { max-width: 300px; }
   .section { padding: 40px 0; }
   body { font-size: 17px; }
-}
-@media (max-width: 560px) {
-  .roles { grid-template-columns: 1fr; }
-  .ep-strip { grid-template-columns: 1fr; }
-  .stack-row { flex-direction: column; }
-  .stack-row img { width: 100%; }
 }
