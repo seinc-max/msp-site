@@ -46,13 +46,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .hero-trust{ display: flex; flex-direction: column; gap: 10px; }
 .trust-item{ display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
 .trust-item svg{ color: var(--orange); flex-shrink: 0; }
-.hero-call{
-    display: inline-block; margin-top: 24px;
-    background: var(--orange); color: #fff; font-weight: 700; font-size: 1.05rem;
-    padding: 16px 28px; border-radius: 10px; text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-.hero-call:hover{ background: #ea6c0a; transform: translateY(-2px); }
 .form-card{ background: #fff; border-radius: 16px; padding: 36px 32px; box-shadow: 0 24px 64px rgba(0,0,0,0.22); }
 .form-card-label{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
 .form-card h2{ font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
@@ -164,12 +157,11 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   .hero { padding: 4px 5% 24px; }
   .hero-grid { gap: 20px; }
   .hero-eyebrow { margin-bottom: 4px; }
-  .hero h1 { font-size: 1.55rem; margin-bottom: 6px; }
+  .hero h1 { font-size: 1.75rem; margin-bottom: 6px; }
   .hero-sub { margin-bottom: 4px !important; font-size: 0.98rem; line-height: 1.4; }
   .hero-guarantee { margin-bottom: 6px !important; padding: 4px 12px !important; font-size: 0.88rem !important; }
   .hero-trust { gap: 4px; margin-bottom: 0; }
   .trust-item { font-size: 0.88rem; }
-  .hero-call { margin-top: 12px; padding: 12px 18px; }
 }
 </style>
 <link rel="canonical" href="https://truelineit.com/missed-call-text-back" />
@@ -227,7 +219,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
  "name": "What happens after a missed call?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "Your caller gets a text from your business number within minutes. They reply with what they need, and you get an alert."
+ "text": "Your caller gets a text from a separate text-back number within minutes. They reply with what they need, and you get an alert."
  }
  },
  {
@@ -259,7 +251,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
  "name": "Why is there a setup fee?",
  "acceptedAnswer": {
  "@type": "Answer",
- "text": "The $199 covers the install: connecting your number, approving the wording and going live. It's not a random surcharge."
+ "text": "The $199 covers the install: setting up call forwarding, approving the wording and going live. It's not a random surcharge."
  }
  },
  {
@@ -318,21 +310,18 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=20261025-1">
+<link rel="stylesheet" href="/assets/landing.css">
 <style id="hero-consistency">
-@media (max-width:767px){.hero h1{font-size:1.75rem!important;line-height:1.15}}
 .hero .hero-sub{font-size:1rem!important;max-width:640px}
 @media (min-width:768px){.hero .hero-sub{font-size:1.1rem!important}}
-.hero a.hero-call{display:block;width:100%;max-width:720px;box-sizing:border-box;text-align:center;min-height:52px}
-.hero a.hero-call + .hero-guarantee{display:table!important;margin-top:14px}
 /* Sentinel #307: the hero column was sized to the 340px phone frame and clipped at 320px; let it shrink. */
 @media (max-width:899px){.hero-grid.hero-with-frame{grid-template-columns:minmax(0,1fr)}}
 /* No-copy consistency fixes (Ben-approved release path, 2026-10-26): one desktop H1 size, one mobile top space, one hero call button size */
-@media (min-width:1024px){.hero h1{font-size:48px!important}}
 @media (max-width:430px){.hero{padding-top:20px!important}}
-.hero .hero-actions .btn-primary,.hero a.hero-call{display:flex!important;align-items:center;justify-content:center;width:100%;max-width:640px!important;height:57px!important;min-height:57px!important;padding-top:0!important;padding-bottom:0!important;box-sizing:border-box}
+.hero .hero-actions .btn-primary,.hero a
 </style>
 </head>
-<body>
+<body class="landing-call landing-offer">
 <a class="skip-link" href="#main">Skip to content</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -412,7 +401,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
     <div class="hero-more">
       <p class="hero-sub">No-heat call at 2 AM. Roof leak at 11 PM. Burst pipe while you're on another job. Your caller gets a text within minutes, tells you what they need, and waits for you, not the next name on Google.</p>
-      <p class="hero-sub" style="color:#fff;font-weight:700;margin-bottom:20px;">Done-for-you missed-call text-back on your existing number. We set it up and run it. $149/mo per location, flat, plus a one-time $199 setup. No overage bills. No contracts, cancel anytime.</p>
+      <p class="hero-sub" style="color:#fff;font-weight:700;margin-bottom:20px;">Done-for-you missed-call text-back. Missed calls to your number get a text back from a separate number. We set it up and run it. $149/mo per location, flat, plus a one-time $199 setup. No overage bills. No contracts, cancel anytime.</p>
       <p class="hero-sub">If one saved job a month is worth more than $149 to you, it pays for itself.</p>
       <div class="hero-trust">
         <div class="trust-item">
@@ -421,14 +410,14 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         </div>
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Works with your existing number — no porting
+          Keep your number — calls forward, no porting
         </div>
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
           We set it up and run it — not another app to configure
         </div>
       </div>
-      <p class="hero-sub">One call. We set it up on your number. You approve every word before it goes live.</p>
+      <p class="hero-sub">One call. We set it up. You approve every word before it goes live.</p>
       <!-- seasonal: remove by 2027-04-01 -->
 <p class="hero-sub">Missed calls spike with the first cold snap and after a storm (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank" style="color:#fff;text-decoration:underline;">Invoca, 2026</a>). Get set up before the next one hits.</p>
     </div>
@@ -455,7 +444,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       <div class="audience-card good">
         <h3>With Trueline text-back</h3>
         <ul>
-          <li>Your caller gets a text within minutes, from your business number.</li>
+          <li>Your caller gets a text within minutes, from a separate text-back number.</li>
           <li>They reply with what they need and where.</li>
           <li>You get an alert and read it when you're free.</li>
           <li>You call back first, with the job details in hand.</li>
@@ -502,7 +491,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       <div class="step">
         <div class="step-number">2</div>
         <h3>We install the text-back</h3>
-        <p>Every missed call gets a text on your existing number. You approve the wording before go-live. Their reply shows you what they need, and you get an alert.</p>
+        <p>Every missed call gets a text from a separate text-back number. You approve the wording before go-live. Their reply shows you what they need, and you get an alert.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
@@ -548,10 +537,10 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       <div class="included-card yes">
         <h3>What's included</h3>
         <ul>
-          <li>Missed-call text-back on your business line</li>
+          <li>Missed-call text-back, sent from a separate number</li>
           <li>Intake questions you approve (need, timing, callback window)</li>
           <li>Owner alert so you know who to answer first</li>
-          <li>Works with your existing number</li>
+          <li>Keep your number — calls forward, no porting</li>
           <li>Monthly review call</li>
         </ul>
       </div>
@@ -582,10 +571,10 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         <p style="margin:0;">30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p>
       </div>
       <ul class="pricing-features">
-        <li>Missed-call text-back on your business line</li>
+        <li>Missed-call text-back, sent from a separate number</li>
         <li>Intake questions you approve</li>
         <li>Owner alert on every missed call</li>
-        <li>Works with your existing number</li>
+        <li>Keep your number — calls forward, no porting</li>
         <li>Monthly review call</li>
       </ul>
       <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
@@ -636,7 +625,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </details>
       <details>
         <summary>What happens after a missed call?</summary>
-        <p>Your caller gets a text from your business number within minutes. They reply with what they need, and you get an alert.</p>
+        <p>Your caller gets a text from a separate text-back number within minutes. They reply with what they need, and you get an alert.</p>
       </details>
       <details>
         <summary>What does the text say?</summary>
@@ -652,7 +641,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </details>
       <details>
         <summary>Why is there a setup fee?</summary>
-        <p>The $199 covers the install: connecting your number, approving the wording and going live. It's not a random surcharge.</p>
+        <p>The $199 covers the install: setting up call forwarding, approving the wording and going live. It's not a random surcharge.</p>
       </details>
       <details>
         <summary>Is this for agencies or all-in-one platform shops?</summary>
