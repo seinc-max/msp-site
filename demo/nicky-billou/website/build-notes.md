@@ -59,7 +59,14 @@ Invented for this mockup, not found on Nicky’s sites:
 
 - Guest kit: one-page intro, show shortlist, and first-interview card, shown as included.
 - The book shown as included with the $88 workshop.
-- Guarantee: first podcast booking in 30 days or the $88 comes back.
+- Guarantee: first podcast booking in 30 days or the $88 comes back. Wording on the page is first person (“I’ll give you your $88 back”). No pitch-count condition and no 14-day deadline.
+
+November 7 copy batch, from the selected Muse lines only. Narrator is I/my/me. Buyer is you/your. Proper names stay in the title, photo alt text, self-introduction, FAQ identity line, and footer.
+
+- Eyebrow: “Get booked on podcasts. Turn interviews into clients.”
+- First bullet: “Your buyers are listening to podcasts right now. Become the expert they hear, trust and call.”
+- Under $88: “Two days, live and online, with me. One new client could pay for the workshop many times over.” That sentence is a conditional frame, not a client count or an income result.
+- Guarantee paragraph: “You worked hard for that $88, and it counts. Follow the workshop and use what you learn. If you don’t book a podcast in 30 days, I’ll give you your $88 back. I take the risk. You take the first step.”
 
 Sourced and not invented: two-day live online workshop, podcast-guesting topic, brand topic, biography, book title and co-authors, and the $88 price Ben approved for the mockup.
 
