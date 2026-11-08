@@ -1,12 +1,24 @@
-# Nicky Billou demo — one Guestio-shaped page
+# Nicky Billou demo — six-lesson course page
 
-Path: `/demo/nicky-billou/website/` only. Static mockup. No script.
+Path: `/demo/nicky-billou/website/` only. Static mockup. No script, no form, no checkout. Staging only. Not on `main`.
 
-## Process rule
+## Current page (November 8, 2026)
 
-Reference fidelity and a rich set of Ben-authorized photos are required before this page is called ready. “Get it done” means build the page, not only acknowledge the request. Source limits stay in this file, not in sales headings.
+Ben’s course spec replaces the workshop mockup. The $88 product is six video lessons. The book is included. Wording is the Muse v7.1 page, with these changes only:
 
-## Guestio section map
+- The book comes with the program. The FAQ answer is: “Yes. The book comes with the program. The $88 covers the 6 video lessons, worksheets, pitch templates, the show-finder list — and the book.”
+- The pack uses the real cover, `book-get-booked.png`.
+- Notice: “Visual demo. Sample offer and terms—not for purchase.” The bar does not say “live.”
+- Footer: “Student stories, stack values, format and guarantee terms are samples for Nicky to confirm. Individual results vary. ‘6 Figures+’ is the book’s title, not a promise of what you will earn.” Also “Demo site. Not for purchase.”
+- Amazon is only in the footer. There is no finishlinethinking.com link.
+- Fonts are self-hosted Raleway for headings and Work Sans for body. Colors: `#1C2223`, white, `#4D81D0`, hover `#3A6BB5`, page `#F6F6F6`.
+- Hero is `nicky-stage.jpg`. The row is `nicky-34.jpg`, `nicky-36.jpg`, `podcast-home.jpg`. On a phone those three stay one row of upright portraits.
+- The sidebar is the compact offer. The six lesson cards stay in the main column.
+- One button label: “Yes — I want to get booked & get paid for $88”. The last control is disabled.
+
+## Earlier passes
+
+Everything below is the record of the workshop mockup. It is not the current page.
 
 ## Best of both (November 8, 2026)
 
@@ -100,10 +112,9 @@ Sourced and unchanged: two-day live online workshop, podcast-guesting topic, bra
 
 ## Checklist
 
+The current page is the six-lesson course in the section at the top. The boxes below described the earlier workshop mockup.
+
 - [x] One page, no about URL
 - [x] Product name prominent, $88 visible
-- [x] Guestio section order and Poppins. Accent is Nicky’s observed `#4d81d0`, not Guestio magenta.
-- [x] Real Nicky photos stay as proof. The product image is the workshop, book cover, and guest kit.
 - [x] noindex, no script, no form
 - [x] Inert closing control. One page-level notice only.
-- [x] Sample guest kit, book-with-workshop bundle, and 30-day guarantee are on the mockup. The sales page does not call them out as footnotes. This note is the map.
