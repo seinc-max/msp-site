@@ -1,8 +1,9 @@
-/* Colors and type read from https://go.guestio.com/ on 2026-11-07.
-   Product name and magenta buttons: rgb(181, 3, 208) / #b503d0.
+/* Layout and type follow https://go.guestio.com/. The accent is no longer Guestio magenta.
+   It is rgb(77, 129, 208) / #4d81d0, the primary button and link color on https://www.nickybillou.com/.
    Headlines: Poppins 900, uppercase. Button label: Poppins 28px / 700.
-   Button subhead: 20px / 400. Pill: Poppins 22px / 500, 3px #b503d0, 10px radius.
-   Poppins latin woff2 is self-hosted under assets/fonts (SIL OFL). */
+   Button subhead: 20px / 400. Pill: Poppins 22px / 500, 3px #4d81d0, 10px radius.
+   Poppins latin woff2 is self-hosted under assets/fonts (SIL OFL).
+   The variable name --purple is historical. Its value is the Nicky blue. */
 @font-face {
   font-family: Poppins;
   font-style: normal;
@@ -28,8 +29,8 @@
   --ink: #000;
   --muted: #000;
   --bg: #f3f3f5;
-  --purple: #b503d0;
-  --card: #b503d0;
+  --purple: #4d81d0;
+  --card: #4d81d0;
   --line: #e4e4ea;
   --focus: #0b57d0;
 }
@@ -143,8 +144,8 @@ p { margin: 0 0 14px; }
   gap: 8px;
   align-items: center;
   background:
-    radial-gradient(90px 60px at 18% 28%, rgba(181, 3, 208, 0.16), transparent 70%),
-    radial-gradient(110px 70px at 82% 72%, rgba(181, 3, 208, 0.12), transparent 72%),
+    radial-gradient(90px 60px at 18% 28%, rgba(77, 129, 208, 0.16), transparent 70%),
+    radial-gradient(110px 70px at 82% 72%, rgba(77, 129, 208, 0.12), transparent 72%),
     #fff;
   padding: 14px 10px 4px;
   overflow: hidden;
@@ -176,7 +177,7 @@ p { margin: 0 0 14px; }
   color: #fff;
   border: 2px solid var(--purple);
   border-radius: 12px;
-  box-shadow: 0 12px 18px rgba(181, 3, 208, 0.2);
+  box-shadow: 0 12px 18px rgba(77, 129, 208, 0.2);
   text-align: center;
   padding: 12px 8px 14px;
   transform: rotate(-3.5deg);
@@ -245,7 +246,7 @@ p { margin: 0 0 14px; }
 .paper.intro i:nth-of-type(2) { width: 82%; }
 .paper.intro i:nth-of-type(3) { width: 64%; }
 .paper.list { right: 0; top: 0; width: 64%; transform: rotate(6deg); z-index: 2; }
-.paper.list i { width: 100%; background: rgba(181, 3, 208, 0.28); }
+.paper.list i { width: 100%; background: rgba(77, 129, 208, 0.28); }
 .paper.list i:nth-of-type(3) { width: 70%; }
 .paper.cardp {
   left: 16%;

@@ -8,7 +8,18 @@ Reference fidelity and a rich set of Ben-authorized photos are required before t
 
 ## Guestio section map
 
-Reference captured 2026-11-07 from https://go.guestio.com/. Computed styles, not a guessed palette:
+## Current accent (November 8, 2026)
+
+Ben asked for Nicky’s own site colors instead of the Guestio magenta. Layout, type, and structure stay Guestio. Only the accent changed.
+
+Observed on November 8, 2026, desktop 1440, computed style:
+
+- https://www.nickybillou.com/ — primary buttons (“BOOK NICKY”, “BOOK A TALK”, “LEARN MORE”) and inline links: `rgb(77, 129, 208)` / `#4d81d0`, white label on the buttons. Header bar: `rgb(28, 34, 35)`. Page background: `rgb(224, 224, 224)`.
+- https://www.ecircleacademy.com/ — primary buttons (“Schedule a Success Call”): `rgb(255, 151, 58)` / `#ff973a`, white label. Secondary buttons (“Download My Book”, “Watch Webinar”): `rgb(74, 175, 255)`. A section background: `rgb(56, 122, 173)`. Header: black. Page background: `rgb(246, 245, 242)`.
+
+Chosen accent: `#4d81d0` everywhere the page had used `#b503d0`, including the package ticket, interview card, checks, and buttons. It is the personal site’s single action-and-link color, which is the same role the magenta had. The academy orange was not used for those fills: white text on `#ff973a` is about 2.2:1. White on `#4d81d0` is about 3.9:1, the same pairing the personal site uses on its buttons. Large button labels clear the large-text bar. Small 11px labels are the weaker pair and use the same blue the personal site uses for links.
+
+Reference captured 2026-11-07 from https://go.guestio.com/. Those computed styles were the previous accent, not the current one:
 
 - Product name and the magenta buttons: `rgb(181, 3, 208)` / `#b503d0`. Poppins, weight 900, uppercase. The product-name word measured 58px.
 - Magenta button label: Poppins 28px, weight 700. Subhead: 20px, weight 400. Corner radius 5px.
@@ -17,7 +28,7 @@ Reference captured 2026-11-07 from https://go.guestio.com/. Computed styles, not
 - A green order button, `rgb(55, 202, 55)`, is also on the reference. It was not applied. The correction asked for the magenta product treatment. The earlier blue-violet `#6d28d9` is gone.
 - Desktop document height on that capture pass was 9952 CSS pixels. Earlier reference PNGs stopped at 5200 and cut the close. The comparison packet uses a later full-document capture.
 
-Visual system: light gray page, black header, magenta-outlined banner, centered headline with the product name in `#b503d0`, a real photo beside a magenta-bordered offer card, magenta checks, repeated magenta buttons, and a guarantee block.
+Visual system now: light gray page, black header, `#4d81d0` banner outline, product name, offer-card border, checks, buttons, and package accent. The Guestio page used `#b503d0` in those spots. That magenta is no longer on this page.
 
 | Guestio section | Nicky section |
 | --- | --- |
@@ -29,7 +40,7 @@ Visual system: light gray page, black header, magenta-outlined banner, centered 
 | We wrote the book | Book cover and full title. On this mockup the book is shown as included with the $88 workshop. That bundle is invented; see fictional terms below. |
 | Money-back guarantee | Sample 30-day booking-or-$88-back panel. One page notice only. |
 | Who it’s for | Coaches, consultants, authors, speakers, trainers |
-| Final price CTA | The package graphic again, then an inert magenta $88 control. |
+| Final price CTA | The package graphic again, then an inert `#4d81d0` $88 control. |
 
 ## Photos
 
@@ -81,7 +92,7 @@ Sourced and unchanged: two-day live online workshop, podcast-guesting topic, bra
 
 - [x] One page, no about URL
 - [x] Product name prominent, $88 visible
-- [x] Guestio section order. Accent is the sampled magenta `#b503d0`, set in Poppins.
+- [x] Guestio section order and Poppins. Accent is Nicky’s observed `#4d81d0`, not Guestio magenta.
 - [x] Real Nicky photos stay as proof. The product image is the workshop, book cover, and guest kit.
 - [x] noindex, no script, no form
 - [x] Inert closing control. One page-level notice only.
