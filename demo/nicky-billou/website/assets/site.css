@@ -80,6 +80,7 @@ h1 {
 h1 .accent { color: var(--accent); }
 .lede, .proof-strip { max-width: 720px; margin: 0 auto 12px; text-align: center; }
 .proof-strip { font-size: 15px; margin-bottom: 22px; }
+.early-cta { display: none; }
 .layout {
   display: grid;
   grid-template-columns: 1.25fr 0.78fr;
@@ -287,6 +288,7 @@ footer { text-align: center; color: #3c4446; padding: 28px 16px 40px; font-size:
 footer p { margin: 0 0 8px; }
 @media (max-width: 800px) {
   .layout, .book, .keynotes, .student-grid { grid-template-columns: 1fr; }
+  .early-cta { display: block; margin: 0 auto 18px; }
   .side { position: static; }
   .hero-photo img { height: 220px; }
   .shots { grid-template-columns: repeat(3, 1fr); gap: 8px; }
