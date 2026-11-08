@@ -68,9 +68,14 @@ November 7 copy batch, from the selected Muse lines only. Narrator is I/my/me. B
 - Under $88: “Two days, live and online, with me. One new client could pay for the workshop many times over.” That sentence is a conditional frame, not a client count or an income result.
 - Guarantee paragraph: “You worked hard for that $88, and it counts. Follow the workshop and use what you learn. If you don’t book a podcast in 30 days, I’ll give you your $88 back. I take the risk. You take the first step.”
 
-Sourced and not invented: two-day live online workshop, podcast-guesting topic, brand topic, biography, book title and co-authors, and the $88 price Ben approved for the mockup.
+Sourced and not invented: two-day live online workshop, podcast-guesting topic, brand topic, the named podcasts, the book title and co-authors, and the $88 price Ben approved for the mockup.
 
-Sourced and unchanged: two-day live online workshop, podcast-guesting topic, brand topic, biography, book title and co-authors, $88 display price only.
+Removed from the sales page on November 8, 2026. Do not put them back without an exact primary quote, its URL, and Nicky as the named subject. Do not borrow a line that names someone else.
+
+- “New York Times bestselling author” and “11 books, including 7 on leadership and influence.” The only New York Times wording supplied from nickybillou.com names Raymond Aaron. The counts are unverified. Nothing was substituted.
+- “I founded eCircle” and “founder of eCircle.” The notes and the two supplied pages do not quote that role for Nicky. The footer still names eCircle as the relationship brand. That is not a job title.
+
+Sourced and unchanged: two-day live online workshop, podcast-guesting topic, brand topic, the named podcasts, book title and co-authors, $88 display price only.
 
 ## Checklist
 
