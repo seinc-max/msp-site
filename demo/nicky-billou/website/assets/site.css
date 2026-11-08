@@ -1,226 +1,248 @@
-/* One-page demo. Standalone. Not the Trueline marketing stylesheet. */
-:root {
-  --ink: #141820;
-  --paper: #f4efe6;
-  --muted: #3c4450;
-  --line: #e0d6c6;
-  --gold-bg: #f0d48a;
-  --navy: #141b26;
-  --white: #fff;
-  --focus: #0b57d0;
-}
+/* Get Booked & Get Paid — Nicky Billou (v7)
+   Grok demo's layout/flow + Nicky's REAL colours, from his live site:
+   near-black header #1c2223, white, BLUE buttons #4d81d0 (sampled from
+   his live buttons), light grey #f6f6f6. Raleway + Work Sans.
+   v6.1 correction stands: the old red-orange was Squarespace's
+   delete-button red, not his brand colour — never use it here.
+   No Guestio purple, no Guestio font. */
 * { box-sizing: border-box; }
+:root {
+  --accent: #4d81d0;
+  --accent-dark: #3a6bb5;
+  --ink: #272727;
+  --muted: #555555;
+  --bg: #f6f6f6;
+  --white: #ffffff;
+  --line: #e7e7e7;
+  --dark: #1c2223;
+}
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
-  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
 }
 img { max-width: 100%; height: auto; display: block; }
-a { color: #12315c; }
-:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
-.skip {
-  position: absolute;
-  left: 12px;
-  top: -48px;
-  background: #fff;
-  color: var(--ink);
-  padding: 8px 12px;
-  z-index: 5;
-}
-.skip:focus { top: 12px; }
+a { color: var(--accent); }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 12px; top: 12px; background: #fff; padding: 10px 14px; z-index: 10; }
+
+/* Demo bar + masthead — one black header zone, like his own site */
 .demo-bar {
-  background: var(--navy);
-  color: var(--gold-bg);
-  text-align: center;
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  padding: 7px 16px;
+  margin: 0; padding: 8px 12px; text-align: center;
+  background: var(--dark); color: #fff;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
 }
-.wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 20px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 0;
-  font-family: "Segoe UI", system-ui, sans-serif;
+.demo-bar span { font-weight: 400; letter-spacing: 0.04em; text-transform: none; }
+.mast {
+  background: var(--dark); color: #fff; text-align: center;
+  font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.6rem; font-weight: 800; letter-spacing: 0.04em;
+  padding: 18px 16px 22px; margin: 0;
 }
-.brand { font-weight: 800; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
-.nav-links { display: flex; flex-wrap: wrap; gap: 6px 18px; }
-.nav-links a {
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 650;
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-}
-.hero {
-  background:
-    radial-gradient(900px 420px at 85% 20%, rgba(240, 212, 138, 0.16), transparent 60%),
-    var(--navy);
-  color: #f7f3ea;
-  padding: 18px 0 64px;
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 48px;
-  align-items: end;
-}
+
+/* Page */
+.page { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+.wrap { width: min(760px, 100%); margin: 0 auto; }
 .kicker {
-  margin: 0 0 14px;
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  color: var(--gold-bg);
+  color: var(--accent); font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; font-size: 0.85rem; margin: 40px 0 14px; text-align: center;
 }
+h1, h2, h3 { font-family: "Raleway", "Helvetica Neue", Arial, sans-serif; }
 h1 {
-  font-size: clamp(2.6rem, 5.4vw, 4.4rem);
-  line-height: 0.98;
-  letter-spacing: -0.03em;
-  font-weight: 700;
-  margin: 0 0 18px;
+  font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 800; line-height: 1.15;
+  letter-spacing: -0.01em; margin: 0 0 20px; text-align: center;
 }
-.lede { font-size: 1.28rem; line-height: 1.45; margin: 0 0 22px; max-width: 38rem; }
-.price {
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.04em;
-  margin: 0 0 18px;
-  color: var(--ink);
+h1 .accent { color: var(--accent); }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; line-height: 1.2; margin: 0 0 18px; }
+h3 { font-size: 1.2rem; font-weight: 700; margin: 0 0 6px; }
+p { margin: 0 0 18px; }
+.muted { color: var(--muted); font-size: 0.95rem; }
+strong { font-weight: 700; }
+.accent { color: var(--accent); }
+.lede { font-size: 1.15rem; max-width: 720px; margin: 0 auto 18px; text-align: center; }
+.proof-strip { font-size: 1rem; color: var(--muted); margin: 0 auto 36px; text-align: center; }
+.proof-strip strong { color: var(--ink); }
+
+/* Two-column layout */
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 40px; align-items: start; }
+.main-col { min-width: 0; }
+.main-col h2 { margin-top: 40px; }
+.main-col h2:first-child { margin-top: 0; }
+
+/* Hero photo */
+.hero-photo { margin: 0 0 8px; }
+.hero-photo img { border-radius: 12px; width: 100%; }
+.hero-photo figcaption {
+  background: var(--dark); color: #fff; border-radius: 0 0 12px 12px;
+  padding: 10px 16px; font-size: 0.95rem; font-weight: 600; margin-top: -6px; text-align: left;
 }
-.hero .price, .next .price { color: var(--gold-bg); }
+
+/* 3-shot row */
+.shots { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 24px 0 8px; }
+.shots img { width: 100%; height: 190px; object-fit: cover; border-radius: 10px; }
+
+/* Buttons — solid blue, no gradient */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 14px 22px;
-  border-radius: 999px;
-  background: var(--gold-bg);
-  color: var(--ink);
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
-  text-decoration: none;
+  display: inline-block; width: 100%; max-width: 640px; text-align: center; text-decoration: none;
+  background: var(--accent); color: #fff; border: none; border-radius: 8px; cursor: pointer;
+  padding: 18px 24px; font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.25rem; font-weight: 800; line-height: 1.25;
 }
-.hero a.btn, a.btn { color: var(--ink); background: var(--gold-bg); }
-.btn:hover { background: #fff; color: var(--ink); }
-.cta-look { cursor: default; margin: 0 0 12px; }
-.portrait {
-  width: 100%;
-  height: min(520px, 70vw);
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: 28px;
+.btn:hover { background: var(--accent-dark); }
+.btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+.btn-row { margin: 24px auto 0; text-align: center; }
+.cta-look { margin: 0; max-width: none; }
+
+/* Sticky offer sidebar */
+.side {
+  position: sticky; top: 12px;
+  background: var(--white); border: 2px solid var(--accent); border-radius: 14px;
+  overflow: hidden;
 }
-.section { padding: 72px 0; }
-h2 {
-  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-  margin: 0 0 16px;
-  max-width: 18ch;
+.side-hero { background: var(--accent); color: #fff; text-align: center; padding: 18px 16px 14px; }
+.side-hero strong { display: block; font-family: "Raleway", sans-serif; font-size: 1.25rem; font-weight: 800; letter-spacing: 0.02em; }
+.side-hero span { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.08em; }
+.side-body { padding: 24px 22px; }
+.side-body .price { font-family: "Raleway", sans-serif; font-size: 3rem; font-weight: 900; margin: 0 0 4px; text-align: center; }
+.side-body .was { text-align: center; font-weight: 700; margin-bottom: 14px; }
+.side-body .was s { color: var(--muted); }
+.save { color: var(--accent); }
+
+/* Pack mockups — pure CSS product visuals */
+.pack { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; padding: 20px 16px 0; }
+.pack-piece { text-align: center; }
+.pack-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 8px 0 0; }
+.ticket {
+  background: var(--dark); color: #fff; border-radius: 10px;
+  padding: 16px 8px; min-height: 110px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  border: 2px dashed rgba(255,255,255,0.45);
 }
-.narrow { max-width: 40rem; }
-.narrow p { margin: 0 0 14px; }
-.stack { display: grid; gap: 14px; margin-top: 28px; }
-.row {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 8px 18px;
-  background: var(--white);
-  border-radius: 20px;
-  padding: 22px 24px;
+.ticket span { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9db9e8; }
+.ticket strong { font-family: "Raleway", sans-serif; font-size: 1.05rem; font-weight: 800; }
+.ticket em { font-size: 0.75rem; font-style: normal; color: #ccc; }
+.kit { display: flex; flex-direction: column; gap: 6px; align-items: center; justify-content: center; min-height: 110px; }
+.paper {
+  background: var(--white); border: 1px solid var(--line); border-radius: 6px;
+  width: 100%; max-width: 96px; padding: 8px 10px; text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
-.num {
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-weight: 800;
-  color: var(--gold-bg);
-  background: var(--navy);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.paper b { display: block; font-size: 0.75rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.paper i { display: block; height: 4px; background: #e7e7e7; border-radius: 2px; margin-bottom: 3px; }
+.paper i:last-child { margin-bottom: 0; }
+.paper.cardp { display: flex; align-items: center; justify-content: space-between; }
+.paper.cardp i {
+  width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-style: normal; font-size: 0.7rem; font-weight: 800;
 }
-.row h3 { margin: 4px 0 6px; font-size: 1.35rem; }
-.row p { margin: 0; color: var(--muted); }
-.book {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 36px;
-  align-items: center;
+
+/* Guarantee badge (seal + text) */
+.guarantee-badge {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  margin: 22px auto 0; max-width: 560px;
 }
-.book img { width: 240px; filter: drop-shadow(0 18px 30px rgba(20, 24, 32, 0.18)); }
-.who { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
+.guarantee-badge .seal {
+  flex-shrink: 0; width: 74px; height: 74px; border-radius: 50%;
+  border: 3px solid var(--accent); color: var(--accent);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  font-size: 0.52rem; font-weight: 800; line-height: 1.4; text-transform: uppercase;
+}
+.guarantee-badge p { margin: 0; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; text-align: left; }
+.guarantee-badge p span { color: var(--accent); }
+
+/* Wide sections */
+.wide { padding: 56px 0; }
+.wide .wrap { text-align: left; }
+.wide h2 { text-align: left; }
+.wide.dark { background: var(--dark); color: #fff; border-radius: 14px; padding: 56px 40px; margin: 24px 0; }
+.wide.dark h2 { color: #fff; }
+.wide.dark .muted { color: #ccc; }
+.wide.final { text-align: center; }
+.wide.final h2, .wide.final .price { text-align: center; }
+.wide.final .price { font-family: "Raleway", sans-serif; font-size: 3rem; font-weight: 900; margin: 0 0 16px; }
+
+/* Stack — clean numbered list, no photos */
+.stack-intro { font-size: 1.1rem; }
+.stack { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 0; }
+.stack li {
+  background: var(--white); border: 1px solid var(--line); border-radius: 12px;
+  padding: 22px 24px; margin-bottom: 14px;
+}
+.stack h3 { font-size: 1.15rem; }
+.stack h3 .value { color: var(--accent); }
+.stack p { margin: 0; }
+
+/* Price box */
+.price-box {
+  background: var(--white); border: 2px solid var(--accent); border-radius: 14px;
+  padding: 32px 28px; text-align: center; margin-top: 28px;
+}
+.price-box .was { font-size: 1.2rem; font-weight: 700; margin: 0 0 4px; }
+.price-box .was s { color: var(--muted); }
+.price-box .price { font-family: "Raleway", sans-serif; font-size: 3rem; font-weight: 900; margin: 0 0 12px; }
+.price-box .fine { font-size: 0.9rem; color: var(--muted); margin: 14px 0 0; }
+
+/* Keynotes — three cards */
+.keynotes { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 24px 0; }
+.keynotes article { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+.keynotes h3 { font-size: 1.1rem; }
+.keynotes p { margin: 0; }
+
+/* Students — initial avatars, no photos */
+.student-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; }
+.student { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.student .avatar {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: 50%; background: var(--accent); color: #fff;
+  font-family: "Raleway", sans-serif; font-weight: 800; font-size: 1rem; margin-bottom: 14px;
+}
+.student .quote { font-size: 1.1rem; font-weight: 600; }
+.student p:last-child { margin: 0; }
+
+/* Episode list — text only, no thumbnails */
+.ep-list { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 10px; }
+.ep-list li { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; }
+
+/* Book */
+.book { display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: start; }
+.book img { border-radius: 12px; }
+
+/* Who it's for — chips */
+.who { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
 .who li {
-  font-family: "Segoe UI", system-ui, sans-serif;
-  background: var(--navy);
-  color: #f7f3ea;
-  border-radius: 999px;
-  padding: 10px 16px;
-  font-weight: 700;
+  border: 2px solid var(--accent); color: var(--accent); border-radius: 999px;
+  padding: 10px 22px; font-family: "Raleway", sans-serif; font-weight: 700; font-size: 1.05rem;
 }
-.creds {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 28px;
-  align-items: center;
-}
+
+/* FAQ */
 .faq details {
-  border-top: 1px solid var(--line);
-  padding: 6px 0;
+  background: var(--white); border: 1px solid var(--line); border-radius: 12px;
+  padding: 18px 20px; margin-bottom: 12px;
 }
-.faq details:last-child { border-bottom: 1px solid var(--line); }
-.faq summary {
-  cursor: pointer;
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-weight: 750;
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-}
-.faq p { margin: 0 0 14px; color: var(--muted); }
-.next {
-  background: var(--navy);
-  color: #f7f3ea;
-  border-radius: 28px;
-  padding: 48px 36px;
-}
-.next h2 { max-width: none; }
-.next a:not(.btn) { color: #fff; }
-.note {
-  margin: 0;
-  color: var(--gold-bg);
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: 0.95rem;
-  font-weight: 650;
-}
-footer {
-  padding: 8px 0 48px;
-  color: var(--muted);
-  font-family: "Segoe UI", system-ui, sans-serif;
-}
-@media (max-width: 800px) {
-  .wrap { width: min(1080px, calc(100% - 28px)); }
-  .hero { padding-bottom: 36px; }
-  .hero-grid, .book, .creds, .row { grid-template-columns: 1fr; }
-  .portrait { height: 280px; }
-  .book img { width: min(200px, 60%); }
-  .btn, .cta-look { width: 100%; }
-  .section { padding: 48px 0; }
-  .next { padding: 32px 20px; }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-weight: 700; font-size: 1.05rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 1.4rem; font-weight: 800; color: var(--accent); flex-shrink: 0; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { margin: 12px 0 0; }
+
+/* Footer */
+footer { padding: 40px 0 56px; text-align: center; color: var(--muted); font-size: 0.95rem; }
+footer p { margin: 0 0 10px; }
+footer p:last-child { margin: 0; }
+
+@media (max-width: 960px) {
+  .layout { grid-template-columns: 1fr; }
+  .side { position: static; order: -1; margin-bottom: 8px; }
+  .keynotes, .student-grid { grid-template-columns: 1fr; }
+  .book { grid-template-columns: 1fr; }
+  .book img { max-width: 300px; }
+  .wide { padding: 40px 0; }
+  .wide.dark { padding: 40px 24px; }
+  body { font-size: 17px; }
+  .shots img { height: 140px; }
 }

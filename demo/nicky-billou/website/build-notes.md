@@ -1,37 +1,293 @@
-# Nicky Billou demo notes
+# Nicky Billou demo notes — v7 (Muse, 2026-11-07)
 
-Staging path: `/demo/nicky-billou/website/` only. One buyer-facing page. This file is the only place for source limits. There is no about page.
+## v7.1 — voice pass: 1st/2nd person only (Ben, 2026-11-07 ~19:49 EST: "Should be speaking in 1st person or 2nd person but not third person on the site")
 
-## Correction
+The sales page is Nicky speaking (1st person) to the reader (2nd person).
+Every 3rd-person reference to Nicky rewritten: lede ("My step-by-step
+system — I co-founded eCircle Academy…"), "My aim for this program",
+hero caption ("Me, on stage…"), "My own words, from my sites and my
+book", Georgetown bio ("I graduated… I created…"), "My show is still
+going", book ("I wrote it…", "My other books"), FAQ "What is…" ("My
+step-by-step program") and "Who teaches it?" ("I do. I'm the
+co-founder…"), keynotes intro ("the same three keynotes I speak on
+stages"), demo bar ("DEMO — a sample site"), footer demo note
+(neutral, no person). The name "Nicky Billou" now appears only as
+labels: page title, the story's "— Nicky Billou" signature, the footer
+contact line, and image alt text (screen-reader descriptions of who is
+in the photo). No "he/his" anywhere in the page.
 
-The first draft put verification talk on the sales pages: headings about what a page “states,” warnings about unconfirmed claims, catalog data, and a past workshop date shown as if it were the offer. That failed the job. An accepted demo is buyer-facing sales copy. Source caveats stay in this note. Past dates are not presented as upcoming. Do not invent proof or a guarantee to fill a gap. The only price on the page is $88, which Ben approved for this demo on November 7, 2026. No currency code, billing period, tax, comparison price, deadline, or checkout was added.
+## v7 — Grok layout + Nicky's REAL colours (Ben, 2026-11-07 ~19:29 EST: "Yes — rebuild as v7")
+
+Ben approved the rebuild: Grok demo's layout/flow + Nicky's true colours + v6.1's corrected facts.
+
+- **COLOUR CORRECTION (Ben caught it; Muse verified live 2026-11-07).** v6's
+  red-orange #f0523d is NOT Nicky's brand colour — it is Squarespace's
+  delete/danger red (reject buttons, trash hover, confirmation dialogs) in
+  his theme CSS file. His VISIBLE brand, sampled from his live site:
+  near-black header #1c2223, white, BLUE buttons #4d81d0, light grey
+  #f6f6f6. v7 uses #4d81d0 accent (hover #3a6bb5), #1c2223 dark, #f6f6f6
+  background. Raleway + Work Sans kept (those were correct). The
+  charcoal + red-orange read as Trueline's palette (Trueline orange
+  #f97316) — that is why Ben flagged it.
+- **Layout/flow (from the Grok-built demo, 84b9af32):** black masthead,
+  centred H1, two-column layout with a STICKY offer sidebar (offer + CTA
+  stay on screen while scrolling), CSS product mockups (lessons ticket,
+  worksheets/papers, show-list card), "Who it's for" chips, guarantee
+  band, book section, FAQ, closing repeat. On mobile the sidebar stacks
+  FIRST (right after the H1). Sidebar kept compact on purpose (no
+  6-item list inside it) so it fits the viewport while sticky — the
+  Grok sidebar is taller than the viewport and its bottom is cut off.
+- **NOT carried over from the Grok demo:** Guestio purple #b503d0 +
+  Poppins; the "2-day live online workshop for $88" framing (his real
+  workshop is $4,000; Ben's $88 product is the 6-lesson course);
+  "I founded eCircle" (he is co-founder); "New York Times bestselling
+  author of 11 books" (unverified); "Borrow the host's audience"
+  (Mike Moll's line, not Nicky's); book included with the workshop
+  (v7 keeps the book separate, as in v6.1).
+- **Kept from v6.1, unchanged:** H1, lede, proof strip, promise,
+  "From Tehran to the mic" story, 3 keynotes, 3 students (invented),
+  episode dates EP831 Nov 6 / EP830 Nov 3 / EP829 Oct 30 / EP828 Oct 27,
+  book section (no price/stars/Amazon link in body), 10 FAQs, one CTA
+  string ("Yes — I want to get booked & get paid for $88") and one
+  guarantee wording everywhere, $88 / $532 / saving $444, no Finish Line
+  Thinking link.
+- **Photos (5):** hero nicky-portrait.jpg (kept from v6) + 3-shot row
+  (nicky-stage.jpg, nicky-36.jpg, podcast-home.jpg — fetched from the
+  Grok demo preview 84b9af32, Nicky's own photos) + book cover. CSS
+  mockups carry the product visuals; no other photos.
+
+## v6.1 — two factual fixes (ChatGPT v5 review, verified live 2026-11-07)
+
+- **Episode list corrected.** v5/v6 listed EP829 Nov 4, EP828 Nov 3, EP826
+  Nov 2 — WRONG dates, and EP830/EP827 omitted. The live show site
+  (datetime attributes, checked 2026-11-07) gives: EP831 Nov 6, EP830
+  Nov 3, EP829 Oct 30, EP828 Oct 27, EP827 Oct 23, EP826 Oct 20. The page
+  now lists the actual latest four (EP831/830/829/828) with those dates.
+  ChatGPT caught this; the research file agreed; the live HTML confirms it.
+- **Finish Line Thinking link REMOVED from the footer.** The site loads
+  but carries unrelated spam posts ("cheap nfl jersey" etc., verified live
+  2026-11-07). Do not link it from a sales page until it is cleaned up.
+  The book is still named in the "other books" paragraph (title only, no
+  link).
+
+## v6 — Nicky's own look and voice (Ben, 2026-11-07 ~16:21 EST: "Make sure
+you don't use the exact same language as guestio, make it better, same with
+colors and fonts, match it to Nicky's style based on his other websites,
+when you're done ppl shouldn't say they are the same site, also too many
+unnecessary pictures")
+
+v5's "almost an exact duplicate of Guestio" direction is REVERSED. v6 is
+built from Nicky's own sites, not Guestio's:
+
+- **Look:** nickybillou.com (Squarespace theme CSS, read live 2026-11-07):
+  Raleway headings + Work Sans body, charcoal #272727, light grey #f6f6f6,
+  red-orange accent #f0523d. **[WRONG — corrected in v7: #f0523d is
+  Squarespace's delete-button red, not his brand colour; his visible
+  accent is blue #4d81d0.]** thethoughtleaderrevolution.com adds black +
+  white + gold (#cbae56) — the dark section uses charcoal, not purple.
+  Sentence-case headings (not all-caps). Solid red-orange CTAs (no
+  gradient). Single column, max-width 760px — no two-column layout, no
+  sticky order card, no purple anywhere. Nobody should call this Guestio.
+- **Voice:** Nicky's own words, from his sites and book — "Become the
+  Steve Jobs of your industry, through personal branding and podcast
+  guesting", "Greatness Isn't Given. It's Claimed.", "Make the Difference
+  You Were Born to Make", "Attract 3–5 new high-paying clients every month
+  without spending a dime on advertising!", "Learn how to add $100,000 to
+  $250,000 to your business, this year!" No Guestio phrases remain
+  ("gamechanger", "practically giving this away", "no trial or catch",
+  "unleash your true potential", "dominate your niche", "don't let this
+  opportunity pass you by", "unlock your full potential" — all cut). The
+  "borrow the host's credibility" line is also cut — that was Mike Moll's
+  (howtoguestpodcast.com), not Nicky's.
+- **Photos: 2 only.** Hero stage portrait (nicky-portrait.jpg) + book
+  cover (book-get-booked.png). The 6 stack-row photos, the portrait-blue
+  image, the audience band, and the 4 episode thumbnails are all CUT and
+  deleted from the branch. Students get CSS initial avatars (no photos).
+  Episodes are a text list. The "what you'll master" section is Nicky's
+  own three keynotes (Podcast Guesting For Leaders / Thought Leadership
+  Mastery / Legendary Presence) as three cards.
+- **Copy fixes carried over from the v5 reviews (Claude 7/10, Gemini
+  7.5/10):** one CTA string everywhere — "Yes — I want to get booked &
+  get paid for $88" (grammatical: "I want to get booked"); one guarantee
+  wording everywhere — "Follow the system and pitch 10 shows in 30 days.
+  No booking? Email us within 14 days after that and we'll refund your
+  $88 in full." (the refund window now extends past the 30-day booking
+  window; "follow the system" replaces the confusing 4-steps-vs-6-lessons);
+  the book's Amazon price and star rating are OUT of the body (footer link
+  only); disclaimers ("individual results vary", "'6 Figures+' is the
+  book's title") moved to the footer; "3–5 clients a month" moved into the
+  hero promise; a bold proof strip under the H1 (600+ shows · 830+ episodes
+  · 4 books); H1 now says "podcasts"; FAQ gains "What if I have no book or
+  no audience?" and "Is the book included?" (No — the book is the method in
+  print, a separate purchase).
+- **NOT applied from those reviews:** Claude's "add the Guestio step bar"
+  (refuted — Guestio's page has no visible step bar; the "Step #" text is
+  GHL funnel metadata, not a page element); Gemini's "yellow CTAs"
+  (refuted — Guestio's CTAs are purple, screenshotted live); putting the
+  book in the stack (changes what the program is — Nicky's call).
+
+## v5 — almost an exact Guestio duplicate (SUPERSEDED by v6, Ben 2026-11-07)
+
+v4 had Guestio's voice; v5 copies the LOOK, from a live read of
+go.guestio.com (screenshotted 2026-11-07): black top bar with the brand
+name, purple-bordered eyebrow box, huge centered H1 (black + purple,
+product name and price in purple), light-grey page, Poppins, two-column
+layout with a STICKY order card on the right (product mock-up on a purple
+block, list price struck through + "YOU'RE SAVING $444!", "Start Your
+Order" button, payment methods, 30-day guarantee seal, "HERE'S EVERYTHING
+INCLUDED" with the 6 parts), purple gradient CTAs with cart icon, purple
+bullet dots, guarantee headline in black + purple, purple urgency band,
+dark audience band, white "connect with a global audience" box with 3 icon
+columns, purple mastery band with checkmark lists. The roles, comparison,
+and objections sections are GONE (Guestio has none — the who-this-is-for
+is one line in the letter now). The podcast page is DELETED; the 4 latest
+episodes live as a strip on the home page. One page total.
+
+## Visual-only demo — scope (Ben, 2026-11-07)
+
+This demo is judged on conversion layout and copy ONLY — not site function.
+No checkout, no contact form, no lead capture, no legal pages, no tracking.
+Those are not defects here; they are out of scope. The 4-LLM reviews below
+were told the same thing in their prompt, but both landed reviews still
+flagged function items — those findings are marked out of scope in the
+triage file and were NOT actioned.
+
+## v4 — Guestio copy voice (Ben, 2026-11-07: "The copy layout and style is
+nothing like guestio")
+
+v3 had Guestio's structure but Trueline's calm house voice. v4 rewrites the
+copy in Guestio's direct-response voice: ALL-CAPS section headers, exclamation
+marks, "YES! I Want Get Booked & Get Paid — Just $88!" CTAs, short punchy
+sentences, benefit-led bullets. Same facts, same prices, same flow — only the
+voice changed. Section headers now read like Guestio's: "HERE'S EVERYTHING
+YOU'RE GETTING!", "DOMINATE YOUR NICHE WITH PODCAST POWER!", "DON'T LET THIS
+OPPORTUNITY PASS YOU BY!", "HERE'S WHAT HAPPENS WHEN YOU GET BOOKED!",
+"UNLOCK YOUR FULL POTENTIAL" is folded into the stack (see v3).
+
+## v3 — merge + make it all up (Ben, 2026-11-07)
+
+- Pages merged: About + Books folded into the home page; Contact folded into
+  the footer links. About, Books, and Contact pages DELETED. Two pages remain:
+  home (sales page) + podcast (episodes — the only genuinely different content).
+- Repetition cut: the 4 steps appeared 3x (steps bar, stack, "here's what
+  you'll get", mastery) — now once in the steps bar and once as the 6-row
+  stack (the 4 steps + follow-up + listeners-to-clients). The "here's what
+  you'll get" and mastery sections are gone. The guarantee appears 2x, not
+  3x. "One lead pays for it many times over" appears once (outcomes), not
+  twice. Nicky's "one great new connection" line appears once (letter close),
+  not 3x.
+- **Ben's order: "Make it all up."** The gaps are now filled with invented
+  demo content. EVERYTHING below is invented and must be replaced or
+  confirmed by Nicky before anything goes live:
+  - Stack values: $97 / $97 / $97 / $97 / $47 / $97 = $532 total,
+    "YOU'RE SAVING $444!", $88. Invented.
+  - Format: 6 short video lessons (~10 min each) + worksheets + pitch
+    templates + show-finder list. Delivered instantly. Lifetime access.
+    Watch on any device. Invented.
+  - Guarantee terms: follow the 4 steps and pitch 10 shows in 30 days; no
+    booking → email for a full $88 refund within 30 days. Invented.
+  - Student stories (3): Sarah Mitchell (business coach, 4 shows first
+    month, 2 clients); David Okafor (consultant, first booking in 9 days,
+    $5,000 engagement); Maria Chen (author, 6 shows in 6 weeks, book sales
+    doubled). ALL THREE INVENTED — sample names and outcomes for layout
+    only. Nicky must replace them with real students.
+- Book cards for the other 3 books: Finish Line Thinking
+  (finishlinethinking.com); The Thought Leader's Journey (Paperback $25.00,
+  ThriftBooks listing, Amazon short link https://amzn.to/3FqR0ie); The Power
+  Of Connecting (Paperback $25.00, ThriftBooks listing; no Amazon link found
+  — linked to his Goodreads author page instead).
 
 ## Reference
 
-Section order follows https://go.guestio.com/: hook, story, problem, what you get, the book, who it is for, questions, one next step. Guestio’s name, prices, guarantee, people, and testimonials are not used.
+- Primary, design + copy: https://go.guestio.com/ — section order, elements,
+  AND voice (v4). Guestio's name, prices, people, and testimonials are NOT
+  used. Their guarantee SHAPE is used (30-day first booking). Do NOT copy
+  Guestio's footer disclaimer (it contradicts its own guarantee).
+- Wording only: https://www.howtoguestpodcast.com/ (4-step frame: story →
+  shows → booked → interview; "borrow their credibility"; DIY-vs-system
+  comparison; "one lead pays for it many times over") and
+  https://marciepaige.com/booked/ ("hosts want valuable content, not follower
+  counts"; "never been on a podcast"; "no fluff, no frills"). Angles only —
+  none of their claims, prices, or guarantees transfer.
+- Product: "Get Booked & Get Paid", $88. Ben approved $88 on 2026-11-07. The
+  name comes from Nicky's book title. No currency code, billing period, tax,
+  comparison price, deadline, or checkout was added.
 
-## What the pages use
+## What the pages use (verified)
 
-Faithful summary of his public biography: born in Iran, left with his family, founder of eCircle, host of The Thought Leader Revolution and The Sovereign Man Podcast, New York Times bestselling author of 11 books including 7 on leadership and influence, co-author of the book below. Those lines are his published bio, not a separate check.
-
-Program, without dates: Get Booked & Get Paid is described on his workshop page as a two-day live online workshop with him. Topics used on the sales page: how podcast guesting reaches the people you want, and how to shape a brand that brings clients to you. Audience list from eCircle: coaches, consultants, authors, speakers, trainers.
-
-Book title kept in full. It is not written as a promise of income.
+- Biography: born Tehran, Iran; left with his family; lived in 5 countries on
+  3 continents; Magna Cum Laude, Georgetown University; read 3,000+ books;
+  co-founder of eCircle Academy; creator of the Thought Leader / Heart Leader™
+  Designation; host of The Thought Leader Revolution and The Sovereign Man
+  Podcast; 4 best-selling books; speaks for RBC, Lululemon, Royal LePage,
+  TorStar Media; Raymond Aaron introduced him at the Transformational
+  Leadership Council (founded by Jack Canfield), July 2025; keynotes: Podcast
+  Guesting For Leaders, Thought Leadership Mastery, Legendary Presence.
+- Proof: 600+ shows as a guest; 830+ episodes hosted (EP831 published Nov 6,
+  2026); "#1 Thought Leadership podcast" is Nicky's own description of his
+  show — footnoted as such on the sales page.
+- Book: Get Booked & Get Paid: How To Generate 6 Figures+ A Year, Through
+  Podcast Guesting. With Marc Von Musser (Tony Robbins' former director of
+  coaching) and Theresa Dugwell. Paperback $24.61, Kindle $6.73, 3.8 stars
+  (5 ratings), Amazon, November 2026. The "6 Figures+" is the book's title,
+  not a promise — said on the page.
+- The $400,000 figure: from his book ("over $400,000 in sales, part-time, in
+  5–7 hours a week"). Attributed to the book on the page, not a promise.
+  The $500,000 figure on the eCircle site conflicts with it and is NOT used.
+- The "3–5 new high-paying clients a month, without spending a dime on
+  advertising" line is the eCircle workshop page's promise, framed on the page
+  as his aim for the buyer. "Individual results vary" is stated next to it.
+- Podcast episodes EP826–EP831 with titles and dates, from the live show site,
+  November 2026.
+- Photos (all from Nicky's own sites, November 2026). **v6 uses TWO:**
+  nicky-portrait.jpg from Photo_Nicky_01.jpg (stage shot, nickybillou.com)
+  in the hero; book-get-booked.png from Book_GetBookedGetPaid.png in the
+  book section. The rest were CUT in v6 and deleted from the branch:
+  nicky-letter.jpg, nicky-stage-blue.jpg, nicky-stage-cream.jpg,
+  nicky-portrait-blue.jpg, nicky-closeup.jpg, nicky-casual.jpg,
+  nicky-pointing.jpg, audience.jpg, ep826/828/829/831.jpg, media-logos.png.
+  Local copies remain in the workspace photos/ folder and the local clone.
 
 ## Held out of the sales pages
 
-- Workshop dates and hours from the Get Booked page: May 14–15, 2026, 11 a.m. to 5 p.m. Eastern, Zoom. Those dates are past as of November 2026. They are not replaced with a new date.
-- Income figures, client counts, and testimonials published on his marketing pages.
-- Guarantee. None is stated. The displayed price is only the approved $88.
-- Amazon ASIN, page count, and publisher details.
-- Portrait: `assets/images/nicky-portrait.jpg` from Photo_Nicky_01.jpg on nickybillou.com.
-- Book cover: `assets/images/book-get-booked.png` from Book_GetBookedGetPaid.png on nickybillou.com/about.
-- finishlinethinking.com was opened earlier and did not add biography beyond the site name. It is only a “read more” link.
+- Workshop dates and hours from the Get Booked page: May 14–15, 2026, 11 a.m.
+  to 5 p.m. Eastern, Zoom. Past as of November 2026; not replaced with a new
+  date. The $4,000 / $8,000 workshop prices are not used: the $88 product is
+  the low-ticket program, not that workshop.
+- Income figures, client counts, and testimonials published on his marketing
+  pages (beyond the attributed $400,000 from the book).
+- Amazon ASIN, page count, publisher details.
+- No lesson counts, durations, or delivery format were published for the $88
+  program — the format on the page is invented per Ben (see v3).
 
-## Demo behavior
+## Review status
 
-The one page is `noindex`. One DEMO bar. The closing control is a static picture of a button, with the line “Demo. This button is not active.” There is no script, form, or submission. Other controls are in-page links.
+- v1 was NOT reviewed by the 4 LLMs. Muse applied the expert lenses as a
+  self-check only. Ben caught this 2026-11-07. A 4-LLM review (8 lenses:
+  Oli Gardner, Nielsen Norman Group, Joanna Wiebe, Alex Hormozi, John Moran,
+  Atul Gawande, Simon Willison, Russell Brunson) was started 2026-11-07.
+- **v5 review round: 2 of 4 landed** (Gemini 7.5/10, Claude 7/10) and were
+  triaged (v5-review-gemini-20261107.md, v5-review-claude-20261107.md).
+  Grok + ChatGPT v5 reviews were still running when Ben reversed the
+  duplicate direction (16:21 EST) — the round's "near-duplicate" scoring
+  is now moot, but the copy/CTA/guarantee findings were carried into v6
+  (see v6 notes above). Full triage of the original v1 round:
+  review-triage-20261107.md.
+- Expert lenses applied in v4 (self-check): Oli Gardner (one goal per
+  section, hero = product name, CTA rhythm, mobile-first); Joanna Wiebe
+  (second person, grade-10 — now in Guestio's direct-response voice per Ben);
+  Nielsen Norman Group (consistent nav, skip link, focus visible, 44px+
+  targets, native FAQ details with chevrons); Alex Hormozi (offer stack +
+  guarantee — both invented per Ben, see v3); Russell Brunson (low-ticket
+  front-end $88, book as companion step); John Moran (headline matches "get
+  booked on podcasts" intent); Atul Gawande (every verified claim, price, and
+  link checked — invented items are listed under v3, not presented as fact);
+  Simon Willison (N/A — no AI features on page).
 
-## Criteria
+## Recommendation for Ben (not on the page)
 
-One goal, readable on a phone, second-person copy, offer limited to sourced topics, no ad pixels, checklist is this note, button does not call the network. Hook, story, offer, one next step. Ads and extra AI features are not part of this page.
+Before Nicky sees it, decide: the 3 invented student stories are the one
+thing that could embarrass Trueline if Nicky takes them as real. They are
+marked DEMO by the site banner and listed here as invented — but tell Nicky
+plainly when you show him the page that the students, the stack values, the
+format, and the guarantee terms are all samples for him to replace.
