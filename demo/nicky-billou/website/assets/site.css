@@ -351,8 +351,11 @@ footer { text-align: center; color: #3c4446; padding: 18px 16px 32px; font-size:
 @media (max-width: 800px) {
   .layout, .book { grid-template-columns: 1fr; }
   .mobile-cta { display: block; margin: 0 0 8px; }
-  .hero-photo, .shots img { height: 220px; }
-  .shots { grid-template-columns: 1fr; }
+  .hero-photo { height: 220px; }
+  .shots { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .shots img { height: 120px; min-width: 0; object-position: center 22%; }
+  .shots img:nth-child(2) { object-position: center top; }
+  .shots img:nth-child(3) { object-position: center 42%; }
   .book img { width: min(220px, 100%); }
   h1 { font-size: 34px; }
   .side .pack-piece img { max-height: 110px; }
