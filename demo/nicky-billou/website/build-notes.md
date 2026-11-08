@@ -8,9 +8,19 @@ Reference fidelity and a rich set of Ben-authorized photos are required before t
 
 ## Guestio section map
 
+## Best of both (November 8, 2026)
+
+Ben asked for the calmer Muse page and the stronger parts of this page, not a wholesale copy of either.
+
+From the Muse preview at https://demo-nicky-billou-redo.msp-site.pages.dev/demo/nicky-billou/website/: sentence-case headline, the line “Get booked on podcasts. Turn interviews into clients.” as the H1, a short kicker, a wide stage photo beside a compact offer card, and a quieter type scale in the self-hosted Poppins. Not taken: six video lessons, struck prices, student quotes, episode counts, book counts, co-founder or New York Times lines, the 10-show / 14-day guarantee, and the extra footer caveats.
+
+From this page: the workshop ticket, real book cover, and guest-kit sheets, repeated in the card, the “what you’ll get” block, and the close. The book is in that list. Buyer copy stays first person for Nicky and second person for the buyer. The $88 price and the 30-day “I’ll give you your $88 back” wording stay, with no new conditions. One notice only. Hero photo is nicky-stage.jpg. The proof row is nicky-34, nicky-36, and podcast-home.
+
+The card button sits above the $88 explanation so it can clear a 900px desktop fold. On a narrow screen the first button is directly under the hero photo. FAQ rows show a plus that becomes a minus when open. Small labels and links use `#3a6bbd`, a darker step of `#4d81d0` for contrast. Large fills and the headline word stay `#4d81d0`.
+
 ## Current accent (November 8, 2026)
 
-Ben asked for Nicky’s own site colors instead of the Guestio magenta. Layout, type, and structure stay Guestio. Only the accent changed.
+Ben asked for Nicky’s own site colors instead of the Guestio magenta. The later hybrid keeps that blue and the Guestio sales order, with the calmer headline above.
 
 Observed on November 8, 2026, desktop 1440, computed style:
 
