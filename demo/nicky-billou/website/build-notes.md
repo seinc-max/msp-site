@@ -1,10 +1,44 @@
-# Nicky Billou demo notes — REDO v6 (Muse, 2026-11-07)
+# Nicky Billou demo notes — v7 (Muse, 2026-11-07)
 
-Staging path: `/demo/nicky-billou/website/` only. ONE page now: the home
-sales page. Every page is `noindex`. One DEMO bar. The closing control is a
-static picture of a button, with the line "Demo. Checkout is not connected
-yet — this button does nothing." There is no script, form, or submission.
-Other controls are in-page or outbound links.
+## v7 — Grok layout + Nicky's REAL colours (Ben, 2026-11-07 ~19:29 EST: "Yes — rebuild as v7")
+
+Ben approved the rebuild: Grok demo's layout/flow + Nicky's true colours + v6.1's corrected facts.
+
+- **COLOUR CORRECTION (Ben caught it; Muse verified live 2026-11-07).** v6's
+  red-orange #f0523d is NOT Nicky's brand colour — it is Squarespace's
+  delete/danger red (reject buttons, trash hover, confirmation dialogs) in
+  his theme CSS file. His VISIBLE brand, sampled from his live site:
+  near-black header #1c2223, white, BLUE buttons #4d81d0, light grey
+  #f6f6f6. v7 uses #4d81d0 accent (hover #3a6bb5), #1c2223 dark, #f6f6f6
+  background. Raleway + Work Sans kept (those were correct). The
+  charcoal + red-orange read as Trueline's palette (Trueline orange
+  #f97316) — that is why Ben flagged it.
+- **Layout/flow (from the Grok-built demo, 84b9af32):** black masthead,
+  centred H1, two-column layout with a STICKY offer sidebar (offer + CTA
+  stay on screen while scrolling), CSS product mockups (lessons ticket,
+  worksheets/papers, show-list card), "Who it's for" chips, guarantee
+  band, book section, FAQ, closing repeat. On mobile the sidebar stacks
+  FIRST (right after the H1). Sidebar kept compact on purpose (no
+  6-item list inside it) so it fits the viewport while sticky — the
+  Grok sidebar is taller than the viewport and its bottom is cut off.
+- **NOT carried over from the Grok demo:** Guestio purple #b503d0 +
+  Poppins; the "2-day live online workshop for $88" framing (his real
+  workshop is $4,000; Ben's $88 product is the 6-lesson course);
+  "I founded eCircle" (he is co-founder); "New York Times bestselling
+  author of 11 books" (unverified); "Borrow the host's audience"
+  (Mike Moll's line, not Nicky's); book included with the workshop
+  (v7 keeps the book separate, as in v6.1).
+- **Kept from v6.1, unchanged:** H1, lede, proof strip, promise,
+  "From Tehran to the mic" story, 3 keynotes, 3 students (invented),
+  episode dates EP831 Nov 6 / EP830 Nov 3 / EP829 Oct 30 / EP828 Oct 27,
+  book section (no price/stars/Amazon link in body), 10 FAQs, one CTA
+  string ("Yes — I want to get booked & get paid for $88") and one
+  guarantee wording everywhere, $88 / $532 / saving $444, no Finish Line
+  Thinking link.
+- **Photos (5):** hero nicky-portrait.jpg (kept from v6) + 3-shot row
+  (nicky-stage.jpg, nicky-36.jpg, podcast-home.jpg — fetched from the
+  Grok demo preview 84b9af32, Nicky's own photos) + book cover. CSS
+  mockups carry the product visuals; no other photos.
 
 ## v6.1 — two factual fixes (ChatGPT v5 review, verified live 2026-11-07)
 
@@ -31,7 +65,9 @@ built from Nicky's own sites, not Guestio's:
 
 - **Look:** nickybillou.com (Squarespace theme CSS, read live 2026-11-07):
   Raleway headings + Work Sans body, charcoal #272727, light grey #f6f6f6,
-  red-orange accent #f0523d. thethoughtleaderrevolution.com adds black +
+  red-orange accent #f0523d. **[WRONG — corrected in v7: #f0523d is
+  Squarespace's delete-button red, not his brand colour; his visible
+  accent is blue #4d81d0.]** thethoughtleaderrevolution.com adds black +
   white + gold (#cbae56) — the dark section uses charcoal, not purple.
   Sentence-case headings (not all-caps). Solid red-orange CTAs (no
   gradient). Single column, max-width 760px — no two-column layout, no
