@@ -1,5 +1,21 @@
 # Nicky Billou demo notes — v7 (Muse, 2026-11-07)
 
+## v7.1 — voice pass: 1st/2nd person only (Ben, 2026-11-07 ~19:49 EST: "Should be speaking in 1st person or 2nd person but not third person on the site")
+
+The sales page is Nicky speaking (1st person) to the reader (2nd person).
+Every 3rd-person reference to Nicky rewritten: lede ("My step-by-step
+system — I co-founded eCircle Academy…"), "My aim for this program",
+hero caption ("Me, on stage…"), "My own words, from my sites and my
+book", Georgetown bio ("I graduated… I created…"), "My show is still
+going", book ("I wrote it…", "My other books"), FAQ "What is…" ("My
+step-by-step program") and "Who teaches it?" ("I do. I'm the
+co-founder…"), keynotes intro ("the same three keynotes I speak on
+stages"), demo bar ("DEMO — a sample site"), footer demo note
+(neutral, no person). The name "Nicky Billou" now appears only as
+labels: page title, the story's "— Nicky Billou" signature, the footer
+contact line, and image alt text (screen-reader descriptions of who is
+in the photo). No "he/his" anywhere in the page.
+
 ## v7 — Grok layout + Nicky's REAL colours (Ben, 2026-11-07 ~19:29 EST: "Yes — rebuild as v7")
 
 Ben approved the rebuild: Grok demo's layout/flow + Nicky's true colours + v6.1's corrected facts.
