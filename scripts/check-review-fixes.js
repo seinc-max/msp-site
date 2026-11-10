@@ -133,6 +133,13 @@ const calc = read('margin-leakage-calculator.html');
 if (!/calculateMargin\(\);\s*<\/script>/.test(calc)) fail('calculator does not run on load');
 else pass('calculator calls calculateMargin on load');
 if (calc.includes('id="out-leakage">—')) pass('calculator placeholder remains until the script runs');
+for (const file of ['margin-leakage-calculator.html', 'templates/pages/margin-leakage-calculator.html']) {
+  const html = read(file);
+  const headings = (html.match(/What counts as margin leakage\?/g) || []).length;
+  const answers = (html.match(/Margin leakage is unbilled time leaving your firm/g) || []).length;
+  if (headings !== 1 || answers !== 1) fail(file + ' margin leakage block heading ' + headings + ' answer ' + answers);
+  else pass(file + ' margin leakage heading and answer appear once');
+}
 
 const css = read('assets/site.css');
 if (!css.includes('@keyframes tlRise{from{opacity:1')) fail('bubble animation still starts invisible');
