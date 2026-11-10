@@ -304,6 +304,32 @@ function applyConversations(html) {
   return replaceConversationLists(replaceMockPhones(html));
 }
 
+// Shared demo phone screen. One transform covers every page that prints the
+// fictional demo number. aria-hidden excludes that screen from the phone-number
+// pattern. The real business number is not in these screens and is not changed.
+function applyDemoPhone(html) {
+  let out = '';
+  let i = 0;
+  const needle = '<div class="tl-phone">';
+  while (i < html.length) {
+    const start = html.indexOf(needle, i);
+    if (start < 0) {
+      out += html.slice(i);
+      break;
+    }
+    out += html.slice(i, start);
+    const end = elementEnd(html, start, 'div');
+    let block = html.slice(start, end);
+    if (block.includes('222-333-4444')) {
+      block = block.split('222-333-4444').join('555-0100');
+      block = block.replace('<div class="tl-phone">', '<div class="tl-phone" aria-hidden="true">');
+    }
+    out += block;
+    i = end;
+  }
+  return out;
+}
+
 function expandIncludes(html) {
   return html.replace(/<!--\s*include:([a-z0-9-]+)\s*-->/g, (match, name) => {
     const file = path.join(PARTIALS, name + '.html');
@@ -559,6 +585,7 @@ function buildOne(rel) {
   }
   beforeSticky = expandIncludes(beforeSticky);
   beforeSticky = applyConversations(beforeSticky);
+  beforeSticky = applyDemoPhone(beforeSticky);
   const variant = headerVariant(source, rel);
   const header = filterNav(headerPartial(variant), audienceOf(source));
   const footer = partial('footer.html');
