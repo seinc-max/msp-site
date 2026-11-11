@@ -53,22 +53,23 @@ const audienceOf = {
 };
 
 const proOfferHrefs = ['/ai-governance', '/fractional-ai-officer', '/ai-support-agent'];
-const bannedForTrades = ['/for-appointment-businesses', '/ai-receptionist-for-salons', '/google-review-requests-for-salons'].concat(proOfferHrefs);
-const bannedForSalons = ['/missed-call-text-back', '/quote-follow-up-win-back', '/website-chat-to-text', '/text-to-pay', '/contractor-websites'].concat(proOfferHrefs);
-const bannedForPro = ['/missed-call-text-back', '/for-home-services', '/for-appointment-businesses', '/ai-receptionist', '/quote-follow-up-win-back', '/website-chat-to-text', '/text-to-pay', '/contractor-websites', '/google-review-requests'].concat(proOfferHrefs);
+const homeMenu = [
+  '/for-home-services',
+  '/missed-call-text-back',
+  '/ai-receptionist',
+  '/quote-follow-up-win-back',
+  '/website-chat-to-text',
+  '/text-to-pay',
+  '/contractor-websites',
+  '/google-review-requests',
+  '/for-appointment-businesses',
+  '/ai-receptionist-for-salons',
+  '/google-review-requests-for-salons',
+  '/for-law-firms-accountants-and-advisors',
+];
 
 function bodyClass(html) {
   return (html.match(/<body[^>]*\bclass="([^"]*)"/) || [])[1] || '';
-}
-
-function assertNav(file, banned, must) {
-  const n = nav(read(file));
-  for (const href of banned) {
-    if (n.includes('href="' + href + '"')) fail(file + ' nav still links ' + href);
-  }
-  for (const href of must) {
-    if (!n.includes('href="' + href + '"')) fail(file + ' nav missing ' + href);
-  }
 }
 
 const files = Object.keys(audienceOf);
@@ -82,26 +83,16 @@ for (const file of files) {
 }
 pass('29 pages classified: 5 neutral, 8 trades, 3 salons, 13 professional');
 
-for (const file of files.filter((f) => audienceOf[f] === 'trades')) {
-  assertNav(file, bannedForTrades, ['/missed-call-text-back', '/ai-receptionist', '/google-review-requests']);
-}
-for (const file of files.filter((f) => audienceOf[f] === 'salons')) {
-  assertNav(file, bannedForSalons, ['/ai-receptionist-for-salons', '/google-review-requests-for-salons', '/for-appointment-businesses']);
-}
-for (const file of files.filter((f) => audienceOf[f] === 'professional')) {
-  assertNav(file, bannedForPro, ['/for-law-firms-accountants-and-advisors']);
-}
-pass('targeted pages, including professional blogs and tools, omit NO-map offers');
-
-for (const file of ['index.html', 'about.html', 'privacy.html', 'terms.html']) {
+for (const file of files) {
   const n = nav(read(file));
-  for (const href of ['/for-home-services', '/for-appointment-businesses', '/for-law-firms-accountants-and-advisors']) {
-    if (!n.includes('href="' + href + '"')) fail(file + ' dropped audience hub ' + href);
+  for (const href of homeMenu) {
+    if (!n.includes('href="' + href + '"')) fail(file + ' nav missing ' + href);
   }
   for (const href of proOfferHrefs) {
     if (n.includes('href="' + href + '"')) fail(file + ' nav added professional offer ' + href);
   }
 }
+pass('every page shows the full home Services menu and omits professional offer links');
 const notFound = read('404.html');
 if (bodyClass(notFound)) fail('404 should stay a neutral recovery page');
 const notFoundNav = nav(notFound);

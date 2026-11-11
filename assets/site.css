@@ -355,14 +355,7 @@ nav.tl-nav .nav-services-menu a.nav-services-sub {
   padding-left: 22px;
   font-weight: 500;
 }
-/* Offer map: a page with an audience class shows only that menu group.
-   Home, about, and legal pages have no audience class and keep all three hubs.
-   Professional pages keep the existing law-hub link only. */
-body.audience-trades nav.tl-nav .nav-services-group:not([data-audience="trades"]),
-body.audience-salons nav.tl-nav .nav-services-group:not([data-audience="salons"]),
-body.audience-professional nav.tl-nav .nav-services-group:not([data-audience="professional"]) {
-  display: none;
-}
+/* Every page shows the full home Services menu. Audience classes stay on the body. */
 nav.tl-nav .nav-cta {
   background: #f97316;
   color: #fff;
