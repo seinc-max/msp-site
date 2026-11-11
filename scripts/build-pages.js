@@ -59,7 +59,7 @@ const CALL = '<a href="tel:+16473605774" class="btn-primary" onclick="window.dat
 
 const HEADER_CTAS = {
   call: '<a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>',
-  consultation: '<a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book My AI Consultation</span></a>',
+  consultation: '<a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
 };
 
 function headerVariant(source, rel) {
@@ -581,7 +581,7 @@ function buildOne(rel) {
   if (template === 'info') {
     const model = rel === 'about.html' ? aboutModel(source) : legalModel(source, rel.replace('.html', ''));
     beforeSticky = replaceElement(beforeSticky, 'main', infoMain(model));
-    bodyOpen = bodyOpen.replace('<body', '<body class="info-page"');
+    bodyOpen = bodyOpen.replace('<body', rel === 'about.html' ? '<body class="info-page page-about"' : '<body class="info-page"');
   }
   beforeSticky = expandIncludes(beforeSticky);
   beforeSticky = applyConversations(beforeSticky);
