@@ -544,14 +544,23 @@ footer.site-footer .footer-copy {
   font-size: 1rem;
   line-height: 1.5;
 }
+footer.site-footer .footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.9rem;
+  row-gap: 0;
+}
 footer.site-footer .footer-contact a {
   color: rgba(255,255,255,.86);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  white-space: nowrap;
 }
 footer.site-footer .footer-contact a:hover { color: #fff; }
+footer.site-footer .footer-hubs { display: contents; }
 footer.site-footer .footer-address {
   margin: 8px 0 0;
   color: rgba(255,255,255,.55);
@@ -619,6 +628,13 @@ footer.site-footer .footer-address {
     line-height: 1.4;
   }
   footer.site-footer .footer-copy { margin-left: auto; }
+}
+/* Below the two-row desktop, the copyright does not share a line with a wrapping address. */
+@media (min-width: 801px) and (max-width: 1439px) {
+  footer.site-footer .footer-copy {
+    flex: 1 0 100%;
+    margin-left: 0;
+  }
 }
 @media (min-width: 981px) {
   body.landing-home nav.tl-nav .nav-services-menu,
