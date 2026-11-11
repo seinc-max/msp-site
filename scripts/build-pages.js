@@ -76,6 +76,7 @@ const CALL = '<a href="tel:+16473605774" class="btn-primary" onclick="window.dat
 const HEADER_CTAS = {
   call: '<a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>',
   consultation: '<a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
+  consultationPage: '<a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
 };
 
 function headerVariant(source, rel) {
@@ -85,11 +86,7 @@ function headerVariant(source, rel) {
   const nav = source.slice(navAt, navEnd);
   const found = Object.keys(HEADER_CTAS).filter((name) => nav.includes(HEADER_CTAS[name]));
   if (found.length !== 1) {
-    throw new Error(rel + ' header CTA must be exactly one of call or consultation');
-  }
-  const other = found[0] === 'call' ? 'consultation' : 'call';
-  if (nav.includes(HEADER_CTAS[other])) {
-    throw new Error(rel + ' header has both a call button and a form CTA');
+    throw new Error(rel + ' header CTA must be exactly one of ' + Object.keys(HEADER_CTAS).join(', '));
   }
   return found[0];
 }
@@ -594,7 +591,14 @@ function buildOne(rel) {
   const variant = headerVariant(source, rel);
   const header = filterNav(headerPartial(variant));
   const footer = partial('footer.html');
-  const sticky = partial(parts.stickyKind === 'assessment' ? 'sticky-assessment.html' : 'sticky-call.html');
+  let sticky = partial(parts.stickyKind === 'assessment' ? 'sticky-assessment.html' : 'sticky-call.html');
+  if (parts.stickyKind === 'assessment') {
+    const block = source.slice(source.indexOf('sticky-mobile-cta sticky-assessment'));
+    const hrefMatch = block.match(/<a href="([^"]+)">Book My AI Consultation<\/a>/);
+    if (hrefMatch && hrefMatch[1] === '#discovery-form') {
+      sticky = sticky.replace('href="/fractional-ai-officer#assessment"', 'href="#discovery-form"');
+    }
+  }
   const slots = {
     head: parts.head,
     bodyOpen,

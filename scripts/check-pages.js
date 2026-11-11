@@ -34,7 +34,7 @@ function headerCta(html) {
   const event = (onclick.match(/event:'([^']*)'/) || [])[1] || '';
   const text = tag.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
   const variant = Object.keys(HEADER_CTAS).find((name) => nav.includes(HEADER_CTAS[name])) || '';
-  const both = nav.includes(HEADER_CTAS.call) && nav.includes(HEADER_CTAS.consultation);
+  const both = nav.includes(HEADER_CTAS.call) && Object.keys(HEADER_CTAS).some((name) => name !== 'call' && nav.includes(HEADER_CTAS[name]));
   return { href, onclick, event, text, variant, both, nav };
 }
 
@@ -102,7 +102,7 @@ function main() {
   }
   console.log('All ' + pages.length + ' heads match, including tracking and meta.');
 
-  const byVariant = { call: [], consultation: [] };
+  const byVariant = Object.fromEntries(Object.keys(HEADER_CTAS).map((name) => [name, []]));
   let ctaFailed = 0;
   console.log('Header CTA check (' + pages.length + ' pages)');
   for (const page of pages) {
@@ -137,8 +137,9 @@ function main() {
     process.exit(1);
   }
   console.log('All ' + pages.length + ' header CTAs match the original text, href, and tracking.');
-  console.log('call (' + byVariant.call.length + '): ' + byVariant.call.join(', '));
-  console.log('consultation (' + byVariant.consultation.length + '): ' + byVariant.consultation.join(', '));
+  for (const name of Object.keys(byVariant)) {
+    console.log(name + ' (' + byVariant[name].length + '): ' + byVariant[name].join(', '));
+  }
 }
 
 main();
