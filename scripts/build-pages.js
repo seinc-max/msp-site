@@ -18,16 +18,32 @@
  *   node scripts/build-pages.js --check   fail if committed HTML is stale
  *
  * Cloudflare Pages should keep serving the committed HTML. No build command change.
+ *
+ * Stylesheet links to /assets/site.css and /assets/landing.css get ?v=<content hash>
+ * at build time, so a CSS change gives returning visitors a new URL. Templates link
+ * the bare path. After any CSS edit, rerun this script; --check fails until you do.
  */
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT = path.join(__dirname, '..');
 const PAGE_ROOT = path.join(ROOT, 'templates', 'pages');
 const PARTIALS = path.join(ROOT, 'templates', 'partials');
 const SHELLS = path.join(ROOT, 'templates', 'shells');
+
+const VERSIONED_CSS = ['site.css', 'landing.css'];
+const CSS_VERSIONS = Object.fromEntries(VERSIONED_CSS.map((name) => [
+  name,
+  crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, 'assets', name))).digest('hex').slice(0, 10),
+]));
+
+function stampAssets(html) {
+  return html.replace(/(href="\/assets\/(site\.css|landing\.css))(\?v=[^"]*)?"/g,
+    (match, prefix, name) => prefix + '?v=' + CSS_VERSIONS[name] + '"');
+}
 
 const LANDING = new Set([
   'index.html',
@@ -595,7 +611,7 @@ function buildOne(rel) {
     if (!Object.prototype.hasOwnProperty.call(slots, key)) throw new Error('Unknown slot ' + key);
     return slots[key];
   });
-  return { rel, template, html: rendered, sourceHead: headOf(source), headerVariant: variant };
+  return { rel, template, html: stampAssets(rendered), sourceHead: stampAssets(headOf(source)), headerVariant: variant };
 }
 
 function headOf(html) {
@@ -643,4 +659,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { buildAll, headOf, templateFor, HEADER_CTAS };
+module.exports = { buildAll, headOf, templateFor, HEADER_CTAS, CSS_VERSIONS };
