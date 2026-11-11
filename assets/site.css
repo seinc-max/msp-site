@@ -800,7 +800,7 @@ body :is(span, div)[style*="font-size: 0."] {
 .calls-yours p { font-size: 1.05rem !important; }
 .guarantee { font-size: 1.02rem !important; }
 .flat p { font-size: 1.15rem !important; }
-input, select, textarea { font-size: 1rem !important; }
+input, select, textarea { font-family: inherit !important; font-size: 1rem !important; }
 
 /* Quiz choices and any leftover option chips. */
 .hs-option {
@@ -832,14 +832,14 @@ input, select, textarea { font-size: 1rem !important; }
 nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: none; }
 @media (max-width: 860px) {
   nav.tl-nav a.nav-cta.gov-form-cta .cta-full { display: none; }
-  nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: inline; }
+  nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: inline; white-space: nowrap; }
   nav.tl-nav a.nav-cta.gov-form-cta {
     padding: 6px 8px;
     min-height: 44px;
-    max-width: 9.6rem;
+    max-width: none;
     font-size: 0.72rem;
     line-height: 1.15;
-    white-space: normal;
+    white-space: nowrap;
     text-align: center;
   }
 }
