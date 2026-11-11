@@ -59,7 +59,7 @@ const CALL = '<a href="tel:+16473605774" class="btn-primary" onclick="window.dat
 
 const HEADER_CTAS = {
   call: '<a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>',
-  consultation: '<a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book My AI Consultation</span></a>',
+  consultation: '<a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
 };
 
 function headerVariant(source, rel) {
@@ -302,6 +302,32 @@ function replaceConversationLists(html) {
 
 function applyConversations(html) {
   return replaceConversationLists(replaceMockPhones(html));
+}
+
+// Shared demo phone screen. One transform covers every page that prints the
+// fictional demo number. aria-hidden excludes that screen from the phone-number
+// pattern. The real business number is not in these screens and is not changed.
+function applyDemoPhone(html) {
+  let out = '';
+  let i = 0;
+  const needle = '<div class="tl-phone">';
+  while (i < html.length) {
+    const start = html.indexOf(needle, i);
+    if (start < 0) {
+      out += html.slice(i);
+      break;
+    }
+    out += html.slice(i, start);
+    const end = elementEnd(html, start, 'div');
+    let block = html.slice(start, end);
+    if (block.includes('222-333-4444')) {
+      block = block.split('222-333-4444').join('555-0100');
+      block = block.replace('<div class="tl-phone">', '<div class="tl-phone" aria-hidden="true">');
+    }
+    out += block;
+    i = end;
+  }
+  return out;
 }
 
 function expandIncludes(html) {
@@ -555,10 +581,11 @@ function buildOne(rel) {
   if (template === 'info') {
     const model = rel === 'about.html' ? aboutModel(source) : legalModel(source, rel.replace('.html', ''));
     beforeSticky = replaceElement(beforeSticky, 'main', infoMain(model));
-    bodyOpen = bodyOpen.replace('<body', '<body class="info-page"');
+    bodyOpen = bodyOpen.replace('<body', rel === 'about.html' ? '<body class="info-page page-about"' : '<body class="info-page"');
   }
   beforeSticky = expandIncludes(beforeSticky);
   beforeSticky = applyConversations(beforeSticky);
+  beforeSticky = applyDemoPhone(beforeSticky);
   const variant = headerVariant(source, rel);
   const header = filterNav(headerPartial(variant), audienceOf(source));
   const footer = partial('footer.html');

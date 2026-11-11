@@ -490,7 +490,7 @@ footer.site-footer {
   display: block !important;
   background: #111827 !important;
   color: rgba(255,255,255,.72);
-  padding: 64px 6% 40px;
+  padding: 28px 6% 20px;
   font-size: 16px;
   width: 100%;
   font-family: "TL Sans", "DM Sans Fallback", sans-serif;
@@ -539,10 +539,17 @@ footer.site-footer .footer-col a {
 footer.site-footer .footer-col a:hover { color: #fff; }
 footer.site-footer .footer-contact,
 footer.site-footer .footer-copy {
-  margin: 28px 0 0;
+  margin: 13px 0 0;
   color: rgba(255,255,255,.62);
   font-size: 1rem;
   line-height: 1.5;
+}
+footer.site-footer .footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.9rem;
+  row-gap: 0;
 }
 footer.site-footer .footer-contact a {
   color: rgba(255,255,255,.86);
@@ -550,8 +557,10 @@ footer.site-footer .footer-contact a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  white-space: nowrap;
 }
 footer.site-footer .footer-contact a:hover { color: #fff; }
+footer.site-footer .footer-hubs { display: contents; }
 footer.site-footer .footer-address {
   margin: 8px 0 0;
   color: rgba(255,255,255,.55);
@@ -560,6 +569,81 @@ footer.site-footer .footer-address {
 }
 @media (max-width: 800px) {
   footer.site-footer .footer-groups { grid-template-columns: 1fr; gap: 28px; }
+  footer.site-footer .footer-hubs { display: none; }
+  /* Grouping wrappers exist for the wide layout. On phones they add no box. */
+  footer.site-footer .footer-primary,
+  footer.site-footer .footer-meta { display: contents; }
+}
+@media (min-width: 801px) {
+  footer.site-footer {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 28px;
+    row-gap: 2px;
+    padding: 20px 6%;
+  }
+  footer.site-footer .footer-brand {
+    display: flex;
+    flex: 1 1 320px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 14px;
+    min-width: min(100%, 280px);
+  }
+  footer.site-footer .footer-tagline {
+    margin: 0;
+    flex: 1 1 12rem;
+    min-width: 0;
+    line-height: 1.35;
+  }
+  footer.site-footer .footer-primary {
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 0;
+    min-width: 0;
+    max-width: 100%;
+    margin-left: auto;
+  }
+  footer.site-footer .footer-contact,
+  footer.site-footer .footer-copy,
+  footer.site-footer .footer-address { margin: 0; }
+  footer.site-footer .footer-links { text-align: right; }
+  footer.site-footer .footer-meta {
+    display: flex;
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2px 20px;
+    min-width: 0;
+  }
+  footer.site-footer .footer-address,
+  footer.site-footer .footer-copy {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  footer.site-footer .footer-copy { margin-left: auto; }
+}
+/* Below the two-row desktop, the copyright does not share a line with a wrapping address. */
+@media (min-width: 801px) and (max-width: 1439px) {
+  footer.site-footer .footer-copy {
+    flex: 1 0 100%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 981px) {
+  body.landing-home nav.tl-nav .nav-services-menu,
+  body.page-about nav.tl-nav .nav-services-menu {
+    max-height: calc(100vh - 88px);
+    max-height: calc(100dvh - 88px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 }
 
 /* Sticky call bar, visible at every width. */
@@ -691,7 +775,9 @@ body :is(p, li, td, th, dd, dt, label, figcaption, caption):not(
   .lede,
   .subhead,
   .hub-support,
-  .hero-rotation
+  .hero-rotation,
+  .footer-address,
+  .footer-copy
 ) {
   font-size: 1rem !important;
 }
@@ -1043,6 +1129,7 @@ main:focus{outline:none}
   .hero-inner.hero-with-frame,.hub-hero-inner.hero-with-frame{position:relative;max-width:1100px;padding-right:380px;box-sizing:border-box}
   .hero-inner.hero-with-frame > .tl-frame,.hub-hero-inner.hero-with-frame > .tl-frame{position:absolute;top:0;right:0;width:340px;margin:0}
   .hub-hero:has(.tl-call) .hub-hero-inner.hero-with-frame{min-height:900px}
+  body.audience-salons.landing-hub .hub-hero:has(.tl-call) .hub-hero-inner.hero-with-frame{min-height:0}
 }
 
 /* Hub pages use the product-page FAQ, price cards, and without/with comparison. */
