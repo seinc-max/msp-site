@@ -93,6 +93,7 @@ body.landing-call .hub-hero a.hub-cta[href^="tel:"] {
   font-weight: 700;
   line-height: 1.25;
   text-align: center;
+  text-wrap: balance;
   text-decoration: none;
 }
 
