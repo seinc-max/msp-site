@@ -560,7 +560,6 @@ footer.site-footer .footer-address {
 }
 @media (max-width: 800px) {
   footer.site-footer .footer-groups { grid-template-columns: 1fr; gap: 28px; }
-  footer.site-footer .footer-address:not(.footer-areas) { display: none; }
   footer.site-footer .footer-areas-label { display: none; }
   footer.site-footer .footer-hubs { display: none; }
 }
