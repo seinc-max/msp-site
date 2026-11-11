@@ -36,7 +36,7 @@ For law firms, accountants and advisors that want to use AI safely, done for you
 ## Guides and tools (for law firms, accountants and advisors)
 - AI Exposure Score: https://truelineit.com/ai-exposure-score
 - Margin Leakage Calculator: https://truelineit.com/margin-leakage-calculator
-- Shadow AI and Manual Admin Cost (ROI guide): https://truelineit.com/ai-automation-roi-guide
+- AI Automation ROI Guide: The Cost of Shadow AI and Manual Admin: https://truelineit.com/ai-automation-roi-guide
 - Staff Use ChatGPT With Client Files: https://truelineit.com/blog/20-shadow-ai-audits-2026
 - ChatGPT and PIPEDA: what your business needs to know now: https://truelineit.com/blog/is-your-business-pipeda-compliant
 - Secure Voice AI for Law and Accounting Firms: https://truelineit.com/blog/voice-ai-law-accounting-confidentiality
