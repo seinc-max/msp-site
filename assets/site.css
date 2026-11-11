@@ -630,8 +630,7 @@ footer.site-footer .footer-address {
   }
 }
 @media (min-width: 981px) {
-  body.landing-home nav.tl-nav .nav-services-menu,
-  body.page-about nav.tl-nav .nav-services-menu {
+  nav.tl-nav .nav-services-menu {
     max-height: calc(100vh - 88px);
     max-height: calc(100dvh - 88px);
     overflow-y: auto;
