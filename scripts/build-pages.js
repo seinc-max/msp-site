@@ -86,20 +86,9 @@ function headerPartial(variant) {
   return raw.replace('{{cta}}', () => HEADER_CTAS[variant]);
 }
 
-function audienceOf(html) {
-  const cls = (html.match(/<body[^>]*\bclass="([^"]*)"/) || [])[1] || '';
-  if (cls.includes('audience-trades')) return 'trades';
-  if (cls.includes('audience-salons')) return 'salons';
-  if (cls.includes('audience-professional')) return 'professional';
-  return '';
-}
-
-function filterNav(header, audience) {
-  const next = header.replace(/<div class="nav-services-group\b[^>]*\bdata-audience="(trades|salons|professional)"[^>]*>[\s\S]*?<\/div>/g, (block, name) => {
-    if (!audience || name === audience) return block;
-    return '';
-  });
-  return next.replace(/\n[ \t]*\n(?=[ \t]*\n)/g, '\n');
+function filterNav(header) {
+  // Every page keeps the full home Services menu. The page CTA is chosen separately.
+  return header;
 }
 
 function read(file) {
@@ -587,7 +576,7 @@ function buildOne(rel) {
   beforeSticky = applyConversations(beforeSticky);
   beforeSticky = applyDemoPhone(beforeSticky);
   const variant = headerVariant(source, rel);
-  const header = filterNav(headerPartial(variant), audienceOf(source));
+  const header = filterNav(headerPartial(variant));
   const footer = partial('footer.html');
   const sticky = partial(parts.stickyKind === 'assessment' ? 'sticky-assessment.html' : 'sticky-call.html');
   const slots = {
