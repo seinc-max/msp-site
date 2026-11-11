@@ -21,3 +21,8 @@
 
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Stylesheets: pages link them with ?v=<content hash> (scripts/build-pages.js).
+# Short cache as a backstop so an unversioned link still refreshes within minutes.
+/assets/*.css
+  Cache-Control: public, max-age=300, must-revalidate

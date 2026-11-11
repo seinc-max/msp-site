@@ -70,7 +70,7 @@ function main() {
   for (const [file, klass] of Object.entries(PAGES)) {
     for (const rel of [file, 'templates/pages/' + file]) {
       const html = read(rel);
-      if (!html.includes('href="/assets/landing.css"')) fail(errors, rel + ' missing landing.css');
+      if (!/href="\/assets\/landing\.css(\?v=[0-9a-f]{10})?"/.test(html)) fail(errors, rel + ' missing landing.css');
       const tokens = klass.split(' ');
       if (!tokens.every((token) => new RegExp('class="[^"]*\\b' + token + '\\b').test(html))) {
         fail(errors, rel + ' missing body class ' + klass);
