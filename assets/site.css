@@ -288,6 +288,8 @@ nav.tl-nav .nav-services > summary::after {
   margin-left: 6px;
   border: 4px solid transparent;
   border-top-color: currentColor;
+  /* Page FAQ rules style every summary::after; keep the nav arrow the nav's colour. */
+  color: inherit !important;
   transform: translateY(2px);
   font-size: 0;
 }
@@ -800,7 +802,13 @@ body :is(span, div)[style*="font-size: 0."] {
 .calls-yours p { font-size: 1.05rem !important; }
 .guarantee { font-size: 1.02rem !important; }
 .flat p { font-size: 1.15rem !important; }
-input, select, textarea { font-size: 1rem !important; }
+input, select, textarea { font-family: inherit !important; font-size: 1rem !important; }
+/* Buttons do not inherit the page font by default; submit buttons should match the site. */
+button { font-family: inherit; }
+/* FAQ rows: comfortable tap height on phones. The nav menu is excluded. */
+@media (max-width: 600px) {
+  details:not(.nav-services) > summary { min-height: 44px; box-sizing: border-box; }
+}
 
 /* Quiz choices and any leftover option chips. */
 .hs-option {
@@ -832,14 +840,14 @@ input, select, textarea { font-size: 1rem !important; }
 nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: none; }
 @media (max-width: 860px) {
   nav.tl-nav a.nav-cta.gov-form-cta .cta-full { display: none; }
-  nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: inline; }
+  nav.tl-nav a.nav-cta.gov-form-cta .cta-short { display: inline; white-space: nowrap; }
   nav.tl-nav a.nav-cta.gov-form-cta {
-    padding: 6px 8px;
+    padding: 10px 14px;
     min-height: 44px;
-    max-width: 9.6rem;
-    font-size: 0.72rem;
+    max-width: none;
+    font-size: 1rem;
     line-height: 1.15;
-    white-space: normal;
+    white-space: nowrap;
     text-align: center;
   }
 }
