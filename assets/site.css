@@ -560,6 +560,22 @@ footer.site-footer .footer-address {
 }
 @media (max-width: 800px) {
   footer.site-footer .footer-groups { grid-template-columns: 1fr; gap: 28px; }
+  footer.site-footer { padding: 28px 6% 20px; }
+  footer.site-footer .footer-contact,
+  footer.site-footer .footer-copy { margin-top: 13px; }
+  footer.site-footer .footer-contact a { min-height: 44px; }
+  footer.site-footer .footer-address:not(.footer-areas) { display: none; }
+  footer.site-footer .footer-areas-label { display: none; }
+  footer.site-footer .footer-hubs { display: none; }
+}
+@media (min-width: 981px) {
+  body.landing-home nav.tl-nav .nav-services-menu,
+  body.page-about nav.tl-nav .nav-services-menu {
+    max-height: calc(100vh - 88px);
+    max-height: calc(100dvh - 88px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 }
 
 /* Sticky call bar, visible at every width. */
@@ -1043,6 +1059,7 @@ main:focus{outline:none}
   .hero-inner.hero-with-frame,.hub-hero-inner.hero-with-frame{position:relative;max-width:1100px;padding-right:380px;box-sizing:border-box}
   .hero-inner.hero-with-frame > .tl-frame,.hub-hero-inner.hero-with-frame > .tl-frame{position:absolute;top:0;right:0;width:340px;margin:0}
   .hub-hero:has(.tl-call) .hub-hero-inner.hero-with-frame{min-height:900px}
+  body.audience-salons.landing-hub .hub-hero:has(.tl-call) .hub-hero-inner.hero-with-frame{min-height:0}
 }
 
 /* Hub pages use the product-page FAQ, price cards, and without/with comparison. */
