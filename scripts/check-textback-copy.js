@@ -92,7 +92,7 @@ for (const file of ['for-home-services.html', 'templates/pages/for-home-services
 if (!read('templates/pages/for-home-services.html').includes(hubLine)) fail('hub template is not corrected');
 
 const kept = [
-  ['quote-follow-up-win-back.html', 'Texts go out from your business number.'],
+  ['quote-follow-up-win-back.html', 'Texts go out from your separate text-back number.'],
   ['website-chat-to-text.html', 'reply from your business number'],
   ['website-chat-to-text.html', 'Chats arrive as texts on your business number.'],
   ['website-chat-to-text.html', 'Every new chat arrives as a text on your business number.'],
