@@ -123,8 +123,9 @@ body.landing-form .hub-hero a.hub-cta {
   text-decoration: none;
 }
 
-/* Form sits at the top of the hero, beside the headline on wide screens
-   and ahead of the long copy on narrow screens. Fields are not restyled. */
+/* Form sits at the top of the hero, beside the headline on wide screens.
+   On narrow screens the headline and short explanation come first, then the form.
+   Fields are not restyled. */
 body.landing-form .hero-grid {
   align-items: start;
 }
@@ -135,7 +136,6 @@ body.landing-form .hero-grid {
     flex-direction: column;
   }
   body.landing-form .hero-grid > .form-card {
-    order: -1;
     width: 100%;
   }
 }
