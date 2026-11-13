@@ -170,3 +170,16 @@ body.landing-form .pricing-card {
     scroll-margin-bottom: 96px;
   }
 }
+
+/* /ai-governance top-half copy blocks only. Left-align and space the
+   paragraphs; do not change other landing pages. */
+body.landing-form .gov-top-copy .section-inner {
+  text-align: left;
+}
+body.landing-form .gov-top-copy .section-inner p {
+  margin: 0 0 1em;
+  text-align: left;
+}
+body.landing-form .gov-top-copy .section-inner p:last-child {
+  margin-bottom: 0;
+}
