@@ -85,7 +85,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .mock-caption{ text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 14px; }
 .pain-section{ padding: 70px 5%; background: var(--warm-white); }
 .section-inner{ max-width: 900px; margin: 0 auto; text-align: center; }
-.section-inner > p { text-align: left; }
+.section-inner > p.body-copy { text-align: left; margin: 0 0 1em; }
+.section-inner > p.body-copy:last-child { margin-bottom: 0; }
+.bottom-cta > p:not(.hero-guarantee) { text-align: left; max-width: 36rem; margin: 0 auto 1em; }
 .section-eyebrow{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
 .section-title{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 48px; line-height: 1.2; }
 .pain-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
@@ -328,8 +330,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">Want more Google reviews without chasing customers?</h2>
-    <p>You do great work, then forget to ask.</p>
-    <p>Call and we'll check your Google profile and work out the best time to send your review text.</p>
+    <p class="body-copy">You do great work, then forget to ask.</p>
+    <p class="body-copy">Call and we'll check your Google profile and work out the best time to send your review text.</p>
     <p>Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p>
   </div>
 </section>
@@ -409,7 +411,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="included-card yes"><h3>What's included</h3><ul><li>Review request text after each finished job</li><li>One reminder to customers who don't respond</li><li>A reply in your voice to every new Google review, approved by you</li><li>Wording you approve</li><li>Your Google review link set up for you</li><li>Monthly review call</li></ul></div>
 <div class="included-card no"><h3>What's not included</h3><ul><li>Writing or buying reviews</li><li>Removing or hiding reviews</li><li>Review gating (asking only happy customers)</li></ul></div></div></div></section>
 <section class="how-section" id="replies"><div class="section-inner"><div class="section-eyebrow">Requests + Replies</div><h2 class="section-title">Every Google review gets a reply in your voice.</h2>
-<p style="max-width:640px;margin:0 auto 8px;color:var(--text-muted);font-size:0.95rem;">A reply is drafted for every new Google review, in your business's voice. You approve it by text before it posts. Nothing posts without that approval. A negative review is flagged to you within minutes of coming in.</p><p style="max-width:640px;margin:0 auto 28px;color:var(--text-muted);font-size:0.95rem;">80% of consumers are likely to use a business that responds to all of its reviews (BrightLocal, 2026). We draft every reply for you.</p>
+<p class="body-copy">A reply is drafted for every new Google review, in your business's voice. You approve it by text before it posts. Nothing posts without that approval. A negative review is flagged to you within minutes of coming in.</p><p class="body-copy">80% of consumers are likely to use a business that responds to all of its reviews (BrightLocal, 2026). We draft every reply for you.</p>
 <div class="pain-grid"><div class="pain-card"><h3>No time to reply</h3><p>Replying to every review is one more job you don't get to.</p></div><div class="pain-card"><h3>Bad reviews sit unanswered</h3><p>A 1-star review with no reply looks worse than one you've answered.</p></div><div class="pain-card"><h3>Competitors look more engaged</h3><p>Customers notice which businesses reply.</p></div></div>
 <div class="steps-grid" style="margin-top:28px;"><div class="step"><div class="step-number">1</div><h3>A reply is drafted</h3><p>Every new review gets a reply in your voice, sent to you to approve.</p></div><div class="step"><div class="step-number">2</div><h3>You approve by text</h3><p>Approved replies go up on Google. Nothing posts without your approval.</p></div><div class="step"><div class="step-number">3</div><h3>Negative reviews get flagged</h3><p>Negative reviews are flagged to you within minutes of coming in.</p></div></div>
 <p style="margin-top:28px;font-size:0.95rem;color:var(--text-muted);">Replies cannot guarantee a star rating.</p>
@@ -452,7 +454,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <details><summary>Can bad reviews be removed?</summary><p>No. Reviews cannot be removed or hidden. A negative review is flagged to you within minutes of coming in, and a reply is drafted in your voice for you to approve.</p></details>
 <details><summary>How do I cancel?</summary><p>You can cancel anytime. There are no contracts and no cancellation fees, so you are never locked in and cancelling costs you nothing extra. You can stop the service whenever you choose, and there is nothing to pay to close it.</p></details>
 <details><summary>Is there a money-back guarantee?</summary><p>30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p></details></div></div></section>
-<section class="bottom-cta"><h2>Start asking every customer for a review.</h2><p>You do the job. We set it up and run it. Call and we'll check your Google profile and work out the best time to send your review text. Every job you finish without asking is a review your competitor gets instead.</p><p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
+<section class="bottom-cta"><h2>Start asking every customer for a review.</h2><p>You do the job. We set it up and run it. Call and we'll check your Google profile and work out the best time to send your review text.</p><p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
 <div class="cta-row"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div></section>
 </main>
 

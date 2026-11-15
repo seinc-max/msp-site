@@ -85,7 +85,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .mock-caption{ text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 14px; }
 .pain-section{ padding: 70px 5%; background: var(--warm-white); }
 .section-inner{ max-width: 900px; margin: 0 auto; text-align: center; }
-.section-inner > p { text-align: left; }
+.section-inner > p.body-copy { text-align: left; margin: 0 0 1em; }
+.section-inner > p.body-copy:last-child { margin-bottom: 0; }
+.bottom-cta > p:not(.hero-guarantee) { text-align: left; max-width: 36rem; margin: 0 auto 1em; }
 .section-eyebrow{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
 .section-title{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 48px; line-height: 1.2; }
 .pain-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
@@ -416,17 +418,17 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">How many calls ring out while you're on a job?</h2>
-    <p>You're on the tools or under a sink when the phone rings. Many callers won't leave a voicemail. They call the next name on Google, and the job goes to whoever calls back first.</p>
-    <p>Call us and we'll estimate what missed calls are costing you, from your own numbers.</p>
+    <p class="body-copy">You're on the tools or under a sink when the phone rings. Many callers won't leave a voicemail. They call the next name on Google, and the job goes to whoever calls back first.</p>
+    <p class="body-copy">Call us and we'll estimate what missed calls are costing you, from your own numbers.</p>
     <p>Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p>
-    <p>No-heat call at 2 AM. Roof leak at 11 PM. Burst pipe while you're on another job.</p>
-    <p>Done-for-you missed-call text-back. Missed calls to your number get a text back from a separate number. We set it up and run it. Flat monthly price, no overage bills.</p>
-    <p>Your caller gets a text within minutes and tells you what they need. Their reply comes to your phone, and you answer from your phone — no app to learn.</p>
-    <p>Your caller can still leave a voicemail — it comes to your email as an audio file.</p>
-    <p>If one saved job a month is worth more than $149 to you, it pays for itself.</p>
+    <p class="body-copy">No-heat call at 2 AM. Roof leak at 11 PM. Burst pipe while you're on another job.</p>
+    <p class="body-copy">Done-for-you missed-call text-back. Missed calls to your number get a text back from a separate number. We set it up and run it. Flat monthly price, no overage bills.</p>
+    <p class="body-copy">Your caller gets a text within minutes and tells you what they need. Their reply comes to your phone, and you answer from your phone — no app to learn.</p>
+    <p class="body-copy">Your caller can still leave a voicemail — it comes to your email as an audio file.</p>
+    <p class="body-copy">If one saved job a month is worth more than $149 to you, it pays for itself.</p>
     <!-- seasonal: remove by 2027-04-01 -->
-    <p>Missed calls spike with the first cold snap and after a storm (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>). Get set up before the next one hits.</p>
-    <p>One call. We set it up. You approve every word before it goes live.</p>
+    <p class="body-copy">Missed calls spike with the first cold snap and after a storm (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>). Get set up before the next one hits.</p>
+    <p class="body-copy">One call. We set it up. You approve every word before it goes live.</p>
   </div>
 </section>
 
@@ -434,7 +436,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="audience-section">
   <div class="section-inner">
     <h2 class="section-title">Without text-back, the job is gone. With it, the caller waits for you.</h2>
-    <p>When asked which channel they ignore most, 42% of people said phone calls. Only 8% said texts (<a href="https://www.textmagic.com/wp-content/uploads/2025/04/State-of-business-texting-2025_FullReport.pdf" rel="noopener" target="_blank">Textmagic, 2025</a>).</p>
+    <p class="body-copy">When asked which channel they ignore most, 42% of people said phone calls. Only 8% said texts (<a href="https://www.textmagic.com/wp-content/uploads/2025/04/State-of-business-texting-2025_FullReport.pdf" rel="noopener" target="_blank">Textmagic, 2025</a>).</p>
     <div class="audience-grid">
       <div class="audience-card bad">
         <h3>Without text-back</h3>
@@ -616,7 +618,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pricing-section">
   <div class="section-inner">
     <h2 class="section-title">How much does missed-call text-back cost?</h2>
-    <p>Missed-call text-back costs $149 a month plus a one-time $199 setup. The setup covers building and switching on the service for you — you do not run any software yourself. There are no per-minute charges. You can cancel anytime, no contracts.</p>
+    <p class="body-copy">Missed-call text-back costs $149 a month plus a one-time $199 setup. The setup covers building and switching on the service for you — you do not run any software yourself. There are no per-minute charges. You can cancel anytime, no contracts.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="DIY software compared with done-for-you." style="overflow-x:auto;margin:16px 0 8px;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr><th scope="col" style="padding:10px 12px;border-bottom:2px solid var(--border);text-align:left;"></th><th scope="col" style="padding:10px 12px;border-bottom:2px solid var(--border);text-align:left;">DIY software</th><th scope="col" style="padding:10px 12px;border-bottom:2px solid var(--border);text-align:left;">Done-for-you (Trueline)</th></tr></thead>
@@ -628,7 +630,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </div>
 
     <h2 class="section-title">How much does it cost per month for a plumber?</h2>
-    <p>For a plumber, missed-call text-back costs $149 a month plus a one-time $199 setup. The setup covers building and switching on the service for you — you do not run any software yourself. There are no per-minute charges. You can cancel anytime, no contracts.</p>
+    <p class="body-copy">For a plumber, missed-call text-back costs $149 a month plus a one-time $199 setup. The setup covers building and switching on the service for you — you do not run any software yourself. There are no per-minute charges. You can cancel anytime, no contracts.</p>
   </div>
 </section>
 <section class="faq-section">
@@ -691,7 +693,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <!-- BOTTOM CTA -->
 <section class="bottom-cta">
   <h2>Stop losing jobs to voicemail</h2>
-  <p>You do the job. We set it up and run it. Your next missed call becomes your next conversation — the caller's need lands in a text thread, you read it when you're free, and you answer first. Call us and we'll estimate what missed calls are costing you, from your own numbers. Every day it isn't set up, the next missed call goes to the next name on Google.</p>
+  <p>You do the job. We set it up and run it. Call us and we'll estimate what missed calls are costing you, from your own numbers.</p>
   <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
   <div class="cta-row">
     <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>

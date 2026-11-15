@@ -73,7 +73,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .form-success p{ color: var(--text-muted); font-size: 0.95rem; }
 .pain-section{ padding: 70px 5%; background: var(--warm-white); }
 .section-inner{ max-width: 900px; margin: 0 auto; text-align: center; }
-.section-inner > p { text-align: left; }
+.section-inner > p.body-copy { text-align: left; margin: 0 0 1em; }
+.section-inner > p.body-copy:last-child { margin-bottom: 0; }
+.bottom-cta > p:not(.hero-guarantee) { text-align: left; max-width: 36rem; margin: 0 auto 1em; }
 .section-eyebrow{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
 .section-title{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 48px; line-height: 1.2; }
 .pain-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
@@ -354,13 +356,13 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">How many calls ring out while you're on a job?</h2>
-    <p>You're on a job and the call rings out. A no-heat call at 2 AM and a Saturday leak both need an answer.</p>
-    <p>Call us and we'll estimate the monthly leak and what better call coverage could recover, from your own numbers.</p>
+    <p class="body-copy">You're on a job and the call rings out. A no-heat call at 2 AM and a Saturday leak both need an answer.</p>
+    <p class="body-copy">Call us and we'll estimate the monthly leak and what better call coverage could recover, from your own numbers.</p>
     <p>Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p>
-    <p>We set it up and run it for you. It answers nights, weekends, and after hours. One saved emergency job can cover a month of the receptionist.</p>
-    <p>One call. We set it up on your number. You approve every word before it goes live.</p>
+    <p class="body-copy">We set it up and run it for you. It answers nights, weekends, and after hours. One saved emergency job can cover a month of the receptionist.</p>
+    <p class="body-copy">One call. We set it up on your number. You approve every word before it goes live.</p>
     <!-- seasonal: remove by 2027-04-01 -->
-    <p>Missed calls spike with the first cold snap and after a storm (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>). Get set up before the next one hits.</p>
+    <p class="body-copy">Missed calls spike with the first cold snap and after a storm (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>). Get set up before the next one hits.</p>
   </div>
 </section>
 
@@ -375,7 +377,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   <div class="section-inner">
     <h2 class="section-title">Voicemail loses the job. Your receptionist takes it.</h2>
     <img src="/assets/img/air-ai-receptionist.svg" alt="A call being answered on a phone, next to a headset and toolbox" width="640" height="360" loading="lazy" decoding="async" style="display:block;width:100%;max-width:440px;height:auto;aspect-ratio:16/9;border-radius:14px;margin:8px auto 24px;">
-    <p>Invoca says AI agents that pick up when a person can't are "the single biggest lever for improving answer rates and speed-to-lead" (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>).</p>
+    <p class="body-copy">Invoca says AI agents that pick up when a person can't are "the single biggest lever for improving answer rates and speed-to-lead" (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>).</p>
     <div class="audience-grid">
       <div class="audience-card bad">
         <h3>With voicemail</h3>
@@ -430,7 +432,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="audience-section">
   <div class="section-inner">
     <h2 class="section-title">Run a salon or clinic?</h2>
-    <p>Salons, spas, barbers and clinics have their own page, with a sample booking call: <a href="/ai-receptionist-for-salons">AI Receptionist for salons and clinics →</a></p>
+    <p class="body-copy">Salons, spas, barbers and clinics have their own page, with a sample booking call: <a href="/ai-receptionist-for-salons">AI Receptionist for salons and clinics →</a></p>
   </div>
 </section>
 
@@ -615,7 +617,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pricing-section">
   <div class="section-inner">
     <h2 class="section-title">How much does an AI receptionist cost?</h2>
-    <p>An AI receptionist costs $299 a month plus a one-time $299 setup. The setup covers building the receptionist for you — it answers your calls and takes messages while your crew is on the job. You do not run any software yourself. You can cancel anytime, no contracts.</p>
+    <p class="body-copy">An AI receptionist costs $299 a month plus a one-time $299 setup. The setup covers building the receptionist for you — it answers your calls and takes messages while your crew is on the job. You do not run any software yourself. You can cancel anytime, no contracts.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="DIY software compared with done-for-you." style="overflow-x:auto;margin:16px 0 8px;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr><th scope="col" style="padding:10px 12px;border-bottom:2px solid var(--border);text-align:left;"></th><th scope="col" style="padding:10px 12px;border-bottom:2px solid var(--border);text-align:left;">DIY software</th><th scope="col" style="padding:10px 12px;border-bottom:2px solid var(--border);text-align:left;">Done-for-you (Trueline)</th></tr></thead>
@@ -672,7 +674,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <!-- BOTTOM CTA -->
 <section class="bottom-cta">
   <h2>Give callers an answer when your team is busy</h2>
-  <p>You do the job. We set it up and run it. Call (647) 360-5774 and we'll walk you through how it answers your calls. Every day it isn't set up, the next missed call goes to the next name on Google.</p>
+  <p>You do the job. We set it up and run it. Call (647) 360-5774 and we'll walk you through how it answers your calls.</p>
   <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
   <div class="cta-row">
     <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
