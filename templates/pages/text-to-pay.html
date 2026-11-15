@@ -95,7 +95,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .mock-caption{ text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 14px; }
 .pain-section{ padding: 70px 5%; background: var(--warm-white); }
 .section-inner{ max-width: 900px; margin: 0 auto; text-align: center; }
-.section-inner > p { text-align: left; }
+.section-inner > p.body-copy { text-align: left; margin: 0 0 1em; }
+.section-inner > p.body-copy:last-child { margin-bottom: 0; }
+.bottom-cta > p:not(.hero-guarantee) { text-align: left; max-width: 36rem; margin: 0 auto 1em; }
 .section-eyebrow{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
 .section-title{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 48px; line-height: 1.2; }
 .pain-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
@@ -389,8 +391,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">How many invoices are you still chasing?</h2>
-    <p>You finished the job. The customer is still standing there.</p>
-    <p>Call and we'll look at how you invoice today.</p>
+    <p class="body-copy">You finished the job. The customer is still standing there.</p>
+    <p class="body-copy">Call and we'll look at how you invoice today.</p>
     <p>Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p>
   </div>
 </section>
@@ -420,7 +422,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">The invoice goes out while you are still on site.</h2>
-    <p class="section-lead">Whatever the job, your customer pays from the text.</p>
+    <p class="section-lead body-copy">Whatever the job, your customer pays from the text.</p>
     <div class="pain-grid">
 <div class="pain-card"><p class="trade-name">Plumbers — The drain call:</p><p>You clear the drain. Before you pull out of the driveway, the homeowner pays the invoice on their phone.</p></div>
 <div class="pain-card"><p class="trade-name">HVAC — The furnace repair:</p><p>The heat is back on. You text the invoice for the repair. They tap, pay by card, and you are done chasing it.</p></div>
@@ -554,7 +556,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <section class="bottom-cta">
 <h2>Stop chasing invoices.</h2>
-<p>You do the job. We set it up and run it. Call and we'll look at how you invoice today. Every invoice you send later is money you chase later.</p>
+<p>You do the job. We set it up and run it. Call and we'll look at how you invoice today.</p>
 <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
 <div class="cta-row"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
