@@ -95,7 +95,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .mock-caption{ text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 14px; }
 .pain-section{ padding: 70px 5%; background: var(--warm-white); }
 .section-inner{ max-width: 900px; margin: 0 auto; text-align: center; }
-.section-inner > p { text-align: left; }
+.section-inner > p.body-copy { text-align: left; margin: 0 0 1em; }
+.section-inner > p.body-copy:last-child { margin-bottom: 0; }
+.bottom-cta > p:not(.hero-guarantee) { text-align: left; max-width: 36rem; margin: 0 auto 1em; }
 .section-eyebrow{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
 .section-title{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 48px; line-height: 1.2; }
 .pain-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
@@ -396,8 +398,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">How do homeowners find you today?</h2>
-    <p>You are on a job. The homeowner who searched your trade is on their phone.</p>
-    <p>No setup fee. Design, copy, hosting, click-to-call, your Google Business tie-in and edits are all included in the $499 a month. You do not pick a template. You do not write the pages.</p>
+    <p class="body-copy">You are on a job. The homeowner who searched your trade is on their phone.</p>
+    <p class="body-copy">No setup fee. Design, copy, hosting, click-to-call, your Google Business tie-in and edits are all included in the $499 a month. You do not pick a template. You do not write the pages.</p>
     <p>Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p>
   </div>
 </section>
@@ -427,7 +429,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">Their search ends with a call to you.</h2>
-    <p>A homeowner searches the work, lands on your site, and calls your business. You are under a sink, on a roof, or in a panel. The site is already getting them to call.</p>
+    <p class="body-copy">A homeowner searches the work, lands on your site, and calls your business. You are under a sink, on a roof, or in a panel. The site is already getting them to call.</p>
     <div class="pain-grid">
       <div class="pain-card">
         <h3>They find the job</h3>
@@ -449,7 +451,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">Your trade, with the job on the page.</h2>
-    <p class="section-lead">Home services. The page names the work a homeowner types in, then sends the call to your business.</p>
+    <p class="section-lead body-copy">Home services. The page names the work a homeowner types in, then sends the call to your business.</p>
     <div class="pain-grid">
 <div class="pain-card"><p class="trade-name">Plumbers — The burst pipe page:</p><p>Your plumber site leads with "burst pipe repair" and "water heater replacement." The homeowner with water on the floor taps the call button instead of scrolling for a form.</p></div>
 <div class="pain-card"><p class="trade-name">HVAC — The no-heat page:</p><p>Your HVAC site is built for "furnace not heating" and "AC not cooling." The number on the page matches the number on your profile.</p></div>
@@ -502,7 +504,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="included-section"><div class="section-inner">
 <div class="section-eyebrow">What's included</div>
 <h2 class="section-title">Design, copy, hosting, calls, Google, and edits.</h2>
-<p class="section-lead">This is done for you. You tell us the trade and the jobs. We put the site up and we keep it.</p>
+<p class="section-lead body-copy">This is done for you. You tell us the trade and the jobs. We put the site up and we keep it.</p>
 <div class="included-grid">
 <div class="included-card yes"><h3>What's included</h3><ul>
 <li>Design. Pages laid out for your trade, your photos, and a call button a homeowner can hit with a thumb.</li>
@@ -593,7 +595,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <section class="bottom-cta">
 <h2>Your contractor website, done for you.</h2>
-<p>You do the job. We set it up and run it. Call (647) 360-5774. Tell us your trade. Your site is live within a week. Every week without it, the homeowner who searched your job calls the next number on the page.</p>
+<p>You do the job. We set it up and run it. Call (647) 360-5774. Tell us your trade. Your site is live within a week.</p>
 <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
 <div class="cta-row"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>

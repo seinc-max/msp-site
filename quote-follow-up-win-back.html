@@ -85,7 +85,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .mock-caption{ text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 14px; }
 .pain-section{ padding: 70px 5%; background: var(--warm-white); }
 .section-inner{ max-width: 900px; margin: 0 auto; text-align: center; }
-.section-inner > p { text-align: left; }
+.section-inner > p.body-copy { text-align: left; margin: 0 0 1em; }
+.section-inner > p.body-copy:last-child { margin-bottom: 0; }
+.bottom-cta > p:not(.hero-guarantee) { text-align: left; max-width: 36rem; margin: 0 auto 1em; }
 .section-eyebrow{ font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
 .section-title{ font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 48px; line-height: 1.2; }
 .pain-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
@@ -364,10 +366,10 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">How many open quotes are sitting in your inbox?</h2>
-    <p>You sent the quote, got busy, and the homeowner booked whoever called back.</p>
-    <p>Call and we'll go through your open quotes and past-customer list with you.</p>
+    <p class="body-copy">You sent the quote, got busy, and the homeowner booked whoever called back.</p>
+    <p class="body-copy">Call and we'll go through your open quotes and past-customer list with you.</p>
     <p>Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p>
-    <p>We pick up your open quotes and follow up — you approve the wording and the timing.</p>
+    <p class="body-copy">We pick up your open quotes and follow up — you approve the wording and the timing.</p>
   </div>
 </section>
 
@@ -461,7 +463,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="faq-section"><div class="section-inner"><div class="section-eyebrow">Questions</div><h2 class="section-title">Common questions</h2><div class="faq-list"><details><summary>Do I have to set this up myself?</summary><p>No. We set it up and run it for you. You do not have to configure anything yourself — the setup and the running of the service are all handled by us, so you can carry on with your work while we get the follow-ups running for you.</p></details><details><summary>Who gets texted?</summary><p>Only people who asked you for a quote or are past customers. We never text cold lists.</p></details><details><summary>How often do the follow-ups go out?</summary><p>The follow-ups go out on a short schedule that you approve before anything is sent. You decide the timing, and every text includes a reply STOP to opt out, so anyone can stop the follow-ups at any time and you never chase someone who has asked to be left alone.</p></details><details><summary>Does it work with my quoting software?</summary><p>We work out how to pull your open quotes on the call.</p></details>
 <details><summary>How do I cancel?</summary><p>You can cancel anytime. There are no contracts and no cancellation fees, so you are never locked in and cancelling costs you nothing extra. You can stop the service whenever you choose, and there is nothing to pay to close it.</p></details>
 <details><summary>Is there a money-back guarantee?</summary><p>30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked. Cancel anytime. No contracts, no cancellation fees.</p></details><details><summary>What if they already hired someone?</summary><p>They reply and say so, or they don't reply. Either way you know where the quote stands, and you stop wondering.</p></details></div></div></section>
-<section class="bottom-cta"><h2>Stop leaving quoted work on the table.</h2><p>You do the job. We set it up and run it. Call and we'll go through your open quotes with you. Every week a quote sits quiet, someone else is calling that homeowner back.</p><p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
+<section class="bottom-cta"><h2>Stop leaving quoted work on the table.</h2><p>You do the job. We set it up and run it. Call and we'll go through your open quotes with you.</p><p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
 <div class="cta-row"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div></section>
 </main>
 
