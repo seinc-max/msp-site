@@ -79,7 +79,10 @@ body.landing-call .hero .hero-actions .btn-primary,
 body.landing-call .hub-hero a.hub-cta[href^="tel:"],
 body.landing-form .hero .hero-actions .btn-primary,
 body.landing-form .hero .hero-copy > a.btn-primary,
-body.landing-form .hub-hero a.hub-cta {
+body.landing-form .hero .hero-cta-panel a.btn-primary,
+body.landing-form .hero .hero-cta-panel a.hub-cta,
+body.landing-form .hub-hero a.hub-cta,
+body.landing-form .hub-hero .hero-cta-panel a.hub-cta {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,8 +109,7 @@ body.landing-call .hero a.hero-call + .hero-guarantee {
 }
 
 /* Form action. Same size, not a call button. */
-body.landing-form .form-card .btn-submit,
-body.landing-form .hub-hero a.hub-cta {
+body.landing-form .form-card .btn-submit {
   display: flex;
   align-items: center;
   justify-content: center;
