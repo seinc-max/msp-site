@@ -1307,3 +1307,98 @@ nav.tl-nav.tl-nav-gated { justify-content: space-between; }
   padding:6px 14px;
   font-size:0.95rem;
 }
+
+
+/* PR4: reserve orange for CTAs only on the 8 pro/tool pages */
+body.pro-cta-orange .hub-eyebrow,
+body.pro-cta-orange .hub-eyebrow a,
+body.pro-cta-orange .hero-eyebrow,
+body.pro-cta-orange .hero-eyebrow a,
+body.pro-cta-orange .section-eyebrow,
+body.pro-cta-orange .form-card-label,
+body.pro-cta-orange .info-label,
+body.pro-cta-orange .info-kicker,
+body.pro-cta-orange .hero-pre,
+body.pro-cta-orange .section-label,
+body.pro-cta-orange .offer-price {
+  color: #5a6a8a;
+}
+body.pro-cta-orange .hero .hero-eyebrow,
+body.pro-cta-orange .hub-hero .hub-eyebrow,
+body.pro-cta-orange .hub-hero .hub-eyebrow a,
+body.pro-cta-orange .info-hero .info-kicker {
+  color: #cbd5e1;
+}
+body.pro-cta-orange .pricing-badge {
+  background: #1a2744;
+  color: #fff;
+}
+body.pro-cta-orange .pricing-card {
+  border-color: #1a2744;
+}
+body.pro-cta-orange .proof-list li::before {
+  color: #1a2744;
+}
+body.pro-cta-orange .offer-card-list li::before {
+  color: #1a2744;
+}
+body.pro-cta-orange .offer-card.offer-card-popular h3 {
+  color: #fff !important;
+}
+body.pro-cta-orange .menu-card:hover {
+  border-color: #1a2744;
+}
+body.pro-cta-orange .steps-to-cta-arrow,
+body.pro-cta-orange .pricing-to-form-arrow,
+body.pro-cta-orange .result-to-form-arrow {
+  width: 16px;
+  height: 16px;
+  border-right: 3px solid #1a2744;
+  border-bottom: 3px solid #1a2744;
+  transform: rotate(45deg);
+  margin: 16px auto 8px;
+}
+body.pro-cta-orange .calc-outputs .result-to-form-arrow {
+  border-color: #fff;
+}
+body.page-about section.info-band#contact {
+  background: #1a2744;
+  color: #fff;
+  border-radius: 16px;
+  padding: 48px 32px;
+  margin: 32px auto 48px;
+  max-width: 860px;
+  box-sizing: border-box;
+}
+body.page-about section.info-band#contact .info-label,
+body.page-about section.info-band#contact h2,
+body.page-about section.info-band#contact p {
+  color: #fff;
+}
+body.page-about section.info-band#contact .info-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 16px;
+}
+body.page-about section.info-block#costs ul {
+  list-style: none;
+  padding: 0;
+}
+body.page-about section.info-block#costs li {
+  margin: 0 0 18px;
+  padding-bottom: 8px;
+}
+body.pro-cta-orange .form-below-value {
+  padding: 36px 5% 48px;
+}
+body.pro-cta-orange .form-below-value .form-card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  padding: 28px 24px;
+}
+
