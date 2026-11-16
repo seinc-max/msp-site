@@ -1236,17 +1236,25 @@ nav.tl-nav.tl-nav-gated { justify-content: space-between; }
   justify-content: center;
   width: 100%;
   max-width: 640px;
-  margin: 10px 0 4px;
+  height: 28px;
+  margin: 12px auto 8px;
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 1;
+  color: #42506e; /* grey on light sections (margin leakage) */
+}
+.hero .hero-down-cue,
+.hub-hero .hero-down-cue,
+.info-hero .hero-down-cue {
+  color: #e2e8f0; /* light grey on navy heroes; navy-on-navy was invisible */
 }
 .hero-down-cue::before {
   content: "";
   display: block;
-  width: 14px;
-  height: 14px;
-  border-right: 2.5px solid currentColor;
-  border-bottom: 2.5px solid currentColor;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border-right: 3.5px solid currentColor;
+  border-bottom: 3.5px solid currentColor;
   transform: rotate(45deg);
 }
 
@@ -1309,7 +1317,11 @@ nav.tl-nav.tl-nav-gated { justify-content: space-between; }
 }
 
 
-/* PR4: reserve orange for CTAs only on the 8 pro/tool pages */
+/* PR4 follow-up: reserve orange for CTAs only on the 8 pro/tool pages.
+   Overrides the 2026-10-16 contrast !important orange text/badge/border rules
+   on these pages only. Trades/salon pages are unchanged.
+   Light text #42506e on #fff = 8.06:1; #cbd5e1 on navy #1a2744 = 9.98:1;
+   badge #fff on #1a2744 = 14.81:1. */
 body.pro-cta-orange .hub-eyebrow,
 body.pro-cta-orange .hub-eyebrow a,
 body.pro-cta-orange .hero-eyebrow,
@@ -1320,33 +1332,54 @@ body.pro-cta-orange .info-label,
 body.pro-cta-orange .info-kicker,
 body.pro-cta-orange .hero-pre,
 body.pro-cta-orange .section-label,
-body.pro-cta-orange .offer-price {
-  color: #5a6a8a;
+body.pro-cta-orange .offer-price,
+body.pro-cta-orange .card-label,
+body.pro-cta-orange .offer-card.offer-card-popular h3 {
+  color: #42506e !important;
+}
+body.pro-cta-orange .hub-eyebrow a:hover,
+body.pro-cta-orange .hero-eyebrow a:hover,
+body.pro-cta-orange .hub-kicker a:hover {
+  color: #1a2744 !important;
 }
 body.pro-cta-orange .hero .hero-eyebrow,
+body.pro-cta-orange .hero .hero-eyebrow a,
+body.pro-cta-orange .hero .section-eyebrow,
+body.pro-cta-orange .hero .form-card-label,
+body.pro-cta-orange .hero .hero-pre,
 body.pro-cta-orange .hub-hero .hub-eyebrow,
 body.pro-cta-orange .hub-hero .hub-eyebrow a,
-body.pro-cta-orange .info-hero .info-kicker {
-  color: #cbd5e1;
+body.pro-cta-orange .hub-hero .section-eyebrow,
+body.pro-cta-orange .info-hero .info-kicker,
+body.pro-cta-orange .info-hero .info-label,
+body.pro-cta-orange .form-on-navy .form-card-label,
+body.pro-cta-orange :is(.hero, .info-hero, .hub-hero, .bottom-cta, .form-on-navy) :is(.section-eyebrow, .hub-eyebrow, .hub-eyebrow a, .hero-eyebrow, .hero-eyebrow a, .form-card-label, .card-label, .hero-pre, .info-label, .info-kicker, .section-label, .offer-price) {
+  color: #cbd5e1 !important;
 }
-body.pro-cta-orange .pricing-badge {
-  background: #1a2744;
-  color: #fff;
+body.pro-cta-orange .hero .hero-eyebrow a:hover,
+body.pro-cta-orange .hub-hero .hub-eyebrow a:hover {
+  color: #e2e8f0 !important;
 }
-body.pro-cta-orange .pricing-card {
-  border-color: #1a2744;
+body.pro-cta-orange .pricing-badge,
+body.pro-cta-orange .hub-section .pricing-badge {
+  background: #1a2744 !important;
+  color: #fff !important;
+}
+body.pro-cta-orange .pricing-card,
+body.pro-cta-orange .hub-section .pricing-card {
+  border-color: #1a2744 !important;
 }
 body.pro-cta-orange .proof-list li::before {
-  color: #1a2744;
+  color: #1a2744 !important;
 }
 body.pro-cta-orange .offer-card-list li::before {
-  color: #1a2744;
+  color: #1a2744 !important;
 }
 body.pro-cta-orange .offer-card.offer-card-popular h3 {
   color: #fff !important;
 }
 body.pro-cta-orange .menu-card:hover {
-  border-color: #1a2744;
+  border-color: #1a2744 !important;
 }
 body.pro-cta-orange .steps-to-cta-arrow,
 body.pro-cta-orange .pricing-to-form-arrow,
@@ -1372,8 +1405,10 @@ body.page-about section.info-band#contact {
 }
 body.page-about section.info-band#contact .info-label,
 body.page-about section.info-band#contact h2,
-body.page-about section.info-band#contact p {
-  color: #fff;
+body.page-about section.info-band#contact p,
+body.page-about section.info-band#contact .guarantee-line,
+body.page-about section.info-band#contact .info-card-note {
+  color: #fff !important; /* #fff on #1a2744 = 14.81:1; beats pro-cta-orange grey hook */
 }
 body.page-about section.info-band#contact .info-card {
   background: rgba(255,255,255,0.08);
@@ -1402,3 +1437,63 @@ body.pro-cta-orange .form-below-value .form-card {
   padding: 28px 24px;
 }
 
+/* Margin leakage: make the top Book CTA a filled 72px orange button. */
+.calculator-section .hero-cta-panel a.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  min-height: 72px;
+  margin-top: 0;
+  padding: 16px 28px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.calculator-section .hero-cta-panel .hero-down-cue {
+  color: #42506e;
+}
+
+/* Keep the hero CTA + chevron above the mobile sticky bar on the two long-hero tool pages. */
+@media (max-width: 767px) {
+  body.pro-cta-orange .hero:has(a[href="#hs-tool"]) {
+    padding-top: 28px;
+    padding-bottom: 24px;
+  }
+  body.pro-cta-orange .hero:has(a[href="#hs-tool"]) .hero-pre {
+    margin-bottom: 10px;
+  }
+  body.pro-cta-orange .hero:has(a[href="#hs-tool"]) h1 {
+    margin-bottom: 12px;
+  }
+  body.pro-cta-orange .hero:has(a[href="#hs-tool"]) .hero-sub {
+    margin-bottom: 12px;
+  }
+  body.pro-cta-orange .hero:has(a[href="#hs-tool"]) .hero-actions .btn-primary {
+    margin-top: 8px;
+  }
+  body.pro-cta-orange .hero:has(a[href="#hs-tool"]) .hero-down-cue {
+    margin: 4px auto 0;
+  }
+  .calculator-section {
+    padding-top: 24px;
+  }
+  .calculator-section > .section-sub {
+    margin-bottom: 16px;
+  }
+  .calculator-section .hero-cta-panel {
+    padding: 12px 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  .calculator-section .hero-cta-panel .hero-down-cue {
+    margin: 8px auto 0;
+  }
+  .calculator-section .hero-trust-line {
+    margin-top: 8px;
+  }
+}

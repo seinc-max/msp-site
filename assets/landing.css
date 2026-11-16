@@ -190,24 +190,32 @@ body.landing-form .section-action {
   text-align: center;
 }
 
-/* Down-chevron under the hero CTA, pointing to the next section. */
-.hero-down-cue,
-.hub-hero .hero-down-cue {
+/* Down-chevron under the hero CTA, pointing to the next section.
+   Explicit light grey on navy heroes so the glyph is not navy-on-navy. */
+.hero-down-cue {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 640px;
-  margin: 10px 0 4px;
+  height: 28px;
+  margin: 12px auto 8px;
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 1;
+  color: #42506e; /* grey on light sections (margin leakage) */
+}
+.hero .hero-down-cue,
+.hub-hero .hero-down-cue,
+.info-hero .hero-down-cue {
+  color: #e2e8f0; /* light grey on navy heroes; navy-on-navy was invisible */
 }
 .hero-down-cue::before {
   content: "";
   display: block;
-  width: 14px;
-  height: 14px;
-  border-right: 2.5px solid currentColor;
-  border-bottom: 2.5px solid currentColor;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border-right: 3.5px solid currentColor;
+  border-bottom: 3.5px solid currentColor;
   transform: rotate(45deg);
 }
