@@ -128,8 +128,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </style>
 
 
-<link rel="stylesheet" href="/assets/site.css?v=8fd89ade99">
-<link rel="stylesheet" href="/assets/landing.css?v=49e66c9301">
+<link rel="stylesheet" href="/assets/site.css?v=5b3d0cf151">
+<link rel="stylesheet" href="/assets/landing.css?v=44285feffb">
 <style id="fractional-hero-order">
 /* Keep the headline and explanation above the form on small screens.
    landing.css otherwise puts .form-card first on all landing-form pages. */
@@ -182,35 +182,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<nav class="tl-nav" aria-label="Primary">
+<nav class="tl-nav tl-nav-gated" aria-label="Primary">
   <a href="/" class="nav-logo" aria-label="Trueline IT home">Trueline<span>.</span>IT</a>
-  <div class="nav-links">
-    <details class="nav-services">
-      <summary>Services</summary>
-      <div class="nav-services-menu">
-        <div class="nav-services-group" data-audience="trades" role="group" aria-labelledby="nav-group-trades">
-          <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
-          <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
-          <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
-          <a class="nav-services-sub" href="/ai-receptionist">AI Receptionist</a>
-          <a class="nav-services-sub" href="/quote-follow-up-win-back">Quote Follow-Up & Win-Back</a>
-          <a class="nav-services-sub" href="/website-chat-to-text">Website Chat-to-Text</a>
-          <a class="nav-services-sub" href="/text-to-pay">Text-to-Pay</a>
-          <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
-          <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
-        </div>
-        <div class="nav-services-group" data-audience="salons" role="group" aria-labelledby="nav-group-salons">
-          <p class="nav-services-label" id="nav-group-salons">Salons & Clinics</p>
-          <a class="nav-services-hub" href="/for-appointment-businesses">For Salons & Clinics</a>
-          <a class="nav-services-sub" href="/ai-receptionist-for-salons">AI Receptionist</a>
-          <a class="nav-services-sub" href="/google-review-requests-for-salons">Google Review Requests</a>
-        </div>
-        <div class="nav-services-group nav-services-minor" data-audience="professional">
-          <a class="nav-services-sub" href="/for-law-firms-accountants-and-advisors">Law, accounting &amp; advisory firms</a>
-        </div>
-      </div>
-    </details>
-  </div>
   <a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>
 </nav>
 <main id="main" tabindex="-1">
@@ -236,6 +209,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
           <div style="margin-bottom:14px;"><label for="firstname" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Name</label><input type="text" id="firstname" name="firstname" autocomplete="name" placeholder="Jane Smith" required style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"></div>
           <div style="margin-bottom:14px;"><label for="email" style="display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:inherit;">Business email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required oninput="document.getElementById('email-error').style.display='none'" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box;background:#fff;color:#0f172a;"><div id="email-error" style="display:none;color:#ef4444;font-size:0.875rem;font-weight:700;margin-top:0.5rem;">Please enter a valid email address.</div></div>
           <button type="submit" class="btn-submit btn-primary" style="width:100%;padding:14px 0;font-size:1.05rem;font-weight:700;border:0;border-radius:8px;cursor:pointer;">Book My AI Consultation</button>
+<div class="hero-down-cue" aria-hidden="true"></div>
           <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We'll email you to set up a call.</p>
           <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See our <a href="/privacy">Privacy Policy</a>.</p>
         </form>
@@ -284,6 +258,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">What is a fractional AI officer?</h2>
     <p class="section-lead body-copy">A fractional AI officer is a named AI officer on your team, part-time, for $10,000–25,000 a month. They run your firm's AI use on a written policy, catch client data leaving through public AI tools, and fix the biggest leak first. Start with the $1,000 AI Liability Assessment, credited in full toward the retainer if you continue within 90 days.</p>
   </div>
+
+<div class="section-action"><a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></div>
 </section>
 <section class="pricing-section">
   <div class="section-inner">
@@ -297,7 +273,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       <div class="pricing-badge">AI Liability Assessment</div>
       <p class="pricing-amount">$1,000</p>
       <p class="pricing-desc">The fee is credited in full toward a retainer if you continue within 90 days.</p>
-      <p class="pricing-desc" style="margin-top:10px;">30-day money-back guarantee. If you are not happy, tell us within 30 days of your first invoice and first payment and we refund your entire first invoice. The 30 days are calendar days; the clock ends at the end of day (Eastern Time) on day 30.</p>
+      <p class="pricing-desc" style="margin-top:10px;">30-day money-back guarantee. If you are not happy, tell us within 30 days of your first payment and we refund your entire first payment. The 30 days are calendar days; the clock ends at the end of day (Eastern Time) on day 30.</p>
     </div>
     <h2>What the assessment covers</h2>
 <ul>
@@ -321,6 +297,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p class="section-lead body-copy"><strong>Financial advisors.</strong> Copilot surfaces a salary sheet or a client record to someone who should not see it. The question is why the firm let that run without a written policy.</p>
     <p class="section-lead body-copy">The same risks apply to wealth managers, mortgage brokers, consultants, architecture and engineering firms, HR consultancies, and property managers. The AI Liability Assessment is the $1,000 first step.</p>
   </div>
+
+<div class="section-action"><a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></div>
 </section>
 
 <section class="how-section" id="how-you-work-with-us">
@@ -343,12 +321,14 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   <div class="proof-inner">
     <h2>You see the work before the next invoice lands.</h2>
     <ul class="proof-list">
-      <li>30-day money-back guarantee. If you are not happy, tell us within 30 days of your first invoice and first payment and we refund your entire first invoice. The 30 days are calendar days; the clock ends at the end of day (Eastern Time) on day 30.</li>
+      <li>30-day money-back guarantee. If you are not happy, tell us within 30 days of your first payment and we refund your entire first payment. The 30 days are calendar days; the clock ends at the end of day (Eastern Time) on day 30.</li>
       <li>For architecture, engineering and HR firms, we scope the work after the assessment, inside the retainer.</li>
       <li>Cancel anytime. No notice period.</li>
       <li>Every engagement on this page is scoped to your firm. Final scope and price are set in your engagement agreement.</li>
     </ul>
   </div>
+
+<div class="section-action"><a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></div>
 </section>
 
 <section class="pricing-section">
@@ -359,6 +339,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <details><summary>Is the $1,000 credited?</summary><p>Yes. The $1,000 assessment fee is credited in full toward a retainer if you continue within 90 days. The credit covers the whole $1,000, so the assessment costs you nothing extra if you go on to the retainer within 90 days of the assessment.</p></details>
 <details><summary>Can I cancel the retainer?</summary><p>Yes. You can cancel the retainer anytime, and there is no notice period to serve. There is no contract locking you in and no fee for cancelling — you can stop the retainer whenever you choose, without having to give notice first.</p></details>
   </div>
+
+<div class="section-action"><a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></div>
 </section>
 </main>
 
