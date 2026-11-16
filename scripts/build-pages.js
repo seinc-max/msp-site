@@ -611,7 +611,7 @@ function buildOne(rel) {
   if (template === 'info') {
     const model = rel === 'about.html' ? aboutModel(source) : legalModel(source, rel.replace('.html', ''));
     beforeSticky = replaceElement(beforeSticky, 'main', infoMain(model));
-    bodyOpen = bodyOpen.replace('<body', rel === 'about.html' ? '<body class="info-page page-about"' : '<body class="info-page"');
+    bodyOpen = bodyOpen.replace('<body', rel === 'about.html' ? '<body class="info-page page-about pro-cta-orange"' : '<body class="info-page"');
   }
   beforeSticky = expandIncludes(beforeSticky);
   beforeSticky = applyConversations(beforeSticky);
