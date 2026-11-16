@@ -1254,3 +1254,56 @@ nav.tl-nav.tl-nav-gated { justify-content: space-between; }
   margin-top: 28px;
   text-align: center;
 }
+
+
+/* Gardner 2026-11-15: hub hero mockup shrink + arrow toward the Call button. */
+.hub-hero .tl-frame{width:260px;max-width:86%;}
+.hub-hero .tl-phone{min-height:300px;}
+@media (max-width:767px){
+  .hub-hero .tl-phone{height:300px;min-height:300px;max-height:300px;}
+}
+.mockup-cta-arrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  margin:4px 0 10px;
+  pointer-events:none;
+  opacity:0.8;
+}
+.mockup-cta-arrow::before{
+  content:"";
+  display:block;
+  width:14px;
+  height:14px;
+  border-right:2.5px solid currentColor;
+  border-bottom:2.5px solid currentColor;
+  transform:rotate(-135deg); /* point up toward the Call button above */
+}
+
+/* Framed dark bottom CTA block on hub pages. */
+.hub-bottom-cta{
+  background:#1a2744;
+  color:#fff;
+  padding:48px 5%;
+  text-align:center;
+}
+.hub-bottom-cta-inner{
+  max-width:640px;
+  margin:0 auto;
+  padding:28px 24px;
+  border:1px solid rgba(255,255,255,0.35);
+  border-radius:16px;
+}
+.hub-bottom-cta .btn-primary{width:100%;max-width:640px;display:inline-flex;justify-content:center;}
+.hub-bottom-cta .hero-guarantee{
+  display:inline-block;
+  margin-top:16px;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.35);
+  color:#fff;
+  font-weight:700;
+  border-radius:999px;
+  padding:6px 14px;
+  font-size:0.95rem;
+}

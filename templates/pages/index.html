@@ -1069,7 +1069,7 @@ details[open] summary::after{ content: '−'; }
 .offer-grid{
   display:grid;
   grid-template-columns:minmax(0,1fr);
-  gap:16px;
+  gap:28px;
   max-width:1100px;
   margin:0 auto;
 }
@@ -1083,7 +1083,7 @@ details[open] summary::after{ content: '−'; }
   background:#fff;
   border:1px solid var(--border);
   border-radius:12px;
-  padding:22px 20px;
+  padding:28px 24px;
   display:flex;
   flex-direction:column;
   min-width:0;
@@ -1131,6 +1131,17 @@ details[open] summary::after{ content: '−'; }
 .front-card .front-pack a:hover{color:#9a3412;}
 .hero .cta-cancel{color:rgba(255,255,255,0.8);margin-top:12px;max-width:640px;}
 .hero-guarantee{display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin:12px 0 0;font-size:0.95rem;}
+.hero-cta-panel{
+  display:block;
+  max-width:640px;
+  margin-top:8px;
+  padding:20px 20px 18px;
+  border:1px solid rgba(255,255,255,0.35);
+  border-radius:16px;
+  box-sizing:border-box;
+}
+.hero-cta-panel .hero-actions{margin-top:0;margin-bottom:0;}
+.hero-cta-panel .hero-guarantee{margin-top:12px;}
 .hero .hero-try{margin-top:14px;margin-bottom:0;}
 @media (max-width:430px){
   .offer-group{padding:36px 5%;}
@@ -1184,12 +1195,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-inner">
     <h1>You do the job. We set it up and run&nbsp;it.</h1>
     <p class="hero-sub">Phone and AI help for trades and contractors. Salons and clinics too.</p>
+    <div class="hero-cta-panel">
     <div class="hero-actions">
       <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
 <div class="hero-down-cue" aria-hidden="true"></div>
     </div>
     <p class="cta-cancel">Cancel anytime. No contracts, no cancellation fees.</p>
     <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
+    </div>
     <p class="hero-sub hero-try">Try it: call, hang up, and see the text your callers get.</p>
   </div>
 </section>
@@ -1210,44 +1223,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h3><a href="/missed-call-text-back">Missed-Call Text-Back</a></h3>
       <p class="front-line">Missed calls to your number get a text back from a separate number.</p>
       <p class="front-price">$149/mo per location plus a one-time $199 setup</p>
-      <a class="front-link" href="/missed-call-text-back">See Missed-Call Text-Back</a>
     </article>
     <article class="front-card">
       <h3><a href="/ai-receptionist">AI Receptionist</a></h3>
       <p class="front-line">Your AI receptionist takes the job details and texts them to you.</p>
       <p class="front-price">$299/mo plus a one-time $299 setup</p>
-      <a class="front-link" href="/ai-receptionist">See AI Receptionist</a>
     </article>
     <article class="front-card">
       <h3><a href="/google-review-requests">Google Review Requests + Replies</a></h3>
       <p class="front-line">We text your customer a one-tap Google review link after each job.</p>
       <p class="front-price">$99/mo per location plus a one-time $99 setup</p>
-      <a class="front-link" href="/google-review-requests">See Google Review Requests + Replies</a>
     </article>
     <article class="front-card">
       <h3><a href="/quote-follow-up-win-back">Quote Follow-Up</a></h3>
       <p class="front-line">Every open quote gets a text on a schedule you approve.</p>
       <p class="front-price">$149/mo per location plus a one-time $199 setup</p>
-      <a class="front-link" href="/quote-follow-up-win-back">See Quote Follow-Up &amp; Win-Back</a>
       <p class="front-pack"><a href="/quote-follow-up-win-back#pack">Quote Follow-Up + Google Reviews</a> — $179/mo per location plus a one-time $199 setup.</p>
     </article>
     <article class="front-card">
       <h3><a href="/website-chat-to-text">Website Chat-to-Text</a></h3>
       <p class="front-line">A small chat button collects their number and question.</p>
       <p class="front-price">$79/mo per location plus a one-time $99 setup</p>
-      <a class="front-link" href="/website-chat-to-text">See Website Chat-to-Text</a>
     </article>
     <article class="front-card">
       <h3><a href="/text-to-pay">Text-to-Pay</a></h3>
       <p class="front-line">You text a secure invoice link from your business number.</p>
       <p class="front-price">$49/mo per location plus a one-time $99 setup</p>
-      <a class="front-link" href="/text-to-pay">See Text-to-Pay</a>
     </article>
     <article class="front-card">
       <h3><a href="/contractor-websites">Contractor Websites</a></h3>
       <p class="front-line">Your site shows the work you do and puts a call button in their hand.</p>
       <p class="front-price">$499/mo. No setup fee.</p>
-      <a class="front-link" href="/contractor-websites">See Contractor Websites</a>
     </article>
   </div>
 </section>
@@ -1262,13 +1268,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h3><a href="/ai-receptionist-for-salons">AI Receptionist</a></h3>
       <p class="front-line">Your AI receptionist picks up, takes the booking request, and texts it to you to confirm.</p>
       <p class="front-price">$299/mo plus a one-time $299 setup</p>
-      <a class="front-link" href="/ai-receptionist-for-salons">See the AI receptionist for salons and clinics</a>
     </article>
     <article class="front-card">
       <h3><a href="/google-review-requests-for-salons">Google Review Requests + Replies</a></h3>
       <p class="front-line">We text your client a one-tap Google review link after each visit.</p>
       <p class="front-price">$99/mo per location plus a one-time $99 setup</p>
-      <a class="front-link" href="/google-review-requests-for-salons">See review requests for salons and clinics</a>
     </article>
   </div>
 </section>
@@ -1282,25 +1286,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h3><a href="/ai-governance">AI Governance</a></h3>
       <p class="front-line">A written AI policy, staff training and monitoring.</p>
       <p class="front-price">$2,500/mo, no setup fee</p>
-      <a class="front-link" href="/ai-governance">See AI Governance</a>
     </article>
     <article class="front-card">
       <h3><a href="/fractional-ai-officer">Fractional AI Officer</a></h3>
       <p class="front-line">A named AI officer on your team, part-time.</p>
       <p class="front-price">$10,000–25,000/mo</p>
-      <a class="front-link" href="/fractional-ai-officer">See Fractional AI Officer</a>
     </article>
     <article class="front-card">
       <h3><a href="/ai-support-agent">AI Support Agent</a></h3>
       <p class="front-line">Your clients get answers at 7 p.m., from material you already approved.</p>
       <p class="front-price">$500/mo plus a $2,000 build, credited in full against months 1–4</p>
-      <a class="front-link" href="/ai-support-agent">See AI Support Agent</a>
     </article>
     <article class="front-card">
       <h3><a href="/ai-exposure-score">Liability Assessment</a></h3>
       <p class="front-line">Answer 15 yes-or-no questions about how your firm uses AI. You see your score when you finish.</p>
       <p class="front-price">$1,000, credited in full toward a retainer if you continue within 90 days</p>
-      <a class="front-link" href="/ai-exposure-score">See the AI exposure score</a>
     </article>
   </div>
 
