@@ -83,16 +83,42 @@ for (const file of files) {
 }
 pass('29 pages classified: 5 neutral, 8 trades, 3 salons, 13 professional');
 
+const gatedNav = new Set([
+  'missed-call-text-back.html',
+  'ai-receptionist.html',
+  'ai-receptionist-for-salons.html',
+  'google-review-requests.html',
+  'google-review-requests-for-salons.html',
+  'quote-follow-up-win-back.html',
+  'website-chat-to-text.html',
+  'text-to-pay.html',
+  'contractor-websites.html',
+  'for-home-services.html',
+  'for-appointment-businesses.html',
+  'for-law-firms-accountants-and-advisors.html',
+  'ai-governance.html',
+  'fractional-ai-officer.html',
+  'ai-support-agent.html',
+  'ai-exposure-score.html',
+  'ai-automation-roi-guide.html',
+  'margin-leakage-calculator.html',
+  'about.html',
+]);
 for (const file of files) {
   const n = nav(read(file));
-  for (const href of homeMenu) {
-    if (!n.includes('href="' + href + '"')) fail(file + ' nav missing ' + href);
-  }
   for (const href of proOfferHrefs) {
     if (n.includes('href="' + href + '"')) fail(file + ' nav added professional offer ' + href);
   }
+  if (gatedNav.has(file)) {
+    if (n.includes('nav-services') || n.includes('class="nav-links"')) fail(file + ' landing nav still shows the Services menu');
+    if (!n.includes('class="nav-cta"') && !n.includes('class="nav-logo"')) fail(file + ' gated nav missing logo or CTA');
+  } else {
+    for (const href of homeMenu) {
+      if (!n.includes('href="' + href + '"')) fail(file + ' nav missing ' + href);
+    }
+  }
 }
-pass('every page shows the full home Services menu and omits professional offer links');
+pass('landing pages gate the nav to logo + CTA; homepage, legal, 404, and blog keep the full Services menu');
 const notFound = read('404.html');
 if (bodyClass(notFound)) fail('404 should stay a neutral recovery page');
 const notFoundNav = nav(notFound);

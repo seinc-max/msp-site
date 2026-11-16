@@ -76,30 +76,28 @@ body.landing-form .hub-hero h1 {
 /* Call action. Color stays with site.css. Radius is the existing 10px token. */
 body.landing-call .hero a.hero-call,
 body.landing-call .hero .hero-actions .btn-primary,
-body.landing-call .hub-hero a.hub-cta[href^="tel:"] {
+body.landing-call .hub-hero a.hub-cta[href^="tel:"],
+body.landing-form .hero .hero-actions .btn-primary,
+body.landing-form .hero .hero-copy > a.btn-primary,
+body.landing-form .hub-hero a.hub-cta {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 640px;
-  min-height: 57px;
+  min-height: 72px;
   height: auto;
-  margin-top: 8px;
+  margin-top: 24px;
   margin-bottom: 16px;
-  padding: 0 24px;
+  padding: 16px 28px;
   box-sizing: border-box;
   border-radius: 10px;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.25;
   text-align: center;
   text-wrap: balance;
   text-decoration: none;
-}
-
-body.landing-call .hero a.hero-call,
-body.landing-call .hero .hero-actions .btn-primary {
-  height: 57px;
 }
 
 body.landing-call .hero a.hero-call + .hero-guarantee {
@@ -182,4 +180,34 @@ body.landing-form .gov-top-copy .section-inner p {
 }
 body.landing-form .gov-top-copy .section-inner p:last-child {
   margin-bottom: 0;
+}
+
+
+/* Repeated mid-page CTAs (Gardner 2026-11-15). */
+body.landing-call .section-action,
+body.landing-form .section-action {
+  margin-top: 28px;
+  text-align: center;
+}
+
+/* Down-chevron under the hero CTA, pointing to the next section. */
+.hero-down-cue,
+.hub-hero .hero-down-cue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  margin: 10px 0 4px;
+  pointer-events: none;
+  opacity: 0.8;
+}
+.hero-down-cue::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-right: 2.5px solid currentColor;
+  border-bottom: 2.5px solid currentColor;
+  transform: rotate(45deg);
 }

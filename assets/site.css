@@ -357,7 +357,7 @@ nav.tl-nav .nav-services-menu a.nav-services-sub {
   padding-left: 22px;
   font-weight: 500;
 }
-/* Every page shows the full home Services menu. Audience classes stay on the body. */
+/* Landing pages (except the homepage) gate the nav to logo + CTA. Audience classes stay on the body. */
 nav.tl-nav .nav-cta {
   background: #f97316;
   color: #fff;
@@ -1208,4 +1208,49 @@ main:focus{outline:none}
     overscroll-behavior: contain;
   }
   body:has(nav.tl-nav .nav-services[open]) .sticky-mobile-cta { display: none !important; }
+}
+
+
+/* Gardner 2026-11-15: gated landing nav is logo + CTA only. */
+nav.tl-nav.tl-nav-gated .nav-links { display: none; }
+nav.tl-nav.tl-nav-gated { justify-content: space-between; }
+
+/* Tool and About pages (site.css only): enlarge the hero CTA and add space above it. */
+.hero .hero-actions .btn-primary,
+.info-hero .hero-actions .btn-primary,
+.page-hero .hero-actions .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  margin-top: 24px;
+  padding: 16px 28px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.hero-down-cue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  margin: 10px 0 4px;
+  pointer-events: none;
+  opacity: 0.8;
+}
+.hero-down-cue::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-right: 2.5px solid currentColor;
+  border-bottom: 2.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.section-action {
+  margin-top: 28px;
+  text-align: center;
 }
