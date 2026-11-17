@@ -627,9 +627,6 @@ function buildOne(rel) {
       sticky = sticky.replace('href="/fractional-ai-officer#assessment"', 'href="#discovery-form"');
     }
   }
-  if (['contractor-websites.html', 'for-home-services.html', 'for-appointment-businesses.html'].includes(rel)) {
-    sticky = sticky.replace('Month-to-month. Cancel anytime.', 'Cancel anytime. No contracts, no cancellation fees.');
-  }
   const slots = {
     head: parts.head,
     bodyOpen,
