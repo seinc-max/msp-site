@@ -182,6 +182,17 @@
 /hvac-tune-up-reminders/ /for-home-services 301
 /hvac-tune-up-reminders.html /for-home-services 301
 
+# Short URLs for offer pages (Ben change list 2026-11-17). Plain, trailing-slash, and .html variants.
+/google-reviews /google-review-requests 301
+/google-reviews/ /google-review-requests 301
+/google-reviews.html /google-review-requests 301
+/quote-follow-up /quote-follow-up-win-back 301
+/quote-follow-up/ /quote-follow-up-win-back 301
+/quote-follow-up.html /quote-follow-up-win-back 301
+/chat-to-text /website-chat-to-text 301
+/chat-to-text/ /website-chat-to-text 301
+/chat-to-text.html /website-chat-to-text 301
+
 # Hide template sources and build scripts. Pages _redirects cannot return 404
 # (only 200, 301, 302, 303, 307, 308), so non-page paths redirect home.
 # Static rules stay above dynamic ones. First match wins.
