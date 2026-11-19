@@ -221,3 +221,394 @@ body.landing-form .section-action {
   border-bottom: 3.5px solid currentColor;
   transform: rotate(45deg);
 }
+
+/* =====================================================================
+   Top-half system v2 (2026-11-18). Shared by every landing hero.
+   Anatomy (call pages): kicker, H1, one sub, call button, assurance row
+   (guarantee pill + cancel line), small set-up line, three checks,
+   try-it line, optional cited proof. Visual on the right, centred
+   against the copy, so no column leaves dead space.
+   Rhythm: 8px grid. 14 / 18 / 28 / 32 between blocks.
+   ===================================================================== */
+body.landing-call,
+body.landing-form {
+  --tl-navy: #1a2744;
+  --tl-orange: #f97316;
+  --tl-ink-soft: rgba(255,255,255,.84);
+  --tl-ink-muted: rgba(255,255,255,.72);
+  --tl-hairline: rgba(255,255,255,.14);
+  --tl-measure: 36rem;
+}
+
+/* Section frame */
+body.landing-offer .hero {
+  padding: 64px 24px 80px;
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero { padding: 24px 20px 48px; }
+}
+
+/* Two columns from 768px up; visual centred against the copy. */
+body.landing-offer .hero .hero-grid,
+body.landing-offer .hero .hero-grid.hero-with-frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  max-width: var(--landing-column);
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame {
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 300px);
+    column-gap: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    column-gap: 64px;
+  }
+}
+body.landing-offer .hero .hero-grid > .hero-copy { grid-column: 1; grid-row: 1; max-width: 620px; min-width: 0; }
+body.landing-offer .hero .hero-grid > .hero-side {
+  grid-column: 1; grid-row: auto;
+  display: flex; flex-direction: column; align-items: center; justify-self: center;
+  width: 100%; max-width: 360px; margin: 0; gap: 0; align-self: center;
+}
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid > .hero-side { grid-column: 2; grid-row: 1; justify-self: end; }
+}
+
+/* Kicker: product + audience, the 5-second "what is this" answer. */
+body.landing-call .hero .hero-kicker,
+body.landing-call .hub-hero .hero-kicker {
+  display: inline-block;
+  margin: 0 0 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--tl-orange);
+}
+
+/* Headline: one idea, balanced lines. */
+body.landing-offer .hero h1 {
+  margin: 0;
+  max-width: 17ch;
+  text-wrap: balance;
+  letter-spacing: -.01em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body.landing-offer .hero h1 { font-size: 2.15rem; }
+}
+
+/* One supporting line. */
+body.landing-offer .hero .hero-copy > .hero-sub {
+  margin: 18px 0 0;
+  max-width: var(--tl-measure);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--tl-ink-soft);
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-copy > .hero-sub { font-size: 1.05rem; line-height: 1.55; margin-top: 14px; }
+}
+
+/* Call button: same width as the text measure, never wider. */
+body.landing-offer .hero a.hero-call {
+  max-width: 440px;
+  min-height: 64px;
+  margin: 28px 0 0;
+  box-shadow: 0 10px 24px rgba(249,115,22,.28);
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero a.hero-call { max-width: none; margin-top: 22px; }
+}
+
+/* Risk reversal sits on the button it supports. */
+body.landing-call .hero-assure {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin: 14px 0 0;
+}
+body.landing-call .hero-assure .hero-guarantee,
+body.landing-call .hero a.hero-call + .hero-assure .hero-guarantee {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.32);
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+body.landing-call .hero-assure .hero-cancel {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.4;
+  color: var(--tl-ink-muted);
+}
+body.landing-call .hero-process {
+  margin: 10px 0 0;
+  max-width: var(--tl-measure);
+  font-size: .9rem;
+  line-height: 1.5;
+  color: var(--tl-ink-muted);
+}
+
+/* Three checks, separated from the ask by a hairline. */
+body.landing-offer .hero .hero-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--tl-hairline);
+  max-width: var(--tl-measure);
+}
+body.landing-offer .hero .trust-item {
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #fff;
+}
+body.landing-offer .hero .trust-item svg { margin-top: 3px; width: 18px; height: 18px; }
+
+/* Try it: the live proof, styled as a callout, not body text. */
+body.landing-call .hero .hero-try,
+body.landing-call .hub-hero .hero-try {
+  display: block;
+  margin: 24px 0 0;
+  max-width: var(--tl-measure);
+  padding: 12px 16px;
+  border-left: 3px solid var(--tl-orange);
+  border-radius: 0 10px 10px 0;
+  background: rgba(255,255,255,.06);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+}
+body.landing-call .hero .hero-try strong,
+body.landing-call .hub-hero .hero-try strong { color: #fff; }
+body.landing-call .hero .hero-proof,
+body.landing-call .hub-hero .hero-proof {
+  margin: 14px 0 0;
+  max-width: var(--tl-measure);
+  font-size: .875rem;
+  line-height: 1.5;
+  color: var(--tl-ink-muted);
+}
+
+/* Scroll cue: bottom centre of the hero, out of the button's way. */
+body.landing-offer .hero .hero-copy > .hero-down-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-copy > .hero-down-cue { bottom: 12px; }
+}
+
+/* Phone visual: readable sizes at every width, full thread, no clipping. */
+body.landing-offer .hero .hero-side > .tl-frame { width: 100%; max-width: 360px; align-self: center; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-phone { height: auto; min-height: 0; max-height: none; overflow: visible; padding: 10px 10px 12px; border-radius: 34px; box-shadow: 0 28px 60px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.08); }
+body.landing-offer .hero .hero-side > .tl-frame .tl-ear { display: block; height: 5px; margin: 2px auto 8px; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-screen { min-height: 0; height: auto; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-phone-head { padding: 10px 14px; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-avatar { width: 32px; height: 32px; font-size: .85rem; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-thread { gap: 8px; padding: 12px; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble { display: block; padding: 8px 12px; font-size: .85rem; line-height: 1.4; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip { padding: 4px 10px; font-size: .75rem; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-site-screen { min-height: 300px; height: auto; }
+body.landing-offer .hero .hero-side > .tl-frame figcaption {
+  margin: 14px auto 0;
+  max-width: 320px;
+  font-size: .8rem;
+  line-height: 1.45;
+  text-align: center;
+  color: var(--tl-ink-muted);
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-side > .tl-frame { max-width: 340px; }
+}
+
+/* Receptionist hero card: what the owner gets, plus a jump to the call. */
+.tl-owner-card .tl-thread { padding: 14px 12px 16px; }
+.tl-owner-card .tl-sms { font-size: .9rem; line-height: 1.45; }
+.tl-owner-card .tl-sms p { font-size: .9rem; }
+.tl-owner-card .tl-meta { margin: 0; display: grid; gap: 6px; }
+.tl-owner-card .tl-meta div { display: flex; justify-content: space-between; gap: 10px; background: #fff; border-radius: 10px; padding: 8px 12px; font-size: .8rem; color: #1a2744; }
+.tl-owner-card .tl-meta dt { font-weight: 700; color: #5a6a8a; }
+.tl-owner-card .tl-meta dd { margin: 0; font-weight: 600; text-align: right; }
+.tl-listen {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  margin: 4px auto 0; min-height: 44px; padding: 10px 16px;
+  border-radius: 999px; border: 1px solid #1a2744; background: #fff;
+  color: #1a2744; font-size: .85rem; font-weight: 700; text-decoration: none;
+}
+.tl-listen:hover, .tl-listen:focus-visible { background: #1a2744; color: #fff; }
+
+/* Hubs: copy left, phone right, both centred. Replaces the absolute-positioned
+   frame that overflowed the hero on /for-appointment-businesses. */
+body.landing-hub .hub-hero { position: relative; padding: 64px 24px 80px; }
+@media (max-width: 767px) { body.landing-hub .hub-hero { padding: 24px 20px 48px; } }
+body.landing-hub .hub-hero-inner.hub-v2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  max-width: var(--landing-column);
+  min-height: 0;
+  padding-right: 0;
+  margin: 0 auto;
+  position: static;
+}
+@media (min-width: 768px) {
+  body.landing-hub .hub-hero-inner.hub-v2 { grid-template-columns: minmax(0, 1fr) minmax(250px, 300px); column-gap: 40px; }
+}
+@media (min-width: 1024px) {
+  body.landing-hub .hub-hero-inner.hub-v2 { grid-template-columns: minmax(0, 1fr) 360px; column-gap: 64px; }
+}
+body.landing-hub .hub-v2 > .hub-copy { min-width: 0; max-width: 620px; }
+body.landing-hub .hub-v2 > .hub-side { display: flex; justify-content: center; width: 100%; max-width: 360px; justify-self: center; }
+@media (min-width: 768px) { body.landing-hub .hub-v2 > .hub-side { justify-self: end; } }
+body.landing-hub .hub-v2 .hub-side > .tl-frame,
+body.landing-hub .hub-hero-inner.hub-v2 > .hub-side > .tl-frame { position: static; width: 100%; max-width: 360px; margin: 0; }
+body.landing-hub .hub-v2 .tl-phone { height: auto; min-height: 0; max-height: none; overflow: visible; padding: 10px 10px 12px; border-radius: 34px; box-shadow: 0 28px 60px rgba(0,0,0,.35); }
+body.landing-hub .hub-v2 .tl-ear { display: block; }
+body.landing-hub .hub-v2 .tl-screen { height: auto; min-height: 0; }
+body.landing-hub .hub-v2 .tl-bubble { display: block; }
+/* Long call mockup: show the greeting, the ask and the text the owner gets (same cut as phones). */
+body.landing-hub .hub-v2 .tl-call .tl-line:nth-of-type(n+3) { display: none; }
+body.landing-hub .hub-v2 .tl-frame figcaption { margin: 14px auto 0; max-width: 320px; font-size: .8rem; line-height: 1.45; text-align: center; color: var(--tl-ink-muted); }
+body.landing-hub .hub-v2 .hub-eyebrow { margin: 0 0 8px; }
+body.landing-hub .hub-v2 .hero-rotation { margin: 0 0 16px; min-height: 0; font-size: 1rem; color: rgba(255,255,255,.9); }
+body.landing-hub .hub-v2 h1 { margin: 0; min-height: 0; max-width: 18ch; text-wrap: balance; }
+body.landing-hub .hub-v2 .subhead { margin: 18px 0 0; min-height: 0; max-width: var(--tl-measure); font-size: 1.125rem; line-height: 1.6; color: var(--tl-ink-soft); }
+body.landing-hub .hub-v2 a.hub-cta { margin: 28px 0 0; max-width: 440px; min-height: 64px; box-shadow: 0 10px 24px rgba(249,115,22,.28); }
+@media (max-width: 767px) { body.landing-hub .hub-v2 a.hub-cta { max-width: none; } body.landing-hub .hub-v2 .subhead { font-size: 1.05rem; } }
+body.landing-hub .hub-v2 .not-you { margin: 20px 0 0; font-size: .9rem; color: var(--tl-ink-muted); display: block; }
+body.landing-hub .hub-v2 .not-you a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+body.landing-hub .hub-v2 > .hub-copy > .hero-down-cue { position: absolute; left: 50%; bottom: 18px; width: 28px; height: 28px; margin: 0; transform: translateX(-50%); }
+
+/* Section call buttons on hubs render as real buttons. */
+body.landing-call .section-action a.btn-primary {
+  box-sizing: border-box;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 767px) { body.landing-call .section-action a.btn-primary { width: 100%; box-sizing: border-box; } }
+
+/* Home: copy left, "what kind of business" picker right. Fills the old empty half. */
+body.landing-home .hero { position: relative; padding-top: 64px; padding-bottom: 80px; }
+@media (max-width: 767px) { body.landing-home .hero { padding: 24px 20px 52px; } }
+body.landing-home .hero .hero-inner.home-v2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  max-width: var(--landing-column);
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  body.landing-home .hero .hero-inner.home-v2 { grid-template-columns: minmax(0, 1fr) 380px; column-gap: 64px; }
+}
+body.landing-home .home-v2 .home-copy { min-width: 0; max-width: 620px; }
+body.landing-home .home-v2 h1 { margin: 0; max-width: 14ch; text-wrap: balance; }
+body.landing-home .home-v2 .home-copy > .hero-sub:not(.hero-try) { margin: 18px 0 0; max-width: var(--tl-measure); font-size: 1.15rem; line-height: 1.6; color: var(--tl-ink-soft); }
+body.landing-home .home-v2 .hero-actions { margin: 28px 0 0; max-width: 440px; }
+@media (max-width: 767px) { body.landing-home .home-v2 .hero-actions { margin-top: 22px; max-width: none; } }
+body.landing-home .home-v2 .hero-actions .btn-primary { min-height: 64px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 10px 24px rgba(249,115,22,.28); }
+body.landing-home .home-v2 .hero-assure .cta-cancel { margin: 0; text-align: left; }
+body.landing-home .home-v2 .hero-try { margin-top: 24px; }
+body.landing-home .hero .home-pick {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  grid-template-columns: none;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+@media (min-width: 900px) { body.landing-home .hero .home-pick { padding: 28px; } }
+body.landing-home .hero .home-pick .home-pick-title {
+  margin: 0 0 4px;
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+}
+body.landing-home .hero .home-pick .front-jump-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--tl-navy);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  border: 0;
+}
+body.landing-home .hero .home-pick .front-jump-btn span { color: var(--tl-orange); font-size: 1.2rem; }
+body.landing-home .hero .home-pick .front-jump-btn:hover { background: #fff7ed; color: var(--tl-navy); }
+body.landing-home .hero .home-pick .home-pick-more {
+  align-self: flex-start;
+  margin-top: 4px;
+  font-size: .92rem;
+  color: rgba(255,255,255,.8);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+body.landing-home .hero > .hero-down-cue { position: absolute; left: 50%; bottom: 18px; width: 28px; height: 28px; margin: 0; transform: translateX(-50%); }
+
+/* Law hub: the support lines under the hero get a real section frame. */
+body.landing-form .hub-support-strip { background: #f4f6fb; padding: 28px 24px; border-bottom: 1px solid #dde6f5; }
+body.landing-form .hub-support-strip .section-inner { max-width: var(--landing-column); margin: 0 auto; }
+body.landing-form .hub-support-strip p { margin: 0 0 10px; max-width: 46rem; color: #1a2744; font-size: 1rem; line-height: 1.6; text-align: left; }
+body.landing-form .hub-support-strip p:last-child { margin-bottom: 0; }
+body.landing-form .hub-support-strip .strip-note { color: #42506e; font-size: .95rem; }
+body.landing-form .hub-support-strip .not-you { display: block; font-size: .95rem; color: #42506e; }
+body.landing-form .hub-support-strip .not-you a { color: #1a2744; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+/* Support agent: price and guarantee lines sit tight under the panel. */
+body.landing-form .hub-hero .hero-price-line { margin: 14px 0 0; font-weight: 700; color: #fff; }
+body.landing-form .hub-hero .hero-trust-line { margin: 6px 0 0; color: var(--tl-ink-muted); }
+body.landing-form .hub-hero .hero-cta-panel .hero-down-cue { display: none; }
+body.landing-form .hub-hero .hero-cta-panel { padding: 0; border: 0; background: none; box-shadow: none; max-width: 440px; }
+body.landing-form .hub-hero .hero-cta-panel a.hub-cta { margin-top: 24px; }
+body.landing-form .hub-hero .hub-support { margin-top: 22px; }
+body.landing-form .hub-hero .hero-trust-line + .hub-support { padding-top: 18px; border-top: 1px solid var(--tl-hairline); max-width: var(--tl-measure); }

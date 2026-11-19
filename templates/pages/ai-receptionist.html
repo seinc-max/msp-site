@@ -326,29 +326,58 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <h1>Up a ladder when the phone rings? Your AI receptionist takes the job and texts you the details.</h1>
-      <p class="hero-sub">Your receptionist answers nights, weekends and after hours, in your business name. We set up the receptionist and run it for you.</p>
+  <div class="hero-grid hero-with-frame">
+            <div class="hero-copy">
+      <p class="hero-kicker">AI receptionist for trades</p>
+      <h1>Up a ladder? Your AI receptionist answers and texts you the details.</h1>
+      <p class="hero-sub">It picks up in your business name, nights, weekends and after hours, so the caller books with you instead of the next company.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
-<div class="hero-down-cue" aria-hidden="true"></div>
-      <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
-      <p class="hero-sub try-it">Try it now: call (647) 360-5774 and hang up. You'll get the text within minutes.</p>
+      <div class="hero-assure">
+        <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
+        <p class="hero-cancel">Cancel anytime. No contracts, no cancellation fees.</p>
+      </div>
+      <p class="hero-process">One call. We set up the receptionist on your number. You approve every word before it goes live.</p>
       <div class="hero-trust">
         <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
           It backs up your crew and never replaces them.
         </div>
         <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
           It sticks to the script you approve.
         </div>
         <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
           It's built, trained and run for you.
         </div>
       </div>
+      <p class="hero-try">Try it now: call (647) 360-5774 and hang up. You'll get the text within minutes.</p>
+      <div class="hero-down-cue" aria-hidden="true"></div>
     </div>
+    <div class="hero-side">
+    <figure class="tl-frame tl-owner-card">
+      <div class="tl-phone">
+        <div class="tl-ear" aria-hidden="true"></div>
+        <div class="tl-screen">
+          <div class="tl-phone-head">
+            <div class="tl-avatar" aria-hidden="true">L</div>
+            <div>
+              <div class="tl-phone-name">Lakeside Heating</div>
+              <div class="tl-phone-sub">Text from your AI receptionist</div>
+            </div>
+          </div>
+          <div class="tl-thread">
+            <p class="tl-chip">Call answered · 11:48 PM</p>
+            <div class="tl-sms"><p><span class="tl-sms-kicker">What Mike gets</span> URGENT: No heat, baby at home. Sam, 64 Maple Ave. Call back</p></div>
+            <dl class="tl-meta"><div><dt>Caller</dt><dd>Sam</dd></div><div><dt>Address</dt><dd>64 Maple Ave</dd></div><div><dt>Need</dt><dd>No heat</dd></div></dl>
+            <a class="tl-listen" href="#sample-call">&#9654; Hear the sample call</a>
+          </div>
+        </div>
+      </div>
+      <figcaption>From the sample call below. Sample business name. Your wording goes in, and you approve it before it goes live.</figcaption>
+    </figure>
+    </div>
+  
   </div>
 </section>
 
@@ -368,7 +397,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
-<section class="tl-demo-band">
+<section class="tl-demo-band" id="sample-call">
   <div class="section-inner">
     <!-- include:sample-call-trades-ai-receptionist -->
   </div>
