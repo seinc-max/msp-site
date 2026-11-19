@@ -1438,3 +1438,31 @@ a.tl-listen:hover, a.tl-listen:focus-visible {
   font-size: 1em;
   font-weight: 700;
 }
+
+/* Call line (Ben 2026-11-19 t1215u/t1216u): one short outcome line directly above the
+   hero call button on every call-only landing page. Same tag, class and style everywhere;
+   check-site-consistency.js fails the build if it is missing or misplaced. */
+body.landing-call .call-line {
+  margin: 22px 0 0;
+  max-width: 34rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 1.125rem !important; /* site.css sets body p to 1rem with high specificity */
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  text-wrap: balance;
+}
+body.landing-call .call-line + a.hero-call,
+body.landing-call .call-line + a.hub-cta,
+body.landing-call .call-line + .hero-actions { margin-top: 12px !important; }
+body.landing-home .home-v2 .call-line + .hero-actions > .btn-primary { margin-top: 0 !important; }
+@media (max-width: 767px) {
+  body.landing-call .call-line { margin-top: 14px; font-size: 1.0625rem !important; max-width: none; }
+  body.landing-call .call-line + a.hero-call,
+  body.landing-call .call-line + a.hub-cta,
+  body.landing-call .call-line + .hero-actions { margin-top: 10px !important; }
+}
+
+/* Section headings: balanced lines so no single word sits alone (e.g. 'job?' on
+   /missed-call-text-back at 1440, Ben t1202u alignment fix). Wording unchanged. */
+body.landing-offer .section-title { text-wrap: balance; }
