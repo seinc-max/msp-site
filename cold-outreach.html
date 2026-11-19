@@ -284,7 +284,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=3f0eb7801b">
-<link rel="stylesheet" href="/assets/landing.css?v=41669b6b0a">
+<link rel="stylesheet" href="/assets/landing.css?v=67fd8b2c7a">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"For Trades & Contractors","item":"https://truelineit.com/for-home-services"},{"@type":"ListItem","position":3,"name":"Cold Email Outreach for Trades","item":"https://truelineit.com/cold-outreach"}]}</script>
 </head>
@@ -371,6 +371,50 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="cold-outreach" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What could one more commercial client be worth to you?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-jobs">New commercial jobs a month you could win</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-jobs" data-k="jobs" min="0" max="10" step="1" value="1" aria-valuetext="1">
+          <span class="tl-calc-box"><input type="number" data-k="jobs" min="0" max="10" step="1" value="1" inputmode="decimal" aria-label="New commercial jobs a month you could win"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-job">Your average commercial job value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-job" data-k="job" min="500" max="100000" step="500" value="6000" aria-valuetext="$6000">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="job" min="500" max="100000" step="500" value="6000" inputmode="decimal" aria-label="Your average commercial job value" data-prefix="$"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-rep">Times a year a commercial client books you</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-rep" data-k="rep" min="1" max="12" step="1" value="2" aria-valuetext="2">
+          <span class="tl-calc-box"><input type="number" data-k="rep" min="1" max="12" step="1" value="2" inputmode="decimal" aria-label="Times a year a commercial client books you"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">You could be leaving</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$6,000</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">on the table.</p>
+      <p class="tl-calc-sub" data-out="sub">If each client books you 2 times a year, one month of new clients is worth $12,000 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> New commercial jobs a month × average commercial job value</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=22be534254" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">

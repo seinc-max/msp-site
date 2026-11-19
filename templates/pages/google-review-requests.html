@@ -336,6 +336,57 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="google-review-requests" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What could more Google reviews be worth to you?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-done">Jobs you finish each month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-done" data-k="done" min="0" max="200" step="1" value="30" aria-valuetext="30">
+          <span class="tl-calc-box"><input type="number" data-k="done" min="0" max="200" step="1" value="30" inputmode="decimal" aria-label="Jobs you finish each month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-unasked">Jobs where you don’t ask for a review</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-unasked" data-k="unasked" min="0" max="100" step="5" value="70" aria-valuetext="70%">
+          <span class="tl-calc-box"><input type="number" data-k="unasked" min="0" max="100" step="5" value="70" inputmode="decimal" aria-label="Jobs where you don’t ask for a review" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-extra">Extra jobs a month you think more reviews would win you</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-extra" data-k="extra" min="0" max="10" step="1" value="1" aria-valuetext="1">
+          <span class="tl-calc-box"><input type="number" data-k="extra" min="0" max="10" step="1" value="1" inputmode="decimal" aria-label="Extra jobs a month you think more reviews would win you"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-job">Your average job value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-job" data-k="job" min="50" max="5000" step="25" value="350" aria-valuetext="$350">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="job" min="50" max="5000" step="25" value="350" inputmode="decimal" aria-label="Your average job value" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">You could be leaving</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$350</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">on the table.</p>
+      <p class="tl-calc-sub" data-out="sub">That’s $4,200 a year. You finish about 21 jobs a month without asking for a review.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Extra jobs a month × average job value</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=22be534254" defer></script>
+</section>
+<!-- /tl-calc -->
+
 <!-- PAIN -->
 <section class="pain-section">
   <div class="section-inner">

@@ -381,6 +381,50 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="ai-receptionist-for-salons" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What are your missed booking calls worth?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-calls">Booking calls you miss each week</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-calls" data-k="calls" min="0" max="60" step="1" value="10" aria-valuetext="10">
+          <span class="tl-calc-box"><input type="number" data-k="calls" min="0" max="60" step="1" value="10" inputmode="decimal" aria-label="Booking calls you miss each week"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-book">Callers who would have booked</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-book" data-k="book" min="0" max="100" step="5" value="50" aria-valuetext="50%">
+          <span class="tl-calc-box"><input type="number" data-k="book" min="0" max="100" step="5" value="50" inputmode="decimal" aria-label="Callers who would have booked" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-visit">Your average visit value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-visit" data-k="visit" min="20" max="500" step="5" value="85" aria-valuetext="$85">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="visit" min="20" max="500" step="5" value="85" inputmode="decimal" aria-label="Your average visit value" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">You could be leaving</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$1,828</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">on the table.</p>
+      <p class="tl-calc-sub" data-out="sub">About 21.5 bookings a month, or $21,936 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Missed booking calls a week × % who would have booked × average visit value × 4.3 weeks</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=22be534254" defer></script>
+</section>
+<!-- /tl-calc -->
+
 <section class="tl-demo-band" id="sample-call">
   <div class="section-inner">
     <!-- include:sample-call-salon -->

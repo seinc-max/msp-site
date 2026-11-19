@@ -22,7 +22,9 @@
 // - has a call line anywhere else;
 // - says "under a sink" (Ben t1202u: trade-inclusive wording);
 // - speaks about the visitor in the third person in landing copy outside the
-//   sample mockups (heuristic THIRD_PERSON list, Ben t1223u).
+//   sample mockups (heuristic THIRD_PERSON list, Ben t1223u);
+// - has a service-page calculator that differs from scripts/calc-markup.js, sits anywhere
+//   but directly after section 2, has the wrong CTA, or js/calculator.js fails its tests.
 //
 //   node scripts/check-site-consistency.js            check repo root pages
 //   node scripts/check-site-consistency.js <dir>      check a built folder (e.g. dist)
@@ -222,8 +224,41 @@ for (const [g, variants] of Object.entries(groups)) {
   report.push(g + ": " + keys.length + " variants");
 }
 
+// 4. Service-page calculators (Ben 2026-11-19 t1217u). Same block on every listed page,
+// byte-equal to scripts/calc-markup.js render(), placed as the third top-level <section> in
+// <main> (directly after section 2), right CTA for the page type, nowhere else, and the
+// shared JS loads and passes its unit and DOM tests.
+let calcCount = 0;
+{
+  const cm = require(path.join(__dirname, "calc-markup.js"));
+  const calcJs = require(path.join(ROOT, "js", "calculator.js"));
+  const t = require("child_process").spawnSync(process.execPath, [path.join(__dirname, "test-calculators.js")], { encoding: "utf8" });
+  if (t.status !== 0) err("js/calculator.js", "calculator tests fail: " + (t.stderr || t.stdout).trim());
+  if (!files.includes("js/calculator.js")) err("scripts/dist-manifest.txt", "js/calculator.js is not shipped");
+  for (const id of Object.keys(calcJs.CALCS)) if (!Object.values(cm.PAGES).includes(id)) err("js/calculator.js", "calculator " + id + " is on no page");
+  for (const f of pages) {
+    const html = read(f);
+    const n = (html.match(/<section class="tl-calc-section"/g) || []).length;
+    const id = cm.PAGES[f];
+    if (!id) { if (n) err(f, "has a calculator but is not in calc-markup.js PAGES"); continue; }
+    if (n !== 1) { err(f, "needs exactly one calculator, found " + n); continue; }
+    const m = html.match(/<!-- tl-calc -->[\s\S]*?<!-- \/tl-calc -->/);
+    if (!m || m[0] !== cm.render(id)) err(f, "calculator markup differs from scripts/calc-markup.js (run node scripts/calc-markup.js && node scripts/build-pages.js)");
+    const at = html.indexOf('<section class="tl-calc-section"');
+    const re = /<section\b|<\/section>/g; re.lastIndex = html.indexOf("<main"); let depth = 0, top = 0, k, pos = -1;
+    while ((k = re.exec(html))) { if (k[0] === "</section>") depth--; else { if (depth === 0) { top++; if (k.index === at) pos = top; } depth++; } }
+    if (pos !== 3) err(f, "calculator must sit directly after section 2 (it is top-level section " + pos + ")");
+    const body = (html.match(/<body[^>]*class="([^"]*)"/) || [, ""])[1];
+    const call = /tel:\+16473605774" class="btn-primary tl-calc-cta"[^>]*>Call \(647\) 360-5774</.test(m ? m[0] : "");
+    const consult = /href="#discovery-form" class="btn-primary gov-form-cta tl-calc-cta"[^>]*>Book My AI Consultation</.test(m ? m[0] : "");
+    if (/\blanding-call\b/.test(body) && !call) err(f, "call-only page calculator needs the Call (647) 360-5774 button");
+    if (/\blanding-form\b/.test(body) && (!consult || !/id="discovery-form"/.test(html))) err(f, "form page calculator needs the Book My AI Consultation button to #discovery-form");
+    calcCount++;
+  }
+}
+
 if (errors.length) {
   console.error("check-site-consistency: FAIL (" + errors.length + ")\n- " + errors.join("\n- "));
   process.exit(1);
 }
-console.log("check-site-consistency: OK. " + pages.length + " pages: full nav (" + (homeLinks || []).length + " links) on every page, one guarantee badge form, no banned phrases, hero cancel/price/call consistent, " + Object.keys(callLines).length + " call lines, no third-person landing copy.");
+console.log("check-site-consistency: OK. " + pages.length + " pages: full nav (" + (homeLinks || []).length + " links) on every page, one guarantee badge form, no banned phrases, hero cancel/price/call consistent, " + Object.keys(callLines).length + " call lines, no third-person landing copy, " + calcCount + " calculators consistent.");

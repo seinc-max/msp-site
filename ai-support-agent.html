@@ -28,7 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=3f0eb7801b">
-<link rel="stylesheet" href="/assets/landing.css?v=41669b6b0a">
+<link rel="stylesheet" href="/assets/landing.css?v=67fd8b2c7a">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"AI Support Agent","serviceType":"AI Support Agent","description":"Routine client questions answered from material you already approved, at 7 p.m. A person at your firm still reviews anything legal or about money. The support agent is scoped after the $1,000 AI Liability Assessment.","url":"https://truelineit.com/ai-support-agent","offers":[{"@type":"Offer","name":"Build fee","price":"2000","description":"$2,000 build fee, credited in full against months 1–4."},{"@type":"Offer","name":"Monthly","price":"500","priceSpecification":{"@type":"UnitPriceSpecification","price":"500","unitText":"MONTH"},"description":"$500/mo."}],"provider":{"@id":"https://truelineit.com/#organization"}}
 </script>
@@ -199,6 +199,50 @@ body{margin:0;font-family:'DM Sans',sans-serif;color:#1a2744;background:#fafaf8;
   
 <div class="section-action"><a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="ai-support-agent" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What do routine client questions cost your team?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-q">Routine client questions each week</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-q" data-k="q" min="0" max="300" step="5" value="40" aria-valuetext="40">
+          <span class="tl-calc-box"><input type="number" data-k="q" min="0" max="300" step="5" value="40" inputmode="decimal" aria-label="Routine client questions each week"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-mins">Minutes each one takes</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-mins" data-k="mins" min="1" max="30" step="1" value="6" aria-valuetext="6 min">
+          <span class="tl-calc-box"><input type="number" data-k="mins" min="1" max="30" step="1" value="6" inputmode="decimal" aria-label="Minutes each one takes" data-suffix=" min"><span class="tl-calc-suf" aria-hidden="true">min</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-rate">Hourly cost of the person answering</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-rate" data-k="rate" min="20" max="300" step="5" value="60" aria-valuetext="$60">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="rate" min="20" max="300" step="5" value="60" inputmode="decimal" aria-label="Hourly cost of the person answering" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">Your team’s time on them is worth</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$1,032</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-sub" data-out="sub">About 17.2 staff hours a month, or $12,384 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Questions a week × minutes each ÷ 60 × hourly cost × 4.3 weeks</p>
+      <a href="#discovery-form" class="btn-primary gov-form-cta tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=22be534254" defer></script>
+</section>
+<!-- /tl-calc -->
+
   <section class="hub-section hub-cards">
     <h2>What you get, and what stays with you.</h2>
 <img src="/assets/img/asa-ai-support-agent.svg" alt="A support chat on a laptop that answers from an approved document" width="640" height="360" loading="lazy" decoding="async" style="display:block;width:100%;max-width:440px;height:auto;aspect-ratio:16/9;border-radius:14px;margin:8px auto 24px;">
