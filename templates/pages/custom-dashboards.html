@@ -318,22 +318,30 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-grid hero-with-frame">
+  <div data-r6="1" class="hero-grid hero-with-frame">
     <div class="hero-copy">
       <p class="hero-kicker">Dashboards for trades &amp; salons</p>
       <h1>See your numbers on one page. We build it and keep it up to date.</h1>
       <p class="hero-sub">Calls, leads, reviews and jobs in one simple dashboard you can open on your phone. No spreadsheets, and no logging in to a pile of apps.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="hero-price-note"><strong>$149/mo</strong> plus a one-time $799 build.</p>
       <div class="hero-assure">
         <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
         <p class="hero-cancel">Cancel anytime. No contracts, no cancellation fees.</p>
       </div>
       <p class="hero-process">One call. We pick the numbers that matter to you and build the page. You approve it before it goes live.</p>
-      <div class="hero-trust">
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Answers questions like “How many leads came in this week?”
-        </div>
+      <div class="hero-down-cue" aria-hidden="true"></div>
+    </div>
+    <div class="hero-side">
+    <figure class="tl-board">
+      <div class="tl-board-card">
+        <div class="tl-board-head"><div class="tl-avatar" aria-hidden="true">L</div><div><div class="tl-board-title">Lakeside Heating</div><div class="tl-board-sub">This week vs last week</div></div></div>
+        <div class="tl-board-body"><div class="tl-kpis"><div class="tl-kpi"><span>New leads</span><strong>18</strong><em class="tl-up">▲ 4 vs last week</em></div><div class="tl-kpi"><span>Calls answered</span><strong>42</strong><em class="tl-up">▲ 6</em></div><div class="tl-kpi"><span>Quotes sent</span><strong>9</strong><em class="tl-down">▼ 2</em></div><div class="tl-kpi"><span>New reviews</span><strong>3</strong><em class="tl-up">▲ 1</em></div></div><div class="tl-chart"><p class="tl-chart-h">New leads per day</p><div class="tl-bars" aria-hidden="true"><i style="height:35%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:70%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:45%"></i></div><div class="tl-bars-x" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div></div></div>
+      </div>
+      <figcaption>Sample business name and sample numbers. Your dashboard shows your own.</figcaption>
+    </figure>
+    </div>
+    <div class="hero-trust">
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
           Updated on a schedule we agree on
@@ -342,19 +350,12 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
           Easy to read on your phone
         </div>
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          One change round each month
+        </div>
       </div>
-      <p class="hero-proof"><span class="hero-proof-label">Proof:</span> see <a class="hero-proof-link" href="https://clients.truelineit.com/mlreng/dashboards/forum-sentiment/" target="_blank" rel="noopener">a live dashboard we built for a client</a>.</p>
-      <div class="hero-down-cue" aria-hidden="true"></div>
-    </div>
-    <div class="hero-side">
-    <figure class="tl-board">
-      <div class="tl-board-card">
-        <div class="tl-board-head"><div class="tl-avatar" aria-hidden="true">L</div><div><div class="tl-board-title">Lakeside Heating</div><div class="tl-board-sub">This week</div></div></div>
-        <div class="tl-board-body"><div class="tl-row"><span>Calls answered</span><strong>42</strong></div><div class="tl-row tl-hot"><span>New leads</span><strong>18</strong></div><div class="tl-row"><span>Quotes sent</span><strong>9</strong></div><div class="tl-row"><span>New Google reviews</span><strong>3</strong></div></div>
-      </div>
-      <figcaption>Sample business name and sample numbers. Your dashboard shows your own.</figcaption>
-    </figure>
-    </div>
+    <p class="hero-proof"><span class="hero-proof-label">Proof:</span> see <a class="hero-proof-link" href="https://clients.truelineit.com/mlreng/dashboards/forum-sentiment/" target="_blank" rel="noopener">a live dashboard we built for a client</a>.</p>
   </div>
 </section>
 
