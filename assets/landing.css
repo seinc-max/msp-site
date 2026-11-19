@@ -660,18 +660,6 @@ body.landing-call .hero .hero-assure .hero-cancel { flex: 1 1 250px; min-width: 
 @media (max-width: 767px) { body.landing-call .hero .hero-assure .hero-guarantee { white-space: normal; flex: 0 1 auto; max-width: 100%; } }
 
 /* ---- Round 3 (2026-11-19) ---- */
-/* Phone: show the proof (mock) right after the ask, then the checks. */
-@media (max-width: 767px) {
-  body.landing-call.landing-offer .hero .hero-grid { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
-  body.landing-call.landing-offer .hero .hero-grid > .hero-side { align-self: center; }
-  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > a.hero-call, body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-trust, body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-try { align-self: stretch; }
-  body.landing-call.landing-offer .hero .hero-grid > .hero-copy { display: contents; }
-  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > * { order: 0; }
-  body.landing-call.landing-offer .hero .hero-grid > .hero-side { order: 1; margin-top: 28px; }
-  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-trust,
-  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-try,
-  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-proof { order: 2; }
-}
 /* Cited proof: its own line, readable size. */
 body.landing-call .hero .hero-proof { margin-top: 18px; font-size: .95rem; }
 .hero-proof-label { font-weight: 700; color: #fff; }
@@ -692,12 +680,65 @@ body.landing-call .hero-process { margin-top: 12px; }
 .pro-steps li { font-size: 1.05rem; }
 .tl-listen { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; font-size: .9rem; }
 @media (max-width: 767px) { .tl-listen { width: 100%; box-sizing: border-box; } }
-/* Phone order: try-it (live proof) right after the ask, then the mock, then the checks. */
-@media (max-width: 767px) {
-  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-try { order: 0; }
-}
 
 /* ---- Round 5 (2026-11-19): fewer 4-line desktop headlines ---- */
 @media (min-width: 1024px) {
   body.landing-offer .hero h1 { max-width: 20ch; }
 }
+
+/* ---- Round 6 (2026-11-19): one top-half order at every width ----
+   H1 > sub > call + price > guarantee pill with cancel under it > process caption > try-it > mock > checks. */
+body.landing-offer .hero { padding-bottom: 60px; }
+@media (max-width: 767px) { body.landing-offer .hero { padding-bottom: 48px; } }
+body.landing-offer .hero .hero-price-note { margin: 10px 0 0; max-width: 440px; font-size: .95rem; line-height: 1.45; color: var(--tl-ink-soft); }
+body.landing-offer .hero .hero-price-note strong { color: #fff; font-size: 1.05rem; font-weight: 700; }
+body.landing-call .hero-assure,
+body.landing-call .hero .hero-assure { flex-direction: column; flex-wrap: nowrap; align-items: flex-start; gap: 6px; }
+body.landing-call .hero .hero-assure .hero-guarantee,
+body.landing-call .hub-hero .hero-assure .hero-guarantee { white-space: normal; flex: 0 1 auto; max-width: 100%; }
+body.landing-call .hero .hero-assure .hero-cancel,
+body.landing-call .hub-hero .hero-assure .hero-cancel { flex: 0 0 auto; margin: 0; }
+body.landing-call .hero .hero-process { margin-top: 12px; font-size: .8rem; line-height: 1.5; }
+body.landing-call .hero .hero-copy > .hero-try { margin-top: 18px; }
+body.landing-offer .hero .hero-grid[data-r6] > .hero-trust { grid-column: 1 / -1; grid-row: auto; margin: 0; padding-top: 22px; max-width: none; }
+body.landing-offer .hero .hero-grid[data-r6] > .hero-proof { grid-column: 1 / -1; margin: -18px 0 0; max-width: none; }
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust { flex-direction: row; gap: 14px 32px; }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust .trust-item { flex: 1 1 0; min-width: 0; }
+  body.landing-offer .hero .hero-grid[data-r6] { row-gap: 36px; align-items: center; }
+}
+/* Fractional AI officer: scope list fills the left column. */
+body.landing-offer .hero .hero-scope-title { margin: 26px 0 8px; font-weight: 700; font-size: .95rem; color: #fff; }
+body.landing-offer .hero .hero-scope { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; max-width: var(--tl-measure); }
+body.landing-offer .hero .hero-scope li { position: relative; padding-left: 22px; font-size: .95rem; line-height: 1.5; color: var(--tl-ink-soft); }
+body.landing-offer .hero .hero-scope li::before { content: ""; position: absolute; left: 4px; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: #f97316; }
+/* Distinct board mocks: CRM pipeline, dashboard trend, branch cards. */
+.tl-board .tl-kanban { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+.tl-board .tl-col { background: #fff; border-radius: 10px; padding: 8px; display: grid; gap: 6px; align-content: start; }
+.tl-board .tl-col-h { margin: 0; font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #5a6a8a; display: flex; justify-content: space-between; }
+.tl-board .tl-col-h b { color: #1a2744; font-family: 'Fraunces', serif; font-size: .95rem; letter-spacing: 0; }
+.tl-board .tl-card { font-size: .8rem; font-weight: 600; line-height: 1.3; padding: 6px 8px; border: 1px solid #dde6f5; border-radius: 7px; background: #f9fbfe; }
+.tl-board .tl-card.tl-card-hot { border-left: 4px solid #f97316; }
+.tl-board .tl-task { display: flex; align-items: flex-start; gap: 8px; background: #fff; border-radius: 10px; padding: 10px 12px; font-size: .84rem; line-height: 1.4; }
+.tl-board .tl-task-dot { flex-shrink: 0; width: 10px; height: 10px; margin-top: 5px; border-radius: 50%; background: #f97316; }
+.tl-board .tl-kpis { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+.tl-board .tl-kpi { background: #fff; border-radius: 10px; padding: 10px; display: grid; gap: 2px; }
+.tl-board .tl-kpi span { font-size: .74rem; font-weight: 600; color: #5a6a8a; }
+.tl-board .tl-kpi strong { font-family: 'Fraunces', serif; font-size: 1.35rem; color: #1a2744; line-height: 1.1; }
+.tl-board .tl-kpi em { font-style: normal; font-size: .74rem; font-weight: 700; }
+.tl-board .tl-kpi em.tl-up { color: #15803d; }
+.tl-board .tl-kpi em.tl-down { color: #b91c1c; }
+.tl-board .tl-chart { background: #fff; border-radius: 10px; padding: 10px 12px; }
+.tl-board .tl-chart-h { margin: 0 0 8px; font-size: .74rem; font-weight: 700; color: #5a6a8a; }
+.tl-board .tl-bars { display: flex; align-items: flex-end; gap: 6px; height: 64px; }
+.tl-board .tl-bars i { flex: 1 1 0; background: #1a2744; border-radius: 4px 4px 0 0; }
+.tl-board .tl-bars i:nth-child(6) { background: #f97316; }
+.tl-board .tl-bars-x { display: flex; gap: 6px; margin-top: 4px; }
+.tl-board .tl-bars-x span { flex: 1 1 0; text-align: center; font-size: .68rem; color: #5a6a8a; }
+.tl-board .tl-branches { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; }
+.tl-board .tl-branch { background: #fff; border-radius: 10px; padding: 8px; display: grid; gap: 4px; border-top: 4px solid #1a2744; }
+.tl-board .tl-branch-h { margin: 0 0 2px; font-weight: 700; font-size: .85rem; }
+.tl-board .tl-branch .tl-row { padding: 2px 0; background: none; border-radius: 0; font-size: .74rem; gap: 4px; }
+.tl-board .tl-branch .tl-row strong { font-size: .95rem; }
+.tl-board .tl-total { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; background: #1a2744; color: #fff; border-radius: 10px; padding: 10px 12px; font-size: .8rem; }
+.tl-board .tl-total strong { font-size: .9rem; }
