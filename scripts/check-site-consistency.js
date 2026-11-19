@@ -8,7 +8,8 @@
 // - lacks the full home nav: same link set as index.html's nav (all Services
 //   entries incl. the 6 new pages), no tl-nav-gated, and one nav CTA;
 // - has a guarantee badge whose text is not exactly CANON_BADGE;
-// - contains a banned phrase (BANNED) anywhere in shipped text files;
+// - contains a banned phrase (BANNED) anywhere in shipped text files, or a
+//   banned hero lead-in (BANNED_HERO, e.g. "For trades.");
 // - has a repeated hero element that differs from the site majority:
 //   cancel line, price-line format, hero call button text;
 // - has a tel: link other than tel:+16473605774.
@@ -28,6 +29,8 @@ const TEL = "tel:+16473605774";
 const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach", "/crm-setup", "/custom-dashboards", "/multi-location"];
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i];
+// Ben 2026-11-19 t1208u: no "For trades." lead-in in the top hero.
+const BANNED_HERO = [/>\s*For trades(?: on the job)?[.,]/i];
 // Approved per-page differences in the price-line format. Keep this list short.
 // Each is an approved offer shape (Ben-approved prices), not a wording drift.
 const PRICE_FORMAT_EXCEPTIONS = {
@@ -94,6 +97,8 @@ for (const f of pages) {
     const t = decode(m[1].replace(/<[^>]+>/g, ""));
     if (t !== CANON_BADGE) err(f, "guarantee badge \"" + t + "\" is not \"" + CANON_BADGE + "\"");
   }
+  const hero = (html.match(/<section class="(?:hero|hub-hero)[^"]*"[\s\S]*?<\/section>/) || [""])[0];
+  for (const re of BANNED_HERO) { const m = hero.match(re); if (m) err(f, "hero has banned lead-in \"" + m[0].replace(/^>\s*/, "") + "\""); }
   for (const m of html.matchAll(/href="(tel:[^"]*)"/g)) if (m[1] !== TEL) err(f, "tel link " + m[1]);
   for (const m of html.matchAll(/<p class="hero-cancel">([\s\S]*?)<\/p>/g)) add("cancel", decode(m[1]), f);
   for (const m of html.matchAll(/<p class="hero-price-note">([\s\S]*?)<\/p>/g)) {
