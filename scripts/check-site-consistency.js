@@ -244,6 +244,13 @@ let calcCount = 0;
     if (n !== 1) { err(f, "needs exactly one calculator, found " + n); continue; }
     const m = html.match(/<!-- tl-calc -->[\s\S]*?<!-- \/tl-calc -->/);
     if (!m || m[0] !== cm.render(id)) err(f, "calculator markup differs from scripts/calc-markup.js (run node scripts/calc-markup.js && node scripts/build-pages.js)");
+    // 2026-11-19 3-AI review: disclaimer sits above the Call button; no "on the table".
+    if (m) {
+      const noteAt = m[0].indexOf('class="tl-calc-note"');
+      const ctaAt = m[0].indexOf("tl-calc-cta");
+      if (noteAt < 0 || ctaAt < 0 || noteAt > ctaAt) err(f, "calculator disclaimer must sit above the Call button");
+      if (/on the table/i.test(m[0])) err(f, "calculator still says \"on the table\"; use \"is at stake\" or the page's own honest result line");
+    }
     const at = html.indexOf('<section class="tl-calc-section"');
     const re = /<section\b|<\/section>/g; re.lastIndex = html.indexOf("<main"); let depth = 0, top = 0, k, pos = -1;
     while ((k = re.exec(html))) { if (k[0] === "</section>") depth--; else { if (depth === 0) { top++; if (k.index === at) pos = top; } depth++; } }

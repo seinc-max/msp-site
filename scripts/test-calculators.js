@@ -14,7 +14,7 @@ const cases = [
   ["missed-call-text-back", { calls: 0 }, 0, "About 0 jobs a month, or $0 a year."],
   ["ai-receptionist", {}, 3870, "About 8.6 jobs a month, or $46,440 a year."],             // 8 x .25 x 450 x 4.3
   ["ai-receptionist-for-salons", {}, 1828, null],                                            // 10 x .5 x 85 x 4.3 = 1827.5
-  ["google-review-requests", {}, 350, "That\u2019s $4,200 a year. You finish about 21 jobs a month without asking for a review."],
+  ["google-review-requests", {}, 350, "That\u2019s $4,200 a year."],
   ["google-review-requests", { extra: 3, job: 500 }, 1500, null],
   ["google-review-requests-for-salons", {}, 170, null],                                      // 2 x 85
   ["quote-follow-up-win-back", {}, 2500, "About 1 job a month, or $30,000 a year."],       // 20 x .5 x .1 x 2500
@@ -25,8 +25,9 @@ const cases = [
   ["contractor-websites", {}, 2400, null],                                                   // 300 x .05 x .4 x 400
   ["lead-follow-up", {}, 1500, null],                                                        // 40 x .3 x .25 x 500
   ["appointment-reminders", {}, 2339, null],                                                 // 80 x .08 x 85 x 4.3 = 2339.2
-  ["cold-outreach", {}, 6000, "If each client books you 2 times a year, one month of new clients is worth $12,000 a year."],
-  ["cold-outreach", { rep: 1 }, 6000, "If each client books you 1 time a year, one month of new clients is worth $6,000 a year."],
+  ["cold-outreach", {}, 12000, "One client is worth about $6,000 per job, or $12,000 a year at 2 bookings."],
+  ["cold-outreach", { rep: 1 }, 6000, "One client is worth about $6,000 per job, or $6,000 a year at 1 booking."],
+  ["cold-outreach", { clients: 3 }, 36000, null],
   ["crm-setup", {}, 2568, "$1,600 in slipped jobs plus $968 of your time."],               // 2 x 800 + 3 x 75 x 4.3
   ["custom-dashboards", {}, 968, null],                                                      // 3 x 75 x 4.3 = 967.5
   ["multi-location", {}, 5418, null],                                                        // 3 x 4 x .3 x 350 x 4.3
@@ -48,6 +49,19 @@ for (const id of Object.keys(calc.CALCS)) {
     const v = {}; c.inputs.forEach((i) => { v[i.k] = i[corner]; });
     const r = calc.result(id, v);
     if (!isFinite(r.main) || r.main < 0 || /NaN|undefined/.test(r.sub + r.mainText)) fails.push(id + " bad result at " + corner + ": " + r.mainText + " / " + r.sub);
+  }
+}
+// Every slider must change the dollar result (2026-11-19 3-AI review, Google review pages).
+for (const id of Object.keys(calc.CALCS)) {
+  const c = calc.CALCS[id];
+  const base = calc.result(id, calc.defaults(id)).main;
+  for (const i of c.inputs) {
+    if (i.min === i.max) { fails.push(id + "." + i.k + " has no range"); continue; }
+    const v = calc.defaults(id);
+    const alt = i.v === i.max ? i.min : i.max;
+    v[i.k] = alt;
+    const got = calc.result(id, v).main;
+    if (got === base) fails.push(id + "." + i.k + " slider does not change the result (remove it or include it in the formula)");
   }
 }
 if (calc.money(1234567.4) !== "$1,234,567") fails.push("money format");

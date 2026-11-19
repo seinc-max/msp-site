@@ -374,29 +374,15 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <!-- tl-calc -->
 <section class="tl-calc-section" data-calc="google-review-requests-for-salons" aria-labelledby="tl-calc-title">
   <div class="tl-calc">
-    <h2 class="tl-calc-title" id="tl-calc-title">What could more Google reviews be worth to you?</h2>
+    <h2 class="tl-calc-title" id="tl-calc-title">What more booked clients could be worth to you?</h2>
     <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
     <div class="tl-calc-grid">
     <div class="tl-calc-inputs">
       <div class="tl-calc-field">
-        <label class="tl-calc-label" for="tlc-done">Visits you finish each month</label>
-        <div class="tl-calc-row">
-          <input type="range" id="tlc-done" data-k="done" min="0" max="1000" step="10" value="200" aria-valuetext="200">
-          <span class="tl-calc-box"><input type="number" data-k="done" min="0" max="1000" step="10" value="200" inputmode="decimal" aria-label="Visits you finish each month"></span>
-        </div>
-      </div>
-      <div class="tl-calc-field">
-        <label class="tl-calc-label" for="tlc-unasked">Visits where you don’t ask for a review</label>
-        <div class="tl-calc-row">
-          <input type="range" id="tlc-unasked" data-k="unasked" min="0" max="100" step="5" value="80" aria-valuetext="80%">
-          <span class="tl-calc-box"><input type="number" data-k="unasked" min="0" max="100" step="5" value="80" inputmode="decimal" aria-label="Visits where you don’t ask for a review" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
-        </div>
-      </div>
-      <div class="tl-calc-field">
-        <label class="tl-calc-label" for="tlc-extra">Extra new clients a month you think more reviews would win you</label>
+        <label class="tl-calc-label" for="tlc-extra">Extra booked clients a month</label>
         <div class="tl-calc-row">
           <input type="range" id="tlc-extra" data-k="extra" min="0" max="20" step="1" value="2" aria-valuetext="2">
-          <span class="tl-calc-box"><input type="number" data-k="extra" min="0" max="20" step="1" value="2" inputmode="decimal" aria-label="Extra new clients a month you think more reviews would win you"></span>
+          <span class="tl-calc-box"><input type="number" data-k="extra" min="0" max="20" step="1" value="2" inputmode="decimal" aria-label="Extra booked clients a month"></span>
         </div>
       </div>
       <div class="tl-calc-field">
@@ -408,17 +394,17 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
     </div>
     <div class="tl-calc-result">
-      <p class="tl-calc-lead">You could be leaving</p>
+      <p class="tl-calc-lead">About</p>
       <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$170</span><span class="tl-calc-per">/month</span></p>
-      <p class="tl-calc-tail">on the table.</p>
-      <p class="tl-calc-sub" data-out="sub">That’s $2,040 a year. You finish about 160 visits a month without asking for a review.</p>
-      <p class="tl-calc-formula"><span>How it works:</span> Extra new clients a month × average visit value</p>
-      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="tl-calc-tail">is at stake.</p>
+      <p class="tl-calc-sub" data-out="sub">That’s $2,040 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Extra booked clients a month × average visit value</p>
       <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
     </div>
     </div>
   </div>
-  <script src="/js/calculator.js?v=22be534254" defer></script>
+  <script src="/js/calculator.js?v=fab0a622e9" defer></script>
 </section>
 <!-- /tl-calc -->
 

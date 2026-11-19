@@ -60,9 +60,11 @@ function render(id) {
   const c = calc.CALCS[id];
   if (!c) throw new Error("no calculator " + id);
   const r = calc.result(id, calc.defaults(id));
-  const lead = c.lead === undefined ? "You could be leaving" : c.lead;
+  // 2026-11-19 3-AI review: "About $X /month is at stake." not "leaving $X on the table".
+  const lead = c.lead === undefined ? "About" : c.lead;
   const per = c.per === undefined ? "/month" : c.per;
-  const tail = c.tail === undefined ? "on the table." : c.tail;
+  const tail = c.tail === undefined ? "is at stake." : c.tail;
+  const note = c.note || "An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.";
   const fields = c.inputs.map((i, n) => {
     const u = UNIT[i.u];
     const fid = "tlc-" + i.k;
@@ -94,8 +96,8 @@ function render(id) {
     tail ? '      <p class="tl-calc-tail">' + esc(tail) + "</p>" : null,
     '      <p class="tl-calc-sub" data-out="sub">' + esc(r.sub) + "</p>",
     '      <p class="tl-calc-formula"><span>How it works:</span> ' + esc(c.formula) + "</p>",
+    '      <p class="tl-calc-note">' + esc(note) + "</p>",
     "      " + (c.cta === "consult" ? CONSULT : CALL),
-    '      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>',
     "    </div>",
     "    </div>",
     "  </div>",
