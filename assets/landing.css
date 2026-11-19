@@ -612,3 +612,48 @@ body.landing-form .hub-hero .hero-cta-panel { padding: 0; border: 0; background:
 body.landing-form .hub-hero .hero-cta-panel a.hub-cta { margin-top: 24px; }
 body.landing-form .hub-hero .hub-support { margin-top: 22px; }
 body.landing-form .hub-hero .hero-trust-line + .hub-support { padding-top: 18px; border-top: 1px solid var(--tl-hairline); max-width: var(--tl-measure); }
+
+/* ---- Top-half system v2: board mockup for non-phone offers (2026-11-19) ---- */
+body.landing-offer .hero .hero-side > .tl-board { width: 100%; max-width: 360px; align-self: center; margin: 0; }
+.tl-board .tl-board-card { background: #fff; border-radius: 18px; box-shadow: 0 24px 60px rgba(0,0,0,.28); overflow: hidden; color: #1a2744; text-align: left; }
+.tl-board .tl-board-head { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid #dde6f5; }
+.tl-board .tl-board-head .tl-avatar { width: 32px; height: 32px; border-radius: 50%; background: #1a2744; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; font-size: .95rem; flex-shrink: 0; }
+.tl-board .tl-board-title { font-weight: 700; font-size: .92rem; line-height: 1.25; }
+.tl-board .tl-board-sub { font-size: .78rem; color: #5a6a8a; }
+.tl-board .tl-board-body { padding: 14px 16px 16px; display: grid; gap: 8px; background: #f4f7fc; }
+.tl-board .tl-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #fff; border-radius: 10px; padding: 10px 12px; font-size: .86rem; }
+.tl-board .tl-row span { color: #5a6a8a; font-weight: 600; }
+.tl-board .tl-row strong { font-family: 'Fraunces', serif; font-size: 1.15rem; color: #1a2744; }
+.tl-board .tl-row.tl-hot { border-left: 4px solid #f97316; }
+.tl-board .tl-mail { background: #fff; border-radius: 10px; padding: 12px; font-size: .86rem; line-height: 1.5; }
+.tl-board .tl-mail .tl-mail-meta { font-size: .76rem; color: #5a6a8a; margin-bottom: 6px; }
+.tl-board .tl-mail .tl-mail-subj { font-weight: 700; margin-bottom: 4px; }
+.tl-board .tl-mail.tl-reply { border-left: 4px solid #f97316; }
+.tl-board figcaption { margin-top: 14px; font-size: .82rem; line-height: 1.5; color: rgba(255,255,255,.72); text-align: center; }
+.tl-sms-kicker { display: block; }
+
+/* ---- Round 2 (2026-11-19): review fixes ---- */
+/* One trust row: pill + cancel line sit together on desktop. */
+body.landing-call .hero-assure .hero-guarantee,
+body.landing-call .hero a.hero-call + .hero-assure .hero-guarantee { font-size: .85rem; padding: 5px 12px; }
+body.landing-call .hero-assure .hero-cancel { font-size: .85rem; }
+body.landing-call .hero-process { margin-top: 8px; font-size: .85rem; }
+/* Hub CTA: number on the button, the ask as a small line under it. */
+body.landing-hub .hub-hero .hub-cta-note { margin: 10px 0 0; font-size: .9rem; line-height: 1.45; color: var(--tl-ink-muted); }
+/* Contractor site mock: no empty white block under the hero. */
+body.landing-offer .hero .hero-side > .tl-frame .tl-site-screen { min-height: 0; }
+.tl-site-list { list-style: none; margin: 0; padding: 12px 16px 4px; background: #fff; display: grid; gap: 6px; }
+.tl-site-list li { font-size: .85rem; font-weight: 600; color: #1a2744; padding: 8px 10px; border: 1px solid #dde6f5; border-radius: 8px; }
+.tl-site-gbp { border-top: 1px solid #dde6f5; }
+/* Professional offer heroes: same grid and left edge as every other offer page. */
+body.landing-form .hero .hero-kicker { display: inline-block; margin: 0 0 14px; font-size: .8rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--tl-orange); }
+body.landing-form.landing-offer .hero .hero-copy > a.btn-primary,
+body.landing-form.landing-offer .hero .hero-copy .hero-cta-panel a.btn-primary { display: flex; justify-content: center; max-width: 440px; min-height: 60px; margin: 28px 0 0; box-sizing: border-box; }
+body.landing-form.landing-offer .hero .hero-copy .hero-cta-panel { margin: 0; padding: 0; border: 0; background: none; box-shadow: none; max-width: 440px; }
+body.landing-form.landing-offer .hero .hero-copy .hero-eyebrow { margin-bottom: 14px; }
+.pro-steps { list-style: none; margin: 0; padding: 22px; display: grid; gap: 12px; width: 100%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 16px; box-sizing: border-box; }
+.pro-steps li { display: flex; align-items: center; gap: 14px; color: #fff; font-weight: 600; font-size: 1rem; line-height: 1.35; }
+.pro-steps span { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #f97316; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; }
+body.landing-form.landing-offer .hero .hero-side > .pricing-card { width: 100%; margin: 0; box-sizing: border-box; text-align: left; }
+body.landing-call .hero .hero-assure .hero-guarantee { width: auto; flex: 0 0 auto; white-space: nowrap; }
+body.landing-call .hero .hero-assure .hero-cancel { flex: 1 1 250px; min-width: 0; }

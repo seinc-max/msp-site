@@ -9,6 +9,7 @@ ai-governance.html
 ai-receptionist-for-salons.html
 ai-receptionist.html
 ai-support-agent.html
+appointment-reminders.html
 assets/2026-cybersecurity-report.pdf
 assets/2026-pipeda-compliance-guide.pdf
 assets/anthropic-logo.svg
@@ -46,7 +47,10 @@ blog/is-your-business-pipeda-compliant.html
 blog/sovereign-zapier-alternatives-compliance.html
 blog/voice-ai-law-accounting-confidentiality.html
 blog/what-sovereign-ai-actually-means.html
+cold-outreach.html
 contractor-websites.html
+crm-setup.html
+custom-dashboards.html
 favicon.ico
 favicon.png
 favicon.svg
@@ -59,9 +63,11 @@ google-review-requests.html
 index.html
 js/call-tracking.js
 js/sample-call.js
+lead-follow-up.html
 llms.txt
 margin-leakage-calculator.html
 missed-call-text-back.html
+multi-location.html
 og-image-professional.jpg
 og-image-trades.jpg
 og-image.jpg

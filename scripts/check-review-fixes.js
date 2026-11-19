@@ -37,6 +37,12 @@ const audienceOf = {
   'for-appointment-businesses.html': 'salons',
   'ai-receptionist-for-salons.html': 'salons',
   'google-review-requests-for-salons.html': 'salons',
+  'lead-follow-up.html': 'trades',
+  'appointment-reminders.html': 'salons',
+  'cold-outreach.html': 'trades',
+  'crm-setup.html': 'trades',
+  'custom-dashboards.html': 'trades',
+  'multi-location.html': 'trades',
   'for-law-firms-accountants-and-advisors.html': 'professional',
   'ai-governance.html': 'professional',
   'fractional-ai-officer.html': 'professional',
@@ -62,9 +68,15 @@ const homeMenu = [
   '/text-to-pay',
   '/contractor-websites',
   '/google-review-requests',
+  '/lead-follow-up',
+  '/crm-setup',
+  '/cold-outreach',
+  '/custom-dashboards',
+  '/multi-location',
   '/for-appointment-businesses',
   '/ai-receptionist-for-salons',
   '/google-review-requests-for-salons',
+  '/appointment-reminders',
   '/for-law-firms-accountants-and-advisors',
 ];
 
@@ -73,7 +85,7 @@ function bodyClass(html) {
 }
 
 const files = Object.keys(audienceOf);
-if (files.length !== 29) fail('audience map does not cover 29 pages, got ' + files.length);
+if (files.length !== 35) fail('audience map does not cover 35 pages, got ' + files.length);
 for (const file of files) {
   const html = read(file);
   const want = audienceOf[file];
@@ -81,7 +93,7 @@ for (const file of files) {
   const got = cls.includes('audience-trades') ? 'trades' : cls.includes('audience-salons') ? 'salons' : cls.includes('audience-professional') ? 'professional' : '';
   if (got !== want) fail(file + ' audience is ' + (got || 'neutral') + ', expected ' + (want || 'neutral'));
 }
-pass('29 pages classified: 5 neutral, 8 trades, 3 salons, 13 professional');
+pass('35 pages classified: 5 neutral, 13 trades, 4 salons, 13 professional');
 
 const gatedNav = new Set([
   'missed-call-text-back.html',
@@ -99,6 +111,12 @@ const gatedNav = new Set([
   'ai-governance.html',
   'fractional-ai-officer.html',
   'ai-support-agent.html',
+  'lead-follow-up.html',
+  'appointment-reminders.html',
+  'cold-outreach.html',
+  'crm-setup.html',
+  'custom-dashboards.html',
+  'multi-location.html',
   'ai-exposure-score.html',
   'ai-automation-roi-guide.html',
   'margin-leakage-calculator.html',
