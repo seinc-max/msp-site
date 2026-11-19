@@ -742,3 +742,17 @@ body.landing-offer .hero .hero-scope li::before { content: ""; position: absolut
 .tl-board .tl-branch .tl-row strong { font-size: .95rem; }
 .tl-board .tl-total { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; background: #1a2744; color: #fff; border-radius: 10px; padding: 10px 12px; font-size: .8rem; }
 .tl-board .tl-total strong { font-size: .9rem; }
+
+/* ---- Round 7 (2026-11-19) ---- */
+body.landing-offer .hero .hero-price-note strong { font-size: 1.15rem; }
+body.landing-offer .hero .hero-price-note .hero-price-sub { display: block; margin-top: 2px; font-size: .85rem; color: var(--tl-ink-muted); }
+body.landing-offer .hero .hero-scope-wrap { min-width: 0; max-width: 620px; }
+body.landing-offer .hero .hero-scope-wrap .hero-scope-title { margin-top: 0; }
+body.landing-offer .hero .hero-scope li { font-size: 1rem; }
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid.fao-grid { grid-template-rows: auto auto; row-gap: 28px; }
+  body.landing-offer .hero .hero-grid.fao-grid > .hero-copy { grid-column: 1; grid-row: 1; }
+  body.landing-offer .hero .hero-grid.fao-grid > .hero-side { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+  body.landing-offer .hero .hero-grid.fao-grid > .hero-scope-wrap { grid-column: 1; grid-row: 2; }
+}
+@media (max-width: 767px) { body.landing-offer .hero .fao-grid .hero-down-cue { display: none; } }
