@@ -771,3 +771,76 @@ body.landing-offer .hero .hero-price-note + .hero-assure { margin-top: 14px; }
 body.landing-offer .hero .hero-scope-note { margin: 12px 0 0; font-size: .82rem; color: var(--tl-ink-muted); }
 @media (min-width: 768px) { body.landing-offer .hero .hero-grid.fao-grid > .hero-side { align-self: start; margin-top: 40px; } }
 body.landing-form .hub-hero .hero-trust-line strong { color: #fff; }
+
+/* ---- Round 10 (2026-11-19): mock on the first phone screen, capped checks, focal points ---- */
+/* Desktop fine print: 13px minimum, brighter. */
+body.landing-call .hero .hero-process { font-size: .8125rem; color: rgba(255,255,255,.78); }
+body.landing-call .hero .hero-assure .hero-cancel { font-size: .8125rem; color: rgba(255,255,255,.78); }
+body.landing-offer .hero .hero-side > .tl-frame figcaption,
+.tl-board figcaption { font-size: .8125rem; color: rgba(255,255,255,.78); }
+body.landing-offer .hero .hero-side > .hero-proof { font-size: .875rem; color: rgba(255,255,255,.8); }
+body.landing-offer .hero .hero-price-note .hero-price-sub { font-size: .875rem; color: rgba(255,255,255,.8); }
+/* Checks: capped row, no divider when there is only one. */
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust { max-width: 580px; justify-self: start; flex-wrap: wrap; }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust .trust-item { flex: 1 1 160px; }
+}
+body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:only-child) { border-top: 0; padding-top: 0; }
+@media (min-width: 768px) { body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:only-child) { margin-top: -12px; } }
+/* Mock focal points. */
+.tl-board .tl-task { font-size: .95rem; padding: 12px 14px; background: #fff7ed; border-left: 4px solid #f97316; }
+.tl-board .tl-task strong { color: #c2410c; }
+.tl-board .tl-kpi em { justify-self: start; font-size: .8rem; padding: 2px 8px; border-radius: 999px; }
+.tl-board .tl-kpi em.tl-up { background: #dcfce7; }
+.tl-board .tl-kpi em.tl-down { background: #fee2e2; }
+.tl-board .tl-total { padding: 12px 14px; font-size: .85rem; font-weight: 700; }
+.tl-board .tl-total strong { font-size: 1.15rem; font-family: 'Fraunces', serif; }
+.tl-listen { background: #f97316; border: 2px solid #f97316; color: #fff; font-size: .95rem; min-height: 48px; box-shadow: 0 6px 16px rgba(249,115,22,.3); }
+.tl-listen:hover, .tl-listen:focus-visible { background: #ea580c; border-color: #ea580c; color: #fff; }
+/* FAO card: assessment first. */
+.pricing-card .pricing-step { margin: 0 0 14px; padding: 0 0 14px; border-bottom: 1px solid #dde6f5; font-size: .95rem; line-height: 1.45; color: #1a2744; text-align: left; }
+.pricing-card .pricing-step-label { display: inline-block; margin-right: 6px; padding: 2px 8px; border-radius: 999px; background: #f97316; color: #fff; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+/* Governance: terms line under the CTA. */
+body.landing-form.landing-offer .hero .hero-price-note { margin-top: 12px; }
+/* Phones: first mock bubble on the first screen. */
+@media (max-width: 767px) {
+  body.landing-call .hero .hero-kicker, body.landing-call .hub-hero .hero-kicker { margin-bottom: 8px; }
+  body.landing-offer .hero .hero-copy > .hero-sub { font-size: .97rem; line-height: 1.5; margin-top: 10px; }
+  body.landing-offer .hero a.hero-call { min-height: 54px; margin-top: 16px; }
+  body.landing-offer .hero .hero-price-note { margin-top: 8px; font-size: .875rem; }
+  body.landing-offer .hero .hero-price-note strong { font-size: 1rem; }
+  body.landing-offer .hero .hero-price-note .hero-price-sub { font-size: .8125rem; margin-top: 0; }
+  body.landing-call .hero-assure, body.landing-call .hero .hero-assure { margin-top: 10px; gap: 4px; }
+  body.landing-offer .hero .hero-price-note + .hero-assure { margin-top: 10px; }
+  body.landing-call .hero .hero-assure .hero-guarantee, body.landing-call .hub-hero .hero-assure .hero-guarantee { font-size: .8125rem; padding: 4px 10px; }
+  body.landing-call .hero .hero-process { margin-top: 6px; }
+  body.landing-call .hero .hero-copy > .hero-try, body.landing-call .hub-hero .hero-try { margin-top: 12px; padding: 8px 12px; font-size: .875rem; }
+  body.landing-offer .hero .hero-grid, body.landing-offer .hero .hero-grid.hero-with-frame { gap: 18px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-ear { display: none; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-phone { padding: 6px 6px 8px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-phone-head { padding: 8px 12px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-thread { padding: 10px; gap: 6px; }
+  body.landing-hub .hub-hero .hub-side { margin-top: 16px; }
+}
+/* Hubs: proof and cross-link sit under the mock. */
+body.landing-hub .hub-hero .hub-side > .hero-proof { margin: 14px auto 0; max-width: 340px; text-align: center; color: rgba(255,255,255,.8); }
+body.landing-hub .hub-hero .hub-side > .not-you { justify-content: center; margin: 8px auto 0; text-align: center; }
+@media (max-width: 767px) {
+  body.landing-hub .hub-hero a.hub-cta { min-height: 56px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-avatar { width: 28px; height: 28px; }
+}
+body.landing-hub .hub-v2 > .hub-side { flex-direction: column; align-items: center; }
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-grid, body.landing-offer .hero .hero-grid.hero-with-frame { gap: 14px; }
+  body.landing-call .hero .hero-assure .hero-cancel { line-height: 1.3; }
+  body.landing-call .hero .hero-assure .hero-guarantee { line-height: 1.25; }
+}
+@media (max-width: 767px) {
+  body.landing-hub .hub-hero a.hub-cta { min-height: 54px; padding-top: 12px; padding-bottom: 12px; }
+  body.landing-hub .hub-hero .hub-hero-inner.hub-v2 { row-gap: 14px; gap: 14px; }
+  body.landing-hub .hub-hero .hub-side { margin-top: 0; }
+  body.landing-hub .hub-v2 .hub-side > .tl-frame .tl-ear { display: none; }
+  body.landing-hub .hub-v2 .hub-side > .tl-frame .tl-phone { padding: 6px 6px 8px; }
+  body.landing-hub .hub-v2 .hub-side > .tl-frame .tl-phone-head { padding: 8px 12px; }
+}
+@media (max-width: 767px) { body.landing-call.landing-hub .hub-hero a.hub-cta { min-height: 56px; padding-top: 12px; padding-bottom: 12px; } }
