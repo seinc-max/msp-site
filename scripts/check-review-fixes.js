@@ -95,33 +95,8 @@ for (const file of files) {
 }
 pass('35 pages classified: 5 neutral, 13 trades, 4 salons, 13 professional');
 
-const gatedNav = new Set([
-  'missed-call-text-back.html',
-  'ai-receptionist.html',
-  'ai-receptionist-for-salons.html',
-  'google-review-requests.html',
-  'google-review-requests-for-salons.html',
-  'quote-follow-up-win-back.html',
-  'website-chat-to-text.html',
-  'text-to-pay.html',
-  'contractor-websites.html',
-  'for-home-services.html',
-  'for-appointment-businesses.html',
-  'for-law-firms-accountants-and-advisors.html',
-  'ai-governance.html',
-  'fractional-ai-officer.html',
-  'ai-support-agent.html',
-  'lead-follow-up.html',
-  'appointment-reminders.html',
-  'cold-outreach.html',
-  'crm-setup.html',
-  'custom-dashboards.html',
-  'multi-location.html',
-  'ai-exposure-score.html',
-  'ai-automation-roi-guide.html',
-  'margin-leakage-calculator.html',
-  'about.html',
-]);
+// Gating retired 2026-11-19 (Ben t1206u): every page keeps the full Services menu.
+const gatedNav = new Set([]);
 for (const file of files) {
   const n = nav(read(file));
   for (const href of proOfferHrefs) {
@@ -136,7 +111,7 @@ for (const file of files) {
     }
   }
 }
-pass('landing pages gate the nav to logo + CTA; homepage, legal, 404, and blog keep the full Services menu');
+pass('every page keeps the full Services menu (nav gating retired 2026-11-19)');
 const notFound = read('404.html');
 if (bodyClass(notFound)) fail('404 should stay a neutral recovery page');
 const notFoundNav = nav(notFound);
