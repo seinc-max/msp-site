@@ -190,7 +190,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       "@type": "Offer",
       "name": "Missed-Call Text-Back",
       "price": "149",
-      "description": "$149/mo per location plus a one-time $199 setup.",
+      "description": "$149/mo plus a one-time $199 setup.",
       "url": "https://truelineit.com/missed-call-text-back"
     }
   ]
@@ -267,14 +267,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
  },
  {
  "@type": "Question",
- "name": "Is the price per location?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Yes — $149/mo per location, plus $199 one-time setup."
- }
- },
- {
- "@type": "Question",
  "name": "Can I cancel anytime?",
  "acceptedAnswer": {
  "@type": "Answer",
@@ -346,8 +338,41 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W663FFHP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- NAV -->
-<nav class="tl-nav tl-nav-gated" aria-label="Primary">
+<nav class="tl-nav" aria-label="Primary">
   <a href="/" class="nav-logo" aria-label="Trueline IT home">Trueline<span>.</span>IT</a>
+  <div class="nav-links">
+    <details class="nav-services">
+      <summary>Services</summary>
+      <div class="nav-services-menu">
+        <div class="nav-services-group" data-audience="trades" role="group" aria-labelledby="nav-group-trades">
+          <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
+          <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
+          <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
+          <a class="nav-services-sub" href="/ai-receptionist">AI Receptionist</a>
+          <a class="nav-services-sub" href="/quote-follow-up-win-back">Quote Follow-Up & Win-Back</a>
+          <a class="nav-services-sub" href="/website-chat-to-text">Website Chat-to-Text</a>
+          <a class="nav-services-sub" href="/text-to-pay">Text-to-Pay</a>
+          <a class="nav-services-sub" href="/contractor-websites">Contractor Websites</a>
+          <a class="nav-services-sub" href="/google-review-requests">Google Review Requests</a>
+          <a class="nav-services-sub" href="/lead-follow-up">Lead Follow-Up</a>
+          <a class="nav-services-sub" href="/crm-setup">CRM Setup</a>
+          <a class="nav-services-sub" href="/cold-outreach">Cold Email Outreach</a>
+          <a class="nav-services-sub" href="/custom-dashboards">Custom Dashboards</a>
+          <a class="nav-services-sub" href="/multi-location">Multi-Location</a>
+        </div>
+        <div class="nav-services-group" data-audience="salons" role="group" aria-labelledby="nav-group-salons">
+          <p class="nav-services-label" id="nav-group-salons">Salons & Clinics</p>
+          <a class="nav-services-hub" href="/for-appointment-businesses">For Salons & Clinics</a>
+          <a class="nav-services-sub" href="/ai-receptionist-for-salons">AI Receptionist</a>
+          <a class="nav-services-sub" href="/google-review-requests-for-salons">Google Review Requests</a>
+          <a class="nav-services-sub" href="/appointment-reminders">Booking &amp; Reminders</a>
+        </div>
+        <div class="nav-services-group nav-services-minor" data-audience="professional">
+          <a class="nav-services-sub" href="/for-law-firms-accountants-and-advisors">Law, accounting &amp; advisory firms</a>
+        </div>
+      </div>
+    </details>
+  </div>
   <a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
 </nav>
 <main id="main" tabindex="-1">
@@ -357,11 +382,11 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   <div data-r6="1" class="hero-grid hero-with-frame">
             <div class="hero-copy">
 <h1>Missed a call? They get a text.</h1>
-      <p class="hero-sub">For trades. They get a text back in minutes — from a separate number.</p>
+      <p class="hero-sub">They get a text back in minutes — from a separate number.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
-      <p class="hero-price-note"><strong>$149/mo</strong> per location +&nbsp;$199&nbsp;setup.</p>
+      <p class="hero-price-note"><strong>$149/mo</strong> +&nbsp;$199&nbsp;setup.</p>
       <div class="hero-assure">
-        <p class="hero-guarantee">✓ 30-day money-back guarantee — setup + first month refunded in full</p>
+        <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
         <p class="hero-cancel">Cancel anytime. No contracts, no cancellation&nbsp;fees.</p>
       </div>
 <div class="hero-down-cue" aria-hidden="true"></div>
@@ -386,7 +411,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
           </div>
         </div>
       </div>
-      <figcaption>Sample. You approve the wording.</figcaption>
+      <figcaption><em>Just a sample. You approve the wording.</em></figcaption>
     </figure>
     </div>
             <div class="hero-trust">
@@ -404,7 +429,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">How Many Paying Jobs Go Unanswered While You're on Another Job?</h2>
     <p class="body-copy">You're under a sink when the phone rings. Most callers won't leave a voicemail — they call the next name on Google. The job often goes to whoever calls back first.</p>
     <p class="body-copy">Call us. We'll estimate what missed calls are costing you — from your own recent calls.</p>
-    <p>Tap to call. Hang up, and you'll get our sample text within minutes — then we'll call you back to talk through your numbers.</p>
     <p class="body-copy">No-heat call at 2 AM. Roof leak at 11 PM. Burst pipe while you're on another job. That's when jobs are won — or lost.</p>
     <p class="body-copy">If they text back what they need, you get an alert on your phone. You call them back from your phone — no app to learn.</p>
     <p class="body-copy">Your caller can still leave a voicemail — ask us on the call how voicemail works with call forwarding on your number.</p>
@@ -563,9 +587,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">One Price. No More Lost Jobs to Voicemail. No Surprises.</h2>
     <div class="pricing-card">
       <div class="pricing-badge">Missed-Call Text-Back</div>
-      <div class="pricing-amount">$149<span>/mo per location</span></div>
+      <div class="pricing-amount">$149<span>/mo</span></div>
       <div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:0 0 20px;">
-        <p style="margin:0 0 6px;"><strong>$149/mo per location + $199 one-time setup — $348 to start, then $149/mo.</strong></p>
+        <p style="margin:0 0 6px;"><strong>$149/mo + $199 one-time setup — $348 to start, then $149/mo.</strong></p>
         <p style="margin:0 0 6px;">Cancel anytime. No contracts, no cancellation fees.</p>
         <p style="margin:0;">30-day money-back guarantee. Not right for you within 30 days of your first payment? We refund your $199 setup and first $149 month in full. No questions asked.</p>
       </div>
@@ -614,7 +638,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pricing-section">
   <div class="section-inner">
     <h2 class="section-title">How much does missed-call text-back cost?</h2>
-    <p class="body-copy">$149/mo per location + $199 one-time setup. One location is one shop or office — if you have two numbers, ask us on the call. We build it and switch it on — you run nothing. No charges per call or per text. Cancel anytime. No contracts, no cancellation fees.</p>
+    <p class="body-copy">$149/mo + $199 one-time setup. One location is one shop or office — if you have two numbers, ask us on the call. We build it and switch it on — you run nothing. No charges per call or per text. Cancel anytime. No contracts, no cancellation fees.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="DIY software compared with done-for-you." style="overflow-x:auto;margin:16px 0 8px;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr><th scope="col" style="padding:10px 12px;border-bottom:2px solid var(--border);text-align:left;"></th><th scope="col" style="padding:10px 12px;border-bottom:2px solid var(--border);text-align:left;">DIY software</th><th scope="col" style="padding:10px 12px;border-bottom:2px solid var(--border);text-align:left;">Done-for-you (Trueline)</th></tr></thead>
@@ -626,7 +650,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </div>
 
     <h2 class="section-title">How much does it cost per month for a plumber?</h2>
-    <p class="body-copy">Same price for a plumber: $149/mo per location + $199 one-time setup.</p>
+    <p class="body-copy">Same price for a plumber: $149/mo + $199 one-time setup.</p>
   </div>
 
 <div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
@@ -669,10 +693,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         <p>No. We work directly with owners. We don't resell, and we don't replace your software.</p>
       </details>
       <details>
-        <summary>Is the price per location?</summary>
-        <p>Yes — $149/mo per location, plus $199 one-time setup.</p>
-      </details>
-      <details>
         <summary>Can I cancel anytime?</summary>
         <p>Yes. To cancel, call (647) 360-5774. We switch the call forwarding off and the texts stop. No contracts, no cancellation fees.</p>
       </details>
@@ -702,7 +722,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="bottom-cta">
   <h2>Lose fewer jobs to voicemail</h2>
   <p>You do your job. We handle the missed calls. Every week you wait, more missed calls go to the next guy. Call us — we'll show you what missed calls cost you, from your own recent calls.</p>
-  <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee — setup + first month refunded in full</p>
+  <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
   <div class="cta-row">
     <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
   </div>

@@ -9,6 +9,8 @@
 // - any path is a symlink (never followed);
 // - dist/ doesn't hold exactly the files in scripts/dist-manifest.txt;
 // - CF_PAGES_BRANCH is main and demo/ contains any file. Demos stay on staging.
+// - scripts/check-site-consistency.js fails (missing menu, guarantee badge drift,
+//   banned phrases, hero cancel/price/call drift across pages).
 "use strict";
 const fs = require("fs");
 const path = require("path");
@@ -87,6 +89,12 @@ for (const n of top) {
 }
 const missingTop = [...ALLOW].filter((n) => !top.includes(n));
 if (missingTop.length) fail("missing public entries: " + missingTop.join(", "));
+
+// 1b. Cross-page consistency guard (RCA menu-guarantee-consistency-20261119).
+{
+  const r = require("child_process").spawnSync(process.execPath, [path.join(__dirname, "check-site-consistency.js")], { stdio: "inherit" });
+  if (r.status !== 0) fail("check-site-consistency.js failed; fix the shared elements before release");
+}
 
 // 2. Copy the allowed entries.
 fs.rmSync(OUT, { recursive: true, force: true });
