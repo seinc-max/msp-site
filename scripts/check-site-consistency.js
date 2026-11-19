@@ -12,6 +12,7 @@
 //   banned hero lead-in (BANNED_HERO, e.g. "For trades.");
 // - has a repeated hero element that differs from the site majority:
 //   cancel line, price-line format, hero call button text;
+// - has a "call and hang up" test prompt (BANNED_HANGUP);
 // - claims texts come from the client's own number (BANNED_SENDER);
 // - has a sample figcaption that is not italic or does not start "Just a sample";
 // - has a tel: link other than tel:+16473605774.
@@ -32,6 +33,10 @@ const CAPTION_START = "Just a sample";
 const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach", "/crm-setup", "/custom-dashboards", "/multi-location"];
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i];
+// Ben 2026-11-19 t1214u: no "call and hang up" test prompts. Only the problem line
+// "Many hang up instead of leaving a voicemail" (callers' behaviour) is allowed.
+const BANNED_HANGUP = /\bhang[\s\u00a0-]+up\b/gi;
+const HANGUP_OK = /Many hang up instead of leaving a voicemail/;
 // Ben 2026-11-19 t1208u: no "For trades." lead-in in the top hero.
 const BANNED_HERO = [/>\s*For trades(?: on the job)?[.,]/i];
 // Ben 2026-11-19 t1213u: texts come from a SEPARATE number, never the client's own.
@@ -93,6 +98,10 @@ const add = (g, key, f) => { (groups[g][key] = groups[g][key] || []).push(f); };
 for (const f of textFiles) {
   const raw = read(f);
   const text = raw.replace(/<[^>]+>/g, " ");
+  for (const m of text.matchAll(BANNED_HANGUP)) {
+    const around = text.slice(Math.max(0, m.index - 10), m.index + 50);
+    if (!HANGUP_OK.test(around)) err(f, "banned test prompt \"" + around.replace(/\s+/g, " ").trim() + "\"");
+  }
   for (const re of BANNED_SENDER) {
     const m = text.match(re);
     if (m) err(f, "sender claim \"" + m[0] + "\" (texts come from a separate number)");
