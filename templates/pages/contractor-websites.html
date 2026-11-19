@@ -350,6 +350,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
             <div class="hero-copy">
 <h1>A website where callers tap your number.</h1>
       <p class="hero-sub">We build, write and host it. Live within a week.</p>
+      <p class="call-line">Be the business they call when they search for your work.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <p class="hero-price-note"><strong>$499/mo</strong>. No setup fee.</p>
       <div class="hero-assure">
@@ -431,8 +432,58 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p class="body-copy">If that isn't you, the job is gone.</p>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="contractor-websites" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What are the calls your website is missing worth?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-visits">People who visit your site each month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-visits" data-k="visits" min="0" max="5000" step="50" value="300" aria-valuetext="300">
+          <span class="tl-calc-box"><input type="number" data-k="visits" min="0" max="5000" step="50" value="300" inputmode="decimal" aria-label="People who visit your site each month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-call">Visitors who would call you</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-call" data-k="call" min="0" max="20" step="1" value="5" aria-valuetext="5%">
+          <span class="tl-calc-box"><input type="number" data-k="call" min="0" max="20" step="1" value="5" inputmode="decimal" aria-label="Visitors who would call you" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-book">Callers who book a job</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-book" data-k="book" min="0" max="100" step="5" value="40" aria-valuetext="40%">
+          <span class="tl-calc-box"><input type="number" data-k="book" min="0" max="100" step="5" value="40" inputmode="decimal" aria-label="Callers who book a job" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-job">Your average job value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-job" data-k="job" min="50" max="5000" step="25" value="400" aria-valuetext="$400">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="job" min="50" max="5000" step="25" value="400" inputmode="decimal" aria-label="Your average job value" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">About</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$2,400</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">is at stake.</p>
+      <p class="tl-calc-sub" data-out="sub">About 6 jobs a month, or $28,800 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Visitors a month × % who would call × % who book × average job value</p>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=fab0a622e9" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
@@ -461,7 +512,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">Your trade, with the job on the page.</h2>
-    <p class="section-lead body-copy">The page names the work a homeowner types in, then sends the call to your business. You're under a sink, on a roof, or in a panel. The site is already getting them to call.</p>
+    <p class="section-lead body-copy">The page names the work a homeowner types in, then sends the call to your business. You're out on a job. The site is already getting them to call.</p>
     <div class="pain-grid">
 <div class="pain-card"><p class="trade-name">Plumbers — The burst pipe page:</p><p>Your plumber pages are written for "burst pipe repair" and "water heater replacement" — the work you actually do. The homeowner with water on the floor taps the call button instead of scrolling for a form.</p></div>
 <div class="pain-card"><p class="trade-name">HVAC — The no-heat page:</p><p>Your HVAC site is built for "furnace not heating" and "AC not cooling." The homeowner in a cold house taps the number they already trust.</p></div>
@@ -495,18 +546,18 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">Is this for you?</h2>
     <div class="audience-grid">
       <div class="audience-card good">
-        <h3>Who this is for</h3>
+        <h3>This is for you if</h3>
         <ul>
-          <li>Plumbers, HVAC, roofers, electricians, landscapers, painters, general contractors, and handymen.</li>
-          <li>Owners who want the site done for them, not a template to fill in</li>
+          <li>You're a plumber, HVAC tech, roofer, electrician, landscaper, painter, general contractor or handyman.</li>
+          <li>You want the site done for you, not a template to fill in</li>
         </ul>
       </div>
       <div class="audience-card bad">
-        <h3>Who this is not for</h3>
+        <h3>This is not for you if</h3>
         <ul>
-          <li>Anyone who wants to build it themselves in a website builder</li>
-          <li>Agencies or resellers</li>
-          <li>Businesses outside the trades</li>
+          <li>You want to build it yourself in a website builder</li>
+          <li>You're an agency or reseller</li>
+          <li>You're not in the trades</li>
         </ul>
       </div>
     </div>

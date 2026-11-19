@@ -235,7 +235,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=3f0eb7801b">
-<link rel="stylesheet" href="/assets/landing.css?v=52007349cf">
+<link rel="stylesheet" href="/assets/landing.css?v=c64340683b">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"For Trades & Contractors","item":"https://truelineit.com/for-home-services"},{"@type":"ListItem","position":3,"name":"Google Reviews for Trades and Contractors","item":"https://truelineit.com/google-review-requests"}]}</script>
 </head>
 <body class="audience-trades landing-call landing-offer">
@@ -288,6 +288,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
             <div class="hero-copy">
 <h1>Job done. Ask for the Google review.</h1>
       <p class="hero-sub">A Google review link goes by text after each job, with one reminder.</p>
+      <p class="call-line">Turn finished jobs into reviews that win your next customer.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <p class="hero-price-note"><strong>$99/mo</strong> +&nbsp;$99&nbsp;setup.</p>
       <div class="hero-assure">
@@ -334,12 +335,48 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <section class="pain-section">
   <div class="section-inner">
-    <h2 class="section-title">Good work with no review doesn't win the next job.</h2>
+    <h2 class="section-title">Your best work can't earn a review if you never ask.</h2>
     <p class="body-copy">You finish, pack up, and forget to ask.</p>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="google-review-requests" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What one more booked job could be worth to you?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-extra">Extra booked jobs a month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-extra" data-k="extra" min="0" max="10" step="1" value="1" aria-valuetext="1">
+          <span class="tl-calc-box"><input type="number" data-k="extra" min="0" max="10" step="1" value="1" inputmode="decimal" aria-label="Extra booked jobs a month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-job">Your average job value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-job" data-k="job" min="50" max="5000" step="25" value="350" aria-valuetext="$350">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="job" min="50" max="5000" step="25" value="350" inputmode="decimal" aria-label="Your average job value" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">About</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$350</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">is at stake.</p>
+      <p class="tl-calc-sub" data-out="sub">That’s $4,200 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Extra booked jobs a month × average job value</p>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=fab0a622e9" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
@@ -397,19 +434,19 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">Is this for you?</h2>
     <div class="audience-grid">
       <div class="audience-card good">
-        <h3>Who this is for</h3>
+        <h3>This is for you if</h3>
         <ul>
-          <li>Trades: plumbers, HVAC, electricians, roofers and cleaners who finish the job and forget to ask</li>
-          <li>Owners who want every customer asked, not only the ones they remember</li>
+          <li>You're a plumber, HVAC tech, electrician, roofer or cleaner who finishes the job and forgets to ask</li>
+          <li>You want every customer asked, not only the ones you remember</li>
         </ul>
       </div>
       <div class="audience-card bad">
-        <h3>Who this is not for</h3>
+        <h3>This is not for you if</h3>
         <ul>
-          <li>Anyone who wants to buy or write reviews</li>
-          <li>Anyone who wants to ask only happy customers</li>
-          <li>Agencies or resellers</li>
-          <li>Buyers who want a self-serve tool to set up themselves</li>
+          <li>You want to buy or write reviews</li>
+          <li>You want to ask only happy customers</li>
+          <li>You're an agency or reseller</li>
+          <li>You want a self-serve tool to set up yourself</li>
         </ul>
       </div>
     </div>
@@ -425,7 +462,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </section>
 <section class="how-section" id="replies"><div class="section-inner"><div class="section-eyebrow">Requests + Replies</div><h2 class="section-title">Every Google review gets a reply in your voice.</h2>
 <p class="body-copy">A reply is drafted for every new Google review, in your business's voice. You approve it by text before it posts. Nothing posts without that approval. A negative review is flagged to you within minutes of coming in.</p><p class="body-copy">80% of consumers are likely to use a business that responds to all of its reviews (BrightLocal, 2026). We draft every reply for you.</p>
-<div class="pain-grid"><div class="pain-card"><h3>No time to reply</h3><p>Replying to every review is one more job you don't get to.</p></div><div class="pain-card"><h3>Bad reviews sit unanswered</h3><p>A 1-star review with no reply looks worse than one you've answered.</p></div><div class="pain-card"><h3>Competitors look more engaged</h3><p>Customers notice which businesses reply.</p></div></div>
+<div class="pain-grid"><div class="pain-card"><h3>No time to reply</h3><p>Replying to every review is one more job you don't get to.</p></div><div class="pain-card"><h3>Bad reviews sit unanswered</h3><p>A 1-star review with no reply looks worse than one you've answered.</p></div><div class="pain-card"><h3>Competitors look more engaged</h3><p>Customers notice whether you reply.</p></div></div>
 <div class="steps-grid" style="margin-top:28px;"><div class="step"><div class="step-number">1</div><h3>A reply is drafted</h3><p>Every new review gets a reply in your voice, sent to you to approve.</p></div><div class="step"><div class="step-number">2</div><h3>You approve by text</h3><p>Approved replies go up on Google. Nothing posts without your approval.</p></div><div class="step"><div class="step-number">3</div><h3>Negative reviews get flagged</h3><p>Negative reviews are flagged to you within minutes of coming in.</p></div></div>
 <p style="margin-top:28px;font-size:0.95rem;color:var(--text-muted);">Replies cannot guarantee a star rating.</p>
 </div>

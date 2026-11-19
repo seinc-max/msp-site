@@ -312,6 +312,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
             <div class="hero-copy">
 <h1>Visit done. Ask for the Google review.</h1>
       <p class="hero-sub">For salons and clinics. A Google review link goes by text after each visit, with one reminder.</p>
+      <p class="call-line">Turn great visits into reviews that bring you new clients.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <p class="hero-price-note"><strong>$99/mo</strong> +&nbsp;$99&nbsp;setup.</p>
       <div class="hero-assure">
@@ -358,12 +359,48 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <section class="pain-section">
   <div class="section-inner">
-    <h2 class="section-title">A great visit that never gets a review doesn't fill the next chair.</h2>
+    <h2 class="section-title">Happy clients leave. The chance to ask for a review goes with them.</h2>
     <p class="body-copy">You finish the appointment, the next client sits down, and you move on without asking.</p>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="google-review-requests-for-salons" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What more booked clients could be worth to you?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-extra">Extra booked clients a month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-extra" data-k="extra" min="0" max="20" step="1" value="2" aria-valuetext="2">
+          <span class="tl-calc-box"><input type="number" data-k="extra" min="0" max="20" step="1" value="2" inputmode="decimal" aria-label="Extra booked clients a month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-visit">Your average visit value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-visit" data-k="visit" min="20" max="500" step="5" value="85" aria-valuetext="$85">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="visit" min="20" max="500" step="5" value="85" inputmode="decimal" aria-label="Your average visit value" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">About</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$170</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">is at stake.</p>
+      <p class="tl-calc-sub" data-out="sub">That’s $2,040 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Extra booked clients a month × average visit value</p>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=fab0a622e9" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
@@ -421,20 +458,20 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">Is this for you?</h2>
     <div class="audience-grid">
       <div class="audience-card good">
-        <h3>Who this is for</h3>
+        <h3>This is for you if</h3>
         <ul>
-          <li>Nail and hair salons, spas and med-spas, and barbers</li>
-          <li>Dental, physio and chiro clinics, yoga studios and Pilates classes</li>
-          <li>Owners who want every client asked, not only the ones they remember</li>
+          <li>You run a nail or hair salon, a spa or med-spa, or a barbershop</li>
+          <li>You run a dental, physio or chiro clinic, a yoga studio or a Pilates class</li>
+          <li>You want every client asked, not only the ones you remember</li>
         </ul>
       </div>
       <div class="audience-card bad">
-        <h3>Who this is not for</h3>
+        <h3>This is not for you if</h3>
         <ul>
-          <li>Anyone who wants to buy or write reviews</li>
-          <li>Anyone who wants to ask only happy clients</li>
-          <li>Agencies or resellers</li>
-          <li>Buyers who want a self-serve tool to set up themselves</li>
+          <li>You want to buy or write reviews</li>
+          <li>You want to ask only happy clients</li>
+          <li>You're an agency or reseller</li>
+          <li>You want a self-serve tool to set up yourself</li>
         </ul>
       </div>
     </div>
