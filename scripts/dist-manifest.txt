@@ -62,6 +62,7 @@ fractional-ai-officer.html
 google-review-requests-for-salons.html
 google-review-requests.html
 index.html
+js/calculator.js
 js/call-tracking.js
 js/sample-call.js
 lead-follow-up.html

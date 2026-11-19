@@ -267,7 +267,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=3f0eb7801b">
-<link rel="stylesheet" href="/assets/landing.css?v=41669b6b0a">
+<link rel="stylesheet" href="/assets/landing.css?v=c64340683b">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"For Salons & Clinics","item":"https://truelineit.com/for-appointment-businesses"},{"@type":"ListItem","position":3,"name":"Google Reviews for Salons and Clinics","item":"https://truelineit.com/google-review-requests-for-salons"}]}</script>
 </head>
 <body class="audience-salons landing-call landing-offer">
@@ -371,6 +371,57 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="google-review-requests-for-salons" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What could more Google reviews be worth to you?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-done">Visits you finish each month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-done" data-k="done" min="0" max="1000" step="10" value="200" aria-valuetext="200">
+          <span class="tl-calc-box"><input type="number" data-k="done" min="0" max="1000" step="10" value="200" inputmode="decimal" aria-label="Visits you finish each month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-unasked">Visits where you don’t ask for a review</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-unasked" data-k="unasked" min="0" max="100" step="5" value="80" aria-valuetext="80%">
+          <span class="tl-calc-box"><input type="number" data-k="unasked" min="0" max="100" step="5" value="80" inputmode="decimal" aria-label="Visits where you don’t ask for a review" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-extra">Extra new clients a month you think more reviews would win you</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-extra" data-k="extra" min="0" max="20" step="1" value="2" aria-valuetext="2">
+          <span class="tl-calc-box"><input type="number" data-k="extra" min="0" max="20" step="1" value="2" inputmode="decimal" aria-label="Extra new clients a month you think more reviews would win you"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-visit">Your average visit value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-visit" data-k="visit" min="20" max="500" step="5" value="85" aria-valuetext="$85">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="visit" min="20" max="500" step="5" value="85" inputmode="decimal" aria-label="Your average visit value" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">You could be leaving</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$170</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">on the table.</p>
+      <p class="tl-calc-sub" data-out="sub">That’s $2,040 a year. You finish about 160 visits a month without asking for a review.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Extra new clients a month × average visit value</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=22be534254" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">

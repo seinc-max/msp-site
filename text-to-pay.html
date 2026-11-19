@@ -298,7 +298,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=3f0eb7801b">
-<link rel="stylesheet" href="/assets/landing.css?v=41669b6b0a">
+<link rel="stylesheet" href="/assets/landing.css?v=c64340683b">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"For Trades & Contractors","item":"https://truelineit.com/for-home-services"},{"@type":"ListItem","position":3,"name":"Text-to-Pay for Home Services","item":"https://truelineit.com/text-to-pay"}]}</script>
 </head>
@@ -399,6 +399,50 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="text-to-pay" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">How much of your money is waiting on unpaid invoices?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-inv">Invoices you send each month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-inv" data-k="inv" min="0" max="200" step="1" value="40" aria-valuetext="40">
+          <span class="tl-calc-box"><input type="number" data-k="inv" min="0" max="200" step="1" value="40" inputmode="decimal" aria-label="Invoices you send each month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-amt">Your average invoice</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-amt" data-k="amt" min="50" max="10000" step="50" value="600" aria-valuetext="$600">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="amt" min="50" max="10000" step="50" value="600" inputmode="decimal" aria-label="Your average invoice" data-prefix="$"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-days">Days until you get paid</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-days" data-k="days" min="1" max="90" step="1" value="21" aria-valuetext="21 days">
+          <span class="tl-calc-box"><input type="number" data-k="days" min="1" max="90" step="1" value="21" inputmode="decimal" aria-label="Days until you get paid" data-suffix=" days"><span class="tl-calc-suf" aria-hidden="true">days</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">You could have</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$16,800</span></p>
+      <p class="tl-calc-tail">waiting to be paid at any time.</p>
+      <p class="tl-calc-sub" data-out="sub">Every day you wait holds about $800 more.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Invoices a month × average invoice × days until you get paid ÷ 30 days</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=22be534254" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
