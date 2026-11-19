@@ -170,14 +170,20 @@ if (!option.includes('min-height: 44px')) fail('exposure options missing 44px hi
 else pass('exposure option labels set a 44px minimum');
 
 const mctb = read('missed-call-text-back.html');
-if (!mctb.includes("How many calls ring out while you're on a job?") && !mctb.includes('How many calls ring out while you’re on a job?')) {
-  fail('locked missed-call heading changed');
+// Updated 2026-11-19 (release PR: section 2 + contractor-websites sample).
+// The Nov 7 heading "How many calls ring out while you're on a job?" and the
+// "Call us and we'll estimate..." card were replaced by the Ben-approved
+// landing rewrite (PR #426) and the section 2 rewrite (PR #427, Ben t1202u:
+// trade-inclusive, less wordy, no "under a sink"). The sender wording now reads
+// "from a separate number" (Ben t1213u). Assert the current approved copy.
+if (!mctb.includes("How many paying jobs go unanswered while you're on another job?")) {
+  fail('missed-call section 2 heading changed');
 }
-if (!mctb.includes("Call us and we'll estimate what missed calls are costing you, from your own numbers.")) {
-  fail('missed-call estimate card was not clarified');
-}
-if (mctb.includes('text back from a separate number') === false) fail('staged text-back wording missing');
-else pass('estimate clarification kept the locked heading and staged text-back wording');
+const mctbS2 = (mctb.match(/<!-- HOW MANY CALLS -->[\s\S]*?<\/section>/) || [''])[0];
+if (!mctbS2) fail('missed-call section 2 block not found');
+else if (/under a sink/i.test(mctbS2)) fail('missed-call section 2 still says "under a sink" (Ben t1202u)');
+if (!/text back in minutes[^<]{0,20}from a separate number/.test(mctb)) fail('missed-call separate-number text-back wording missing');
+else pass('missed-call section 2 heading, no "under a sink", separate-number text-back wording');
 
 if (errors.length) {
   console.error(errors.length + ' review-fix checks failed.');
