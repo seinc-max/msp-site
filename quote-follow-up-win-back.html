@@ -270,7 +270,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=3f0eb7801b">
-<link rel="stylesheet" href="/assets/landing.css?v=52007349cf">
+<link rel="stylesheet" href="/assets/landing.css?v=c64340683b">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"For Trades & Contractors","item":"https://truelineit.com/for-home-services"},{"@type":"ListItem","position":3,"name":"Quote Follow-Up & Win-Back for Trades","item":"https://truelineit.com/quote-follow-up-win-back"}]}</script>
 </head>
 <body class="audience-trades landing-call landing-offer">
@@ -323,6 +323,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
             <div class="hero-copy">
 <h1>Unanswered quotes get a follow-up text.</h1>
       <p class="hero-sub">Follow-ups go out on a schedule you approve. Past customers get a check-in too.</p>
+      <p class="call-line">Win the jobs you've already done the work to quote.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <p class="hero-price-note"><strong>$149/mo</strong> +&nbsp;$199&nbsp;setup.</p>
       <div class="hero-assure">
@@ -373,8 +374,58 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p class="body-copy">You sent the quote, got busy, and the customer booked whoever followed up.</p>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="quote-follow-up-win-back" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What are your quiet quotes worth?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-quotes">Quotes you send each month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-quotes" data-k="quotes" min="0" max="100" step="1" value="20" aria-valuetext="20">
+          <span class="tl-calc-box"><input type="number" data-k="quotes" min="0" max="100" step="1" value="20" inputmode="decimal" aria-label="Quotes you send each month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-quiet">Quotes that go quiet</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-quiet" data-k="quiet" min="0" max="100" step="5" value="50" aria-valuetext="50%">
+          <span class="tl-calc-box"><input type="number" data-k="quiet" min="0" max="100" step="5" value="50" inputmode="decimal" aria-label="Quotes that go quiet" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-win">Quiet quotes you’d win with a follow-up</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-win" data-k="win" min="0" max="50" step="1" value="10" aria-valuetext="10%">
+          <span class="tl-calc-box"><input type="number" data-k="win" min="0" max="50" step="1" value="10" inputmode="decimal" aria-label="Quiet quotes you’d win with a follow-up" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-job">Your average quote value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-job" data-k="job" min="100" max="25000" step="100" value="2500" aria-valuetext="$2500">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="job" min="100" max="25000" step="100" value="2500" inputmode="decimal" aria-label="Your average quote value" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">About</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$2,500</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">is at stake.</p>
+      <p class="tl-calc-sub" data-out="sub">About 1 job a month, or $30,000 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Quotes a month × % that go quiet × % you’d win back × average quote value</p>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=fab0a622e9" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
@@ -407,18 +458,18 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">Is this for you?</h2>
     <div class="audience-grid">
       <div class="audience-card good">
-        <h3>Who this is for</h3>
+        <h3>This is for you if</h3>
         <ul>
-          <li>Plumbers, HVAC, roofers, electricians, house cleaners, pest control, landscapers, movers, junk removal, painters, snow removal, window cleaners, general contractors, pool service and septic service who send quotes</li>
-          <li>Owners with open quotes and past customers, and no time to chase them</li>
+          <li>You send quotes: plumbing, HVAC, roofing, electrical, house cleaning, pest control, landscaping, moving, junk removal, painting, snow removal, window cleaning, general contracting, pool or septic service</li>
+          <li>You have open quotes and past customers, and no time to chase them</li>
         </ul>
       </div>
       <div class="audience-card bad">
-        <h3>Who this is not for</h3>
+        <h3>This is not for you if</h3>
         <ul>
-          <li>Cold texting people who never contacted you</li>
-          <li>Agencies or resellers</li>
-          <li>Buyers who want a self-serve SMS tool</li>
+          <li>You want to cold-text people who never contacted you</li>
+          <li>You're an agency or reseller</li>
+          <li>You want a self-serve SMS tool</li>
         </ul>
       </div>
     </div>
@@ -429,7 +480,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <section class="included-section"><div class="section-inner"><div class="section-eyebrow">What you get</div><h2 class="section-title">What's included, and what isn't</h2><div class="included-grid">
 <div class="included-card yes"><h3>What's included</h3><ul><li>Follow-up texts on every open quote</li><li>Win-back texts to past customers</li><li>Wording and timing you approve</li><li>Replies forwarded to you</li><li>Monthly review call</li></ul></div>
-<div class="included-card no"><h3>What's not included</h3><ul><li>Cold texting people who never contacted you</li><li>Replacing your current scheduling or field-service software</li><li>Discount offers unless you choose them</li></ul></div></div></div>
+<div class="included-card no"><h3>What's not included</h3><ul><li>You want to cold-text people who never contacted you</li><li>Replacing your current scheduling or field-service software</li><li>Discount offers unless you choose them</li></ul></div></div></div>
 <div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 

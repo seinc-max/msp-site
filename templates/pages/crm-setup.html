@@ -322,6 +322,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <div class="hero-copy">
 <h1>Every lead, quote and job in one place.</h1>
       <p class="hero-sub">We set it up, connect your form and texts, and check it monthly.</p>
+      <p class="call-line">Stop losing work to sticky notes and your memory.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <p class="hero-price-note"><strong>$199/mo</strong> +&nbsp;$799&nbsp;setup.</p>
       <div class="hero-assure">
@@ -358,8 +359,58 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p class="body-copy">If the job list lives only in your head or phone, nobody else can help, and quotes slip.</p>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="crm-setup" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What do slipped quotes and lost time cost you?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-slip">Quotes or leads that slip through each month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-slip" data-k="slip" min="0" max="20" step="1" value="2" aria-valuetext="2">
+          <span class="tl-calc-box"><input type="number" data-k="slip" min="0" max="20" step="1" value="2" inputmode="decimal" aria-label="Quotes or leads that slip through each month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-job">Your average job value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-job" data-k="job" min="50" max="10000" step="50" value="800" aria-valuetext="$800">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="job" min="50" max="10000" step="50" value="800" inputmode="decimal" aria-label="Your average job value" data-prefix="$"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-hrs">Hours a week you spend looking for job details</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-hrs" data-k="hrs" min="0" max="20" step="0.5" value="3" aria-valuetext="3 hrs">
+          <span class="tl-calc-box"><input type="number" data-k="hrs" min="0" max="20" step="0.5" value="3" inputmode="decimal" aria-label="Hours a week you spend looking for job details" data-suffix=" hrs"><span class="tl-calc-suf" aria-hidden="true">hrs</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-rate">What an hour of your time is worth</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-rate" data-k="rate" min="20" max="300" step="5" value="75" aria-valuetext="$75">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="rate" min="20" max="300" step="5" value="75" inputmode="decimal" aria-label="What an hour of your time is worth" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">About</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$2,568</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">is at stake.</p>
+      <p class="tl-calc-sub" data-out="sub">$1,600 in slipped jobs plus $968 of your time.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Slipped jobs a month × average job value + hours a week × your hourly value × 4.3 weeks</p>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=fab0a622e9" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
@@ -401,19 +452,19 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">Is this for you?</h2>
     <div class="audience-grid">
       <div class="audience-card good">
-        <h3>Who this is for</h3>
+        <h3>This is for you if</h3>
         <ul>
-          <li>Trades with leads coming in from calls, texts and forms</li>
-          <li>Owners who track jobs in their head, a notebook or a spreadsheet</li>
-          <li>Businesses with an office person or crew who need to see the same list</li>
+          <li>Your leads come in from calls, texts and forms</li>
+          <li>You track jobs in your head, a notebook or a spreadsheet</li>
+          <li>Your office person or crew needs to see the same list</li>
         </ul>
       </div>
       <div class="audience-card bad">
-        <h3>Who this is not for</h3>
+        <h3>This is not for you if</h3>
         <ul>
-          <li>Businesses happy with the field-service software they use (we tell you on the call)</li>
-          <li>Anyone who needs custom software built</li>
-          <li>Agencies or resellers</li>
+          <li>You're happy with the field-service software you use (we tell you on the call)</li>
+          <li>You need custom software built</li>
+          <li>You're an agency or reseller</li>
         </ul>
       </div>
     </div>

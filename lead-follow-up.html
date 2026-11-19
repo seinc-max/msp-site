@@ -284,7 +284,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=3f0eb7801b">
-<link rel="stylesheet" href="/assets/landing.css?v=52007349cf">
+<link rel="stylesheet" href="/assets/landing.css?v=c64340683b">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"For Trades & Contractors","item":"https://truelineit.com/for-home-services"},{"@type":"ListItem","position":3,"name":"Lead Follow-Up for Trades","item":"https://truelineit.com/lead-follow-up"}]}</script>
 </head>
@@ -336,6 +336,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <div class="hero-copy">
 <h1>We text and email new leads in minutes.</h1>
       <p class="hero-sub">Website, Google or Facebook leads get the first text and email. You take over when they answer.</p>
+      <p class="call-line">Turn the leads you already pay for into booked jobs.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <p class="hero-price-note"><strong>$199/mo</strong> +&nbsp;$299&nbsp;setup.</p>
       <div class="hero-assure">
@@ -386,8 +387,58 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p class="body-copy">A new lead that waits often books someone else.</p>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="lead-follow-up" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What are the leads that go cold worth?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-leads">New leads each month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-leads" data-k="leads" min="0" max="300" step="1" value="40" aria-valuetext="40">
+          <span class="tl-calc-box"><input type="number" data-k="leads" min="0" max="300" step="1" value="40" inputmode="decimal" aria-label="New leads each month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-cold">Leads that go cold before you reply</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-cold" data-k="cold" min="0" max="100" step="5" value="30" aria-valuetext="30%">
+          <span class="tl-calc-box"><input type="number" data-k="cold" min="0" max="100" step="5" value="30" inputmode="decimal" aria-label="Leads that go cold before you reply" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-book">Of those, how many would book with a fast reply</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-book" data-k="book" min="0" max="100" step="5" value="25" aria-valuetext="25%">
+          <span class="tl-calc-box"><input type="number" data-k="book" min="0" max="100" step="5" value="25" inputmode="decimal" aria-label="Of those, how many would book with a fast reply" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-job">Your average job value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-job" data-k="job" min="50" max="5000" step="25" value="500" aria-valuetext="$500">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="job" min="50" max="5000" step="25" value="500" inputmode="decimal" aria-label="Your average job value" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">About</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$1,500</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">is at stake.</p>
+      <p class="tl-calc-sub" data-out="sub">About 3 jobs a month, or $18,000 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Leads a month × % that go cold × % who would book × average job value</p>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=fab0a622e9" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
@@ -396,7 +447,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <div class="pain-grid">
       <div class="pain-card">
         <h3>The form sits in your inbox</h3>
-        <p>A new request comes in while you're on a roof or under a sink. You see it hours later.</p>
+        <p>A new request comes in while you're on a job or driving between jobs. You see it hours later.</p>
       </div>
       <div class="pain-card">
         <h3>You call back at night</h3>
@@ -429,19 +480,19 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">Is this for you?</h2>
     <div class="audience-grid">
       <div class="audience-card good">
-        <h3>Who this is for</h3>
+        <h3>This is for you if</h3>
         <ul>
-          <li>Plumbers, HVAC, electricians, roofers, cleaners and landscapers who get leads online</li>
-          <li>Owners who can't reply to every lead while they're on a job</li>
-          <li>Businesses that pay for ads or lead sites and want every lead answered</li>
+          <li>You're a plumber, HVAC tech, electrician, roofer, cleaner or landscaper who gets leads online</li>
+          <li>You can't reply to every lead while you're on a job</li>
+          <li>You pay for ads or lead sites and want every lead answered</li>
         </ul>
       </div>
       <div class="audience-card bad">
-        <h3>Who this is not for</h3>
+        <h3>This is not for you if</h3>
         <ul>
-          <li>Businesses that want to buy lists or message people who never contacted them</li>
-          <li>Agencies or resellers</li>
-          <li>Businesses whose field-service software already follows up (we tell you on the call)</li>
+          <li>You want to buy lists or message people who never contacted you</li>
+          <li>You're an agency or reseller</li>
+          <li>Your field-service software already follows up (we tell you on the call)</li>
         </ul>
       </div>
     </div>

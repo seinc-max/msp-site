@@ -330,6 +330,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <div class="hero-copy">
 <h1>We email businesses that could hire you.</h1>
       <p class="hero-sub">We pick the businesses, write in your name, and send. Replies come to you.</p>
+      <p class="call-line">Quote the property managers and builders you want to work for.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <p class="hero-price-note"><strong>$799/mo</strong> +&nbsp;$499&nbsp;setup.</p>
       <div class="hero-assure">
@@ -362,8 +363,51 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p class="body-copy">Word of mouth is slow. The bigger jobs often go to whoever asks.</p>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="cold-outreach" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What could one more commercial client be worth to you?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-clients">New commercial clients won</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-clients" data-k="clients" min="0" max="10" step="1" value="1" aria-valuetext="1">
+          <span class="tl-calc-box"><input type="number" data-k="clients" min="0" max="10" step="1" value="1" inputmode="decimal" aria-label="New commercial clients won"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-job">Your average commercial job value</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-job" data-k="job" min="500" max="100000" step="500" value="6000" aria-valuetext="$6000">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="job" min="500" max="100000" step="500" value="6000" inputmode="decimal" aria-label="Your average commercial job value" data-prefix="$"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-rep">Times a year a commercial client books you</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-rep" data-k="rep" min="1" max="12" step="1" value="2" aria-valuetext="2">
+          <span class="tl-calc-box"><input type="number" data-k="rep" min="1" max="12" step="1" value="2" inputmode="decimal" aria-label="Times a year a commercial client books you"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">About</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$12,000</span><span class="tl-calc-per">/year</span></p>
+      <p class="tl-calc-tail">is at stake.</p>
+      <p class="tl-calc-sub" data-out="sub">One client is worth about $6,000 per job, or $12,000 a year at 2 bookings.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> New commercial clients won × average commercial job value × times a year they book you</p>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=fab0a622e9" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
@@ -405,19 +449,19 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <h2 class="section-title">Is this for you?</h2>
     <div class="audience-grid">
       <div class="audience-card good">
-        <h3>Who this is for</h3>
+        <h3>This is for you if</h3>
         <ul>
-          <li>Trades that want work from property managers, builders, offices or stores</li>
-          <li>Owners who are good at the work but have no time to prospect</li>
-          <li>Businesses ready to quote and take on new commercial clients</li>
+          <li>You want work from property managers, builders, offices or stores</li>
+          <li>You're good at the work but have no time to prospect</li>
+          <li>You're ready to quote and take on new commercial clients</li>
         </ul>
       </div>
       <div class="audience-card bad">
-        <h3>Who this is not for</h3>
+        <h3>This is not for you if</h3>
         <ul>
-          <li>Anyone who wants to email homeowners or buy consumer lists</li>
-          <li>Businesses that want cold texts or robocalls</li>
-          <li>Agencies or resellers</li>
+          <li>You want to email homeowners or buy consumer lists</li>
+          <li>You want cold texts or robocalls</li>
+          <li>You're an agency or reseller</li>
         </ul>
       </div>
     </div>
