@@ -93,10 +93,11 @@ if (!read('templates/pages/for-home-services.html').includes(hubLine)) fail('hub
 
 const kept = [
   ['quote-follow-up-win-back.html', 'Texts go out from your separate text-back number.'],
-  ['website-chat-to-text.html', 'reply from your business number'],
-  ['website-chat-to-text.html', 'Chats arrive as texts on your business number.'],
-  ['website-chat-to-text.html', 'Every new chat arrives as a text on your business number.'],
-  ['text-to-pay.html', 'from your business number'],
+  // Ben 2026-11-19 t1213u: texts come from a separate number, never the client's own.
+  ['website-chat-to-text.html', 'You reply from a separate number.'],
+  ['website-chat-to-text.html', 'Chats arrive as texts on your phone.'],
+  ['website-chat-to-text.html', 'Every new chat arrives as a text on your phone.'],
+  ['text-to-pay.html', 'Text payment links from a separate number'],
   ['missed-call-text-back.html', 'get a text back in minutes — from a separate number'],
   ['missed-call-text-back.html', 'sent from a separate text-back number'],
 ];
