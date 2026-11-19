@@ -1321,3 +1321,71 @@ body.landing-hub .hub-v2 .tl-time {
     text-wrap: pretty;
   }
 }
+
+/* ---- Round 15 (2026-11-19): honesty polish ---- */
+
+/* 1. Two-check rows at 1280/1440 sit as a compact inline row under the CTA
+   (copy column), not a sparse centred band under the whole hero. The mock
+   column spans both rows so navy does not pool under the card. */
+@media (min-width: 1280px) {
+  body.landing-offer .hero .hero-grid[data-r6]:has(> .hero-trust > .trust-item:nth-child(2)):not(:has(> .hero-trust > .trust-item:nth-child(3))) > .hero-side {
+    grid-row: 1 / -1;
+  }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(2)):not(:has(> .trust-item:nth-child(3))) {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px 24px;
+    max-width: var(--tl-measure);
+    width: 100%;
+    margin: 0;
+    margin-inline: 0;
+    padding-top: 16px;
+    justify-self: start;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(2)):not(:has(> .trust-item:nth-child(3))) .trust-item {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+/* 2. Every message-mock payoff line is 18px: the status chip (already 18px)
+   and the inbound focus reply / owner-card SMS that is the payoff. */
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-in.tl-focus,
+body.landing-hub .hub-v2 .tl-bubble.tl-in.tl-focus,
+body.landing-offer .hero .hero-side > .tl-frame .tl-sms p,
+body.landing-hub .hub-v2 .tl-sms p {
+  font-size: 1.125rem !important;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* 3. "Hear the sample call" is a secondary (navy outline) control so the
+   orange Call button is the only solid orange CTA on the receptionist pages. */
+a.tl-listen {
+  background: #fff;
+  border: 2px solid #1a2744;
+  color: #1a2744;
+  box-shadow: none;
+  font-size: .9rem;
+  min-height: 44px;
+}
+a.tl-listen:hover, a.tl-listen:focus-visible {
+  background: #1a2744;
+  border-color: #1a2744;
+  color: #fff;
+}
+
+/* 4. Mock-kind label lives in the existing figcaption (16px floor). */
+.tl-sample-kind {
+  display: inline;
+  margin: 0;
+  font-size: 1em;
+  font-weight: 700;
+}
