@@ -105,37 +105,12 @@ function headerPartial(variant) {
   return raw.replace('{{cta}}', () => HEADER_CTAS[variant]);
 }
 
-const GATED_NAV = new Set([
-  'missed-call-text-back.html',
-  'ai-receptionist.html',
-  'ai-receptionist-for-salons.html',
-  'google-review-requests.html',
-  'google-review-requests-for-salons.html',
-  'quote-follow-up-win-back.html',
-  'website-chat-to-text.html',
-  'text-to-pay.html',
-  'contractor-websites.html',
-  'for-home-services.html',
-  'for-appointment-businesses.html',
-  'for-law-firms-accountants-and-advisors.html',
-  'ai-governance.html',
-  'fractional-ai-officer.html',
-  'ai-support-agent.html',
-  'lead-follow-up.html',
-  'appointment-reminders.html',
-  'cold-outreach.html',
-  'crm-setup.html',
-  'custom-dashboards.html',
-  'multi-location.html',
-  'ai-exposure-score.html',
-  'ai-automation-roi-guide.html',
-  'margin-leakage-calculator.html',
-  'about.html',
-]);
+// Every page keeps the full home menu (Ben 2026-11-19, t1206u: "Many pages are missing a menu").
+// The Nov 15 logo + CTA gating is retired. Keep this set empty; check-site-consistency.js fails the build otherwise.
+const GATED_NAV = new Set([]);
 
 function filterNav(header, rel) {
-  // Homepage, legal, 404, and blog keep the full Services menu.
-  // Other landing pages show logo + page CTA only (Ben 2026-11-15, over the Nov 11 full-menu rule).
+  // Retired 2026-11-19: no page is gated; every page keeps the full Services menu.
   if (!GATED_NAV.has(rel)) return header;
   header = header.replace('<nav class="tl-nav"', '<nav class="tl-nav tl-nav-gated"');
   const stripped = header.replace(/\n  <div class="nav-links">[\s\S]*?\n  <\/div>\n/, '\n');
