@@ -683,3 +683,16 @@ a.hero-proof-link { color: #fff; font-weight: 700; text-decoration: underline; t
   body.landing-home .hero .hero-inner.home-v2 { align-items: start; }
   body.landing-home .hero .home-pick { margin-top: 36px; }
 }
+
+/* ---- Round 4 (2026-11-19) ---- */
+body.landing-call .hero .hero-proof a.hero-proof-link { color: #fff; font-weight: 700; text-decoration: underline; text-decoration-color: #f97316; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+body.landing-form .hub-support-strip p a { color: #1a2744; font-weight: 700; text-decoration: underline; text-decoration-color: #f97316; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+body.landing-call .hero-process { margin-top: 12px; }
+.pro-steps-title { margin: 0 0 12px; font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: #fff; align-self: flex-start; }
+.pro-steps li { font-size: 1.05rem; }
+.tl-listen { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; font-size: .9rem; }
+@media (max-width: 767px) { .tl-listen { width: 100%; box-sizing: border-box; } }
+/* Phone order: try-it (live proof) right after the ask, then the mock, then the checks. */
+@media (max-width: 767px) {
+  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-try { order: 0; }
+}
