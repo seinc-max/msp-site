@@ -253,6 +253,16 @@ let calcCount = 0;
     const consult = /href="#discovery-form" class="btn-primary gov-form-cta tl-calc-cta"[^>]*>Book My AI Consultation</.test(m ? m[0] : "");
     if (/\blanding-call\b/.test(body) && !call) err(f, "call-only page calculator needs the Call (647) 360-5774 button");
     if (/\blanding-form\b/.test(body) && (!consult || !/id="discovery-form"/.test(html))) err(f, "form page calculator needs the Book My AI Consultation button to #discovery-form");
+    // 2026-11-19 section-2 polish: where the calculator's call button sits
+    // directly after section 2, section 2 must not also show a call button
+    // (hero, sticky and later CTAs stay).
+    if (/\blanding-call\b/.test(body) && call) {
+      const prevHtml = html.slice(0, at);
+      const prev = (prevHtml.match(/<section class="pain-section[^"]*"[\s\S]*?<\/section>/g) || []).pop() || "";
+      if (/href="tel:\+16473605774"[^>]*>Call \(647\) 360-5774/.test(prev)) {
+        err(f, "section 2 must not show a call button when the calculator's call button follows it");
+      }
+    }
     calcCount++;
   }
 }
