@@ -756,3 +756,9 @@ body.landing-offer .hero .hero-scope li { font-size: 1rem; }
   body.landing-offer .hero .hero-grid.fao-grid > .hero-scope-wrap { grid-column: 1; grid-row: 2; }
 }
 @media (max-width: 767px) { body.landing-offer .hero .fao-grid .hero-down-cue { display: none; } }
+
+/* ---- Round 8 (2026-11-19) ---- */
+body.landing-offer .hero { padding-bottom: 72px; }
+@media (max-width: 767px) { body.landing-offer .hero { padding-bottom: 60px; } }
+body.landing-offer .hero .hero-price-note .hero-price-sub { font-size: .9rem; color: var(--tl-ink-soft); }
+body.landing-form .hub-hero .hero-trust-line, body.landing-form .hub-hero .hero-price-line { max-width: var(--tl-measure); }
