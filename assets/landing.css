@@ -1159,3 +1159,165 @@ body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .prici
   body.landing-offer .hero .hero-down-cue { display: none; }
   .hub-hero-inner.pro-split .pro-split-side { margin-top: 8px; }
 }
+
+
+/* ---- Round 14 (2026-11-19): leftover polish all four reviewers agreed on ---- */
+
+/* 1. Desktop 1280/1440: short right-hand cards already sit on the copy
+   baseline (flex-end). Tighten the gap under that row so navy does not
+   pool between the card/CTA block and the checks. */
+@media (min-width: 1280px) {
+  body.landing-offer .hero .hero-grid[data-r6],
+  body.landing-offer .hero .hero-grid.hero-with-frame,
+  body.landing-offer .hero .hero-grid.pro-hero-grid {
+    align-items: stretch;
+    row-gap: 18px;
+  }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust {
+    padding-top: 14px;
+  }
+  body.landing-offer .hero .hero-grid > .hero-side,
+  body.landing-offer .hero .hero-grid.hero-with-frame > .hero-side,
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-side,
+  body.landing-offer .hero .hero-grid.pro-hero-grid > .hero-side {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  body.landing-hub .hub-hero .hub-hero-inner.hub-v2,
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split {
+    align-items: stretch;
+  }
+  body.landing-hub .hub-v2 > .hub-side,
+  body.landing-hub .hub-hero-inner.pro-split .pro-split-side {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+/* 2. Two-check pages: centred 2-column row at 1440, so the right slot
+   under the card is not left empty. */
+@media (min-width: 1280px) {
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(2)):not(:has(> .trust-item:nth-child(3))) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+    max-width: 580px;
+    width: 100%;
+    margin-inline: auto;
+    justify-self: center;
+    flex-direction: unset;
+  }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(2)):not(:has(> .trust-item:nth-child(3))) .trust-item {
+    flex: none;
+    min-width: 0;
+  }
+}
+
+/* 3. Payoff / outcome line is the largest element in every message mock.
+   Message text is second; times and labels are third. Status dot on chips. */
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip,
+body.landing-hub .hub-v2 .tl-chip {
+  display: block;
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 1.125rem !important;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a2744;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip::before,
+body.landing-hub .hub-v2 .tl-chip::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #1a2744;
+  vertical-align: middle;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip b,
+body.landing-hub .hub-v2 .tl-chip b {
+  font-size: 1em;
+  font-weight: 700;
+  color: #1a2744;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble {
+  font-size: .95rem;
+  font-weight: 400;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus {
+  font-size: 1rem;
+  font-weight: 600;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-sms p,
+body.landing-hub .hub-v2 .tl-sms p {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-sms .tl-sms-kicker,
+body.landing-hub .hub-v2 .tl-sms .tl-sms-kicker {
+  display: block;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #9a3412;
+  margin-bottom: 2px;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-time,
+body.landing-hub .hub-v2 .tl-time {
+  font-size: .7rem;
+  font-weight: 400;
+}
+.tl-board .tl-task { font-size: 1.125rem !important; font-weight: 700; }
+.tl-board .tl-task strong { font-size: 1em; }
+.tl-board .tl-total { font-size: .85rem; }
+.tl-board .tl-total strong { font-size: 1.25rem !important; font-weight: 700; }
+.tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.125rem !important; font-weight: 700; }
+.tl-board .tl-mail-meta, .tl-board .tl-col-h, .tl-board .tl-kpi span, .tl-board .tl-branch-h, .tl-board .tl-board-sub, .tl-board .tl-chart-h {
+  font-size: .75rem;
+  font-weight: 400;
+}
+.tl-board .tl-kpi strong { font-size: 1.05rem; }
+.tl-board .tl-kpi em { font-size: .8rem; }
+
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-side > .tl-frame .tl-chip,
+  body.landing-hub .hub-v2 .tl-chip {
+    font-size: 1.125rem !important;
+    padding: 5px 8px;
+  }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus {
+    font-size: 1rem !important;
+    font-weight: 600;
+  }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-sms p,
+  body.landing-hub .hub-v2 .tl-sms p {
+    font-size: 1rem !important;
+    font-weight: 600;
+  }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-pill { font-size: .9rem; padding: 3px 11px; }
+  .tl-board .tl-task { font-size: 1.125rem; }
+  .tl-board .tl-total strong { font-size: 1.25rem; }
+  .tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.125rem !important; font-weight: 700; }
+}
+
+/* 4. Stop H1s wrapping to 3 lines at 390. Wording-neutral: drop the 17ch
+   cap on phones, tighten tracking, slightly smaller size (still well
+   above the 16px floor). Home H1 is left alone (owner-approved). */
+@media (max-width: 767px) {
+  body.landing-offer .hero h1,
+  body.landing-hub .hub-hero h1 {
+    max-width: none;
+    letter-spacing: -.03em;
+    font-size: 1.5rem; /* 24px, --tl-text-2xl; still well above the 16px floor */
+    line-height: 1.2;
+    text-wrap: pretty;
+  }
+}
