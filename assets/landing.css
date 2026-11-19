@@ -886,3 +886,24 @@ body.landing-hub .hub-v2 > .hub-side { flex-direction: column; align-items: cent
   .hub-hero-inner.pro-split .pro-split-side { margin-top: 0; }
 }
 .tl-bubble.tl-out .tl-time .tl-who { color: #fff; } .tl-bubble.tl-in .tl-time .tl-who { color: #1a2744; }
+
+/* ---- Round 12 (2026-11-19): payoff chips, pills on own line, readable mock labels, quiet process line, law eyebrow ---- */
+.tl-chip b { color: #15803d; font-weight: 800; }
+.tl-bubble .tl-pill { display: table; margin: 6px 0 2px; }
+/* Process line: small and quiet under the Cancel line, same block everywhere. */
+body.landing-call .hero .hero-process { color: rgba(255,255,255,.62); font-weight: 400; margin-top: 4px; }
+@media (max-width: 767px) {
+  body.landing-call .hero .hero-process { margin-top: 2px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-time { font-size: .78rem; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-chip { font-size: .8125rem; }
+
+  .tl-board .tl-col-h, .tl-board .tl-kpi span, .tl-board .tl-mail-meta, .tl-board .tl-branch-h, .tl-board .tl-row span, .tl-board .tl-board-sub { font-size: .8125rem !important; }
+  .tl-board .tl-card { font-size: .8125rem; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-meta dt { font-size: .8125rem !important; }
+}
+.tl-board .tl-total + .tl-branches, .tl-board .tl-reply + .tl-mail { margin-top: 10px; }
+/* Law pages: one eyebrow style. */
+body.pro-cta-orange .pro-eyebrow, body.pro-cta-orange a.pro-eyebrow, body.pro-cta-orange .hub-hero .pro-eyebrow, body.pro-cta-orange .hero .pro-eyebrow { color: #cbd5e1 !important; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: .08em !important; text-transform: uppercase; margin: 0 0 12px; }
+.pro-split-side .pro-split-note { margin: 14px 0 0; color: rgba(255,255,255,.8); line-height: 1.5; }
+.pro-split-side .pro-split-note a { color: #fff; text-decoration: underline; }
+@media (max-width: 1023px) { .hub-hero-inner.pro-split .pro-split-side { margin-top: 14px; } }
