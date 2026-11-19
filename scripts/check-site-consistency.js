@@ -12,6 +12,7 @@
 //   banned hero lead-in (BANNED_HERO, e.g. "For trades.");
 // - has a repeated hero element that differs from the site majority:
 //   cancel line, price-line format, hero call button text;
+// - claims texts come from the client's own number (BANNED_SENDER);
 // - has a sample figcaption that is not italic or does not start "Just a sample";
 // - has a tel: link other than tel:+16473605774.
 //
@@ -33,6 +34,13 @@ const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach"
 const BANNED = [/per[\s\u00a0-]+location/i];
 // Ben 2026-11-19 t1208u: no "For trades." lead-in in the top hero.
 const BANNED_HERO = [/>\s*For trades(?: on the job)?[.,]/i];
+// Ben 2026-11-19 t1213u: texts come from a SEPARATE number, never the client's own.
+// Lines only about forwarding the client's calls are allowed (no text/reply/link/request wording).
+const BANNED_SENDER = [
+  /\b(?:from|on|via) your (?:business|own|existing) number\b/i,
+  /\b(?:texts?|texted|reply|replies|messages?|links?|requests?|chats?|invoices?)\b[^.<"]{0,60}\b(?:from|on|via) (?:your number|the number you already use)\b/i,
+  /\ball on the number you already use\b/i,
+];
 // Approved per-page differences in the price-line format. Keep this list short.
 // Each is an approved offer shape (Ben-approved prices), not a wording drift.
 const PRICE_FORMAT_EXCEPTIONS = {
@@ -85,6 +93,10 @@ const add = (g, key, f) => { (groups[g][key] = groups[g][key] || []).push(f); };
 for (const f of textFiles) {
   const raw = read(f);
   const text = raw.replace(/<[^>]+>/g, " ");
+  for (const re of BANNED_SENDER) {
+    const m = text.match(re);
+    if (m) err(f, "sender claim \"" + m[0] + "\" (texts come from a separate number)");
+  }
   for (const re of BANNED) {
     const m = text.match(re) || raw.match(re);
     if (m) err(f, "banned phrase \"" + m[0] + "\"");
