@@ -657,3 +657,29 @@ body.landing-form.landing-offer .hero .hero-copy .hero-eyebrow { margin-bottom: 
 body.landing-form.landing-offer .hero .hero-side > .pricing-card { width: 100%; margin: 0; box-sizing: border-box; text-align: left; }
 body.landing-call .hero .hero-assure .hero-guarantee { width: auto; flex: 0 0 auto; white-space: nowrap; }
 body.landing-call .hero .hero-assure .hero-cancel { flex: 1 1 250px; min-width: 0; }
+@media (max-width: 767px) { body.landing-call .hero .hero-assure .hero-guarantee { white-space: normal; flex: 0 1 auto; max-width: 100%; } }
+
+/* ---- Round 3 (2026-11-19) ---- */
+/* Phone: show the proof (mock) right after the ask, then the checks. */
+@media (max-width: 767px) {
+  body.landing-call.landing-offer .hero .hero-grid { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+  body.landing-call.landing-offer .hero .hero-grid > .hero-side { align-self: center; }
+  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > a.hero-call, body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-trust, body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-try { align-self: stretch; }
+  body.landing-call.landing-offer .hero .hero-grid > .hero-copy { display: contents; }
+  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > * { order: 0; }
+  body.landing-call.landing-offer .hero .hero-grid > .hero-side { order: 1; margin-top: 28px; }
+  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-trust,
+  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-try,
+  body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-proof { order: 2; }
+}
+/* Cited proof: its own line, readable size. */
+body.landing-call .hero .hero-proof { margin-top: 18px; font-size: .95rem; }
+.hero-proof-label { font-weight: 700; color: #fff; }
+a.hero-proof-link { color: #fff; font-weight: 700; text-decoration: underline; text-decoration-color: #f97316; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* Home picker: bigger targets on desktop. */
+@media (min-width: 900px) {
+  body.landing-home .hero .home-pick .front-jump-btn { font-size: 1.05rem; min-height: 58px; }
+  body.landing-home .hero .home-pick .home-pick-title { font-size: 1.15rem; }
+  body.landing-home .hero .hero-inner.home-v2 { align-items: start; }
+  body.landing-home .hero .home-pick { margin-top: 36px; }
+}
