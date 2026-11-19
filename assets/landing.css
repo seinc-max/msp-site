@@ -696,3 +696,8 @@ body.landing-call .hero-process { margin-top: 12px; }
 @media (max-width: 767px) {
   body.landing-call.landing-offer .hero .hero-grid > .hero-copy > .hero-try { order: 0; }
 }
+
+/* ---- Round 5 (2026-11-19): fewer 4-line desktop headlines ---- */
+@media (min-width: 1024px) {
+  body.landing-offer .hero h1 { max-width: 20ch; }
+}
