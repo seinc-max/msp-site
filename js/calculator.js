@@ -55,28 +55,24 @@
       formula: 'Missed booking calls a week × % who would have booked × average visit value × 4.3 weeks'
     },
     'google-review-requests': {
-      title: 'What could more Google reviews be worth to you?',
+      title: 'What one more booked job could be worth to you?',
       inputs: [
-        { k: 'done', label: 'Jobs you finish each month', min: 0, max: 200, step: 1, v: 30, u: 'n' },
-        { k: 'unasked', label: 'Jobs where you don\u2019t ask for a review', min: 0, max: 100, step: 5, v: 70, u: 'pct' },
-        { k: 'extra', label: 'Extra jobs a month you think more reviews would win you', min: 0, max: 10, step: 1, v: 1, u: 'n' },
+        { k: 'extra', label: 'Extra booked jobs a month', min: 0, max: 10, step: 1, v: 1, u: 'n' },
         { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 350, u: 'money' }
       ],
-      f: function (v) { var m = v.extra * v.job; return { main: m, t: { unasked: count(v.done * pct(v.unasked)) } }; },
-      sub: 'That\u2019s {year} a year. You finish about {unasked} {unasked|job|jobs} a month without asking for a review.',
-      formula: 'Extra jobs a month × average job value'
+      f: function (v) { return { main: v.extra * v.job, t: {} }; },
+      sub: 'That\u2019s {year} a year.',
+      formula: 'Extra booked jobs a month × average job value'
     },
     'google-review-requests-for-salons': {
-      title: 'What could more Google reviews be worth to you?',
+      title: 'What more booked clients could be worth to you?',
       inputs: [
-        { k: 'done', label: 'Visits you finish each month', min: 0, max: 1000, step: 10, v: 200, u: 'n' },
-        { k: 'unasked', label: 'Visits where you don\u2019t ask for a review', min: 0, max: 100, step: 5, v: 80, u: 'pct' },
-        { k: 'extra', label: 'Extra new clients a month you think more reviews would win you', min: 0, max: 20, step: 1, v: 2, u: 'n' },
+        { k: 'extra', label: 'Extra booked clients a month', min: 0, max: 20, step: 1, v: 2, u: 'n' },
         { k: 'visit', label: 'Your average visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
       ],
-      f: function (v) { var m = v.extra * v.visit; return { main: m, t: { unasked: count(v.done * pct(v.unasked)) } }; },
-      sub: 'That\u2019s {year} a year. You finish about {unasked} {unasked|visit|visits} a month without asking for a review.',
-      formula: 'Extra new clients a month × average visit value'
+      f: function (v) { return { main: v.extra * v.visit, t: {} }; },
+      sub: 'That\u2019s {year} a year.',
+      formula: 'Extra booked clients a month × average visit value'
     },
     'quote-follow-up-win-back': {
       title: 'What are your quiet quotes worth?',
@@ -104,9 +100,9 @@
     },
     'text-to-pay': {
       title: 'How much of your money is waiting on unpaid invoices?',
-      lead: 'You could have',
+      lead: 'About',
       per: '',
-      tail: 'waiting to be paid at any time.',
+      tail: 'is tied up while you wait to get paid.',
       inputs: [
         { k: 'inv', label: 'Invoices you send each month', min: 0, max: 200, step: 1, v: 40, u: 'n' },
         { k: 'amt', label: 'Your average invoice', min: 50, max: 10000, step: 50, v: 600, u: 'money' },
@@ -117,7 +113,7 @@
       formula: 'Invoices a month × average invoice × days until you get paid ÷ 30 days'
     },
     'contractor-websites': {
-      title: 'What are the calls your website should bring worth?',
+      title: 'What are the calls your website is missing worth?',
       inputs: [
         { k: 'visits', label: 'People who visit your site each month', min: 0, max: 5000, step: 50, v: 300, u: 'n' },
         { k: 'call', label: 'Visitors who would call you', min: 0, max: 20, step: 1, v: 5, u: 'pct' },
@@ -153,14 +149,17 @@
     },
     'cold-outreach': {
       title: 'What could one more commercial client be worth to you?',
+      lead: 'About',
+      per: '/year',
+      tail: 'is at stake.',
       inputs: [
-        { k: 'jobs', label: 'New commercial jobs a month you could win', min: 0, max: 10, step: 1, v: 1, u: 'n' },
+        { k: 'clients', label: 'New commercial clients won', min: 0, max: 10, step: 1, v: 1, u: 'n' },
         { k: 'job', label: 'Your average commercial job value', min: 500, max: 100000, step: 500, v: 6000, u: 'money' },
         { k: 'rep', label: 'Times a year a commercial client books you', min: 1, max: 12, step: 1, v: 2, u: 'n' }
       ],
-      f: function (v) { var m = v.jobs * v.job; return { main: m, t: { rep: count(v.rep), year: money(m * v.rep) } }; },
-      sub: 'If each client books you {rep} {rep|time|times} a year, one month of new clients is worth {year} a year.',
-      formula: 'New commercial jobs a month × average commercial job value'
+      f: function (v) { var year = v.clients * v.job * v.rep; return { main: year, t: { one: money(v.job), rep: count(v.rep), year: money(year), clientYear: money(v.job * v.rep) } }; },
+      sub: 'One client is worth about {one} per job, or {clientYear} a year at {rep} {rep|booking|bookings}.',
+      formula: 'New commercial clients won × average commercial job value × times a year they book you'
     },
     'crm-setup': {
       title: 'What do slipped quotes and lost time cost you?',
@@ -188,6 +187,7 @@
     },
     'multi-location': {
       title: 'What are missed calls across your locations worth?',
+      note: 'An estimate from your numbers only. It shows the value at stake, not what we will recover. Multi-location sets up and reports on your services. It does not answer calls on its own. Nothing you enter is sent.',
       inputs: [
         { k: 'locs', label: 'Locations', min: 2, max: 20, step: 1, v: 3, u: 'n' },
         { k: 'calls', label: 'Missed calls a week at each location', min: 0, max: 30, step: 1, v: 4, u: 'n' },
