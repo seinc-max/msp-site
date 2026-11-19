@@ -136,17 +136,14 @@ a.hub-card:hover{border-color:#f97316;}
   <section class="hub-hero">
     <div class="hub-hero-inner hero-with-frame hub-v2">
       <div class="hub-copy">
-      <p class="hub-eyebrow">For Trades & Contractors</p>
-      <p class="hero-rotation" id="hero-rotation" data-set="A" aria-live="polite">plumbers · house cleaners · HVAC · landscapers · roofers · movers</p>
-      <h1>Your crew's on the job. Your phone still books the next one.</h1>
-      <p class="subhead">Callers won't wait. They still call your usual number. When you can't pick up, they get a text, or an AI receptionist answers and texts you the job.</p>
+<h1>Can't pick up? They still get a reply.</h1>
+      <p class="subhead">For trades. Missed calls get a text, or an AI receptionist answers.</p>
       <a class="hub-cta" href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <div class="hero-assure">
         <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
         <p class="hero-cancel">Cancel anytime. No contracts, no cancellation&nbsp;fees.</p>
       </div>
-      <p class="hero-try">Try it: call, hang up, get our text.</p>
-      <div class="hero-down-cue" aria-hidden="true"></div>
+<div class="hero-down-cue" aria-hidden="true"></div>
       </div>
       <div class="hub-side">
       <figure class="tl-frame">
@@ -172,8 +169,7 @@ a.hub-card:hover{border-color:#f97316;}
       </figure>
       
         <!-- seasonal: remove by 2027-04-01 -->
-        <p class="hero-proof">Missed calls spike with the first cold snap and after a storm (Invoca, 2026).</p>
-        <p class="not-you">Run a salon or clinic? <a href="/for-appointment-businesses">For Salons &amp; Clinics</a></p>
+<p class="not-you">Run a salon or clinic? <a href="/for-appointment-businesses">For Salons &amp; Clinics</a></p>
       </div>
     </div>
   </section>
@@ -378,35 +374,7 @@ a.hub-card:hover{border-color:#f97316;}
     <p class="footer-copy">© 2026 Trueline IT. All rights reserved.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var rotationSets = {
-    A: ["plumbers", "house cleaners", "HVAC", "landscapers", "roofers", "movers"],
-    B: ["electricians", "pest control", "junk removal", "painters", "snow removal", "window cleaners"],
-    C: ["general contractors", "pool service", "septic service", "plumbers", "movers", "HVAC"]
-  };
-  var order = ["A", "B", "C"];
-  var line = document.getElementById("hero-rotation");
-  var chips = document.getElementById("hero-chips");
-  var index = 0;
-  function paint(key) {
-    var set = rotationSets[key];
-    line.textContent = set.join(" · ");
-    line.setAttribute("data-set", key);
-    if (chips) chips.replaceChildren.apply(chips, set.map(function (name) {
-      var li = document.createElement("li");
-      li.textContent = name;
-      return li;
-    }));
-  }
-  paint("A");
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  window.setInterval(function () {
-    index = (index + 1) % order.length;
-    paint(order[index]);
-  }, 5000);
-})();
-</script>
+
     <script>
       // Capture GCLID from the URL parameters for Server-Side Offline Conversions
       const urlParamsAuth = new URLSearchParams(window.location.search);

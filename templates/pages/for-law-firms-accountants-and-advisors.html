@@ -166,10 +166,8 @@ body{margin:0;font-family:'DM Sans',sans-serif;color:#1a2744;background:#fafaf8;
 <main id="main" tabindex="-1">
   <section class="hub-hero">
     <div class="hub-hero-inner pro-split"><div class="pro-split-copy">
-      <p class="hub-eyebrow pro-eyebrow">For law firms, accountants and advisors</p>
-      <p class="hero-rotation" id="hero-rotation" data-set="A" aria-live="polite">law firms · accountants · financial advisors · insurance agencies · bookkeepers · tax practices</p>
-      <h1>Your staff use AI. We set the rules that protect client files.</h1>
-      <p class="subhead">We assess your firm's AI use, then write the rules, train your staff and monitor AI use.</p>
+<h1>Your staff use AI. We set the rules.</h1>
+      <p class="subhead">We write rules, train staff and monitor AI use.</p>
       <div class="hero-cta-panel">
       <a class="hub-cta" href="#discovery-form" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a>
 <div class="hero-down-cue" aria-hidden="true"></div>
@@ -360,34 +358,6 @@ body{margin:0;font-family:'DM Sans',sans-serif;color:#1a2744;background:#fafaf8;
   <p class="footer-address">1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
   <p class="footer-copy">© 2026 Trueline IT. All rights reserved.</p>
 </footer>
-<script>
-(function () {
-  var rotationSets = {
-    A: ["law firms", "accountants", "financial advisors", "insurance agencies", "bookkeepers", "tax practices"],
-    B: ["wealth managers", "consulting firms", "architecture firms", "engineering firms", "marketing agencies", "property managers"],
-    C: ["IT providers", "HR consultants", "law firms", "accountants", "financial advisors"]
-  };
-  var order = ["A", "B", "C"];
-  var line = document.getElementById("hero-rotation");
-  var chips = document.getElementById("hero-chips");
-  var index = 0;
-  function paint(key) {
-    var set = rotationSets[key];
-    line.textContent = set.join(" · ");
-    line.setAttribute("data-set", key);
-    if (chips) chips.replaceChildren.apply(chips, set.map(function (name) {
-      var li = document.createElement("li");
-      li.textContent = name;
-      return li;
-    }));
-  }
-  paint("A");
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  window.setInterval(function () {
-    index = (index + 1) % order.length;
-    paint(order[index]);
-  }, 5000);
-})();
-</script>
+
 </body>
 </html>

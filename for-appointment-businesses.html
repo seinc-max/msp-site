@@ -135,10 +135,8 @@ a.hub-card:hover{border-color:#f97316;}
   <section class="hub-hero">
     <div class="hub-hero-inner hero-with-frame hub-v2">
       <div class="hub-copy">
-      <p class="hub-eyebrow">For Salons & Clinics</p>
-      <p class="hero-rotation" id="hero-rotation" data-set="A" aria-live="polite">salons · barbers · pet groomers · dental offices · auto detailers</p>
-      <h1>Your hands are busy. We answer the calls you can't.</h1>
-      <p class="subhead">An AI receptionist takes the booking request and texts you. You confirm the time.</p>
+<h1>You take the client. We take the call.</h1>
+      <p class="subhead">For salons and clinics. An AI receptionist takes the request. You confirm.</p>
       <a class="hub-cta" href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
       <div class="hero-assure">
         <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
@@ -353,35 +351,7 @@ a.hub-card:hover{border-color:#f97316;}
     <p class="footer-copy">© 2026 Trueline IT. All rights reserved.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var rotationSets = {
-    A: ["salons", "barbers", "pet groomers", "dental offices", "auto detailers"],
-    B: ["physio clinics", "tattoo shops", "barbers", "massage therapy clinics", "day spas", "pet groomers"],
-    C: ["chiropractors", "auto detailers", "salons", "yoga studios", "day spas"]
-  };
-  var order = ["A", "B", "C"];
-  var line = document.getElementById("hero-rotation");
-  var chips = document.getElementById("hero-chips");
-  var index = 0;
-  function paint(key) {
-    var set = rotationSets[key];
-    line.textContent = set.join(" · ");
-    line.setAttribute("data-set", key);
-    if (chips) chips.replaceChildren.apply(chips, set.map(function (name) {
-      var li = document.createElement("li");
-      li.textContent = name;
-      return li;
-    }));
-  }
-  paint("A");
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  window.setInterval(function () {
-    index = (index + 1) % order.length;
-    paint(order[index]);
-  }, 5000);
-})();
-</script>
+
     <script>
       // Capture GCLID from the URL parameters for Server-Side Offline Conversions
       const urlParamsAuth = new URLSearchParams(window.location.search);
