@@ -805,7 +805,7 @@ body.landing-form.landing-offer .hero .hero-price-note { margin-top: 12px; }
 /* Phones: first mock bubble on the first screen. */
 @media (max-width: 767px) {
   body.landing-call .hero .hero-kicker, body.landing-call .hub-hero .hero-kicker { margin-bottom: 8px; }
-  body.landing-offer .hero .hero-copy > .hero-sub { font-size: .97rem; line-height: 1.5; margin-top: 10px; }
+  body.landing-offer .hero .hero-copy > .hero-sub { font-size: 1rem; line-height: 1.5; margin-top: 10px; }
   body.landing-offer .hero a.hero-call { min-height: 54px; margin-top: 16px; }
   body.landing-offer .hero .hero-price-note { margin-top: 8px; font-size: .875rem; }
   body.landing-offer .hero .hero-price-note strong { font-size: 1rem; }
