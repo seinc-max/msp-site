@@ -907,3 +907,255 @@ body.pro-cta-orange .pro-eyebrow, body.pro-cta-orange a.pro-eyebrow, body.pro-ct
 .pro-split-side .pro-split-note { margin: 14px 0 0; color: rgba(255,255,255,.8); line-height: 1.5; }
 .pro-split-side .pro-split-note a { color: #fff; text-decoration: underline; }
 @media (max-width: 1023px) { .hub-hero-inner.pro-split .pro-split-side { margin-top: 14px; } }
+
+/* ---- Round 13 (2026-11-19): balance short right columns, larger mock focals, quieter CTA competition, law-page polish ---- */
+
+/* 1. Desktop: stretch the two hero columns. Short right-hand cards sit at the
+   bottom of the copy stack (level with the CTA block), so navy does not pool
+   under them. Tall mocks keep their natural height and stay top-aligned. */
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame,
+  body.landing-offer .hero .hero-grid[data-r6],
+  body.landing-offer .hero .hero-grid.pro-hero-grid,
+  body.landing-hub .hub-hero .hub-hero-inner.hub-v2,
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split {
+    align-items: stretch;
+  }
+  body.landing-offer .hero .hero-grid > .hero-side,
+  body.landing-offer .hero .hero-grid.hero-with-frame > .hero-side,
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-side,
+  body.landing-offer .hero .hero-grid.pro-hero-grid > .hero-side {
+    align-self: stretch;
+    justify-content: flex-end;
+    max-width: 100%;
+  }
+  body.landing-hub .hub-v2 > .hub-side,
+  body.landing-hub .hub-hero-inner.pro-split .pro-split-side {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 0;
+    max-width: 100%;
+  }
+  /* FAO: keep the retainer card in the copy row, level with the CTA, not
+     stretched down beside the scope bullets. */
+  body.landing-offer .hero .hero-grid.fao-grid > .hero-side {
+    grid-row: 1;
+    align-self: stretch;
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+}
+
+/* 2. Mocks about 15–20% larger on desktop. At 768 the column stays modest so
+   the headline is not squeezed. At 390 the frame is already full-width; the
+   size gain is in the focal type below. */
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 330px);
+  }
+  body.landing-hub .hub-hero-inner.hub-v2 {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 330px);
+  }
+  body.landing-offer .hero .hero-side > .tl-frame,
+  body.landing-offer .hero .hero-side > .tl-board,
+  body.landing-hub .hub-v2 .hub-side > .tl-frame,
+  body.landing-hub .hub-hero-inner.hub-v2 > .hub-side > .tl-frame {
+    max-width: 330px;
+  }
+}
+@media (min-width: 1024px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame {
+    grid-template-columns: minmax(0, 1fr) 420px;
+    column-gap: 56px;
+  }
+  body.landing-hub .hub-hero-inner.hub-v2,
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split {
+    grid-template-columns: minmax(0, 1fr) 420px;
+    column-gap: 56px;
+  }
+  body.landing-offer .hero .hero-side > .tl-frame,
+  body.landing-offer .hero .hero-side > .tl-board,
+  body.landing-hub .hub-v2 .hub-side > .tl-frame,
+  body.landing-hub .hub-hero-inner.hub-v2 > .hub-side > .tl-frame {
+    max-width: 420px;
+  }
+}
+
+/* Hierarchy inside each mock: outcome largest, message/data second, context third. */
+/* Chips are <p>, so the 16px floor applies. Keep padding tight so
+   they stay one line at 360px; emphasise the outcome with <b> only. */
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip,
+body.landing-hub .hub-v2 .tl-chip {
+  padding: 4px 10px;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip b,
+body.landing-hub .hub-v2 .tl-chip b {
+  font-size: 1.05em;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble {
+  font-size: .95rem;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-pill {
+  font-size: .9rem;
+  padding: 3px 11px;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-time,
+body.landing-hub .hub-v2 .tl-time {
+  font-size: .7rem;
+}
+.tl-board .tl-task { font-size: 1.12rem; }
+.tl-board .tl-kpi em { font-size: 1.35em; }
+.tl-board .tl-total strong { font-size: 1.45rem; }
+.tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.02rem; font-weight: 600; }
+.tl-board .tl-col-h, .tl-board .tl-kpi span, .tl-board .tl-mail-meta, .tl-board .tl-branch-h, .tl-board .tl-board-sub { font-size: .8rem; color: #475569; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-site-call { font-size: 1.05em; padding: 10px 16px; }
+
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-side > .tl-frame .tl-chip,
+  body.landing-hub .hub-v2 .tl-chip { padding: 4px 8px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-chip b,
+  body.landing-hub .hub-v2 .tl-chip b { font-size: 1.08em; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus { font-size: 1.18rem; font-weight: 600; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-pill { font-size: 1.05rem; padding: 4px 13px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-sms p { font-size: 1.26rem !important; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-site-call { font-size: 1.28em; padding: 11px 16px; }
+  .tl-board .tl-task { font-size: 1.32rem; }
+  .tl-board .tl-kpi em { font-size: 1.4em; }
+  .tl-board .tl-total strong { font-size: 1.6rem; }
+  .tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.26rem !important; font-weight: 600; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-time { font-size: .75rem; }
+}
+
+/* 3. Solid orange stays on the CTA. Owner-summary boxes in the mocks use a
+   warm tint so they do not compete with the call button. */
+body.landing-offer .tl-sms,
+body.landing-hub .tl-sms,
+body.landing-offer .hero .hero-side .tl-sms,
+body.landing-hub .hub-v2 .tl-sms {
+  background: #fff7ed;
+  color: #1a2744;
+  border-left: 4px solid #f97316;
+}
+
+/* 4. Process and Cancel lines stay at 16px (site minimum) but read quieter.
+   More space above the guarantee pill. */
+body.landing-call .hero .hero-process,
+body.landing-call .hub-hero .hero-process {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.55);
+  margin-top: 8px;
+}
+body.landing-call .hero .hero-assure .hero-cancel,
+body.landing-call .hub-hero .hero-assure .hero-cancel {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.55);
+}
+body.landing-call .hero .hero-assure,
+body.landing-call .hero .hero-price-note + .hero-assure,
+body.landing-call .hub-hero .hero-assure {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  body.landing-call .hero .hero-assure,
+  body.landing-call .hero .hero-price-note + .hero-assure,
+  body.landing-call .hub-hero .hero-assure { margin-top: 12px; }
+  body.landing-call .hero .hero-process,
+  body.landing-call .hub-hero .hero-process { margin-top: 4px; }
+}
+
+/* 5. Law and professional pages: one dark right-hand card, shorter phone hero.
+   The governance price is not added to the hero (Ben item 41). */
+.pro-card {
+  background: #223152;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px;
+  padding: 22px 22px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 24px 50px rgba(0,0,0,.28);
+}
+.pro-card .pro-steps {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.pro-card .pro-steps-title { margin: 0 0 14px; }
+.pro-card .pro-qa {
+  margin: 0;
+  box-shadow: none;
+}
+.pro-card .pro-split-note { margin: 14px 0 0; }
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card {
+  background: #223152;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.1);
+  text-align: left;
+}
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-step {
+  color: rgba(255,255,255,.9);
+  border-bottom-color: rgba(255,255,255,.16);
+}
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-amount,
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-amount-big {
+  color: #fff;
+}
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-desc {
+  color: rgba(255,255,255,.8);
+}
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-badge {
+  background: rgba(255,255,255,.1);
+  color: #fff;
+}
+
+/* Law eyebrow: sentence case and tighter tracking on phones so it stays one line at 16px. */
+@media (max-width: 767px) {
+  body.pro-cta-orange .pro-eyebrow,
+  body.pro-cta-orange a.pro-eyebrow,
+  body.pro-cta-orange .hub-hero .pro-eyebrow,
+  body.pro-cta-orange .hero .pro-eyebrow {
+    text-transform: none;
+    letter-spacing: .02em !important;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+}
+
+/* Shorter mobile heroes on hubs and professional pages.
+   Offer pages set padding-top:20px !important under 430px in their
+   page style blocks; override that so the first mock message stays
+   on the first 390px screen. */
+@media (max-width: 767px) {
+  body.landing-call.landing-offer .hero,
+  body.landing-form.landing-offer .hero {
+    padding: 10px 20px 28px;
+    padding-top: 10px !important;
+  }
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame { gap: 10px; }
+  body.landing-call .hero .hero-try { margin-top: 8px; }
+  body.landing-hub .hub-hero { padding: 16px 20px 28px; }
+  body.landing-hub .hub-hero .hub-hero-inner.hub-v2,
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split { row-gap: 12px; gap: 12px; }
+  body.landing-hub .hub-v2 .hero-rotation { margin: 0 0 8px; }
+  body.landing-hub .hub-v2 .subhead { margin-top: 10px; }
+  body.landing-hub .hub-v2 a.hub-cta,
+  body.landing-form .hub-hero .hero-cta-panel a.hub-cta { margin-top: 16px; }
+  body.landing-form .hub-hero .hero-price-line { margin-top: 10px; }
+  body.landing-form .hub-hero .hero-trust-line { margin-top: 4px; }
+  body.landing-offer .hero { padding: 16px 20px 32px; }
+  body.landing-hub .hub-hero .hero-down-cue,
+  body.landing-offer .hero .hero-down-cue { display: none; }
+  .hub-hero-inner.pro-split .pro-split-side { margin-top: 8px; }
+}
