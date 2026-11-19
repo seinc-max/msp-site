@@ -62,6 +62,12 @@ const LANDING = new Set([
   'ai-governance.html',
   'fractional-ai-officer.html',
   'ai-support-agent.html',
+  'lead-follow-up.html',
+  'appointment-reminders.html',
+  'cold-outreach.html',
+  'crm-setup.html',
+  'custom-dashboards.html',
+  'multi-location.html',
 ]);
 const INFO = new Set(['about.html', 'terms.html', 'privacy.html']);
 const PAGE = new Set([
@@ -115,6 +121,12 @@ const GATED_NAV = new Set([
   'ai-governance.html',
   'fractional-ai-officer.html',
   'ai-support-agent.html',
+  'lead-follow-up.html',
+  'appointment-reminders.html',
+  'cold-outreach.html',
+  'crm-setup.html',
+  'custom-dashboards.html',
+  'multi-location.html',
   'ai-exposure-score.html',
   'ai-automation-roi-guide.html',
   'margin-leakage-calculator.html',
