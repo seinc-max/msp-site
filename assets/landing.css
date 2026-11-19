@@ -76,30 +76,31 @@ body.landing-form .hub-hero h1 {
 /* Call action. Color stays with site.css. Radius is the existing 10px token. */
 body.landing-call .hero a.hero-call,
 body.landing-call .hero .hero-actions .btn-primary,
-body.landing-call .hub-hero a.hub-cta[href^="tel:"] {
+body.landing-call .hub-hero a.hub-cta[href^="tel:"],
+body.landing-form .hero .hero-actions .btn-primary,
+body.landing-form .hero .hero-copy > a.btn-primary,
+body.landing-form .hero .hero-cta-panel a.btn-primary,
+body.landing-form .hero .hero-cta-panel a.hub-cta,
+body.landing-form .hub-hero a.hub-cta,
+body.landing-form .hub-hero .hero-cta-panel a.hub-cta {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 640px;
-  min-height: 57px;
+  min-height: 72px;
   height: auto;
-  margin-top: 8px;
+  margin-top: 24px;
   margin-bottom: 16px;
-  padding: 0 24px;
+  padding: 16px 28px;
   box-sizing: border-box;
   border-radius: 10px;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.25;
   text-align: center;
   text-wrap: balance;
   text-decoration: none;
-}
-
-body.landing-call .hero a.hero-call,
-body.landing-call .hero .hero-actions .btn-primary {
-  height: 57px;
 }
 
 body.landing-call .hero a.hero-call + .hero-guarantee {
@@ -108,8 +109,7 @@ body.landing-call .hero a.hero-call + .hero-guarantee {
 }
 
 /* Form action. Same size, not a call button. */
-body.landing-form .form-card .btn-submit,
-body.landing-form .hub-hero a.hub-cta {
+body.landing-form .form-card .btn-submit {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,4 +182,1210 @@ body.landing-form .gov-top-copy .section-inner p {
 }
 body.landing-form .gov-top-copy .section-inner p:last-child {
   margin-bottom: 0;
+}
+
+
+/* Repeated mid-page CTAs (Gardner 2026-11-15). */
+body.landing-call .section-action,
+body.landing-form .section-action {
+  margin-top: 28px;
+  text-align: center;
+}
+
+/* Down-chevron under the hero CTA, pointing to the next section.
+   Explicit light grey on navy heroes so the glyph is not navy-on-navy. */
+.hero-down-cue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  height: 28px;
+  margin: 12px auto 8px;
+  pointer-events: none;
+  opacity: 1;
+  color: #42506e; /* grey on light sections (margin leakage) */
+}
+.hero .hero-down-cue,
+.hub-hero .hero-down-cue,
+.info-hero .hero-down-cue {
+  color: #e2e8f0; /* light grey on navy heroes; navy-on-navy was invisible */
+}
+.hero-down-cue::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border-right: 3.5px solid currentColor;
+  border-bottom: 3.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+/* =====================================================================
+   Top-half system v2 (2026-11-18). Shared by every landing hero.
+   Anatomy (call pages): kicker, H1, one sub, call button, assurance row
+   (guarantee pill + cancel line), small set-up line, three checks,
+   try-it line, optional cited proof. Visual on the right, centred
+   against the copy, so no column leaves dead space.
+   Rhythm: 8px grid. 14 / 18 / 28 / 32 between blocks.
+   ===================================================================== */
+body.landing-call,
+body.landing-form {
+  --tl-navy: #1a2744;
+  --tl-orange: #f97316;
+  --tl-ink-soft: rgba(255,255,255,.84);
+  --tl-ink-muted: rgba(255,255,255,.72);
+  --tl-hairline: rgba(255,255,255,.14);
+  --tl-measure: 36rem;
+}
+
+/* Section frame */
+body.landing-offer .hero {
+  padding: 64px 24px 80px;
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero { padding: 24px 20px 48px; }
+}
+
+/* Two columns from 768px up; visual centred against the copy. */
+body.landing-offer .hero .hero-grid,
+body.landing-offer .hero .hero-grid.hero-with-frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  max-width: var(--landing-column);
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame {
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 300px);
+    column-gap: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    column-gap: 64px;
+  }
+}
+body.landing-offer .hero .hero-grid > .hero-copy { grid-column: 1; grid-row: 1; max-width: 620px; min-width: 0; }
+body.landing-offer .hero .hero-grid > .hero-side {
+  grid-column: 1; grid-row: auto;
+  display: flex; flex-direction: column; align-items: center; justify-self: center;
+  width: 100%; max-width: 360px; margin: 0; gap: 0; align-self: center;
+}
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid > .hero-side { grid-column: 2; grid-row: 1; justify-self: end; }
+}
+
+/* Kicker: product + audience, the 5-second "what is this" answer. */
+body.landing-call .hero .hero-kicker,
+body.landing-call .hub-hero .hero-kicker {
+  display: inline-block;
+  margin: 0 0 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--tl-orange);
+}
+
+/* Headline: one idea, balanced lines. */
+body.landing-offer .hero h1 {
+  margin: 0;
+  max-width: 17ch;
+  text-wrap: balance;
+  letter-spacing: -.01em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body.landing-offer .hero h1 { font-size: 2.15rem; }
+}
+
+/* One supporting line. */
+body.landing-offer .hero .hero-copy > .hero-sub {
+  margin: 18px 0 0;
+  max-width: var(--tl-measure);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--tl-ink-soft);
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-copy > .hero-sub { font-size: 1.05rem; line-height: 1.55; margin-top: 14px; }
+}
+
+/* Call button: same width as the text measure, never wider. */
+body.landing-offer .hero a.hero-call {
+  max-width: 440px;
+  min-height: 64px;
+  margin: 28px 0 0;
+  box-shadow: 0 10px 24px rgba(249,115,22,.28);
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero a.hero-call { max-width: none; margin-top: 22px; }
+}
+
+/* Risk reversal sits on the button it supports. */
+body.landing-call .hero-assure {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin: 14px 0 0;
+}
+body.landing-call .hero-assure .hero-guarantee,
+body.landing-call .hero a.hero-call + .hero-assure .hero-guarantee {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.32);
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+body.landing-call .hero-assure .hero-cancel {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.4;
+  color: var(--tl-ink-muted);
+}
+body.landing-call .hero-process {
+  margin: 10px 0 0;
+  max-width: var(--tl-measure);
+  font-size: .9rem;
+  line-height: 1.5;
+  color: var(--tl-ink-muted);
+}
+
+/* Three checks, separated from the ask by a hairline. */
+body.landing-offer .hero .hero-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--tl-hairline);
+  max-width: var(--tl-measure);
+}
+body.landing-offer .hero .trust-item {
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #fff;
+}
+body.landing-offer .hero .trust-item svg { margin-top: 3px; width: 18px; height: 18px; }
+
+/* Try it: the live proof, styled as a callout, not body text. */
+body.landing-call .hero .hero-try,
+body.landing-call .hub-hero .hero-try {
+  display: block;
+  margin: 24px 0 0;
+  max-width: var(--tl-measure);
+  padding: 12px 16px;
+  border-left: 3px solid var(--tl-orange);
+  border-radius: 0 10px 10px 0;
+  background: rgba(255,255,255,.06);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+}
+body.landing-call .hero .hero-try strong,
+body.landing-call .hub-hero .hero-try strong { color: #fff; }
+body.landing-call .hero .hero-proof,
+body.landing-call .hub-hero .hero-proof {
+  margin: 14px 0 0;
+  max-width: var(--tl-measure);
+  font-size: .875rem;
+  line-height: 1.5;
+  color: var(--tl-ink-muted);
+}
+
+/* Scroll cue: bottom centre of the hero, out of the button's way. */
+body.landing-offer .hero .hero-copy > .hero-down-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-copy > .hero-down-cue { bottom: 12px; }
+}
+
+/* Phone visual: readable sizes at every width, full thread, no clipping. */
+body.landing-offer .hero .hero-side > .tl-frame { width: 100%; max-width: 360px; align-self: center; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-phone { height: auto; min-height: 0; max-height: none; overflow: visible; padding: 10px 10px 12px; border-radius: 34px; box-shadow: 0 28px 60px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.08); }
+body.landing-offer .hero .hero-side > .tl-frame .tl-ear { display: block; height: 5px; margin: 2px auto 8px; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-screen { min-height: 0; height: auto; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-phone-head { padding: 10px 14px; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-avatar { width: 32px; height: 32px; font-size: .85rem; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-thread { gap: 8px; padding: 12px; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble { display: block; padding: 8px 12px; font-size: .85rem; line-height: 1.4; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip { padding: 4px 10px; font-size: .75rem; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-site-screen { min-height: 300px; height: auto; }
+body.landing-offer .hero .hero-side > .tl-frame figcaption {
+  margin: 14px auto 0;
+  max-width: 320px;
+  font-size: .8rem;
+  line-height: 1.45;
+  text-align: center;
+  color: var(--tl-ink-muted);
+}
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-side > .tl-frame { max-width: 340px; }
+}
+
+/* Receptionist hero card: what the owner gets, plus a jump to the call. */
+.tl-owner-card .tl-thread { padding: 14px 12px 16px; }
+.tl-owner-card .tl-sms { font-size: .9rem; line-height: 1.45; }
+.tl-owner-card .tl-sms p { font-size: .9rem; }
+.tl-owner-card .tl-meta { margin: 0; display: grid; gap: 6px; }
+.tl-owner-card .tl-meta div { display: flex; justify-content: space-between; gap: 10px; background: #fff; border-radius: 10px; padding: 8px 12px; font-size: .8rem; color: #1a2744; }
+.tl-owner-card .tl-meta dt { font-weight: 700; color: #5a6a8a; }
+.tl-owner-card .tl-meta dd { margin: 0; font-weight: 600; text-align: right; }
+.tl-listen {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  margin: 4px auto 0; min-height: 44px; padding: 10px 16px;
+  border-radius: 999px; border: 1px solid #1a2744; background: #fff;
+  color: #1a2744; font-size: .85rem; font-weight: 700; text-decoration: none;
+}
+.tl-listen:hover, .tl-listen:focus-visible { background: #1a2744; color: #fff; }
+
+/* Hubs: copy left, phone right, both centred. Replaces the absolute-positioned
+   frame that overflowed the hero on /for-appointment-businesses. */
+body.landing-hub .hub-hero { position: relative; padding: 64px 24px 80px; }
+@media (max-width: 767px) { body.landing-hub .hub-hero { padding: 24px 20px 48px; } }
+body.landing-hub .hub-hero-inner.hub-v2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  max-width: var(--landing-column);
+  min-height: 0;
+  padding-right: 0;
+  margin: 0 auto;
+  position: static;
+}
+@media (min-width: 768px) {
+  body.landing-hub .hub-hero-inner.hub-v2 { grid-template-columns: minmax(0, 1fr) minmax(250px, 300px); column-gap: 40px; }
+}
+@media (min-width: 1024px) {
+  body.landing-hub .hub-hero-inner.hub-v2 { grid-template-columns: minmax(0, 1fr) 360px; column-gap: 64px; }
+}
+body.landing-hub .hub-v2 > .hub-copy { min-width: 0; max-width: 620px; }
+body.landing-hub .hub-v2 > .hub-side { display: flex; justify-content: center; width: 100%; max-width: 360px; justify-self: center; }
+@media (min-width: 768px) { body.landing-hub .hub-v2 > .hub-side { justify-self: end; } }
+body.landing-hub .hub-v2 .hub-side > .tl-frame,
+body.landing-hub .hub-hero-inner.hub-v2 > .hub-side > .tl-frame { position: static; width: 100%; max-width: 360px; margin: 0; }
+body.landing-hub .hub-v2 .tl-phone { height: auto; min-height: 0; max-height: none; overflow: visible; padding: 10px 10px 12px; border-radius: 34px; box-shadow: 0 28px 60px rgba(0,0,0,.35); }
+body.landing-hub .hub-v2 .tl-ear { display: block; }
+body.landing-hub .hub-v2 .tl-screen { height: auto; min-height: 0; }
+body.landing-hub .hub-v2 .tl-bubble { display: block; }
+/* Long call mockup: show the greeting, the ask and the text the owner gets (same cut as phones). */
+body.landing-hub .hub-v2 .tl-call .tl-line:nth-of-type(n+3) { display: none; }
+body.landing-hub .hub-v2 .tl-frame figcaption { margin: 14px auto 0; max-width: 320px; font-size: .8rem; line-height: 1.45; text-align: center; color: var(--tl-ink-muted); }
+body.landing-hub .hub-v2 .hub-eyebrow { margin: 0 0 8px; }
+body.landing-hub .hub-v2 .hero-rotation { margin: 0 0 16px; min-height: 0; font-size: 1rem; color: rgba(255,255,255,.9); }
+body.landing-hub .hub-v2 h1 { margin: 0; min-height: 0; max-width: 18ch; text-wrap: balance; }
+body.landing-hub .hub-v2 .subhead { margin: 18px 0 0; min-height: 0; max-width: var(--tl-measure); font-size: 1.125rem; line-height: 1.6; color: var(--tl-ink-soft); }
+body.landing-hub .hub-v2 a.hub-cta { margin: 28px 0 0; max-width: 440px; min-height: 64px; box-shadow: 0 10px 24px rgba(249,115,22,.28); }
+@media (max-width: 767px) { body.landing-hub .hub-v2 a.hub-cta { max-width: none; } body.landing-hub .hub-v2 .subhead { font-size: 1.05rem; } }
+body.landing-hub .hub-v2 .not-you { margin: 20px 0 0; font-size: .9rem; color: var(--tl-ink-muted); display: block; }
+body.landing-hub .hub-v2 .not-you a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+body.landing-hub .hub-v2 > .hub-copy > .hero-down-cue { position: absolute; left: 50%; bottom: 18px; width: 28px; height: 28px; margin: 0; transform: translateX(-50%); }
+
+/* Section call buttons on hubs render as real buttons. */
+body.landing-call .section-action a.btn-primary {
+  box-sizing: border-box;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 767px) { body.landing-call .section-action a.btn-primary { width: 100%; box-sizing: border-box; } }
+
+/* Home: copy left, "what kind of business" picker right. Fills the old empty half. */
+body.landing-home .hero { position: relative; padding-top: 64px; padding-bottom: 80px; }
+@media (max-width: 767px) { body.landing-home .hero { padding: 24px 20px 52px; } }
+body.landing-home .hero .hero-inner.home-v2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  max-width: var(--landing-column);
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  body.landing-home .hero .hero-inner.home-v2 { grid-template-columns: minmax(0, 1fr) 380px; column-gap: 64px; }
+}
+body.landing-home .home-v2 .home-copy { min-width: 0; max-width: 620px; }
+body.landing-home .home-v2 h1 { margin: 0; max-width: 14ch; text-wrap: balance; }
+body.landing-home .home-v2 .home-copy > .hero-sub:not(.hero-try) { margin: 18px 0 0; max-width: var(--tl-measure); font-size: 1.15rem; line-height: 1.6; color: var(--tl-ink-soft); }
+body.landing-home .home-v2 .hero-actions { margin: 28px 0 0; max-width: 440px; }
+@media (max-width: 767px) { body.landing-home .home-v2 .hero-actions { margin-top: 22px; max-width: none; } }
+body.landing-home .home-v2 .hero-actions .btn-primary { min-height: 64px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 10px 24px rgba(249,115,22,.28); }
+body.landing-home .home-v2 .hero-assure .cta-cancel { margin: 0; text-align: left; }
+body.landing-home .home-v2 .hero-try { margin-top: 24px; }
+body.landing-home .hero .home-pick {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  grid-template-columns: none;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+@media (min-width: 900px) { body.landing-home .hero .home-pick { padding: 28px; } }
+body.landing-home .hero .home-pick .home-pick-title {
+  margin: 0 0 4px;
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+}
+body.landing-home .hero .home-pick .front-jump-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--tl-navy);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  border: 0;
+}
+body.landing-home .hero .home-pick .front-jump-btn span { color: var(--tl-orange); font-size: 1.2rem; }
+body.landing-home .hero .home-pick .front-jump-btn:hover { background: #fff7ed; color: var(--tl-navy); }
+body.landing-home .hero .home-pick .home-pick-more {
+  align-self: flex-start;
+  margin-top: 4px;
+  font-size: .92rem;
+  color: rgba(255,255,255,.8);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+body.landing-home .hero > .hero-down-cue { position: absolute; left: 50%; bottom: 18px; width: 28px; height: 28px; margin: 0; transform: translateX(-50%); }
+
+/* Law hub: the support lines under the hero get a real section frame. */
+body.landing-form .hub-support-strip { background: #f4f6fb; padding: 28px 24px; border-bottom: 1px solid #dde6f5; }
+body.landing-form .hub-support-strip .section-inner { max-width: var(--landing-column); margin: 0 auto; }
+body.landing-form .hub-support-strip p { margin: 0 0 10px; max-width: 46rem; color: #1a2744; font-size: 1rem; line-height: 1.6; text-align: left; }
+body.landing-form .hub-support-strip p:last-child { margin-bottom: 0; }
+body.landing-form .hub-support-strip .strip-note { color: #42506e; font-size: .95rem; }
+body.landing-form .hub-support-strip .not-you { display: block; font-size: .95rem; color: #42506e; }
+body.landing-form .hub-support-strip .not-you a { color: #1a2744; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+/* Support agent: price and guarantee lines sit tight under the panel. */
+body.landing-form .hub-hero .hero-price-line { margin: 14px 0 0; font-weight: 700; color: #fff; }
+body.landing-form .hub-hero .hero-trust-line { margin: 6px 0 0; color: var(--tl-ink-muted); }
+body.landing-form .hub-hero .hero-cta-panel .hero-down-cue { display: none; }
+body.landing-form .hub-hero .hero-cta-panel { padding: 0; border: 0; background: none; box-shadow: none; max-width: 440px; }
+body.landing-form .hub-hero .hero-cta-panel a.hub-cta { margin-top: 24px; }
+body.landing-form .hub-hero .hub-support { margin-top: 22px; }
+body.landing-form .hub-hero .hero-trust-line + .hub-support { padding-top: 18px; border-top: 1px solid var(--tl-hairline); max-width: var(--tl-measure); }
+
+/* ---- Top-half system v2: board mockup for non-phone offers (2026-11-19) ---- */
+body.landing-offer .hero .hero-side > .tl-board { width: 100%; max-width: 360px; align-self: center; margin: 0; }
+.tl-board .tl-board-card { background: #fff; border-radius: 18px; box-shadow: 0 24px 60px rgba(0,0,0,.28); overflow: hidden; color: #1a2744; text-align: left; }
+.tl-board .tl-board-head { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid #dde6f5; }
+.tl-board .tl-board-head .tl-avatar { width: 32px; height: 32px; border-radius: 50%; background: #1a2744; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; font-size: .95rem; flex-shrink: 0; }
+.tl-board .tl-board-title { font-weight: 700; font-size: .92rem; line-height: 1.25; }
+.tl-board .tl-board-sub { font-size: .78rem; color: #5a6a8a; }
+.tl-board .tl-board-body { padding: 14px 16px 16px; display: grid; gap: 8px; background: #f4f7fc; }
+.tl-board .tl-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #fff; border-radius: 10px; padding: 10px 12px; font-size: .86rem; }
+.tl-board .tl-row span { color: #5a6a8a; font-weight: 600; }
+.tl-board .tl-row strong { font-family: 'Fraunces', serif; font-size: 1.15rem; color: #1a2744; }
+.tl-board .tl-row.tl-hot { border-left: 4px solid #f97316; }
+.tl-board .tl-mail { background: #fff; border-radius: 10px; padding: 12px; font-size: .86rem; line-height: 1.5; }
+.tl-board .tl-mail .tl-mail-meta { font-size: .76rem; color: #5a6a8a; margin-bottom: 6px; }
+.tl-board .tl-mail .tl-mail-subj { font-weight: 700; margin-bottom: 4px; }
+.tl-board .tl-mail.tl-reply { border-left: 4px solid #f97316; }
+.tl-board figcaption { margin-top: 14px; font-size: .82rem; line-height: 1.5; color: rgba(255,255,255,.72); text-align: center; }
+.tl-sms-kicker { display: block; }
+
+/* ---- Round 2 (2026-11-19): review fixes ---- */
+/* One trust row: pill + cancel line sit together on desktop. */
+body.landing-call .hero-assure .hero-guarantee,
+body.landing-call .hero a.hero-call + .hero-assure .hero-guarantee { font-size: .85rem; padding: 5px 12px; }
+body.landing-call .hero-assure .hero-cancel { font-size: .85rem; }
+body.landing-call .hero-process { margin-top: 8px; font-size: .85rem; }
+/* Hub CTA: number on the button, the ask as a small line under it. */
+body.landing-hub .hub-hero .hub-cta-note { margin: 10px 0 0; font-size: .9rem; line-height: 1.45; color: var(--tl-ink-muted); }
+/* Contractor site mock: no empty white block under the hero. */
+body.landing-offer .hero .hero-side > .tl-frame .tl-site-screen { min-height: 0; }
+.tl-site-list { list-style: none; margin: 0; padding: 12px 16px 4px; background: #fff; display: grid; gap: 6px; }
+.tl-site-list li { font-size: .85rem; font-weight: 600; color: #1a2744; padding: 8px 10px; border: 1px solid #dde6f5; border-radius: 8px; }
+.tl-site-gbp { border-top: 1px solid #dde6f5; }
+/* Professional offer heroes: same grid and left edge as every other offer page. */
+body.landing-form .hero .hero-kicker { display: inline-block; margin: 0 0 14px; font-size: .8rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--tl-orange); }
+body.landing-form.landing-offer .hero .hero-copy > a.btn-primary,
+body.landing-form.landing-offer .hero .hero-copy .hero-cta-panel a.btn-primary { display: flex; justify-content: center; max-width: 440px; min-height: 60px; margin: 28px 0 0; box-sizing: border-box; }
+body.landing-form.landing-offer .hero .hero-copy .hero-cta-panel { margin: 0; padding: 0; border: 0; background: none; box-shadow: none; max-width: 440px; }
+body.landing-form.landing-offer .hero .hero-copy .hero-eyebrow { margin-bottom: 14px; }
+.pro-steps { list-style: none; margin: 0; padding: 22px; display: grid; gap: 12px; width: 100%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 16px; box-sizing: border-box; }
+.pro-steps li { display: flex; align-items: center; gap: 14px; color: #fff; font-weight: 600; font-size: 1rem; line-height: 1.35; }
+.pro-steps span { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #f97316; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; }
+body.landing-form.landing-offer .hero .hero-side > .pricing-card { width: 100%; margin: 0; box-sizing: border-box; text-align: left; }
+body.landing-call .hero .hero-assure .hero-guarantee { width: auto; flex: 0 0 auto; white-space: nowrap; }
+body.landing-call .hero .hero-assure .hero-cancel { flex: 1 1 250px; min-width: 0; }
+@media (max-width: 767px) { body.landing-call .hero .hero-assure .hero-guarantee { white-space: normal; flex: 0 1 auto; max-width: 100%; } }
+
+/* ---- Round 3 (2026-11-19) ---- */
+/* Cited proof: its own line, readable size. */
+body.landing-call .hero .hero-proof { margin-top: 18px; font-size: .95rem; }
+.hero-proof-label { font-weight: 700; color: #fff; }
+a.hero-proof-link { color: #fff; font-weight: 700; text-decoration: underline; text-decoration-color: #f97316; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* Home picker: bigger targets on desktop. */
+@media (min-width: 900px) {
+  body.landing-home .hero .home-pick .front-jump-btn { font-size: 1.05rem; min-height: 58px; }
+  body.landing-home .hero .home-pick .home-pick-title { font-size: 1.15rem; }
+  body.landing-home .hero .hero-inner.home-v2 { align-items: start; }
+  body.landing-home .hero .home-pick { margin-top: 36px; }
+}
+
+/* ---- Round 4 (2026-11-19) ---- */
+body.landing-call .hero .hero-proof a.hero-proof-link { color: #fff; font-weight: 700; text-decoration: underline; text-decoration-color: #f97316; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+body.landing-form .hub-support-strip p a { color: #1a2744; font-weight: 700; text-decoration: underline; text-decoration-color: #f97316; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+body.landing-call .hero-process { margin-top: 12px; }
+.pro-steps-title { margin: 0 0 12px; font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: #fff; align-self: flex-start; }
+.pro-steps li { font-size: 1.05rem; }
+.tl-listen { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; font-size: .9rem; }
+@media (max-width: 767px) { .tl-listen { width: 100%; box-sizing: border-box; } }
+
+/* ---- Round 5 (2026-11-19): fewer 4-line desktop headlines ---- */
+@media (min-width: 1024px) {
+  body.landing-offer .hero h1 { max-width: 20ch; }
+}
+
+/* ---- Round 6 (2026-11-19): one top-half order at every width ----
+   H1 > sub > call + price > guarantee pill with cancel under it > process caption > try-it > mock > checks. */
+body.landing-offer .hero { padding-bottom: 60px; }
+@media (max-width: 767px) { body.landing-offer .hero { padding-bottom: 48px; } }
+body.landing-offer .hero .hero-price-note { margin: 10px 0 0; max-width: 440px; font-size: .95rem; line-height: 1.45; color: var(--tl-ink-soft); }
+body.landing-offer .hero .hero-price-note strong { color: #fff; font-size: 1.05rem; font-weight: 700; }
+body.landing-call .hero-assure,
+body.landing-call .hero .hero-assure { flex-direction: column; flex-wrap: nowrap; align-items: flex-start; gap: 6px; }
+body.landing-call .hero .hero-assure .hero-guarantee,
+body.landing-call .hub-hero .hero-assure .hero-guarantee { white-space: normal; flex: 0 1 auto; max-width: 100%; }
+body.landing-call .hero .hero-assure .hero-cancel,
+body.landing-call .hub-hero .hero-assure .hero-cancel { flex: 0 0 auto; margin: 0; }
+body.landing-call .hero .hero-process { margin-top: 12px; font-size: .8rem; line-height: 1.5; }
+body.landing-call .hero .hero-copy > .hero-try { margin-top: 18px; }
+body.landing-offer .hero .hero-grid[data-r6] > .hero-trust { grid-column: 1 / -1; grid-row: auto; margin: 0; padding-top: 22px; max-width: none; }
+body.landing-offer .hero .hero-grid[data-r6] > .hero-proof { grid-column: 1 / -1; margin: -18px 0 0; max-width: none; }
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust { flex-direction: row; gap: 14px 32px; }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust .trust-item { flex: 1 1 0; min-width: 0; }
+  body.landing-offer .hero .hero-grid[data-r6] { row-gap: 36px; align-items: center; }
+}
+/* Fractional AI officer: scope list fills the left column. */
+body.landing-offer .hero .hero-scope-title { margin: 26px 0 8px; font-weight: 700; font-size: .95rem; color: #fff; }
+body.landing-offer .hero .hero-scope { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; max-width: var(--tl-measure); }
+body.landing-offer .hero .hero-scope li { position: relative; padding-left: 22px; font-size: .95rem; line-height: 1.5; color: var(--tl-ink-soft); }
+body.landing-offer .hero .hero-scope li::before { content: ""; position: absolute; left: 4px; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: #f97316; }
+/* Distinct board mocks: CRM pipeline, dashboard trend, branch cards. */
+.tl-board .tl-kanban { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+.tl-board .tl-col { background: #fff; border-radius: 10px; padding: 8px; display: grid; gap: 6px; align-content: start; }
+.tl-board .tl-col-h { margin: 0; font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #5a6a8a; display: flex; justify-content: space-between; }
+.tl-board .tl-col-h b { color: #1a2744; font-family: 'Fraunces', serif; font-size: .95rem; letter-spacing: 0; }
+.tl-board .tl-card { font-size: .8rem; font-weight: 600; line-height: 1.3; padding: 6px 8px; border: 1px solid #dde6f5; border-radius: 7px; background: #f9fbfe; }
+.tl-board .tl-card.tl-card-hot { border-left: 4px solid #f97316; }
+.tl-board .tl-task { display: flex; align-items: flex-start; gap: 8px; background: #fff; border-radius: 10px; padding: 10px 12px; font-size: .84rem; line-height: 1.4; }
+.tl-board .tl-task-dot { flex-shrink: 0; width: 10px; height: 10px; margin-top: 5px; border-radius: 50%; background: #f97316; }
+.tl-board .tl-kpis { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+.tl-board .tl-kpi { background: #fff; border-radius: 10px; padding: 10px; display: grid; gap: 2px; }
+.tl-board .tl-kpi span { font-size: .74rem; font-weight: 600; color: #5a6a8a; }
+.tl-board .tl-kpi strong { font-family: 'Fraunces', serif; font-size: 1.35rem; color: #1a2744; line-height: 1.1; }
+.tl-board .tl-kpi em { font-style: normal; font-size: .74rem; font-weight: 700; }
+.tl-board .tl-kpi em.tl-up { color: #15803d; }
+.tl-board .tl-kpi em.tl-down { color: #b91c1c; }
+.tl-board .tl-chart { background: #fff; border-radius: 10px; padding: 10px 12px; }
+.tl-board .tl-chart-h { margin: 0 0 8px; font-size: .74rem; font-weight: 700; color: #5a6a8a; }
+.tl-board .tl-bars { display: flex; align-items: flex-end; gap: 6px; height: 64px; }
+.tl-board .tl-bars i { flex: 1 1 0; background: #1a2744; border-radius: 4px 4px 0 0; }
+.tl-board .tl-bars i:nth-child(6) { background: #f97316; }
+.tl-board .tl-bars-x { display: flex; gap: 6px; margin-top: 4px; }
+.tl-board .tl-bars-x span { flex: 1 1 0; text-align: center; font-size: .68rem; color: #5a6a8a; }
+.tl-board .tl-branches { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; }
+.tl-board .tl-branch { background: #fff; border-radius: 10px; padding: 8px; display: grid; gap: 4px; border-top: 4px solid #1a2744; }
+.tl-board .tl-branch-h { margin: 0 0 2px; font-weight: 700; font-size: .85rem; }
+.tl-board .tl-branch .tl-row { padding: 2px 0; background: none; border-radius: 0; font-size: .74rem; gap: 4px; }
+.tl-board .tl-branch .tl-row strong { font-size: .95rem; }
+.tl-board .tl-total { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; background: #1a2744; color: #fff; border-radius: 10px; padding: 10px 12px; font-size: .8rem; }
+.tl-board .tl-total strong { font-size: .9rem; }
+
+/* ---- Round 7 (2026-11-19) ---- */
+body.landing-offer .hero .hero-price-note strong { font-size: 1.15rem; }
+body.landing-offer .hero .hero-price-note .hero-price-sub { display: block; margin-top: 2px; font-size: .85rem; color: var(--tl-ink-muted); }
+body.landing-offer .hero .hero-scope-wrap { min-width: 0; max-width: 620px; }
+body.landing-offer .hero .hero-scope-wrap .hero-scope-title { margin-top: 0; }
+body.landing-offer .hero .hero-scope li { font-size: 1rem; }
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid.fao-grid { grid-template-rows: auto auto; row-gap: 28px; }
+  body.landing-offer .hero .hero-grid.fao-grid > .hero-copy { grid-column: 1; grid-row: 1; }
+  body.landing-offer .hero .hero-grid.fao-grid > .hero-side { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+  body.landing-offer .hero .hero-grid.fao-grid > .hero-scope-wrap { grid-column: 1; grid-row: 2; }
+}
+@media (max-width: 767px) { body.landing-offer .hero .fao-grid .hero-down-cue { display: none; } }
+
+/* ---- Round 8 (2026-11-19) ---- */
+body.landing-offer .hero { padding-bottom: 72px; }
+@media (max-width: 767px) { body.landing-offer .hero { padding-bottom: 60px; } }
+body.landing-offer .hero .hero-price-note .hero-price-sub { font-size: .9rem; color: var(--tl-ink-soft); }
+body.landing-form .hub-hero .hero-trust-line, body.landing-form .hub-hero .hero-price-line { max-width: var(--tl-measure); }
+
+/* ---- Round 9 (2026-11-19) ---- */
+body.landing-offer .hero .hero-side > .hero-proof { margin: 14px auto 0; max-width: 340px; text-align: center; font-size: .85rem; line-height: 1.5; color: var(--tl-ink-muted); }
+body.landing-call .hero .hero-process { font-size: .78rem; color: rgba(255,255,255,.66); }
+body.landing-call .hero .hero-assure .hero-cancel { font-size: .82rem; }
+body.landing-offer .hero .hero-price-note + .hero-assure { margin-top: 14px; }
+body.landing-offer .hero .hero-scope-note { margin: 12px 0 0; font-size: .82rem; color: var(--tl-ink-muted); }
+@media (min-width: 768px) { body.landing-offer .hero .hero-grid.fao-grid > .hero-side { align-self: start; margin-top: 40px; } }
+body.landing-form .hub-hero .hero-trust-line strong { color: #fff; }
+
+/* ---- Round 10 (2026-11-19): mock on the first phone screen, capped checks, focal points ---- */
+/* Desktop fine print: 13px minimum, brighter. */
+body.landing-call .hero .hero-process { font-size: .8125rem; color: rgba(255,255,255,.78); }
+body.landing-call .hero .hero-assure .hero-cancel { font-size: .8125rem; color: rgba(255,255,255,.78); }
+body.landing-offer .hero .hero-side > .tl-frame figcaption,
+.tl-board figcaption { font-size: .8125rem; color: rgba(255,255,255,.78); }
+body.landing-offer .hero .hero-side > .hero-proof { font-size: .875rem; color: rgba(255,255,255,.8); }
+body.landing-offer .hero .hero-price-note .hero-price-sub { font-size: .875rem; color: rgba(255,255,255,.8); }
+/* Checks: capped row, no divider when there is only one. */
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust { max-width: 580px; justify-self: start; flex-wrap: wrap; }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust .trust-item { flex: 1 1 160px; }
+}
+body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:only-child) { border-top: 0; padding-top: 0; }
+@media (min-width: 768px) { body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:only-child) { margin-top: -12px; } }
+/* Mock focal points. */
+.tl-board .tl-task { font-size: .95rem; padding: 12px 14px; background: #fff7ed; border-left: 4px solid #f97316; }
+.tl-board .tl-task strong { color: #c2410c; }
+.tl-board .tl-kpi em { justify-self: start; font-size: .8rem; padding: 2px 8px; border-radius: 999px; }
+.tl-board .tl-kpi em.tl-up { background: #dcfce7; }
+.tl-board .tl-kpi em.tl-down { background: #fee2e2; }
+.tl-board .tl-total { padding: 12px 14px; font-size: .85rem; font-weight: 700; }
+.tl-board .tl-total strong { font-size: 1.15rem; font-family: 'Fraunces', serif; }
+.tl-listen { background: #f97316; border: 2px solid #f97316; color: #fff; font-size: .95rem; min-height: 48px; box-shadow: 0 6px 16px rgba(249,115,22,.3); }
+.tl-listen:hover, .tl-listen:focus-visible { background: #ea580c; border-color: #ea580c; color: #fff; }
+/* FAO card: assessment first. */
+.pricing-card .pricing-step { margin: 0 0 14px; padding: 0 0 14px; border-bottom: 1px solid #dde6f5; font-size: .95rem; line-height: 1.45; color: #1a2744; text-align: left; }
+.pricing-card .pricing-step-label { display: inline-block; margin-right: 6px; padding: 2px 8px; border-radius: 999px; background: #f97316; color: #fff; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+/* Governance: terms line under the CTA. */
+body.landing-form.landing-offer .hero .hero-price-note { margin-top: 12px; }
+/* Phones: first mock bubble on the first screen. */
+@media (max-width: 767px) {
+  body.landing-call .hero .hero-kicker, body.landing-call .hub-hero .hero-kicker { margin-bottom: 8px; }
+  body.landing-offer .hero .hero-copy > .hero-sub { font-size: 1rem; line-height: 1.5; margin-top: 10px; }
+  body.landing-offer .hero a.hero-call { min-height: 54px; margin-top: 16px; }
+  body.landing-offer .hero .hero-price-note { margin-top: 8px; font-size: .875rem; }
+  body.landing-offer .hero .hero-price-note strong { font-size: 1rem; }
+  body.landing-offer .hero .hero-price-note .hero-price-sub { font-size: .8125rem; margin-top: 0; }
+  body.landing-call .hero-assure, body.landing-call .hero .hero-assure { margin-top: 10px; gap: 4px; }
+  body.landing-offer .hero .hero-price-note + .hero-assure { margin-top: 10px; }
+  body.landing-call .hero .hero-assure .hero-guarantee, body.landing-call .hub-hero .hero-assure .hero-guarantee { font-size: .8125rem; padding: 4px 10px; }
+  body.landing-call .hero .hero-process { margin-top: 6px; }
+  body.landing-call .hero .hero-copy > .hero-try, body.landing-call .hub-hero .hero-try { margin-top: 12px; padding: 8px 12px; font-size: .875rem; }
+  body.landing-offer .hero .hero-grid, body.landing-offer .hero .hero-grid.hero-with-frame { gap: 18px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-ear { display: none; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-phone { padding: 6px 6px 8px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-phone-head { padding: 8px 12px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-thread { padding: 10px; gap: 6px; }
+  body.landing-hub .hub-hero .hub-side { margin-top: 16px; }
+}
+/* Hubs: proof and cross-link sit under the mock. */
+body.landing-hub .hub-hero .hub-side > .hero-proof { margin: 14px auto 0; max-width: 340px; text-align: center; color: rgba(255,255,255,.8); }
+body.landing-hub .hub-hero .hub-side > .not-you { justify-content: center; margin: 8px auto 0; text-align: center; }
+@media (max-width: 767px) {
+  body.landing-hub .hub-hero a.hub-cta { min-height: 56px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-avatar { width: 28px; height: 28px; }
+}
+body.landing-hub .hub-v2 > .hub-side { flex-direction: column; align-items: center; }
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-grid, body.landing-offer .hero .hero-grid.hero-with-frame { gap: 14px; }
+  body.landing-call .hero .hero-assure .hero-cancel { line-height: 1.3; }
+  body.landing-call .hero .hero-assure .hero-guarantee { line-height: 1.25; }
+}
+@media (max-width: 767px) {
+  body.landing-hub .hub-hero a.hub-cta { min-height: 54px; padding-top: 12px; padding-bottom: 12px; }
+  body.landing-hub .hub-hero .hub-hero-inner.hub-v2 { row-gap: 14px; gap: 14px; }
+  body.landing-hub .hub-hero .hub-side { margin-top: 0; }
+  body.landing-hub .hub-v2 .hub-side > .tl-frame .tl-ear { display: none; }
+  body.landing-hub .hub-v2 .hub-side > .tl-frame .tl-phone { padding: 6px 6px 8px; }
+  body.landing-hub .hub-v2 .hub-side > .tl-frame .tl-phone-head { padding: 8px 12px; }
+}
+@media (max-width: 767px) { body.landing-call.landing-hub .hub-hero a.hub-cta { min-height: 56px; padding-top: 12px; padding-bottom: 12px; } }
+
+/* ---- Round 11 (2026-11-19): who sends what, STOP line, focal points, pro cards ---- */
+.tl-time .tl-who { font-weight: 800; }
+.tl-bubble .tl-stop { display: block; margin-top: 4px; }
+.tl-bubble .tl-pill { margin-top: 6px; }
+/* 3-check rows run wider. */
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(3)) { max-width: 720px; }
+}
+/* Mobile: focal points about 20% bigger. */
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus { font-size: 1.02rem; font-weight: 600; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-pill { font-size: .9rem; padding: 3px 12px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-sms p { font-size: 1.1rem !important; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-site-call { font-size: 1.1em; padding: 10px 16px; }
+  .tl-board .tl-task { font-size: 1.14rem; }
+  .tl-board .tl-kpi em { font-size: 1.2em; }
+  .tl-board .tl-total strong { font-size: 1.38rem; }
+  .tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.1rem !important; font-weight: 600; }
+}
+.tl-board .tl-task + .tl-kanban, .tl-board .tl-task + .tl-kpis { margin-top: 10px; }
+.tl-board .tl-kpi.tl-kpi-flag { box-shadow: inset 0 0 0 2px #f97316; }
+/* Fractional AI officer: retainer price reads first. */
+.pricing-card .pricing-amount-big { font-size: clamp(1.75rem, 7vw, 2.1rem) !important; margin: 6px 0 8px; }
+@media (max-width: 767px), (min-width: 1200px) { .pricing-card .pricing-amount-big { white-space: nowrap; } }
+/* Law hub + AI support agent: right-side card on desktop. */
+.hub-hero-inner.pro-split .pro-split-side { margin-top: 24px; width: 100%; max-width: 380px; }
+.pro-split-side .pro-steps-title { color: #fff; font-weight: 700; margin: 0 0 10px; }
+.pro-split-side .pro-steps li b { font-weight: 600; }
+.pro-split-side .pro-steps li small { display: block; font-size: .875rem; font-weight: 500; color: rgba(255,255,255,.78); margin-top: 2px; }
+.pro-qa { margin: 0; background: #fff; color: #1a2744; border-radius: 16px; padding: 20px 22px; box-shadow: 0 24px 50px rgba(0,0,0,.28); text-align: left; }
+.pro-qa p { margin: 0 0 10px; line-height: 1.45; color: #1a2744; }
+.pro-qa .pro-qa-title { font-size: .8125rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #c2410c; }
+.pro-qa .pro-qa-q { background: #f1f5f9; border-radius: 12px; padding: 10px 12px; }
+.pro-qa .pro-qa-a { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 12px; padding: 10px 12px; }
+.pro-qa .pro-qa-flag { font-weight: 600; }
+.pro-qa figcaption { font-size: .8125rem; color: #475569; }
+@media (min-width: 1024px) {
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split { display: grid; grid-template-columns: minmax(0, 1fr) 360px; column-gap: 64px; align-items: center; }
+  .hub-hero-inner.pro-split .pro-split-side { margin-top: 0; }
+}
+.tl-bubble.tl-out .tl-time .tl-who { color: #fff; } .tl-bubble.tl-in .tl-time .tl-who { color: #1a2744; }
+
+/* ---- Round 12 (2026-11-19): payoff chips, pills on own line, readable mock labels, quiet process line, law eyebrow ---- */
+.tl-chip b { color: #15803d; font-weight: 800; }
+.tl-bubble .tl-pill { display: table; margin: 6px 0 2px; }
+/* Process line: small and quiet under the Cancel line, same block everywhere. */
+body.landing-call .hero .hero-process { color: rgba(255,255,255,.62); font-weight: 400; margin-top: 4px; }
+@media (max-width: 767px) {
+  body.landing-call .hero .hero-process { margin-top: 2px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-time { font-size: .78rem; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-chip { font-size: .8125rem; }
+
+  .tl-board .tl-col-h, .tl-board .tl-kpi span, .tl-board .tl-mail-meta, .tl-board .tl-branch-h, .tl-board .tl-row span, .tl-board .tl-board-sub { font-size: .8125rem !important; }
+  .tl-board .tl-card { font-size: .8125rem; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-meta dt { font-size: .8125rem !important; }
+}
+.tl-board .tl-total + .tl-branches, .tl-board .tl-reply + .tl-mail { margin-top: 10px; }
+/* Law pages: one eyebrow style. */
+body.pro-cta-orange .pro-eyebrow, body.pro-cta-orange a.pro-eyebrow, body.pro-cta-orange .hub-hero .pro-eyebrow, body.pro-cta-orange .hero .pro-eyebrow { color: #cbd5e1 !important; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: .08em !important; text-transform: uppercase; margin: 0 0 12px; }
+.pro-split-side .pro-split-note { margin: 14px 0 0; color: rgba(255,255,255,.8); line-height: 1.5; }
+.pro-split-side .pro-split-note a { color: #fff; text-decoration: underline; }
+@media (max-width: 1023px) { .hub-hero-inner.pro-split .pro-split-side { margin-top: 14px; } }
+
+/* ---- Round 13 (2026-11-19): balance short right columns, larger mock focals, quieter CTA competition, law-page polish ---- */
+
+/* 1. Desktop: stretch the two hero columns. Short right-hand cards sit at the
+   bottom of the copy stack (level with the CTA block), so navy does not pool
+   under them. Tall mocks keep their natural height and stay top-aligned. */
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame,
+  body.landing-offer .hero .hero-grid[data-r6],
+  body.landing-offer .hero .hero-grid.pro-hero-grid,
+  body.landing-hub .hub-hero .hub-hero-inner.hub-v2,
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split {
+    align-items: stretch;
+  }
+  body.landing-offer .hero .hero-grid > .hero-side,
+  body.landing-offer .hero .hero-grid.hero-with-frame > .hero-side,
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-side,
+  body.landing-offer .hero .hero-grid.pro-hero-grid > .hero-side {
+    align-self: stretch;
+    justify-content: flex-end;
+    max-width: 100%;
+  }
+  body.landing-hub .hub-v2 > .hub-side,
+  body.landing-hub .hub-hero-inner.pro-split .pro-split-side {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 0;
+    max-width: 100%;
+  }
+  /* FAO: keep the retainer card in the copy row, level with the CTA, not
+     stretched down beside the scope bullets. */
+  body.landing-offer .hero .hero-grid.fao-grid > .hero-side {
+    grid-row: 1;
+    align-self: stretch;
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+}
+
+/* 2. Mocks about 15–20% larger on desktop. At 768 the column stays modest so
+   the headline is not squeezed. At 390 the frame is already full-width; the
+   size gain is in the focal type below. */
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 330px);
+  }
+  body.landing-hub .hub-hero-inner.hub-v2 {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 330px);
+  }
+  body.landing-offer .hero .hero-side > .tl-frame,
+  body.landing-offer .hero .hero-side > .tl-board,
+  body.landing-hub .hub-v2 .hub-side > .tl-frame,
+  body.landing-hub .hub-hero-inner.hub-v2 > .hub-side > .tl-frame {
+    max-width: 330px;
+  }
+}
+@media (min-width: 1024px) {
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame {
+    grid-template-columns: minmax(0, 1fr) 420px;
+    column-gap: 56px;
+  }
+  body.landing-hub .hub-hero-inner.hub-v2,
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split {
+    grid-template-columns: minmax(0, 1fr) 420px;
+    column-gap: 56px;
+  }
+  body.landing-offer .hero .hero-side > .tl-frame,
+  body.landing-offer .hero .hero-side > .tl-board,
+  body.landing-hub .hub-v2 .hub-side > .tl-frame,
+  body.landing-hub .hub-hero-inner.hub-v2 > .hub-side > .tl-frame {
+    max-width: 420px;
+  }
+}
+
+/* Hierarchy inside each mock: outcome largest, message/data second, context third. */
+/* Chips are <p>, so the 16px floor applies. Keep padding tight so
+   they stay one line at 360px; emphasise the outcome with <b> only. */
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip,
+body.landing-hub .hub-v2 .tl-chip {
+  padding: 4px 10px;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip b,
+body.landing-hub .hub-v2 .tl-chip b {
+  font-size: 1.05em;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble {
+  font-size: .95rem;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-pill {
+  font-size: .9rem;
+  padding: 3px 11px;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-time,
+body.landing-hub .hub-v2 .tl-time {
+  font-size: .7rem;
+}
+.tl-board .tl-task { font-size: 1.12rem; }
+.tl-board .tl-kpi em { font-size: 1.35em; }
+.tl-board .tl-total strong { font-size: 1.45rem; }
+.tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.02rem; font-weight: 600; }
+.tl-board .tl-col-h, .tl-board .tl-kpi span, .tl-board .tl-mail-meta, .tl-board .tl-branch-h, .tl-board .tl-board-sub { font-size: .8rem; color: #475569; }
+body.landing-offer .hero .hero-side > .tl-frame .tl-site-call { font-size: 1.05em; padding: 10px 16px; }
+
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-side > .tl-frame .tl-chip,
+  body.landing-hub .hub-v2 .tl-chip { padding: 4px 8px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-chip b,
+  body.landing-hub .hub-v2 .tl-chip b { font-size: 1.08em; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus { font-size: 1.18rem; font-weight: 600; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-pill { font-size: 1.05rem; padding: 4px 13px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-sms p { font-size: 1.26rem !important; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-site-call { font-size: 1.28em; padding: 11px 16px; }
+  .tl-board .tl-task { font-size: 1.32rem; }
+  .tl-board .tl-kpi em { font-size: 1.4em; }
+  .tl-board .tl-total strong { font-size: 1.6rem; }
+  .tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.26rem !important; font-weight: 600; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-time { font-size: .75rem; }
+}
+
+/* 3. Solid orange stays on the CTA. Owner-summary boxes in the mocks use a
+   warm tint so they do not compete with the call button. */
+body.landing-offer .tl-sms,
+body.landing-hub .tl-sms,
+body.landing-offer .hero .hero-side .tl-sms,
+body.landing-hub .hub-v2 .tl-sms {
+  background: #fff7ed;
+  color: #1a2744;
+  border-left: 4px solid #f97316;
+}
+
+/* 4. Process and Cancel lines stay at 16px (site minimum) but read quieter.
+   More space above the guarantee pill. */
+body.landing-call .hero .hero-process,
+body.landing-call .hub-hero .hero-process {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.55);
+  margin-top: 8px;
+}
+body.landing-call .hero .hero-assure .hero-cancel,
+body.landing-call .hub-hero .hero-assure .hero-cancel {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.55);
+}
+body.landing-call .hero .hero-assure,
+body.landing-call .hero .hero-price-note + .hero-assure,
+body.landing-call .hub-hero .hero-assure {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  body.landing-call .hero .hero-assure,
+  body.landing-call .hero .hero-price-note + .hero-assure,
+  body.landing-call .hub-hero .hero-assure { margin-top: 12px; }
+  body.landing-call .hero .hero-process,
+  body.landing-call .hub-hero .hero-process { margin-top: 4px; }
+}
+
+/* 5. Law and professional pages: one dark right-hand card, shorter phone hero.
+   The governance price is not added to the hero (Ben item 41). */
+.pro-card {
+  background: #223152;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px;
+  padding: 22px 22px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 24px 50px rgba(0,0,0,.28);
+}
+.pro-card .pro-steps {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.pro-card .pro-steps-title { margin: 0 0 14px; }
+.pro-card .pro-qa {
+  margin: 0;
+  box-shadow: none;
+}
+.pro-card .pro-split-note { margin: 14px 0 0; }
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card {
+  background: #223152;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.1);
+  text-align: left;
+}
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-step {
+  color: rgba(255,255,255,.9);
+  border-bottom-color: rgba(255,255,255,.16);
+}
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-amount,
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-amount-big {
+  color: #fff;
+}
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-desc {
+  color: rgba(255,255,255,.8);
+}
+body.landing-form.landing-offer .hero .hero-side > .pricing-card.pro-card .pricing-badge {
+  background: rgba(255,255,255,.1);
+  color: #fff;
+}
+
+/* Law eyebrow: sentence case and tighter tracking on phones so it stays one line at 16px. */
+@media (max-width: 767px) {
+  body.pro-cta-orange .pro-eyebrow,
+  body.pro-cta-orange a.pro-eyebrow,
+  body.pro-cta-orange .hub-hero .pro-eyebrow,
+  body.pro-cta-orange .hero .pro-eyebrow {
+    text-transform: none;
+    letter-spacing: .02em !important;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+}
+
+/* Shorter mobile heroes on hubs and professional pages.
+   Offer pages set padding-top:20px !important under 430px in their
+   page style blocks; override that so the first mock message stays
+   on the first 390px screen. */
+@media (max-width: 767px) {
+  body.landing-call.landing-offer .hero,
+  body.landing-form.landing-offer .hero {
+    padding: 10px 20px 28px;
+    padding-top: 10px !important;
+  }
+  body.landing-offer .hero .hero-grid,
+  body.landing-offer .hero .hero-grid.hero-with-frame { gap: 10px; }
+  body.landing-call .hero .hero-try { margin-top: 8px; }
+  body.landing-hub .hub-hero { padding: 16px 20px 28px; }
+  body.landing-hub .hub-hero .hub-hero-inner.hub-v2,
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split { row-gap: 12px; gap: 12px; }
+  body.landing-hub .hub-v2 .hero-rotation { margin: 0 0 8px; }
+  body.landing-hub .hub-v2 .subhead { margin-top: 10px; }
+  body.landing-hub .hub-v2 a.hub-cta,
+  body.landing-form .hub-hero .hero-cta-panel a.hub-cta { margin-top: 16px; }
+  body.landing-form .hub-hero .hero-price-line { margin-top: 10px; }
+  body.landing-form .hub-hero .hero-trust-line { margin-top: 4px; }
+  body.landing-offer .hero { padding: 16px 20px 32px; }
+  body.landing-hub .hub-hero .hero-down-cue,
+  body.landing-offer .hero .hero-down-cue { display: none; }
+  .hub-hero-inner.pro-split .pro-split-side { margin-top: 8px; }
+}
+
+
+/* ---- Round 14 (2026-11-19): leftover polish all four reviewers agreed on ---- */
+
+/* 1. Desktop 1280/1440: short right-hand cards already sit on the copy
+   baseline (flex-end). Tighten the gap under that row so navy does not
+   pool between the card/CTA block and the checks. */
+@media (min-width: 1280px) {
+  body.landing-offer .hero .hero-grid[data-r6],
+  body.landing-offer .hero .hero-grid.hero-with-frame,
+  body.landing-offer .hero .hero-grid.pro-hero-grid {
+    align-items: stretch;
+    row-gap: 18px;
+  }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust {
+    padding-top: 14px;
+  }
+  body.landing-offer .hero .hero-grid > .hero-side,
+  body.landing-offer .hero .hero-grid.hero-with-frame > .hero-side,
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-side,
+  body.landing-offer .hero .hero-grid.pro-hero-grid > .hero-side {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  body.landing-hub .hub-hero .hub-hero-inner.hub-v2,
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split {
+    align-items: stretch;
+  }
+  body.landing-hub .hub-v2 > .hub-side,
+  body.landing-hub .hub-hero-inner.pro-split .pro-split-side {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+/* 2. Two-check pages: centred 2-column row at 1440, so the right slot
+   under the card is not left empty. */
+@media (min-width: 1280px) {
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(2)):not(:has(> .trust-item:nth-child(3))) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+    max-width: 580px;
+    width: 100%;
+    margin-inline: auto;
+    justify-self: center;
+    flex-direction: unset;
+  }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(2)):not(:has(> .trust-item:nth-child(3))) .trust-item {
+    flex: none;
+    min-width: 0;
+  }
+}
+
+/* 3. Payoff / outcome line is the largest element in every message mock.
+   Message text is second; times and labels are third. Status dot on chips. */
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip,
+body.landing-hub .hub-v2 .tl-chip {
+  display: block;
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 1.125rem !important;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a2744;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip::before,
+body.landing-hub .hub-v2 .tl-chip::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #1a2744;
+  vertical-align: middle;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-chip b,
+body.landing-hub .hub-v2 .tl-chip b {
+  font-size: 1em;
+  font-weight: 700;
+  color: #1a2744;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble {
+  font-size: .95rem;
+  font-weight: 400;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus {
+  font-size: 1rem;
+  font-weight: 600;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-sms p,
+body.landing-hub .hub-v2 .tl-sms p {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-sms .tl-sms-kicker,
+body.landing-hub .hub-v2 .tl-sms .tl-sms-kicker {
+  display: block;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #9a3412;
+  margin-bottom: 2px;
+}
+body.landing-offer .hero .hero-side > .tl-frame .tl-time,
+body.landing-hub .hub-v2 .tl-time {
+  font-size: .7rem;
+  font-weight: 400;
+}
+.tl-board .tl-task { font-size: 1.125rem !important; font-weight: 700; }
+.tl-board .tl-task strong { font-size: 1em; }
+.tl-board .tl-total { font-size: .85rem; }
+.tl-board .tl-total strong { font-size: 1.25rem !important; font-weight: 700; }
+.tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.125rem !important; font-weight: 700; }
+.tl-board .tl-mail-meta, .tl-board .tl-col-h, .tl-board .tl-kpi span, .tl-board .tl-branch-h, .tl-board .tl-board-sub, .tl-board .tl-chart-h {
+  font-size: .75rem;
+  font-weight: 400;
+}
+.tl-board .tl-kpi strong { font-size: 1.05rem; }
+.tl-board .tl-kpi em { font-size: .8rem; }
+
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-side > .tl-frame .tl-chip,
+  body.landing-hub .hub-v2 .tl-chip {
+    font-size: 1.125rem !important;
+    padding: 5px 8px;
+  }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus {
+    font-size: 1rem !important;
+    font-weight: 600;
+  }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-sms p,
+  body.landing-hub .hub-v2 .tl-sms p {
+    font-size: 1rem !important;
+    font-weight: 600;
+  }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-pill { font-size: .9rem; padding: 3px 11px; }
+  .tl-board .tl-task { font-size: 1.125rem; }
+  .tl-board .tl-total strong { font-size: 1.25rem; }
+  .tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.125rem !important; font-weight: 700; }
+}
+
+/* 4. Stop H1s wrapping to 3 lines at 390. Wording-neutral: drop the 17ch
+   cap on phones, tighten tracking, slightly smaller size (still well
+   above the 16px floor). Home H1 is left alone (owner-approved). */
+@media (max-width: 767px) {
+  body.landing-offer .hero h1,
+  body.landing-hub .hub-hero h1 {
+    max-width: none;
+    letter-spacing: -.03em;
+    font-size: 1.5rem; /* 24px, --tl-text-2xl; still well above the 16px floor */
+    line-height: 1.2;
+    text-wrap: pretty;
+  }
+}
+
+/* ---- Round 15 (2026-11-19): honesty polish ---- */
+
+/* 1. Two-check rows at 1280/1440 sit as a compact inline row under the CTA
+   (copy column), not a sparse centred band under the whole hero. The mock
+   column spans both rows so navy does not pool under the card. */
+@media (min-width: 1280px) {
+  body.landing-offer .hero .hero-grid[data-r6]:has(> .hero-trust > .trust-item:nth-child(2)):not(:has(> .hero-trust > .trust-item:nth-child(3))) > .hero-side {
+    grid-row: 1 / -1;
+  }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(2)):not(:has(> .trust-item:nth-child(3))) {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px 24px;
+    max-width: var(--tl-measure);
+    width: 100%;
+    margin: 0;
+    margin-inline: 0;
+    padding-top: 16px;
+    justify-self: start;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(2)):not(:has(> .trust-item:nth-child(3))) .trust-item {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+/* 2. Every message-mock payoff line is 18px: the status chip (already 18px)
+   and the inbound focus reply / owner-card SMS that is the payoff. */
+body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-in.tl-focus,
+body.landing-hub .hub-v2 .tl-bubble.tl-in.tl-focus,
+body.landing-offer .hero .hero-side > .tl-frame .tl-sms p,
+body.landing-hub .hub-v2 .tl-sms p {
+  font-size: 1.125rem !important;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* 3. "Hear the sample call" is a secondary (navy outline) control so the
+   orange Call button is the only solid orange CTA on the receptionist pages. */
+a.tl-listen {
+  background: #fff;
+  border: 2px solid #1a2744;
+  color: #1a2744;
+  box-shadow: none;
+  font-size: .9rem;
+  min-height: 44px;
+}
+a.tl-listen:hover, a.tl-listen:focus-visible {
+  background: #1a2744;
+  border-color: #1a2744;
+  color: #fff;
+}
+
+/* 4. Mock-kind label lives in the existing figcaption (16px floor). */
+.tl-sample-kind {
+  display: inline;
+  margin: 0;
+  font-size: 1em;
+  font-weight: 700;
 }

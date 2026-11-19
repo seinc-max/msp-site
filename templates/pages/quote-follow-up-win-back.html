@@ -213,7 +213,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       "name": "Do I have to set this up myself?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. We set it up and run it for you. You do not have to configure anything yourself — the setup and the running of the service are all handled by us, so you can carry on with your work while we get the follow-ups running for you."
+        "text": "No. We set up the quote follow-up and run it for you. You do not have to configure anything yourself — the setup and the running of the service are all handled by us, so you can carry on with your work while we get the follow-ups running for you."
       }
     },
     {
@@ -253,7 +253,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       "name": "Is there a money-back guarantee?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked. Cancel anytime. No contracts, no cancellation fees."
+        "text": "30-day money-back guarantee. If it's not right within 30 days of your first payment, we refund your setup fee and first month in full. No questions asked. Cancel anytime. No contracts, no cancellation fees."
       }
     },
     {
@@ -313,29 +313,17 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-grid hero-with-frame">
-    <div class="hero-copy">
-      <h1>You sent the quote and got busy. The homeowner still gets a follow-up, and you get the reply.</h1>
-      <p class="hero-sub">Every open quote gets a text on a schedule you approve, and past customers who haven't booked in a while hear from you again. $149/mo per location plus a one-time $199 setup. No contracts, cancel anytime.</p>
+  <div data-r6="1" class="hero-grid hero-with-frame">
+            <div class="hero-copy">
+<h1>Unanswered quotes get a follow-up text.</h1>
+      <p class="hero-sub">For trades. Follow-ups go out on a schedule you approve. Past customers get a check-in too.</p>
       <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
-      <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
-      <div class="hero-trust">
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Follow-up texts on every open quote
-        </div>
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Win-back texts to past customers
-        </div>
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Replies go straight to you
-        </div>
+      <p class="hero-price-note"><strong>$149/mo</strong> per location +&nbsp;$199&nbsp;setup.</p>
+      <div class="hero-assure">
+        <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
+        <p class="hero-cancel">Cancel anytime. No contracts, no cancellation&nbsp;fees.</p>
       </div>
-      <p class="hero-sub">One call. We set it up on your number. You approve every word before it goes live.</p>
-      <!-- seasonal: remove by 2027-04-01 -->
-      <p class="hero-sub">Missed calls spike with the first cold snap and after a storm (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank" style="color:#fff;text-decoration:underline;">Invoca, 2026</a>). Get your quote follow-up running before your quotes go cold.</p>
+<div class="hero-down-cue" aria-hidden="true"></div>
     </div>
     <div class="hero-side">
 <figure class="tl-frame">
@@ -343,23 +331,33 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         <div class="tl-ear" aria-hidden="true"></div>
         <div class="tl-screen">
           <div class="tl-phone-head">
-            <div class="tl-avatar" aria-hidden="true">N</div>
+            <div class="tl-avatar" aria-hidden="true">C</div>
             <div>
-              <div class="tl-phone-name">Northside Heating &amp; Cooling</div>
+              <div class="tl-phone-name">Cedar Ridge Heating</div>
               <div class="tl-phone-sub">222-333-4444</div>
             </div>
           </div>
           <div class="tl-thread">
-            <p class="tl-chip">Quote sent · 7 days ago, no reply</p>
-            <div class="tl-bubble tl-out"><span class="sr-only">Tony, Northside Heating:</span> Hi Mark, it's Tony from Northside Heating. Just checking in on the furnace replacement quote I sent last week. Any questions I can answer? Reply STOP to opt out.<time class="tl-time">Tue 10:02 AM</time></div>
-            <div class="tl-bubble tl-in"><span class="sr-only">Customer:</span> Yes, can you do it before the cold hits?<time class="tl-time">10:40 AM</time></div>
-            <div class="tl-bubble tl-out"><span class="sr-only">Tony, Northside Heating:</span> I can. I'll call you today to pick a date. Tony<time class="tl-time">10:42 AM</time></div>
+            <p class="tl-chip"><b>Customer replied</b> · 7 days later</p>
+            <div class="tl-bubble tl-out"><span class="sr-only">Tony, Cedar Ridge Heating:</span> Hi Mark, it's Tony from Cedar Ridge Heating. Just checking in on the furnace replacement quote I sent last week. Any questions I can answer? Reply STOP to opt out.<time class="tl-time"><span class="tl-who">Sent automatically</span> · Tue 10:02 AM</time></div>
+            <div class="tl-bubble tl-in tl-focus"><span class="sr-only">Customer:</span> Yes, can you do it before the cold hits?<time class="tl-time">10:40 AM</time></div>
+            <div class="tl-bubble tl-out"><span class="sr-only">Tony, Cedar Ridge Heating:</span> I can. I'll call you today to pick a date. Tony<time class="tl-time"><span class="tl-who">You sent this</span> · 10:42 AM</time></div>
           </div>
         </div>
       </div>
-      <figcaption>Example with a sample business name. This is the exact text format we set up. Your business name and your wording go in, and you approve it before it goes live.</figcaption>
+      <figcaption>Sample. You approve the wording.</figcaption>
     </figure>
     </div>
+                    <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Only people who asked for a quote, or past customers.
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Sent from your separate text-back number.
+        </div>
+      </div>
   </div>
 </section>
 
@@ -371,6 +369,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p>Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p>
     <p class="body-copy">We pick up your open quotes and follow up — you approve the wording and the timing.</p>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- PAIN -->
@@ -388,10 +388,12 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
       <div class="pain-card">
         <h3>No time to chase</h3>
-        <p>Following up by hand is the first thing that drops in a busy week. 55% of home-service businesses don't ask leads to book the job (<a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" rel="noopener" target="_blank">Invoca, 2026</a>). A follow-up text is the ask.</p>
+        <p>Following up by hand is the first thing that drops in a busy week. 55% of home-service businesses don't ask leads to book the job (Invoca, 2026). A follow-up text is the ask.</p>
       </div>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <section class="how-section"><div class="section-inner"><div class="section-eyebrow">How it works</div><h2 class="section-title">You call. It gets set up. You take the replies.</h2>
@@ -418,13 +420,17 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <section class="included-section"><div class="section-inner"><div class="section-eyebrow">What you get</div><h2 class="section-title">What's included, and what isn't</h2><div class="included-grid">
 <div class="included-card yes"><h3>What's included</h3><ul><li>Follow-up texts on every open quote</li><li>Win-back texts to past customers</li><li>Wording and timing you approve</li><li>Replies forwarded to you</li><li>Monthly review call</li></ul></div>
-<div class="included-card no"><h3>What's not included</h3><ul><li>Cold texting people who never contacted you</li><li>Replacing your current scheduling or field-service software</li><li>Discount offers unless you choose them</li></ul></div></div></div></section>
+<div class="included-card no"><h3>What's not included</h3><ul><li>Cold texting people who never contacted you</li><li>Replacing your current scheduling or field-service software</li><li>Discount offers unless you choose them</li></ul></div></div></div>
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
+</section>
 
-<section class="pricing-section"><div class="section-inner"><div class="section-eyebrow">Flat monthly fee</div><h2 class="section-title">Get quote follow-up and Google reviews together, or quote follow-up on its own. We set it up and run it for you.</h2>
+<section class="pricing-section"><div class="section-inner"><div class="section-eyebrow">Flat monthly fee</div><h2 class="section-title">Get quote follow-up and Google reviews together, or quote follow-up on its own. We set up the quote follow-up and run it for you.</h2>
 <div class="pricing-card" id="pack"><div class="pricing-badge">Quote Follow-Up + Google Reviews</div><div class="pricing-amount">$179<span>/mo per location</span></div>
 <p class="pricing-desc">Plus a one-time $199 setup. You get Quote Follow-Up &amp; Win-Back and <a href="/google-review-requests">Google Review Requests + Replies</a> in one plan. No contracts, cancel anytime.</p>
 <ul class="pricing-features"><li>Follow-up texts on every open quote</li><li>Win-back texts to past customers</li><li>Google review requests after each job</li><li>A reply in your voice to every new Google review, approved by you</li><li>Monthly review call</li></ul><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
@@ -432,7 +438,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </div>
 <div class="pricing-card"><div class="pricing-badge">Quote Follow-Up & Win-Back</div><div class="pricing-amount">$149<span>/mo per location</span></div>
 <p class="pricing-desc">Plus a one-time $199 setup. Available on its own or as an add-on. No contracts, cancel anytime.</p>
-<div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:0 0 20px;"><p style="margin:0 0 6px;"><strong>$149/mo per location, flat. No per-contact or per-minute charges.</strong></p><p style="margin:0 0 6px;">30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p><p style="margin:0;">Cancel anytime. No contracts, no cancellation fees.</p></div>
+<div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:0 0 20px;"><p style="margin:0 0 6px;"><strong>$149/mo per location, flat. No per-contact or per-minute charges.</strong></p><p style="margin:0 0 6px;">30-day money-back guarantee. If it's not right within 30 days of your first payment, we refund your setup fee and first month in full. No questions asked.</p><p style="margin:0;">Cancel anytime. No contracts, no cancellation fees.</p></div>
 <ul class="pricing-features"><li>Follow-up texts on every open quote</li><li>Win-back texts to past customers</li><li>Wording and timing you approve</li><li>Replies forwarded to you</li><li>Monthly review call</li></ul><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
 </div></div></section>
 <section class="proof-section">
@@ -458,19 +464,23 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
-<section class="faq-section"><div class="section-inner"><div class="section-eyebrow">Questions</div><h2 class="section-title">Common questions</h2><div class="faq-list"><details><summary>Do I have to set this up myself?</summary><p>No. We set it up and run it for you. You do not have to configure anything yourself — the setup and the running of the service are all handled by us, so you can carry on with your work while we get the follow-ups running for you.</p></details><details><summary>Who gets texted?</summary><p>Only people who asked you for a quote or are past customers. We never text cold lists.</p></details><details><summary>How often do the follow-ups go out?</summary><p>The follow-ups go out on a short schedule that you approve before anything is sent. You decide the timing, and every text includes a reply STOP to opt out, so anyone can stop the follow-ups at any time and you never chase someone who has asked to be left alone.</p></details><details><summary>Does it work with my quoting software?</summary><p>We work out how to pull your open quotes on the call.</p></details>
+<section class="faq-section"><div class="section-inner"><div class="section-eyebrow">Questions</div><h2 class="section-title">Common questions</h2><div class="faq-list"><details><summary>Do I have to set this up myself?</summary><p>No. We set up the quote follow-up and run it for you. You do not have to configure anything yourself — the setup and the running of the service are all handled by us, so you can carry on with your work while we get the follow-ups running for you.</p></details><details><summary>Who gets texted?</summary><p>Only people who asked you for a quote or are past customers. We never text cold lists.</p></details><details><summary>How often do the follow-ups go out?</summary><p>The follow-ups go out on a short schedule that you approve before anything is sent. You decide the timing, and every text includes a reply STOP to opt out, so anyone can stop the follow-ups at any time and you never chase someone who has asked to be left alone.</p></details><details><summary>Does it work with my quoting software?</summary><p>We work out how to pull your open quotes on the call.</p></details>
 <details><summary>How do I cancel?</summary><p>You can cancel anytime. There are no contracts and no cancellation fees, so you are never locked in and cancelling costs you nothing extra. You can stop the service whenever you choose, and there is nothing to pay to close it.</p></details>
-<details><summary>Is there a money-back guarantee?</summary><p>30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked. Cancel anytime. No contracts, no cancellation fees.</p></details><details><summary>What if they already hired someone?</summary><p>They reply and say so, or they don't reply. Either way you know where the quote stands, and you stop wondering.</p></details></div></div></section>
-<section class="bottom-cta"><h2>Stop leaving quoted work on the table.</h2><p>You do the job. We set it up and run it. Call and we'll go through your open quotes with you.</p><p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
+<details><summary>Is there a money-back guarantee?</summary><p>30-day money-back guarantee. If it's not right within 30 days of your first payment, we refund your setup fee and first month in full. No questions asked. Cancel anytime. No contracts, no cancellation fees.</p></details><details><summary>What if they already hired someone?</summary><p>They reply and say so, or they don't reply. Either way you know where the quote stands, and you stop wondering.</p></details></div></div>
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
+</section>
+<section class="bottom-cta"><h2>Stop leaving quoted work on the table.</h2><p>You do your job. We follow up every quote. Call and we'll go through your open quotes with you.</p><p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
 <div class="cta-row"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div></section>
 </main>
 
 <!-- FOOTER -->
 <div class="sticky-mobile-cta">
   <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
-  <span>Month-to-month. Cancel anytime.</span>
+  <span>Cancel anytime. No contracts, no cancellation fees.</span>
 </div>
 
 <footer class="site-footer">
