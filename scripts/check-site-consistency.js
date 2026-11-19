@@ -12,6 +12,7 @@
 //   banned hero lead-in (BANNED_HERO, e.g. "For trades.");
 // - has a repeated hero element that differs from the site majority:
 //   cancel line, price-line format, hero call button text;
+// - has a sample-mockup figcaption other than <em>Sample</em>;
 // - has a tel: link other than tel:+16473605774.
 //
 //   node scripts/check-site-consistency.js            check repo root pages
@@ -26,6 +27,7 @@ const MANIFEST = path.join(__dirname, "dist-manifest.txt");
 
 const CANON_BADGE = "✓ 30-day money-back guarantee";
 const TEL = "tel:+16473605774";
+const CANON_CAPTION = "<em>Sample</em>";
 const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach", "/crm-setup", "/custom-dashboards", "/multi-location"];
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i];
@@ -96,6 +98,14 @@ for (const f of pages) {
   for (const m of html.matchAll(/<p class="(?:hero-guarantee|guarantee-line)"[^>]*>([\s\S]*?)<\/p>/g)) {
     const t = decode(m[1].replace(/<[^>]+>/g, ""));
     if (t !== CANON_BADGE) err(f, "guarantee badge \"" + t + "\" is not \"" + CANON_BADGE + "\"");
+  }
+  // Ben 2026-11-19 t1209u: every sample-mockup caption reads just "Sample" in italics.
+  // Audio sample-call players (figure.tl-demo) keep their AI-voice disclosure caption.
+  for (const m of html.matchAll(/<figure class="([^"]*)"[^>]*>[\s\S]*?<\/figure>/g)) {
+    if (/\btl-demo\b/.test(m[1])) continue;
+    for (const c of m[0].matchAll(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/g)) {
+      if (c[1].trim() !== CANON_CAPTION) err(f, "mockup caption \"" + decode(c[1]) + "\" is not " + CANON_CAPTION);
+    }
   }
   const hero = (html.match(/<section class="(?:hero|hub-hero)[^"]*"[\s\S]*?<\/section>/) || [""])[0];
   for (const re of BANNED_HERO) { const m = hero.match(re); if (m) err(f, "hero has banned lead-in \"" + m[0].replace(/^>\s*/, "") + "\""); }
