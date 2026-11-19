@@ -97,8 +97,8 @@ const kept = [
   ['website-chat-to-text.html', 'Chats arrive as texts on your business number.'],
   ['website-chat-to-text.html', 'Every new chat arrives as a text on your business number.'],
   ['text-to-pay.html', 'from your business number'],
-  ['missed-call-text-back.html', 'get a text back from a separate number'],
-  ['missed-call-text-back.html', 'sent from a separate number'],
+  ['missed-call-text-back.html', 'get a text back in minutes — from a separate number'],
+  ['missed-call-text-back.html', 'sent from a separate text-back number'],
 ];
 for (const [file, sentence] of kept) {
   if (!read(file).includes(sentence)) fail(file + ' lost protected wording: ' + sentence);

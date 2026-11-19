@@ -255,7 +255,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       "name": "How do I cancel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can cancel anytime. There are no contracts and no cancellation fee, so you are never locked in. You can cancel by phone or by email, and cancelling costs you nothing extra — you simply stop the service when you choose."
+        "text": "You can cancel anytime. There are no contracts and no cancellation fees, so you are never locked in. You can cancel by phone or by email, and cancelling costs you nothing extra — you simply stop the service when you choose."
       }
     },
     {
@@ -263,7 +263,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       "name": "Is there a money-back guarantee?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked."
+        "text": "30-day money-back guarantee. If it's not right within 30 days of your first payment, we refund your setup fee and first month in full. No questions asked."
       }
     }
   ]
@@ -325,29 +325,48 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <main id="main" tabindex="-1">
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <h1>You're mid-appointment when the phone rings. Your AI receptionist takes the booking request and texts it to you.</h1>
-      <p class="hero-sub">It answers nights, weekends, and while you're with a client, takes the booking request, and texts it to you to confirm. $299/mo plus a one-time $299 setup. Cancel anytime. No contracts. No cancellation fee.</p>
-      <a href="tel:+16473605774" class="hero-call" style="margin:0 0 24px;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
-      <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
-      <div class="hero-trust">
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Works alongside your front desk, never replaces it
-        </div>
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Scripted to stick to what you approve. Anything it can't answer goes to you.
-        </div>
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Booking requests sent to you by text to confirm
+  <div data-r6="1" class="hero-grid hero-with-frame">
+            <div class="hero-copy">
+<h1>Mid-appointment? Your AI receptionist still answers.</h1>
+      <p class="hero-sub">For salons and clinics. It takes the request and texts you. You confirm the time.</p>
+      <a href="tel:+16473605774" class="hero-call" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+      <p class="hero-price-note"><strong>$299/mo</strong> +&nbsp;$299&nbsp;setup.</p>
+      <div class="hero-assure">
+        <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
+        <p class="hero-cancel">Cancel anytime. No contracts, no cancellation&nbsp;fees.</p>
+      </div>
+<div class="hero-down-cue" aria-hidden="true"></div>
+    </div>
+    <div class="hero-side">
+    <figure class="tl-frame tl-owner-card">
+      <div class="tl-phone">
+        <div class="tl-ear" aria-hidden="true"></div>
+        <div class="tl-screen">
+          <div class="tl-phone-head">
+            <div class="tl-avatar" aria-hidden="true">N</div>
+            <div>
+              <div class="tl-phone-name">North Nail Salon</div>
+              <div class="tl-phone-sub">Text from your AI receptionist</div>
+            </div>
+          </div>
+          <div class="tl-thread">
+            <p class="tl-chip"><b>Booking call answered</b></p>
+            <div class="tl-sms"><p><span class="tl-sms-kicker">What Jess gets</span> New request: Maya, gel set, Sat&nbsp;~2&nbsp;PM</p></div>
+            <dl class="tl-meta"><div><dt>Client</dt><dd>Maya</dd></div><div><dt>Service</dt><dd>Gel set</dd></div><div><dt>Time</dt><dd>Sat ~2 PM</dd></div></dl>
+            <a class="tl-listen" href="#sample-call">&#9654; Hear the sample call</a>
+          </div>
         </div>
       </div>
-      <p class="hero-sub">One call. We set it up on your number. You approve every word before it goes live.</p>
-      <p class="hero-sub">A Saturday gel set and a first physio visit both get an answer, and you confirm the time.</p>
+      <figcaption>Sample call. You approve the wording.</figcaption>
+    </figure>
     </div>
+            <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Questions it can't answer go to you.
+        </div>
+      </div>
+  
   </div>
 </section>
 
@@ -358,9 +377,11 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p>Call and tell us how your day runs. We'll set it up around your services, hours and booking rules.</p>
     <p>Tap to call. Leave a message and you'll get our text within minutes, and a call back fast.</p>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
-<section class="tl-demo-band">
+<section class="tl-demo-band" id="sample-call">
   <div class="section-inner">
     <!-- include:sample-call-salon -->
   </div>
@@ -390,6 +411,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- PAIN -->
@@ -411,6 +434,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- FILL THE GAP -->
@@ -433,6 +458,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
     <p>Deposit and cancellation rules are read out the way you script them, so callers hear your policy before they book.</p>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -458,6 +485,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- WHO THIS IS FOR / NOT FOR -->
@@ -485,6 +514,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- INCLUDED / NOT INCLUDED -->
@@ -515,6 +546,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- COMPARE -->
@@ -535,7 +568,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         <tbody>
           <tr>
             <td>Who runs it</td>
-            <td data-label="Human answering">Call center staff</td>
+            <td data-label="Human answering">Call centre staff</td>
             <td data-label="DIY AI apps">You set it up and pay per use</td>
             <td class="hl" data-label="Trueline managed">We build, train, and run</td>
           </tr>
@@ -555,6 +588,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </table>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 
@@ -564,14 +599,16 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <div class="section-eyebrow">Flat monthly fee</div>
     <h2 class="section-title">No per-call bills, and your booking rules stay yours.</h2>
     <div class="pricing-card">
+<p class="pricing-desc">$299/mo plus a one-time $299 setup.</p>
+
       <div class="pricing-badge">Salons and clinics</div>
       <div class="pricing-amount">$299<span>/mo</span></div>
       <p class="pricing-desc">$299 setup covers the install: your script, hours, services, booking rules and going live.</p>
       <p style="font-size:0.95rem;color:var(--navy);font-weight:600;margin:-14px 0 24px;">Done for you — we build it, train it on your business, and run it. Not software you configure yourself.</p>
       <div style="font-size:0.9rem;color:var(--navy);background:var(--sky);border-radius:10px;padding:14px 16px;margin:-8px 0 20px;">
         <p style="margin:0 0 6px;"><strong>Flat $299/mo.</strong> No per-call bills.</p>
-        <p style="margin:0 0 6px;"><strong>Cancel anytime.</strong> No contracts. No cancellation fee. Cancel by phone or email.</p>
-        <p style="margin:0;">30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p>
+        <p style="margin:0 0 6px;"><strong>Cancel anytime.</strong> No contracts, no cancellation fees. Cancel by phone or email.</p>
+        <p style="margin:0;">30-day money-back guarantee. If it's not right within 30 days of your first payment, we refund your setup fee and first month in full. No questions asked.</p>
       </div>
       <ul class="pricing-features">
         <li>Answers after hours and on weekends on your current number</li>
@@ -610,6 +647,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- FAQ -->
@@ -648,20 +687,22 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </details>
       <details>
         <summary>How do I cancel?</summary>
-        <p>You can cancel anytime. There are no contracts and no cancellation fee, so you are never locked in. You can cancel by phone or by email, and cancelling costs you nothing extra — you simply stop the service when you choose.</p>
+        <p>You can cancel anytime. There are no contracts and no cancellation fees, so you are never locked in. You can cancel by phone or by email, and cancelling costs you nothing extra — you simply stop the service when you choose.</p>
       </details>
       <details>
         <summary>Is there a money-back guarantee?</summary>
-        <p>30-day money-back guarantee. If it's not right within 30 days of your first invoice and first payment, we refund your setup fee and first month in full. No questions asked.</p>
+        <p>30-day money-back guarantee. If it's not right within 30 days of your first payment, we refund your setup fee and first month in full. No questions asked.</p>
       </details>
     </div>
   </div>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- BOTTOM CTA -->
 <section class="bottom-cta">
   <h2>Give callers an answer while you're with a client.</h2>
-  <p>You do the work. We set it up and run it. Call (647) 360-5774 and we'll walk you through how it answers your calls. Every day it isn't set up, the next booking call goes to the next name on Google.</p>
+  <p>You do your job. We answer every call. Call (647) 360-5774 and we'll walk you through how it answers your calls. Every day it isn't set up, the next booking call goes to the next name on Google.</p>
   <p class="hero-guarantee" style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px;margin-bottom:18px;font-size:0.95rem;">✓ 30-day money-back guarantee</p>
   <div class="cta-row">
     <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
@@ -672,7 +713,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <!-- FOOTER -->
 <div class="sticky-mobile-cta">
   <a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
-  <span>Month-to-month. Cancel anytime.</span>
+  <span>Cancel anytime. No contracts, no cancellation fees.</span>
 </div>
 
 <footer class="site-footer">
