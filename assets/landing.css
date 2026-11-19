@@ -762,3 +762,12 @@ body.landing-offer .hero { padding-bottom: 72px; }
 @media (max-width: 767px) { body.landing-offer .hero { padding-bottom: 60px; } }
 body.landing-offer .hero .hero-price-note .hero-price-sub { font-size: .9rem; color: var(--tl-ink-soft); }
 body.landing-form .hub-hero .hero-trust-line, body.landing-form .hub-hero .hero-price-line { max-width: var(--tl-measure); }
+
+/* ---- Round 9 (2026-11-19) ---- */
+body.landing-offer .hero .hero-side > .hero-proof { margin: 14px auto 0; max-width: 340px; text-align: center; font-size: .85rem; line-height: 1.5; color: var(--tl-ink-muted); }
+body.landing-call .hero .hero-process { font-size: .78rem; color: rgba(255,255,255,.66); }
+body.landing-call .hero .hero-assure .hero-cancel { font-size: .82rem; }
+body.landing-offer .hero .hero-price-note + .hero-assure { margin-top: 14px; }
+body.landing-offer .hero .hero-scope-note { margin: 12px 0 0; font-size: .82rem; color: var(--tl-ink-muted); }
+@media (min-width: 768px) { body.landing-offer .hero .hero-grid.fao-grid > .hero-side { align-self: start; margin-top: 40px; } }
+body.landing-form .hub-hero .hero-trust-line strong { color: #fff; }
