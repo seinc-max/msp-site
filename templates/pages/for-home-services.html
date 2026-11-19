@@ -161,29 +161,24 @@ a.hub-card:hover{border-color:#f97316;}
 </nav>
 <main id="main" tabindex="-1">
   <section class="hub-hero">
-    <div class="hub-hero-inner hero-with-frame">
+    <div class="hub-hero-inner hero-with-frame hub-v2">
+      <div class="hub-copy">
       <p class="hub-eyebrow">For Trades & Contractors</p>
       <p class="hero-rotation" id="hero-rotation" data-set="A" aria-live="polite">plumbers · house cleaners · HVAC · landscapers · roofers · movers</p>
       <h1>Your crew's on the job. Your phone still books the next one.</h1>
-      <p class="subhead">When you're under a sink, up on a roof or driving to the next house, that caller won't wait. They'll call the next company on Google. We answer on the number you already use, take the details and send you the job, so you get the work instead of your voicemail.</p>
-      <p class="not-you"><a href="/for-appointment-businesses">For Salons & Clinics</a></p>
+      <p class="subhead">That caller won't wait. They'll call the next company on Google. We answer on the number you already use, take the details and send you the job, so you get the work instead of your voicemail.</p>
       <a class="hub-cta" href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774. Tell us your trade and your hours.</a>
-<div class="hero-down-cue" aria-hidden="true"></div>
-
-      <p class="hub-support">For plumbers, HVAC, roofers, electricians, house cleaners, pest control, landscapers, movers, junk removal and other trades.</p>      <p class="after-hours">Try it now: call (647) 360-5774 and hang up. You'll get our text within minutes.</p>
-      <p class="after-hours">Leave a message and you'll get our text within minutes, and a call back fast.</p>
+      <div class="hero-assure">
+        <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
+        <p class="hero-cancel">Cancel anytime. No contracts, no cancellation fees.</p>
+      </div>
+      <p class="hero-try">Try it now: call (647) 360-5774 and hang up. You'll get our text within minutes.</p>
       <!-- seasonal: remove by 2027-04-01 -->
-<p>Missed calls spike with the first cold snap and after a storm (Invoca, 2026). Get set up before the next one hits.</p>
-
-      <ul class="chips" id="hero-chips">
-        <li>plumbers</li>
-        <li>house cleaners</li>
-        <li>HVAC</li>
-        <li>landscapers</li>
-        <li>roofers</li>
-        <li>movers</li>
-      </ul>
-      <div class="mockup-cta-arrow" aria-hidden="true"></div>
+      <p class="hero-proof">Missed calls spike with the first cold snap and after a storm (Invoca, 2026). Get set up before the next one hits.</p>
+      <p class="not-you">Run a salon or clinic? <a href="/for-appointment-businesses">For Salons &amp; Clinics</a></p>
+      <div class="hero-down-cue" aria-hidden="true"></div>
+      </div>
+      <div class="hub-side">
       <figure class="tl-frame">
         <div class="tl-phone">
           <div class="tl-ear" aria-hidden="true"></div>
@@ -205,6 +200,7 @@ a.hub-card:hover{border-color:#f97316;}
         </div>
         <figcaption>Example with a sample business name. This is the exact text format we set up. Your business name and your wording go in, and you approve it before it goes live.</figcaption>
       </figure>
+      </div>
     </div>
   </section>
   <section class="hub-section">
@@ -379,7 +375,7 @@ a.hub-card:hover{border-color:#f97316;}
     var set = rotationSets[key];
     line.textContent = set.join(" · ");
     line.setAttribute("data-set", key);
-    chips.replaceChildren.apply(chips, set.map(function (name) {
+    if (chips) chips.replaceChildren.apply(chips, set.map(function (name) {
       var li = document.createElement("li");
       li.textContent = name;
       return li;

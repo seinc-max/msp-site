@@ -160,25 +160,22 @@ a.hub-card:hover{border-color:#f97316;}
 </nav>
 <main id="main" tabindex="-1">
   <section class="hub-hero">
-    <div class="hub-hero-inner hero-with-frame">
+    <div class="hub-hero-inner hero-with-frame hub-v2">
+      <div class="hub-copy">
       <p class="hub-eyebrow">For Salons & Clinics</p>
       <p class="hero-rotation" id="hero-rotation" data-set="A" aria-live="polite">salons · barbers · pet groomers · dental offices · auto detailers</p>
       <h1>Your hands are busy. Your calendar still fills.</h1>
-      <p class="subhead">When you're mid-colour, mid-adjustment or mid-groom, the next customer calls anyway, and a missed call is a slot someone else gets. We answer on the number you already use and pass you booking requests, so empty chairs and no-show gaps get filled instead of wasted.</p>
-      <p class="not-you"><a href="/for-home-services">For Trades & Contractors</a></p>
+      <p class="subhead">The next customer calls anyway, and a missed call is a slot someone else gets. We answer on the number you already use and pass you booking requests, so empty chairs and no-show gaps get filled instead of wasted.</p>
       <a class="hub-cta" href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774. Tell us how you book and when you're open.</a>
-<div class="hero-down-cue" aria-hidden="true"></div>
-
-      <p class="hub-support">For salons, barbers, day spas, pet groomers, auto detailers, dental offices, physio clinics, massage therapy clinics, tattoo shops, yoga studios and anyone else who runs on appointments.</p>      <p class="after-hours">Try it now: call (647) 360-5774 and hang up. You'll get our text within minutes.</p>
-      <p class="after-hours">Leave a message and you'll get our text within minutes, and a call back fast.</p>
-      <ul class="chips" id="hero-chips">
-        <li>salons</li>
-        <li>barbers</li>
-        <li>pet groomers</li>
-        <li>dental offices</li>
-        <li>auto detailers</li>
-      </ul>
-      <div class="mockup-cta-arrow" aria-hidden="true"></div>
+      <div class="hero-assure">
+        <p class="hero-guarantee">✓ 30-day money-back guarantee</p>
+        <p class="hero-cancel">Cancel anytime. No contracts, no cancellation fees.</p>
+      </div>
+      <p class="hero-try">Try it now: call (647) 360-5774 and hang up. You'll get our text within minutes.</p>
+      <p class="not-you">Run a trade or contracting business? <a href="/for-home-services">For Trades &amp; Contractors</a></p>
+      <div class="hero-down-cue" aria-hidden="true"></div>
+      </div>
+      <div class="hub-side">
       <figure class="tl-frame tl-call">
         <div class="tl-phone">
           <div class="tl-ear" aria-hidden="true"></div>
@@ -203,6 +200,7 @@ a.hub-card:hover{border-color:#f97316;}
         </div>
         <figcaption>Example call with a sample business: how a booking request sounds. This is the exact call flow we set up: your business name, services and wording go in, and you approve it before it goes live. You get the booking request by text.</figcaption>
       </figure>
+      </div>
     </div>
   </section>
   <section class="hub-section">
@@ -356,7 +354,7 @@ a.hub-card:hover{border-color:#f97316;}
     var set = rotationSets[key];
     line.textContent = set.join(" · ");
     line.setAttribute("data-set", key);
-    chips.replaceChildren.apply(chips, set.map(function (name) {
+    if (chips) chips.replaceChildren.apply(chips, set.map(function (name) {
       var li = document.createElement("li");
       li.textContent = name;
       return li;
