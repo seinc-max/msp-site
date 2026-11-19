@@ -24,7 +24,9 @@
 // - speaks about the visitor in the third person in landing copy outside the
 //   sample mockups (heuristic THIRD_PERSON list, Ben t1223u);
 // - has a service-page calculator that differs from scripts/calc-markup.js, sits anywhere
-//   but directly after section 2, has the wrong CTA, or js/calculator.js fails its tests.
+//   but directly after section 2, has the wrong CTA, or js/calculator.js fails its tests;
+// - has a testimonial quote block on a non-demo page (Ben t1225u): <blockquote>, a
+//   testimonial / proof-quote class, a quoted heading, or Review schema.
 //
 //   node scripts/check-site-consistency.js            check repo root pages
 //   node scripts/check-site-consistency.js <dir>      check a built folder (e.g. dist)
@@ -169,6 +171,30 @@ for (const f of pages) {
   for (const m of html.matchAll(/<a [^>]*class="hero-call[^"]*"[^>]*>([\s\S]*?)<\/a>/g)) add("heroCall", decode(m[1].replace(/<[^>]+>/g, "")), f);
 }
 
+// 2b. No testimonial quote blocks on non-demo pages (Ben 2026-11-19 t1225u).
+function visibleMarkup(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ");
+}
+for (const f of pages) {
+  if (f === "demo" || f.startsWith("demo/")) continue;
+  const html = read(f);
+  const body = visibleMarkup(html);
+  if (/<blockquote\b/i.test(body)) err(f, "testimonial quote block (<blockquote>) is not allowed");
+  if (/\bclass="[^"]*\btestimonials?\b/i.test(body)) err(f, "testimonial block is not allowed");
+  if (/\bclass="[^"]*\btestimonial-author\b/i.test(body)) err(f, "testimonial attribution is not allowed");
+  if (/\bclass="[^"]*\bproof-quote\b/i.test(body) || /\bclass="[^"]*\bproof-attribution\b/i.test(body)) {
+    err(f, "testimonial proof-quote block is not allowed");
+  }
+  for (const m of body.matchAll(/<h[1-6][^>]*>\s*["“]([^<]+)["”]\s*<\/h[1-6]>/gi)) {
+    err(f, "quoted heading \"" + decode(m[1]).slice(0, 80) + "\" is not allowed (no testimonial quotes)");
+  }
+  if (/"@type"\s*:\s*"Review"/i.test(html) || /itemtype="https?:\/\/schema\.org\/Review"/i.test(html) || /\breviewBody\b|\breviewRating\b/i.test(html)) {
+    err(f, "Review/testimonial schema is not allowed");
+  }
+}
+
 // 4. Call line (Ben t1215u/t1216u) and second person (Ben t1223u).
 const callLines = {};
 for (const f of pages) {
@@ -278,4 +304,4 @@ if (errors.length) {
   console.error("check-site-consistency: FAIL (" + errors.length + ")\n- " + errors.join("\n- "));
   process.exit(1);
 }
-console.log("check-site-consistency: OK. " + pages.length + " pages: full nav (" + (homeLinks || []).length + " links) on every page, one guarantee badge form, no banned phrases, hero cancel/price/call consistent, " + Object.keys(callLines).length + " call lines, no third-person landing copy, " + calcCount + " calculators consistent.");
+console.log("check-site-consistency: OK. " + pages.length + " pages: full nav (" + (homeLinks || []).length + " links) on every page, one guarantee badge form, no banned phrases, no testimonial quotes, hero cancel/price/call consistent, " + Object.keys(callLines).length + " call lines, no third-person landing copy, " + calcCount + " calculators consistent.");
