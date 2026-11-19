@@ -844,3 +844,44 @@ body.landing-hub .hub-v2 > .hub-side { flex-direction: column; align-items: cent
   body.landing-hub .hub-v2 .hub-side > .tl-frame .tl-phone-head { padding: 8px 12px; }
 }
 @media (max-width: 767px) { body.landing-call.landing-hub .hub-hero a.hub-cta { min-height: 56px; padding-top: 12px; padding-bottom: 12px; } }
+
+/* ---- Round 11 (2026-11-19): who sends what, STOP line, focal points, pro cards ---- */
+.tl-time .tl-who { font-weight: 800; }
+.tl-bubble .tl-stop { display: block; margin-top: 4px; }
+.tl-bubble .tl-pill { margin-top: 6px; }
+/* 3-check rows run wider. */
+@media (min-width: 768px) {
+  body.landing-offer .hero .hero-grid[data-r6] > .hero-trust:has(> .trust-item:nth-child(3)) { max-width: 720px; }
+}
+/* Mobile: focal points about 20% bigger. */
+@media (max-width: 767px) {
+  body.landing-offer .hero .hero-side > .tl-frame .tl-bubble.tl-focus { font-size: 1.02rem; font-weight: 600; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-pill { font-size: .9rem; padding: 3px 12px; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-sms p { font-size: 1.1rem !important; }
+  body.landing-offer .hero .hero-side > .tl-frame .tl-site-call { font-size: 1.1em; padding: 10px 16px; }
+  .tl-board .tl-task { font-size: 1.14rem; }
+  .tl-board .tl-kpi em { font-size: 1.2em; }
+  .tl-board .tl-total strong { font-size: 1.38rem; }
+  .tl-board .tl-mail.tl-reply p:not(.tl-mail-meta) { font-size: 1.1rem !important; font-weight: 600; }
+}
+.tl-board .tl-task + .tl-kanban, .tl-board .tl-task + .tl-kpis { margin-top: 10px; }
+.tl-board .tl-kpi.tl-kpi-flag { box-shadow: inset 0 0 0 2px #f97316; }
+/* Fractional AI officer: retainer price reads first. */
+.pricing-card .pricing-amount-big { font-size: clamp(1.75rem, 7vw, 2.1rem) !important; white-space: nowrap; margin: 6px 0 8px; }
+/* Law hub + AI support agent: right-side card on desktop. */
+.hub-hero-inner.pro-split .pro-split-side { margin-top: 24px; width: 100%; max-width: 380px; }
+.pro-split-side .pro-steps-title { color: #fff; font-weight: 700; margin: 0 0 10px; }
+.pro-split-side .pro-steps li b { font-weight: 600; }
+.pro-split-side .pro-steps li small { display: block; font-size: .875rem; font-weight: 500; color: rgba(255,255,255,.78); margin-top: 2px; }
+.pro-qa { margin: 0; background: #fff; color: #1a2744; border-radius: 16px; padding: 20px 22px; box-shadow: 0 24px 50px rgba(0,0,0,.28); text-align: left; }
+.pro-qa p { margin: 0 0 10px; line-height: 1.45; color: #1a2744; }
+.pro-qa .pro-qa-title { font-size: .8125rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #c2410c; }
+.pro-qa .pro-qa-q { background: #f1f5f9; border-radius: 12px; padding: 10px 12px; }
+.pro-qa .pro-qa-a { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 12px; padding: 10px 12px; }
+.pro-qa .pro-qa-flag { font-weight: 600; }
+.pro-qa figcaption { font-size: .8125rem; color: #475569; }
+@media (min-width: 1024px) {
+  body.landing-hub .hub-hero .hub-hero-inner.pro-split { display: grid; grid-template-columns: minmax(0, 1fr) 360px; column-gap: 64px; align-items: center; }
+  .hub-hero-inner.pro-split .pro-split-side { margin-top: 0; }
+}
+.tl-bubble.tl-out .tl-time .tl-who { color: #fff; } .tl-bubble.tl-in .tl-time .tl-who { color: #1a2744; }
