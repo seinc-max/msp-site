@@ -67,7 +67,6 @@ const LANDING = new Set([
   'cold-outreach.html',
   'crm-setup.html',
   'custom-dashboards.html',
-  'multi-location.html',
 ]);
 const INFO = new Set(['about.html', 'terms.html', 'privacy.html']);
 const PAGE = new Set([

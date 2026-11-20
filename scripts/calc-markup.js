@@ -31,7 +31,6 @@ const PAGES = {
   "cold-outreach.html": "cold-outreach",
   "crm-setup.html": "crm-setup",
   "custom-dashboards.html": "custom-dashboards",
-  "multi-location.html": "multi-location",
   "ai-support-agent.html": "ai-support-agent",
 };
 const SKIPPED = {

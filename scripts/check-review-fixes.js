@@ -42,7 +42,6 @@ const audienceOf = {
   'cold-outreach.html': 'trades',
   'crm-setup.html': 'trades',
   'custom-dashboards.html': 'trades',
-  'multi-location.html': 'trades',
   'for-law-firms-accountants-and-advisors.html': 'professional',
   'ai-governance.html': 'professional',
   'fractional-ai-officer.html': 'professional',
@@ -72,7 +71,6 @@ const homeMenu = [
   '/crm-setup',
   '/cold-outreach',
   '/custom-dashboards',
-  '/multi-location',
   '/for-appointment-businesses',
   '/ai-receptionist-for-salons',
   '/google-review-requests-for-salons',
@@ -85,7 +83,8 @@ function bodyClass(html) {
 }
 
 const files = Object.keys(audienceOf);
-if (files.length !== 35) fail('audience map does not cover 35 pages, got ' + files.length);
+// 2026-11-20 (Ben t1297u): /multi-location removed, 35 -> 34 pages, 13 -> 12 trades.
+if (files.length !== 34) fail('audience map does not cover 34 pages, got ' + files.length);
 for (const file of files) {
   const html = read(file);
   const want = audienceOf[file];
@@ -93,7 +92,7 @@ for (const file of files) {
   const got = cls.includes('audience-trades') ? 'trades' : cls.includes('audience-salons') ? 'salons' : cls.includes('audience-professional') ? 'professional' : '';
   if (got !== want) fail(file + ' audience is ' + (got || 'neutral') + ', expected ' + (want || 'neutral'));
 }
-pass('35 pages classified: 5 neutral, 13 trades, 4 salons, 13 professional');
+pass('34 pages classified: 5 neutral, 12 trades, 4 salons, 13 professional');
 
 // Gating retired 2026-11-19 (Ben t1206u): every page keeps the full Services menu.
 const gatedNav = new Set([]);

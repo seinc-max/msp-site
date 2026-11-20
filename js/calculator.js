@@ -190,19 +190,6 @@
       sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
       formula: 'Hours a week × your hourly value × 4.3 weeks'
     },
-    'multi-location': {
-      title: 'What are missed calls across your locations worth?',
-      note: 'An estimate from your numbers only. It shows the value at stake, not what we will recover. Multi-location sets up and reports on your services. It does not answer calls on its own. Nothing you enter is sent.',
-      inputs: [
-        { k: 'locs', label: 'Locations', min: 2, max: 20, step: 1, v: 3, u: 'n' },
-        { k: 'calls', label: 'Missed calls a week at each location', min: 0, max: 30, step: 1, v: 4, u: 'n' },
-        { k: 'book', label: 'Missed callers who would have booked', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
-        { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 350, u: 'money' }
-      ],
-      f: function (v) { var jobs = v.locs * v.calls * pct(v.book) * W; var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
-      sub: 'About {jobs} {jobs|job|jobs} a month across your locations, or {year} a year.',
-      formula: 'Locations × missed calls a week × % who would have booked × average job value × 4.3 weeks'
-    },
     'ai-support-agent': {
       title: 'What do routine client questions cost your team?',
       lead: 'Your team\u2019s time on them is worth',
