@@ -9,10 +9,10 @@ catch (e) { console.error("test-calculators: FAIL js/calculator.js throws: " + e
 
 const cases = [
   // id, inputs (merged over defaults), expected monthly $, expected sub (or null)
-  ["missed-call-text-back", {}, 2258, "About 6.5 jobs a month, or $27,096 a year."],       // 5 x 0.30 x 350 x 4.3 = 2257.5
+  ["missed-call-text-back", {}, 2258, "About 6 jobs a month, or $27,096 a year."],       // 5 x 0.30 x 350 x 4.3 = 2257.5
   ["missed-call-text-back", { calls: 10, book: 50, job: 400 }, 8600, null],                  // 10 x .5 x 400 x 4.3
   ["missed-call-text-back", { calls: 0 }, 0, "About 0 jobs a month, or $0 a year."],
-  ["ai-receptionist", {}, 3870, "About 8.6 jobs a month, or $46,440 a year."],             // 8 x .25 x 450 x 4.3
+  ["ai-receptionist", {}, 3870, "About 9 jobs a month, or $46,440 a year."],             // 8 x .25 x 450 x 4.3
   ["ai-receptionist-for-salons", {}, 1828, null],                                            // 10 x .5 x 85 x 4.3 = 1827.5
   ["google-review-requests", {}, 350, "That\u2019s $4,200 a year."],
   ["google-review-requests", { extra: 3, job: 500 }, 1500, null],

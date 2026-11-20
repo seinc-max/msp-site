@@ -17,6 +17,11 @@
     var r = Math.round((Number(n) || 0) * 10) / 10;
     return String(r).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
+  // Discrete counts (jobs, bookings, appointments) show as whole numbers (Ben 2026-11-19 9:35 PM ET).
+  // The $ result still uses the unrounded count, as every calculator already did.
+  function whole(n) {
+    return String(Math.round(Number(n) || 0)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
   var pct = function (p) { return (Number(p) || 0) / 100; };
 
   // Input units: n = plain number, pct = percent, money = dollars, hrs = hours, min = minutes, days = days.
@@ -28,7 +33,7 @@
         { k: 'book', label: 'Missed callers who would have booked', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
         { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 350, u: 'money' }
       ],
-      f: function (v) { var jobs = v.calls * pct(v.book) * W; var m = jobs * v.job; return { main: m, t: { jobs: count(jobs) } }; },
+      f: function (v) { var jobs = v.calls * pct(v.book) * W; var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
       formula: 'Missed calls a week × % who would have booked × average job value × 4.3 weeks'
     },
@@ -39,7 +44,7 @@
         { k: 'book', label: 'Callers who would book a job', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
         { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 450, u: 'money' }
       ],
-      f: function (v) { var jobs = v.calls * pct(v.book) * W; var m = jobs * v.job; return { main: m, t: { jobs: count(jobs) } }; },
+      f: function (v) { var jobs = v.calls * pct(v.book) * W; var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
       formula: 'Calls you can\u2019t pick up a week × % who would book × average job value × 4.3 weeks'
     },
@@ -50,7 +55,7 @@
         { k: 'book', label: 'Callers who would have booked', min: 0, max: 100, step: 5, v: 50, u: 'pct' },
         { k: 'visit', label: 'Your average visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
       ],
-      f: function (v) { var n = v.calls * pct(v.book) * W; var m = n * v.visit; return { main: m, t: { n: count(n) } }; },
+      f: function (v) { var n = v.calls * pct(v.book) * W; var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
       sub: 'About {n} {n|booking|bookings} a month, or {year} a year.',
       formula: 'Missed booking calls a week × % who would have booked × average visit value × 4.3 weeks'
     },
@@ -82,7 +87,7 @@
         { k: 'win', label: 'Quiet quotes you\u2019d win with a follow-up', min: 0, max: 50, step: 1, v: 10, u: 'pct' },
         { k: 'job', label: 'Your average quote value', min: 100, max: 25000, step: 100, v: 2500, u: 'money' }
       ],
-      f: function (v) { var jobs = v.quotes * pct(v.quiet) * pct(v.win); var m = jobs * v.job; return { main: m, t: { jobs: count(jobs) } }; },
+      f: function (v) { var jobs = v.quotes * pct(v.quiet) * pct(v.win); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
       formula: 'Quotes a month × % that go quiet × % you\u2019d win back × average quote value'
     },
@@ -94,7 +99,7 @@
         { k: 'book', label: 'Of those, how many would book', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
         { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 400, u: 'money' }
       ],
-      f: function (v) { var jobs = v.visits * pct(v.ask) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: count(jobs) } }; },
+      f: function (v) { var jobs = v.visits * pct(v.ask) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
       formula: 'Visitors a month × % who leave with a question × % who would book × average job value'
     },
@@ -120,7 +125,7 @@
         { k: 'book', label: 'Callers who book a job', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
         { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 400, u: 'money' }
       ],
-      f: function (v) { var jobs = v.visits * pct(v.call) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: count(jobs) } }; },
+      f: function (v) { var jobs = v.visits * pct(v.call) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
       formula: 'Visitors a month × % who would call × % who book × average job value'
     },
@@ -132,7 +137,7 @@
         { k: 'book', label: 'Of those, how many would book with a fast reply', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
         { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 500, u: 'money' }
       ],
-      f: function (v) { var jobs = v.leads * pct(v.cold) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: count(jobs) } }; },
+      f: function (v) { var jobs = v.leads * pct(v.cold) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
       formula: 'Leads a month × % that go cold × % who would book × average job value'
     },
@@ -143,7 +148,7 @@
         { k: 'ns', label: 'Clients who don\u2019t show up', min: 0, max: 40, step: 1, v: 8, u: 'pct' },
         { k: 'visit', label: 'Your average visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
       ],
-      f: function (v) { var n = v.appts * pct(v.ns) * W; var m = n * v.visit; return { main: m, t: { n: count(n) } }; },
+      f: function (v) { var n = v.appts * pct(v.ns) * W; var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
       sub: 'About {n} empty {n|appointment|appointments} a month, or {year} a year.',
       formula: 'Appointments a week × % who don\u2019t show × average visit value × 4.3 weeks'
     },
@@ -194,7 +199,7 @@
         { k: 'book', label: 'Missed callers who would have booked', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
         { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 350, u: 'money' }
       ],
-      f: function (v) { var jobs = v.locs * v.calls * pct(v.book) * W; var m = jobs * v.job; return { main: m, t: { jobs: count(jobs) } }; },
+      f: function (v) { var jobs = v.locs * v.calls * pct(v.book) * W; var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|job|jobs} a month across your locations, or {year} a year.',
       formula: 'Locations × missed calls a week × % who would have booked × average job value × 4.3 weeks'
     },
@@ -238,7 +243,7 @@
     return Math.min(i.max, Math.max(i.min, x));
   }
 
-  var api = { CALCS: CALCS, WEEKS: W, money: money, count: count, defaults: defaults, result: result, clamp: clamp };
+  var api = { CALCS: CALCS, WEEKS: W, money: money, count: count, whole: whole, defaults: defaults, result: result, clamp: clamp };
   if (typeof module === 'object' && module.exports) module.exports = api;
   if (typeof document === 'undefined') return;
 
