@@ -12,6 +12,8 @@
 //   banned hero lead-in (BANNED_HERO, e.g. "For trades.");
 // - has a repeated hero element that differs from the site majority:
 //   cancel line, price-line format, hero call button text;
+// - has a cancel-line drift variant ("month to month", "no notice period", ...) or a
+//   refund sentence other than REFUND_LINE (Ben 2026-11-19 Q3/Q4);
 // - has a "call and hang up" test prompt (BANNED_HANGUP);
 // - claims texts come from the client's own number (BANNED_SENDER);
 // - has a sample figcaption that is not italic or does not start "Just a sample";
@@ -45,7 +47,20 @@ const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach"
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i,
   // Ben 2026-11-19 t1202u: copy must include all trades; no single-trade "under a sink" image.
-  /under (?:a|the) sink/i];
+  /under (?:a|the) sink/i,
+  // Ben 2026-11-19 (Q4, 8:15-8:19 PM ET): one cancel line everywhere, incl. /terms:
+  // "Cancel anytime. No contracts, no cancellation fees." No "month to month" or drift variants.
+  /month[\s\u00a0-]+to[\s\u00a0-]+month/i,
+  /no notice period/i,
+  /No contracts,? cancel anytime/i,
+  /No contracts required/i,
+  /There are no contracts and no cancellation fees/i,
+  /no cancellation fee\b(?!s)/i,
+  // Ben 2026-11-19 (Q3): the refund sentence is exactly REFUND_LINE; no older refund variants.
+  /refund (?:your|the) (?:entire first payment|setup fee|first month|\$|build fee)/i,
+  /refunds the (?:\$|build fee|setup)/i];
+// Ben 2026-11-19 (Q3): every "we refund" sentence on the site is exactly this.
+const REFUND_LINE = "We refund what you've paid us in your first 30 days, in full.";
 // Ben 2026-11-19 t1223u: landing copy speaks to the visitor as "you". Heuristic only:
 // these phrases describe the visitor in the third person. Checked on landing pages
 // (body.landing-*) in visible copy, FAQ JSON-LD and meta descriptions, after removing
@@ -141,6 +156,9 @@ for (const f of textFiles) {
   for (const re of BANNED) {
     const m = text.match(re) || raw.match(re);
     if (m) err(f, "banned phrase \"" + m[0] + "\"");
+  }
+  for (const m of decode(text).matchAll(/\bwe refund\b[^.]*\./gi)) {
+    if (m[0].toLowerCase() !== REFUND_LINE.toLowerCase()) err(f, "refund sentence \"" + m[0] + "\" is not \"" + REFUND_LINE + "\"");
   }
 }
 for (const f of pages) {
