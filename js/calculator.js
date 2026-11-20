@@ -84,7 +84,7 @@
       inputs: [
         { k: 'quotes', label: 'Quotes you send each month', min: 0, max: 100, step: 1, v: 20, u: 'n' },
         { k: 'quiet', label: 'Quotes that go quiet', min: 0, max: 100, step: 5, v: 50, u: 'pct' },
-        { k: 'win', label: 'Quiet quotes you\u2019d win with a follow-up', min: 0, max: 50, step: 1, v: 10, u: 'pct' },
+        { k: 'win', label: 'Quiet quotes you\u2019d win back', min: 0, max: 50, step: 1, v: 10, u: 'pct' },
         { k: 'job', label: 'Your average quote value', min: 100, max: 25000, step: 100, v: 2500, u: 'money' }
       ],
       f: function (v) { var jobs = v.quotes * pct(v.quiet) * pct(v.win); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
