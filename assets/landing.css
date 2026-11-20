@@ -556,7 +556,9 @@ body.landing-hub .hub-v2 .not-you a { color: #fff; text-decoration: underline; t
 body.landing-hub .hub-v2 > .hub-copy > .hero-down-cue { position: absolute; left: 50%; bottom: 18px; width: 28px; height: 28px; margin: 0; transform: translateX(-50%); }
 
 /* Section call buttons on hubs render as real buttons. */
-body.landing-call .section-action a.btn-primary {
+body.landing-call .section-action a.btn-primary,
+body.landing-hub.landing-form .section-action a.btn-primary,
+body.landing-hub .hub-bottom-cta a.btn-primary {
   box-sizing: border-box;
   max-width: 100%;
   display: inline-flex;
@@ -572,6 +574,8 @@ body.landing-call .section-action a.btn-primary {
   color: #fff;
 }
 @media (max-width: 767px) { body.landing-call .section-action a.btn-primary { width: 100%; box-sizing: border-box; } }
+/* Release p (2026-11-20): the hub bottom call link keeps its 640px cap; law/support hubs' mid-page links get the same box (were colour only, 21-26px tall). */
+body.landing-hub .hub-bottom-cta a.btn-primary { width: 100%; max-width: 640px; }
 
 /* Home: copy left, "what kind of business" picker right. Fills the old empty half. */
 body.landing-home .hero { position: relative; padding-top: 64px; padding-bottom: 80px; }
