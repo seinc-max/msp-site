@@ -569,66 +569,144 @@ footer.site-footer .footer-address {
   footer.site-footer .footer-primary,
   footer.site-footer .footer-meta { display: contents; }
 }
+/* Desktop footer layout only (min-width 801px). Base footer rules and the max-width 800px block above are unchanged. Option A — Ben t1267u/t1268u, 2026-11-19. Hub links removed, legal column only — Ben t1269u, 2026-11-19. */
+/* Option A — desktop only. Base + max-width 800px rules are untouched. */
 @media (min-width: 801px) {
   footer.site-footer {
-    display: flex !important;
-    flex-wrap: wrap;
-    align-items: center;
-    column-gap: 28px;
-    row-gap: 2px;
-    padding: 20px 6%;
+    display: grid !important;
+    grid-template-columns: minmax(16rem, 1fr) max-content max-content;
+    column-gap: 72px;
+    justify-content: space-between;
+    row-gap: 0;
+    align-items: start;
+    flex-wrap: unset;
+    padding: 56px 5% 0;
+    background: #111827 !important;
+    color: rgba(255, 255, 255, 0.72);
   }
+
   footer.site-footer .footer-brand {
     display: flex;
-    flex: 1 1 320px;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2px 14px;
-    min-width: min(100%, 280px);
+    flex: unset;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding-bottom: 40px;
   }
+
+  footer.site-footer .footer-logo,
+  footer.site-footer .footer-logo:hover {
+    color: #fff;
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+  }
+
   footer.site-footer .footer-tagline {
     margin: 0;
-    flex: 1 1 12rem;
+    flex: unset;
     min-width: 0;
-    line-height: 1.35;
+    max-width: 22rem;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.9375rem;
+    line-height: 1.5;
   }
+
   footer.site-footer .footer-primary {
-    display: flex;
-    flex: 0 1 auto;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    column-gap: 16px;
-    row-gap: 0;
-    min-width: 0;
-    max-width: 100%;
-    margin-left: auto;
+    display: contents;
+    flex: unset;
+    max-width: none;
+    margin-left: 0;
   }
+
   footer.site-footer .footer-contact,
   footer.site-footer .footer-copy,
-  footer.site-footer .footer-address { margin: 0; }
-  footer.site-footer .footer-links { text-align: right; }
+  footer.site-footer .footer-address {
+    margin: 0;
+  }
+
+  footer.site-footer .footer-contact:not(.footer-links) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    padding-bottom: 40px;
+  }
+
+  footer.site-footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding-bottom: 40px;
+  }
+
+  footer.site-footer .footer-contact a {
+    color: rgba(255, 255, 255, 0.9);
+    min-height: 0;
+    padding: 6px 0;
+    line-height: 1.45;
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+
+  footer.site-footer .footer-contact:not(.footer-links) a[href^="tel"] {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-top: 0;
+  }
+
+  footer.site-footer .footer-contact a:hover {
+    color: #fff;
+  }
+
   footer.site-footer .footer-meta {
     display: flex;
-    flex: 1 0 100%;
+    flex: unset;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
-    gap: 2px 20px;
+    gap: 8px 24px;
+    grid-column: 1 / -1;
     min-width: 0;
+    margin: 0;
+    padding: 16px 0 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
+
   footer.site-footer .footer-address,
   footer.site-footer .footer-copy {
     font-size: 0.875rem;
     line-height: 1.4;
+    color: rgba(255, 255, 255, 0.62);
   }
-  footer.site-footer .footer-copy { margin-left: auto; }
+
+  footer.site-footer .footer-copy {
+    margin-left: auto;
+    flex: 0 1 auto;
+  }
 }
-/* Below the two-row desktop, the copyright does not share a line with a wrapping address. */
+
+/* Keep the bottom-bar copyright beside the address at mid desktop widths.
+   Replaces the previous 801–1439 wrap rule for this layout only. */
 @media (min-width: 801px) and (max-width: 1439px) {
   footer.site-footer .footer-copy {
-    flex: 1 0 100%;
-    margin-left: 0;
+    flex: 0 1 auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1100px) {
+  footer.site-footer {
+    grid-template-columns: minmax(14rem, 1fr) max-content max-content;
+    column-gap: 48px;
+    padding: 48px 5% 0;
   }
 }
 @media (min-width: 981px) {

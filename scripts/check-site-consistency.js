@@ -7,6 +7,9 @@
 // Fails (exit 1) when any shipped HTML page:
 // - lacks the full home nav: same link set as index.html's nav (all Services
 //   entries incl. the 6 new pages), no tl-nav-gated, and one nav CTA;
+// - has a footer that still links to /for-home-services or /for-appointment-businesses
+//   (Ben t1269u 2026-11-19: those hubs stay in the menu only), or is missing About,
+//   Privacy, Terms, the phone, email, address or copyright;
 // - has a guarantee badge whose text is not exactly CANON_BADGE;
 // - contains a banned phrase (BANNED) anywhere in shipped text files, or a
 //   banned hero lead-in (BANNED_HERO, e.g. "For trades.");
@@ -137,6 +140,26 @@ for (const f of pages) {
   }
   const ctas = (nav.match(/class="nav-cta/g) || []).length;
   if (ctas !== 1) err(f, "nav must have exactly one nav-cta, found " + ctas);
+}
+
+
+// 1b. Footer: no trades/salons hub links (Ben t1269u). Hubs stay in the Services menu.
+function footerOf(html) {
+  const m = html.match(/<footer class="site-footer"[\s\S]*?<\/footer>/);
+  return m ? m[0] : "";
+}
+for (const f of pages) {
+  const footer = footerOf(read(f));
+  if (!footer) { err(f, "no <footer class=\"site-footer\">"); continue; }
+  if (/href="\/for-home-services"/.test(footer) || /href="\/for-appointment-businesses"/.test(footer)) {
+    err(f, "footer still has a Trades or Salons hub link (Ben t1269u: hubs stay in the menu only)");
+  }
+  for (const [href, label] of [["/about", "About"], ["/privacy", "Privacy"], ["/terms", "Terms"], ["tel:+16473605774", "phone"], ["mailto:hello@truelineit.com", "email"]]) {
+    if (!footer.includes('href="' + href + '"')) err(f, "footer missing " + label + " link");
+  }
+  if (!footer.includes("1250 Brant Street, Suite 400, Burlington, ON L7P 1X8")) err(f, "footer missing address");
+  if (!footer.includes("© 2026 Trueline IT. All rights reserved.")) err(f, "footer missing copyright");
+  if (!footer.includes("Phone and AI help for trades and contractors. Salons and clinics too.")) err(f, "footer missing tagline");
 }
 
 // 2. Guarantee badge, banned phrases, tel links, collected hero elements.
@@ -322,4 +345,4 @@ if (errors.length) {
   console.error("check-site-consistency: FAIL (" + errors.length + ")\n- " + errors.join("\n- "));
   process.exit(1);
 }
-console.log("check-site-consistency: OK. " + pages.length + " pages: full nav (" + (homeLinks || []).length + " links) on every page, one guarantee badge form, no banned phrases, no testimonial quotes, hero cancel/price/call consistent, " + Object.keys(callLines).length + " call lines, no third-person landing copy, " + calcCount + " calculators consistent.");
+console.log("check-site-consistency: OK. " + pages.length + " pages: full nav (" + (homeLinks || []).length + " links) on every page, footer has no hub links, one guarantee badge form, no banned phrases, no testimonial quotes, hero cancel/price/call consistent, " + Object.keys(callLines).length + " call lines, no third-person landing copy, " + calcCount + " calculators consistent.");
