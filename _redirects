@@ -218,3 +218,8 @@
 /templates/* / 301
 /scripts/* / 301
 /docs/* / 301
+
+# Multi-Location page removed 2026-11-20 (Ben t1297u)
+/multi-location /for-home-services 301
+/multi-location/ /for-home-services 301
+/multi-location.html /for-home-services 301

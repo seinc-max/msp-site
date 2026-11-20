@@ -35,7 +35,6 @@ const PAGES = {
   'cold-outreach.html': 'landing-call landing-offer',
   'crm-setup.html': 'landing-call landing-offer',
   'custom-dashboards.html': 'landing-call landing-offer',
-  'multi-location.html': 'landing-call landing-offer',
 };
 const NON_LANDING = ['about.html', 'privacy.html', 'terms.html', 'blog/what-sovereign-ai-actually-means.html', 'ai-exposure-score.html'];
 

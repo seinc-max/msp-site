@@ -69,7 +69,6 @@ lead-follow-up.html
 llms.txt
 margin-leakage-calculator.html
 missed-call-text-back.html
-multi-location.html
 og-image-professional.jpg
 og-image-trades.jpg
 og-image.jpg
