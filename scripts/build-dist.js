@@ -31,7 +31,7 @@ const ALLOW = new Set([
   "og-image-professional.jpg", "og-image-trades.jpg", "og-image.jpg", "og-image.png",
   "privacy.html", "quote-follow-up-win-back.html", "robots.txt", "sitemap.xml", "688213215a3247df8b5797e268fbd61b.txt",
   "terms.html", "text-to-pay.html", "website-chat-to-text.html",
-  "lead-follow-up.html", "appointment-reminders.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html", "multi-location.html",
+  "lead-follow-up.html", "appointment-reminders.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html",
 ]);
 
 // Known non-public entries. Never copied. Pages reads functions/ from the repo root.

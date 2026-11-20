@@ -46,7 +46,7 @@ const MANIFEST = path.join(__dirname, "dist-manifest.txt");
 const CANON_BADGE = "✓ 30-day money-back guarantee";
 const TEL = "tel:+16473605774";
 const CAPTION_START = "Just a sample";
-const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach", "/crm-setup", "/custom-dashboards", "/multi-location"];
+const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach", "/crm-setup", "/custom-dashboards"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i,
   // Ben 2026-11-19 t1202u: copy must include all trades; no single-trade "under a sink" image.
@@ -101,7 +101,6 @@ const BANNED_SENDER = [
 const PRICE_FORMAT_EXCEPTIONS = {
   "contractor-websites.html": "<strong>$N/mo</strong>. No setup fee.",
   "custom-dashboards.html": "<strong>$N/mo</strong> +&nbsp;$N&nbsp;build.",
-  "multi-location.html": "<strong>$N/mo</strong> for each location +&nbsp;$N&nbsp;setup.<span class=\"hero-price-sub\">Charged on top of the services you run.</span>",
 };
 
 const files = fs.readFileSync(MANIFEST, "utf8").split("\n").map((s) => s.trim()).filter(Boolean);

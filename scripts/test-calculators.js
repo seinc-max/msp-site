@@ -30,7 +30,6 @@ const cases = [
   ["cold-outreach", { clients: 3 }, 36000, null],
   ["crm-setup", {}, 2568, "$1,600 in slipped jobs plus $968 of your time."],               // 2 x 800 + 3 x 75 x 4.3
   ["custom-dashboards", {}, 968, null],                                                      // 3 x 75 x 4.3 = 967.5
-  ["multi-location", {}, 5418, null],                                                        // 3 x 4 x .3 x 350 x 4.3
   ["ai-support-agent", {}, 1032, "About 17.2 staff hours a month, or $12,384 a year."],     // 40 x 6/60 x 60 x 4.3
 ];
 const fails = [];
