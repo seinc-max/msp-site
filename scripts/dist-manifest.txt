@@ -25,6 +25,8 @@ assets/img/air-ai-receptionist.svg
 assets/img/asa-ai-support-agent.svg
 assets/img/chat-website-chat-to-text.svg
 assets/img/cw-contractor-website.svg
+assets/img/cw-sample-roof-240.webp
+assets/img/cw-sample-roof-480.webp
 assets/img/cw-sample-roof.webp
 assets/img/fab-appointment-businesses.svg
 assets/img/fao-fractional-ai-officer.svg
