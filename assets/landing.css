@@ -641,7 +641,9 @@ body.landing-home .hero .home-pick .front-jump-btn span { color: var(--tl-orange
 body.landing-home .hero .home-pick .front-jump-btn:hover { background: #fff7ed; color: var(--tl-navy); }
 body.landing-home .hero .home-pick .home-pick-more {
   align-self: flex-start;
-  margin-top: 4px;
+  margin-top: -7px;
+  margin-bottom: -11px;
+  padding: 11px 0; /* Release q: 44px+ tap target, same visual position */
   font-size: .92rem;
   color: rgba(255,255,255,.8);
   text-decoration: underline;
