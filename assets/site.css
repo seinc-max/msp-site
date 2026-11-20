@@ -1586,3 +1586,7 @@ body .cw-showcase figcaption{margin:12px 0 0;font-size:.8rem!important;line-heig
   .cw-p-screen{border-radius:11px}
   .cw-stage{padding-bottom:22%}
 }
+
+/* 2026-11-19: hide the sticky call bar while the calculator result (and its own call button) is on screen,
+   so the bar never covers the calculator small print on phones. Set by js/calculator.js. */
+html.tl-calc-visible .sticky-mobile-cta { display: none !important; }

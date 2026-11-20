@@ -284,9 +284,25 @@
     sec.classList.add('tl-calc-ready');
     update();
   }
+  // 2026-11-19: at phone widths the sticky call bar covered the calculator small print.
+  // While the result panel (with its own call button) is on screen, hide the sticky bar.
+  function watchSticky(list) {
+    if (!root.IntersectionObserver || !document.documentElement.classList) return;
+    var seen = 0;
+    var io = new root.IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { seen += e.isIntersecting ? 1 : (e.target._tlSeen ? -1 : 0); e.target._tlSeen = e.isIntersecting; });
+      if (seen < 0) seen = 0;
+      document.documentElement.classList.toggle('tl-calc-visible', seen > 0);
+    }, { threshold: 0 });
+    for (var i = 0; i < list.length; i++) {
+      var r = list[i].querySelector('.tl-calc-result');
+      if (r) io.observe(r);
+    }
+  }
   function start() {
     var list = document.querySelectorAll('section.tl-calc-section[data-calc]');
     for (var i = 0; i < list.length; i++) wire(list[i]);
+    watchSticky(list);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
