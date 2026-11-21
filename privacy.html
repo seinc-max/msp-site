@@ -3,6 +3,9 @@
 <head>
 <!-- Google Tag Manager (production hostnames only) -->
 <script>window.__tlProd=/^(www\.)?truelineit\.com$/.test(location.hostname);</script>
+<!-- Cookie choice (Google Consent Mode v2): default set before Google Tag Manager loads. Banner: /assets/consent.js -->
+<script>(function(){var c=null;try{c=localStorage.getItem('tl_consent')}catch(e){}window.__tlConsent=c;window.dataLayer=window.dataLayer||[];if(typeof window.gtag!=='function')window.gtag=function(){window.dataLayer.push(arguments)};var v=c==='denied'?'denied':'granted';window.gtag('consent','default',{analytics_storage:v,ad_storage:v,ad_user_data:v,ad_personalization:v});if(c==='denied')(window._hsq=window._hsq||[]).push(['doNotTrack']);})();</script>
+<script src="/assets/consent.js?v=20261121b" defer></script>
 <script>if(window.__tlProd)(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -642,7 +645,7 @@ details[open] summary::after{ content: '−'; }
     
 
 
-<script type="text/javascript">if(window.__tlProd)(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
+<script type="text/javascript">if(window.__tlProd&&window.__tlConsent!=='denied')(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
 <link rel="stylesheet" href="/assets/site.css?v=dcc2af4ccd">
 <style id="legal-layout-20261121">
 /* Legal page layout (2026-11-21): summary first, numbered jump links, sticky contents on desktop. */
@@ -778,6 +781,8 @@ body.info-page .legal-content .legal-jump-list a{display:inline !important;paddi
 body.info-page .legal-body tr.legal-group th{background:#f5f8fe !important;color:#1a2744 !important;border-top:1px solid #dde6f5}
 body.info-page .legal-body .table-scroll::before,body.info-page .legal-body .table-scroll::after{display:none !important}
 @media (max-width:640px){body.info-page .legal-content .legal-jump-list a{display:inline-block !important;padding:10px 0 !important}}
+body.info-page .legal-consent-btn{font:inherit;font-weight:600;min-height:44px;padding:8px 16px;border:1px solid #1f2937;border-radius:6px;background:#fff;color:#1f2937;cursor:pointer}
+body.info-page .legal-consent-btn:focus-visible{outline:2px solid #1d4ed8;outline-offset:2px}
 </style>
 </head>
 
@@ -869,13 +874,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>We use your information to reply to your inquiry, follow up about our services and improve our website.</li>
         <li>Our site uses analytics and advertising cookies and session recording. See <a href="#cookies">section 5, Cookies and session recording</a> for how to opt out.</li>
         <li>We don't sell AI Receptionist call recordings or transcripts, or use them to train public AI models.</li>
-        <li>If a business that uses our AI Receptionist cancels, we delete its recordings and transcripts 30 days later, except what the law requires us to keep. See <a href="#data-retention">section 6, How long we keep information</a>.</li>
+        <li>We keep AI Receptionist recordings and transcripts only as long as we need them to run the service, or as long as the law requires. See <a href="#data-retention">section 6, How long we keep information</a>.</li>
         <li>To see, correct or ask us to delete your information, email <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->. We reply within 30 days.</li>
       </ul>
     </aside>
 <!-- PRIVACY CONTENT -->
 <h2 id="what-this-policy-covers">1. What this policy covers</h2>
-    <p>This policy explains what personal information Trueline IT collects, why, and how you can see, correct or ask us to delete it. It covers this website, our inquiry forms, calls and emails with us, and calls answered by our AI Receptionist for the businesses that use it.</p>
+    <p>This policy explains what personal information Trueline IT ("we", "us") collects, why, and how you can see, correct or ask us to delete it. It covers this website, our inquiry forms, calls and emails with us, and calls answered by our AI Receptionist for the businesses that use it.</p>
 
     <h2 id="information-we-collect">2. What we collect and why</h2>
     <h3>Inquiry forms</h3>
@@ -886,8 +891,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3 id="text-messages">Text messages</h3>
     <ul>
       <li><strong>Texts with us:</strong> if you text us, or we text you back after a call, we keep your phone number and the messages. We use them only to reply and to follow up about our services, and we keep them like other contact information (see <a href="#data-retention">section 6</a>).</li>
-      <li><strong>Texts we send for a business that uses our services</strong> (for example, a missed-call text): we use the caller's phone number and the messages only to run that business's service. We don't sell them or use them to train public AI models. If the business cancels, we delete them 30 days later, except what the law requires us to keep.</li>
-      <li>Texts are sent and received through our text-messaging provider. Reply STOP to any text and we stop texting you.</li>
+      <li><strong>Texts we send for a business that uses our services</strong> (for example, a missed-call text): we use the caller's phone number and the messages only to run that business's service. We don't sell them or use them to train public AI models. We keep them only as long as we need them to run that business's service, or as long as the law requires.</li>
+      <li>Texts are sent and received through a texting provider. Reply STOP to any text and we stop texting you.</li>
     </ul>
     <h3>Website visits</h3>
     <p>When you visit our site, the tools listed in <a href="#who-handles-it">Tools that handle your information</a> may collect data about your visit.</p>
@@ -895,7 +900,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul>
       <li>If a business that uses our AI Receptionist has call recording turned on, the AI tells callers at the start of the call.</li>
       <li>We keep those call recordings and transcripts, using outside service providers, only to run that business's service. We don't sell them or use them to train public AI models.</li>
-      <li>If the business cancels, we delete them 30 days later, except what the law requires us to keep.</li>
+      <li>We keep them only as long as we need them to run that business's service, or as long as the law requires.</li>
     </ul>
     <p>Questions about a recording or transcript? Email <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->.</p>
 
@@ -908,12 +913,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <tr><td data-label="Tool"><strong>Google Analytics &amp; Google Tag Manager</strong></td><td data-label="What it does">Collect usage data, such as pages visited and the type of device, to help us understand how visitors use our site.</td></tr>
       <tr><td data-label="Tool"><strong>Microsoft Clarity</strong></td><td data-label="What it does">Records clicks, scrolling and mouse movement during visits (session recording).</td></tr>
       <tr><td data-label="Tool"><strong>HubSpot</strong></td><td data-label="What it does">Stores contact information submitted through inquiry forms on our professional-services pages, guides and calculators.</td></tr>
+      <tr><td data-label="Tool"><strong>PostHog</strong></td><td data-label="What it does">Collects usage data, such as page views and clicks, on our AI Margin Leakage Calculator page.</td></tr>
       <tr><td data-label="Tool"><strong>Google Ads</strong></td><td data-label="What it does">Serves ads and tracks conversions via cookies.</td></tr>
     </tbody></table></div>
 
     <h2 id="cookies">5. Cookies and session recording</h2>
-    <p>Our site uses cookies for analytics and advertising, and Microsoft Clarity records how you click and scroll on our pages (session recording). The tools that do this are listed in <a href="#who-handles-it">Tools that handle your information</a>. By using our site, you agree to this.</p>
-    <p>To opt out:</p>
+    <p>Our site uses cookies for analytics and advertising, and Microsoft Clarity records how you click and scroll on our pages (session recording). The tools that do this are listed in <a href="#who-handles-it">Tools that handle your information</a>.</p>
+    <p>When you first visit, a small banner at the bottom of the page lets you accept or decline. If you decline, Google's analytics and ad tools stop using cookies, and session recording and other analytics stop. Your browser remembers your choice. If you don't decline, the tools stay on.</p>
+    <p><button type="button" class="legal-consent-btn" data-tl-consent-open>Change your cookie choice</button></p>
+    <p>Other ways to opt out:</p>
     <ul>
       <li>Block or delete cookies in your browser settings. Some parts of the site may not work as well.</li>
       <li>Turn off personalized Google ads at <a href="https://myadcenter.google.com/" rel="noopener">Google My Ad Center</a>.</li>
@@ -923,8 +931,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2 id="data-retention">6. How long we keep information</h2>
     <ul>
-      <li><strong>Contact information:</strong> If you contact us but don't become a customer, we delete your contact details and messages within 2 years of our last contact with you. If you become a customer, we keep them while you're a customer, and after that only as long as tax and other laws require us to keep business records.</li>
-      <li><strong>AI Receptionist recordings and transcripts:</strong> If the business cancels, we delete them 30 days later, except what the law requires us to keep. See <a href="#ai-receptionist-calls">If you call a business that uses our AI Receptionist</a>.</li>
+      <li><strong>Contact information:</strong> We keep your contact details and messages only as long as we need them for the reasons in this policy, or as long as the law requires.</li>
+      <li><strong>AI Receptionist recordings and transcripts:</strong> We keep them only as long as we need them to run the business's service, or as long as the law requires. See <a href="#ai-receptionist-calls">If you call a business that uses our AI Receptionist</a>.</li>
     </ul>
 
     <h2 id="your-rights">7. Your rights and how to use them</h2>
