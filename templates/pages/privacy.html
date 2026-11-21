@@ -722,6 +722,7 @@ body.info-page .info-hero .hero-trust{display:grid;grid-template-columns:repeat(
   .legal-body td[data-label="Service"],.legal-body td[data-label="Tool"],.legal-body td[data-label="What it does"]{grid-column:1 / -1}
   .legal-body td[data-label="What it does"]::before{display:none}
 }
+</style>
 <style id="info-unify-20261121">
 /* Ben voice 2026-11-21 5:17 PM ET: About, Terms and Privacy share one width, one heading scale, one closing call box,
    flat backgrounds with one thin border, no icons and no motion (except the call-button hover colour). Scoped to body.info-page. */
@@ -740,10 +741,20 @@ body.info-page .info-cta .info-label{color:#42506e}
 body.info-page *,body.info-page *::before,body.info-page *::after{animation:none !important;transition:none !important;box-shadow:none !important;scroll-behavior:auto !important}
 body.info-page .btn-primary,body.info-page nav.tl-nav .nav-cta,body.info-page .sticky-mobile-cta a{transition:background-color .15s ease,border-color .15s ease !important}
 body.info-page .btn-primary:hover,body.info-page .btn-primary:focus-visible,body.info-page .btn-primary:active{transform:none !important}
+body.info-page main .btn-primary{font-size:1.2rem !important;padding:16px 28px !important;border-radius:8px !important;display:inline-block}
 @media (max-width:640px){body.info-page main h2{font-size:1.3rem !important}}
 body.info-page .info-hero .info-kicker{background:none !important;padding:0 !important;border-radius:0 !important;letter-spacing:.04em !important;text-transform:none !important;font-size:.9rem !important;color:rgba(255,255,255,.78) !important}
 body.info-page .legal-content .legal-note p{margin:0 0 8px !important}
 body.info-page .legal-content .legal-note p:last-child{margin:0 !important}
+@media (max-width:640px){
+  body.info-page .legal-body tr:not(.legal-group){display:block !important}
+  body.info-page .legal-body td[data-label="Monthly fee"],body.info-page .legal-body td[data-label="Setup / one-time"]{display:inline !important;padding:0 !important}
+  body.info-page .legal-body td[data-label="Monthly fee"]::before,body.info-page .legal-body td[data-label="Setup / one-time"]::before{display:inline !important;text-transform:none !important;letter-spacing:0 !important;font-size:.9rem !important;color:#42506e !important;margin:0 4px 0 0}
+  body.info-page .legal-body td[data-label="Monthly fee"]::before{content:"Monthly"}
+  body.info-page .legal-body td[data-label="Setup / one-time"]::before{content:"· Setup"}
+  body.info-page .legal-body td[data-label="Monthly fee"]{margin-right:6px}
+  body.info-page .legal-toc .legal-toc-sub{display:none}
+}
 
 /* Legal-only: plain numbers and simple bullets, no decorative marks */
 body.info-page .legal-toc{border-left:1px solid #dde6f5}
@@ -826,7 +837,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>We do not sell your personal information to third parties.</li>
         <li>We use your information to reply to your inquiry and follow up about our services.</li>
         <li>We don't sell AI Receptionist call recordings or transcripts, or use them to train public AI models.</li>
-        <li><a href="#data-retention">See how long we keep recordings and transcripts</a></li>
+        <li>If a business that uses our AI Receptionist cancels, we delete its recordings and transcripts 30 days later, except what the law requires us to keep. See <a href="#data-retention">How long we keep information</a>.</li>
         <li>To see, correct or ask us to delete your information, email <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->.</li>
       </ul>
     </aside>
