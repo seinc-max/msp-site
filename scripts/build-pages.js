@@ -503,7 +503,7 @@ function aboutModel(html) {
     lede,
     body: body.trim(),
     closingHtml: '',
-    showDownCue: true,
+    showDownCue: false, // 2026-11-21: reviewers (Claude r1) - cue split the call button from its promise line.
   };
 }
 
@@ -566,8 +566,9 @@ function legalModel(html, which) {
     main = main.replace(intro[0], '');
   }
   if (which === 'privacy') {
-    lede = 'We do not sell your personal information to third parties.';
-    if (!main.includes(lede)) throw new Error('Privacy lede sentence missing from the policy');
+    // 2026-11-21: the "do not sell" line stays in the summary and section 3; the hero now says what the page covers.
+    if (!main.includes('We do not sell your personal information to third parties.')) throw new Error('Privacy "do not sell" sentence missing from the policy');
+    lede = 'What we collect, why we collect it, and how you can see, correct or delete it.';
   }
   main = unwrapLegal(main);
   main = main.replace(/<p><strong>(The short version|On this page)<\/strong><\/p>/g, '<h2>$1</h2>');
