@@ -591,7 +591,8 @@ function legalModel(html, which) {
     ctaLabel: 'Questions?',
     ctaHeading: 'Call (647) 360-5774.',
     ctaSub: '',
-    ctaNote: '',
+    // 2026-11-21: privacy requests go by email, so the closing band also offers the email address.
+    ctaNote: which === 'privacy' ? 'Or email <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->' : '',
     // Audit 2026-10-25 D18.12: no sales chips on the Privacy page.
     hideTrust: which === 'privacy',
   };

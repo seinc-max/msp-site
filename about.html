@@ -828,6 +828,12 @@ body.page-about #why .why-body p:last-child{margin-bottom:0}
   .about-price-col li{display:block}
   .about-price-col li .about-price{display:block;text-align:left;max-width:none}
 }
+
+.about-price .sep{display:none}
+body.page-about .minor-audience{padding:20px 6% 0;margin:0}
+body.page-about .info-hero .hero-trust{display:grid;grid-template-columns:repeat(2,max-content);gap:12px 32px}
+.about-costs-foot span{color:#42506e}
+@media (max-width:640px){ body.page-about .info-hero .hero-trust{grid-template-columns:1fr} }
 </style>
 </head>
 <body class="info-page page-about pro-cta-orange">
@@ -896,7 +902,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p class="info-label">At a glance</p>
 <h2>Trueline IT in four lines</h2>
 <dl class="about-facts">
-    <div><dt>What we do</dt><dd>We set up and run the phone, text and AI tools that answer your customers for you.</dd></div>
+    <div><dt>What we do</dt><dd>Your calls get answered, follow-ups go out and reviews get asked for. We run it all.</dd></div>
     <div><dt>Who it's for</dt><dd>Trades and contractors, plus salons and clinics.</dd></div>
     <div><dt>How you pay</dt><dd>A flat monthly fee. Every price is listed below.</dd></div>
     <div><dt>Where we are</dt><dd>1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</dd></div>
@@ -932,41 +938,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p class="minor-audience" id="firms">Run a law, accounting or advisory firm? <a href="/for-law-firms-accountants-and-advisors">See AI governance for firms</a>.</p>
 <article class="info-body">
   <div class="info-wrap">
-<section class="info-block" id="costs">
-<p class="info-label">What we do and what it costs</p>
-<h2>Every service, every price, in one place</h2>
-<p class="about-costs-intro">Monthly fee plus a one-time setup. Tap a service name to see how it works.</p>
-  <div class="about-prices">
-  <div class="about-price-col">
-  <h3>Trades &amp; Contractors</h3>
-  <ul>
-    <li><a href="/missed-call-text-back">Missed-Call Text-Back</a> <span class="about-price">— $149/mo plus a one-time $199 setup.</span></li>
-    <li><a href="/ai-receptionist">AI Receptionist</a> <span class="about-price">— $299/mo plus a one-time $299 setup.</span></li>
-    <li><a href="/quote-follow-up-win-back">Quote Follow-Up &amp; Win-Back</a> <span class="about-price">— $149/mo plus a one-time $199 setup.</span></li>
-    <li><a href="/quote-follow-up-win-back#pack">Quote Follow-Up + Google Reviews</a> <span class="about-price">— $179/mo plus a one-time $199 setup. Includes Google Review Requests + Replies.</span></li>
-    <li><a href="/google-review-requests">Google Review Requests</a> <span class="about-price">— Requests + Replies $99/mo plus a one-time $99 setup.</span></li>
-    <li><a href="/website-chat-to-text">Website Chat-to-Text</a> <span class="about-price">— $79/mo plus a one-time $99 setup.</span></li>
-    <li><a href="/text-to-pay">Text-to-Pay</a> <span class="about-price">— $49/mo plus a one-time $99 setup. Card processing fees are separate.</span></li>
-    <li><a href="/contractor-websites">Contractor Websites</a> <span class="about-price">— $499/mo. No setup fee.</span></li>
-    <li><a href="/lead-follow-up">Lead Follow-Up</a> <span class="about-price">— $199/mo plus a one-time $299 setup.</span></li>
-    <li><a href="/crm-setup">CRM Setup</a> <span class="about-price">— $199/mo plus a one-time $799 setup.</span></li>
-    <li><a href="/cold-outreach">Cold Email Outreach</a> <span class="about-price">— $799/mo plus a one-time $499 setup.</span></li>
-    <li><a href="/custom-dashboards">Custom Dashboards</a> <span class="about-price">— $149/mo plus a one-time $799 build.</span></li>
-  </ul>
-  </div>
-  <div class="about-price-col">
-  <h3>Salons &amp; Clinics</h3>
-  <ul>
-    <li><a href="/ai-receptionist-for-salons">AI Receptionist</a> <span class="about-price">— $299/mo plus a one-time $299 setup.</span></li>
-    <li><a href="/google-review-requests-for-salons">Google Review Requests</a> <span class="about-price">— Requests + Replies $99/mo plus a one-time $99 setup.</span></li>
-    <li><a href="/appointment-reminders">Booking &amp; Reminders</a> <span class="about-price">— $99/mo plus a one-time $149 setup.</span></li>
-  </ul>
-  </div>
-  </div>
-  <p class="about-costs-foot"><strong>✓ 30-day money-back guarantee</strong> <a href="/terms">Full terms</a></p>
-
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
-</section>
 <section class="info-block" id="how">
 <p class="info-label">How we work</p>
 <h2>Four steps, and you approve every word</h2>
@@ -979,6 +950,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </ol>
 <img src="/assets/img/about-how-we-work.svg" alt="A checklist on a laptop and a text thread on a phone" width="640" height="360" loading="lazy" decoding="async" class="about-how-img">
   </div>
+</section>
+<section class="info-block" id="costs">
+<p class="info-label">What we do and what it costs</p>
+<h2>Services and prices for trades, salons and clinics</h2>
+<p class="about-costs-intro">Monthly prices, plus any one-time setup fee. Tap a service name to see how it works.</p>
+  <div class="about-prices">
+  <div class="about-price-col">
+  <h3>Trades &amp; Contractors</h3>
+  <ul>
+    <li><a href="/missed-call-text-back">Missed-Call Text-Back</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$149/mo plus a one-time $199 setup.</span></li>
+    <li><a href="/ai-receptionist">AI Receptionist</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$299/mo plus a one-time $299 setup.</span></li>
+    <li><a href="/quote-follow-up-win-back">Quote Follow-Up &amp; Win-Back</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$149/mo plus a one-time $199 setup.</span></li>
+    <li><a href="/quote-follow-up-win-back#pack">Quote Follow-Up + Google Reviews</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$179/mo plus a one-time $199 setup. Includes Google Review Requests + Replies.</span></li>
+    <li><a href="/google-review-requests">Google Review Requests</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>Requests + Replies $99/mo plus a one-time $99 setup.</span></li>
+    <li><a href="/website-chat-to-text">Website Chat-to-Text</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$79/mo plus a one-time $99 setup.</span></li>
+    <li><a href="/text-to-pay">Text-to-Pay</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$49/mo plus a one-time $99 setup. Card processing fees are separate.</span></li>
+    <li><a href="/contractor-websites">Contractor Websites</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$499/mo. No setup fee.</span></li>
+    <li><a href="/lead-follow-up">Lead Follow-Up</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$199/mo plus a one-time $299 setup.</span></li>
+    <li><a href="/crm-setup">CRM Setup</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$199/mo plus a one-time $799 setup.</span></li>
+    <li><a href="/cold-outreach">Cold Email Outreach</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$799/mo plus a one-time $499 setup.</span></li>
+    <li><a href="/custom-dashboards">Custom Dashboards</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$149/mo plus a one-time $799 build.</span></li>
+  </ul>
+  </div>
+  <div class="about-price-col">
+  <h3>Salons &amp; Clinics</h3>
+  <ul>
+    <li><a href="/ai-receptionist-for-salons">AI Receptionist</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$299/mo plus a one-time $299 setup.</span></li>
+    <li><a href="/google-review-requests-for-salons">Google Review Requests</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>Requests + Replies $99/mo plus a one-time $99 setup.</span></li>
+    <li><a href="/appointment-reminders">Booking &amp; Reminders</a> <span class="about-price"><span class="sep" aria-hidden="true">— </span>$99/mo plus a one-time $149 setup.</span></li>
+  </ul>
+  </div>
+  </div>
+  <p class="about-costs-foot"><strong>✓ 30-day money-back guarantee</strong> <span>Tell us within 30 days of your first payment.</span> <a href="/terms">Full terms</a></p>
+
+<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 <section class="info-block" id="promises">
 <p class="info-label">What you can count on</p>

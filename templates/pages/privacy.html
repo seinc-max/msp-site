@@ -18,7 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="canonical" href="https://truelineit.com/privacy" />
 
 <!-- SEO: Meta -->
-<meta name="description" content="Trueline IT's privacy policy: what we collect, why, who handles it, how long we keep it, and how to see, correct or delete your information." />
+<meta name="description" content="Trueline IT's privacy policy: what we collect, why, who handles it, and how to see, correct or delete your information." />
 <meta name="keywords" content="Trueline IT privacy policy, AI governance, data privacy professional services, PIPEDA compliance" />
 <meta name="robots" content="index, follow" />
 
@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://truelineit.com/privacy" />
 <meta property="og:title" content="Privacy Policy | Trueline IT" />
-<meta property="og:description" content="Trueline IT's privacy policy: what we collect from our website and inquiry forms, how we use and protect it, and your rights under PIPEDA." />
+<meta property="og:description" content="Trueline IT's privacy policy: what we collect, why, who handles it, and how to see, correct or delete your information." />
 <meta property="og:image" content="https://truelineit.com/og-image-trades.jpg" />
 <meta property="og:image:width" content="2400" />
 <meta property="og:image:height" content="1260" />
@@ -35,7 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- SEO: Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Privacy Policy | Trueline IT" />
-<meta name="twitter:description" content="Trueline IT's privacy policy: what we collect from our website and inquiry forms, how we use and protect it, and your rights under PIPEDA." />
+<meta name="twitter:description" content="Trueline IT's privacy policy: what we collect, why, who handles it, and how to see, correct or delete your information." />
 <meta name="twitter:image" content="https://truelineit.com/og-image-trades.jpg" />
 
 <!-- SEO: Page Schema -->
@@ -48,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@id": "https://truelineit.com/privacy#webpage",
       "url": "https://truelineit.com/privacy",
       "name": "Privacy Policy",
-      "description": "Trueline IT's privacy policy: what we collect, why, who handles it, how long we keep it, and how to see, correct or delete your information.",
+      "description": "Trueline IT's privacy policy: what we collect, why, who handles it, and how to see, correct or delete your information.",
       "isPartOf": {
         "@type": "WebSite",
         "name": "Trueline IT",
@@ -706,6 +706,22 @@ body.info-page .info-hero .info-lede{max-width:680px}
   .legal-body td[data-label="Tool"]::before{display:none}
   .legal-body .table-scroll::before,.legal-body .table-scroll::after{display:none !important}
 }
+.legal-content .legal-callout{padding:16px 20px 4px !important;border-left:4px solid #f97316}
+.legal-content .legal-jump-list{list-style:none;margin:0 0 16px !important;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.legal-content .legal-jump-list li{margin:0 !important}
+.legal-content .legal-jump-list a{display:inline-block;padding:8px 12px;border:1px solid #dde6f5;border-radius:999px;background:#f5f8fe;text-decoration:none;font-size:.9rem;line-height:1.2}
+.legal-content .legal-note{font-size:.95rem !important;background:#f5f8fe;border-radius:10px;padding:12px 16px}
+body.info-page .info-hero .hero-trust{display:grid;grid-template-columns:repeat(2,max-content);gap:12px 32px}
+@media (max-width:960px){ .legal-toc > ol{display:grid;grid-template-columns:1fr 1fr;column-gap:16px} }
+@media (max-width:640px){
+  body.info-page .info-hero .hero-trust{grid-template-columns:1fr}
+  .legal-toc > ol{grid-template-columns:1fr}
+  .legal-body tr:not(.legal-group){display:grid;grid-template-columns:1fr 1fr;column-gap:14px}
+  .legal-body td{display:block !important}
+  .legal-body td::before{display:block;margin-bottom:2px;font-size:.78rem !important;text-transform:uppercase;letter-spacing:.04em;color:#64748b !important}
+  .legal-body td[data-label="Service"],.legal-body td[data-label="Tool"],.legal-body td[data-label="What it does"]{grid-column:1 / -1}
+  .legal-body td[data-label="What it does"]::before{display:none}
+}
 </style>
 </head>
 <body>
@@ -773,7 +789,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         <li>We do not sell your personal information to third parties.</li>
         <li>We use it to reply to your inquiry and to follow up about our services.</li>
-        <li>We don't sell AI Receptionist call recordings or transcripts, or use them to train public AI models.</li>
+        <li>We don't sell AI Receptionist call recordings or transcripts, or use them to train public AI models. <a href="#ai-receptionist-calls">How long we keep them</a></li>
         <li>To see, correct or ask us to delete your information, email <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->.</li>
       </ul>
     </aside>
@@ -789,7 +805,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="information-we-collect">What we collect and why</h2>
     <h3>Inquiry forms</h3>
     <p>Our professional-services pages, guides and calculators include a short inquiry form that asks for your name and email address. That covers AI governance pages, the AI Liability Assessment, Fractional AI Officer, blog posts, and the ROI, exposure and margin tools.</p>
-    <p>When you submit the form, your name and email are sent to HubSpot, our customer relationship management provider. We use them to reply to your inquiry and to follow up about our services. By submitting the form, you consent to this collection and use.</p>
+    <p>When you submit the form, your name and email are sent to HubSpot, the customer relationship management (CRM) tool we use to manage inquiries. We use them to reply to your inquiry and to follow up about our services. By submitting the form, you consent to this collection and use.</p>
     <h3>Calls and emails</h3>
     <p>If you call or email us, we keep only the details you share, such as your name, phone number, and email. We use them to respond and to follow up about our services.</p>
     <h3>Website visits</h3>
@@ -819,7 +835,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Our site uses cookies for analytics and advertising. You can turn cookies off in your browser settings, but some parts of the site may not work as well.</p>
 
     <h2 id="data-retention">How long we keep it</h2>
-    <p>We keep contact information for as long as we need it for the purposes in this policy, or as long as the law requires. For AI Receptionist recordings and transcripts, see <a href="#ai-receptionist-calls">AI Receptionist calls</a>.</p>
+    <p>We keep contact information for as long as we need it for the purposes in this policy, or as long as the law requires. For how long we keep AI Receptionist recordings and transcripts, see <a href="#ai-receptionist-calls">AI Receptionist calls</a>.</p>
 
     <h2 id="your-rights">Your rights</h2>
     <p>If you are a resident of Canada, you have rights under PIPEDA, Canada's federal private-sector privacy law. They include the right to:</p>
