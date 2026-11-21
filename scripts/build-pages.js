@@ -402,8 +402,8 @@ function infoCta(model) {
   const sub = model.ctaSub ? `\n    <p>${model.ctaSub}</p>` : '';
   return `<section class="info-cta" id="contact-cta">
   <div class="info-wrap">
-    <p class="info-label">${model.ctaLabel}</p>
-    <h2>${model.ctaHeading}</h2>${sub}
+${model.ctaLabel ? `    <p class="info-label">${model.ctaLabel}</p>
+` : ''}    <h2>${model.ctaHeading}</h2>${sub}
     <p>${CALL}</p>${model.ctaNote ? `
     <p class="info-cta-note">${model.ctaNote}</p>` : ''}
   </div>
@@ -504,8 +504,8 @@ function aboutModel(html) {
     title,
     lede,
     body: body.trim(),
-    ctaLabel: 'Questions?',
-    ctaHeading: 'Call (647) 360-5774.',
+    ctaLabel: '',
+    ctaHeading: 'Questions?',
     ctaSub: '',
     ctaNote: '',
     showDownCue: false, // 2026-11-21: reviewers (Claude r1) - cue split the call button from its promise line.
@@ -593,8 +593,8 @@ function legalModel(html, which) {
     title,
     lede,
     body: legalBody || infoArticle(main.trim()),
-    ctaLabel: 'Questions?',
-    ctaHeading: 'Call (647) 360-5774.',
+    ctaLabel: '',
+    ctaHeading: 'Questions?',
     ctaSub: '',
     // 2026-11-21: privacy requests go by email, so the closing band also offers the email address.
     // Ben voice 2026-11-21 5:17 PM ET: one identical closing call box on all three info pages (email stays in Privacy sections 7 and 8).
