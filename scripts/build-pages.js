@@ -404,8 +404,8 @@ function infoCta(model) {
   <div class="info-wrap">
     <p class="info-label">${model.ctaLabel}</p>
     <h2>${model.ctaHeading}</h2>${sub}
-    <p>${CALL}</p>
-    <p class="info-cta-note">${model.ctaNote}</p>
+    <p>${CALL}</p>${model.ctaNote ? `
+    <p class="info-cta-note">${model.ctaNote}</p>` : ''}
   </div>
 </section>`;
 }
@@ -597,7 +597,8 @@ function legalModel(html, which) {
     ctaHeading: 'Call (647) 360-5774.',
     ctaSub: '',
     // 2026-11-21: privacy requests go by email, so the closing band also offers the email address.
-    ctaNote: which === 'privacy' ? 'Or email <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->' : '',
+    // Ben voice 2026-11-21 5:17 PM ET: one identical closing call box on all three info pages (email stays in Privacy sections 7 and 8).
+    ctaNote: '',
     // Audit 2026-10-25 D18.12: no sales chips on the Privacy page.
     // Ben voice 2026-11-21 5:17 PM ET: same plain trust line on all three info pages (replaces audit D18.12).
     hideTrust: false,
