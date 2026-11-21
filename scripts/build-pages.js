@@ -368,8 +368,9 @@ function sharedInfoHero() {
   const about = read(path.join(PAGE_ROOT, 'about.html'));
   const main = inner(about.slice(about.indexOf('<main')), 'main');
   const promise = must(main, /<p class="hero-promise">([\s\S]*?)<\/p>/, 'about promise');
-  const trusts = [...main.matchAll(/<div class="trust-item">\s*(<svg[\s\S]*?<\/svg>)\s*([^<]+?)\s*<\/div>/g)].map((m) => ({
-    icon: m[1],
+  const trusts = [...main.matchAll(/<div class="trust-item">\s*(<svg[\s\S]*?<\/svg>)?\s*([^<]+?)\s*<\/div>/g)].map((m) => ({
+    // Ben voice 2026-11-21 5:17 PM ET: no icons on the info pages; the trust line is plain text.
+    icon: '',
     text: m[2].trim(),
   }));
   if (trusts.length !== 4) throw new Error('Expected 4 trust chips, got ' + trusts.length);
@@ -401,10 +402,10 @@ function infoCta(model) {
   const sub = model.ctaSub ? `\n    <p>${model.ctaSub}</p>` : '';
   return `<section class="info-cta" id="contact-cta">
   <div class="info-wrap">
-    <p class="info-label">${model.ctaLabel}</p>
-    <h2>${model.ctaHeading}</h2>${sub}
-    <p>${CALL}</p>
-    <p class="info-cta-note">${model.ctaNote}</p>
+${model.ctaLabel ? `    <p class="info-label">${model.ctaLabel}</p>
+` : ''}    <h2>${model.ctaHeading}</h2>${sub}
+    <p>${CALL}</p>${model.ctaNote ? `
+    <p class="info-cta-note">${model.ctaNote}</p>` : ''}
   </div>
 </section>`;
 }
@@ -494,7 +495,8 @@ function aboutModel(html) {
     }
   }
   flush();
-  if ((body.match(/id="contact"/g) || []).length !== 1) throw new Error('About should keep a single id="contact"');
+  // Ben voice 2026-11-21 5:17 PM ET: one closing call box (info-cta) on About, Terms and Privacy; About drops its info-band.
+  if (/id="contact"/.test(body)) throw new Error('About should not carry its own contact band (shared info-cta closes the page)');
   if (body.includes('<p>' + shared.promise + '</p>')) throw new Error('Promise line duplicated in the About body');
   if (body.includes('<li>' + shared.trusts[0].text)) throw new Error('Trust list duplicated in the About body');
   return {
@@ -502,8 +504,11 @@ function aboutModel(html) {
     title,
     lede,
     body: body.trim(),
-    closingHtml: '',
-    showDownCue: true,
+    ctaLabel: '',
+    ctaHeading: 'Questions?',
+    ctaSub: '',
+    ctaNote: '',
+    showDownCue: false, // 2026-11-21: reviewers (Claude r1) - cue split the call button from its promise line.
   };
 }
 
@@ -566,11 +571,20 @@ function legalModel(html, which) {
     main = main.replace(intro[0], '');
   }
   if (which === 'privacy') {
-    lede = 'We do not sell your personal information to third parties.';
-    if (!main.includes(lede)) throw new Error('Privacy lede sentence missing from the policy');
+    // 2026-11-21: the "do not sell" line stays in the summary and section 3; the hero now says what the page covers.
+    if (!main.includes('We do not sell your personal information to third parties.')) throw new Error('Privacy "do not sell" sentence missing from the policy');
+    lede = 'What we collect, why we collect it, and how you can see, correct or delete it.';
   }
   main = unwrapLegal(main);
   main = main.replace(/<p><strong>(The short version|On this page)<\/strong><\/p>/g, '<h2>$1</h2>');
+  // 2026-11-21 (Ben t1317u): legal pages may carry a <nav class="legal-toc"> contents list.
+  // It becomes a sticky sidebar on desktop and a contents box on mobile (styles in the page head).
+  const toc = main.match(/<nav class="legal-toc"[\s\S]*?<\/nav>/);
+  let legalBody = null;
+  if (toc) {
+    main = main.replace(toc[0], '');
+    legalBody = `<article class="info-body legal-body">\n  <div class="legal-layout">\n${toc[0].trim()}\n<div class="legal-content">\n${main.trim()}\n</div>\n  </div>\n</article>`;
+  }
   const q = question.replace(/\s+/g, ' ').trim();
   const expected = 'Questions? Call (647) 360-5774. Leave a message and you\'ll get our text within minutes, and a call back fast.';
   if (q !== expected) throw new Error(which + ' questions changed: ' + q);
@@ -578,13 +592,16 @@ function legalModel(html, which) {
     kicker,
     title,
     lede,
-    body: infoArticle(main.trim()),
-    ctaLabel: 'Questions?',
-    ctaHeading: 'Call (647) 360-5774.',
+    body: legalBody || infoArticle(main.trim()),
+    ctaLabel: '',
+    ctaHeading: 'Questions?',
     ctaSub: '',
+    // 2026-11-21: privacy requests go by email, so the closing band also offers the email address.
+    // Ben voice 2026-11-21 5:17 PM ET: one identical closing call box on all three info pages (email stays in Privacy sections 7 and 8).
     ctaNote: '',
     // Audit 2026-10-25 D18.12: no sales chips on the Privacy page.
-    hideTrust: which === 'privacy',
+    // Ben voice 2026-11-21 5:17 PM ET: same plain trust line on all three info pages (replaces audit D18.12).
+    hideTrust: false,
   };
 }
 
@@ -597,7 +614,7 @@ function buildOne(rel) {
   if (template === 'info') {
     const model = rel === 'about.html' ? aboutModel(source) : legalModel(source, rel.replace('.html', ''));
     beforeSticky = replaceElement(beforeSticky, 'main', infoMain(model));
-    bodyOpen = bodyOpen.replace('<body', rel === 'about.html' ? '<body class="info-page page-about pro-cta-orange"' : '<body class="info-page"');
+    bodyOpen = bodyOpen.replace('<body', rel === 'about.html' ? '<body class="info-page page-about"' : '<body class="info-page"');
   }
   beforeSticky = expandIncludes(beforeSticky);
   beforeSticky = applyConversations(beforeSticky);
