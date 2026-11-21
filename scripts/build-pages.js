@@ -503,7 +503,7 @@ function aboutModel(html) {
     lede,
     body: body.trim(),
     closingHtml: '',
-    showDownCue: true,
+    showDownCue: false, // 2026-11-21: reviewers (Claude r1) - cue split the call button from its promise line.
   };
 }
 
@@ -566,11 +566,20 @@ function legalModel(html, which) {
     main = main.replace(intro[0], '');
   }
   if (which === 'privacy') {
-    lede = 'We do not sell your personal information to third parties.';
-    if (!main.includes(lede)) throw new Error('Privacy lede sentence missing from the policy');
+    // 2026-11-21: the "do not sell" line stays in the summary and section 3; the hero now says what the page covers.
+    if (!main.includes('We do not sell your personal information to third parties.')) throw new Error('Privacy "do not sell" sentence missing from the policy');
+    lede = 'What we collect, why we collect it, and how you can see, correct or delete it.';
   }
   main = unwrapLegal(main);
   main = main.replace(/<p><strong>(The short version|On this page)<\/strong><\/p>/g, '<h2>$1</h2>');
+  // 2026-11-21 (Ben t1317u): legal pages may carry a <nav class="legal-toc"> contents list.
+  // It becomes a sticky sidebar on desktop and a contents box on mobile (styles in the page head).
+  const toc = main.match(/<nav class="legal-toc"[\s\S]*?<\/nav>/);
+  let legalBody = null;
+  if (toc) {
+    main = main.replace(toc[0], '');
+    legalBody = `<article class="info-body legal-body">\n  <div class="legal-layout">\n${toc[0].trim()}\n<div class="legal-content">\n${main.trim()}\n</div>\n  </div>\n</article>`;
+  }
   const q = question.replace(/\s+/g, ' ').trim();
   const expected = 'Questions? Call (647) 360-5774. Leave a message and you\'ll get our text within minutes, and a call back fast.';
   if (q !== expected) throw new Error(which + ' questions changed: ' + q);
@@ -578,11 +587,12 @@ function legalModel(html, which) {
     kicker,
     title,
     lede,
-    body: infoArticle(main.trim()),
+    body: legalBody || infoArticle(main.trim()),
     ctaLabel: 'Questions?',
     ctaHeading: 'Call (647) 360-5774.',
     ctaSub: '',
-    ctaNote: '',
+    // 2026-11-21: privacy requests go by email, so the closing band also offers the email address.
+    ctaNote: which === 'privacy' ? 'Or email <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->' : '',
     // Audit 2026-10-25 D18.12: no sales chips on the Privacy page.
     hideTrust: which === 'privacy',
   };
