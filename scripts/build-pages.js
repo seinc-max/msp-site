@@ -571,6 +571,14 @@ function legalModel(html, which) {
   }
   main = unwrapLegal(main);
   main = main.replace(/<p><strong>(The short version|On this page)<\/strong><\/p>/g, '<h2>$1</h2>');
+  // 2026-11-21 (Ben t1317u): legal pages may carry a <nav class="legal-toc"> contents list.
+  // It becomes a sticky sidebar on desktop and a contents box on mobile (styles in the page head).
+  const toc = main.match(/<nav class="legal-toc"[\s\S]*?<\/nav>/);
+  let legalBody = null;
+  if (toc) {
+    main = main.replace(toc[0], '');
+    legalBody = `<article class="info-body legal-body">\n  <div class="legal-layout">\n${toc[0].trim()}\n<div class="legal-content">\n${main.trim()}\n</div>\n  </div>\n</article>`;
+  }
   const q = question.replace(/\s+/g, ' ').trim();
   const expected = 'Questions? Call (647) 360-5774. Leave a message and you\'ll get our text within minutes, and a call back fast.';
   if (q !== expected) throw new Error(which + ' questions changed: ' + q);
@@ -578,7 +586,7 @@ function legalModel(html, which) {
     kicker,
     title,
     lede,
-    body: infoArticle(main.trim()),
+    body: legalBody || infoArticle(main.trim()),
     ctaLabel: 'Questions?',
     ctaHeading: 'Call (647) 360-5774.',
     ctaSub: '',
