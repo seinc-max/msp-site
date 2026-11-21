@@ -368,8 +368,9 @@ function sharedInfoHero() {
   const about = read(path.join(PAGE_ROOT, 'about.html'));
   const main = inner(about.slice(about.indexOf('<main')), 'main');
   const promise = must(main, /<p class="hero-promise">([\s\S]*?)<\/p>/, 'about promise');
-  const trusts = [...main.matchAll(/<div class="trust-item">\s*(<svg[\s\S]*?<\/svg>)\s*([^<]+?)\s*<\/div>/g)].map((m) => ({
-    icon: m[1],
+  const trusts = [...main.matchAll(/<div class="trust-item">\s*(<svg[\s\S]*?<\/svg>)?\s*([^<]+?)\s*<\/div>/g)].map((m) => ({
+    // Ben voice 2026-11-21 5:17 PM ET: no icons on the info pages; the trust line is plain text.
+    icon: '',
     text: m[2].trim(),
   }));
   if (trusts.length !== 4) throw new Error('Expected 4 trust chips, got ' + trusts.length);
@@ -494,7 +495,8 @@ function aboutModel(html) {
     }
   }
   flush();
-  if ((body.match(/id="contact"/g) || []).length !== 1) throw new Error('About should keep a single id="contact"');
+  // Ben voice 2026-11-21 5:17 PM ET: one closing call box (info-cta) on About, Terms and Privacy; About drops its info-band.
+  if (/id="contact"/.test(body)) throw new Error('About should not carry its own contact band (shared info-cta closes the page)');
   if (body.includes('<p>' + shared.promise + '</p>')) throw new Error('Promise line duplicated in the About body');
   if (body.includes('<li>' + shared.trusts[0].text)) throw new Error('Trust list duplicated in the About body');
   return {
@@ -502,7 +504,10 @@ function aboutModel(html) {
     title,
     lede,
     body: body.trim(),
-    closingHtml: '',
+    ctaLabel: 'Questions?',
+    ctaHeading: 'Call (647) 360-5774.',
+    ctaSub: '',
+    ctaNote: '',
     showDownCue: false, // 2026-11-21: reviewers (Claude r1) - cue split the call button from its promise line.
   };
 }
@@ -594,7 +599,8 @@ function legalModel(html, which) {
     // 2026-11-21: privacy requests go by email, so the closing band also offers the email address.
     ctaNote: which === 'privacy' ? 'Or email <!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off-->' : '',
     // Audit 2026-10-25 D18.12: no sales chips on the Privacy page.
-    hideTrust: which === 'privacy',
+    // Ben voice 2026-11-21 5:17 PM ET: same plain trust line on all three info pages (replaces audit D18.12).
+    hideTrust: false,
   };
 }
 
@@ -607,7 +613,7 @@ function buildOne(rel) {
   if (template === 'info') {
     const model = rel === 'about.html' ? aboutModel(source) : legalModel(source, rel.replace('.html', ''));
     beforeSticky = replaceElement(beforeSticky, 'main', infoMain(model));
-    bodyOpen = bodyOpen.replace('<body', rel === 'about.html' ? '<body class="info-page page-about pro-cta-orange"' : '<body class="info-page"');
+    bodyOpen = bodyOpen.replace('<body', rel === 'about.html' ? '<body class="info-page page-about"' : '<body class="info-page"');
   }
   beforeSticky = expandIncludes(beforeSticky);
   beforeSticky = applyConversations(beforeSticky);
