@@ -572,7 +572,7 @@ function legalModel(html, which) {
   }
   if (which === 'privacy') {
     // 2026-11-21: the "do not sell" line stays in the summary and section 3; the hero now says what the page covers.
-    if (!main.includes('We do not sell your personal information to third parties.')) throw new Error('Privacy "do not sell" sentence missing from the policy');
+    if (!main.includes('We do not sell your personal information to anyone.')) throw new Error('Privacy "do not sell" sentence missing from the policy');
     lede = 'What we collect, why we collect it, and how you can see, correct or delete it.';
   }
   main = unwrapLegal(main);
