@@ -1,38 +1,5 @@
-/* Locked faces for the shared header, footer, and sticky bar.
-   A page's own Fraunces or DM Sans file must not change these metrics. */
-@font-face {
-  font-family: "TL Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/assets/fonts/tl-dm-sans-latin-v17.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "TL Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("/assets/fonts/tl-dm-sans-latin-v17.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "TL Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/assets/fonts/tl-dm-sans-latin-v17.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "TL Fraunces";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/assets/fonts/tl-fraunces-latin-v38.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* Page text. Same latin files for every browser, so the hero preloads are the files that paint. */
+/* One font stack site-wide: DM Sans (body) and Fraunces (headings / logo).
+   Self-hosted latin files only, so the hero preloads are the files that paint. */
 @font-face {
   font-family: "DM Sans";
   font-style: normal;
@@ -217,7 +184,7 @@ nav.tl-nav {
   font-size: 16px;
   width: 100%;
   box-sizing: border-box;
-  font-family: "TL Sans", "DM Sans Fallback", sans-serif;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif;
 }
 nav.tl-nav *,
 footer.site-footer,
@@ -231,7 +198,7 @@ nav.tl-nav .nav-logo:hover {
   font-size: 1.35rem !important;
   font-weight: 700;
   letter-spacing: -0.01em;
-  font-family: "TL Fraunces", Georgia, serif !important;
+  font-family: Fraunces, "Fraunces Fallback", Georgia, serif !important;
 }
 nav.tl-nav .nav-logo span { color: #f97316; }
 nav.tl-nav .nav-links {
@@ -488,13 +455,13 @@ footer.site-footer {
   padding: 28px 6% 20px;
   font-size: 16px;
   width: 100%;
-  font-family: "TL Sans", "DM Sans Fallback", sans-serif;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif;
 }
 footer.site-footer .footer-logo,
 footer.site-footer .footer-logo:hover {
   color: #fff;
   text-decoration: none;
-  font-family: "TL Fraunces", Georgia, serif !important;
+  font-family: Fraunces, "Fraunces Fallback", Georgia, serif !important;
   font-size: 1.35rem !important;
   font-weight: 700;
 }
@@ -733,7 +700,7 @@ footer.site-footer .footer-address {
   font-size: 16px;
   color: #fff;
   width: 100%;
-  font-family: "TL Sans", "DM Sans Fallback", sans-serif;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif;
 }
 .sticky-mobile-cta a {
   color: #fff;
