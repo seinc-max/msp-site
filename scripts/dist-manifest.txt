@@ -13,6 +13,7 @@ appointment-reminders.html
 assets/2026-cybersecurity-report.pdf
 assets/2026-pipeda-compliance-guide.pdf
 assets/anthropic-logo.svg
+assets/consent.js
 assets/fonts/OFL.txt
 assets/fonts/fraunces-italic-latin-v38.woff2
 assets/fonts/fraunces-latin-v38.woff2
