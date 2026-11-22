@@ -232,7 +232,7 @@ function businessName(text) {
     'Lakeside Plumbing',
     'Lakeside Heating',
     'North Nail Salon',
-    'Trueline text-back',
+    'Trueline IT text-back',
   ];
   return names.find((name) => text.includes(name)) || '';
 }
