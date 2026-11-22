@@ -47,6 +47,11 @@ function texts(html) {
     .replace(/<style[\s\S]*?<\/style>/g, '')
     .replace(/<script[\s\S]*?<\/script>/g, '');
   body = body.replace(/<nav\b[\s\S]*?<\/nav>/g, '').replace(/<footer\b[\s\S]*?<\/footer>/g, '');
+  // 2026-11-22 (Ben t1508u, Hermes staging-audit a11y): visually-hidden
+  // labels are not visible copy. Strip .sr-only nodes so this freeze
+  // check matches what a visitor can see (e.g. "Feature" on empty
+  // comparison-table header cells).
+  body = body.replace(/<[^>]*\bclass="[^"]*\bsr-only\b[^"]*"[^>]*>[\s\S]*?<\/[^>]+>/g, '');
   return [...body.matchAll(/>([^<]+)</g)]
     .map((m) => m[1].replace(/\s+/g, ' ').trim())
     .filter(Boolean)

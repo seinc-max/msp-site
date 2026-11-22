@@ -201,9 +201,10 @@ function splitPage(html) {
   const footerAt = html.indexOf('<footer', navEnd);
   const footerEnd = elementEnd(html, footerAt, 'footer');
   const between = html.slice(navEnd, footerAt);
-  const stickyAt = between.search(/<div class="sticky-mobile-cta\b/);
-  if (stickyAt < 0) throw new Error('Missing sticky call bar');
-  const stickyEnd = elementEnd(between, stickyAt, 'div');
+  const stickyMatch = between.match(/<(div|aside) class="sticky-mobile-cta\b/);
+  if (!stickyMatch) throw new Error('Missing sticky call bar');
+  const stickyAt = stickyMatch.index;
+  const stickyEnd = elementEnd(between, stickyAt, stickyMatch[1]);
   return {
     head: html.slice(0, bodyAt),
     bodyOpen: html.slice(bodyAt, bodyOpenEnd),
