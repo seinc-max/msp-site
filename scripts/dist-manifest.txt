@@ -9,6 +9,7 @@ ai-governance.html
 ai-receptionist-for-salons.html
 ai-receptionist.html
 ai-support-agent.html
+apple-touch-icon.png
 appointment-reminders.html
 assets/2026-cybersecurity-report.pdf
 assets/2026-pipeda-compliance-guide.pdf
@@ -55,6 +56,9 @@ cold-outreach.html
 contractor-websites.html
 crm-setup.html
 custom-dashboards.html
+favicon-192.png
+favicon-48.png
+favicon-96.png
 favicon.ico
 favicon.png
 favicon.svg
@@ -70,6 +74,7 @@ js/call-tracking.js
 js/sample-call.js
 lead-follow-up.html
 llms.txt
+logo-512.png
 margin-leakage-calculator.html
 missed-call-text-back.html
 og-image-professional.jpg
