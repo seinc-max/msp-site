@@ -314,6 +314,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
             }
             if(res.ok){
               form.style.display='none'; document.getElementById('form-success').style.display='block';
+              window.dataLayer=window.dataLayer||[];
+              window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
             } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
           }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
         });
