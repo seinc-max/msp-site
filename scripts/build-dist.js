@@ -23,7 +23,7 @@ const MANIFEST = path.join(__dirname, "dist-manifest.txt");
 const ALLOW = new Set([
   "404.html", "_headers", "_redirects", "about.html", "ai-automation-roi-guide.html",
   "ai-exposure-score.html", "ai-governance.html", "ai-receptionist.html", "ai-receptionist-for-salons.html",
-  "ai-support-agent.html", "assets", "blog", "contractor-websites.html",
+  "ai-support-agent.html", "assets", "blog", "blog.html", "contractor-websites.html",
   "favicon.ico", "favicon.png", "favicon.svg", "favicon-48.png", "favicon-96.png", "favicon-192.png", "apple-touch-icon.png", "logo-512.png", "for-appointment-businesses.html",
   "for-home-services.html", "for-law-firms-accountants-and-advisors.html",
   "fractional-ai-officer.html", "google-review-requests.html", "google-review-requests-for-salons.html", "index.html", "js",

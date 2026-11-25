@@ -48,6 +48,7 @@ assets/n8n-logo.svg
 assets/openai-logo.svg
 assets/site.css
 assets/tailwind.css
+blog.html
 blog/20-shadow-ai-audits-2026.html
 blog/financial-integration-insurance-vulnerabilities.html
 blog/is-your-business-pipeda-compliant.html
