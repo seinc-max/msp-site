@@ -101,6 +101,12 @@ if (missingTop.length) fail("missing public entries: " + missingTop.join(", "));
   if (r.status !== 0) fail("check-site-consistency.js failed; fix the shared elements before release");
 }
 
+// 1c. No packs or bundles (Ben 2026-11-25 6:41 PM ET; RCA no-packs-bundles-20261126).
+{
+  const r = require("child_process").spawnSync(process.execPath, [path.join(__dirname, "check-no-packs.js")], { stdio: "inherit" });
+  if (r.status !== 0) fail("check-no-packs.js failed; no packs or bundles allowed");
+}
+
 // 2. Copy the allowed entries.
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT);
