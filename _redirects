@@ -223,3 +223,11 @@
 /multi-location /for-home-services 301
 /multi-location/ /for-home-services 301
 /multi-location.html /for-home-services 301
+
+# AI Sales Agent removed 2026-11-26 (Ben t1870u)
+/ai-sales-agent /for-home-services 301
+/ai-sales-agent/ /for-home-services 301
+/ai-sales-agent.html /for-home-services 301
+/ai-sales-agent-for-property-managers /for-property-managers 301
+/ai-sales-agent-for-property-managers/ /for-property-managers 301
+/ai-sales-agent-for-property-managers.html /for-property-managers 301

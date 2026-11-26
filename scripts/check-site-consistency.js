@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 // Cross-page consistency guard (RCA menu-guarantee-consistency-20261119).
 // Ben 2026-11-19: the guarantee badge differed across pages and many pages
 // shipped without the menu. This script fails the build/release when shared
@@ -49,7 +50,7 @@ const CAPTION_START = "Just a sample";
 // 2026-11-26 (Ben t1861u): the Salons & Clinics menu links /appointment-reminders-for-salons; /appointment-reminders is no longer in the menu.
 const NEW_PAGES = ["/lead-follow-up", "/cold-outreach", "/crm-setup", "/custom-dashboards",
   // 2026-11-26 menu rebuild (Ben t1817u): the 9 new service pages plus the professional group.
-  "/speed-to-lead", "/overdue-invoice-reminders", "/ai-estimate-drafts", "/ai-sales-agent", "/job-scheduling-dispatch",
+  "/speed-to-lead", "/overdue-invoice-reminders", "/ai-estimate-drafts", "/job-scheduling-dispatch",
   "/google-business-profile-optimization", "/google-business-profile-for-professionals", "/document-automation", "/inbox-management",
   "/ai-governance", "/fractional-ai-officer", "/ai-support-agent",
   // 2026-11-26 salon versions (Ben t1834u).
@@ -59,7 +60,7 @@ const NEW_PAGES = ["/lead-follow-up", "/cold-outreach", "/crm-setup", "/custom-d
   // 2026-11-26 salon version of Appointment Reminders (Ben t1861u).
   "/appointment-reminders-for-salons",
   // 2026-11-26 Property Managers group (Ben t1825u): the hub and the 8 offer pages.
-  "/for-property-managers", "/ai-contract-review-for-property-managers", "/accounts-payable-automation-for-property-managers", "/ai-sales-agent-for-property-managers", "/job-scheduling-dispatch-for-property-managers", "/ai-concierge-for-property-managers", "/google-business-profile-for-property-managers", "/speed-to-lead-for-property-managers", "/appointment-reminders-for-property-managers"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
+  "/for-property-managers", "/ai-contract-review-for-property-managers", "/accounts-payable-automation-for-property-managers", "/job-scheduling-dispatch-for-property-managers", "/ai-concierge-for-property-managers", "/google-business-profile-for-property-managers", "/speed-to-lead-for-property-managers", "/appointment-reminders-for-property-managers"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i,
   // Ben 2026-11-19 t1202u: copy must include all trades; no single-trade "under a sink" image.

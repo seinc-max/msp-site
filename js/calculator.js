@@ -302,18 +302,6 @@
       sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
       formula: 'Quotes a month × minutes each ÷ 60 × your hourly value'
     },
-    'ai-sales-agent': {
-      title: 'What are the leads you can\u2019t call back worth?',
-      inputs: [
-        { k: 'leads', label: 'Leads who ask about a job each month', min: 0, max: 300, step: 1, v: 30, u: 'n' },
-        { k: 'miss', label: 'Leads you don\u2019t reach in time', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
-        { k: 'book', label: 'Of those, how many would book', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
-        { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 500, u: 'money' }
-      ],
-      f: function (v) { var jobs = v.leads * pct(v.miss) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
-      sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
-      formula: 'Leads a month × % you don\u2019t reach in time × % who would book × average job value'
-    },
     'job-scheduling-dispatch': {
       title: 'What does scheduling by phone cost you?',
       lead: 'Your time on it is worth',
@@ -402,21 +390,6 @@
       f: function (v) { var h = v.n * v.mins / 60; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
       sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
       formula: 'Invoices a month × minutes each ÷ 60 × your hourly value'
-    },
-    'ai-sales-agent-for-property-managers': {
-      title: 'What could your missed owner leads be worth?',
-      lead: 'About',
-      per: '',
-      tail: 'in first-year fees is at stake each month.',
-      inputs: [
-        { k: 'leads', label: 'Owner leads you get each month', min: 0, max: 100, step: 1, v: 10, u: 'n' },
-        { k: 'miss', label: 'Owner leads you don’t reach in time', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
-        { k: 'sign', label: 'Share of owner leads you would sign', min: 0, max: 100, step: 5, v: 20, u: 'pct' },
-        { k: 'fees', label: 'Your first-year fees from one owner', min: 100, max: 50000, step: 100, v: 3000, u: 'money' }
-      ],
-      f: function (v) { var o = v.leads * pct(v.miss) * pct(v.sign); var m = o * v.fees; return { main: m, t: { n: whole(o) } }; },
-      sub: 'About {n} {n|owner|owners} a month, or {year} a year.',
-      formula: 'Owner leads a month × % you don’t reach in time × % who would sign × first-year fees from one owner'
     },
     'job-scheduling-dispatch-for-property-managers': {
       title: 'What does scheduling by phone cost you?',

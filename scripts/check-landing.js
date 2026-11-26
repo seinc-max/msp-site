@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 /**
  * Pre-staging landing gate.
  * Shared template adoption, source/output parity, frozen visible text,
@@ -39,7 +40,6 @@ const PAGES = {
   'speed-to-lead.html': 'landing-call landing-offer',
   'overdue-invoice-reminders.html': 'landing-call landing-offer',
   'ai-estimate-drafts.html': 'landing-call landing-offer',
-  'ai-sales-agent.html': 'landing-call landing-offer',
   'job-scheduling-dispatch.html': 'landing-call landing-offer',
   'google-business-profile-optimization.html': 'landing-call landing-offer',
   'google-business-profile-for-professionals.html': 'landing-form landing-hub',
@@ -55,7 +55,6 @@ const PAGES = {
   'for-property-managers.html': 'landing-call landing-hub',
   'ai-contract-review-for-property-managers.html': 'landing-call landing-offer',
   'accounts-payable-automation-for-property-managers.html': 'landing-call landing-offer',
-  'ai-sales-agent-for-property-managers.html': 'landing-call landing-offer',
   'job-scheduling-dispatch-for-property-managers.html': 'landing-call landing-offer',
   'ai-concierge-for-property-managers.html': 'landing-call landing-offer',
   'google-business-profile-for-property-managers.html': 'landing-call landing-offer',

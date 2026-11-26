@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 /**
  * Build flat HTML from templates/pages + partials.
  *
@@ -70,7 +71,6 @@ const LANDING = new Set([
   'speed-to-lead.html',
   'overdue-invoice-reminders.html',
   'ai-estimate-drafts.html',
-  'ai-sales-agent.html',
   'job-scheduling-dispatch.html',
   'google-business-profile-optimization.html',
   'google-business-profile-for-professionals.html',
@@ -88,7 +88,6 @@ const LANDING = new Set([
   'for-property-managers.html',
   'ai-contract-review-for-property-managers.html',
   'accounts-payable-automation-for-property-managers.html',
-  'ai-sales-agent-for-property-managers.html',
   'job-scheduling-dispatch-for-property-managers.html',
   'ai-concierge-for-property-managers.html',
   'google-business-profile-for-property-managers.html',
