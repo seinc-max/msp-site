@@ -35,6 +35,15 @@ const PAGES = {
   'cold-outreach.html': 'landing-call landing-offer',
   'crm-setup.html': 'landing-call landing-offer',
   'custom-dashboards.html': 'landing-call landing-offer',
+  'speed-to-lead.html': 'landing-call landing-offer',
+  'overdue-invoice-reminders.html': 'landing-call landing-offer',
+  'ai-estimate-drafts.html': 'landing-call landing-offer',
+  'ai-sales-agent.html': 'landing-call landing-offer',
+  'job-scheduling-dispatch.html': 'landing-call landing-offer',
+  'google-business-profile-optimization.html': 'landing-call landing-offer',
+  'google-business-profile-for-professionals.html': 'landing-form landing-hub',
+  'document-automation.html': 'landing-form landing-hub',
+  'inbox-management.html': 'landing-form landing-hub',
 };
 const NON_LANDING = ['about.html', 'privacy.html', 'terms.html', 'blog/what-sovereign-ai-actually-means.html', 'ai-exposure-score.html'];
 
