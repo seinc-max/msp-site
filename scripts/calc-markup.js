@@ -28,6 +28,8 @@ const PAGES = {
   "contractor-websites.html": "contractor-websites",
   "lead-follow-up.html": "lead-follow-up",
   "appointment-reminders.html": "appointment-reminders",
+  // 2026-11-26 (Ben t1861u): salon and clinic version of Appointment Reminders.
+  "appointment-reminders-for-salons.html": "appointment-reminders-for-salons",
   "cold-outreach.html": "cold-outreach",
   "crm-setup.html": "crm-setup",
   "custom-dashboards.html": "custom-dashboards",

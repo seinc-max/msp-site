@@ -199,6 +199,19 @@
       sub: 'About {n} empty {n|appointment|appointments} a month, or {year} a year.',
       formula: 'Appointments a week × % who don\u2019t show × average visit value × 4.3 weeks'
     },
+    // 2026-11-26 (Ben t1861u): salon and clinic version of Appointment Reminders.
+    'appointment-reminders-for-salons': {
+      title: 'What do no-shows cost you?',
+      inputs: [
+        { k: 'appts', label: 'Appointments each month', min: 0, max: 2000, step: 10, v: 320, u: 'n' },
+        { k: 'ns', label: 'Clients who don\u2019t show up', min: 0, max: 40, step: 1, v: 8, u: 'pct' },
+        { k: 'saved', label: 'No-shows a reminder gets to show up', min: 0, max: 100, step: 5, v: 50, u: 'pct' },
+        { k: 'visit', label: 'Your average appointment value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
+      ],
+      f: function (v) { var n = v.appts * pct(v.ns) * pct(v.saved); var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} {n|appointment|appointments} a month kept, or {year} a year.',
+      formula: 'Appointments a month × % who don\u2019t show × % a reminder gets to show up × average appointment value'
+    },
     'cold-outreach': {
       title: 'What could one more commercial client be worth to you?',
       lead: 'About',

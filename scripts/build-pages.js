@@ -82,6 +82,8 @@ const LANDING = new Set([
   // 2026-11-26 salon versions (Ben t1835u)
   'speed-to-lead-for-salons.html',
   'google-business-profile-for-salons.html',
+  // 2026-11-26 salon version of Appointment Reminders (Ben t1861u)
+  'appointment-reminders-for-salons.html',
   // 2026-11-26 Property Managers group (Ben t1825u)
   'for-property-managers.html',
   'ai-contract-review-for-property-managers.html',

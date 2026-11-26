@@ -76,7 +76,7 @@ const homeMenu = [
   '/for-appointment-businesses',
   '/ai-receptionist-for-salons',
   '/google-review-requests-for-salons',
-  '/appointment-reminders',
+  '/appointment-reminders-for-salons', // 2026-11-26 Ben t1861u: salon menu link moved to the salon version
   '/for-law-firms-accountants-and-advisors',
 ];
 

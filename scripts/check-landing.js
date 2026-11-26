@@ -32,6 +32,7 @@ const PAGES = {
   'ai-support-agent.html': 'landing-form landing-hub',
   'lead-follow-up.html': 'landing-call landing-offer',
   'appointment-reminders.html': 'landing-call landing-offer',
+  'appointment-reminders-for-salons.html': 'landing-call landing-offer', // 2026-11-26 Ben t1861u
   'cold-outreach.html': 'landing-call landing-offer',
   'crm-setup.html': 'landing-call landing-offer',
   'custom-dashboards.html': 'landing-call landing-offer',
