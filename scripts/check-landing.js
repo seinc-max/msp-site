@@ -44,6 +44,22 @@ const PAGES = {
   'google-business-profile-for-professionals.html': 'landing-form landing-hub',
   'document-automation.html': 'landing-form landing-hub',
   'inbox-management.html': 'landing-form landing-hub',
+  // 2026-11-26 salon versions (Ben t1834u)
+  'website-chat-for-salons.html': 'landing-call landing-offer',
+  'lead-follow-up-for-salons.html': 'landing-call landing-offer',
+  // 2026-11-26 salon versions (Ben t1835u)
+  'speed-to-lead-for-salons.html': 'landing-call landing-offer',
+  'google-business-profile-for-salons.html': 'landing-call landing-offer',
+  // 2026-11-26 Property Managers group (Ben t1825u)
+  'for-property-managers.html': 'landing-call landing-hub',
+  'ai-contract-review-for-property-managers.html': 'landing-call landing-offer',
+  'accounts-payable-automation-for-property-managers.html': 'landing-call landing-offer',
+  'ai-sales-agent-for-property-managers.html': 'landing-call landing-offer',
+  'job-scheduling-dispatch-for-property-managers.html': 'landing-call landing-offer',
+  'ai-concierge-for-property-managers.html': 'landing-call landing-offer',
+  'google-business-profile-for-property-managers.html': 'landing-call landing-offer',
+  'speed-to-lead-for-property-managers.html': 'landing-call landing-offer',
+  'appointment-reminders-for-property-managers.html': 'landing-call landing-offer',
 };
 const NON_LANDING = ['about.html', 'privacy.html', 'terms.html', 'blog/what-sovereign-ai-actually-means.html', 'ai-exposure-score.html'];
 

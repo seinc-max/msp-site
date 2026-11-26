@@ -103,6 +103,53 @@
       sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
       formula: 'Visitors a month × % who leave with a question × % who would book × average job value'
     },
+    'website-chat-for-salons': {
+      title: 'What are the visitors who leave your site worth?',
+      inputs: [
+        { k: 'visits', label: 'Website visitors each month', min: 0, max: 5000, step: 50, v: 500, u: 'n' },
+        { k: 'ask', label: 'Visitors who leave with a question', min: 0, max: 20, step: 1, v: 3, u: 'pct' },
+        { k: 'book', label: 'Of those, how many would book', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
+        { k: 'visit', label: 'Your average appointment value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
+      ],
+      f: function (v) { var n = v.visits * pct(v.ask) * pct(v.book); var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} {n|appointment|appointments} a month, or {year} a year.',
+      formula: 'Visitors a month × % who leave with a question × % who would book × average appointment value'
+    },
+    'lead-follow-up-for-salons': {
+      title: 'What are the new-client requests that go cold worth?',
+      inputs: [
+        { k: 'leads', label: 'New-client requests each month', min: 0, max: 300, step: 1, v: 40, u: 'n' },
+        { k: 'cold', label: 'Requests that go cold before you reply', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
+        { k: 'book', label: 'Of those, how many would book with a fast reply', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
+        { k: 'visit', label: 'Your average first-visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
+      ],
+      f: function (v) { var n = v.leads * pct(v.cold) * pct(v.book); var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} {n|appointment|appointments} a month, or {year} a year.',
+      formula: 'Requests a month × % that go cold × % who would book × average first-visit value'
+    },
+    'speed-to-lead-for-salons': {
+      title: 'What are the new-client requests you answer too late worth?',
+      inputs: [
+        { k: 'leads', label: 'New-client requests each month', min: 0, max: 300, step: 1, v: 30, u: 'n' },
+        { k: 'late', label: 'Requests you can\u2019t answer in minutes', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
+        { k: 'book', label: 'Of those, how many would book with a fast first reply', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
+        { k: 'visit', label: 'Your average first-visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
+      ],
+      f: function (v) { var n = v.leads * pct(v.late) * pct(v.book); var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} {n|appointment|appointments} a month, or {year} a year.',
+      formula: 'Requests a month \u00d7 % you can\u2019t answer in minutes \u00d7 % who would book \u00d7 average first-visit value'
+    },
+    'google-business-profile-for-salons': {
+      title: 'What could more calls from Google Maps be worth?',
+      inputs: [
+        { k: 'calls', label: 'Extra calls from Google Maps each month', min: 0, max: 40, step: 1, v: 5, u: 'n' },
+        { k: 'book', label: 'Callers who book', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
+        { k: 'visit', label: 'Your average visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
+      ],
+      f: function (v) { var n = v.calls * pct(v.book); var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} {n|booking|bookings} a month, or {year} a year.',
+      formula: 'Extra calls a month \u00d7 % who book \u00d7 average visit value'
+    },
     'text-to-pay': {
       title: 'How much of your money is waiting on unpaid invoices?',
       lead: 'About',
@@ -210,11 +257,11 @@
         { k: 'leads', label: 'New leads each month', min: 0, max: 300, step: 1, v: 30, u: 'n' },
         { k: 'late', label: 'Leads you can\u2019t answer in minutes', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
         { k: 'book', label: 'Of those, how many would book with a fast first reply', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
-        { k: 'job', label: 'Your average job or visit value', min: 20, max: 5000, step: 10, v: 450, u: 'money' }
+        { k: 'job', label: 'Your average job value', min: 20, max: 5000, step: 10, v: 450, u: 'money' }
       ],
       f: function (v) { var jobs = v.leads * pct(v.late) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|booking|bookings} a month, or {year} a year.',
-      formula: 'Leads a month × % you can\u2019t answer in minutes × % who would book × average job or visit value'
+      formula: 'Leads a month × % you can\u2019t answer in minutes × % who would book × average job value'
     },
     'overdue-invoice-reminders': {
       title: 'How much of your money runs late?',
@@ -271,11 +318,11 @@
       inputs: [
         { k: 'calls', label: 'Extra calls from Google Maps each month', min: 0, max: 40, step: 1, v: 5, u: 'n' },
         { k: 'book', label: 'Callers who book', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
-        { k: 'job', label: 'Your average job or visit value', min: 20, max: 5000, step: 10, v: 400, u: 'money' }
+        { k: 'job', label: 'Your average job value', min: 20, max: 5000, step: 10, v: 400, u: 'money' }
       ],
       f: function (v) { var jobs = v.calls * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|booking|bookings} a month, or {year} a year.',
-      formula: 'Extra calls a month × % who book × average job or visit value'
+      formula: 'Extra calls a month × % who book × average job value'
     },
     'google-business-profile-for-professionals': {
       title: 'What could more people reaching out be worth?',
@@ -315,6 +362,108 @@
       f: function (v) { var h = v.hrs * W; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
       sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
       formula: 'Hours a week × your hourly value × 4.3 weeks'
+    },
+    // 2026-11-26 (Ben t1825u): Property Managers group. Example inputs only; every number is the visitor's own.
+    'ai-contract-review-for-property-managers': {
+      title: 'What does reading every contract cost you?',
+      lead: 'Your time on it is worth',
+      tail: '',
+      inputs: [
+        { k: 'n', label: 'Leases and contracts you read each month', min: 0, max: 100, step: 1, v: 12, u: 'n' },
+        { k: 'mins', label: 'Minutes each one takes', min: 5, max: 240, step: 5, v: 45, u: 'min' },
+        { k: 'rate', label: 'What an hour of your time is worth', min: 20, max: 300, step: 5, v: 75, u: 'money' }
+      ],
+      f: function (v) { var h = v.n * v.mins / 60; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Contracts a month × minutes each ÷ 60 × your hourly value'
+    },
+    'accounts-payable-automation-for-property-managers': {
+      title: 'What do vendor invoices cost you in time?',
+      lead: 'Your time on them is worth',
+      tail: '',
+      inputs: [
+        { k: 'n', label: 'Vendor invoices you handle each month', min: 0, max: 400, step: 5, v: 60, u: 'n' },
+        { k: 'mins', label: 'Minutes each one takes', min: 1, max: 60, step: 1, v: 10, u: 'min' },
+        { k: 'rate', label: 'What an hour of your time is worth', min: 20, max: 300, step: 5, v: 60, u: 'money' }
+      ],
+      f: function (v) { var h = v.n * v.mins / 60; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Invoices a month × minutes each ÷ 60 × your hourly value'
+    },
+    'ai-sales-agent-for-property-managers': {
+      title: 'What could your missed owner leads be worth?',
+      lead: 'About',
+      per: '',
+      tail: 'in first-year fees is at stake each month.',
+      inputs: [
+        { k: 'leads', label: 'Owner leads you get each month', min: 0, max: 100, step: 1, v: 10, u: 'n' },
+        { k: 'miss', label: 'Owner leads you don’t reach in time', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
+        { k: 'sign', label: 'Share of owner leads you would sign', min: 0, max: 100, step: 5, v: 20, u: 'pct' },
+        { k: 'fees', label: 'Your first-year fees from one owner', min: 100, max: 50000, step: 100, v: 3000, u: 'money' }
+      ],
+      f: function (v) { var o = v.leads * pct(v.miss) * pct(v.sign); var m = o * v.fees; return { main: m, t: { n: whole(o) } }; },
+      sub: 'About {n} {n|owner|owners} a month, or {year} a year.',
+      formula: 'Owner leads a month × % you don’t reach in time × % who would sign × first-year fees from one owner'
+    },
+    'job-scheduling-dispatch-for-property-managers': {
+      title: 'What does scheduling by phone cost you?',
+      lead: 'Your time on it is worth',
+      tail: '',
+      inputs: [
+        { k: 'hrs', label: 'Hours a week you spend scheduling maintenance jobs and sending vendors', min: 0, max: 30, step: 0.5, v: 6, u: 'hrs' },
+        { k: 'rate', label: 'What an hour of your time is worth', min: 20, max: 300, step: 5, v: 75, u: 'money' }
+      ],
+      f: function (v) { var h = v.hrs * W; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Hours a week × your hourly value × 4.3 weeks'
+    },
+    'ai-concierge-for-property-managers': {
+      title: 'What do resident questions cost your team?',
+      lead: 'Your team’s time on them is worth',
+      tail: '',
+      inputs: [
+        { k: 'q', label: 'Resident questions and requests your team handles each week', min: 0, max: 400, step: 5, v: 60, u: 'n' },
+        { k: 'mins', label: 'Minutes each one takes', min: 1, max: 60, step: 1, v: 5, u: 'min' },
+        { k: 'rate', label: 'What an hour of your team’s time is worth', min: 20, max: 300, step: 5, v: 50, u: 'money' }
+      ],
+      f: function (v) { var h = v.q * v.mins / 60 * W; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Questions a week × minutes each ÷ 60 × your hourly value × 4.3 weeks'
+    },
+    'google-business-profile-for-property-managers': {
+      title: 'What could more calls from Google Maps be worth?',
+      inputs: [
+        { k: 'calls', label: 'Extra calls from Google Maps each month', min: 0, max: 40, step: 1, v: 5, u: 'n' },
+        { k: 'win', label: 'Callers who become a client', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
+        { k: 'fees', label: 'Your first-year fees from one new client', min: 100, max: 20000, step: 50, v: 1500, u: 'money' }
+      ],
+      f: function (v) { var c = v.calls * pct(v.win); var m = c * v.fees; return { main: m, t: { n: whole(c) } }; },
+      sub: 'About {n} new {n|client|clients} a month, or {year} a year.',
+      formula: 'Extra calls a month × % who become a client × first-year fees from one client'
+    },
+    'speed-to-lead-for-property-managers': {
+      title: 'What do slow replies cost you?',
+      inputs: [
+        { k: 'leads', label: 'Rental inquiries and owner leads each month', min: 0, max: 300, step: 5, v: 40, u: 'n' },
+        { k: 'late', label: 'Leads you can’t answer in minutes', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
+        { k: 'win', label: 'Leads who would sign a lease or sign with you', min: 0, max: 100, step: 5, v: 20, u: 'pct' },
+        { k: 'val', label: 'Your average value of one new lease or owner', min: 100, max: 20000, step: 100, v: 1800, u: 'money' }
+      ],
+      f: function (v) { var n = v.leads * pct(v.late) * pct(v.win); var m = n * v.val; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} new {n|lease or owner|leases or owners} a month, or {year} a year.',
+      formula: 'Leads a month × % you can’t answer in minutes × % who would sign × average value of one new lease or owner'
+    },
+    'appointment-reminders-for-property-managers': {
+      title: 'What do missed showings cost you?',
+      inputs: [
+        { k: 'n', label: 'Showings and appointments each month', min: 0, max: 300, step: 5, v: 40, u: 'n' },
+        { k: 'ns', label: 'People who don’t show up', min: 0, max: 60, step: 1, v: 20, u: 'pct' },
+        { k: 'days', label: 'Extra days a unit sits empty after a missed showing', min: 0, max: 30, step: 1, v: 3, u: 'days' },
+        { k: 'rent', label: 'Rent for one unit for one day', min: 10, max: 500, step: 5, v: 50, u: 'money' }
+      ],
+      f: function (v) { var n = v.n * pct(v.ns); var m = n * v.days * v.rent; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} missed {n|showing|showings} a month, or {year} a year.',
+      formula: 'Showings a month × % who don’t show × extra days empty × rent for one unit for one day'
     }
   };
 

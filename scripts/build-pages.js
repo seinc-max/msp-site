@@ -76,6 +76,22 @@ const LANDING = new Set([
   'google-business-profile-for-professionals.html',
   'document-automation.html',
   'inbox-management.html',
+  // 2026-11-26 salon versions (Ben t1834u)
+  'website-chat-for-salons.html',
+  'lead-follow-up-for-salons.html',
+  // 2026-11-26 salon versions (Ben t1835u)
+  'speed-to-lead-for-salons.html',
+  'google-business-profile-for-salons.html',
+  // 2026-11-26 Property Managers group (Ben t1825u)
+  'for-property-managers.html',
+  'ai-contract-review-for-property-managers.html',
+  'accounts-payable-automation-for-property-managers.html',
+  'ai-sales-agent-for-property-managers.html',
+  'job-scheduling-dispatch-for-property-managers.html',
+  'ai-concierge-for-property-managers.html',
+  'google-business-profile-for-property-managers.html',
+  'speed-to-lead-for-property-managers.html',
+  'appointment-reminders-for-property-managers.html',
 ]);
 const INFO = new Set(['about.html', 'terms.html', 'privacy.html']);
 const PAGE = new Set([

@@ -1669,3 +1669,20 @@ html.tl-calc-visible .sticky-mobile-cta { display: none !important; }
   nav.tl-nav .nav-services-group + .nav-services-group { margin-top: 0; border-top: 0; padding-top: 0; }
   nav.tl-nav .nav-services-group[data-audience="professional"] { margin-top: 8px; padding-top: 4px; border-top: 1px solid #dde6f5; }
 }
+
+/* 4th menu group 2026-11-26 (Ben t1825u): Property Managers. At 981px and wider the menu is four columns:
+   Trades takes two, Salons and Professional Services stack in the third, Property Managers has the fourth.
+   Below 981px the menu stays one scrolling column. */
+@media (min-width: 981px) {
+  nav.tl-nav .nav-services-menu {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: min(1180px, calc(100vw - 48px));
+  }
+  nav.tl-nav .nav-services-group[data-audience="property-managers"] {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+}

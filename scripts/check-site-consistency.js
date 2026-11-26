@@ -50,7 +50,13 @@ const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach"
   // 2026-11-26 menu rebuild (Ben t1817u): the 9 new service pages plus the professional group.
   "/speed-to-lead", "/overdue-invoice-reminders", "/ai-estimate-drafts", "/ai-sales-agent", "/job-scheduling-dispatch",
   "/google-business-profile-optimization", "/google-business-profile-for-professionals", "/document-automation", "/inbox-management",
-  "/ai-governance", "/fractional-ai-officer", "/ai-support-agent"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
+  "/ai-governance", "/fractional-ai-officer", "/ai-support-agent",
+  // 2026-11-26 salon versions (Ben t1834u).
+  "/website-chat-for-salons", "/lead-follow-up-for-salons",
+  // 2026-11-26 salon versions (Ben t1835u).
+  "/speed-to-lead-for-salons", "/google-business-profile-for-salons",
+  // 2026-11-26 Property Managers group (Ben t1825u): the hub and the 8 offer pages.
+  "/for-property-managers", "/ai-contract-review-for-property-managers", "/accounts-payable-automation-for-property-managers", "/ai-sales-agent-for-property-managers", "/job-scheduling-dispatch-for-property-managers", "/ai-concierge-for-property-managers", "/google-business-profile-for-property-managers", "/speed-to-lead-for-property-managers", "/appointment-reminders-for-property-managers"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i,
   // Ben 2026-11-19 t1202u: copy must include all trades; no single-trade "under a sink" image.
