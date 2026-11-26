@@ -338,10 +338,10 @@ body{margin:0;font-family:'DM Sans',sans-serif;color:#1a2744;background:#fafaf8;
     try{
       var F=[
           {objectTypeId:'0-1',name:'firstname',value:firstname},
-          {objectTypeId:'0-1',name:'email',value:email},
-          {objectTypeId:'0-1',name:'hs_google_click_id',value:sessionStorage.getItem('google_ads_gclid')||''},
-          {objectTypeId:'0-1',name:'hubspot_owner_id',value:'89556230'}
+          {objectTypeId:'0-1',name:'email',value:email}
         ];
+      var gclid=sessionStorage.getItem('google_ads_gclid');
+      if(gclid){ F.push({objectTypeId:'0-1',name:'hs_google_click_id',value:gclid}); }
       var CTX={pageUri:window.location.href,pageName:document.title}; var hm=document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/); if(hm) CTX.hutk=hm[1];
       var post=function(fl){return (/^(www\.)?truelineit\.com$/.test(location.hostname)?fetch:function(){console.info('HubSpot submit skipped on non-production host');return Promise.resolve(new Response('{}',{status:200}));})('https://api.hsforms.com/submissions/v3/integration/submit/343087614/e66cbddb-8b74-4166-ab13-6ea81df11466',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:fl,context:CTX})});};
       var res=await post(F);
