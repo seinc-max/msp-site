@@ -40,6 +40,9 @@ const cases = [
   ["google-business-profile-for-professionals", {}, 2400, "About 1 new client a month, or $28,800 a year."], // 4 x .3 x 2000
   ["document-automation", {}, 1200, "About 20 staff hours a month, or $14,400 a year."],    // 30 x 40/60 x 60
   ["inbox-management", {}, 2322, "About 25.8 hours a month, or $27,864 a year."],           // 6 x 4.3 x 90 = 2322
+  // 2026-11-26 (Ben t1834u): salon versions.
+  ["website-chat-for-salons", {}, 319, "About 4 appointments a month, or $3,828 a year."],            // 500 x .03 x .25 x 85 = 318.75
+  ["lead-follow-up-for-salons", {}, 255, "About 3 appointments a month, or $3,060 a year."],         // 40 x .3 x .25 x 85
   // 2026-11-26 (Ben t1825u): Property Managers group.
   ["ai-contract-review-for-property-managers", {}, 675, "About 9 hours a month, or $8,100 a year."],      // 12 x 45/60 x 75
   ["accounts-payable-automation-for-property-managers", {}, 600, "About 10 hours a month, or $7,200 a year."], // 60 x 10/60 x 60

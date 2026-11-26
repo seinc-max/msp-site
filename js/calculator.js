@@ -103,6 +103,30 @@
       sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
       formula: 'Visitors a month × % who leave with a question × % who would book × average job value'
     },
+    'website-chat-for-salons': {
+      title: 'What are the visitors who leave your site worth?',
+      inputs: [
+        { k: 'visits', label: 'Website visitors each month', min: 0, max: 5000, step: 50, v: 500, u: 'n' },
+        { k: 'ask', label: 'Visitors who leave with a question', min: 0, max: 20, step: 1, v: 3, u: 'pct' },
+        { k: 'book', label: 'Of those, how many would book', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
+        { k: 'visit', label: 'Your average appointment value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
+      ],
+      f: function (v) { var n = v.visits * pct(v.ask) * pct(v.book); var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} {n|appointment|appointments} a month, or {year} a year.',
+      formula: 'Visitors a month × % who leave with a question × % who would book × average appointment value'
+    },
+    'lead-follow-up-for-salons': {
+      title: 'What are the new-client requests that go cold worth?',
+      inputs: [
+        { k: 'leads', label: 'New-client requests each month', min: 0, max: 300, step: 1, v: 40, u: 'n' },
+        { k: 'cold', label: 'Requests that go cold before you reply', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
+        { k: 'book', label: 'Of those, how many would book with a fast reply', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
+        { k: 'visit', label: 'Your average first-visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
+      ],
+      f: function (v) { var n = v.leads * pct(v.cold) * pct(v.book); var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} {n|appointment|appointments} a month, or {year} a year.',
+      formula: 'Requests a month × % that go cold × % who would book × average first-visit value'
+    },
     'text-to-pay': {
       title: 'How much of your money is waiting on unpaid invoices?',
       lead: 'About',
