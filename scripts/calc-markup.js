@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 // Writes the shared calculator block into each service page template, directly after
 // section 2 (the problem section, the second <section> in <main>), between
 // <!-- tl-calc --> and <!-- /tl-calc -->. Copy and inputs come from js/calculator.js CALCS.
@@ -28,16 +29,41 @@ const PAGES = {
   "contractor-websites.html": "contractor-websites",
   "lead-follow-up.html": "lead-follow-up",
   "appointment-reminders.html": "appointment-reminders",
+  // 2026-11-26 (Ben t1861u): salon and clinic version of Appointment Reminders.
+  "appointment-reminders-for-salons.html": "appointment-reminders-for-salons",
   "cold-outreach.html": "cold-outreach",
   "crm-setup.html": "crm-setup",
   "custom-dashboards.html": "custom-dashboards",
   "ai-support-agent.html": "ai-support-agent",
+  "speed-to-lead.html": "speed-to-lead",
+  "overdue-invoice-reminders.html": "overdue-invoice-reminders",
+  "ai-estimate-drafts.html": "ai-estimate-drafts",
+  "job-scheduling-dispatch.html": "job-scheduling-dispatch",
+  "google-business-profile-optimization.html": "google-business-profile-optimization",
+  "google-business-profile-for-professionals.html": "google-business-profile-for-professionals",
+  "document-automation.html": "document-automation",
+  "inbox-management.html": "inbox-management",
+  // 2026-11-26 (Ben t1834u): salon versions of Website Chat and Lead Follow-Up.
+  "website-chat-for-salons.html": "website-chat-for-salons",
+  "lead-follow-up-for-salons.html": "lead-follow-up-for-salons",
+  // 2026-11-26 (Ben t1835u): salon versions of Speed-to-Lead and Google Business Profile.
+  "speed-to-lead-for-salons.html": "speed-to-lead-for-salons",
+  "google-business-profile-for-salons.html": "google-business-profile-for-salons",
+  // 2026-11-26 (Ben t1825u): Property Managers group.
+  "ai-contract-review-for-property-managers.html": "ai-contract-review-for-property-managers",
+  "accounts-payable-automation-for-property-managers.html": "accounts-payable-automation-for-property-managers",
+  "job-scheduling-dispatch-for-property-managers.html": "job-scheduling-dispatch-for-property-managers",
+  "ai-concierge-for-property-managers.html": "ai-concierge-for-property-managers",
+  "google-business-profile-for-property-managers.html": "google-business-profile-for-property-managers",
+  "speed-to-lead-for-property-managers.html": "speed-to-lead-for-property-managers",
+  "appointment-reminders-for-property-managers.html": "appointment-reminders-for-property-managers",
 };
 const SKIPPED = {
   "index.html": "home routes to several offers; no single service to price",
   "for-home-services.html": "hub page; routes to the offer pages that carry calculators",
   "for-appointment-businesses.html": "hub page; routes to the offer pages that carry calculators",
   "for-law-firms-accountants-and-advisors.html": "hub page; the professional lane already has /ai-exposure-score and /margin-leakage-calculator",
+  "for-property-managers.html": "hub page; routes to the offer pages that carry calculators",
   "ai-governance.html": "risk value would need breach-cost statistics we can't source; /ai-exposure-score already covers it",
   "fractional-ai-officer.html": "engagement price is set per agreement; /margin-leakage-calculator already covers the value case",
 };

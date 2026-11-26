@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 /**
  * Build flat HTML from templates/pages + partials.
  *
@@ -67,6 +68,31 @@ const LANDING = new Set([
   'cold-outreach.html',
   'crm-setup.html',
   'custom-dashboards.html',
+  'speed-to-lead.html',
+  'overdue-invoice-reminders.html',
+  'ai-estimate-drafts.html',
+  'job-scheduling-dispatch.html',
+  'google-business-profile-optimization.html',
+  'google-business-profile-for-professionals.html',
+  'document-automation.html',
+  'inbox-management.html',
+  // 2026-11-26 salon versions (Ben t1834u)
+  'website-chat-for-salons.html',
+  'lead-follow-up-for-salons.html',
+  // 2026-11-26 salon versions (Ben t1835u)
+  'speed-to-lead-for-salons.html',
+  'google-business-profile-for-salons.html',
+  // 2026-11-26 salon version of Appointment Reminders (Ben t1861u)
+  'appointment-reminders-for-salons.html',
+  // 2026-11-26 Property Managers group (Ben t1825u)
+  'for-property-managers.html',
+  'ai-contract-review-for-property-managers.html',
+  'accounts-payable-automation-for-property-managers.html',
+  'job-scheduling-dispatch-for-property-managers.html',
+  'ai-concierge-for-property-managers.html',
+  'google-business-profile-for-property-managers.html',
+  'speed-to-lead-for-property-managers.html',
+  'appointment-reminders-for-property-managers.html',
 ]);
 const INFO = new Set(['about.html', 'terms.html', 'privacy.html']);
 const PAGE = new Set([
@@ -477,10 +503,7 @@ function aboutModel(html) {
       parts.push({ kind: 'band', html: aboutBand(id, label, h2, rest) });
     }
   }
-  const aside = must(main, /<p class="minor-audience" id="firms">([\s\S]*?)<\/p>/, 'firms aside');
-  const salonsAt = parts.findIndex((part) => part.html.includes('id="salons"'));
-  if (salonsAt < 0) throw new Error('Missing salons section');
-  parts.splice(salonsAt + 1, 0, { kind: 'aside', html: `<p class="minor-audience" id="firms">${aside}</p>` });
+  // Ben 2026-11-26 8:13 AM ET (t1851u): Professional Services is now a full block in Who we work with, so the old firms aside is gone.
   let body = '';
   let light = [];
   const flush = () => {

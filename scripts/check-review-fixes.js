@@ -57,6 +57,8 @@ const audienceOf = {
   'blog/20-shadow-ai-audits-2026.html': 'professional',
 };
 
+// 2026-11-26 menu rebuild (Ben t1817u): the Professional Services group now lists these three offers on every
+// page, so the old "must not be in the nav" rule is flipped: each one must be in every nav.
 const proOfferHrefs = ['/ai-governance', '/fractional-ai-officer', '/ai-support-agent'];
 const homeMenu = [
   '/for-home-services',
@@ -74,7 +76,7 @@ const homeMenu = [
   '/for-appointment-businesses',
   '/ai-receptionist-for-salons',
   '/google-review-requests-for-salons',
-  '/appointment-reminders',
+  '/appointment-reminders-for-salons', // 2026-11-26 Ben t1861u: salon menu link moved to the salon version
   '/for-law-firms-accountants-and-advisors',
 ];
 
@@ -99,7 +101,7 @@ const gatedNav = new Set([]);
 for (const file of files) {
   const n = nav(read(file));
   for (const href of proOfferHrefs) {
-    if (n.includes('href="' + href + '"')) fail(file + ' nav added professional offer ' + href);
+    if (!n.includes('href="' + href + '"')) fail(file + ' nav missing professional offer ' + href);
   }
   if (gatedNav.has(file)) {
     if (n.includes('nav-services') || n.includes('class="nav-links"')) fail(file + ' landing nav still shows the Services menu');
@@ -115,12 +117,12 @@ const notFound = read('404.html');
 if (bodyClass(notFound)) fail('404 should stay a neutral recovery page');
 const notFoundNav = nav(notFound);
 for (const href of proOfferHrefs) {
-  if (notFoundNav.includes('href="' + href + '"')) fail('404 nav added professional offer ' + href);
+  if (!notFoundNav.includes('href="' + href + '"')) fail('404 nav missing professional offer ' + href);
 }
 if (!notFound.includes('href="/for-home-services"') || !notFound.includes('href="/for-appointment-businesses"') || !notFound.includes('href="/for-law-firms-accountants-and-advisors"')) {
   fail('404 dropped an audience recovery link');
 }
-pass('neutral pages keep the three hubs and do not add professional offer links');
+pass('neutral pages keep the three hubs and the professional offer links');
 
 for (const f of [
   'blog/sovereign-zapier-alternatives-compliance.html',

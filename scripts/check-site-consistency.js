@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 // Cross-page consistency guard (RCA menu-guarantee-consistency-20261119).
 // Ben 2026-11-19: the guarantee badge differed across pages and many pages
 // shipped without the menu. This script fails the build/release when shared
@@ -46,7 +47,20 @@ const MANIFEST = path.join(__dirname, "dist-manifest.txt");
 const CANON_BADGE = "✓ 30-day money-back guarantee";
 const TEL = "tel:+16473605774";
 const CAPTION_START = "Just a sample";
-const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach", "/crm-setup", "/custom-dashboards"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
+// 2026-11-26 (Ben t1861u): the Salons & Clinics menu links /appointment-reminders-for-salons; /appointment-reminders is no longer in the menu.
+const NEW_PAGES = ["/lead-follow-up", "/cold-outreach", "/crm-setup", "/custom-dashboards",
+  // 2026-11-26 menu rebuild (Ben t1817u): the 9 new service pages plus the professional group.
+  "/speed-to-lead", "/overdue-invoice-reminders", "/ai-estimate-drafts", "/job-scheduling-dispatch",
+  "/google-business-profile-optimization", "/google-business-profile-for-professionals", "/document-automation", "/inbox-management",
+  "/ai-governance", "/fractional-ai-officer", "/ai-support-agent",
+  // 2026-11-26 salon versions (Ben t1834u).
+  "/website-chat-for-salons", "/lead-follow-up-for-salons",
+  // 2026-11-26 salon versions (Ben t1835u).
+  "/speed-to-lead-for-salons", "/google-business-profile-for-salons",
+  // 2026-11-26 salon version of Appointment Reminders (Ben t1861u).
+  "/appointment-reminders-for-salons",
+  // 2026-11-26 Property Managers group (Ben t1825u): the hub and the 8 offer pages.
+  "/for-property-managers", "/ai-contract-review-for-property-managers", "/accounts-payable-automation-for-property-managers", "/job-scheduling-dispatch-for-property-managers", "/ai-concierge-for-property-managers", "/google-business-profile-for-property-managers", "/speed-to-lead-for-property-managers", "/appointment-reminders-for-property-managers"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i,
   // Ben 2026-11-19 t1202u: copy must include all trades; no single-trade "under a sink" image.
@@ -158,7 +172,8 @@ for (const f of pages) {
   }
   if (!footer.includes("1250 Brant Street, Suite 400, Burlington, ON L7P 1X8")) err(f, "footer missing address");
   if (!footer.includes("© 2026 Trueline IT. All rights reserved.")) err(f, "footer missing copyright");
-  if (!footer.includes("Phone and AI help for trades and contractors. Salons and clinics too.")) err(f, "footer missing tagline");
+  // Ben 2026-11-26 7:40 AM ET (t1844u): shared footer tagline now names all four categories.
+  if (!footer.includes("Phone and AI help for trades and contractors, salons and clinics, professional firms and property managers.")) err(f, "footer missing tagline");
 }
 
 // 2. Guarantee badge, banned phrases, tel links, collected hero elements.

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 // Unit tests for the service-page calculator formulas (js/calculator.js).
 // Hand-worked expected values; fails (exit 1) on any mismatch or if the JS throws.
 "use strict";
@@ -25,12 +26,37 @@ const cases = [
   ["contractor-websites", {}, 2400, null],                                                   // 300 x .05 x .4 x 400
   ["lead-follow-up", {}, 1500, null],                                                        // 40 x .3 x .25 x 500
   ["appointment-reminders", {}, 2339, null],                                                 // 80 x .08 x 85 x 4.3 = 2339.2
+  ["appointment-reminders-for-salons", {}, 1088, "About 13 appointments a month kept, or $13,056 a year."], // 320 x .08 x .5 x 85 = 1088 (2026-11-26, Ben t1861u)
+  ["appointment-reminders-for-salons", { appts: 400, ns: 10, saved: 60, visit: 100 }, 2400, "About 24 appointments a month kept, or $28,800 a year."], // 400 x .1 x .6 x 100
+  ["appointment-reminders-for-salons", { ns: 0 }, 0, "About 0 appointments a month kept, or $0 a year."],
   ["cold-outreach", {}, 12000, "One client is worth about $6,000 per job, or $12,000 a year at 2 bookings."],
   ["cold-outreach", { rep: 1 }, 6000, "One client is worth about $6,000 per job, or $6,000 a year at 1 booking."],
   ["cold-outreach", { clients: 3 }, 36000, null],
   ["crm-setup", {}, 2568, "$1,600 in slipped jobs plus $968 of your time."],               // 2 x 800 + 3 x 75 x 4.3
   ["custom-dashboards", {}, 968, null],                                                      // 3 x 75 x 4.3 = 967.5
   ["ai-support-agent", {}, 1032, "About 17.2 staff hours a month, or $12,384 a year."],     // 40 x 6/60 x 60 x 4.3
+  ["speed-to-lead", {}, 1350, "About 3 bookings a month, or $16,200 a year."],            // 30 x .4 x .25 x 450
+  ["overdue-invoice-reminders", {}, 4800, "About 8 late invoices a month."],                  // 40 x .2 x 600
+  ["ai-estimate-drafts", {}, 1125, "About 15 hours a month, or $13,500 a year."],            // 20 x 45/60 x 75
+  ["job-scheduling-dispatch", {}, 1935, "About 25.8 hours a month, or $23,220 a year."],     // 6 x 4.3 x 75 = 1935
+  ["google-business-profile-optimization", {}, 800, "About 2 bookings a month, or $9,600 a year."], // 5 x .4 x 400
+  ["google-business-profile-for-professionals", {}, 2400, "About 1 new client a month, or $28,800 a year."], // 4 x .3 x 2000
+  ["document-automation", {}, 1200, "About 20 staff hours a month, or $14,400 a year."],    // 30 x 40/60 x 60
+  ["inbox-management", {}, 2322, "About 25.8 hours a month, or $27,864 a year."],           // 6 x 4.3 x 90 = 2322
+  // 2026-11-26 (Ben t1834u): salon versions.
+  ["website-chat-for-salons", {}, 319, "About 4 appointments a month, or $3,828 a year."],            // 500 x .03 x .25 x 85 = 318.75
+  ["lead-follow-up-for-salons", {}, 255, "About 3 appointments a month, or $3,060 a year."],         // 40 x .3 x .25 x 85
+  // 2026-11-26 (Ben t1835u): salon versions.
+  ["speed-to-lead-for-salons", {}, 255, "About 3 appointments a month, or $3,060 a year."],             // 30 x .4 x .25 x 85
+  ["google-business-profile-for-salons", {}, 170, "About 2 bookings a month, or $2,040 a year."],          // 5 x .4 x 85
+  // 2026-11-26 (Ben t1825u): Property Managers group.
+  ["ai-contract-review-for-property-managers", {}, 675, "About 9 hours a month, or $8,100 a year."],      // 12 x 45/60 x 75
+  ["accounts-payable-automation-for-property-managers", {}, 600, "About 10 hours a month, or $7,200 a year."], // 60 x 10/60 x 60
+  ["job-scheduling-dispatch-for-property-managers", {}, 1935, "About 25.8 hours a month, or $23,220 a year."], // 6 x 4.3 x 75
+  ["ai-concierge-for-property-managers", {}, 1075, "About 21.5 hours a month, or $12,900 a year."],      // 60 x 5/60 x 4.3 x 50
+  ["google-business-profile-for-property-managers", {}, 2250, "About 2 new clients a month, or $27,000 a year."], // 5 x .3 x 1500
+  ["speed-to-lead-for-property-managers", {}, 5760, "About 3 new leases or owners a month, or $69,120 a year."], // 40 x .4 x .2 x 1800
+  ["appointment-reminders-for-property-managers", {}, 1200, "About 8 missed showings a month, or $14,400 a year."], // 40 x .2 x 3 x 50
 ];
 const fails = [];
 for (const [id, over, want, sub] of cases) {

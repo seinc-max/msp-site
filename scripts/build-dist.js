@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 // Copies only the public site into dist/ for Cloudflare Pages (Tracker row 62).
 // Pages settings this needs: Build command `node scripts/build-dist.js`,
 // Build output directory `dist`, Root directory empty.
@@ -30,8 +31,16 @@ const ALLOW = new Set([
   "llms.txt", "margin-leakage-calculator.html", "missed-call-text-back.html",
   "og-image-professional.jpg", "og-image-trades.jpg", "og-image.jpg", "og-image.png",
   "privacy.html", "quote-follow-up-win-back.html", "robots.txt", "sitemap.xml", "688213215a3247df8b5797e268fbd61b.txt",
-  "terms.html", "text-to-pay.html", "website-chat-to-text.html",
-  "lead-follow-up.html", "appointment-reminders.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html",
+  "terms.html", "text-to-pay.html", "website-chat-to-text.html", "demo",
+  "lead-follow-up.html", "appointment-reminders.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html", "speed-to-lead.html", "overdue-invoice-reminders.html", "ai-estimate-drafts.html", "job-scheduling-dispatch.html", "google-business-profile-optimization.html", "google-business-profile-for-professionals.html", "document-automation.html", "inbox-management.html",
+  // 2026-11-26 salon versions (Ben t1834u)
+  "website-chat-for-salons.html", "lead-follow-up-for-salons.html",
+  // 2026-11-26 salon versions (Ben t1835u)
+  "speed-to-lead-for-salons.html", "google-business-profile-for-salons.html",
+  // 2026-11-26 salon version of Appointment Reminders (Ben t1861u)
+  "appointment-reminders-for-salons.html",
+  // 2026-11-26 Property Managers group (Ben t1825u)
+  "for-property-managers.html", "ai-contract-review-for-property-managers.html", "accounts-payable-automation-for-property-managers.html", "job-scheduling-dispatch-for-property-managers.html", "ai-concierge-for-property-managers.html", "google-business-profile-for-property-managers.html", "speed-to-lead-for-property-managers.html", "appointment-reminders-for-property-managers.html",
 ]);
 
 // Known non-public entries. Never copied. Pages reads functions/ from the repo root.
@@ -71,10 +80,9 @@ function copy(src, dst, rel) {
   }
 }
 
-// Demos are staging-only. Cloudflare sets CF_PAGES_BRANCH on the branch it
-// deploys. main is production. Fail before copy and remove dist/ so a main
-// deploy cannot publish demo artifacts. demo/ is not in ALLOW, so a main
-// tree without that folder still builds.
+// Demos are staging-only. Cloudflare sets CF_PAGES_BRANCH to the branch it is
+// deploying. main is production. Fail before copy and remove dist/ so a
+// main deploy cannot publish demo artifacts.
 if (process.env.CF_PAGES_BRANCH === "main" && treeHasFile(path.join(ROOT, "demo"))) {
   fs.rmSync(OUT, { recursive: true, force: true });
   fail("demo/ is staging-only and cannot be published from main");
@@ -96,6 +104,12 @@ if (missingTop.length) fail("missing public entries: " + missingTop.join(", "));
   if (r.status !== 0) fail("check-site-consistency.js failed; fix the shared elements before release");
 }
 
+// 1c. No packs or bundles (Ben 2026-11-25 6:41 PM ET; RCA no-packs-bundles-20261126).
+{
+  const r = require("child_process").spawnSync(process.execPath, [path.join(__dirname, "check-no-packs.js")], { stdio: "inherit" });
+  if (r.status !== 0) fail("check-no-packs.js failed; no packs or bundles allowed");
+}
+
 // 2. Copy the allowed entries.
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT);
@@ -108,7 +122,9 @@ const expected = fs.readFileSync(MANIFEST, "utf8").split("\n").map((s) => s.trim
 const want = new Set(expected);
 const got = new Set(copied);
 const missing = expected.filter((f) => !got.has(f));
-const extra = copied.filter((f) => !want.has(f));
+// demo/ is copied in full and is not listed in the manifest, so a new
+// client or demonstration directory deploys without a manifest edit.
+const extra = copied.filter((f) => !want.has(f) && !f.startsWith("demo/"));
 if (missing.length || extra.length) {
   fs.rmSync(OUT, { recursive: true, force: true });
   fail("dist/ does not match scripts/dist-manifest.txt. Missing: [" + missing.join(", ") + "] Extra: [" + extra.join(", ") + "]");
