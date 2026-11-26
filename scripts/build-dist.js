@@ -96,6 +96,12 @@ for (const n of top) {
   if (fs.lstatSync(path.join(ROOT, n)).isSymbolicLink()) fail("symlink not allowed: " + n);
 }
 const missingTop = [...ALLOW].filter((n) => !top.includes(n));
+// demo/ is required on staging and forbidden on main (see the CF_PAGES_BRANCH
+// guard above). On main the folder is omitted, so do not treat it as missing.
+if (process.env.CF_PAGES_BRANCH === "main") {
+  const i = missingTop.indexOf("demo");
+  if (i !== -1) missingTop.splice(i, 1);
+}
 if (missingTop.length) fail("missing public entries: " + missingTop.join(", "));
 
 // 1b. Cross-page consistency guard (RCA menu-guarantee-consistency-20261119).
