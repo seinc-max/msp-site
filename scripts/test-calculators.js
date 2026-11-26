@@ -25,6 +25,9 @@ const cases = [
   ["contractor-websites", {}, 2400, null],                                                   // 300 x .05 x .4 x 400
   ["lead-follow-up", {}, 1500, null],                                                        // 40 x .3 x .25 x 500
   ["appointment-reminders", {}, 2339, null],                                                 // 80 x .08 x 85 x 4.3 = 2339.2
+  ["appointment-reminders-for-salons", {}, 1088, "About 13 appointments a month kept, or $13,056 a year."], // 320 x .08 x .5 x 85 = 1088 (2026-11-26, Ben t1861u)
+  ["appointment-reminders-for-salons", { appts: 400, ns: 10, saved: 60, visit: 100 }, 2400, "About 24 appointments a month kept, or $28,800 a year."], // 400 x .1 x .6 x 100
+  ["appointment-reminders-for-salons", { ns: 0 }, 0, "About 0 appointments a month kept, or $0 a year."],
   ["cold-outreach", {}, 12000, "One client is worth about $6,000 per job, or $12,000 a year at 2 bookings."],
   ["cold-outreach", { rep: 1 }, 6000, "One client is worth about $6,000 per job, or $6,000 a year at 1 booking."],
   ["cold-outreach", { clients: 3 }, 36000, null],
