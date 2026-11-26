@@ -168,7 +168,8 @@ for (const f of pages) {
   }
   if (!footer.includes("1250 Brant Street, Suite 400, Burlington, ON L7P 1X8")) err(f, "footer missing address");
   if (!footer.includes("© 2026 Trueline IT. All rights reserved.")) err(f, "footer missing copyright");
-  if (!footer.includes("Phone and AI help for trades and contractors. Salons and clinics too.")) err(f, "footer missing tagline");
+  // Ben 2026-11-26 7:40 AM ET (t1844u): shared footer tagline now names all four categories.
+  if (!footer.includes("Phone and AI help for trades and contractors, salons and clinics, professional firms and property managers.")) err(f, "footer missing tagline");
 }
 
 // 2. Guarantee badge, banned phrases, tel links, collected hero elements.
