@@ -502,10 +502,7 @@ function aboutModel(html) {
       parts.push({ kind: 'band', html: aboutBand(id, label, h2, rest) });
     }
   }
-  const aside = must(main, /<p class="minor-audience" id="firms">([\s\S]*?)<\/p>/, 'firms aside');
-  const salonsAt = parts.findIndex((part) => part.html.includes('id="salons"'));
-  if (salonsAt < 0) throw new Error('Missing salons section');
-  parts.splice(salonsAt + 1, 0, { kind: 'aside', html: `<p class="minor-audience" id="firms">${aside}</p>` });
+  // Ben 2026-11-26 8:13 AM ET (t1851u): Professional Services is now a full block in Who we work with, so the old firms aside is gone.
   let body = '';
   let light = [];
   const flush = () => {
