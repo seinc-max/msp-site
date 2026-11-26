@@ -67,6 +67,15 @@ const LANDING = new Set([
   'cold-outreach.html',
   'crm-setup.html',
   'custom-dashboards.html',
+  'speed-to-lead.html',
+  'overdue-invoice-reminders.html',
+  'ai-estimate-drafts.html',
+  'ai-sales-agent.html',
+  'job-scheduling-dispatch.html',
+  'google-business-profile-optimization.html',
+  'google-business-profile-for-professionals.html',
+  'document-automation.html',
+  'inbox-management.html',
 ]);
 const INFO = new Set(['about.html', 'terms.html', 'privacy.html']);
 const PAGE = new Set([

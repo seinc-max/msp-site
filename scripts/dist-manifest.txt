@@ -90,3 +90,12 @@ sitemap.xml
 terms.html
 text-to-pay.html
 website-chat-to-text.html
+speed-to-lead.html
+overdue-invoice-reminders.html
+ai-estimate-drafts.html
+ai-sales-agent.html
+job-scheduling-dispatch.html
+google-business-profile-optimization.html
+google-business-profile-for-professionals.html
+document-automation.html
+inbox-management.html
