@@ -1,6 +1,6 @@
 # Trueline IT
 
-> Done-for-you AI receptionist and Google review requests for trades and contractors, and for salons and clinics. Trades and contractors also get missed-call text-back, quote follow-up, chat-to-text, text-to-pay and contractor websites. Plus AI governance for professional firms. We set it up and run it. Call (647) 360-5774 for trades, contractor and salon services.
+> Done-for-you AI and phone services for four kinds of business: trades and contractors, salons and clinics, professional firms (law, accounting and advisory), and property managers. Trades and contractors get an AI receptionist, missed-call text-back, quote follow-up, chat-to-text, text-to-pay and contractor websites. Salons and clinics get an AI receptionist, Google review requests and appointment reminders. Property managers get help with leases, vendor invoices, resident questions and owner leads. Professional firms get AI governance. We set it up and run it. Call (647) 360-5774 for trades, salon and property-manager services.
 
 ## Audience hubs
 - For Trades & Contractors: https://truelineit.com/for-home-services
@@ -80,5 +80,5 @@ For law, accounting, advisory and insurance offices. Book My AI Consultation on 
 
 ## Contact
 Website: https://truelineit.com
-Phone: (647) 360-5774 — trades, contractor and salon services are call-only. Governance and Fractional AI Officer use forms (start at the $1,000 AI Liability Assessment).
+Phone: (647) 360-5774 — trades, contractor, salon and property-manager services are call-only. Governance and Fractional AI Officer use forms (start at the $1,000 AI Liability Assessment).
 Email: hello@truelineit.com
