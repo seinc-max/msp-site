@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 // Unit tests for the service-page calculator formulas (js/calculator.js).
 // Hand-worked expected values; fails (exit 1) on any mismatch or if the JS throws.
 "use strict";
@@ -37,7 +38,6 @@ const cases = [
   ["speed-to-lead", {}, 1350, "About 3 bookings a month, or $16,200 a year."],            // 30 x .4 x .25 x 450
   ["overdue-invoice-reminders", {}, 4800, "About 8 late invoices a month."],                  // 40 x .2 x 600
   ["ai-estimate-drafts", {}, 1125, "About 15 hours a month, or $13,500 a year."],            // 20 x 45/60 x 75
-  ["ai-sales-agent", {}, 1125, "About 2 jobs a month, or $13,500 a year."],                  // 30 x .3 x .25 x 500
   ["job-scheduling-dispatch", {}, 1935, "About 25.8 hours a month, or $23,220 a year."],     // 6 x 4.3 x 75 = 1935
   ["google-business-profile-optimization", {}, 800, "About 2 bookings a month, or $9,600 a year."], // 5 x .4 x 400
   ["google-business-profile-for-professionals", {}, 2400, "About 1 new client a month, or $28,800 a year."], // 4 x .3 x 2000
@@ -52,7 +52,6 @@ const cases = [
   // 2026-11-26 (Ben t1825u): Property Managers group.
   ["ai-contract-review-for-property-managers", {}, 675, "About 9 hours a month, or $8,100 a year."],      // 12 x 45/60 x 75
   ["accounts-payable-automation-for-property-managers", {}, 600, "About 10 hours a month, or $7,200 a year."], // 60 x 10/60 x 60
-  ["ai-sales-agent-for-property-managers", {}, 1800, "About 1 owner a month, or $21,600 a year."],       // 10 x .3 x .2 x 3000
   ["job-scheduling-dispatch-for-property-managers", {}, 1935, "About 25.8 hours a month, or $23,220 a year."], // 6 x 4.3 x 75
   ["ai-concierge-for-property-managers", {}, 1075, "About 21.5 hours a month, or $12,900 a year."],      // 60 x 5/60 x 4.3 x 50
   ["google-business-profile-for-property-managers", {}, 2250, "About 2 new clients a month, or $27,000 a year."], // 5 x .3 x 1500

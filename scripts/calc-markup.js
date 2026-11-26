@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 // Writes the shared calculator block into each service page template, directly after
 // section 2 (the problem section, the second <section> in <main>), between
 // <!-- tl-calc --> and <!-- /tl-calc -->. Copy and inputs come from js/calculator.js CALCS.
@@ -37,7 +38,6 @@ const PAGES = {
   "speed-to-lead.html": "speed-to-lead",
   "overdue-invoice-reminders.html": "overdue-invoice-reminders",
   "ai-estimate-drafts.html": "ai-estimate-drafts",
-  "ai-sales-agent.html": "ai-sales-agent",
   "job-scheduling-dispatch.html": "job-scheduling-dispatch",
   "google-business-profile-optimization.html": "google-business-profile-optimization",
   "google-business-profile-for-professionals.html": "google-business-profile-for-professionals",
@@ -52,7 +52,6 @@ const PAGES = {
   // 2026-11-26 (Ben t1825u): Property Managers group.
   "ai-contract-review-for-property-managers.html": "ai-contract-review-for-property-managers",
   "accounts-payable-automation-for-property-managers.html": "accounts-payable-automation-for-property-managers",
-  "ai-sales-agent-for-property-managers.html": "ai-sales-agent-for-property-managers",
   "job-scheduling-dispatch-for-property-managers.html": "job-scheduling-dispatch-for-property-managers",
   "ai-concierge-for-property-managers.html": "ai-concierge-for-property-managers",
   "google-business-profile-for-property-managers.html": "google-business-profile-for-property-managers",

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Ben 2026-11-26 12:20 PM ET (t1870u): AI Sales Agent pages removed from the lists in this file.
 // Copies only the public site into dist/ for Cloudflare Pages (Tracker row 62).
 // Pages settings this needs: Build command `node scripts/build-dist.js`,
 // Build output directory `dist`, Root directory empty.
@@ -31,7 +32,7 @@ const ALLOW = new Set([
   "og-image-professional.jpg", "og-image-trades.jpg", "og-image.jpg", "og-image.png",
   "privacy.html", "quote-follow-up-win-back.html", "robots.txt", "sitemap.xml", "688213215a3247df8b5797e268fbd61b.txt",
   "terms.html", "text-to-pay.html", "website-chat-to-text.html", "demo",
-  "lead-follow-up.html", "appointment-reminders.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html", "speed-to-lead.html", "overdue-invoice-reminders.html", "ai-estimate-drafts.html", "ai-sales-agent.html", "job-scheduling-dispatch.html", "google-business-profile-optimization.html", "google-business-profile-for-professionals.html", "document-automation.html", "inbox-management.html",
+  "lead-follow-up.html", "appointment-reminders.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html", "speed-to-lead.html", "overdue-invoice-reminders.html", "ai-estimate-drafts.html", "job-scheduling-dispatch.html", "google-business-profile-optimization.html", "google-business-profile-for-professionals.html", "document-automation.html", "inbox-management.html",
   // 2026-11-26 salon versions (Ben t1834u)
   "website-chat-for-salons.html", "lead-follow-up-for-salons.html",
   // 2026-11-26 salon versions (Ben t1835u)
@@ -39,7 +40,7 @@ const ALLOW = new Set([
   // 2026-11-26 salon version of Appointment Reminders (Ben t1861u)
   "appointment-reminders-for-salons.html",
   // 2026-11-26 Property Managers group (Ben t1825u)
-  "for-property-managers.html", "ai-contract-review-for-property-managers.html", "accounts-payable-automation-for-property-managers.html", "ai-sales-agent-for-property-managers.html", "job-scheduling-dispatch-for-property-managers.html", "ai-concierge-for-property-managers.html", "google-business-profile-for-property-managers.html", "speed-to-lead-for-property-managers.html", "appointment-reminders-for-property-managers.html",
+  "for-property-managers.html", "ai-contract-review-for-property-managers.html", "accounts-payable-automation-for-property-managers.html", "job-scheduling-dispatch-for-property-managers.html", "ai-concierge-for-property-managers.html", "google-business-profile-for-property-managers.html", "speed-to-lead-for-property-managers.html", "appointment-reminders-for-property-managers.html",
 ]);
 
 // Known non-public entries. Never copied. Pages reads functions/ from the repo root.
