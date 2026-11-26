@@ -44,6 +44,9 @@ const PAGES = {
   // 2026-11-26 (Ben t1834u): salon versions of Website Chat and Lead Follow-Up.
   "website-chat-for-salons.html": "website-chat-for-salons",
   "lead-follow-up-for-salons.html": "lead-follow-up-for-salons",
+  // 2026-11-26 (Ben t1835u): salon versions of Speed-to-Lead and Google Business Profile.
+  "speed-to-lead-for-salons.html": "speed-to-lead-for-salons",
+  "google-business-profile-for-salons.html": "google-business-profile-for-salons",
   // 2026-11-26 (Ben t1825u): Property Managers group.
   "ai-contract-review-for-property-managers.html": "ai-contract-review-for-property-managers",
   "accounts-payable-automation-for-property-managers.html": "accounts-payable-automation-for-property-managers",

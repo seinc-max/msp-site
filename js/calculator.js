@@ -127,6 +127,29 @@
       sub: 'About {n} {n|appointment|appointments} a month, or {year} a year.',
       formula: 'Requests a month × % that go cold × % who would book × average first-visit value'
     },
+    'speed-to-lead-for-salons': {
+      title: 'What are the new-client requests you answer too late worth?',
+      inputs: [
+        { k: 'leads', label: 'New-client requests each month', min: 0, max: 300, step: 1, v: 30, u: 'n' },
+        { k: 'late', label: 'Requests you can\u2019t answer in minutes', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
+        { k: 'book', label: 'Of those, how many would book with a fast first reply', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
+        { k: 'visit', label: 'Your average first-visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
+      ],
+      f: function (v) { var n = v.leads * pct(v.late) * pct(v.book); var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} {n|appointment|appointments} a month, or {year} a year.',
+      formula: 'Requests a month \u00d7 % you can\u2019t answer in minutes \u00d7 % who would book \u00d7 average first-visit value'
+    },
+    'google-business-profile-for-salons': {
+      title: 'What could more calls from Google Maps be worth?',
+      inputs: [
+        { k: 'calls', label: 'Extra calls from Google Maps each month', min: 0, max: 40, step: 1, v: 5, u: 'n' },
+        { k: 'book', label: 'Callers who book', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
+        { k: 'visit', label: 'Your average visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
+      ],
+      f: function (v) { var n = v.calls * pct(v.book); var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} {n|booking|bookings} a month, or {year} a year.',
+      formula: 'Extra calls a month \u00d7 % who book \u00d7 average visit value'
+    },
     'text-to-pay': {
       title: 'How much of your money is waiting on unpaid invoices?',
       lead: 'About',
@@ -234,11 +257,11 @@
         { k: 'leads', label: 'New leads each month', min: 0, max: 300, step: 1, v: 30, u: 'n' },
         { k: 'late', label: 'Leads you can\u2019t answer in minutes', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
         { k: 'book', label: 'Of those, how many would book with a fast first reply', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
-        { k: 'job', label: 'Your average job or visit value', min: 20, max: 5000, step: 10, v: 450, u: 'money' }
+        { k: 'job', label: 'Your average job value', min: 20, max: 5000, step: 10, v: 450, u: 'money' }
       ],
       f: function (v) { var jobs = v.leads * pct(v.late) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|booking|bookings} a month, or {year} a year.',
-      formula: 'Leads a month × % you can\u2019t answer in minutes × % who would book × average job or visit value'
+      formula: 'Leads a month × % you can\u2019t answer in minutes × % who would book × average job value'
     },
     'overdue-invoice-reminders': {
       title: 'How much of your money runs late?',
@@ -295,11 +318,11 @@
       inputs: [
         { k: 'calls', label: 'Extra calls from Google Maps each month', min: 0, max: 40, step: 1, v: 5, u: 'n' },
         { k: 'book', label: 'Callers who book', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
-        { k: 'job', label: 'Your average job or visit value', min: 20, max: 5000, step: 10, v: 400, u: 'money' }
+        { k: 'job', label: 'Your average job value', min: 20, max: 5000, step: 10, v: 400, u: 'money' }
       ],
       f: function (v) { var jobs = v.calls * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
       sub: 'About {jobs} {jobs|booking|bookings} a month, or {year} a year.',
-      formula: 'Extra calls a month × % who book × average job or visit value'
+      formula: 'Extra calls a month × % who book × average job value'
     },
     'google-business-profile-for-professionals': {
       title: 'What could more people reaching out be worth?',

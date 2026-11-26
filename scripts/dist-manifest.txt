@@ -102,6 +102,8 @@ inbox-management.html
 for-property-managers.html
 website-chat-for-salons.html
 lead-follow-up-for-salons.html
+speed-to-lead-for-salons.html
+google-business-profile-for-salons.html
 ai-contract-review-for-property-managers.html
 accounts-payable-automation-for-property-managers.html
 ai-sales-agent-for-property-managers.html
