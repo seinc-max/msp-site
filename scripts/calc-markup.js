@@ -41,12 +41,22 @@ const PAGES = {
   "google-business-profile-for-professionals.html": "google-business-profile-for-professionals",
   "document-automation.html": "document-automation",
   "inbox-management.html": "inbox-management",
+  // 2026-11-26 (Ben t1825u): Property Managers group.
+  "ai-contract-review-for-property-managers.html": "ai-contract-review-for-property-managers",
+  "accounts-payable-automation-for-property-managers.html": "accounts-payable-automation-for-property-managers",
+  "ai-sales-agent-for-property-managers.html": "ai-sales-agent-for-property-managers",
+  "job-scheduling-dispatch-for-property-managers.html": "job-scheduling-dispatch-for-property-managers",
+  "ai-concierge-for-property-managers.html": "ai-concierge-for-property-managers",
+  "google-business-profile-for-property-managers.html": "google-business-profile-for-property-managers",
+  "speed-to-lead-for-property-managers.html": "speed-to-lead-for-property-managers",
+  "appointment-reminders-for-property-managers.html": "appointment-reminders-for-property-managers",
 };
 const SKIPPED = {
   "index.html": "home routes to several offers; no single service to price",
   "for-home-services.html": "hub page; routes to the offer pages that carry calculators",
   "for-appointment-businesses.html": "hub page; routes to the offer pages that carry calculators",
   "for-law-firms-accountants-and-advisors.html": "hub page; the professional lane already has /ai-exposure-score and /margin-leakage-calculator",
+  "for-property-managers.html": "hub page; routes to the offer pages that carry calculators",
   "ai-governance.html": "risk value would need breach-cost statistics we can't source; /ai-exposure-score already covers it",
   "fractional-ai-officer.html": "engagement price is set per agreement; /margin-leakage-calculator already covers the value case",
 };

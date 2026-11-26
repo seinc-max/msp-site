@@ -315,6 +315,108 @@
       f: function (v) { var h = v.hrs * W; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
       sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
       formula: 'Hours a week × your hourly value × 4.3 weeks'
+    },
+    // 2026-11-26 (Ben t1825u): Property Managers group. Example inputs only; every number is the visitor's own.
+    'ai-contract-review-for-property-managers': {
+      title: 'What does reading every contract cost you?',
+      lead: 'Your time on it is worth',
+      tail: '',
+      inputs: [
+        { k: 'n', label: 'Leases and contracts you read each month', min: 0, max: 100, step: 1, v: 12, u: 'n' },
+        { k: 'mins', label: 'Minutes each one takes', min: 5, max: 240, step: 5, v: 45, u: 'min' },
+        { k: 'rate', label: 'What an hour of your time is worth', min: 20, max: 300, step: 5, v: 75, u: 'money' }
+      ],
+      f: function (v) { var h = v.n * v.mins / 60; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Contracts a month × minutes each ÷ 60 × your hourly value'
+    },
+    'accounts-payable-automation-for-property-managers': {
+      title: 'What do vendor invoices cost you in time?',
+      lead: 'Your time on them is worth',
+      tail: '',
+      inputs: [
+        { k: 'n', label: 'Vendor invoices you handle each month', min: 0, max: 400, step: 5, v: 60, u: 'n' },
+        { k: 'mins', label: 'Minutes each one takes', min: 1, max: 60, step: 1, v: 10, u: 'min' },
+        { k: 'rate', label: 'What an hour of your time is worth', min: 20, max: 300, step: 5, v: 60, u: 'money' }
+      ],
+      f: function (v) { var h = v.n * v.mins / 60; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Invoices a month × minutes each ÷ 60 × your hourly value'
+    },
+    'ai-sales-agent-for-property-managers': {
+      title: 'What could your missed owner leads be worth?',
+      lead: 'About',
+      per: '',
+      tail: 'in first-year fees is at stake each month.',
+      inputs: [
+        { k: 'leads', label: 'Owner leads you get each month', min: 0, max: 100, step: 1, v: 10, u: 'n' },
+        { k: 'miss', label: 'Owner leads you don’t reach in time', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
+        { k: 'sign', label: 'Share of owner leads you would sign', min: 0, max: 100, step: 5, v: 20, u: 'pct' },
+        { k: 'fees', label: 'Your first-year fees from one owner', min: 100, max: 50000, step: 100, v: 3000, u: 'money' }
+      ],
+      f: function (v) { var o = v.leads * pct(v.miss) * pct(v.sign); var m = o * v.fees; return { main: m, t: { n: whole(o) } }; },
+      sub: 'About {n} {n|owner|owners} a month, or {year} a year.',
+      formula: 'Owner leads a month × % you don’t reach in time × % who would sign × first-year fees from one owner'
+    },
+    'job-scheduling-dispatch-for-property-managers': {
+      title: 'What does scheduling by phone cost you?',
+      lead: 'Your time on it is worth',
+      tail: '',
+      inputs: [
+        { k: 'hrs', label: 'Hours a week you spend scheduling maintenance jobs and sending vendors', min: 0, max: 30, step: 0.5, v: 6, u: 'hrs' },
+        { k: 'rate', label: 'What an hour of your time is worth', min: 20, max: 300, step: 5, v: 75, u: 'money' }
+      ],
+      f: function (v) { var h = v.hrs * W; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Hours a week × your hourly value × 4.3 weeks'
+    },
+    'ai-concierge-for-property-managers': {
+      title: 'What do resident questions cost your team?',
+      lead: 'Your team’s time on them is worth',
+      tail: '',
+      inputs: [
+        { k: 'q', label: 'Resident questions and requests your team handles each week', min: 0, max: 400, step: 5, v: 60, u: 'n' },
+        { k: 'mins', label: 'Minutes each one takes', min: 1, max: 60, step: 1, v: 5, u: 'min' },
+        { k: 'rate', label: 'What an hour of your team’s time is worth', min: 20, max: 300, step: 5, v: 50, u: 'money' }
+      ],
+      f: function (v) { var h = v.q * v.mins / 60 * W; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Questions a week × minutes each ÷ 60 × your hourly value × 4.3 weeks'
+    },
+    'google-business-profile-for-property-managers': {
+      title: 'What could more calls from Google Maps be worth?',
+      inputs: [
+        { k: 'calls', label: 'Extra calls from Google Maps each month', min: 0, max: 40, step: 1, v: 5, u: 'n' },
+        { k: 'win', label: 'Callers who become a client', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
+        { k: 'fees', label: 'Your first-year fees from one new client', min: 100, max: 20000, step: 50, v: 1500, u: 'money' }
+      ],
+      f: function (v) { var c = v.calls * pct(v.win); var m = c * v.fees; return { main: m, t: { n: whole(c) } }; },
+      sub: 'About {n} new {n|client|clients} a month, or {year} a year.',
+      formula: 'Extra calls a month × % who become a client × first-year fees from one client'
+    },
+    'speed-to-lead-for-property-managers': {
+      title: 'What do slow replies cost you?',
+      inputs: [
+        { k: 'leads', label: 'Rental inquiries and owner leads each month', min: 0, max: 300, step: 5, v: 40, u: 'n' },
+        { k: 'late', label: 'Leads you can’t answer in minutes', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
+        { k: 'win', label: 'Leads who would sign a lease or sign with you', min: 0, max: 100, step: 5, v: 20, u: 'pct' },
+        { k: 'val', label: 'Your average value of one new lease or owner', min: 100, max: 20000, step: 100, v: 1800, u: 'money' }
+      ],
+      f: function (v) { var n = v.leads * pct(v.late) * pct(v.win); var m = n * v.val; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} new {n|lease or owner|leases or owners} a month, or {year} a year.',
+      formula: 'Leads a month × % you can’t answer in minutes × % who would sign × average value of one new lease or owner'
+    },
+    'appointment-reminders-for-property-managers': {
+      title: 'What do missed showings cost you?',
+      inputs: [
+        { k: 'n', label: 'Showings and appointments each month', min: 0, max: 300, step: 5, v: 40, u: 'n' },
+        { k: 'ns', label: 'People who don’t show up', min: 0, max: 60, step: 1, v: 20, u: 'pct' },
+        { k: 'days', label: 'Extra days a unit sits empty after a missed showing', min: 0, max: 30, step: 1, v: 3, u: 'days' },
+        { k: 'rent', label: 'Rent for one unit for one day', min: 10, max: 500, step: 5, v: 50, u: 'money' }
+      ],
+      f: function (v) { var n = v.n * pct(v.ns); var m = n * v.days * v.rent; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} missed {n|showing|showings} a month, or {year} a year.',
+      formula: 'Showings a month × % who don’t show × extra days empty × rent for one unit for one day'
     }
   };
 
