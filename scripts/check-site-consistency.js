@@ -46,7 +46,11 @@ const MANIFEST = path.join(__dirname, "dist-manifest.txt");
 const CANON_BADGE = "✓ 30-day money-back guarantee";
 const TEL = "tel:+16473605774";
 const CAPTION_START = "Just a sample";
-const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach", "/crm-setup", "/custom-dashboards"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
+const NEW_PAGES = ["/lead-follow-up", "/appointment-reminders", "/cold-outreach", "/crm-setup", "/custom-dashboards",
+  // 2026-11-26 menu rebuild (Ben t1817u): the 9 new service pages plus the professional group.
+  "/speed-to-lead", "/overdue-invoice-reminders", "/ai-estimate-drafts", "/ai-sales-agent", "/job-scheduling-dispatch",
+  "/google-business-profile-optimization", "/google-business-profile-for-professionals", "/document-automation", "/inbox-management",
+  "/ai-governance", "/fractional-ai-officer", "/ai-support-agent"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i,
   // Ben 2026-11-19 t1202u: copy must include all trades; no single-trade "under a sink" image.

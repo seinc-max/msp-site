@@ -1635,3 +1635,37 @@ body .cw-showcase figcaption{margin:12px 0 0;font-size:.8rem!important;line-heig
 /* 2026-11-19: hide the sticky call bar while the calculator result (and its own call button) is on screen,
    so the bar never covers the calculator small print on phones. Set by js/calculator.js. */
 html.tl-calc-visible .sticky-mobile-cta { display: none !important; }
+
+/* Menu rebuild 2026-11-26 (Ben t1817u): the Trades list is long. On wide screens the menu is three columns:
+   Trades takes two (its links flow in two columns), Salons and Professional Services stack in the third.
+   Below 981px it stays one scrolling column (max-height and overflow set above). */
+@media (min-width: 981px) {
+  nav.tl-nav .nav-services-menu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 14px;
+    align-items: start;
+    width: min(900px, calc(100vw - 48px));
+    min-width: 0;
+    /* Centered in the window so it never runs off the right edge, whatever the width of the nav. */
+    position: fixed !important;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  nav.tl-nav .nav-services-group[data-audience="trades"] {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 8px;
+    align-content: start;
+  }
+  nav.tl-nav .nav-services-group[data-audience="trades"] > .nav-services-label,
+  nav.tl-nav .nav-services-group[data-audience="trades"] > .nav-services-hub { grid-column: 1 / -1; }
+  nav.tl-nav .nav-services-group[data-audience="salons"] { grid-column: 3; grid-row: 1; }
+  nav.tl-nav .nav-services-group[data-audience="professional"] { grid-column: 3; grid-row: 2; }
+  nav.tl-nav .nav-services-group[data-audience="trades"] + .nav-services-group,
+  nav.tl-nav .nav-services-group + .nav-services-group { margin-top: 0; border-top: 0; padding-top: 0; }
+  nav.tl-nav .nav-services-group[data-audience="professional"] { margin-top: 8px; padding-top: 4px; border-top: 1px solid #dde6f5; }
+}

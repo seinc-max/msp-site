@@ -32,6 +32,15 @@ const PAGES = {
   "crm-setup.html": "crm-setup",
   "custom-dashboards.html": "custom-dashboards",
   "ai-support-agent.html": "ai-support-agent",
+  "speed-to-lead.html": "speed-to-lead",
+  "overdue-invoice-reminders.html": "overdue-invoice-reminders",
+  "ai-estimate-drafts.html": "ai-estimate-drafts",
+  "ai-sales-agent.html": "ai-sales-agent",
+  "job-scheduling-dispatch.html": "job-scheduling-dispatch",
+  "google-business-profile-optimization.html": "google-business-profile-optimization",
+  "google-business-profile-for-professionals.html": "google-business-profile-for-professionals",
+  "document-automation.html": "document-automation",
+  "inbox-management.html": "inbox-management",
 };
 const SKIPPED = {
   "index.html": "home routes to several offers; no single service to price",

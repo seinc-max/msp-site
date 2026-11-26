@@ -242,6 +242,30 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     },
     {
       "@type": "Question",
+      "name": "Are software fees in the price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Software subscription fees, if any, are not included."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I do after you set it up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You schedule your jobs and dispatch your crews. We keep the tool running."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it help with phone tag?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Jobs get scheduled and crews get dispatched without phone tag."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How do I cancel?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -322,6 +346,15 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
 <div class="hero-down-cue" aria-hidden="true"></div>
     </div>
+    <div class="hero-side">
+    <figure class="tl-board">
+      <div class="tl-board-card">
+        <div class="tl-board-head"><div class="tl-avatar" aria-hidden="true">C</div><div><div class="tl-board-title">Cedar Home Services</div><div class="tl-board-sub">Sample schedule for today</div></div></div>
+        <div class="tl-board-body"><div class="tl-task"><span class="tl-task-dot" aria-hidden="true"></span><span><strong>Crew B:</strong> the address for the 11 AM job is in their schedule</span></div><div class="tl-row"><span>8:00 AM · Crew A</span><strong>Furnace repair</strong></div><div class="tl-row"><span>11:00 AM · Crew B</span><strong>Drain clearing</strong></div><div class="tl-row tl-hot"><span>2:00 PM · Crew A</span><strong>Estimate visit</strong></div></div>
+      </div>
+      <figcaption><em>Just a sample schedule. The business and the jobs are made up.</em></figcaption>
+    </figure>
+    </div>
     <div class="hero-trust">
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -334,6 +367,50 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
   </div>
 </section>
+
+<section class="pain-section">
+  <div class="section-inner">
+    <h2 class="section-title">How much of your day goes to phone tag?</h2>
+    <p class="body-copy">When the schedule lives in a notebook or a text thread, every job takes extra calls.</p>
+  </div>
+
+</section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="job-scheduling-dispatch" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">What does scheduling by phone cost you?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-hrs">Hours a week you spend scheduling jobs and sending crews</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-hrs" data-k="hrs" min="0" max="30" step="0.5" value="6" aria-valuetext="6 hrs">
+          <span class="tl-calc-box"><input type="number" data-k="hrs" min="0" max="30" step="0.5" value="6" inputmode="decimal" aria-label="Hours a week you spend scheduling jobs and sending crews" data-suffix=" hrs"><span class="tl-calc-suf" aria-hidden="true">hrs</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-rate">What an hour of your time is worth</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-rate" data-k="rate" min="20" max="300" step="5" value="75" aria-valuetext="$75">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="rate" min="20" max="300" step="5" value="75" inputmode="decimal" aria-label="What an hour of your time is worth" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">Your time on it is worth</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$1,935</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-sub" data-out="sub">About 25.8 hours a month, or $23,220 a year.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Hours a week × your hourly value × 4.3 weeks</p>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=e372e83303" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
@@ -401,12 +478,17 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="included-grid">
 <div class="included-card yes"><h3>What's included</h3><ul>
 <li>A field-service scheduling and dispatch tool set up for your business</li>
-<li>Jobs scheduled and crews dispatched without phone tag</li>
+<li>Jobs scheduled without phone tag</li>
+<li>Crews dispatched without phone tag</li>
+<li>Your jobs and crews on one schedule</li>
+<li>We set it up for you</li>
 <li>We keep it running</li>
 </ul></div>
 <div class="included-card no"><h3>What's not included</h3><ul>
 <li>Software subscription fees, if any</li>
 <li>Hiring a dispatcher for you</li>
+<li>Running your crews for you</li>
+<li>Anything beyond scheduling and dispatch</li>
 </ul></div>
 </div>
 </div>
@@ -426,7 +508,10 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </div>
 <ul class="pricing-features">
 <li>A field-service scheduling and dispatch tool set up for your business</li>
-<li>Jobs scheduled and crews dispatched without phone tag</li>
+<li>Jobs scheduled without phone tag</li>
+<li>Crews dispatched without phone tag</li>
+<li>Your jobs and crews on one schedule</li>
+<li>We set it up for you</li>
 <li>We keep it running</li>
 </ul>
 <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
@@ -449,6 +534,10 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
       <div class="proof-item">
         <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        We get your jobs and crews onto one schedule.
+      </div>
+      <div class="proof-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
         We keep it running.
       </div>
     </div>
@@ -463,6 +552,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="faq-list">
 <details><summary>Do I have to set up the software myself?</summary><p>No. We set it up and keep it running.</p></details>
 <details><summary>Do you replace the tool I already use?</summary><p>We look at how you schedule today and tell you on the call what fits.</p></details>
+<details><summary>Are software fees in the price?</summary><p>No. Software subscription fees, if any, are not included.</p></details>
+<details><summary>What do I do after you set it up?</summary><p>You schedule your jobs and dispatch your crews. We keep the tool running.</p></details>
+<details><summary>Does it help with phone tag?</summary><p>Yes. Jobs get scheduled and crews get dispatched without phone tag.</p></details>
 <details><summary>How do I cancel?</summary><p>Cancel anytime. No contracts, no cancellation fees.</p></details>
 <details><summary>Is there a money-back guarantee?</summary><p>30-day money-back guarantee. If it's not right, tell us within 30 days of your first payment. We refund what you've paid us in your first 30 days, in full. No questions asked.</p></details>
 </div>

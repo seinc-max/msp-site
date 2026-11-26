@@ -250,6 +250,22 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     },
     {
       "@type": "Question",
+      "name": "Who writes the reminders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We write them. You approve them before they go."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often do reminders go out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a schedule we set up with you."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How do I cancel?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -330,6 +346,29 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
 <div class="hero-down-cue" aria-hidden="true"></div>
     </div>
+    <div class="hero-side">
+    <figure class="tl-frame">
+      <div class="tl-phone">
+        <div class="tl-ear" aria-hidden="true"></div>
+        <div class="tl-screen">
+          <div class="tl-phone-head">
+            <div class="tl-avatar" aria-hidden="true">A</div>
+            <div>
+              <div class="tl-phone-name">Ashcroft Heating</div>
+              <div class="tl-phone-sub">222-333-4444</div>
+            </div>
+          </div>
+          <div class="tl-thread">
+            <p class="tl-chip"><b>Customer replied</b> · 9:12&nbsp;AM</p>
+            <div class="tl-bubble tl-out"><span class="sr-only">Ashcroft Heating:</span> Hi Mark, a reminder from Ashcroft Heating. Invoice 1042 for $640 is still open. Questions? Call us at 222-333-4444. Reply STOP to opt out.<time class="tl-time"><span class="tl-who">Sent after you approved</span> · 9:00 AM</time></div>
+            <div class="tl-bubble tl-in tl-focus"><span class="sr-only">Customer:</span> Sorry, I missed it. I'll pay today.<time class="tl-time">9:12 AM</time></div>
+            <div class="tl-bubble tl-out"><span class="sr-only">Ashcroft Heating:</span> Thanks, Mark. We'll mark it paid when it arrives.<time class="tl-time"><span class="tl-who">You sent this</span> · 9:14 AM</time></div>
+          </div>
+        </div>
+      </div>
+      <figcaption><em><span class="tl-sample-kind">Just a sample reminder.</span> You approve it before it goes.</em></figcaption>
+    </figure>
+    </div>
     <div class="hero-trust">
         <div class="trust-item">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -342,6 +381,58 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
   </div>
 </section>
+
+<section class="pain-section">
+  <div class="section-inner">
+    <h2 class="section-title">How much of your money is sitting in unpaid invoices?</h2>
+    <p class="body-copy">The job is done, but the invoice sits. Your own bills still come due.</p>
+  </div>
+
+</section>
+
+<!-- tl-calc -->
+<section class="tl-calc-section" data-calc="overdue-invoice-reminders" aria-labelledby="tl-calc-title">
+  <div class="tl-calc">
+    <h2 class="tl-calc-title" id="tl-calc-title">How much of your money runs late?</h2>
+    <p class="tl-calc-intro">Move the sliders or type your own numbers. The starting numbers are example inputs you can change.</p>
+    <div class="tl-calc-grid">
+    <div class="tl-calc-inputs">
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-inv">Invoices you send each month</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-inv" data-k="inv" min="0" max="200" step="1" value="40" aria-valuetext="40">
+          <span class="tl-calc-box"><input type="number" data-k="inv" min="0" max="200" step="1" value="40" inputmode="decimal" aria-label="Invoices you send each month"></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-late">Invoices that run past due</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-late" data-k="late" min="0" max="100" step="5" value="20" aria-valuetext="20%">
+          <span class="tl-calc-box"><input type="number" data-k="late" min="0" max="100" step="5" value="20" inputmode="decimal" aria-label="Invoices that run past due" data-suffix="%"><span class="tl-calc-suf" aria-hidden="true">%</span></span>
+        </div>
+      </div>
+      <div class="tl-calc-field">
+        <label class="tl-calc-label" for="tlc-amt">Your average invoice</label>
+        <div class="tl-calc-row">
+          <input type="range" id="tlc-amt" data-k="amt" min="50" max="10000" step="50" value="600" aria-valuetext="$600">
+          <span class="tl-calc-box"><span class="tl-calc-pre" aria-hidden="true">$</span><input type="number" data-k="amt" min="50" max="10000" step="50" value="600" inputmode="decimal" aria-label="Your average invoice" data-prefix="$"></span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-calc-result">
+      <p class="tl-calc-lead">About</p>
+      <p class="tl-calc-big" aria-live="polite" aria-atomic="true"><span data-out="main">$4,800</span><span class="tl-calc-per">/month</span></p>
+      <p class="tl-calc-tail">sits in late invoices.</p>
+      <p class="tl-calc-sub" data-out="sub">About 8 late invoices a month.</p>
+      <p class="tl-calc-formula"><span>How it works:</span> Invoices a month × % that run past due × average invoice</p>
+      <p class="tl-calc-note">An estimate from your numbers only. It shows the value at stake, not what we will recover. Nothing you enter is sent.</p>
+      <a href="tel:+16473605774" class="btn-primary tl-calc-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
+    </div>
+    </div>
+  </div>
+  <script src="/js/calculator.js?v=e372e83303" defer></script>
+</section>
+<!-- /tl-calc -->
 
 <!-- PAIN -->
 <section class="pain-section">
@@ -409,12 +500,17 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="included-grid">
 <div class="included-card yes"><h3>What's included</h3><ul>
 <li>Overdue invoices chased on a schedule</li>
-<li>Your approval built in before reminders go</li>
+<li>Your approval before any reminder goes</li>
 <li>Reminders to your own customers about invoices they owe</li>
+<li>Reminders written for you</li>
+<li>A reminder schedule set up for you</li>
+<li>No awkward calls about money</li>
 </ul></div>
 <div class="included-card no"><h3>What's not included</h3><ul>
 <li>Collections agency work</li>
 <li>Legal action on unpaid invoices</li>
+<li>Reminders sent without your approval</li>
+<li>Messages to people who do not owe you</li>
 </ul></div>
 </div>
 </div>
@@ -434,8 +530,11 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </div>
 <ul class="pricing-features">
 <li>Overdue invoices chased on a schedule</li>
-<li>Your approval built in before reminders go</li>
+<li>Your approval before any reminder goes</li>
 <li>Reminders to your own customers about invoices they owe</li>
+<li>Reminders written for you</li>
+<li>A reminder schedule set up for you</li>
+<li>No awkward calls about money</li>
 </ul>
 <a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a>
 
@@ -476,6 +575,8 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <details><summary>Who gets the reminders?</summary><p>Your own customers, about invoices they owe you.</p></details>
 <details><summary>Do reminders go without my approval?</summary><p>No. You approve before reminders go.</p></details>
 <details><summary>Do I have to chase the invoices myself?</summary><p>No. We chase them on a schedule. You approve first.</p></details>
+<details><summary>Who writes the reminders?</summary><p>We write them. You approve them before they go.</p></details>
+<details><summary>How often do reminders go out?</summary><p>On a schedule we set up with you.</p></details>
 <details><summary>How do I cancel?</summary><p>Cancel anytime. No contracts, no cancellation fees.</p></details>
 <details><summary>Is there a money-back guarantee?</summary><p>30-day money-back guarantee. If it's not right, tell us within 30 days of your first payment. We refund what you've paid us in your first 30 days, in full. No questions asked.</p></details>
 </div>
