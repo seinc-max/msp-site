@@ -31,6 +31,15 @@ const cases = [
   ["crm-setup", {}, 2568, "$1,600 in slipped jobs plus $968 of your time."],               // 2 x 800 + 3 x 75 x 4.3
   ["custom-dashboards", {}, 968, null],                                                      // 3 x 75 x 4.3 = 967.5
   ["ai-support-agent", {}, 1032, "About 17.2 staff hours a month, or $12,384 a year."],     // 40 x 6/60 x 60 x 4.3
+  ["speed-to-lead", {}, 1350, "About 3 bookings a month, or $16,200 a year."],            // 30 x .4 x .25 x 450
+  ["overdue-invoice-reminders", {}, 4800, "About 8 late invoices a month."],                  // 40 x .2 x 600
+  ["ai-estimate-drafts", {}, 1125, "About 15 hours a month, or $13,500 a year."],            // 20 x 45/60 x 75
+  ["ai-sales-agent", {}, 1125, "About 2 jobs a month, or $13,500 a year."],                  // 30 x .3 x .25 x 500
+  ["job-scheduling-dispatch", {}, 1935, "About 25.8 hours a month, or $23,220 a year."],     // 6 x 4.3 x 75 = 1935
+  ["google-business-profile-optimization", {}, 800, "About 2 bookings a month, or $9,600 a year."], // 5 x .4 x 400
+  ["google-business-profile-for-professionals", {}, 2400, "About 1 new client a month, or $28,800 a year."], // 4 x .3 x 2000
+  ["document-automation", {}, 1200, "About 20 staff hours a month, or $14,400 a year."],    // 30 x 40/60 x 60
+  ["inbox-management", {}, 2322, "About 25.8 hours a month, or $27,864 a year."],           // 6 x 4.3 x 90 = 2322
 ];
 const fails = [];
 for (const [id, over, want, sub] of cases) {

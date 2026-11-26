@@ -203,6 +203,118 @@
       f: function (v) { var h = v.q * v.mins / 60 * W; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
       sub: 'About {h} staff {h|hour|hours} a month, or {year} a year.',
       formula: 'Questions a week × minutes each ÷ 60 × hourly cost × 4.3 weeks'
+    },
+    'speed-to-lead': {
+      title: 'What are the leads you answer too late worth?',
+      inputs: [
+        { k: 'leads', label: 'New leads each month', min: 0, max: 300, step: 1, v: 30, u: 'n' },
+        { k: 'late', label: 'Leads you can\u2019t answer in minutes', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
+        { k: 'book', label: 'Of those, how many would book with a fast first reply', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
+        { k: 'job', label: 'Your average job or visit value', min: 20, max: 5000, step: 10, v: 450, u: 'money' }
+      ],
+      f: function (v) { var jobs = v.leads * pct(v.late) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
+      sub: 'About {jobs} {jobs|booking|bookings} a month, or {year} a year.',
+      formula: 'Leads a month × % you can\u2019t answer in minutes × % who would book × average job or visit value'
+    },
+    'overdue-invoice-reminders': {
+      title: 'How much of your money runs late?',
+      lead: 'About',
+      tail: 'sits in late invoices.',
+      inputs: [
+        { k: 'inv', label: 'Invoices you send each month', min: 0, max: 200, step: 1, v: 40, u: 'n' },
+        { k: 'late', label: 'Invoices that run past due', min: 0, max: 100, step: 5, v: 20, u: 'pct' },
+        { k: 'amt', label: 'Your average invoice', min: 50, max: 10000, step: 50, v: 600, u: 'money' }
+      ],
+      f: function (v) { var n = v.inv * pct(v.late); return { main: n * v.amt, t: { n: whole(n) } }; },
+      sub: 'About {n} late {n|invoice|invoices} a month.',
+      formula: 'Invoices a month × % that run past due × average invoice'
+    },
+    'ai-estimate-drafts': {
+      title: 'What does writing quotes by hand cost you?',
+      lead: 'Your time on them is worth',
+      tail: '',
+      inputs: [
+        { k: 'q', label: 'Quotes you write each month', min: 0, max: 100, step: 1, v: 20, u: 'n' },
+        { k: 'mins', label: 'Minutes each one takes', min: 5, max: 180, step: 5, v: 45, u: 'min' },
+        { k: 'rate', label: 'What an hour of your time is worth', min: 20, max: 300, step: 5, v: 75, u: 'money' }
+      ],
+      f: function (v) { var h = v.q * v.mins / 60; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Quotes a month × minutes each ÷ 60 × your hourly value'
+    },
+    'ai-sales-agent': {
+      title: 'What are the leads you can\u2019t call back worth?',
+      inputs: [
+        { k: 'leads', label: 'Leads who ask about a job each month', min: 0, max: 300, step: 1, v: 30, u: 'n' },
+        { k: 'miss', label: 'Leads you don\u2019t reach in time', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
+        { k: 'book', label: 'Of those, how many would book', min: 0, max: 100, step: 5, v: 25, u: 'pct' },
+        { k: 'job', label: 'Your average job value', min: 50, max: 5000, step: 25, v: 500, u: 'money' }
+      ],
+      f: function (v) { var jobs = v.leads * pct(v.miss) * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
+      sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
+      formula: 'Leads a month × % you don\u2019t reach in time × % who would book × average job value'
+    },
+    'job-scheduling-dispatch': {
+      title: 'What does scheduling by phone cost you?',
+      lead: 'Your time on it is worth',
+      tail: '',
+      inputs: [
+        { k: 'hrs', label: 'Hours a week you spend scheduling jobs and sending crews', min: 0, max: 30, step: 0.5, v: 6, u: 'hrs' },
+        { k: 'rate', label: 'What an hour of your time is worth', min: 20, max: 300, step: 5, v: 75, u: 'money' }
+      ],
+      f: function (v) { var h = v.hrs * W; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Hours a week × your hourly value × 4.3 weeks'
+    },
+    'google-business-profile-optimization': {
+      title: 'What could more calls from Google Maps be worth?',
+      inputs: [
+        { k: 'calls', label: 'Extra calls from Google Maps each month', min: 0, max: 40, step: 1, v: 5, u: 'n' },
+        { k: 'book', label: 'Callers who book', min: 0, max: 100, step: 5, v: 40, u: 'pct' },
+        { k: 'job', label: 'Your average job or visit value', min: 20, max: 5000, step: 10, v: 400, u: 'money' }
+      ],
+      f: function (v) { var jobs = v.calls * pct(v.book); var m = jobs * v.job; return { main: m, t: { jobs: whole(jobs) } }; },
+      sub: 'About {jobs} {jobs|booking|bookings} a month, or {year} a year.',
+      formula: 'Extra calls a month × % who book × average job or visit value'
+    },
+    'google-business-profile-for-professionals': {
+      title: 'What could more people reaching out be worth?',
+      cta: 'consult',
+      inputs: [
+        { k: 'asks', label: 'Extra inquiries each month', min: 0, max: 40, step: 1, v: 4, u: 'n' },
+        { k: 'win', label: 'Inquiries who become clients', min: 0, max: 100, step: 5, v: 30, u: 'pct' },
+        { k: 'val', label: 'Your average value of a new client', min: 100, max: 100000, step: 100, v: 2000, u: 'money' }
+      ],
+      f: function (v) { var n = v.asks * pct(v.win); var m = n * v.val; return { main: m, t: { n: whole(n) } }; },
+      sub: 'About {n} new {n|client|clients} a month, or {year} a year.',
+      formula: 'Extra inquiries a month × % who become clients × average value of a new client'
+    },
+    'document-automation': {
+      title: 'What do routine documents cost your team?',
+      lead: 'Your team\u2019s time on them is worth',
+      tail: '',
+      cta: 'consult',
+      inputs: [
+        { k: 'docs', label: 'Documents your team drafts each month', min: 0, max: 300, step: 5, v: 30, u: 'n' },
+        { k: 'mins', label: 'Minutes each one takes', min: 5, max: 240, step: 5, v: 40, u: 'min' },
+        { k: 'rate', label: 'Hourly cost of the person drafting', min: 20, max: 300, step: 5, v: 60, u: 'money' }
+      ],
+      f: function (v) { var h = v.docs * v.mins / 60; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} staff {h|hour|hours} a month, or {year} a year.',
+      formula: 'Documents a month × minutes each ÷ 60 × hourly cost'
+    },
+    'inbox-management': {
+      title: 'What does sorting your inbox cost you?',
+      lead: 'Your time on it is worth',
+      tail: '',
+      cta: 'consult',
+      inputs: [
+        { k: 'hrs', label: 'Hours a week you spend sorting and answering email', min: 0, max: 30, step: 0.5, v: 6, u: 'hrs' },
+        { k: 'rate', label: 'What an hour of your time is worth', min: 20, max: 300, step: 5, v: 90, u: 'money' }
+      ],
+      f: function (v) { var h = v.hrs * W; var m = h * v.rate; return { main: m, t: { h: count(h) } }; },
+      sub: 'About {h} {h|hour|hours} a month, or {year} a year.',
+      formula: 'Hours a week × your hourly value × 4.3 weeks'
     }
   };
 
