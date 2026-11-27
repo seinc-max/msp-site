@@ -6,7 +6,7 @@
  * Edit the header in templates/partials/header.html.
  * The {{cta}} slot is call or consultation, taken from that page's original nav button.
  * Edit the footer in templates/partials/footer.html.
- * Edit a call bar in templates/partials/sticky-call.html or sticky-assessment.html.
+ * Edit a call bar in templates/partials/sticky-call.html or sticky-consultation.html.
  * Landing look (button, H1, column, cards) lives in assets/landing.css.
  * A new landing sets body class landing-call or landing-form, plus
  * landing-home, landing-hub, or landing-offer, and links landing.css
@@ -104,7 +104,7 @@ const CALL = '<a href="tel:+16473605774" class="btn-primary" onclick="window.dat
 
 const HEADER_CTAS = {
   call: '<a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>',
-  consultation: '<a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
+  consultation: '<a href="/fractional-ai-officer#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
   consultationPage: '<a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
 };
 
@@ -235,7 +235,7 @@ function splitPage(html) {
     preamble: html.slice(bodyOpenEnd, navAt),
     beforeSticky: between.slice(0, stickyAt),
     afterSticky: between.slice(stickyEnd),
-    stickyKind: between.slice(stickyAt, stickyEnd).includes('sticky-assessment') ? 'assessment' : 'call',
+    stickyKind: between.slice(stickyAt, stickyEnd).includes('sticky-consultation') ? 'consultation' : 'call',
     trail: html.slice(footerEnd),
   };
 }
@@ -644,17 +644,17 @@ function buildOne(rel) {
   const variant = headerVariant(source, rel);
   const header = filterNav(headerPartial(variant), rel);
   const footer = partial('footer.html');
-  let sticky = partial(parts.stickyKind === 'assessment' ? 'sticky-assessment.html' : 'sticky-call.html');
+  let sticky = partial(parts.stickyKind === 'consultation' ? 'sticky-consultation.html' : 'sticky-call.html');
   if (template === 'info' && rel !== 'about.html') {
     // Ben t1908u/t1910u: plain Call link only on Terms and Privacy. The shared partial is not edited.
     sticky = sticky.replace(/\n\s*<span>[^<]*<\/span>/, '');
     if (/<span>/.test(sticky)) throw new Error('Sticky tagline still present on ' + rel);
   }
-  if (parts.stickyKind === 'assessment') {
-    const block = source.slice(source.indexOf('sticky-mobile-cta sticky-assessment'));
+  if (parts.stickyKind === 'consultation') {
+    const block = source.slice(source.indexOf('sticky-mobile-cta sticky-consultation'));
     const hrefMatch = block.match(/<a href="([^"]+)">Book My AI Consultation<\/a>/);
     if (hrefMatch && hrefMatch[1] === '#discovery-form') {
-      sticky = sticky.replace('href="/fractional-ai-officer#assessment"', 'href="#discovery-form"');
+      sticky = sticky.replace('href="/fractional-ai-officer#discovery-form"', 'href="#discovery-form"');
     }
   }
   const slots = {
