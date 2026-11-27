@@ -200,6 +200,61 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   .trust-item { font-size: 0.88rem; }
 }
 
+
+/* bc-: beat-competitors example blocks (page-local) */
+.bc-section{ padding: 60px 5%; background: #fff; }
+.bc-inner{ max-width: 1000px; margin: 0 auto; text-align: center; }
+.bc-lead{ font-size: 1.02rem; color: var(--text-muted); line-height: 1.6; max-width: 40rem; margin: 0 auto; }
+.bc-tag{ display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #9a3412; background: #ffedd5; border-radius: 999px; padding: 3px 10px; margin-bottom: 12px; }
+.bc-grid{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 28px; align-items: start; text-align: left; }
+.bc-card{ background: #fff; border: 1.5px solid var(--border); border-radius: 16px; padding: 20px; text-align: left; box-shadow: 0 10px 28px rgba(0,0,0,0.06); }
+.bc-card h3{ font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--navy); margin-bottom: 12px; }
+.bc-flow{ display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 28px 0 0; padding: 0; list-style: none; text-align: left; }
+.bc-flow li{ background: var(--sky); border-radius: 12px; padding: 14px; font-size: 0.9rem; color: var(--text); line-height: 1.45; }
+.bc-flow b{ display: block; font-family: 'Fraunces', serif; color: var(--navy); margin-bottom: 4px; }
+.bc-flow3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.bc-flow5{ grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.bc-grid4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.bc-row{ display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px; background: var(--sky); font-size: 0.9rem; margin-bottom: 8px; color: var(--text); }
+.bc-row strong{ color: var(--navy); text-align: right; }
+.bc-row.bc-flag{ background: #fff7ed; border: 1px solid #fed7aa; }
+.bc-msg{ background: var(--sky); border-radius: 12px; padding: 12px 14px; font-size: 0.92rem; line-height: 1.5; margin-bottom: 10px; color: var(--text); }
+.bc-meta{ font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px; display: block; }
+.bc-pill{ display: inline-block; font-size: 0.78rem; font-weight: 700; border-radius: 999px; padding: 3px 10px; background: var(--sky); color: var(--navy); white-space: nowrap; }
+.bc-pill.bc-wait{ background: #fff7ed; color: #9a3412; }
+.bc-pill.bc-ok{ background: #dcfce7; color: #166534; }
+.bc-btns{ display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.bc-btn{ display: inline-block; font-size: 0.88rem; font-weight: 700; border-radius: 8px; padding: 8px 14px; border: 1.5px solid var(--border); color: var(--navy); background: #fff; }
+.bc-btn.bc-main{ background: var(--navy); color: #fff; border-color: var(--navy); }
+.bc-cmp{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 28px; text-align: left; }
+.bc-cmp > div{ border-radius: 16px; padding: 20px; }
+.bc-cmp h3{ font-family: 'Fraunces', serif; font-size: 1.05rem; margin-bottom: 10px; color: var(--navy); }
+.bc-cmp ul{ list-style: none; padding: 0; margin: 0; }
+.bc-cmp li{ font-size: 0.93rem; line-height: 1.5; padding: 6px 0; color: var(--text); }
+.bc-without{ background: #f8fafc; border: 1.5px solid var(--border); }
+.bc-with{ background: var(--sky); border: 1.5px solid #bfdbfe; }
+.bc-short{ max-width: 44rem; margin: 28px auto 0; background: var(--sky); border-radius: 12px; padding: 16px 18px; text-align: left; font-size: 0.98rem; color: var(--navy); line-height: 1.55; }
+.bc-cap{ font-size: 0.82rem; color: var(--text-muted); margin-top: 12px; text-align: left; }
+.bc-seg{ display: inline-flex; gap: 6px; margin: 20px 0 0; }
+.bc-seg button{ font: inherit; font-size: 0.9rem; font-weight: 700; padding: 8px 16px; border-radius: 999px; border: 1.5px solid var(--border); background: #fff; color: var(--navy); cursor: pointer; }
+.bc-seg button[aria-pressed="true"]{ background: var(--navy); color: #fff; border-color: var(--navy); }
+.bc-kpis{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+.bc-kpi{ background: var(--sky); border-radius: 12px; padding: 12px; }
+.bc-kpi span{ display: block; font-size: 0.78rem; color: var(--text-muted); }
+.bc-kpi strong{ display: block; font-family: 'Fraunces', serif; font-size: 1.6rem; color: var(--navy); line-height: 1.2; }
+.bc-kpi em{ display: block; font-style: normal; font-size: 0.8rem; font-weight: 700; min-height: 1.3em; }
+.bc-up{ color: #166534; }
+.bc-down{ color: #b91c1c; }
+.bc-kpi.bc-flag{ background: #fff7ed; border: 1px solid #fed7aa; }
+.bc-look{ min-height: 3.2em; }
+.bc-cols{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.bc-cols h4{ font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 8px; }
+@media (max-width: 860px){
+  .bc-grid, .bc-cmp{ grid-template-columns: 1fr; }
+  .bc-grid4{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bc-flow, .bc-flow3, .bc-flow5{ grid-template-columns: 1fr; }
+}
+@media (max-width: 480px){ .bc-grid4{ grid-template-columns: 1fr; } .bc-section{ padding: 44px 5%; } .bc-cols{ grid-template-columns: 1fr; } }
 </style>
 <script type="application/ld+json">
 {
@@ -373,6 +428,13 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   </div>
 
 </section>
+
+<section class="bc-section" aria-labelledby="bc-h"><div class="bc-inner">
+<div class="section-eyebrow">Before and after</div>
+<h2 class="section-title" id="bc-h">What we fix on your profile</h2>
+<p class="bc-lead">We fix what's wrong or missing and keep it fresh. This is an example with a made-up business.</p>
+<div class="bc-short"><strong>Short answer:</strong> we fix your Google Business Profile and keep it fresh. We do the work, so you don't have to update it yourself.</div><div class="bc-grid"><div class="bc-card"><span class="bc-tag">Example · before</span><h3>Sample Plumbing Co.</h3><div class="bc-row"><span>Hours</span><strong>Old hours</strong></div><div class="bc-row"><span>Phone number</span><strong>Wrong number</strong></div><div class="bc-row"><span>Services</span><strong>A service is missing</strong></div></div><div class="bc-card"><span class="bc-tag">Example · after</span><h3>Sample Plumbing Co.</h3><div class="bc-row"><span>Hours</span><strong>Fixed</strong></div><div class="bc-row"><span>Phone number</span><strong>222-333-4444</strong></div><div class="bc-row"><span>Services</span><strong>Added</strong></div></div></div>
+</div></section>
 
 <!-- tl-calc -->
 <section class="tl-calc-section" data-calc="google-business-profile-optimization" aria-labelledby="tl-calc-title">
