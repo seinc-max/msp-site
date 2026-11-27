@@ -167,7 +167,7 @@ function walkPages(dir, acc = []) {
 }
 
 function templateFor(rel) {
-  if (rel.startsWith('blog/')) return 'blog';
+  if (rel.startsWith('blog/') || rel === 'blog.html') return 'blog';
   if (LANDING.has(rel)) return 'landing';
   if (INFO.has(rel)) return 'info';
   if (PAGE.has(rel)) return 'page';

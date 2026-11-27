@@ -66,6 +66,7 @@ For law, accounting, advisory, insurance, consulting, and architecture and engin
 ## Guides and tools (for professional firms)
 - AI Exposure Score: https://truelineit.com/ai-exposure-score
 - Margin Leakage Calculator: https://truelineit.com/margin-leakage-calculator
+- Blog index: https://truelineit.com/blog
 - AI Automation ROI Guide: The Cost of Shadow AI and Manual Admin: https://truelineit.com/blog/ai-automation-roi-guide
 - Staff Use ChatGPT With Client Files: https://truelineit.com/blog/20-shadow-ai-audits-2026
 - ChatGPT and PIPEDA: what your business needs to know now: https://truelineit.com/blog/is-your-business-pipeda-compliant

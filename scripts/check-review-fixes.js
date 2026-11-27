@@ -59,8 +59,8 @@ const audienceOf = {
 // 2026-11-26 menu rebuild (Ben t1817u): the Professional Services group now lists these three offers on every
 // page, so the old "must not be in the nav" rule is flipped: each one must be in every nav.
 const proOfferHrefs = ['/ai-governance', '/fractional-ai-officer', '/ai-support-agent'];
+// 2026-11-26 (Ben t1892u): the "For Trades & Contractors", "For Salons & Clinics" and "For Property Managers" hub subheadings are out of the menu.
 const homeMenu = [
-  '/for-home-services',
   '/missed-call-text-back',
   '/ai-receptionist',
   '/quote-follow-up-win-back',
@@ -72,7 +72,6 @@ const homeMenu = [
   '/crm-setup',
   '/cold-outreach',
   '/custom-dashboards',
-  '/for-appointment-businesses',
   '/ai-receptionist-for-salons',
   '/google-review-requests-for-salons',
   '/appointment-reminders-for-salons', // 2026-11-26 Ben t1861u: salon menu link moved to the salon version
