@@ -341,7 +341,7 @@ nav.tl-nav .nav-cta {
   box-sizing: border-box;
   white-space: nowrap;
 }
-nav.tl-nav .nav-cta:hover { background: #ea6c0a; color: #fff; }
+nav.tl-nav .nav-cta:hover { background: #c2410c; color: #fff; }
 nav.tl-nav .nav-phone { color: #fff; text-decoration: none; font-weight: 700; white-space: nowrap; }
 nav.tl-nav.tl-nav-light .nav-phone { color: #1a2744; }
 /* Through tablet, keep the bar one row. Page rules that set .nav-links{width:100%}
@@ -1216,7 +1216,7 @@ main:focus{outline:none}
 .tl-demo audio{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .tl-demo-bar{display:flex;align-items:center;gap:12px;padding:10px 12px;background:#fff;border-bottom:1px solid #dde6f5}
 .tl-demo-play{flex:0 0 auto;width:64px;height:64px;border:0;border-radius:50%;background:#f97316;color:#1a2744;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
-.tl-demo-play:hover{background:#ea6c0a}
+.tl-demo-play:hover{background:#c2410c}
 .tl-demo-icon-pause{display:none}
 .tl-demo-play.is-playing .tl-demo-icon-play{display:none}
 .tl-demo-play.is-playing .tl-demo-icon-pause{display:block}
