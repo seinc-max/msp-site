@@ -426,33 +426,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 </section>
 
-<section class="bc-section" aria-labelledby="bc-h"><div class="bc-inner">
-<div class="section-eyebrow">See it</div>
-<h2 class="section-title" id="bc-h">Try an example dashboard</h2>
-<p class="bc-lead">Switch between this week and last week. The numbers are made up. Yours come from the tools we connect.</p>
-<span class="bc-tag" style="margin-top:20px">Example</span>
-<div class="bc-card" data-bc-dash style="max-width:420px;margin:0 auto">
-<h3>Sample Electrical Co.</h3>
-<div role="group" aria-label="Choose a week to view" class="bc-seg"><button type="button" aria-pressed="true" data-bc-week="this">This week</button><button type="button" aria-pressed="false" data-bc-week="last">Last week</button></div>
-<div class="bc-kpis" style="margin-top:14px" aria-live="polite">
-<div class="bc-kpi"><span>New leads</span><strong data-v="18|14">18</strong><em class="bc-up" data-d="▲ 4|">▲ 4</em></div>
-<div class="bc-kpi"><span>Calls answered</span><strong data-v="42|36">42</strong><em class="bc-up" data-d="▲ 6|">▲ 6</em></div>
-<div class="bc-kpi bc-flag"><span>Quotes sent</span><strong data-v="9|11">9</strong><em class="bc-down" data-d="▼ 2|">▼ 2</em></div>
-<div class="bc-kpi"><span>New reviews</span><strong data-v="3|2">3</strong><em class="bc-up" data-d="▲ 1|">▲ 1</em></div>
-</div>
-<div class="bc-row bc-flag bc-look" data-look="Needs a look: quotes sent are down 2 this week|Nothing to look at in this example week."><strong style="text-align:left">Needs a look: quotes sent are down 2 this week</strong></div>
-<p class="bc-cap">Made-up numbers. Tap a week to switch.</p>
-</div>
-<div class="bc-grid bc-grid4">
-<div class="bc-card"><h3>Are calls getting answered?</h3><p class="bc-cap" style="margin-top:0">Calls answered, this week and last.</p></div>
-<div class="bc-card"><h3>Are new leads coming in?</h3><p class="bc-cap" style="margin-top:0">New leads, this week and last.</p></div>
-<div class="bc-card"><h3>Are quotes going out?</h3><p class="bc-cap" style="margin-top:0">Quotes sent, with a flag when they drop.</p></div>
-<div class="bc-card"><h3>Are new reviews coming in?</h3><p class="bc-cap" style="margin-top:0">New reviews, this week and last.</p></div>
-</div>
-
-<script>(function(){var r=document.querySelector('[data-bc-dash]');if(!r)return;var b=r.querySelectorAll('[data-bc-week]');function set(i){[].forEach.call(r.querySelectorAll('[data-v]'),function(e){e.textContent=e.getAttribute('data-v').split('|')[i]});[].forEach.call(r.querySelectorAll('[data-d]'),function(e){e.textContent=e.getAttribute('data-d').split('|')[i]||'\u00a0'});var l=r.querySelector('[data-look] strong');l.textContent=r.querySelector('[data-look]').getAttribute('data-look').split('|')[i];[].forEach.call(b,function(x,k){x.setAttribute('aria-pressed',k===i?'true':'false')})}[].forEach.call(b,function(x,k){x.addEventListener('click',function(){set(k)})})})();</script>
-</div></section>
-
 <!-- tl-calc -->
 <section class="tl-calc-section" data-calc="custom-dashboards" aria-labelledby="tl-calc-title">
   <div class="tl-calc">
@@ -488,6 +461,34 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   <script src="/js/calculator.js?v=3fe2690013" defer></script>
 </section>
 <!-- /tl-calc -->
+
+<section class="bc-section" aria-labelledby="bc-h"><div class="bc-inner">
+<div class="section-eyebrow">See it</div>
+<h2 class="section-title" id="bc-h">Try an example dashboard</h2>
+<p class="bc-lead">Switch between this week and last week. The numbers are made up. Yours come from the tools we connect.</p>
+<span class="bc-tag" style="margin-top:20px">Example</span>
+<div class="bc-card" data-bc-dash style="max-width:420px;margin:0 auto">
+<h3>Sample Electrical Co.</h3>
+<div role="group" aria-label="Choose a week to view" class="bc-seg"><button type="button" aria-pressed="true" data-bc-week="this">This week</button><button type="button" aria-pressed="false" data-bc-week="last">Last week</button></div>
+<div class="bc-kpis" style="margin-top:14px" aria-live="polite">
+<div class="bc-kpi"><span>New leads</span><strong data-v="18|14">18</strong><em class="bc-up" data-d="▲ 4|">▲ 4</em></div>
+<div class="bc-kpi"><span>Calls answered</span><strong data-v="42|36">42</strong><em class="bc-up" data-d="▲ 6|">▲ 6</em></div>
+<div class="bc-kpi bc-flag"><span>Quotes sent</span><strong data-v="9|11">9</strong><em class="bc-down" data-d="▼ 2|">▼ 2</em></div>
+<div class="bc-kpi"><span>New reviews</span><strong data-v="3|2">3</strong><em class="bc-up" data-d="▲ 1|">▲ 1</em></div>
+</div>
+<div class="bc-row bc-flag bc-look" data-look="Needs a look: quotes sent are down 2 this week|Nothing to look at in this example week."><strong style="text-align:left">Needs a look: quotes sent are down 2 this week</strong></div>
+<p class="bc-cap">Made-up numbers. Tap a week to switch.</p>
+</div>
+<div class="bc-grid bc-grid4">
+<div class="bc-card"><h3>Are calls getting answered?</h3><p class="bc-cap" style="margin-top:0">Calls answered, this week and last.</p></div>
+<div class="bc-card"><h3>Are new leads coming in?</h3><p class="bc-cap" style="margin-top:0">New leads, this week and last.</p></div>
+<div class="bc-card"><h3>Are quotes going out?</h3><p class="bc-cap" style="margin-top:0">Quotes sent, with a flag when they drop.</p></div>
+<div class="bc-card"><h3>Are new reviews coming in?</h3><p class="bc-cap" style="margin-top:0">New reviews, this week and last.</p></div>
+</div>
+
+<script>(function(){var r=document.querySelector('[data-bc-dash]');if(!r)return;var b=r.querySelectorAll('[data-bc-week]');function set(i){[].forEach.call(r.querySelectorAll('[data-v]'),function(e){e.textContent=e.getAttribute('data-v').split('|')[i]});[].forEach.call(r.querySelectorAll('[data-d]'),function(e){e.textContent=e.getAttribute('data-d').split('|')[i]||'\u00a0'});var l=r.querySelector('[data-look] strong');l.textContent=r.querySelector('[data-look]').getAttribute('data-look').split('|')[i];[].forEach.call(b,function(x,k){x.setAttribute('aria-pressed',k===i?'true':'false')})}[].forEach.call(b,function(x,k){x.addEventListener('click',function(){set(k)})})})();</script>
+</div></section>
+
 
 <!-- PAIN -->
 <section class="pain-section">
