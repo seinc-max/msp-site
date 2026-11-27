@@ -433,11 +433,25 @@ ${model.ctaLabel ? `    <p class="info-label">${model.ctaLabel}</p>
 </section>`;
 }
 
+// Ben t1908u/t1910u (2026-11-26) supersede the 2026-11-21 "same closing call box / trust chips on all
+// three info pages" rule for Terms and Privacy ONLY. They are plain legal pages: no navy hero, no Call
+// button, no promise line, no trust chips, no closing call box, no sticky tagline. About is unchanged.
+function legalHead(model) {
+  return `<header class="legal-head">
+  <div class="info-wrap">
+    <h1>${model.title}</h1>
+    <p class="legal-updated">${model.kicker}</p>
+    <p class="legal-intro">${model.lede}</p>
+  </div>
+</header>`;
+}
+
 function infoMain(model) {
+  const head = model.plainLegal ? legalHead(model) : infoHero(model);
+  const closing = model.closingHtml !== undefined ? model.closingHtml : infoCta(model);
   return `<main id="main" tabindex="-1">
-${infoHero(model)}
-${model.body}
-${model.closingHtml !== undefined ? model.closingHtml : infoCta(model)}
+${head}
+${model.body}${closing ? '\n' + closing : ''}
 </main>`;
 }
 
@@ -608,15 +622,8 @@ function legalModel(html, which) {
     title,
     lede,
     body: legalBody || infoArticle(main.trim()),
-    ctaLabel: '',
-    ctaHeading: 'Questions?',
-    ctaSub: '',
-    // 2026-11-21: privacy requests go by email, so the closing band also offers the email address.
-    // Ben voice 2026-11-21 5:17 PM ET: one identical closing call box on all three info pages (email stays in Privacy sections 7 and 8).
-    ctaNote: '',
-    // Audit 2026-10-25 D18.12: no sales chips on the Privacy page.
-    // Ben voice 2026-11-21 5:17 PM ET: same plain trust line on all three info pages (replaces audit D18.12).
-    hideTrust: false,
+    plainLegal: true,
+    closingHtml: '',
   };
 }
 
@@ -638,6 +645,11 @@ function buildOne(rel) {
   const header = filterNav(headerPartial(variant), rel);
   const footer = partial('footer.html');
   let sticky = partial(parts.stickyKind === 'assessment' ? 'sticky-assessment.html' : 'sticky-call.html');
+  if (template === 'info' && rel !== 'about.html') {
+    // Ben t1908u/t1910u: plain Call link only on Terms and Privacy. The shared partial is not edited.
+    sticky = sticky.replace(/\n\s*<span>[^<]*<\/span>/, '');
+    if (/<span>/.test(sticky)) throw new Error('Sticky tagline still present on ' + rel);
+  }
   if (parts.stickyKind === 'assessment') {
     const block = source.slice(source.indexOf('sticky-mobile-cta sticky-assessment'));
     const hrefMatch = block.match(/<a href="([^"]+)">Book My AI Consultation<\/a>/);
