@@ -823,6 +823,38 @@ details[open] summary::after{ content: '−'; }
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the score measure?","acceptedAnswer":{"@type":"Answer","text":"The score measures your firm's AI exposure across 15 yes-or-no questions about public tools, a written policy, client data, Copilot settings, training, vendors and cyber insurance. It covers shadow AI use, client data leaking into public tools, PIPEDA gaps and cyber insurance readiness. Each yes scores one point, and your total tells you where your business stands."}},{"@type":"Question","name":"What happens after I get my score?","acceptedAnswer":{"@type":"Answer","text":"If your score is 0–5 or 6–10, send your name and email; we email you to set up a call. If your score is 11–15, you are in good shape — the same pages are there for the next step."}},{"@type":"Question","name":"Is there a money-back guarantee?","acceptedAnswer":{"@type":"Answer","text":"Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first payment. We refund what you've paid us in your first 30 days, in full. No questions asked. Full terms are on /terms."}},{"@type":"Question","name":"What do I do after I get my AI exposure score?","acceptedAnswer":{"@type":"Answer","text":"If your score is 0–5 or 6–10, send your name and email on AI Governance. You can also read how an AI Support Agent answers routine client questions. If your score is 11–15, you're in good shape — the same pages are there when you want the next step."}},{"@type":"Question","name":"What does \"flat rate\" actually mean?","acceptedAnswer":{"@type":"Answer","text":"You pay a fixed monthly fee per business — not per user. It doesn't matter if you add two people or ten. Your bill is the same every month. No surprise invoices, no per-seat charges, no break-fix fees."}},{"@type":"Question","name":"What if we already have basic AI guardrails in place?","acceptedAnswer":{"@type":"Answer","text":"No problem. We do a full assessment during onboarding and work with what you have. If something needs to change, we'll tell you plainly and give you options."}},{"@type":"Question","name":"How do you get back to me?","acceptedAnswer":{"@type":"Answer","text":"We email you to set up a call, and urgent issues come first. You'll always talk to a real person."}},{"@type":"Question","name":"Is there a contract?","acceptedAnswer":{"@type":"Answer","text":"Cancel anytime. No contracts, no cancellation fees."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"For Professional Firms","item":"https://truelineit.com/for-law-firms-accountants-and-advisors"},{"@type":"ListItem","position":3,"name":"AI Exposure Score","item":"https://truelineit.com/ai-exposure-score"}]}</script>
+<style id="bc-professional">
+.bc-sec{padding:64px 5%;background:#fafaf8}
+.bc-sec--sky{background:#e8f2ff}
+.bc-in{max-width:960px;margin:0 auto;text-align:center}
+.bc-h{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:#1a2744;line-height:1.2;margin:0 0 12px}
+.bc-lede{color:#5a6a8a;max-width:640px;margin:0 auto 32px;font-size:1rem;line-height:1.6}
+.bc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.bc-grid--2{grid-template-columns:repeat(2,1fr)}
+.bc-grid--4{grid-template-columns:repeat(4,1fr)}
+.bc-card{background:#fff;border:1.5px solid #dde6f5;border-radius:12px;padding:22px 20px}
+.bc-card h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:#1a2744;margin:0 0 8px;line-height:1.3}
+.bc-card p,.bc-card li{font-size:.92rem;color:#5a6a8a;line-height:1.6;margin:0}
+.bc-card ul{list-style:none;margin:0;padding:0}
+.bc-card li{padding:5px 0 5px 22px;position:relative}
+.bc-card li::before{content:'\2713';position:absolute;left:0;color:#c2410c;font-weight:700}
+.bc-card--no li::before{content:'\2715';color:#5a6a8a}
+.bc-num{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#1a2744;color:#fff;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;margin-bottom:10px}
+.bc-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c2410c;margin-bottom:8px}
+.bc-vs{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;text-align:left}
+.bc-vs .bc-card{padding:18px 20px}
+.bc-vs .bc-head{font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#5a6a8a;padding:0 4px}
+.bc-vs .bc-head--with{color:#c2410c}
+.bc-vs .bc-card--with{border-color:#f97316}
+.bc-ex{background:#fff;border:1.5px dashed #94a3b8;border-radius:12px;padding:20px;text-align:left;max-width:640px;margin:0 auto}
+.bc-ex-label{display:inline-block;background:#1a2744;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:3px 9px;margin-bottom:12px}
+.bc-plain li{padding-left:0}
+.bc-plain li::before{content:none}
+.bc-note{font-size:.85rem;color:#5a6a8a;margin-top:16px}
+.bc-note a{color:#c2410c;font-weight:700}
+@media(max-width:860px){.bc-grid--4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.bc-sec{padding:44px 5%}.bc-grid,.bc-grid--2,.bc-grid--4,.bc-vs{grid-template-columns:1fr}.bc-vs .bc-head{display:none}}
+</style>
 </head>
 <body class="audience-professional pro-cta-orange">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -916,6 +948,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
 <div class="section-action"><a href="#hs-tool" class="btn-primary">Calculate my score</a></div>
+</section>
+
+<!-- bc: example result and what your score means -->
+<section class="bc-sec bc-sec--sky" aria-labelledby="bc-score-h">
+  <div class="bc-in">
+    <h2 class="bc-h" id="bc-score-h">What you get at the end</h2>
+    <p class="bc-lede">Your score, a band, and a plain-English note. Here is what a result looks like.</p>
+    <div class="bc-grid bc-grid--2" style="align-items:start;">
+      <div class="bc-ex" role="group" aria-label="Example result for a sample firm" style="max-width:none;margin:0;">
+        <span class="bc-ex-label">Example</span>
+        <p style="margin:0 0 4px;font-size:.8rem;color:#5a6a8a;">Sample Accounting Co. &middot; sample result</p>
+        <p style="margin:0 0 10px;font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;color:#1a2744;">7 of 15 <span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#92400e;background:#fef3c7;border-radius:6px;padding:3px 9px;vertical-align:middle;">Moderate Risk</span></p>
+        <p style="margin:0 0 6px;font-size:.9rem;font-weight:700;color:#1a2744;">Questions answered No in this example:</p>
+        <ul class="bc-plain" style="list-style:none;margin:0;padding:0;font-size:.9rem;color:#5a6a8a;line-height:1.6;">
+          <li style="padding:3px 0;">No written AI use policy that people have signed</li>
+          <li style="padding:3px 0;">AI settings in Microsoft 365 Copilot or Google Workspace not set</li>
+          <li style="padding:3px 0;">Vendors have not agreed in writing not to train on your data</li>
+        </ul>
+      </div>
+      <div class="bc-card">
+        <h3>What your score means</h3>
+        <ul class="bc-plain" style="list-style:none;">
+          <li style="padding:8px 0;border-bottom:1px solid #dde6f5;"><b style="color:#1a2744;">0&#8211;5, Critical Risk.</b> Your business is vulnerable. Every day without proactive data governance increases your regulatory exposure.</li>
+          <li style="padding:8px 0;border-bottom:1px solid #dde6f5;"><b style="color:#1a2744;">6&#8211;10, Moderate Risk.</b> You have some controls, but major gaps remain.</li>
+          <li style="padding:8px 0;"><b style="color:#1a2744;">11&#8211;15, Well Managed.</b> Your AI and data practices look solid. Keep reviewing them as your tools, team and obligations change.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="bc-note">Yes = 1 point. No = 0 points. The example is not a real firm.</p>
+  </div>
 </section>
 
 <!-- HOW IT WORKS -->
