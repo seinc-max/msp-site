@@ -437,7 +437,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       if(res.ok){
         form.style.display='none'; document.getElementById('form-success').style.display='block';
         window.dataLayer=window.dataLayer||[];
-        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
+        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead'});
+        try{sessionStorage.setItem('tl_lead_submitted','1');}catch(_){ }
+        window.location.assign('/thank-you');
       } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
     }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
   });
@@ -536,7 +538,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="pain-section">
   <div class="section-inner">
     <h2 class="section-title">A client asked about your AI policy. You didn't have an answer.</h2>
-    <p>79% of Canadian office workers use AI at work, but only 25% rely on business AI tools with proper privacy controls (<a href="https://canada.newsroom.ibm.com/2025-09-03-IBM-R-Study-Shadow-AI-Use-Surges-as-Canadian-Workers-Outpace-Employers-in-AI-Adoption" rel="noopener" target="_blank">IBM, 2025</a>).</p>
+    <p>79% of Canadian office workers use AI at work, but only 1 in 4 rely on business AI tools with proper privacy controls (<a href="https://canada.newsroom.ibm.com/2025-09-03-IBM-R-Study-Shadow-AI-Use-Surges-as-Canadian-Workers-Outpace-Employers-in-AI-Adoption" rel="noopener" target="_blank">IBM, 2025</a>).</p>
     <div class="pain-grid">
       <div class="pain-card"> 
         <h3>Staff using ChatGPT with client data</h3>

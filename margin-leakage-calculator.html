@@ -310,7 +310,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   </div>
   <p class="calc-method" style="max-width:1000px;margin:16px auto 0;font-size:0.9rem;color:var(--text-muted);text-align:center;">How it works: people who handle client work × the share using unapproved AI × average salary × 6.25% (about 2.5 hours of a 40-hour week). Prompts a month: those same people × 12, assuming 12 prompts per person a month. These are planning assumptions, not measured results.</p>
 <p class="section-sub calc-audience-list">For law firms, accountants, financial advisors, insurance agencies, bookkeepers, tax practices, wealth managers, consulting firms, architecture firms, engineering firms, marketing agencies, IT providers and HR consultants.</p>
-<p class="section-sub">79% of Canadian office workers use AI at work, but only 1 in 4 rely on enterprise-grade AI tools (<a href="https://canada.newsroom.ibm.com/2025-09-03-IBM-R-Study-Shadow-AI-Use-Surges-as-Canadian-Workers-Outpace-Employers-in-AI-Adoption" rel="noopener" target="_blank">IBM, 2025</a>).</p>
+<p class="section-sub">79% of Canadian office workers use AI at work, but only 1 in 4 rely on business AI tools with proper privacy controls (<a href="https://canada.newsroom.ibm.com/2025-09-03-IBM-R-Study-Shadow-AI-Use-Surges-as-Canadian-Workers-Outpace-Employers-in-AI-Adoption" rel="noopener" target="_blank">IBM, 2025</a>).</p>
 <p class="section-sub">The Fractional AI Officer retainer is $7,500/mo.</p>
 <p class="section-sub">Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first payment. We refund what you've paid us in your first 30 days, in full. No questions asked. Cancel anytime. No contracts, no cancellation fees. Full terms on <a href="/terms">/terms</a>.</p>
 
@@ -376,7 +376,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       if(res.ok){
         form.style.display='none'; document.getElementById('form-success').style.display='block';
         window.dataLayer=window.dataLayer||[];
-        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
+        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead'});
+        try{sessionStorage.setItem('tl_lead_submitted','1');}catch(_){ }
+        window.location.assign('/thank-you');
       } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
     }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
   });

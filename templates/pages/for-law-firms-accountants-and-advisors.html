@@ -238,7 +238,9 @@ body{margin:0;font-family:'DM Sans',sans-serif;color:#1a2744;background:#fafaf8;
       if(res.ok){
         form.style.display='none'; document.getElementById('form-success').style.display='block';
         window.dataLayer=window.dataLayer||[];
-        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
+        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead'});
+        try{sessionStorage.setItem('tl_lead_submitted','1');}catch(_){ }
+        window.location.assign('/thank-you');
       } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
     }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
   });
@@ -319,6 +321,7 @@ body{margin:0;font-family:'DM Sans',sans-serif;color:#1a2744;background:#fafaf8;
 </section>
 <section class="also-useful-wrap"><p class="also-useful">Also useful: <a href="/ai-exposure-score">AI Exposure Score</a>, <a href="/ai-governance">AI Governance</a>, and <a href="/margin-leakage-calculator">Margin Leakage Calculator</a>.</p></section>
 
+<section class="hub-section"><p>To learn more about us, see <a href="/about">About Trueline IT</a>.</p></section>
 </main>
 <div class="sticky-mobile-cta sticky-consultation">
   <a href="#discovery-form">Book My AI Consultation</a>
