@@ -168,6 +168,34 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 .pricing-card{ padding: 28px 20px; }}
 
 </style>
+<style>
+.bc-wrap{padding:60px 5%;background:var(--warm-white)}
+.bc-wrap.bc-alt{background:#fff}
+.bc-inner{max-width:900px;margin:0 auto;text-align:center}
+.bc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:left}
+.bc-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.bc-card{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:22px 22px}
+.bc-card h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:8px}
+.bc-card p{font-size:.9rem;color:var(--text-muted);line-height:1.6}
+.bc-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#b45309;background:#fff4e5;border-radius:20px;padding:3px 10px;margin-bottom:12px}
+.bc-note{font-size:.85rem;color:var(--text-muted);margin-top:12px;line-height:1.5}
+.bc-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.92rem;color:var(--navy)}
+.bc-row:last-of-type{border-bottom:0}
+.bc-row span:first-child{color:var(--text-muted)}
+.bc-chip{display:inline-block;padding:2px 10px;border-radius:20px;font-size:.75rem;font-weight:700;background:var(--sky);color:#1d4ed8;white-space:nowrap}
+.bc-chip.bc-ok{background:#e6f6ec;color:#15692f}
+.bc-chip.bc-new{background:#fff4e5;color:#9a4a05}
+.bc-flow{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:14px;list-style:none;text-align:left;counter-reset:bcs}
+.bc-flow li{position:relative;background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:16px 14px 14px;font-size:.88rem;color:var(--text-muted);line-height:1.5;counter-increment:bcs}
+.bc-flow li b{display:block;font-family:'Fraunces',serif;color:var(--navy);font-size:.98rem;margin-bottom:4px}
+.bc-flow li::before{content:counter(bcs);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-size:.8rem;font-weight:700;margin-bottom:8px}
+.bc-msg{background:var(--sky);border-radius:12px 12px 12px 4px;padding:10px 14px;font-size:.9rem;color:var(--navy);margin:8px 0;max-width:92%;line-height:1.5}
+.bc-msg.bc-me{margin-left:auto;background:#fff;border:1.5px solid var(--border);border-radius:12px 12px 4px 12px}
+.bc-msg small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px}
+.bc-svg{width:100%;height:auto;display:block}
+@media(max-width:700px){.bc-grid,.bc-grid3{grid-template-columns:1fr}.bc-flow{grid-template-columns:1fr}.bc-wrap{padding:44px 5%}}
+</style>
+
 <link rel="canonical" href="https://truelineit.com/ai-receptionist-for-salons" />
 <meta property="og:image" content="https://truelineit.com/og-image-trades.jpg" />
 <meta property="og:image:width" content="2400" />
@@ -377,6 +405,39 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   </div>
 </section>
 
+<section class="tl-demo-band" id="sample-call">
+  <div class="section-inner">
+    <p class="bc-note" style="text-align:center;margin:0 0 14px"><strong>Example call.</strong> The business and the caller are made up.</p>
+    <!-- include:sample-call-salon -->
+  </div>
+</section>
+
+<section class="bc-wrap ">
+  <div class="bc-inner">
+<div class="section-eyebrow">Example</div>
+<h2 class="section-title">What lands on your phone after the call</h2>
+<div class="bc-grid">
+      <div class="bc-card">
+        <span class="bc-tag">Example</span>
+        <h3>What you get after the call</h3>
+        <div class="bc-row"><span>Caller</span><span>Maya</span></div>
+        <div class="bc-row"><span>Service</span><span>Gel set</span></div>
+        <div class="bc-row"><span>Time</span><span>Sat ~2 PM</span></div>
+        <div class="bc-row"><span>Sent to</span><span>You, by text</span></div>
+        <p class="bc-note">You confirm the time. Made-up business and caller.</p>
+      </div>
+      <div class="bc-card" role="group" aria-label="Example list of booking requests">
+        <span class="bc-tag">Example</span>
+        <h3>Requests waiting for you</h3>
+        <div class="bc-row"><span>Maya &middot; Gel set &middot; Sat ~2 PM</span><span class="bc-chip bc-new">You confirm</span></div>
+        <div class="bc-row"><span>Priya &middot; Color touch-up &middot; Sat ~11 AM</span><span class="bc-chip bc-new">You confirm</span></div>
+        <div class="bc-row"><span>Sam &middot; Appointment request &middot; Mon ~9 AM</span><span class="bc-chip bc-new">You confirm</span></div>
+        <p class="bc-note">Each one is a request texted to you. You confirm the time. Made-up names.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- HOW MANY BOOKING CALLS -->
 <section class="pain-section">
   <div class="section-inner">
@@ -430,12 +491,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </section>
 <!-- /tl-calc -->
 
-<section class="tl-demo-band" id="sample-call">
-  <div class="section-inner">
-    <!-- include:sample-call-salon -->
-  </div>
-</section>
-
 <!-- VOICEMAIL VS RECEPTIONIST -->
 <section class="audience-section">
   <div class="section-inner">
@@ -484,7 +539,17 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
+</section>
+
+<section class="bc-wrap bc-alt ">
+  <div class="bc-inner">
+<h2 class="section-title">The same front desk for your kind of business</h2>
+<div class="bc-grid3">
+      <div class="bc-card"><h3>Nail salon</h3><p>A client calls while you're mid-set. It takes the name, the service and the time they want.</p></div>
+      <div class="bc-card"><h3>Hair salon</h3><p>You're mid-color. It answers, and the request reaches you by text so you can confirm.</p></div>
+      <div class="bc-card"><h3>Clinic front desk</h3><p>Dental, physio, chiropractic, optometry and vet clinics: it answers the phone and takes appointment requests. It does not give clinical advice.</p></div>
+    </div>
+  </div>
 </section>
 
 <!-- FILL THE GAP -->
@@ -508,7 +573,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p>Deposit and cancellation rules are read out the way you script them, so callers hear your policy before they book.</p>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -535,7 +599,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- WHO THIS IS FOR / NOT FOR -->
@@ -564,7 +627,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- INCLUDED / NOT INCLUDED -->
@@ -596,7 +658,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- COMPARE -->
@@ -638,7 +699,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 
@@ -697,7 +757,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- FAQ -->
@@ -745,7 +804,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <!-- BOTTOM CTA -->
