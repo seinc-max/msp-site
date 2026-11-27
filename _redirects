@@ -6,7 +6,7 @@
 /it-cost-guide-ontario /blog/ai-automation-roi-guide 301
 /microsoft-365-ontario-smbs /ai-governance 301
 /health-score /ai-exposure-score 301
-/blog/20-southern-ontario-it-audits-2026 /blog/20-shadow-ai-audits-2026 301
+/blog/20-southern-ontario-it-audits-2026 /blog/staff-use-chatgpt-with-client-files 301
 /managed-it-services-hamilton /ai-governance 301
 /managed-it-services-guelph /ai-governance 301
 /managed-it-services-kitchener-waterloo /ai-governance 301
@@ -128,9 +128,9 @@
 /blog/clinical-voice-ai-phipa-compliance /blog/voice-ai-law-accounting-confidentiality 301
 /blog/clinical-voice-ai-phipa-compliance/ /blog/voice-ai-law-accounting-confidentiality 301
 /blog/clinical-voice-ai-phipa-compliance.html /blog/voice-ai-law-accounting-confidentiality 301
-/blog/20-southern-ontario-shadow-ai-audits-2026 /blog/20-shadow-ai-audits-2026 301
-/blog/20-southern-ontario-shadow-ai-audits-2026/ /blog/20-shadow-ai-audits-2026 301
-/blog/20-southern-ontario-shadow-ai-audits-2026.html /blog/20-shadow-ai-audits-2026 301
+/blog/20-southern-ontario-shadow-ai-audits-2026 /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-southern-ontario-shadow-ai-audits-2026/ /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-southern-ontario-shadow-ai-audits-2026.html /blog/staff-use-chatgpt-with-client-files 301
 /blog/is-your-ontario-business-pipeda-compliant /blog/is-your-business-pipeda-compliant 301
 /blog/is-your-ontario-business-pipeda-compliant/ /blog/is-your-business-pipeda-compliant 301
 /blog/is-your-ontario-business-pipeda-compliant.html /blog/is-your-business-pipeda-compliant 301
@@ -150,8 +150,8 @@
 /it-cost-guide-ontario.html /blog/ai-automation-roi-guide 301
 /microsoft-365-ontario-smbs/ /ai-governance 301
 /microsoft-365-ontario-smbs.html /ai-governance 301
-/blog/20-southern-ontario-it-audits-2026/ /blog/20-shadow-ai-audits-2026 301
-/blog/20-southern-ontario-it-audits-2026.html /blog/20-shadow-ai-audits-2026 301
+/blog/20-southern-ontario-it-audits-2026/ /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-southern-ontario-it-audits-2026.html /blog/staff-use-chatgpt-with-client-files 301
 /managed-it-services-southern-ontario/ /ai-governance 301
 /managed-it-services-southern-ontario.html /ai-governance 301
 /shadow-ai-compliance-ontario/ /ai-governance 301
@@ -240,3 +240,8 @@
 /ai-automation-roi-guide /blog/ai-automation-roi-guide 301
 /ai-automation-roi-guide/ /blog/ai-automation-roi-guide 301
 /ai-automation-roi-guide.html /blog/ai-automation-roi-guide 301
+
+# 2026-11-27 (Ben-approved S19, Atlas addendum): shadow-AI post slug renamed.
+/blog/20-shadow-ai-audits-2026 /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-shadow-ai-audits-2026/ /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-shadow-ai-audits-2026.html /blog/staff-use-chatgpt-with-client-files 301

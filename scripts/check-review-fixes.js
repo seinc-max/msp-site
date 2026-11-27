@@ -53,7 +53,7 @@ const audienceOf = {
   'blog/what-sovereign-ai-actually-means.html': 'professional',
   'blog/sovereign-zapier-alternatives-compliance.html': 'professional',
   'blog/financial-integration-insurance-vulnerabilities.html': 'professional',
-  'blog/20-shadow-ai-audits-2026.html': 'professional',
+  'blog/staff-use-chatgpt-with-client-files.html': 'professional',
 };
 
 // 2026-11-26 menu rebuild (Ben t1817u): the Professional Services group now lists these three offers on every
@@ -127,7 +127,7 @@ for (const f of [
   'blog/sovereign-zapier-alternatives-compliance.html',
   'blog/financial-integration-insurance-vulnerabilities.html',
   'blog/voice-ai-law-accounting-confidentiality.html',
-  'blog/20-shadow-ai-audits-2026.html',
+  'blog/staff-use-chatgpt-with-client-files.html',
   // terms.html removed 2026-11-27: PR #545 (e5d67d4) dropped the Terms tables.
 ]) {
   const html = read(f);
