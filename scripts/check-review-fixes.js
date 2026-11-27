@@ -38,7 +38,6 @@ const audienceOf = {
   'ai-receptionist-for-salons.html': 'salons',
   'google-review-requests-for-salons.html': 'salons',
   'lead-follow-up.html': 'trades',
-  'appointment-reminders.html': 'salons',
   'cold-outreach.html': 'trades',
   'crm-setup.html': 'trades',
   'custom-dashboards.html': 'trades',

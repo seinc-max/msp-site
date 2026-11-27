@@ -64,7 +64,6 @@ const LANDING = new Set([
   'fractional-ai-officer.html',
   'ai-support-agent.html',
   'lead-follow-up.html',
-  'appointment-reminders.html',
   'cold-outreach.html',
   'crm-setup.html',
   'custom-dashboards.html',

@@ -188,17 +188,6 @@
       sub: 'About {jobs} {jobs|job|jobs} a month, or {year} a year.',
       formula: 'Leads a month × % that go cold × % who would book × average job value'
     },
-    'appointment-reminders': {
-      title: 'What do no-shows cost you?',
-      inputs: [
-        { k: 'appts', label: 'Appointments each week', min: 0, max: 400, step: 5, v: 80, u: 'n' },
-        { k: 'ns', label: 'Clients who don\u2019t show up', min: 0, max: 40, step: 1, v: 8, u: 'pct' },
-        { k: 'visit', label: 'Your average visit value', min: 20, max: 500, step: 5, v: 85, u: 'money' }
-      ],
-      f: function (v) { var n = v.appts * pct(v.ns) * W; var m = n * v.visit; return { main: m, t: { n: whole(n) } }; },
-      sub: 'About {n} empty {n|appointment|appointments} a month, or {year} a year.',
-      formula: 'Appointments a week × % who don\u2019t show × average visit value × 4.3 weeks'
-    },
     // 2026-11-26 (Ben t1861u): salon and clinic version of Appointment Reminders.
     'appointment-reminders-for-salons': {
       title: 'What do no-shows cost you?',

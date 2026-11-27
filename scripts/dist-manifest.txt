@@ -10,7 +10,6 @@ ai-receptionist-for-salons.html
 ai-receptionist.html
 ai-support-agent.html
 apple-touch-icon.png
-appointment-reminders.html
 assets/2026-cybersecurity-report.pdf
 assets/2026-pipeda-compliance-guide.pdf
 assets/anthropic-logo.svg

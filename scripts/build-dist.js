@@ -32,7 +32,7 @@ const ALLOW = new Set([
   "og-image-professional.jpg", "og-image-trades.jpg", "og-image.jpg", "og-image.png",
   "privacy.html", "quote-follow-up-win-back.html", "robots.txt", "sitemap.xml", "688213215a3247df8b5797e268fbd61b.txt",
   "terms.html", "text-to-pay.html", "website-chat-to-text.html", "demo",
-  "lead-follow-up.html", "appointment-reminders.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html", "speed-to-lead.html", "overdue-invoice-reminders.html", "ai-estimate-drafts.html", "job-scheduling-dispatch.html", "google-business-profile-optimization.html", "google-business-profile-for-professionals.html", "document-automation.html", "inbox-management.html",
+  "lead-follow-up.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html", "speed-to-lead.html", "overdue-invoice-reminders.html", "ai-estimate-drafts.html", "job-scheduling-dispatch.html", "google-business-profile-optimization.html", "google-business-profile-for-professionals.html", "document-automation.html", "inbox-management.html",
   // 2026-11-26 salon versions (Ben t1834u)
   "website-chat-for-salons.html", "lead-follow-up-for-salons.html",
   // 2026-11-26 salon versions (Ben t1835u)
