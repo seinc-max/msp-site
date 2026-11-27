@@ -38,7 +38,6 @@ const audienceOf = {
   'ai-receptionist-for-salons.html': 'salons',
   'google-review-requests-for-salons.html': 'salons',
   'lead-follow-up.html': 'trades',
-  'appointment-reminders.html': 'salons',
   'cold-outreach.html': 'trades',
   'crm-setup.html': 'trades',
   'custom-dashboards.html': 'trades',
@@ -47,7 +46,7 @@ const audienceOf = {
   'fractional-ai-officer.html': 'professional',
   'ai-support-agent.html': 'professional',
   'ai-exposure-score.html': 'professional',
-  'ai-automation-roi-guide.html': 'professional',
+  'blog/ai-automation-roi-guide.html': 'professional',
   'margin-leakage-calculator.html': 'professional',
   'blog/voice-ai-law-accounting-confidentiality.html': 'professional',
   'blog/is-your-business-pipeda-compliant.html': 'professional',
@@ -60,8 +59,8 @@ const audienceOf = {
 // 2026-11-26 menu rebuild (Ben t1817u): the Professional Services group now lists these three offers on every
 // page, so the old "must not be in the nav" rule is flipped: each one must be in every nav.
 const proOfferHrefs = ['/ai-governance', '/fractional-ai-officer', '/ai-support-agent'];
+// 2026-11-26 (Ben t1892u): the "For Trades & Contractors", "For Salons & Clinics" and "For Property Managers" hub subheadings are out of the menu.
 const homeMenu = [
-  '/for-home-services',
   '/missed-call-text-back',
   '/ai-receptionist',
   '/quote-follow-up-win-back',
@@ -73,7 +72,6 @@ const homeMenu = [
   '/crm-setup',
   '/cold-outreach',
   '/custom-dashboards',
-  '/for-appointment-businesses',
   '/ai-receptionist-for-salons',
   '/google-review-requests-for-salons',
   '/appointment-reminders-for-salons', // 2026-11-26 Ben t1861u: salon menu link moved to the salon version
@@ -86,7 +84,8 @@ function bodyClass(html) {
 
 const files = Object.keys(audienceOf);
 // 2026-11-20 (Ben t1297u): /multi-location removed, 35 -> 34 pages, 13 -> 12 trades.
-if (files.length !== 34) fail('audience map does not cover 34 pages, got ' + files.length);
+// 2026-11-26 (EXKDioea item 3, Ben): /appointment-reminders retired (301 to the salons page), 34 -> 33 pages.
+if (files.length !== 33) fail('audience map does not cover 33 pages, got ' + files.length);
 for (const file of files) {
   const html = read(file);
   const want = audienceOf[file];
@@ -159,7 +158,7 @@ if (!css.includes('@keyframes fadeUp{from{opacity:1')) fail('hero fade still sta
 else pass('shared fadeUp stays opaque');
 if (css.includes('nav-pro-offer')) fail('header still has a professional-offer nav exception');
 const heroRule = '.hero-inner > *{\n    opacity: 1;\n    animation: none;\n  }';
-for (const file of ['index.html', 'about.html', 'privacy.html', 'terms.html', 'ai-exposure-score.html', 'ai-automation-roi-guide.html']) {
+for (const file of ['index.html', 'about.html', 'privacy.html', 'terms.html', 'ai-exposure-score.html', 'blog/ai-automation-roi-guide.html']) {
   const html = read(file);
   if (!html.includes(heroRule)) fail(file + ' hero rule is not opaque with animation none');
   if (/hero-inner > \*\{[^}]*opacity:\s*0/.test(html)) fail(file + ' hero children still start at opacity 0');

@@ -12,14 +12,14 @@
 Call (647) 360-5774. No forms on these services.
 - Missed-Call Text-Back: $149/mo plus a one-time $199 setup. When you miss a call, the caller gets a text within minutes, the thread captures what they need, and you're alerted. You keep your existing number; texts come from a separate number. https://truelineit.com/missed-call-text-back
 - AI Receptionist: $299/mo plus a one-time $299 setup. Answers calls nights, weekends and after hours, captures job requests and flags urgent calls to you. https://truelineit.com/ai-receptionist
-- Quote Follow-Up & Win-Back: $149/mo plus $199 setup. https://truelineit.com/quote-follow-up-win-back
+- Quote Follow-Up & Win-Back: $199/mo plus $199 setup. https://truelineit.com/quote-follow-up-win-back
 - Website Chat-to-Text: $79/mo plus $99 setup. https://truelineit.com/website-chat-to-text
 - Text-to-Pay Invoices: $49/mo plus $49 setup. https://truelineit.com/text-to-pay
 - Contractor Websites: $249/mo, no setup fee. Done-for-you site, live within a week. https://truelineit.com/contractor-websites
 - Google Review Requests: $99/mo plus $99 setup. Covers requests and replies. https://truelineit.com/google-review-requests
 - Lead Follow-Up: $199/mo plus $299 setup. Every new lead gets a text and an email in minutes, then follow-ups for 7 days. https://truelineit.com/lead-follow-up
 - CRM Setup: $199/mo plus $799 setup. Every lead, quote and job in one place, set up and kept running. https://truelineit.com/crm-setup
-- Cold Email Outreach: $799/mo plus $499 setup. We find property managers and builders who hire your trade and email them in your name. https://truelineit.com/cold-outreach
+- Cold Email Outreach: $999/mo plus $499 setup. We find property managers and builders who hire your trade and email them in your name. https://truelineit.com/cold-outreach
 - Custom Dashboards: $149/mo plus a $799 one-time build. Your calls, leads, reviews and jobs on one page. https://truelineit.com/custom-dashboards
 - Speed-to-Lead for Trades: $299/mo plus a one-time $299 setup. Every web, CRM and email lead gets a first reply in minutes, so hot leads stop going cold. https://truelineit.com/speed-to-lead
 - Overdue Invoice Reminders: $149/mo plus a one-time $99 setup. Overdue invoices are chased on a schedule, with your approval before reminders go. https://truelineit.com/overdue-invoice-reminders
@@ -50,8 +50,7 @@ Call (647) 360-5774. No forms on these services.
 Cancel anytime. No contracts, no cancellation fees. 30-day money-back guarantee on monthly services: if it's not right, tell us within 30 days of your first payment. We refund what you've paid us in your first 30 days, in full. No questions asked.
 
 ## AI governance ladder (forms)
-For law firms, accountants, financial advisors, insurance agencies, consulting firms, and architecture and engineering firms that want to use AI safely, done for you: written AI use policies, checks for unapproved AI tools, Microsoft 365 Copilot setup, and staff training. Set up with PIPEDA in mind. This is guidance and setup, not legal advice. The ladder starts at the $1,000 AI Liability Assessment.
-- AI Liability Assessment: $1,000, credited in full toward a retainer if you continue within 90 days. First step of the ladder. https://truelineit.com/fractional-ai-officer#assessment
+For law firms, accountants, financial advisors, insurance agencies, consulting firms, and architecture and engineering firms that want to use AI safely, done for you: written AI use policies, checks for unapproved AI tools, Microsoft 365 Copilot setup, and staff training. Set up with PIPEDA in mind. This is guidance and setup, not legal advice.
 - Fractional AI Officer: $7,500/mo. Cancel anytime. No contracts, no cancellation fees. https://truelineit.com/fractional-ai-officer
 - AI Governance: $2,500/mo, no setup fee. https://truelineit.com/ai-governance
 - AI Support Agent: $2,000 build fee + $500/mo. 30-day money-back guarantee, build fee included. We refund what you've paid us in your first 30 days, in full. https://truelineit.com/ai-support-agent
@@ -67,7 +66,8 @@ For law, accounting, advisory, insurance, consulting, and architecture and engin
 ## Guides and tools (for professional firms)
 - AI Exposure Score: https://truelineit.com/ai-exposure-score
 - Margin Leakage Calculator: https://truelineit.com/margin-leakage-calculator
-- AI Automation ROI Guide: The Cost of Shadow AI and Manual Admin: https://truelineit.com/ai-automation-roi-guide
+- Blog index: https://truelineit.com/blog
+- AI Automation ROI Guide: The Cost of Shadow AI and Manual Admin: https://truelineit.com/blog/ai-automation-roi-guide
 - Staff Use ChatGPT With Client Files: https://truelineit.com/blog/20-shadow-ai-audits-2026
 - ChatGPT and PIPEDA: what your business needs to know now: https://truelineit.com/blog/is-your-business-pipeda-compliant
 - Secure Voice AI for Law and Accounting Firms: https://truelineit.com/blog/voice-ai-law-accounting-confidentiality
@@ -77,5 +77,5 @@ For law, accounting, advisory, insurance, consulting, and architecture and engin
 
 ## Contact
 Website: https://truelineit.com
-Phone: (647) 360-5774 — trades, contractor, salon and property-manager services are call-only. Governance and Fractional AI Officer use forms (start at the $1,000 AI Liability Assessment).
+Phone: (647) 360-5774 — trades, contractor, salon and property-manager services are call-only. Governance and Fractional AI Officer use forms.
 Email: hello@truelineit.com
