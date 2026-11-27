@@ -22,7 +22,7 @@ const MANIFEST = path.join(__dirname, "dist-manifest.txt");
 
 // Public top-level entries. Adding a page means adding it here and to the manifest.
 const ALLOW = new Set([
-  "404.html", "_headers", "_redirects", "about.html", "ai-automation-roi-guide.html",
+  "404.html", "_headers", "_redirects", "about.html",
   "ai-exposure-score.html", "ai-governance.html", "ai-receptionist.html", "ai-receptionist-for-salons.html",
   "ai-support-agent.html", "assets", "blog", "contractor-websites.html",
   "favicon.ico", "favicon.png", "favicon.svg", "favicon-48.png", "favicon-96.png", "favicon-192.png", "apple-touch-icon.png", "logo-512.png", "for-appointment-businesses.html",

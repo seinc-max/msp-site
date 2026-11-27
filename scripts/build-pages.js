@@ -98,7 +98,6 @@ const PAGE = new Set([
   '404.html',
   'margin-leakage-calculator.html',
   'ai-exposure-score.html',
-  'ai-automation-roi-guide.html',
 ]);
 
 const CALL = '<a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>';

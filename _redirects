@@ -3,7 +3,7 @@
 /solutions/sovereign-ai-automation-agency/ /ai-governance 301
 /it-support-ontario /ai-governance 301
 /cybersecurity-southern-ontario /ai-governance 301
-/it-cost-guide-ontario /ai-automation-roi-guide 301
+/it-cost-guide-ontario /blog/ai-automation-roi-guide 301
 /microsoft-365-ontario-smbs /ai-governance 301
 /health-score /ai-exposure-score 301
 /blog/20-southern-ontario-it-audits-2026 /blog/20-shadow-ai-audits-2026 301
@@ -146,8 +146,8 @@
 /it-support-ontario.html /ai-governance 301
 /cybersecurity-southern-ontario/ /ai-governance 301
 /cybersecurity-southern-ontario.html /ai-governance 301
-/it-cost-guide-ontario/ /ai-automation-roi-guide 301
-/it-cost-guide-ontario.html /ai-automation-roi-guide 301
+/it-cost-guide-ontario/ /blog/ai-automation-roi-guide 301
+/it-cost-guide-ontario.html /blog/ai-automation-roi-guide 301
 /microsoft-365-ontario-smbs/ /ai-governance 301
 /microsoft-365-ontario-smbs.html /ai-governance 301
 /blog/20-southern-ontario-it-audits-2026/ /blog/20-shadow-ai-audits-2026 301
@@ -235,3 +235,8 @@
 /ai-sales-agent-for-property-managers /for-property-managers 301
 /ai-sales-agent-for-property-managers/ /for-property-managers 301
 /ai-sales-agent-for-property-managers.html /for-property-managers 301
+
+# 2026-11-26 (Ben, EXKDioea item 5): the ROI guide is now a blog post.
+/ai-automation-roi-guide /blog/ai-automation-roi-guide 301
+/ai-automation-roi-guide/ /blog/ai-automation-roi-guide 301
+/ai-automation-roi-guide.html /blog/ai-automation-roi-guide 301

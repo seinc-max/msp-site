@@ -46,7 +46,7 @@ const audienceOf = {
   'fractional-ai-officer.html': 'professional',
   'ai-support-agent.html': 'professional',
   'ai-exposure-score.html': 'professional',
-  'ai-automation-roi-guide.html': 'professional',
+  'blog/ai-automation-roi-guide.html': 'professional',
   'margin-leakage-calculator.html': 'professional',
   'blog/voice-ai-law-accounting-confidentiality.html': 'professional',
   'blog/is-your-business-pipeda-compliant.html': 'professional',
@@ -85,7 +85,8 @@ function bodyClass(html) {
 
 const files = Object.keys(audienceOf);
 // 2026-11-20 (Ben t1297u): /multi-location removed, 35 -> 34 pages, 13 -> 12 trades.
-if (files.length !== 34) fail('audience map does not cover 34 pages, got ' + files.length);
+// 2026-11-26 (EXKDioea item 3, Ben): /appointment-reminders retired (301 to the salons page), 34 -> 33 pages.
+if (files.length !== 33) fail('audience map does not cover 33 pages, got ' + files.length);
 for (const file of files) {
   const html = read(file);
   const want = audienceOf[file];
@@ -158,7 +159,7 @@ if (!css.includes('@keyframes fadeUp{from{opacity:1')) fail('hero fade still sta
 else pass('shared fadeUp stays opaque');
 if (css.includes('nav-pro-offer')) fail('header still has a professional-offer nav exception');
 const heroRule = '.hero-inner > *{\n    opacity: 1;\n    animation: none;\n  }';
-for (const file of ['index.html', 'about.html', 'privacy.html', 'terms.html', 'ai-exposure-score.html', 'ai-automation-roi-guide.html']) {
+for (const file of ['index.html', 'about.html', 'privacy.html', 'terms.html', 'ai-exposure-score.html', 'blog/ai-automation-roi-guide.html']) {
   const html = read(file);
   if (!html.includes(heroRule)) fail(file + ' hero rule is not opaque with animation none');
   if (/hero-inner > \*\{[^}]*opacity:\s*0/.test(html)) fail(file + ' hero children still start at opacity 0');
