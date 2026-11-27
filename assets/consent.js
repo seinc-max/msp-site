@@ -26,26 +26,16 @@
       try { if (window.posthog && typeof window.posthog.opt_out_capturing === 'function') window.posthog.opt_out_capturing(); } catch (e) {}
     }
   }
-  var css = '#tl-consent{position:fixed;left:12px;right:12px;bottom:12px;z-index:10000;max-width:560px;margin:0 auto;' +
-    'background:#fff;color:#1f2937;border:1px solid #cbd5e1;border-radius:8px;padding:10px 12px;box-sizing:border-box;' +
-    'font:14px/1.4 "DM Sans","DM Sans Fallback",system-ui,sans-serif;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}' +
-    '#tl-consent p{margin:0;flex:1 1 220px}#tl-consent a{color:#1d4ed8;text-decoration:underline}' +
+  // Ben voice 2026-11-27 staging review C3: the banner sits at the top of the page, in the
+  // normal flow above the header. It never covers the hero demos or the sticky call bar.
+  var css = '#tl-consent{position:relative;z-index:10000;width:100%;margin:0;' +
+    'background:#fff;color:#1f2937;border-bottom:1px solid #cbd5e1;padding:8px 12px;box-sizing:border-box;' +
+    'font:14px/1.4 "DM Sans","DM Sans Fallback",system-ui,sans-serif;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 12px}' +
+    '#tl-consent p{margin:0;flex:0 1 auto}#tl-consent a{color:#1d4ed8;text-decoration:underline}' +
     '#tl-consent .tl-consent-btns{display:flex;gap:8px;flex:0 0 auto}' +
     '#tl-consent button{font:inherit;font-weight:600;min-height:40px;min-width:88px;padding:6px 14px;border-radius:6px;cursor:pointer;' +
     'border:1px solid #1f2937;background:#fff;color:#1f2937}' +
     '#tl-consent button:focus-visible{outline:2px solid #1d4ed8;outline-offset:2px}@media print{#tl-consent{display:none}}';
-  function place(box) {
-    var bar = document.querySelector('.sticky-mobile-cta');
-    var off = 12;
-    if (bar) {
-      var cs = getComputedStyle(bar);
-      if (cs.display !== 'none' && cs.visibility !== 'hidden' && cs.position === 'fixed') {
-        var r = bar.getBoundingClientRect();
-        if (r.height > 0 && r.top < window.innerHeight) off = Math.ceil(window.innerHeight - r.top) + 8;
-      }
-    }
-    box.style.bottom = off + 'px';
-  }
   function show() {
     if (document.getElementById('tl-consent')) return;
     if (!document.getElementById('tl-consent-css')) {
@@ -61,13 +51,9 @@
       if (!b) return;
       var v = b.getAttribute('data-tl-choice');
       store(v); apply(v);
-      window.removeEventListener('resize', onResize);
       box.parentNode && box.parentNode.removeChild(box);
     });
-    document.body.appendChild(box);
-    var onResize = function () { place(box); };
-    place(box);
-    window.addEventListener('resize', onResize);
+    document.body.insertBefore(box, document.body.firstChild);
   }
   function init() {
     if (!read()) show();

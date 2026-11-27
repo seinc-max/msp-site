@@ -3,14 +3,12 @@
 _headers
 _redirects
 about.html
-ai-automation-roi-guide.html
 ai-exposure-score.html
 ai-governance.html
 ai-receptionist-for-salons.html
 ai-receptionist.html
 ai-support-agent.html
 apple-touch-icon.png
-appointment-reminders.html
 assets/2026-cybersecurity-report.pdf
 assets/2026-pipeda-compliance-guide.pdf
 assets/anthropic-logo.svg
@@ -48,7 +46,9 @@ assets/n8n-logo.svg
 assets/openai-logo.svg
 assets/site.css
 assets/tailwind.css
-blog/20-shadow-ai-audits-2026.html
+blog.html
+blog/staff-use-chatgpt-with-client-files.html
+blog/ai-automation-roi-guide.html
 blog/financial-integration-insurance-vulnerabilities.html
 blog/is-your-business-pipeda-compliant.html
 blog/sovereign-zapier-alternatives-compliance.html
@@ -89,6 +89,7 @@ robots.txt
 sitemap.xml
 terms.html
 text-to-pay.html
+thank-you.html
 website-chat-to-text.html
 speed-to-lead.html
 overdue-invoice-reminders.html

@@ -6,7 +6,7 @@
  * Edit the header in templates/partials/header.html.
  * The {{cta}} slot is call or consultation, taken from that page's original nav button.
  * Edit the footer in templates/partials/footer.html.
- * Edit a call bar in templates/partials/sticky-call.html or sticky-assessment.html.
+ * Edit a call bar in templates/partials/sticky-call.html or sticky-consultation.html.
  * Landing look (button, H1, column, cards) lives in assets/landing.css.
  * A new landing sets body class landing-call or landing-form, plus
  * landing-home, landing-hub, or landing-offer, and links landing.css
@@ -64,7 +64,6 @@ const LANDING = new Set([
   'fractional-ai-officer.html',
   'ai-support-agent.html',
   'lead-follow-up.html',
-  'appointment-reminders.html',
   'cold-outreach.html',
   'crm-setup.html',
   'custom-dashboards.html',
@@ -97,16 +96,16 @@ const LANDING = new Set([
 const INFO = new Set(['about.html', 'terms.html', 'privacy.html']);
 const PAGE = new Set([
   '404.html',
+  'thank-you.html',
   'margin-leakage-calculator.html',
   'ai-exposure-score.html',
-  'ai-automation-roi-guide.html',
 ]);
 
 const CALL = '<a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>';
 
 const HEADER_CTAS = {
   call: '<a href="tel:+16473605774" class="nav-cta" aria-label="Call (647) 360-5774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>',
-  consultation: '<a href="/fractional-ai-officer#assessment" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
+  consultation: '<a href="/fractional-ai-officer#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
   consultationPage: '<a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'form_cta_click\'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>',
 };
 
@@ -169,7 +168,7 @@ function walkPages(dir, acc = []) {
 }
 
 function templateFor(rel) {
-  if (rel.startsWith('blog/')) return 'blog';
+  if (rel.startsWith('blog/') || rel === 'blog.html') return 'blog';
   if (LANDING.has(rel)) return 'landing';
   if (INFO.has(rel)) return 'info';
   if (PAGE.has(rel)) return 'page';
@@ -237,7 +236,7 @@ function splitPage(html) {
     preamble: html.slice(bodyOpenEnd, navAt),
     beforeSticky: between.slice(0, stickyAt),
     afterSticky: between.slice(stickyEnd),
-    stickyKind: between.slice(stickyAt, stickyEnd).includes('sticky-assessment') ? 'assessment' : 'call',
+    stickyKind: between.slice(stickyAt, stickyEnd).includes('sticky-consultation') ? 'consultation' : 'call',
     trail: html.slice(footerEnd),
   };
 }
@@ -394,14 +393,13 @@ function inner(html, tag) {
 function sharedInfoHero() {
   const about = read(path.join(PAGE_ROOT, 'about.html'));
   const main = inner(about.slice(about.indexOf('<main')), 'main');
-  const promise = must(main, /<p class="hero-promise">([\s\S]*?)<\/p>/, 'about promise');
   const trusts = [...main.matchAll(/<div class="trust-item">\s*(<svg[\s\S]*?<\/svg>)?\s*([^<]+?)\s*<\/div>/g)].map((m) => ({
     // Ben voice 2026-11-21 5:17 PM ET: no icons on the info pages; the trust line is plain text.
     icon: '',
     text: m[2].trim(),
   }));
   if (trusts.length !== 4) throw new Error('Expected 4 trust chips, got ' + trusts.length);
-  return { promise, trusts };
+  return { trusts };
 }
 
 function infoHero(model) {
@@ -412,8 +410,7 @@ function infoHero(model) {
     <p class="info-kicker">${model.kicker}</p>
     <h1>${model.title}</h1>
     <p class="info-lede">${model.lede}</p>
-    <div class="hero-actions">${CALL}${model.showDownCue ? '\n    <div class="hero-down-cue" aria-hidden="true"></div>' : ''}</div>
-    <p class="hero-promise">${shared.promise}</p>${model.hideTrust ? '' : `
+    <div class="hero-actions">${CALL}${model.showDownCue ? '\n    <div class="hero-down-cue" aria-hidden="true"></div>' : ''}</div>${model.hideTrust ? '' : `
     <div class="hero-trust">
 ${chips}
     </div>`}
@@ -437,11 +434,25 @@ ${model.ctaLabel ? `    <p class="info-label">${model.ctaLabel}</p>
 </section>`;
 }
 
+// Ben t1908u/t1910u (2026-11-26) supersede the 2026-11-21 "same closing call box / trust chips on all
+// three info pages" rule for Terms and Privacy ONLY. They are plain legal pages: no navy hero, no Call
+// button, no promise line, no trust chips, no closing call box, no sticky tagline. About is unchanged.
+function legalHead(model) {
+  return `<header class="legal-head">
+  <div class="info-wrap">
+    <h1>${model.title}</h1>
+    <p class="legal-updated">${model.kicker}</p>
+    <p class="legal-intro">${model.lede}</p>
+  </div>
+</header>`;
+}
+
 function infoMain(model) {
+  const head = model.plainLegal ? legalHead(model) : infoHero(model);
+  const closing = model.closingHtml !== undefined ? model.closingHtml : infoCta(model);
   return `<main id="main" tabindex="-1">
-${infoHero(model)}
-${model.body}
-${model.closingHtml !== undefined ? model.closingHtml : infoCta(model)}
+${head}
+${model.body}${closing ? '\n' + closing : ''}
 </main>`;
 }
 
@@ -483,7 +494,6 @@ function aboutModel(html) {
   const title = must(main, /<h1>([\s\S]*?)<\/h1>/, 'about title');
   const lede = must(main, /<p class="hero-sub">([\s\S]*?)<\/p>/, 'about lede');
   const shared = sharedInfoHero();
-  if (lede.includes(shared.promise)) throw new Error('About lede should not repeat the promise line');
   const blocks = [...main.matchAll(/<section class="(contact-section|hub-section)"([^>]*)>([\s\S]*?)<\/section>/g)];
   const parts = [];
   for (const block of blocks) {
@@ -521,7 +531,6 @@ function aboutModel(html) {
   flush();
   // Ben voice 2026-11-21 5:17 PM ET: one closing call box (info-cta) on About, Terms and Privacy; About drops its info-band.
   if (/id="contact"/.test(body)) throw new Error('About should not carry its own contact band (shared info-cta closes the page)');
-  if (body.includes('<p>' + shared.promise + '</p>')) throw new Error('Promise line duplicated in the About body');
   if (body.includes('<li>' + shared.trusts[0].text)) throw new Error('Trust list duplicated in the About body');
   return {
     kicker,
@@ -532,7 +541,7 @@ function aboutModel(html) {
     ctaHeading: 'Questions?',
     ctaSub: '',
     ctaNote: '',
-    showDownCue: false, // 2026-11-21: reviewers (Claude r1) - cue split the call button from its promise line.
+    showDownCue: false, // 2026-11-21: reviewers (Claude r1) - cue split the call button from the line below it (that line was removed 2026-11-26, Ben t1907u).
   };
 }
 
@@ -585,8 +594,8 @@ function legalModel(html, which) {
   const title = must(main, /<h1>([\s\S]*?)<\/h1>/, which + ' title');
   const kicker = must(main, /<p>(Last updated:[^<]*)<\/p>/, which + ' updated');
   main = main.replace(/<h1>[\s\S]*?<\/h1>/, '').replace(/<p>Last updated:[^<]*<\/p>/, '');
-  const question = must(main, /<p>(Questions\?[\s\S]*?)<\/p>/, which + ' questions');
-  main = main.replace(/<p>Questions\?[\s\S]*?<\/p>/, '');
+  // Ben t1908u/t1910u: the "Questions? Call..." paragraph is gone from the templates; fail if it comes back.
+  if (/<p>Questions\? Call/.test(main)) throw new Error(which + ' must not carry the Questions? call paragraph (sales chrome removed)');
   let lede = '';
   if (which === 'terms') {
     const intro = main.match(/<p>(This page is the whole agreement[\s\S]*?)<\/p>/);
@@ -609,23 +618,13 @@ function legalModel(html, which) {
     main = main.replace(toc[0], '');
     legalBody = `<article class="info-body legal-body">\n  <div class="legal-layout">\n${toc[0].trim()}\n<div class="legal-content">\n${main.trim()}\n</div>\n  </div>\n</article>`;
   }
-  const q = question.replace(/\s+/g, ' ').trim();
-  const expected = 'Questions? Call (647) 360-5774. Leave a message and you\'ll get our text within minutes, and a call back fast.';
-  if (q !== expected) throw new Error(which + ' questions changed: ' + q);
   return {
     kicker,
     title,
     lede,
     body: legalBody || infoArticle(main.trim()),
-    ctaLabel: '',
-    ctaHeading: 'Questions?',
-    ctaSub: '',
-    // 2026-11-21: privacy requests go by email, so the closing band also offers the email address.
-    // Ben voice 2026-11-21 5:17 PM ET: one identical closing call box on all three info pages (email stays in Privacy sections 7 and 8).
-    ctaNote: '',
-    // Audit 2026-10-25 D18.12: no sales chips on the Privacy page.
-    // Ben voice 2026-11-21 5:17 PM ET: same plain trust line on all three info pages (replaces audit D18.12).
-    hideTrust: false,
+    plainLegal: true,
+    closingHtml: '',
   };
 }
 
@@ -646,12 +645,17 @@ function buildOne(rel) {
   const variant = headerVariant(source, rel);
   const header = filterNav(headerPartial(variant), rel);
   const footer = partial('footer.html');
-  let sticky = partial(parts.stickyKind === 'assessment' ? 'sticky-assessment.html' : 'sticky-call.html');
-  if (parts.stickyKind === 'assessment') {
-    const block = source.slice(source.indexOf('sticky-mobile-cta sticky-assessment'));
+  let sticky = partial(parts.stickyKind === 'consultation' ? 'sticky-consultation.html' : 'sticky-call.html');
+  if (template === 'info' && rel !== 'about.html') {
+    // Ben t1908u/t1910u: plain Call link only on Terms and Privacy. The shared partial is not edited.
+    sticky = sticky.replace(/\n\s*<span>[^<]*<\/span>/, '');
+    if (/<span>/.test(sticky)) throw new Error('Sticky tagline still present on ' + rel);
+  }
+  if (parts.stickyKind === 'consultation') {
+    const block = source.slice(source.indexOf('sticky-mobile-cta sticky-consultation'));
     const hrefMatch = block.match(/<a href="([^"]+)">Book My AI Consultation<\/a>/);
     if (hrefMatch && hrefMatch[1] === '#discovery-form') {
-      sticky = sticky.replace('href="/fractional-ai-officer#assessment"', 'href="#discovery-form"');
+      sticky = sticky.replace('href="/fractional-ai-officer#discovery-form"', 'href="#discovery-form"');
     }
   }
   const slots = {

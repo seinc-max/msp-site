@@ -14,7 +14,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const PORT = 8765;
 const DEBUG_PORT = 9333;
-const HERO_PAGES = ['/', '/about', '/privacy', '/terms', '/ai-exposure-score', '/ai-automation-roi-guide'];
+const HERO_PAGES = ['/', '/about', '/privacy', '/terms', '/ai-exposure-score', '/blog/ai-automation-roi-guide'];
 
 function fail(msg) {
   console.error('FAIL\t' + msg);

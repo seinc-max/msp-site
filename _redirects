@@ -3,10 +3,10 @@
 /solutions/sovereign-ai-automation-agency/ /ai-governance 301
 /it-support-ontario /ai-governance 301
 /cybersecurity-southern-ontario /ai-governance 301
-/it-cost-guide-ontario /ai-automation-roi-guide 301
+/it-cost-guide-ontario /blog/ai-automation-roi-guide 301
 /microsoft-365-ontario-smbs /ai-governance 301
 /health-score /ai-exposure-score 301
-/blog/20-southern-ontario-it-audits-2026 /blog/20-shadow-ai-audits-2026 301
+/blog/20-southern-ontario-it-audits-2026 /blog/staff-use-chatgpt-with-client-files 301
 /managed-it-services-hamilton /ai-governance 301
 /managed-it-services-guelph /ai-governance 301
 /managed-it-services-kitchener-waterloo /ai-governance 301
@@ -26,6 +26,10 @@
 /appointment-confirm-reminder.html /missed-call-text-back 301
 /google-reputation-pack /missed-call-text-back 301
 /google-reputation-pack.html /missed-call-text-back 301
+# 2026-11-26 (Ben, EXKDioea item 3): retire the generic Appointment Reminders page.
+/appointment-reminders /appointment-reminders-for-salons 301
+/appointment-reminders/ /appointment-reminders-for-salons 301
+/appointment-reminders.html /appointment-reminders-for-salons 301
 /audit-confirmed / 301
 /audit-confirmed.html / 301
 /shadow-ai-compliance-ontario /ai-governance 301
@@ -39,9 +43,9 @@
 /ai-receptionist-for-appointments /ai-receptionist-for-salons 301
 /ai-receptionist-for-appointments/ /ai-receptionist-for-salons 301
 /ai-receptionist-for-appointments.html /ai-receptionist-for-salons 301
-/ai-risk-assessment /fractional-ai-officer#assessment 301
-/ai-risk-assessment/ /fractional-ai-officer#assessment 301
-/ai-risk-assessment.html /fractional-ai-officer#assessment 301
+/ai-risk-assessment /fractional-ai-officer#discovery-form 301
+/ai-risk-assessment/ /fractional-ai-officer#discovery-form 301
+/ai-risk-assessment.html /fractional-ai-officer#discovery-form 301
 /margin-calculator /margin-leakage-calculator 301
 /margin-calculator/ /margin-leakage-calculator 301
 /margin-calculator.html /margin-leakage-calculator 301
@@ -124,9 +128,9 @@
 /blog/clinical-voice-ai-phipa-compliance /blog/voice-ai-law-accounting-confidentiality 301
 /blog/clinical-voice-ai-phipa-compliance/ /blog/voice-ai-law-accounting-confidentiality 301
 /blog/clinical-voice-ai-phipa-compliance.html /blog/voice-ai-law-accounting-confidentiality 301
-/blog/20-southern-ontario-shadow-ai-audits-2026 /blog/20-shadow-ai-audits-2026 301
-/blog/20-southern-ontario-shadow-ai-audits-2026/ /blog/20-shadow-ai-audits-2026 301
-/blog/20-southern-ontario-shadow-ai-audits-2026.html /blog/20-shadow-ai-audits-2026 301
+/blog/20-southern-ontario-shadow-ai-audits-2026 /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-southern-ontario-shadow-ai-audits-2026/ /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-southern-ontario-shadow-ai-audits-2026.html /blog/staff-use-chatgpt-with-client-files 301
 /blog/is-your-ontario-business-pipeda-compliant /blog/is-your-business-pipeda-compliant 301
 /blog/is-your-ontario-business-pipeda-compliant/ /blog/is-your-business-pipeda-compliant 301
 /blog/is-your-ontario-business-pipeda-compliant.html /blog/is-your-business-pipeda-compliant 301
@@ -142,12 +146,12 @@
 /it-support-ontario.html /ai-governance 301
 /cybersecurity-southern-ontario/ /ai-governance 301
 /cybersecurity-southern-ontario.html /ai-governance 301
-/it-cost-guide-ontario/ /ai-automation-roi-guide 301
-/it-cost-guide-ontario.html /ai-automation-roi-guide 301
+/it-cost-guide-ontario/ /blog/ai-automation-roi-guide 301
+/it-cost-guide-ontario.html /blog/ai-automation-roi-guide 301
 /microsoft-365-ontario-smbs/ /ai-governance 301
 /microsoft-365-ontario-smbs.html /ai-governance 301
-/blog/20-southern-ontario-it-audits-2026/ /blog/20-shadow-ai-audits-2026 301
-/blog/20-southern-ontario-it-audits-2026.html /blog/20-shadow-ai-audits-2026 301
+/blog/20-southern-ontario-it-audits-2026/ /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-southern-ontario-it-audits-2026.html /blog/staff-use-chatgpt-with-client-files 301
 /managed-it-services-southern-ontario/ /ai-governance 301
 /managed-it-services-southern-ontario.html /ai-governance 301
 /shadow-ai-compliance-ontario/ /ai-governance 301
@@ -169,9 +173,9 @@
 /ai-consulting-pricing /ai-governance 301
 /ai-consulting-pricing/ /ai-governance 301
 /ai-consulting-pricing.html /ai-governance 301
-/risk-assessment /fractional-ai-officer#assessment 301
-/risk-assessment/ /fractional-ai-officer#assessment 301
-/risk-assessment.html /fractional-ai-officer#assessment 301
+/risk-assessment /fractional-ai-officer#discovery-form 301
+/risk-assessment/ /fractional-ai-officer#discovery-form 301
+/risk-assessment.html /fractional-ai-officer#discovery-form 301
 /for-professional-services /for-law-firms-accountants-and-advisors 301
 /ai-support-agent/ /ai-support-agent 301
 /ai-support-agent.html /ai-support-agent 301
@@ -231,3 +235,13 @@
 /ai-sales-agent-for-property-managers /for-property-managers 301
 /ai-sales-agent-for-property-managers/ /for-property-managers 301
 /ai-sales-agent-for-property-managers.html /for-property-managers 301
+
+# 2026-11-26 (Ben, EXKDioea item 5): the ROI guide is now a blog post.
+/ai-automation-roi-guide /blog/ai-automation-roi-guide 301
+/ai-automation-roi-guide/ /blog/ai-automation-roi-guide 301
+/ai-automation-roi-guide.html /blog/ai-automation-roi-guide 301
+
+# 2026-11-27 (Ben-approved S19, Atlas addendum): shadow-AI post slug renamed.
+/blog/20-shadow-ai-audits-2026 /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-shadow-ai-audits-2026/ /blog/staff-use-chatgpt-with-client-files 301
+/blog/20-shadow-ai-audits-2026.html /blog/staff-use-chatgpt-with-client-files 301
