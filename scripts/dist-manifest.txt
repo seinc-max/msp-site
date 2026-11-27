@@ -89,6 +89,7 @@ robots.txt
 sitemap.xml
 terms.html
 text-to-pay.html
+thank-you.html
 website-chat-to-text.html
 speed-to-lead.html
 overdue-invoice-reminders.html

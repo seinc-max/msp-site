@@ -793,6 +793,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>
 </nav>
 <main id="main" tabindex="-1">
+<nav aria-label="Breadcrumb" style="max-width:1100px;margin:0 auto;padding:14px 5%;font-size:.9rem;color:#5a6a8a;"><a href="/" style="color:#2563eb;">Home</a> &rsaquo; <a href="/blog" style="color:#2563eb;">Blog</a> &rsaquo; <span aria-current="page">AI Automation ROI Guide</span></nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -954,7 +955,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if(res.ok){
         form.style.display='none'; document.getElementById('form-success').style.display='block';
         window.dataLayer=window.dataLayer||[];
-        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
+        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead'});
+        try{sessionStorage.setItem('tl_lead_submitted','1');}catch(_){ }
+        window.location.assign('/thank-you');
       } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
     }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
   });

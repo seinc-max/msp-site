@@ -96,6 +96,7 @@ const LANDING = new Set([
 const INFO = new Set(['about.html', 'terms.html', 'privacy.html']);
 const PAGE = new Set([
   '404.html',
+  'thank-you.html',
   'margin-leakage-calculator.html',
   'ai-exposure-score.html',
 ]);
