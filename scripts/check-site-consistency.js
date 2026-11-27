@@ -131,7 +131,8 @@ function navOf(html) {
   return m ? m[0] : "";
 }
 function navLinks(nav) {
-  const m = nav.match(/<div class="nav-links">[\s\S]*<\/details>\s*<\/div>/);
+  // Ben voice 2026-11-27 staging review C5: a Blog link may sit after </details>, before the closing </div>.
+  const m = nav.match(/<div class="nav-links">[\s\S]*<\/details>\s*(?:<a href="\/blog"[^>]*>Blog<\/a>\s*)?<\/div>/);
   if (!m) return null;
   return [...new Set([...m[0].matchAll(/href="([^"]+)"/g)].map((x) => x[1]))].sort();
 }
@@ -150,6 +151,9 @@ for (const f of pages) {
   if (/tl-nav-gated/.test(nav)) err(f, "nav is gated (menu hidden)");
   const links = navLinks(nav);
   if (!links) { err(f, "nav has no Services menu (nav-links/details)"); continue; }
+  // Ben voice 2026-11-27 staging review C5: Blog in the header nav and in the footer on every page.
+  if (!links.includes("/blog")) err(f, "header nav must link to /blog (C5)");
+  if (!/<footer[\s\S]*href="\/blog"[\s\S]*<\/footer>/.test(read(f))) err(f, "footer must link to /blog (C5)");
   if (homeLinks && links.join("|") !== homeLinks.join("|")) {
     const miss = homeLinks.filter((l) => !links.includes(l));
     const extra = links.filter((l) => !homeLinks.includes(l));
