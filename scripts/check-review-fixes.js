@@ -128,7 +128,7 @@ for (const f of [
   'blog/financial-integration-insurance-vulnerabilities.html',
   'blog/voice-ai-law-accounting-confidentiality.html',
   'blog/20-shadow-ai-audits-2026.html',
-  'terms.html',
+  // terms.html removed 2026-11-27: PR #545 (e5d67d4) dropped the Terms tables.
 ]) {
   const html = read(f);
   const regions = [...html.matchAll(/<div class="table-scroll"[^>]*>/g)].map((m) => m[0]);
