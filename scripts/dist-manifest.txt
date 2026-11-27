@@ -47,7 +47,7 @@ assets/openai-logo.svg
 assets/site.css
 assets/tailwind.css
 blog.html
-blog/20-shadow-ai-audits-2026.html
+blog/staff-use-chatgpt-with-client-files.html
 blog/ai-automation-roi-guide.html
 blog/financial-integration-insurance-vulnerabilities.html
 blog/is-your-business-pipeda-compliant.html
