@@ -308,6 +308,73 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <link rel="stylesheet" href="/assets/landing.css">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truelineit.com"},{"@type":"ListItem","position":2,"name":"For Trades & Contractors","item":"https://truelineit.com/for-home-services"},{"@type":"ListItem","position":3,"name":"Text-to-Pay for Home Services","item":"https://truelineit.com/text-to-pay"}]}</script>
+<style>
+/* beat-competitors 2026-11-27: page-local visuals, all labeled Example */
+.bc-sec{padding:60px 5%;background:var(--warm-white)}
+.bc-sec.bc-alt{background:var(--sky)}
+.bc-wrap{max-width:900px;margin:0 auto}
+.bc-tag{display:inline-block;background:var(--navy);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:12px}
+.bc-title{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:12px;text-align:center}
+.bc-head{text-align:center}
+.bc-lead{text-align:center;color:var(--text-muted);max-width:36rem;margin:0 auto 28px;font-size:.98rem}
+.bc-note{text-align:center;font-size:.82rem;color:var(--text-muted);margin-top:16px}
+.bc-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;list-style:none;margin:0 0 24px;padding:0}
+.bc-step{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:16px;text-align:left}
+.bc-step-n{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-family:'Fraunces',serif;font-weight:700;font-size:.9rem;margin-bottom:10px}
+.bc-step b{display:block;font-family:'Fraunces',serif;font-size:1rem;color:var(--navy);margin-bottom:4px}
+.bc-time{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:4px}
+.bc-step p{font-size:.86rem;color:var(--text-muted);line-height:1.5}
+.bc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:start}
+.bc-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:18px 18px 16px;text-align:left}
+.bc-card h3{font-family:'Fraunces',serif;font-size:1.02rem;color:var(--navy);margin-bottom:10px}
+.bc-card.bc-hot{border-top:4px solid var(--orange)}
+.bc-card.bc-cool{border-top:4px solid var(--blue)}
+.bc-bub{max-width:92%;padding:10px 13px;border-radius:14px;font-size:.88rem;line-height:1.45;margin-bottom:8px;color:var(--navy)}
+.bc-bub.them{background:var(--sky);border-bottom-left-radius:4px}
+.bc-bub.us{background:var(--orange);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.bc-meta{font-size:.74rem;color:var(--text-muted);margin:0 0 8px}
+.bc-kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.9rem;margin:0}
+.bc-kv dt{color:var(--text-muted);font-weight:600}
+.bc-kv dd{margin:0;color:var(--navy);font-weight:600}
+.bc-flag{display:inline-block;background:var(--orange);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:6px;margin-bottom:10px}
+.bc-list{list-style:none;margin:0;padding:0}
+.bc-list li{display:flex;gap:9px;font-size:.92rem;color:var(--text);padding:6px 0;line-height:1.5;text-align:left}
+.bc-list li::before{content:'✓';color:var(--orange);font-weight:700;flex-shrink:0}
+.bc-flow{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
+.bc-arrow{font-size:1.8rem;color:var(--orange);font-weight:700;text-align:center}
+.bc-pill{display:inline-block;border:1.5px solid var(--border);background:#fff;border-radius:999px;padding:6px 12px;font-size:.84rem;font-weight:600;color:var(--navy);margin:0 6px 8px 0}
+.bc-btn{display:inline-block;background:var(--orange);color:#fff;font-weight:700;font-size:.85rem;padding:9px 16px;border-radius:8px}
+.bc-table{width:100%;border-collapse:collapse;background:#fff;border:1.5px solid var(--border);border-radius:12px;overflow:hidden;font-size:.9rem;text-align:left}
+.bc-table th,.bc-table td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+.bc-table th{background:var(--navy);color:#fff;font-family:'Fraunces',serif;font-weight:600}
+.bc-table td:first-child{font-weight:600;color:var(--navy)}
+.bc-table td.bc-us{background:#fff7ed}
+.bc-table tr:last-child td{border-bottom:none}
+.bc-site{background:#fff;border:1.5px solid var(--border);border-radius:22px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08);max-width:270px;margin:0 auto;width:100%}
+.bc-site-nav{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-bottom:1px solid var(--border);font-size:.78rem;font-weight:700;color:var(--navy)}
+.bc-site-hero{background:var(--navy);color:#fff;padding:18px 14px;position:relative}
+.bc-site-hero b{display:block;font-family:'Fraunces',serif;font-size:1.05rem;line-height:1.2;margin-bottom:12px;position:relative}
+.bc-site-svc{display:grid;gap:6px;padding:12px;font-size:.8rem;color:var(--text-muted)}
+.bc-site-svc span{background:var(--sky);border-radius:8px;padding:7px 10px;color:var(--navy);font-weight:600;position:relative}
+.bc-site-foot{padding:9px 12px;border-top:1px solid var(--border);font-size:.72rem;color:var(--text-muted);position:relative}
+.bc-badge{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:20px;height:20px;border-radius:50%;background:var(--orange);color:#fff;font-size:.7rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.bc-site-nav .bc-badge,.bc-site-hero .bc-badge{position:static;transform:none;display:inline-flex;margin-left:6px}
+.bc-site-hero .bc-badge{position:absolute;right:10px;bottom:16px;top:auto;transform:none}
+.bc-browser{background:#fff;border:1.5px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.bc-browser-bar{background:#eef2f9;padding:8px 12px;font-size:.74rem;color:var(--text-muted);border-bottom:1px solid var(--border)}
+.bc-browser-body{padding:22px 16px;min-height:150px;position:relative;font-size:.85rem;color:var(--navy)}
+.bc-chatbtn{position:absolute;right:12px;bottom:12px;background:var(--orange);color:#fff;font-weight:700;font-size:.8rem;padding:9px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(249,115,22,.4)}
+.bc-pay{background:#fff;border:1.5px solid var(--border);border-radius:22px;padding:20px;max-width:300px;margin:0 auto;box-shadow:0 12px 30px rgba(0,0,0,.08);text-align:center}
+.bc-pay .bc-amt{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:700;color:var(--navy);line-height:1.1;margin:8px 0 14px}
+.bc-pay .bc-btn{display:block;width:100%;text-align:center;padding:13px;font-size:1rem}
+.bc-cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.bc-cmp .bc-card ul{list-style:none;margin:0;padding:0}
+.bc-cmp .bc-card li{padding:7px 0;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--text);line-height:1.45}
+.bc-cmp .bc-card li:last-child{border-bottom:none}
+.bc-cmp .bc-card li b{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
+@media (max-width:640px){.bc-sec{padding:44px 5%}.bc-flow{grid-template-columns:1fr}.bc-arrow{transform:rotate(90deg)}.bc-cmp{grid-template-columns:1fr}.bc-table{font-size:.82rem}.bc-table th,.bc-table td{padding:9px 8px}}
+</style>
+
 </head>
 <body class="audience-trades landing-call landing-offer">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -442,6 +509,29 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   <script src="/js/calculator.js?v=3fe2690013" defer></script>
 </section>
 <!-- /tl-calc -->
+<!-- BC: example pay screen -->
+<section class="bc-sec bc-alt" aria-labelledby="bc-flow-title">
+  <div class="bc-wrap">
+    <div class="bc-head"><span class="bc-tag">Example</span></div>
+    <h2 class="bc-title" id="bc-flow-title">What your customer sees</h2>
+    <p class="bc-lead">They tap the link in the text and pay by card on their phone. No app, no login.</p>
+    <ol class="bc-steps">
+      <li class="bc-step"><span class="bc-step-n">1</span><b>Job done</b><p>You finish on site.</p></li>
+      <li class="bc-step"><span class="bc-step-n">2</span><b>Link texted</b><p>From a separate number, wording you approve.</p></li>
+      <li class="bc-step"><span class="bc-step-n">3</span><b>Customer pays</b><p>By card, on their phone.</p></li>
+      <li class="bc-step"><span class="bc-step-n">4</span><b>You get paid</b><p>One reminder goes to unpaid invoices.</p></li>
+    </ol>
+    <div class="bc-pay" role="img" aria-label="Example payment screen for a furnace repair invoice with a Pay by card button">
+      <span class="bc-flag">Example pay screen</span>
+      <p class="bc-meta">Ashcroft Heating · 222-333-4444</p>
+      <p style="font-size:.9rem;color:var(--text-muted)">Invoice for today's furnace repair</p>
+      <div class="bc-amt">$222.00</div>
+      <span class="bc-btn">Pay by card</span>
+    </div>
+    <p class="bc-note">Example business and amount. Card processing fees are separate. We confirm the exact fees with you on the call, before you start.</p>
+  </div>
+</section>
+
 
 <!-- PAIN -->
 <section class="pain-section">
