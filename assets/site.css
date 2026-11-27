@@ -1021,7 +1021,6 @@ main:focus{outline:none}
 .info-hero h1{font-family:Fraunces,serif;font-size:clamp(2rem,4.4vw,2.75rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0 0 16px}
 .info-lede{color:rgba(255,255,255,.78);font-size:1.05rem;line-height:1.65;margin:0 0 28px;max-width:640px}
 .info-hero .hero-actions{margin:0}
-.info-hero .hero-promise{color:#fff;font-size:.95rem;line-height:1.5;margin:14px 0 0}
 .info-hero .hero-trust{margin-top:36px;display:flex;align-items:center;gap:22px 28px;flex-wrap:wrap}
 .info-hero .trust-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.72);font-size:.85rem;line-height:1.35}
 .info-body{background:#fff;padding:40px 5% 16px}
