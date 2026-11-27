@@ -241,6 +241,8 @@ nav.tl-nav .nav-services > summary {
   min-height: 44px;
   box-sizing: border-box;
 }
+/* Ben voice 2026-11-27 staging review C5: Blog sits next to Services as a peer link, never wraps. */
+nav.tl-nav .nav-links > a.nav-blog { flex: 0 0 auto; padding: 0 2px; }
 nav.tl-nav .nav-services:not([open]) > .nav-services-menu { display: none; }
 nav.tl-nav .nav-services > summary {
   justify-content: flex-start;
@@ -339,7 +341,7 @@ nav.tl-nav .nav-cta {
   box-sizing: border-box;
   white-space: nowrap;
 }
-nav.tl-nav .nav-cta:hover { background: #ea6c0a; color: #fff; }
+nav.tl-nav .nav-cta:hover { background: #c2410c; color: #fff; }
 nav.tl-nav .nav-phone { color: #fff; text-decoration: none; font-weight: 700; white-space: nowrap; }
 nav.tl-nav.tl-nav-light .nav-phone { color: #1a2744; }
 /* Through tablet, keep the bar one row. Page rules that set .nav-links{width:100%}
@@ -724,11 +726,11 @@ footer.site-footer .footer-address {
   line-height: 1.3;
   text-wrap: balance;
 }
-/* Form-only pages. Same bar, assessment link instead of the phone call. */
-.sticky-mobile-cta.sticky-assessment {
+/* Form-only pages. Same bar, consultation link instead of the phone call. */
+.sticky-mobile-cta.sticky-consultation {
   padding: 8px 12px 10px;
 }
-.sticky-mobile-cta.sticky-assessment a {
+.sticky-mobile-cta.sticky-consultation a {
   line-height: 1.25;
   text-wrap: balance;
   padding: 10px 12px;
@@ -1021,7 +1023,6 @@ main:focus{outline:none}
 .info-hero h1{font-family:Fraunces,serif;font-size:clamp(2rem,4.4vw,2.75rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0 0 16px}
 .info-lede{color:rgba(255,255,255,.78);font-size:1.05rem;line-height:1.65;margin:0 0 28px;max-width:640px}
 .info-hero .hero-actions{margin:0}
-.info-hero .hero-promise{color:#fff;font-size:.95rem;line-height:1.5;margin:14px 0 0}
 .info-hero .hero-trust{margin-top:36px;display:flex;align-items:center;gap:22px 28px;flex-wrap:wrap}
 .info-hero .trust-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.72);font-size:.85rem;line-height:1.35}
 .info-body{background:#fff;padding:40px 5% 16px}
@@ -1215,7 +1216,7 @@ main:focus{outline:none}
 .tl-demo audio{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .tl-demo-bar{display:flex;align-items:center;gap:12px;padding:10px 12px;background:#fff;border-bottom:1px solid #dde6f5}
 .tl-demo-play{flex:0 0 auto;width:64px;height:64px;border:0;border-radius:50%;background:#f97316;color:#1a2744;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
-.tl-demo-play:hover{background:#ea6c0a}
+.tl-demo-play:hover{background:#c2410c}
 .tl-demo-icon-pause{display:none}
 .tl-demo-play.is-playing .tl-demo-icon-play{display:none}
 .tl-demo-play.is-playing .tl-demo-icon-pause{display:block}
@@ -1686,3 +1687,9 @@ html.tl-calc-visible .sticky-mobile-cta { display: none !important; }
     border-top: 0;
   }
 }
+
+/* Also-useful body links (SEO pillars C6, Ben voice 2026-11-27) */
+.also-useful-wrap{ background: var(--warm-white, #fafaf8); padding: 24px 5%; }
+.also-useful{ max-width: 760px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted, #5a6a8a); text-align: center; overflow-wrap: anywhere; }
+.also-useful a{ color: var(--blue, #2563eb); text-decoration: underline; font-weight: 600; }
+@media (max-width: 480px){ .also-useful-wrap{ padding: 20px 16px; } .also-useful{ font-size: 0.9rem; text-align: left; } }

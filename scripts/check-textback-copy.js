@@ -75,7 +75,7 @@ for (const file of ['index.html', 'templates/pages/index.html']) {
   const schema = callerAnswer(html, 'json');
   if (!visible || !schema) fail(file + ' is missing the caller FAQ');
   else if (visible !== schema) fail(file + ' FAQ text and JSON-LD disagree');
-  else if (isStaleTextbackClaim(visible) || !visible.startsWith('A text ' + NEW)) fail(file + ' caller FAQ still has the old number claim');
+  else if (isStaleTextbackClaim(visible) || !(visible.startsWith('A text ' + NEW) || visible.startsWith('For example, a text ' + NEW))) fail(file + ' caller FAQ still has the old number claim');
   else if (!visible.includes('Hi, this is Mike from Lakeside Heating.')) fail(file + ' sample wording changed');
   else pass(file + ' FAQ text and schema agree');
 }

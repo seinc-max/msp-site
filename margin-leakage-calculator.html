@@ -5,7 +5,7 @@
 <script>window.__tlProd=/^(www\.)?truelineit\.com$/.test(location.hostname);</script>
 <!-- Cookie choice (Google Consent Mode v2): default set before Google Tag Manager loads. Banner: /assets/consent.js -->
 <script>(function(){var c=null;try{c=localStorage.getItem('tl_consent')}catch(e){}window.__tlConsent=c;window.dataLayer=window.dataLayer||[];if(typeof window.gtag!=='function')window.gtag=function(){window.dataLayer.push(arguments)};var v=c==='denied'?'denied':'granted';window.gtag('consent','default',{analytics_storage:v,ad_storage:v,ad_user_data:v,ad_personalization:v});if(c==='denied')(window._hsq=window._hsq||[]).push(['doNotTrack']);})();</script>
-<script src="/assets/consent.js?v=20261121b" defer></script>
+<script src="/assets/consent.js?v=20261127c" defer></script>
 <script>
 if(window.__tlProd&&window.__tlConsent!=='denied'){
   !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Margin Leakage Calculator | Trueline IT</title>
 <link rel="canonical" href="https://truelineit.com/margin-leakage-calculator" />
-<meta name="description" content="Estimate the unbilled time leaving your law firm, accounting practice or advisory firm — answer a few questions and see the monthly leakage in dollars." />
+<meta name="description" content="AI Margin Leakage Calculator: estimate the unbilled time leaving your law firm, accounting practice or advisory firm and see the monthly leakage in dollars." />
 <meta name="robots" content="index, follow" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -33,14 +33,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 :root{
     --navy: #1a2744;
     --blue: #2563eb;
-    --sky: #bfdbfe;
+    --sky: #e8f2ff;
     --orange: #f97316;
     --peach: #ffedd5;
-    --text: #334155;
-    --text-muted: #64748b;
+    --text: #1a2744;
+    --text-muted: #5a6a8a;
     --bg: #ffffff;
-    --warm-white: #fdfbf9;
-    --border: #e2e8f0;
+    --warm-white: #fafaf8;
+    --border: #dde6f5;
   }
 *{ box-sizing: border-box; margin: 0; padding: 0; }
 body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
@@ -114,7 +114,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 700;
     color: #fff; line-height: 1;
   }
-.output-value.highlight{ color: #facc15; }
+.output-value.highlight{ color: #f97316; }
 .output-sub{
     font-size: 0.9rem; color: #cbd5e1; margin-top: 8px;
   }
@@ -125,7 +125,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     margin-top: 20px; font-size: 1.25rem; min-height: 72px; width: 100%; box-sizing: border-box;
     transition: background 0.2s;
   }
-.calc-cta:hover{ background: #ea580c; }
+.calc-cta:hover{ background: #9a3412; }
 .result-to-form-arrow{width:16px;height:16px;border-right:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(45deg);margin:18px auto 0;}
 .hero-trust-line{margin:12px 0 0;color:inherit;}
 .calculator-section .hero-down-cue{margin:16px auto 0;}
@@ -147,7 +147,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 
 <meta property="og:title" content="AI Margin Leakage Calculator | Trueline IT" />
-<meta property="og:description" content="Estimate the unbilled time leaving your law firm, accounting practice or advisory firm — answer a few questions and see the monthly leakage in dollars." />
+<meta property="og:description" content="AI Margin Leakage Calculator: estimate the unbilled time leaving your law firm, accounting practice or advisory firm and see the monthly leakage in dollars." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://truelineit.com/margin-leakage-calculator" />
 <meta property="og:image" content="https://truelineit.com/og-image-professional.jpg" />
@@ -156,14 +156,17 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <meta property="og:site_name" content="Trueline IT" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="AI Margin Leakage Calculator | Trueline IT" />
-<meta name="twitter:description" content="Estimate the unbilled time leaving your law firm, accounting practice or advisory firm — answer a few questions and see the monthly leakage in dollars." />
+<meta name="twitter:description" content="AI Margin Leakage Calculator: estimate the unbilled time leaving your law firm, accounting practice or advisory firm and see the monthly leakage in dollars." />
 <meta name="twitter:image" content="https://truelineit.com/og-image-professional.jpg" />
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "AI Margin Leakage Calculator", "serviceType": "AI Margin Leakage Calculator", "description": "Estimate the unbilled time leaving your law firm, accounting practice or advisory firm — answer a few questions and see the monthly leakage in dollars.", "url": "https://truelineit.com/margin-leakage-calculator", "provider":{"@id":"https://truelineit.com/#organization"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "AI Margin Leakage Calculator", "serviceType": "AI Margin Leakage Calculator", "description": "AI Margin Leakage Calculator: estimate the unbilled time leaving your law firm, accounting practice or advisory firm and see the monthly leakage in dollars.", "url": "https://truelineit.com/margin-leakage-calculator", "provider":{"@id":"https://truelineit.com/#organization"}}</script>
 
 <!-- Production hostname flag (used by Clarity and GTM gating) -->
 <script>window.__tlProd=/^(www\.)?truelineit\.com$/.test(location.hostname);</script>
 <script type="text/javascript">if(window.__tlProd&&window.__tlConsent!=='denied')(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "ywo318ii9u");</script>
-<link rel="stylesheet" href="/assets/site.css?v=a951e85801">
+<link rel="preload" href="/assets/fonts/tl-dm-sans-latin-v17.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-latin-v38.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-italic-latin-v38.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=d5887a3de4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -182,7 +185,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       "name": "Is there a money-back guarantee?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first payment. We refund what you've paid us in your first 30 days, in full. No questions asked. Full terms on <a href=\"/terms\">/terms</a>."
+        "text": "Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first payment. We refund what you've paid us in your first 30 days, in full. No questions asked. Full terms on /terms."
       }
     }
   ]
@@ -202,7 +205,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       <div class="nav-services-menu">
         <div class="nav-services-group" data-audience="trades" role="group" aria-labelledby="nav-group-trades">
           <p class="nav-services-label" id="nav-group-trades">Trades & Contractors</p>
-          <a class="nav-services-hub" href="/for-home-services">For Trades & Contractors</a>
           <a class="nav-services-sub" href="/missed-call-text-back">Missed-Call Text-Back</a>
           <a class="nav-services-sub" href="/ai-receptionist">AI Receptionist</a>
           <a class="nav-services-sub" href="/quote-follow-up-win-back">Quote Follow-Up</a>
@@ -222,7 +224,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         </div>
         <div class="nav-services-group" data-audience="salons" role="group" aria-labelledby="nav-group-salons">
           <p class="nav-services-label" id="nav-group-salons">Salons & Clinics</p>
-          <a class="nav-services-hub" href="/for-appointment-businesses">For Salons & Clinics</a>
           <a class="nav-services-sub" href="/ai-receptionist-for-salons">AI Receptionist</a>
           <a class="nav-services-sub" href="/google-review-requests-for-salons">Google Review Requests</a>
           <a class="nav-services-sub" href="/appointment-reminders-for-salons">Appointment Reminders</a>
@@ -243,7 +244,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         </div>
         <div class="nav-services-group" data-audience="property-managers" role="group" aria-labelledby="nav-group-property-managers">
           <p class="nav-services-label" id="nav-group-property-managers">Property Managers</p>
-          <a class="nav-services-hub" href="/for-property-managers">For Property Managers</a>
           <a class="nav-services-sub" href="/ai-contract-review-for-property-managers">AI Contract Review</a>
           <a class="nav-services-sub" href="/accounts-payable-automation-for-property-managers">Accounts Payable Automation</a>
           <a class="nav-services-sub" href="/job-scheduling-dispatch-for-property-managers">Job Scheduling &amp; Dispatch</a>
@@ -254,6 +254,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
         </div>
       </div>
     </details>
+    <a href="/blog" class="nav-blog">Blog</a>
   </div>
   <a href="#discovery-form" class="nav-cta gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});"><span class="cta-full">Book My AI Consultation</span><span class="cta-short">Book Now</span></a>
 </nav>
@@ -262,7 +263,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <section class="calculator-section">
   <div class="section-eyebrow">For professional services businesses</div>
   <h1 class="section-title">Estimate unbilled time leaving your law firm, accounting practice or advisory firm.</h1>
-  <p class="section-sub">Put in your headcount and salary. The figure below is an estimate from the numbers you enter.</p>
+  <p class="section-sub">Use this AI margin leakage calculator: put in your headcount and salary. The figure below is an estimate from the numbers you enter.</p>
   <div class="hero-cta-panel" style="max-width:640px;margin:16px auto 24px;padding:20px;border:1px solid var(--border,#dde6f5);border-radius:16px;text-align:center;">
   <a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a>
 <div class="hero-down-cue" aria-hidden="true"></div>
@@ -270,6 +271,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   </div>
 
     
+  <p class="tl-calc-intro" style="max-width:1000px;margin:0 auto 12px;text-align:center;color:var(--text-muted);font-size:0.95rem;">The starting numbers are example inputs you can change.</p>
   <div class="calc-container">
     <div class="calc-inputs">
       <div class="input-group">
@@ -299,20 +301,24 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       </div>
       <div class="output-group">
         <div class="output-label">Prompts a month</div>
-        <div class="output-value" id="out-risk-events" style="font-size: 2.5rem; color: #fca5a5;">—</div>
+        <div class="output-value" id="out-risk-events" style="font-size: 2.5rem; color: #fff;">—</div>
         <div class="output-sub">Prompts that could put confidential client work on a public tool.</div>
       </div>
-      <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;"><span id="out-cta-lead">Change the numbers to match your firm to see what you are losing.</span> Send your name and email below for a look at your AI exposure. Nothing is installed.</p>
+      <p id="out-cta-line" style="color:#fff;font-weight:700;font-size:1.05rem;line-height:1.5;margin:8px 0 12px;"><span id="out-cta-lead">Your estimate from the starting numbers is shown here — change them to match your firm.</span> Send your name and email below for a look at your AI exposure. Nothing is installed.</p>
       <a href="#discovery-form" class="calc-cta">Book My AI Consultation</a>
       <div class="result-to-form-arrow" aria-hidden="true"></div>
     </div>
   </div>
   <p class="calc-method" style="max-width:1000px;margin:16px auto 0;font-size:0.9rem;color:var(--text-muted);text-align:center;">How it works: people who handle client work × the share using unapproved AI × average salary × 6.25% (about 2.5 hours of a 40-hour week). Prompts a month: those same people × 12, assuming 12 prompts per person a month. These are planning assumptions, not measured results.</p>
 <p class="section-sub calc-audience-list">For law firms, accountants, financial advisors, insurance agencies, bookkeepers, tax practices, wealth managers, consulting firms, architecture firms, engineering firms, marketing agencies, IT providers and HR consultants.</p>
-<p class="section-sub">79% of Canadian office workers use AI at work, but only 1 in 4 rely on enterprise-grade AI tools (<a href="https://canada.newsroom.ibm.com/2025-09-03-IBM-R-Study-Shadow-AI-Use-Surges-as-Canadian-Workers-Outpace-Employers-in-AI-Adoption" rel="noopener" target="_blank">IBM, 2025</a>). The ladder starts with the $1,000 AI Liability Assessment, then the Fractional AI Officer retainer at $7,500/mo. Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first payment. We refund what you've paid us in your first 30 days, in full. No questions asked. The $1,000 assessment is not refundable and is not covered by the 30-day guarantee. Cancel anytime. No contracts, no cancellation fees. Full terms on <a href="/terms">/terms</a>.</p>
+<p class="section-sub">79% of Canadian office workers use AI at work, but only 1 in 4 rely on enterprise-grade AI tools (<a href="https://canada.newsroom.ibm.com/2025-09-03-IBM-R-Study-Shadow-AI-Use-Surges-as-Canadian-Workers-Outpace-Employers-in-AI-Adoption" rel="noopener" target="_blank">IBM, 2025</a>).</p>
+<p class="section-sub">The Fractional AI Officer retainer is $7,500/mo.</p>
+<p class="section-sub">Every monthly service has a 30-day money-back guarantee. If you are not happy, tell us within 30 days of your first payment. We refund what you've paid us in your first 30 days, in full. No questions asked. Cancel anytime. No contracts, no cancellation fees. Full terms on <a href="/terms">/terms</a>.</p>
 
 <h2 class="section-title">What counts as margin leakage?</h2>
-  <p class="section-sub" style="max-width:760px;margin:12px auto 0;">Margin leakage is unbilled time leaving your firm: hours that never get billed. It is estimated from your headcount, the share of the team using unapproved AI, and average salary — about 2.5 hours of a 40-hour week. It counts prompts that could put confidential client work on a public tool. That figure is an estimate, not a measured result.</p>
+  <p class="section-sub" style="max-width:760px;margin:12px auto 0;">Margin leakage is unbilled time leaving your firm: hours that never get billed.</p>
+  <p class="section-sub" style="max-width:760px;margin:12px auto 0;">It is estimated from your headcount, the share of the team using unapproved AI, and average salary — about 2.5 hours of a 40-hour week. It counts prompts that could put confidential client work on a public tool.</p>
+  <p class="section-sub" style="max-width:760px;margin:12px auto 0;">That figure is an estimate, not a measured result.</p>
 
 
 <div class="section-action"><a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></div>
@@ -323,13 +329,12 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p style="text-align:center;color:var(--text-muted);font-size:0.95rem;margin-bottom:28px;">More for your law firm, your accounting practice, or your advisory firm.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;">
       <a href="/ai-governance#governance-pricing" style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 20px;text-decoration:none;display:flex;flex-direction:column;gap:8px;"><span style="font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:var(--navy);">AI Governance Pricing</span><span style="font-size:0.87rem;color:var(--text-muted);line-height:1.5;">$2,500/mo, no setup fee. Flat rate, no per-seat billing, clear written documentation.</span><span style="font-size:0.8rem;color:var(--orange);font-weight:700;margin-top:auto;">Learn more &rarr;</span></a>
-      <a href="/fractional-ai-officer#assessment" style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 20px;text-decoration:none;display:flex;flex-direction:column;gap:8px;"><span style="font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:var(--navy);">AI Liability Assessment</span><span style="font-size:0.87rem;color:var(--text-muted);line-height:1.5;">See where your firm is exposed to shadow AI and PIPEDA risk.</span><span style="font-size:0.8rem;color:var(--orange);font-weight:700;margin-top:auto;">Learn more &rarr;</span></a>
     </div>
   
 <div class="section-action"><a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></div>
 </section>
 
-<section id="get-assessment" class="form-on-navy" style="max-width:none;margin:0;padding:48px 5%;"><div class="form-card" style="max-width:640px;margin:0 auto;"><h2 style="text-align:center;font-size:1.6rem;margin-bottom:8px;">Book My AI Consultation</h2><p style="text-align:center;margin-bottom:20px;">Send your name and business email. We'll email you to set up a call.</p>
+<section id="consultation" class="form-on-navy" style="max-width:none;margin:0;padding:48px 5%;"><div class="form-card" style="max-width:640px;margin:0 auto;"><h2 style="text-align:center;font-size:1.6rem;margin-bottom:8px;">Book My AI Consultation</h2><p style="text-align:center;margin-bottom:20px;">Send your name and business email. We'll email you to set up a call.</p>
 <!-- GOVERNANCE FORM (restored 2026-10-12; fields: name, email) -->
 <div class="gov-form-wrap" style="max-width:480px;margin:0 auto 20px;text-align:left;">
   <form id="discovery-form" class="hs-do-not-collect" novalidate>
@@ -339,6 +344,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     <p class="form-note" style="margin-top:10px;font-size:0.95rem;font-weight:600;text-align:center;">We'll email you to set up a call.</p>
     <p class="form-consent" style="font-size:0.82rem;line-height:1.5;margin-top:8px;text-align:center;">By submitting, you consent to Trueline IT using your name and email to reply to your inquiry. See the <a href="/privacy">Privacy Policy</a>.</p>
   </form>
+        <noscript><p class="form-note">JavaScript is required to send this form. Call (647) 360-5774 or email hello@truelineit.com.</p></noscript>
   <div id="form-success" style="display:none;text-align:center;padding:16px 0;"><h4 style="font-size:1.4rem;margin-bottom:8px;">Request received. &#10004;</h4><p style="font-size:1.05rem;">Thanks. We'll email you to set up a call.</p></div>
 </div>
 <script>
@@ -371,7 +377,9 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
       if(res.ok){
         form.style.display='none'; document.getElementById('form-success').style.display='block';
         window.dataLayer=window.dataLayer||[];
-        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead','userData':{'email':userEmail}});
+        window.dataLayer.push({'event':'form_submission_success','conversion_type':'discovery_audit_lead'});
+        try{sessionStorage.setItem('tl_lead_submitted','1');}catch(_){ }
+        window.location.assign('/thank-you');
       } else { if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
     }catch(err){ if(btn){btn.textContent=LABEL;btn.disabled=false;} alert('Something went wrong. Please try again in a moment, or email hello@truelineit.com.'); }
   });
@@ -386,9 +394,11 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 
 <div class="section-action"><a href="#discovery-form" class="btn-primary gov-form-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_cta_click'});">Book My AI Consultation</a></div>
 </section>
+<section class="also-useful-wrap"><p class="also-useful">Also useful: <a href="/for-law-firms-accountants-and-advisors">For Professional Firms</a>, <a href="/ai-governance">AI Governance</a>, and <a href="/ai-exposure-score">AI Exposure Score</a>.</p></section>
+
 </main>
 
-<aside class="sticky-mobile-cta sticky-assessment" aria-label="Book My AI Consultation">
+<aside class="sticky-mobile-cta sticky-consultation" aria-label="Book My AI Consultation">
   <a href="#discovery-form">Book My AI Consultation</a>
 </aside>
 
@@ -399,7 +409,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   </div>
   <div class="footer-primary">
     <p class="footer-contact"><a href="tel:+16473605774" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">(647) 360-5774</a><!--email_off--><a href="mailto:hello@truelineit.com">hello@truelineit.com</a><!--/email_off--></p>
-    <p class="footer-contact footer-links"><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></p>
+    <p class="footer-contact footer-links"><a href="/about">About</a><a href="/blog">Blog</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></p>
   </div>
   <div class="footer-meta">
     <p class="footer-address">1250 Brant Street, Suite 400, Burlington, ON L7P 1X8</p>
@@ -458,6 +468,7 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
   document.getElementById('employees').addEventListener('input', calculateMargin);
   document.getElementById('salary').addEventListener('input', calculateMargin);
   document.getElementById('ai-adoption').addEventListener('input', calculateMargin);
+  document.getElementById('ai-adoption').addEventListener('change', calculateMargin);
   document.getElementById('employees').addEventListener('change', calculateMargin);
   document.getElementById('salary').addEventListener('change', calculateMargin);
   
