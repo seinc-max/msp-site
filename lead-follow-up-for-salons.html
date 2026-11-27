@@ -201,6 +201,34 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 }
 
 </style>
+<style>
+.bc-wrap{padding:60px 5%;background:var(--warm-white)}
+.bc-wrap.bc-alt{background:#fff}
+.bc-inner{max-width:900px;margin:0 auto;text-align:center}
+.bc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:left}
+.bc-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.bc-card{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:22px 22px}
+.bc-card h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:8px}
+.bc-card p{font-size:.9rem;color:var(--text-muted);line-height:1.6}
+.bc-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#b45309;background:#fff4e5;border-radius:20px;padding:3px 10px;margin-bottom:12px}
+.bc-note{font-size:.85rem;color:var(--text-muted);margin-top:12px;line-height:1.5}
+.bc-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.92rem;color:var(--navy)}
+.bc-row:last-of-type{border-bottom:0}
+.bc-row span:first-child{color:var(--text-muted)}
+.bc-chip{display:inline-block;padding:2px 10px;border-radius:20px;font-size:.75rem;font-weight:700;background:var(--sky);color:#1d4ed8;white-space:nowrap}
+.bc-chip.bc-ok{background:#e6f6ec;color:#15692f}
+.bc-chip.bc-new{background:#fff4e5;color:#9a4a05}
+.bc-flow{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:14px;list-style:none;text-align:left;counter-reset:bcs}
+.bc-flow li{position:relative;background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:16px 14px 14px;font-size:.88rem;color:var(--text-muted);line-height:1.5;counter-increment:bcs}
+.bc-flow li b{display:block;font-family:'Fraunces',serif;color:var(--navy);font-size:.98rem;margin-bottom:4px}
+.bc-flow li::before{content:counter(bcs);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-size:.8rem;font-weight:700;margin-bottom:8px}
+.bc-msg{background:var(--sky);border-radius:12px 12px 12px 4px;padding:10px 14px;font-size:.9rem;color:var(--navy);margin:8px 0;max-width:92%;line-height:1.5}
+.bc-msg.bc-me{margin-left:auto;background:#fff;border:1.5px solid var(--border);border-radius:12px 12px 4px 12px}
+.bc-msg small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px}
+.bc-svg{width:100%;height:auto;display:block}
+@media(max-width:700px){.bc-grid,.bc-grid3{grid-template-columns:1fr}.bc-flow{grid-template-columns:1fr}.bc-wrap{padding:44px 5%}}
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -493,6 +521,30 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
+<section class="bc-wrap bc-alt ">
+  <div class="bc-inner">
+<div class="section-eyebrow">Example</div>
+<h2 class="section-title">What happens after a request comes in</h2>
+<ol class="bc-flow" style="--n:4" aria-label="Example follow-up timeline">
+      <li><b>Request comes in</b>From your website, Google or Facebook.</li>
+      <li><b>First text and email</b>Sent in minutes.</li>
+      <li><b>Follow-ups</b>Only if they don't reply, for up to 7 days.</li>
+      <li><b>It stops</b>When they reply, or after 7 days. You take over.</li>
+    </ol>
+    <div class="bc-grid" style="margin-top:22px">
+      <div class="bc-card">
+        <span class="bc-tag">Example text</span>
+        <div class="bc-msg"><small>Harbor Hair Salon &middot; 222-333-4444</small>Hi Jess, it's Harbor Hair Salon. Thanks for asking about a haircut. What day works for you? Reply STOP to opt out.</div>
+      </div>
+      <div class="bc-card">
+        <span class="bc-tag">Example email</span>
+        <div class="bc-msg"><small>Harbor Hair Salon</small>Hi Jess, it's Harbor Hair Salon. Thanks for asking about a haircut. What day works for you?<br><span style="font-size:.78rem;color:var(--text-muted)">Unsubscribe</span></div>
+      </div>
+    </div>
+    <p class="bc-note">Examples. Made-up business and client. You approve the wording.</p>
+  </div>
+</section>
+
 <section class="how-section"><div class="section-inner">
 <div class="section-eyebrow">How it works</div>
 <h2 class="section-title">You call. We connect your requests. They hear from you.</h2>
@@ -501,7 +553,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <div class="step"><div class="step-number">2</div><h3>We set it up</h3><p>We connect the sources we support and write the texts and emails. You approve the wording.</p></div>
 <div class="step"><div class="step-number">3</div><h3>Requests hear from you</h3><p>Each new request gets a reply in minutes. Follow-ups stop when they reply or after 7 days.</p></div>
 </div>
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </div></section>
 
 <section class="audience-section">
@@ -528,7 +579,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <section class="included-section"><div class="section-inner">
@@ -551,7 +601,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 </ul></div>
 </div>
 </div>
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <section class="pricing-section"><div class="section-inner">
@@ -602,7 +651,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
     </div>
   </div>
 
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <section class="faq-section"><div class="section-inner">
@@ -618,7 +666,6 @@ body{ font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--
 <details><summary>Do I have to set this up myself?</summary><p>No. We set it up and run it for you. You approve the wording before anything goes out.</p></details>
 </div>
 </div>
-<div class="section-action"><a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_to_call'});">Call (647) 360-5774</a></div>
 </section>
 
 <section class="bottom-cta">
