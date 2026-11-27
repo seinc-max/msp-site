@@ -22,9 +22,9 @@ const MANIFEST = path.join(__dirname, "dist-manifest.txt");
 
 // Public top-level entries. Adding a page means adding it here and to the manifest.
 const ALLOW = new Set([
-  "404.html", "_headers", "_redirects", "about.html", "ai-automation-roi-guide.html",
+  "404.html", "_headers", "_redirects", "about.html",
   "ai-exposure-score.html", "ai-governance.html", "ai-receptionist.html", "ai-receptionist-for-salons.html",
-  "ai-support-agent.html", "assets", "blog", "contractor-websites.html",
+  "ai-support-agent.html", "assets", "blog", "blog.html", "contractor-websites.html",
   "favicon.ico", "favicon.png", "favicon.svg", "favicon-48.png", "favicon-96.png", "favicon-192.png", "apple-touch-icon.png", "logo-512.png", "for-appointment-businesses.html",
   "for-home-services.html", "for-law-firms-accountants-and-advisors.html",
   "fractional-ai-officer.html", "google-review-requests.html", "google-review-requests-for-salons.html", "index.html", "js",
@@ -32,7 +32,7 @@ const ALLOW = new Set([
   "og-image-professional.jpg", "og-image-trades.jpg", "og-image.jpg", "og-image.png",
   "privacy.html", "quote-follow-up-win-back.html", "robots.txt", "sitemap.xml", "688213215a3247df8b5797e268fbd61b.txt",
   "terms.html", "text-to-pay.html", "website-chat-to-text.html", "demo",
-  "lead-follow-up.html", "appointment-reminders.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html", "speed-to-lead.html", "overdue-invoice-reminders.html", "ai-estimate-drafts.html", "job-scheduling-dispatch.html", "google-business-profile-optimization.html", "google-business-profile-for-professionals.html", "document-automation.html", "inbox-management.html",
+  "lead-follow-up.html", "cold-outreach.html", "crm-setup.html", "custom-dashboards.html", "speed-to-lead.html", "overdue-invoice-reminders.html", "ai-estimate-drafts.html", "job-scheduling-dispatch.html", "google-business-profile-optimization.html", "google-business-profile-for-professionals.html", "document-automation.html", "inbox-management.html",
   // 2026-11-26 salon versions (Ben t1834u)
   "website-chat-for-salons.html", "lead-follow-up-for-salons.html",
   // 2026-11-26 salon versions (Ben t1835u)

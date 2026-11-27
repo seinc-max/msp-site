@@ -59,8 +59,9 @@ const NEW_PAGES = ["/lead-follow-up", "/cold-outreach", "/crm-setup", "/custom-d
   "/speed-to-lead-for-salons", "/google-business-profile-for-salons",
   // 2026-11-26 salon version of Appointment Reminders (Ben t1861u).
   "/appointment-reminders-for-salons",
-  // 2026-11-26 Property Managers group (Ben t1825u): the hub and the 8 offer pages.
-  "/for-property-managers", "/ai-contract-review-for-property-managers", "/accounts-payable-automation-for-property-managers", "/job-scheduling-dispatch-for-property-managers", "/ai-concierge-for-property-managers", "/google-business-profile-for-property-managers", "/speed-to-lead-for-property-managers", "/appointment-reminders-for-property-managers"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
+  // 2026-11-26 Property Managers group (Ben t1825u): the 8 offer pages.
+  // 2026-11-26 (Ben t1892u): the "For Property Managers" hub subheading is removed from the menu; the hub page itself stays live.
+  "/ai-contract-review-for-property-managers", "/accounts-payable-automation-for-property-managers", "/job-scheduling-dispatch-for-property-managers", "/ai-concierge-for-property-managers", "/google-business-profile-for-property-managers", "/speed-to-lead-for-property-managers", "/appointment-reminders-for-property-managers"]; // /multi-location removed 2026-11-20 (Ben t1297u: page removed)
 // Ben 2026-11-19 t1207u: no "per location" anywhere on the site.
 const BANNED = [/per[\s\u00a0-]+location/i,
   // Ben 2026-11-19 t1202u: copy must include all trades; no single-trade "under a sink" image.
@@ -140,6 +141,9 @@ const homeNav = navOf(read("index.html"));
 const homeLinks = navLinks(homeNav);
 if (!homeLinks) err("index.html", "home nav has no nav-links block");
 for (const n of NEW_PAGES) if (homeLinks && !homeLinks.includes(n)) err("index.html", "Services menu missing " + n);
+// 2026-11-26 (Ben t1892u): the three repeated hub subheadings are gone from the menu. "For Professional Firms" stays.
+for (const n of ["/for-home-services", "/for-appointment-businesses", "/for-property-managers"]) if (homeLinks && homeLinks.includes(n)) err("index.html", "Services menu must not carry the hub subheading " + n + " (Ben t1892u)");
+if (homeLinks && !homeLinks.includes("/for-law-firms-accountants-and-advisors")) err("index.html", "Services menu must keep For Professional Firms (Ben t1892u)");
 for (const f of pages) {
   const nav = navOf(read(f));
   if (!nav) { err(f, "no <nav class=\"tl-nav\">"); continue; }

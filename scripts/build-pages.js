@@ -64,7 +64,6 @@ const LANDING = new Set([
   'fractional-ai-officer.html',
   'ai-support-agent.html',
   'lead-follow-up.html',
-  'appointment-reminders.html',
   'cold-outreach.html',
   'crm-setup.html',
   'custom-dashboards.html',
@@ -99,7 +98,6 @@ const PAGE = new Set([
   '404.html',
   'margin-leakage-calculator.html',
   'ai-exposure-score.html',
-  'ai-automation-roi-guide.html',
 ]);
 
 const CALL = '<a href="tel:+16473605774" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'click_to_call\'});">Call (647) 360-5774</a>';
@@ -169,7 +167,7 @@ function walkPages(dir, acc = []) {
 }
 
 function templateFor(rel) {
-  if (rel.startsWith('blog/')) return 'blog';
+  if (rel.startsWith('blog/') || rel === 'blog.html') return 'blog';
   if (LANDING.has(rel)) return 'landing';
   if (INFO.has(rel)) return 'info';
   if (PAGE.has(rel)) return 'page';
@@ -394,14 +392,13 @@ function inner(html, tag) {
 function sharedInfoHero() {
   const about = read(path.join(PAGE_ROOT, 'about.html'));
   const main = inner(about.slice(about.indexOf('<main')), 'main');
-  const promise = must(main, /<p class="hero-promise">([\s\S]*?)<\/p>/, 'about promise');
   const trusts = [...main.matchAll(/<div class="trust-item">\s*(<svg[\s\S]*?<\/svg>)?\s*([^<]+?)\s*<\/div>/g)].map((m) => ({
     // Ben voice 2026-11-21 5:17 PM ET: no icons on the info pages; the trust line is plain text.
     icon: '',
     text: m[2].trim(),
   }));
   if (trusts.length !== 4) throw new Error('Expected 4 trust chips, got ' + trusts.length);
-  return { promise, trusts };
+  return { trusts };
 }
 
 function infoHero(model) {
@@ -412,8 +409,7 @@ function infoHero(model) {
     <p class="info-kicker">${model.kicker}</p>
     <h1>${model.title}</h1>
     <p class="info-lede">${model.lede}</p>
-    <div class="hero-actions">${CALL}${model.showDownCue ? '\n    <div class="hero-down-cue" aria-hidden="true"></div>' : ''}</div>
-    <p class="hero-promise">${shared.promise}</p>${model.hideTrust ? '' : `
+    <div class="hero-actions">${CALL}${model.showDownCue ? '\n    <div class="hero-down-cue" aria-hidden="true"></div>' : ''}</div>${model.hideTrust ? '' : `
     <div class="hero-trust">
 ${chips}
     </div>`}
@@ -483,7 +479,6 @@ function aboutModel(html) {
   const title = must(main, /<h1>([\s\S]*?)<\/h1>/, 'about title');
   const lede = must(main, /<p class="hero-sub">([\s\S]*?)<\/p>/, 'about lede');
   const shared = sharedInfoHero();
-  if (lede.includes(shared.promise)) throw new Error('About lede should not repeat the promise line');
   const blocks = [...main.matchAll(/<section class="(contact-section|hub-section)"([^>]*)>([\s\S]*?)<\/section>/g)];
   const parts = [];
   for (const block of blocks) {
@@ -521,7 +516,6 @@ function aboutModel(html) {
   flush();
   // Ben voice 2026-11-21 5:17 PM ET: one closing call box (info-cta) on About, Terms and Privacy; About drops its info-band.
   if (/id="contact"/.test(body)) throw new Error('About should not carry its own contact band (shared info-cta closes the page)');
-  if (body.includes('<p>' + shared.promise + '</p>')) throw new Error('Promise line duplicated in the About body');
   if (body.includes('<li>' + shared.trusts[0].text)) throw new Error('Trust list duplicated in the About body');
   return {
     kicker,
@@ -532,7 +526,7 @@ function aboutModel(html) {
     ctaHeading: 'Questions?',
     ctaSub: '',
     ctaNote: '',
-    showDownCue: false, // 2026-11-21: reviewers (Claude r1) - cue split the call button from its promise line.
+    showDownCue: false, // 2026-11-21: reviewers (Claude r1) - cue split the call button from the line below it (that line was removed 2026-11-26, Ben t1907u).
   };
 }
 
@@ -585,8 +579,8 @@ function legalModel(html, which) {
   const title = must(main, /<h1>([\s\S]*?)<\/h1>/, which + ' title');
   const kicker = must(main, /<p>(Last updated:[^<]*)<\/p>/, which + ' updated');
   main = main.replace(/<h1>[\s\S]*?<\/h1>/, '').replace(/<p>Last updated:[^<]*<\/p>/, '');
-  const question = must(main, /<p>(Questions\?[\s\S]*?)<\/p>/, which + ' questions');
-  main = main.replace(/<p>Questions\?[\s\S]*?<\/p>/, '');
+  // Ben t1908u/t1910u: the "Questions? Call..." paragraph is gone from the templates; fail if it comes back.
+  if (/<p>Questions\? Call/.test(main)) throw new Error(which + ' must not carry the Questions? call paragraph (sales chrome removed)');
   let lede = '';
   if (which === 'terms') {
     const intro = main.match(/<p>(This page is the whole agreement[\s\S]*?)<\/p>/);
@@ -609,9 +603,6 @@ function legalModel(html, which) {
     main = main.replace(toc[0], '');
     legalBody = `<article class="info-body legal-body">\n  <div class="legal-layout">\n${toc[0].trim()}\n<div class="legal-content">\n${main.trim()}\n</div>\n  </div>\n</article>`;
   }
-  const q = question.replace(/\s+/g, ' ').trim();
-  const expected = 'Questions? Call (647) 360-5774. Leave a message and you\'ll get our text within minutes, and a call back fast.';
-  if (q !== expected) throw new Error(which + ' questions changed: ' + q);
   return {
     kicker,
     title,
