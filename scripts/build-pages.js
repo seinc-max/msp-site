@@ -579,8 +579,8 @@ function legalModel(html, which) {
   const title = must(main, /<h1>([\s\S]*?)<\/h1>/, which + ' title');
   const kicker = must(main, /<p>(Last updated:[^<]*)<\/p>/, which + ' updated');
   main = main.replace(/<h1>[\s\S]*?<\/h1>/, '').replace(/<p>Last updated:[^<]*<\/p>/, '');
-  // 2026-11-26 (Ben t1907u): the "Questions? Call ... Leave a message ..." line is gone from Terms and Privacy; nothing replaces it.
-  if (/<p>Questions\?/.test(main)) throw new Error(which + ' still carries the removed Questions line');
+  // Ben t1908u/t1910u: the "Questions? Call..." paragraph is gone from the templates; fail if it comes back.
+  if (/<p>Questions\? Call/.test(main)) throw new Error(which + ' must not carry the Questions? call paragraph (sales chrome removed)');
   let lede = '';
   if (which === 'terms') {
     const intro = main.match(/<p>(This page is the whole agreement[\s\S]*?)<\/p>/);
